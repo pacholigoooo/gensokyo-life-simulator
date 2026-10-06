@@ -15,6 +15,7 @@ export async function addMarriages(routes){
   for(const d of row.courtship){assert(/^[a-z0-9_-]+$/.test(d.key));assert(d.text.length>=35,row.id+': courtship text');check(d.text,row.id+'/courtship/'+d.key);}
   assert.equal(row.daily.length,6,row.id+': six daily scenes');assert.equal(new Set(row.daily.map(d=>d.key)).size,6);
   for(const d of row.daily){assert(/^[a-z0-9_-]+$/.test(d.key));check(d.text,row.id+'/'+d.key);check(d.settledText,row.id+'/'+d.key+'/settled');}
+  for(const d of row.daily)if(d.settledVariants){assert(Array.isArray(d.settledVariants)&&d.settledVariants.length===4,row.id+': four later scenes');for(const t of d.settledVariants)check(t,row.id+'/'+d.key+'/later');}
   routes.find(r=>r.id===row.id).marriage=row;
  }
  await writeFile(new URL('reports/marriage-coverage-v11.json',root),JSON.stringify({routes:rows.length,texts:texts.size,coverage:rows.map(r=>({id:r.id,courtship:r.courtship.length,stages:3,daily:r.daily.length,farewell:true}))},null,2)+'\n');

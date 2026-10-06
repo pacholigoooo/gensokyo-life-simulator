@@ -32,7 +32,8 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     C = globalThis.TouhouContacts,
     TS = globalThis.TouhouTalentStories,
     A = globalThis.TouhouAfterlife,
-    K = globalThis.TouhouCareers;
+    K = globalThis.TouhouCareers,
+    L = globalThis.TouhouLongYears;
   var forms = _objectSpread(_objectSpread({}, O.forms), A.forms);
   var SPECIES = {
     human: '人类',
@@ -352,6 +353,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     S.init(s, rng);
     A.init(s);
     K.init(s);
+    L.init(s);
     if (talents.includes('healthful')) s.vitality += 5;
     var rich = s.initial.fortune >= 7,
       poor = s.initial.fortune <= 3;
@@ -419,7 +421,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
   function weight(s, e) {
     var value = e.weight;
     if (e.id === 'chance:magician-found' && s.flags.has('legend:insight')) value *= 2.5;
-    if (e.id === 'chance:kami-found' && s.flags.has('legend:faith')) value *= 3;
+    if (e.id === 'chance:kami-found' && s.flags.has('legend:faith')) value *= globalThis.TouhouLifeConfig.faithOpportunityMultiplier;
     if (e.id === 'chance:youkai-found' && s.flags.has('talent-clue:youkai')) value *= 4;
     for (var _i4 = 0, _Object$entries3 = Object.entries(e.bias || {}); _i4 < _Object$entries3.length; _i4++) {
       var _Object$entries3$_i = _slicedToArray(_Object$entries3[_i4], 2),
@@ -548,7 +550,8 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       contactMedium: e.contactMedium,
       relationship: relationship,
       relationshipMoment: relationshipMoment,
-      developmentMoment: e.developmentMoment
+      developmentMoment: e.developmentMoment,
+      sharedWith: e.sharedWith
     }, e.circleOf ? {
       circleOf: e.circleOf
     } : {}), developer ? {
@@ -673,6 +676,8 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       origin: '人类村落普通人',
       eventId: context.eventId || "chance:".concat(kind, "-2-pass")
     };
+    s.transformation.source = context.source || (/^(partner-learning:|guidance:)/.test(s.transformation.eventId) ? 'partner-guidance' : 'independent');
+    if (context.mentorId) s.transformation.mentorId = context.mentorId;
     s.pathHistory.push({
       kind: kind,
       result: 'transformed',
@@ -743,6 +748,11 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     };
   }
   function finish(s, cause) {
+    var divineEnding = A.divineEnding(s, cause);
+    if (divineEnding) {
+      s.divineEndingId = cause;
+      cause = 'chapter';
+    }
     globalThis.TouhouAkyuu.finish(s);
     if (s.development) A.fail(s, 'unfinished');
     if (s.opportunity) {
@@ -756,7 +766,11 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     s.ended = true;
     s.deathCause = cause;
     s.earlyDeath = cause === 'health' || cause === 'pursuit' || cause === 'age' && s.turn < 65;
-    if (A.endings[cause]) {
+    if (divineEnding) {
+      var _divineEnding = _slicedToArray(divineEnding, 2);
+      s.ending = _divineEnding[0];
+      s.endingText = _divineEnding[1];
+    } else if (A.endings[cause]) {
       var _A$endings$cause = _slicedToArray(A.endings[cause], 2);
       s.ending = _A$endings$cause[0];
       s.endingText = _A$endings$cause[1];
@@ -845,7 +859,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     var starts = [].concat(_toConsumableArray(O.starts), _toConsumableArray(A.starts)).filter(function (e) {
       return eligible(s, e);
     });
-    if (starts.length && rng() < O.discoveryChance(s, starts)) return choose(s, starts, rng);
+    if (starts.length && rng() < O.discoveryChance(s, starts)) return O.discovered(s, choose(s, starts, rng));
     var prospect = C.prospect(s, rng);
     if (prospect) return prospect;
     var local = globalThis.TouhouEvents.localRomance(s, rng, ((_s$meetingPlan$curren = s.meetingPlan.current) === null || _s$meetingPlan$curren === void 0 ? void 0 : _s$meetingPlan$curren.id) === 'local:spouse');
@@ -878,6 +892,13 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     var _s$character6, _s$character7, _s$character8, _s$character9, _s$character0;
     var developer = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
     applyEvent(s, event, rng, developer);
+    // 身后续事与原有供养同年发生，保留魂形与香火原有的消耗、恢复节奏。
+    if (s.afterlife) {
+      var continuation = L.select(s);
+      if (continuation) applyEvent(s, continuation, rng, developer);
+      var divine = A.continuation(s);
+      if (divine) applyEvent(s, divine, rng, developer);
+    }
     if (['development:shikaisen-transformed', 'development:shikaisen-wake-failed'].includes(event.id)) upkeep(s);
     var vulnerable = ['human', 'beast'].includes(s.life) || !!s.transformation || !!s.hermit || !!s.magic;
     if (s.injured && ((_s$character6 = s.character) !== null && _s$character6 !== void 0 && _s$character6.regenerates || s.life === 'fairy')) {
@@ -1011,6 +1032,10 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       if (!pool.length) throw new Error("第".concat(s.turn, "步没有可用事件：").concat(s.character.id));
       event = choose(s, pool, rng);
     } else event = selectOrdinary(s, rng, common);
+    if (!s.afterlife) {
+      var continuation = L.select(s, event);
+      if (continuation) event = continuation;
+    }
     globalThis.TouhouCompanionship.courtship(s, add);
     completeEvent(s, event, rng, before);
     globalThis.TouhouCompanionship.localMarriage(s, add);

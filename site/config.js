@@ -12,6 +12,12 @@ globalThis.TouhouLifeConfig = Object.freeze({
   opportunityChance: .002,
   opportunityMultiplier: 55,
   livingOpportunityWeight: 3,
+  // 生前末段未达标时可多修两年；成功时点与实际门槛保持原样，到期仍可失败。
+  livingFinalGraceYears: 2,
+  // V22按普通完整人生基线调低两个身后入口；这些是候选权重，整生比例由独立采样校准。
+  ghostOpportunityWeight: .88,
+  vengefulOpportunityWeight: .82,
+  faithOpportunityMultiplier: 6,
   encounterChance: .18,
   relationshipChance: .04,
   contactChance: .045,

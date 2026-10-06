@@ -1,0 +1,26 @@
+[
+ {"id":"archive-generations","title":"三代人的同一条河","group":"talent","species":["magician","hermit","shikaisen","youkai","vampire"],"requires":["talent-story:archive:done"],"minYears":24,"stages":[
+  {"delay":0,"text":"你从积存的旧记里找出同一条河的三个名字。河道已经改了，村里的老人却还把一处旱地叫作渡口。","set":["long:archive-generations:question"]},
+  {"delay":6,"branches":[{"when":{"min":{"insight":14}},"text":"你按旧记上的行程丈量河岸，发现渡口被写在上一代人的堤坝边。几份互相矛盾的回忆终于接上。","xp":1,"set":["long:archive-generations:located"]},{"when":{},"text":"几种记法仍对不上，你把拿不准的地点留白，另附每位讲述者说过的原话，等下一回再访。","set":["long:archive-generations:open"]}]},
+  {"delay":8,"branches":[{"when":{"flags":["long:archive-generations:located"]},"text":"新修河堤时，人们按你指出的位置避开旧水道。后来一场大雨过后，那个路口仍能通行。","effects":{"fortune":1},"set":["long:archive-generations:used"]},{"when":{},"text":"新露出的石阶给旧记补上了缺口。你带着拓下的记号重访河岸，终于在空白处添了一个可核对的位置。","xp":1,"set":["long:archive-generations:found-late"]}]},
+  {"delay":8,"branches":[{"when":{"flags":["long:archive-generations:used"]},"text":"又一批守堤人来问旧水道，你把每次改道都记在同一幅图上。活得久留下的记忆，开始替后来的人派上用场。","effects":{"insight":1},"set":["long:archive-generations:living-map"]},{"when":{},"text":"你将曾经留白的河图和新证据装订在一起，让读者看见改正的经过。后来有人来信，补上一处你没去过的支流。","effects":{"insight":1},"set":["long:archive-generations:open-record"]}]}
+ ]},
+ {"id":"artisan-changing-tools","title":"换过主人的旧工序","group":"talent","species":["magician","hermit","shikaisen","youkai","vampire"],"requires":["talent-story:artisan:done"],"minYears":24,"stages":[
+  {"delay":0,"text":"一位新匠人拿来你多年前画的构件，说现在的木料做不成旧尺寸。你把成品拆开，决定与对方重新试合。","set":["long:artisan-changing-tools:opened"]},
+  {"delay":6,"branches":[{"when":{"min":{"insight":14,"fortune":3}},"text":"你另做一副可调的样架，让新匠人按手感改尺寸。试出来的接缝比旧图更稳，你亲手划去了旧标记。","effects":{"fortune":-1},"set":["long:artisan-changing-tools:adjustable"]},{"when":{},"text":"第一副样架仍沿用旧尺寸，新料接连开裂。你停下赶工，把坏件一一留下，请匠人指出最难用的地方。","set":["long:artisan-changing-tools:cracked"]}]},
+  {"delay":6,"branches":[{"when":{"flags":["long:artisan-changing-tools:adjustable"]},"text":"邻近工房照新样架做出三种器具，各自改了一处。你逐件试过，把能互换的部位单独标出来。","xp":1,"set":["long:artisan-changing-tools:shared"]},{"when":{},"text":"从开裂处找到受力的方向后，你把一整块木件改成两段。匠人再次试合，这回没有急着向你讨一个标准答案。","xp":1,"set":["long:artisan-changing-tools:reworked"]}]},
+  {"delay":8,"branches":[{"when":{"flags":["long:artisan-changing-tools:shared"]},"text":"你久未到访，工房仍能用新式接件修好旧器具。匠人留下各自的改法，约你下次只来挑毛病，不必替他们动手。","effects":{"insight":1},"set":["long:artisan-changing-tools:independent"]},{"when":{},"text":"坏件和修好的样架并排挂在工房里。来学的人先拆坏件，再说自己的办法，你听见一种连自己也没试过的新思路。","effects":{"insight":1},"set":["long:artisan-changing-tools:teaching-errors"]}]}
+ ]},
+ {"id":"vein-hidden-spring","title":"山腹里的第二道水声","group":"talent","species":["magician","hermit","shikaisen","youkai","vampire"],"requires":["talent-story:earth-vein:done"],"minYears":24,"stages":[
+  {"delay":0,"text":"山脚泉水忽然变温，你听到地脉深处另有一道水声。你在泉边留下刻度，隔几季回来核对。","set":["long:vein-hidden-spring:marked"]},
+  {"delay":6,"branches":[{"when":{"min":{"insight":16,"health":8}},"text":"你等枯水时沿岩隙探入，找到两股水流交接的空洞。回程只带走石屑，把容易松动的入口封好。","effects":{"health":-1},"xp":1,"set":["long:vein-hidden-spring:surveyed"]},{"when":{},"text":"岩隙里的回声遮住水声，你退回泉口，没有再向深处探。留下的刻度却显示，水温总在雨季之后才变。","xp":1,"set":["long:vein-hidden-spring:surface"]}]},
+  {"delay":8,"branches":[{"when":{"flags":["long:vein-hidden-spring:surveyed"]},"text":"你按空洞的位置另划一段取水处，请常来的人避开脆弱岩层。旧泉口封住后，清水从下游慢慢渗出。","effects":{"fortune":-1},"set":["long:vein-hidden-spring:diverted"]},{"when":{},"text":"几轮雨季的刻度排在一起，你认出温水只是支流短暂改道。你留下雨后停取的记号，让来人绕到另一处泉眼。","set":["long:vein-hidden-spring:seasonal"]}]},
+  {"delay":8,"branches":[{"when":{"flags":["long:vein-hidden-spring:diverted"]},"text":"山势又有小小变化，新泉眼仍能取水。你重描地脉图，在旧入口旁添上封闭的缘由，把探洞的冲动留给更稳妥的时候。","effects":{"insight":1},"set":["long:vein-hidden-spring:water-route"]},{"when":{},"text":"下一回温水来时，常来的人已会自己更换取水处。你听过两处泉声，把几年后再查的日子刻在新石片上。","effects":{"insight":1},"set":["long:vein-hidden-spring:watch-cycle"]}]}
+ ]},
+ {"id":"chart-returning-star","title":"迟到二十年的星位","group":"talent","species":["magician","hermit","shikaisen","youkai","vampire"],"requires":["talent-story:star-chart:done"],"minYears":48,"stages":[
+  {"delay":0,"text":"旧星图上预留的空格到了该填写的时候。你在同一处坡顶守过晴夜，发现那点微光比记载晚了半刻。","set":["long:chart-returning-star:late"]},
+  {"delay":6,"branches":[{"when":{"min":{"insight":16}},"text":"你把星位与地平线分开比对，发现树梢和雾气改变了旧观测。挪到开阔处后，延迟的半刻终于消失。","xp":1,"set":["long:chart-returning-star:corrected"]},{"when":{},"text":"你几次算出不同的结果，便把每夜的雾气与观测位置也写上。那点微光仍有偏差，你暂时留着两种解释。","set":["long:chart-returning-star:uncertain"]}]},
+  {"delay":8,"branches":[{"when":{"flags":["long:chart-returning-star:corrected"]},"text":"沿旧星图寻路的人来访，你带对方在新坡顶看过夜空。两人把会受树影遮挡的路段重新画清。","set":["long:chart-returning-star:route"]},{"when":{},"text":"另一个观星人寄来不同山坡的记录，你们隔年交换晴夜的时刻。两份笔记拼起来，雾气造成的偏移渐渐显出规律。","xp":1,"set":["long:chart-returning-star:correspondence"]}]},
+  {"delay":12,"branches":[{"when":{"flags":["long:chart-returning-star:route"]},"text":"又到旧图约定的年份，你沿修订过的夜路抵达坡顶。有人已经等在那里，拿着从你那幅图抄下的星位，想再添一段远路。","effects":{"insight":1},"set":["long:chart-returning-star:next-road"]},{"when":{},"text":"多年交换的星图终于接成一册，空白处仍留着下一次观测的约定。你把最早算错的半刻圈起，重新选好出门的晴夜。","effects":{"insight":1},"set":["long:chart-returning-star:continued-study"]}]}
+ ]}
+]

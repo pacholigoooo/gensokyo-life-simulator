@@ -19,6 +19,14 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
   function text(s, r, item) {
     return settled(s, r) ? item.settledText : item.text;
   }
+  function variedText(s, r, item, key, base) {
+    if (!item.settledVariants || !settled(s, r)) return base;
+    var count = r.history.filter(function (h) {
+      var _h$freshText;
+      return h.key === key && ((_h$freshText = h.freshText) !== null && _h$freshText !== void 0 ? _h$freshText : h.text) === base;
+    }).length;
+    return count ? item.settledVariants[(count - 1) % item.settledVariants.length] : base;
+  }
   var localScenes = [{
     key: 'walk',
     text: '晚饭后，你们沿着村边散步。伴侣向你摊开手掌，你握上去，两人放慢脚步，商量下回赶集想买什么。',
@@ -121,10 +129,13 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     var scenes = r.history.filter(function (h) {
       return h.key.startsWith('echo:love:') || h.key.startsWith('marriage:daily:') || h.key.startsWith('circle:');
     });
-    return !scenes.slice(-6).some(function (h) {
-      return h.text === body;
-    }) && !scenes.some(function (h) {
-      return h.text === body && s.age - h.age < 12;
+    // Alternate wording keeps the original scene's freshness gate and decision timing.
+    var same = function same(h) {
+      var _h$freshText2;
+      return ((_h$freshText2 = h.freshText) !== null && _h$freshText2 !== void 0 ? _h$freshText2 : h.text) === body;
+    };
+    return !scenes.slice(-6).some(same) && !scenes.some(function (h) {
+      return same(h) && s.age - h.age < (globalThis.TouhouLongYears.mature(s) ? 36 : 12);
     });
   }
   function eligibleVisit(s, r, v) {
@@ -256,6 +267,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
   globalThis.TouhouCompanionship = {
     settled: settled,
     text: text,
+    variedText: variedText,
     courtship: courtship,
     localMarriage: localMarriage,
     fresh: fresh,

@@ -1,0 +1,309 @@
+{
+  "routes": [
+    {
+      "id": "water",
+      "title": "两地分水",
+      "ending": {
+        "id": "divine-water",
+        "title": "分水守约",
+        "text": "祠册记下了分水争执、旱季与守祠人的换代。两地如今按约轮祭，你以分水守约的神德照应旧渠；这段生活至此收卷，小祠中的你仍随信仰承受往后的起落。"
+      },
+      "stages": [
+        {
+          "key": "water-terms",
+          "delay": 4,
+          "min": { "insight": 10, "bond": 10 },
+          "pass": {
+            "text": "两处邻村都把取水的争执带到小祠。你托能听见神声的来人说明先后与限量，守渠人据此议出轮用的约定，一户下游人家重新来祭。",
+            "faith": 2,
+            "devotees": 1,
+            "merit": 1
+          },
+          "fail": {
+            "text": "争水的祭告挤在一处，你未能顾到下游的急需。守渠人各按自己的说法开口，下游一户不再到祠前行礼，神音也弱了些。",
+            "faith": -1,
+            "devotees": -1,
+            "merit": 0
+          }
+        },
+        {
+          "key": "water-clock",
+          "delay": 12,
+          "min": { "insight": 12, "bond": 11 },
+          "pass": {
+            "text": "守渠人把轮用时刻刻在渠口，问哪些旧流还能供水。你借祭声辨明眼前水量，请两地照现有水路轮取，祠前添了一份谢愿。",
+            "faith": 1,
+            "devotees": 0,
+            "merit": 1,
+            "ability": "分水托祭"
+          },
+          "fail": {
+            "text": "渠口的新刻度含糊，祭告又夹着远处求雨的愿望。你没有说清现有水量与轮取的分寸，守渠人仍争先开口，对小祠的信任减了一层。",
+            "faith": -1,
+            "devotees": 0,
+            "merit": 0
+          }
+        },
+        {
+          "key": "water-drought",
+          "delay": 12,
+          "min": { "insight": 14 },
+          "meritRequired": 1,
+          "pass": {
+            "text": "旱季里，旧渠只剩细流，你把有限神力用在两地最需保苗的一段。来人照祭告轮取余水，神力明显耗去，赐福没有添出新的水源。",
+            "faith": -2,
+            "devotees": 0,
+            "merit": 1,
+            "ability": "两地分水小福"
+          },
+          "fail": {
+            "text": "旱季到来，分水约定与有限水量都未能讲清。争水的人各自截流，又把枯田归咎于小祠，一户改去别处祈愿，香火因而更弱。",
+            "faith": -2,
+            "devotees": -1,
+            "merit": 0
+          }
+        },
+        {
+          "key": "water-stewards",
+          "delay": 12,
+          "min": { "insight": 14, "bond": 14 },
+          "meritRequired": 2,
+          "pass": {
+            "text": "守祠与守渠的人已换了一代，你向接任者重述取水的分寸。他们修好旧渠，公开轮用与祭日的册页，沿渠人家重新照约供奉。",
+            "faith": 2,
+            "devotees": 0,
+            "merit": 1
+          },
+          "fail": {
+            "text": "接任的守祠人只记得曾有水福，未接住轮用和修渠的安排。两地互等对方出力，祭日少了一回共同的供奉，祠中又冷清些。",
+            "faith": -1,
+            "devotees": 0,
+            "merit": 0
+          }
+        },
+        {
+          "key": "water-register",
+          "delay": 12,
+          "min": { "insight": 16, "bond": 15 },
+          "meritRequired": 3,
+          "pass": {
+            "text": "两地将分水约与祭日记进同一本祠册，新任守祠人照册接手。你仍留在水渠小祠，受托的赐福只及这两地的既有水路。",
+            "faith": 1,
+            "devotees": 1,
+            "merit": 0,
+            "ability": "分水守约的神德"
+          },
+          "fail": {
+            "text": "祠册还没说明由谁接续分水与祭日，两地只来问这回能否得水。你守着有限的源流，零散祈愿尚未成为长久的托付，神音又淡了些。",
+            "faith": -1,
+            "devotees": 0,
+            "merit": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "pilgrimage",
+      "title": "迁居与迎祭",
+      "ending": {
+        "id": "divine-pilgrimage",
+        "title": "祠间迎送",
+        "text": "旧祠、新聚落的小祠与山麓来客各有接续祭告的人，神轿仍沿获准的熟路迎送。你以祠间迎送的神德回应迁居者的牵挂；记事在此收卷，往后的驻留仍须依靠各处实际的供奉。"
+      },
+      "stages": [
+        {
+          "key": "pilgrimage-move",
+          "delay": 4,
+          "min": { "insight": 10, "bond": 11 },
+          "pass": {
+            "text": "旧信众陆续迁往村边的新聚落，水渠旁少了祭声。你托能听见神声的来人核实迁居去处，先保留旧祠祭日，传话也耗去一点神力。",
+            "faith": -1,
+            "devotees": -1,
+            "merit": 1
+          },
+          "fail": {
+            "text": "迁居后的来人偶尔送回供物，却没人说清新的去处与祭期。你听见的旧名越来越零散，一户停了旧祠的供奉，神力跟着减薄。",
+            "faith": -2,
+            "devotees": -1,
+            "merit": 0
+          }
+        },
+        {
+          "key": "pilgrimage-shrine",
+          "delay": 12,
+          "min": { "insight": 12, "bond": 12 },
+          "pass": {
+            "text": "迁居者在新聚落立起小祠，并请能听见神声的来人接续祭告。祭日的神轿沿已通行的村道迎你暂驻，旧神名重新有人供奉。",
+            "faith": 2,
+            "devotees": 1,
+            "merit": 1,
+            "ability": "祠间祭告"
+          },
+          "fail": {
+            "text": "新聚落只送来零散供物，尚未有人认领祭日与守祠。神轿没有启程，你仍驻在旧祠，迁居后的呼声又淡了一层。",
+            "faith": -1,
+            "devotees": 0,
+            "merit": 0
+          }
+        },
+        {
+          "key": "pilgrimage-foothill",
+          "delay": 12,
+          "min": { "insight": 13, "bond": 12 },
+          "meritRequired": 1,
+          "pass": {
+            "text": "山麓住户托人请求迎祭，来人先核对获准通行的低处村道。你将祭告限在这条熟路的危险提醒，新的一户愿意加入供奉。",
+            "faith": 1,
+            "devotees": 1,
+            "merit": 1,
+            "ability": "熟路示警"
+          },
+          "fail": {
+            "text": "山麓的迎祭请求没有说清通行许可和祭告范围。你没有随队离祠，来人另寻供奉处，这一回扩展也停在村边。",
+            "faith": -1,
+            "devotees": -1,
+            "merit": 0
+          }
+        },
+        {
+          "key": "pilgrimage-relay",
+          "delay": 14,
+          "min": { "insight": 14, "bond": 14 },
+          "meritRequired": 2,
+          "pass": {
+            "text": "各处的祭期错开，你请接任守祠者从已经接续的供奉中排出轮值。迎送名单写清去处与归期，迁居人家与来客重新按约祭告。",
+            "faith": 2,
+            "devotees": 0,
+            "merit": 1
+          },
+          "fail": {
+            "text": "各处祭期错开，守祠的接替又没有排妥。来人各自等待别处先办，寄到旧祠的口信渐稀，你的回应也随之变弱。",
+            "faith": -2,
+            "devotees": 0,
+            "merit": 0
+          }
+        },
+        {
+          "key": "pilgrimage-heirs",
+          "delay": 14,
+          "min": { "insight": 15, "bond": 16 },
+          "meritRequired": 3,
+          "pass": {
+            "text": "迁居者的后辈在新聚落备妥小祠并接下祭日，山麓来客沿获准的熟路迎祭。你接受各处接续的供奉，仍把托付限在祠间迎送与路途提醒。",
+            "faith": 1,
+            "devotees": 1,
+            "merit": 0,
+            "ability": "祠间迎送的神德"
+          },
+          "fail": {
+            "text": "迁居者的后辈知道旧神名，却还没有约定谁来接下祭日。山麓的请托也只停在口信，迎送仍无人认领，祠前的香火又淡了一层。",
+            "faith": -1,
+            "devotees": 0,
+            "merit": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "renewal",
+      "title": "旧祭新愿",
+      "ending": {
+        "id": "divine-renewal",
+        "title": "知分守护",
+        "text": "守祠人将旧名、简祭与水源照应写进新册，后辈已能按自己的生活接续供奉。你留下知分守护的神德，这段生活至此收卷；小祠仍有人来，而往后的信仰与神力依旧会变化。"
+      },
+      "stages": [
+        {
+          "key": "renewal-busy-season",
+          "delay": 4,
+          "min": { "insight": 11, "bond": 10 },
+          "pass": {
+            "text": "旧祭日赶上农忙，来人盼你照旧催齐供奉。你听完年轻住户的难处，暂缓回应这份请托；祠前少来一户，香火也随之减薄。",
+            "faith": -1,
+            "devotees": -1,
+            "merit": 1
+          },
+          "fail": {
+            "text": "旧祭日赶上农忙，你只按旧词传下催祭的回应。来人不肯放下田事，又听不进彼此的难处，一户离开供奉，争执让祭声更弱。",
+            "faith": -2,
+            "devotees": -1,
+            "merit": 0
+          }
+        },
+        {
+          "key": "renewal-evening-rite",
+          "delay": 12,
+          "min": { "insight": 13, "bond": 12 },
+          "pass": {
+            "text": "年轻住户想把祭礼挪到晚间，旧信众怕神名被忘。你托祭答复可简礼而不省谢愿，来人商定轮值留灯，少量祭声在祠中重新聚起。",
+            "faith": 1,
+            "devotees": 0,
+            "merit": 1
+          },
+          "fail": {
+            "text": "改祭期的提议到了祠前，你未能说明怎样保留旧名与谢愿。两边仍各守自己的时辰，供物分散送来，祠中的香火难以聚齐。",
+            "faith": -1,
+            "devotees": 0,
+            "merit": 0
+          }
+        },
+        {
+          "key": "renewal-duty",
+          "delay": 14,
+          "min": { "insight": 14, "bond": 13 },
+          "meritRequired": 1,
+          "pass": {
+            "text": "暴雨冲坏田埂，来人求你包办修渠。你只借祭声指出现有水路的险处，把修复交还在世者；完工后的谢愿使一户恢复供奉，神力也厚了一些。",
+            "faith": 2,
+            "devotees": 1,
+            "merit": 1,
+            "ability": "守渠示警"
+          },
+          "fail": {
+            "text": "祠前有人把供奉当作包办旱涝的交换，你没能讲明守护的范围。落空的祈愿引出相互埋怨，一户停止祭告，小祠的神力随之转弱。",
+            "faith": -2,
+            "devotees": -1,
+            "merit": 0
+          }
+        },
+        {
+          "key": "renewal-new-prayers",
+          "delay": 14,
+          "min": { "insight": 15, "bond": 15 },
+          "meritRequired": 2,
+          "pass": {
+            "text": "旧祠几次更换守祠人，祭词也添了迁居、照护与节水的请求。你托祭辨清能承接的水源照应，来人把其余愿望另作人间的安排。",
+            "faith": 1,
+            "devotees": 0,
+            "merit": 1
+          },
+          "fail": {
+            "text": "接任者把旧祠的守护传成凡有所求都该应验，年轻来人又不肯沿用旧祭词。两边各说各的，祭期因争执停了一回，香火更淡。",
+            "faith": -1,
+            "devotees": 0,
+            "merit": 0
+          }
+        },
+        {
+          "key": "renewal-shared-rite",
+          "delay": 16,
+          "min": { "insight": 16, "bond": 17 },
+          "meritRequired": 3,
+          "pass": {
+            "text": "新旧信众一同删去祭词里过重的许愿，把清渠后谢愿与晚间小祭交给后辈。你接受这份较简的托付，仍守住小祠近旁能照应的水源。",
+            "faith": 1,
+            "devotees": 1,
+            "merit": 0,
+            "ability": "知分守护的神德"
+          },
+          "fail": {
+            "text": "新旧祭词虽已摆到祠前，接替供奉的人仍未说定。你听着零散的祈愿，守护的分寸未能成为共同约定，香火又弱了一层。",
+            "faith": -1,
+            "devotees": 0,
+            "merit": 0
+          }
+        }
+      ]
+    }
+  ]
+}

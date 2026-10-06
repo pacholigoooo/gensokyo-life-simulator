@@ -1,0 +1,4935 @@
+[
+  {
+    "id": "magician-quiet-circuit",
+    "title": "迟来的术式回声",
+    "group": "species",
+    "species": [
+      "magician"
+    ],
+    "minYears": 24,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "一段多年前停用的小术式忽然响应旧暗号，你发现施法留下的余响会相互牵动，决定用往后数年查清它们的来路。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:magician-quiet-circuit:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:magician-quiet-circuit:begun"
+              ],
+              "min": {
+                "insight": 13
+              }
+            },
+            "text": "你逐次分开暗号与回声，找出重复响应的间隔，把试验缩到无人经过的林间空地，旧术式终于能按约停下。",
+            "effects": {
+              "fortune": -1,
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:magician-quiet-circuit:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "回声仍会在停术后浮起，你撤去靠近道路的试验点，只留下自己能够逐次收束的一段，先承担这次耗材。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:magician-quiet-circuit:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:magician-quiet-circuit:tested"
+              ]
+            },
+            "text": "几年后的第二轮试验沿用分开的暗号，连旧回声也能辨清；你开始把等待与停术步骤教给来访的修习者。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:magician-quiet-circuit:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你重新遇见那段未散的回声，改用每次亲自收尾的做法；后来求学者也先学停术，再看你演示有限的一段。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:magician-quiet-circuit:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:magician-quiet-circuit:settled"
+              ]
+            },
+            "text": "试验多年后，修习者独自认出了重叠回声，你把可停止的术式交付使用；自己的研究从此能接起更长的观察。",
+            "effects": {
+              "insight": 1,
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:magician-quiet-circuit:done",
+              "long:magician-quiet-circuit:established"
+            ],
+            "clear": [
+              "long:magician-quiet-circuit:begun",
+              "long:magician-quiet-circuit:tested",
+              "long:magician-quiet-circuit:setback",
+              "long:magician-quiet-circuit:settled",
+              "long:magician-quiet-circuit:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "长年的回声试验止在可收束的范围，你保留亲自收尾的习惯，暂不交付自动响应的术式，空出的年月另作研究。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:magician-quiet-circuit:done",
+              "long:magician-quiet-circuit:bounded"
+            ],
+            "clear": [
+              "long:magician-quiet-circuit:begun",
+              "long:magician-quiet-circuit:tested",
+              "long:magician-quiet-circuit:setback",
+              "long:magician-quiet-circuit:settled",
+              "long:magician-quiet-circuit:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "magician-borrowed-light",
+    "title": "借出去的灯光",
+    "group": "species",
+    "species": [
+      "magician"
+    ],
+    "minYears": 48,
+    "minAge": 80,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "你早年换取纸墨的小魔法如今被反复转教，陌生访客拿来一盏熄不下的灯，长年的手艺开始要求你说明使用界限。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:magician-borrowed-light:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:magician-borrowed-light:begun"
+              ],
+              "min": {
+                "insight": 16,
+                "bond": 10
+              }
+            },
+            "text": "你辨出转教时漏掉的停术步骤，先让访客自己试过熄灯，再约定每次传授都保留这一段，才给出新的演示。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:magician-borrowed-light:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "灯中的术式已经混杂数种手法，你未能当场拆清，只把自己的演示收窄，停止继续转授那段来源不明的做法。",
+            "effects": {
+              "bond": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:magician-borrowed-light:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:magician-borrowed-light:tested"
+              ]
+            },
+            "text": "几年后有人携同样的灯来问，同行者能先说明停术步骤；你与他们约好互相核验，使转教不再只凭你的旧名。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:magician-borrowed-light:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "来源不同的灯仍有人带来，你逐一讲明自己能辨的部分；转授范围虽小，却渐渐分清了哪些问题须由原施术者处理。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:magician-borrowed-light:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:magician-borrowed-light:settled"
+              ]
+            },
+            "text": "后来传授者开始自行核验灯的来路，你留下可追问的交接约定，漫长研究之外添了一条能由他人维持的手艺。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:magician-borrowed-light:done",
+              "long:magician-borrowed-light:established"
+            ],
+            "clear": [
+              "long:magician-borrowed-light:begun",
+              "long:magician-borrowed-light:tested",
+              "long:magician-borrowed-light:setback",
+              "long:magician-borrowed-light:settled",
+              "long:magician-borrowed-light:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你最终只传授自己完整试过的灯光，模糊的旧版本不再署你的名字；今后每次答疑都能从明确的来路开始。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:magician-borrowed-light:done",
+              "long:magician-borrowed-light:bounded"
+            ],
+            "clear": [
+              "long:magician-borrowed-light:begun",
+              "long:magician-borrowed-light:tested",
+              "long:magician-borrowed-light:setback",
+              "long:magician-borrowed-light:settled",
+              "long:magician-borrowed-light:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hermit-path-watch",
+    "title": "山路的交接时辰",
+    "group": "species",
+    "species": [
+      "hermit"
+    ],
+    "minYears": 24,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "曾替你送信的人渐渐走不动山路，新来的送信者却沿旧约独自上山，你决定重排联络时辰，把危险路段说清。",
+        "effects": {
+          "bond": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:hermit-path-watch:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:hermit-path-watch:begun"
+              ],
+              "min": {
+                "insight": 12,
+                "bond": 10
+              }
+            },
+            "text": "你按几季风雨核过山脚的会面点，约好迟到便等下一回，不催送信者越过陌生山道，往返终于有了可守的次序。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:hermit-path-watch:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "几处约定仍撞上风雨，你收回频繁送信的要求，只留一个熟悉的山脚会面点，修习也须为等候空出时辰。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:hermit-path-watch:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:hermit-path-watch:tested"
+              ]
+            },
+            "text": "后来的送信者能把约定教给接替的人，你只在山脚核过当次道路，不再让旧日熟路被误当成处处可走的通行许可。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:hermit-path-watch:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你继续在山脚等候，迟来的信件不再催索；修习中的急事另行留到见面再说，联络虽慢，却少了贸然上山的人。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:hermit-path-watch:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:hermit-path-watch:settled"
+              ]
+            },
+            "text": "多年交接后，送信时辰已能由接替者相互确认，你把修习排回完整的一段，山中长年终于不再全靠一位旧友支撑。",
+            "effects": {
+              "insight": 1,
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:hermit-path-watch:done",
+              "long:hermit-path-watch:established"
+            ],
+            "clear": [
+              "long:hermit-path-watch:begun",
+              "long:hermit-path-watch:tested",
+              "long:hermit-path-watch:setback",
+              "long:hermit-path-watch:settled",
+              "long:hermit-path-watch:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "这条联络始终只维持山脚的一处会面，你接受消息来得更慢，往后的长年修持也给故人的近况留出固定等候。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:hermit-path-watch:done",
+              "long:hermit-path-watch:bounded"
+            ],
+            "clear": [
+              "long:hermit-path-watch:begun",
+              "long:hermit-path-watch:tested",
+              "long:hermit-path-watch:setback",
+              "long:hermit-path-watch:settled",
+              "long:hermit-path-watch:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hermit-broken-course",
+    "title": "中断功课的下半段",
+    "group": "species",
+    "species": [
+      "hermit"
+    ],
+    "minYears": 48,
+    "minAge": 80,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "你熟习的行气次序在接连忙乱后出现空缺，昔日背熟的口诀也接不上身体的反应，决定把长年功课拆开重练。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:hermit-broken-course:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:hermit-broken-course:begun"
+              ],
+              "min": {
+                "health": 12,
+                "insight": 14
+              }
+            },
+            "text": "你辨出失衡从哪一段起，停下急于补齐的念头，按自身能承受的次序逐段练回，终于能完整说明每次收息。",
+            "effects": {
+              "health": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:hermit-broken-course:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "几轮重练仍无法接回旧次序，你暂舍后半段，只保留能够稳住的基础功课，把往后的练习重新分配。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:hermit-broken-course:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:hermit-broken-course:tested"
+              ]
+            },
+            "text": "几年后的复核中，旧次序已能与新的作息接合；有人来求教时，你先说明中断后的重练经历，再示范收息。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:hermit-broken-course:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "基础功课渐渐稳下来，你按自己的气息重排每日进度；来求教的人跟着练过一轮，也学会察觉疲意，及时停下休息。",
+            "effects": {
+              "health": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:hermit-broken-course:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:hermit-broken-course:settled"
+              ]
+            },
+            "text": "长年重练让你重新掌握整段功课，却也改掉凭旧熟练硬撑的习惯，往后遇到忙乱便能主动留出恢复修持的年月。",
+            "effects": {
+              "health": 1,
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:hermit-broken-course:done",
+              "long:hermit-broken-course:established"
+            ],
+            "clear": [
+              "long:hermit-broken-course:begun",
+              "long:hermit-broken-course:tested",
+              "long:hermit-broken-course:setback",
+              "long:hermit-broken-course:settled",
+              "long:hermit-broken-course:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你把未接回的后半段留作待问之题，今后的修持守住稳妥的范围；这次中断成为求教时必须说明的一段经历。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:hermit-broken-course:done",
+              "long:hermit-broken-course:bounded"
+            ],
+            "clear": [
+              "long:hermit-broken-course:begun",
+              "long:hermit-broken-course:tested",
+              "long:hermit-broken-course:setback",
+              "long:hermit-broken-course:settled",
+              "long:hermit-broken-course:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shikaisen-old-pledge",
+    "title": "寄身旧约的见证人",
+    "group": "species",
+    "species": [
+      "shikaisen"
+    ],
+    "minYears": 24,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "当年守候你复苏的约定只剩几段转述，新来的守庵人把沉眠与普通死亡混在一起，你开始核对旧契留下的细节。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:shikaisen-old-pledge:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:shikaisen-old-pledge:begun"
+              ],
+              "min": {
+                "insight": 13,
+                "bond": 9
+              }
+            },
+            "text": "你从可核验的字句分清准备、寄物与复苏，讲明哪几段确由见证人留下，再让听者复述，旧约终于不再被当作捷径。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:shikaisen-old-pledge:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "几份转述彼此抵牾，你无法补出已无人见证的部分，只说明自己经历过的步骤，把无法确认的说法另行搁置。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:shikaisen-old-pledge:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:shikaisen-old-pledge:tested"
+              ]
+            },
+            "text": "几年后旧契又被问起，听过核验的人能先分清沉眠与死亡；你继续补充当时承担的风险，压住随意照做的传闻。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:shikaisen-old-pledge:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "空缺仍未找到可信见证，你坚持逐段区分亲历与转述；后来听者只能得到有限的记录，无法拼成一张保证复苏的方子。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:shikaisen-old-pledge:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:shikaisen-old-pledge:settled"
+              ]
+            },
+            "text": "旧约的交接终于保留了见证来路与未定处，你将它留给新的保管者，往后的长年修持不再被催着证明人人都能复苏。",
+            "effects": {
+              "bond": 1,
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:shikaisen-old-pledge:done",
+              "long:shikaisen-old-pledge:established"
+            ],
+            "clear": [
+              "long:shikaisen-old-pledge:begun",
+              "long:shikaisen-old-pledge:tested",
+              "long:shikaisen-old-pledge:setback",
+              "long:shikaisen-old-pledge:settled",
+              "long:shikaisen-old-pledge:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "寄身旧约最终只留下你确曾经历的部分，你接受记录不能补全；今后求问者先听风险与空缺，再谈自己的修持。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:shikaisen-old-pledge:done",
+              "long:shikaisen-old-pledge:bounded"
+            ],
+            "clear": [
+              "long:shikaisen-old-pledge:begun",
+              "long:shikaisen-old-pledge:tested",
+              "long:shikaisen-old-pledge:setback",
+              "long:shikaisen-old-pledge:settled",
+              "long:shikaisen-old-pledge:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shikaisen-missing-years",
+    "title": "沉眠留下的空年",
+    "group": "species",
+    "species": [
+      "shikaisen"
+    ],
+    "minYears": 48,
+    "minAge": 80,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "几户人家的年表把你的沉眠年月误记成了亲眼见闻，你看见自己被列为一件旧事的证人，决定先核清醒来前后的界线。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:shikaisen-missing-years:begun"
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:shikaisen-missing-years:begun"
+              ],
+              "min": {
+                "insight": 15
+              }
+            },
+            "text": "你将沉眠起止与真正见过的事情逐条分开，请仍有记录的保管者互相复核，那件旧事终于撤去了你的错误证言。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:shikaisen-missing-years:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "年月已无法完整核对，你只确认沉眠时未曾见闻，撤下写在你名下的证言，留下可辨的醒后记录供后来人追查。",
+            "effects": {
+              "bond": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:shikaisen-missing-years:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:shikaisen-missing-years:tested"
+              ]
+            },
+            "text": "隔了几年，另一份年表又来求证，保管者能先指出那段空年；你的亲历从此须说明见闻时段，长寿不再代替证据。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:shikaisen-missing-years:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "空年的来由仍有人争论，你拒绝替模糊年月作证，只让保管者核查留下的醒后记录，几件旧事因此暂时保留疑问。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:shikaisen-missing-years:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:shikaisen-missing-years:settled"
+              ]
+            },
+            "text": "多年后年表保留了沉眠空白，你被请去谈真正见过的变迁；不曾经历的岁月终于能留白，长年的见证也更有分量。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:shikaisen-missing-years:done",
+              "long:shikaisen-missing-years:established"
+            ],
+            "clear": [
+              "long:shikaisen-missing-years:begun",
+              "long:shikaisen-missing-years:tested",
+              "long:shikaisen-missing-years:setback",
+              "long:shikaisen-missing-years:settled",
+              "long:shikaisen-missing-years:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "这次求证收束于无法补全的空年，你留下拒作虚证的约定；往后再有人问起旧事，先核时段，再核你是否亲见。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:shikaisen-missing-years:done",
+              "long:shikaisen-missing-years:bounded"
+            ],
+            "clear": [
+              "long:shikaisen-missing-years:begun",
+              "long:shikaisen-missing-years:tested",
+              "long:shikaisen-missing-years:setback",
+              "long:shikaisen-missing-years:settled",
+              "long:shikaisen-missing-years:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "youkai-hidden-delivery",
+    "title": "旧名之外的货路",
+    "group": "species",
+    "species": [
+      "youkai"
+    ],
+    "minYears": 12,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "一直与你在村外交货的主顾停了往返，新的送货人只认得纸上的旧名；你得重新说明会面方式，才能续上这些用度。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:youkai-hidden-delivery:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:youkai-hidden-delivery:begun"
+              ],
+              "min": {
+                "insight": 12,
+                "bond": 9
+              }
+            },
+            "text": "你在不惊动过路人的地方说明交货界线，先试过几次短程往返，再约定不向村里寻访你的旧居，货路得以续接。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:youkai-hidden-delivery:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "送货人被未收住的妖气惊退，你先结清欠款，缩减托带的用度，只在对方愿意的会面点等待下一次消息。",
+            "effects": {
+              "fortune": -1,
+              "bond": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:youkai-hidden-delivery:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:youkai-hidden-delivery:tested"
+              ]
+            },
+            "text": "几年后送货人有了接替者，你们先核交货分寸再谈货物；这条小货路仍绕开村中旧居，也未替你的变化取得豁免。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:youkai-hidden-delivery:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "用度只能隔很久托带一次，你改掉临时催货的习惯，自己留足周转；旧名虽未断，货路始终维持得很窄。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:youkai-hidden-delivery:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:youkai-hidden-delivery:settled"
+              ]
+            },
+            "text": "接替者终于能独自守住会面约定，你续上了少量稳定用度，漫长岁月里的旧名有了可延续的联系，露面仍须谨慎。",
+            "effects": {
+              "fortune": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:youkai-hidden-delivery:done",
+              "long:youkai-hidden-delivery:established"
+            ],
+            "clear": [
+              "long:youkai-hidden-delivery:begun",
+              "long:youkai-hidden-delivery:tested",
+              "long:youkai-hidden-delivery:setback",
+              "long:youkai-hidden-delivery:settled",
+              "long:youkai-hidden-delivery:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "这段货路收束成偶尔托带的往返，你保留结清旧账的凭据，今后再谈交货也从对方愿意的分寸重新开始。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:youkai-hidden-delivery:done",
+              "long:youkai-hidden-delivery:bounded"
+            ],
+            "clear": [
+              "long:youkai-hidden-delivery:begun",
+              "long:youkai-hidden-delivery:tested",
+              "long:youkai-hidden-delivery:setback",
+              "long:youkai-hidden-delivery:settled",
+              "long:youkai-hidden-delivery:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "youkai-aura-border",
+    "title": "妖气的边界线",
+    "group": "species",
+    "species": [
+      "youkai"
+    ],
+    "minYears": 48,
+    "minAge": 80,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "一条荒废多年的小径重新有人经过，你昔日在这里练习收拢妖气，便从这次足迹开始，重新辨清练习与行人的距离。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:youkai-aura-border:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:youkai-aura-border:begun"
+              ],
+              "min": {
+                "insight": 15
+              }
+            },
+            "text": "你察觉行人受惊前的气息变化，把练习移到无人来往的时段，每次结束都先收束妖气，再沿旧径确认余波。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:youkai-aura-border:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "妖气仍在小径边停留，你暂停这一带的练习，退回熟悉的空处，从缩短每次施力开始重新找回分寸。",
+            "effects": {
+              "health": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:youkai-aura-border:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:youkai-aura-border:tested"
+              ]
+            },
+            "text": "几年后的行人已换了面孔，旧分寸仍能经住往返；你把经过小径前的收束练成固定次序，先确认气息再露面。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:youkai-aura-border:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "熟悉空处的练习渐渐稳定，你仍不返回人来往的小径；这段收窄的经历让后来每次施力都多了一次停下的检点。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:youkai-aura-border:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:youkai-aura-border:settled"
+              ]
+            },
+            "text": "长年的练习终于适应了重新通行的小径，你能守住自身妖气的边界，今后的往返有了实证过的分寸，仍须避开惊扰。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:youkai-aura-border:done",
+              "long:youkai-aura-border:established"
+            ],
+            "clear": [
+              "long:youkai-aura-border:begun",
+              "long:youkai-aura-border:tested",
+              "long:youkai-aura-border:setback",
+              "long:youkai-aura-border:settled",
+              "long:youkai-aura-border:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你将那条小径留给行人，练习另守一处有限范围；没有练成的分寸留在心里，往后的长年也从可控处继续。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:youkai-aura-border:done",
+              "long:youkai-aura-border:bounded"
+            ],
+            "clear": [
+              "long:youkai-aura-border:begun",
+              "long:youkai-aura-border:tested",
+              "long:youkai-aura-border:setback",
+              "long:youkai-aura-border:settled",
+              "long:youkai-aura-border:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vampire-night-supply",
+    "title": "夜供的下一位交接者",
+    "group": "species",
+    "species": [
+      "vampire"
+    ],
+    "minYears": 12,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "替你安排夜间食源的妖怪商人想停下奔波，约定的交货却没有接替者，你开始核清能够继续履行的范围与报酬。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:vampire-night-supply:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:vampire-night-supply:begun"
+              ],
+              "min": {
+                "fortune": 6,
+                "insight": 12
+              }
+            },
+            "text": "你备足交接的报酬，与原供货者逐次确认接替人的来路，先做几轮夜间试送，约定不得靠袭击活着的村民补缺。",
+            "effects": {
+              "fortune": -2
+            },
+            "xp": 1,
+            "set": [
+              "long:vampire-night-supply:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你暂时拿不出稳妥的交接用度，只能减少往返，依原有供给过活，把不能履行的额外需求从约定中撤去。",
+            "effects": {
+              "health": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:vampire-night-supply:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:vampire-night-supply:tested"
+              ]
+            },
+            "text": "几年后的供货由接替者按约送来，你仍核清来路与报酬；原供货者渐渐退出，这段长夜才有了能继续的次序。",
+            "effects": {
+              "health": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:vampire-night-supply:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "原供给又有延误，你留出更久的等候，另谈自己负担得起的有限安排，饥饿也没有成为侵扰活人的理由。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:vampire-night-supply:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:vampire-night-supply:settled"
+              ]
+            },
+            "text": "夜供交接终于不再全压在原商人身上，你结清过往报酬，往后的长夜多了一份可靠安排，食源来路仍须核清。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:vampire-night-supply:done",
+              "long:vampire-night-supply:established"
+            ],
+            "clear": [
+              "long:vampire-night-supply:begun",
+              "long:vampire-night-supply:tested",
+              "long:vampire-night-supply:setback",
+              "long:vampire-night-supply:settled",
+              "long:vampire-night-supply:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你最终接受更窄的供给约定，把远行排得更少；长夜依赖仍在，这次未成的交接让以后每份承诺都先核过负担。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:vampire-night-supply:done",
+              "long:vampire-night-supply:bounded"
+            ],
+            "clear": [
+              "long:vampire-night-supply:begun",
+              "long:vampire-night-supply:tested",
+              "long:vampire-night-supply:setback",
+              "long:vampire-night-supply:settled",
+              "long:vampire-night-supply:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vampire-rain-halt",
+    "title": "雨夜停下的归程",
+    "group": "species",
+    "species": [
+      "vampire"
+    ],
+    "minYears": 24,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "你熟悉的夜路几次被连雨截住，昔日能按时归返的行程开始拖到天亮，决定先把途中可停与必须折返的地方认清。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:vampire-rain-halt:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:vampire-rain-halt:begun"
+              ],
+              "min": {
+                "insight": 13,
+                "health": 11
+              }
+            },
+            "text": "你逐季核过沿途遮蔽与折返时辰，雨势一重便提早停程，不借流水试路；几次往返终于避开了临近晨光的奔赶。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:vampire-rain-halt:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你仍估不准雨势与归程，只能先撤去最远的一段夜路，留在熟悉的遮蔽处等候，承担少接差事的损失。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:vampire-rain-halt:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:vampire-rain-halt:tested"
+              ]
+            },
+            "text": "几年后夜路换了新的行人，你按核过的时辰短程往返，天气不合便停下；原先催着赶路的约定也改成了另择夜晚。",
+            "effects": {
+              "health": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:vampire-rain-halt:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "缩短后的夜路能按时结束，你把远处约定交还给委托者，宁可重新谈交期，也不再把归程压到将明时分。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:vampire-rain-halt:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:vampire-rain-halt:settled"
+              ]
+            },
+            "text": "多季雨夜之后，停程时辰已成为每次出行的第一项准备，你接回有限的往返，漫长夜生活终于有了应对变天的余地。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:vampire-rain-halt:done",
+              "long:vampire-rain-halt:established"
+            ],
+            "clear": [
+              "long:vampire-rain-halt:begun",
+              "long:vampire-rain-halt:tested",
+              "long:vampire-rain-halt:setback",
+              "long:vampire-rain-halt:settled",
+              "long:vampire-rain-halt:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你没有接回最远的归程，留住了熟悉的短路与遮蔽；今后遇到新的邀约，先看天气与时辰，再决定能够走到哪里。",
+            "effects": {
+              "health": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:vampire-rain-halt:done",
+              "long:vampire-rain-halt:bounded"
+            ],
+            "clear": [
+              "long:vampire-rain-halt:begun",
+              "long:vampire-rain-halt:tested",
+              "long:vampire-rain-halt:setback",
+              "long:vampire-rain-halt:settled",
+              "long:vampire-rain-halt:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ghost-changed-song",
+    "title": "隔代唱起的旧曲",
+    "group": "species",
+    "species": [
+      "ghost"
+    ],
+    "minYears": 12,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "墓祭上的旧曲换了几处唱法，你随熟悉的节拍浮起，却记不起末句的名字，只能循那段仍可辨认的心情靠近。",
+        "effects": {
+          "bond": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:ghost-changed-song:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:ghost-changed-song:begun"
+              ],
+              "min": {
+                "insight": 12,
+                "bond": 9
+              }
+            },
+            "text": "你收束随曲散开的气息，守住一段真正记得的节拍；唱曲的人察觉寒意停了一拍，留下这段旋律，往后仍愿唱起。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:ghost-changed-song:tested"
+            ],
+            "resources": {
+              "cohesion": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "曲声让旧记忆互相混杂，你退到碑阴，先保留最清楚的几拍，不再追着忘掉的名字散开，墓祭也少了一次回应。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:ghost-changed-song:setback"
+            ],
+            "resources": {
+              "cohesion": -1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:ghost-changed-song:tested"
+              ]
+            },
+            "text": "几年后的唱曲者已经换人，那段节拍仍被留在曲中；你循熟悉心情聚起气质，新旧唱法从此能带来不同的记忆。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:ghost-changed-song:settled"
+            ],
+            "resources": {
+              "cohesion": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "新唱法继续变化，你只在记得的几拍随声浮起；模糊名字没有被补造，留下的心情反而能陪你度过更长的寂静。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:ghost-changed-song:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:ghost-changed-song:settled"
+              ]
+            },
+            "text": "旧曲经历两次交接后仍留着你认得的一段，你不必追回每个名字，也能沿声音聚拢；墓祭从此添了一处稳定的记忆依托。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:ghost-changed-song:done",
+              "long:ghost-changed-song:established"
+            ],
+            "resources": {
+              "cohesion": 1
+            },
+            "clear": [
+              "long:ghost-changed-song:begun",
+              "long:ghost-changed-song:tested",
+              "long:ghost-changed-song:setback",
+              "long:ghost-changed-song:settled",
+              "long:ghost-changed-song:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你最终只守住旧曲中的几拍，失去的名字仍留白；下一次曲声经过时，能够回应的心情已有明确的起止。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:ghost-changed-song:done",
+              "long:ghost-changed-song:bounded"
+            ],
+            "resources": {
+              "cohesion": 1
+            },
+            "clear": [
+              "long:ghost-changed-song:begun",
+              "long:ghost-changed-song:tested",
+              "long:ghost-changed-song:setback",
+              "long:ghost-changed-song:settled",
+              "long:ghost-changed-song:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ghost-mist-passage",
+    "title": "墓道边的低落气息",
+    "group": "species",
+    "species": [
+      "ghost"
+    ],
+    "minYears": 24,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "墓道重新有了夜间行人，你浮动的低落气息让人越走越沉默，便开始辨认哪些心情来自旧记忆，哪些是过路人的余波。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:ghost-mist-passage:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:ghost-mist-passage:begun"
+              ],
+              "min": {
+                "insight": 13
+              }
+            },
+            "text": "你分清近旁气息的变化，退离通行的墓道，只在无人经过时慢慢聚拢，行人再走过时不再被同一阵低落牵住。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:ghost-mist-passage:tested"
+            ],
+            "resources": {
+              "cohesion": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "混杂的心情仍使魂形散开，你退进更安静的碑阴，减少追随行人的浮动，先从自身最清楚的旧记忆重新聚拢。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:ghost-mist-passage:setback"
+            ],
+            "resources": {
+              "cohesion": -1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:ghost-mist-passage:tested"
+              ]
+            },
+            "text": "几年后墓道多了新的脚步，你仍能分清过路气息，守住退离道路的分寸；聚形时也不再借陌生人的情绪填补记忆。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:ghost-mist-passage:settled"
+            ],
+            "resources": {
+              "cohesion": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "安静碑阴让你少受混杂气息牵动，旧记忆虽未变得完整，却能聚成有限轮廓；墓道的脚步从此留在远处。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:ghost-mist-passage:limited"
+            ],
+            "resources": {
+              "cohesion": 1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:ghost-mist-passage:settled"
+              ]
+            },
+            "text": "多次往返之后，你在墓道外找到了能够聚形的分寸，夜间行人可以走过，身后的记忆也有了较少受扰的一处停留。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:ghost-mist-passage:done",
+              "long:ghost-mist-passage:established"
+            ],
+            "resources": {
+              "cohesion": 1
+            },
+            "clear": [
+              "long:ghost-mist-passage:begun",
+              "long:ghost-mist-passage:tested",
+              "long:ghost-mist-passage:setback",
+              "long:ghost-mist-passage:settled",
+              "long:ghost-mist-passage:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你最终离开通行的墓道，守住碑阴能够维持的轮廓；这次未能分清的心情不再外散，往后的浮动更少追逐陌生脚步。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:ghost-mist-passage:done",
+              "long:ghost-mist-passage:bounded"
+            ],
+            "clear": [
+              "long:ghost-mist-passage:begun",
+              "long:ghost-mist-passage:tested",
+              "long:ghost-mist-passage:setback",
+              "long:ghost-mist-passage:settled",
+              "long:ghost-mist-passage:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vengeful-changed-evidence",
+    "title": "旧案中的另一份证词",
+    "group": "species",
+    "species": [
+      "vengeful"
+    ],
+    "minYears": 12,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "荒径边的旧案被后来人重新提起，一份迟到的证词与藏下的证物不合，你的怨气随争论浮动，等待有人逐处核验。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:vengeful-changed-evidence:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:vengeful-changed-evidence:begun"
+              ],
+              "min": {
+                "insight": 12,
+                "bond": 8
+              }
+            },
+            "text": "你收住向见证者逼近的怨气，以旧物旁能辨的痕迹提醒核验者，几处矛盾被分开查明，旧案终于有了可继续的线索。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:vengeful-changed-evidence:tested"
+            ],
+            "resources": {
+              "cohesion": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "争论牵动的怨气遮住了旧物痕迹，你退回荒径深处，供养者只得先保留两份相异的证词，查证暂时停在疑点上。",
+            "effects": {
+              "bond": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:vengeful-changed-evidence:setback"
+            ],
+            "resources": {
+              "cohesion": -1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:vengeful-changed-evidence:tested"
+              ]
+            },
+            "text": "几年后核验者按线索找到新的记录，承认旧案中受过的欺辱，也撤去无法证实的指控；你的怨意随这次回应稍稍松开。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:vengeful-changed-evidence:settled"
+            ],
+            "resources": {
+              "resentment": -1
+            }
+          },
+          {
+            "when": {},
+            "text": "新记录仍不足以核清全部旧事，你没有再追逼见证者，供养者保留能够证实的部分，荒径旁终于少了一轮互相惊扰。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:vengeful-changed-evidence:limited"
+            ],
+            "resources": {
+              "cohesion": 1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:vengeful-changed-evidence:settled"
+              ]
+            },
+            "text": "核验交接给了下一位保管者，旧案能继续从证物说起，你收束了冲向无关行人的怨气；未解的部分仍留待回应。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:vengeful-changed-evidence:done",
+              "long:vengeful-changed-evidence:established"
+            ],
+            "resources": {
+              "resentment": -1
+            },
+            "clear": [
+              "long:vengeful-changed-evidence:begun",
+              "long:vengeful-changed-evidence:tested",
+              "long:vengeful-changed-evidence:setback",
+              "long:vengeful-changed-evidence:settled",
+              "long:vengeful-changed-evidence:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "旧案最终停在可证实的范围，你仍守着尚未回答的旧怨，却不再把互相抵牾的证词都当作追逼活人的凭据。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:vengeful-changed-evidence:done",
+              "long:vengeful-changed-evidence:bounded"
+            ],
+            "clear": [
+              "long:vengeful-changed-evidence:begun",
+              "long:vengeful-changed-evidence:tested",
+              "long:vengeful-changed-evidence:setback",
+              "long:vengeful-changed-evidence:settled",
+              "long:vengeful-changed-evidence:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vengeful-sealed-path",
+    "title": "封径之外的退线",
+    "group": "species",
+    "species": [
+      "vengeful"
+    ],
+    "minYears": 24,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "荒径外多了一层镇伏痕迹，附近的供养也被迫停下，你察觉怨气仍向外逸散，开始寻找能够退回旧物旁的边界。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:vengeful-sealed-path:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:vengeful-sealed-path:begun"
+              ],
+              "min": {
+                "insight": 14
+              }
+            },
+            "text": "你在镇伏逼近前收束怨气，让旧物周围留下可辨的安静范围，负责供养的人得以在封径外停步，重新留下祭告。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:vengeful-sealed-path:tested"
+            ],
+            "resources": {
+              "cohesion": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "怨气仍触到镇伏边缘，魂形被削去一角，你只能退回更深处，停止追逐封径外的声音，等待下一回有限的供养。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:vengeful-sealed-path:setback"
+            ],
+            "resources": {
+              "cohesion": -1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:vengeful-sealed-path:tested"
+              ]
+            },
+            "text": "几年后的祭告约好只在封径外进行，你守住收束后的边界，镇伏没有被硬闯，旧事也能通过供养者继续传到荒径旁。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:vengeful-sealed-path:settled"
+            ],
+            "resources": {
+              "resentment": -1
+            }
+          },
+          {
+            "when": {},
+            "text": "封径仍限制着浮动，你在深处听完断续祭告，再把翻涌的怨气收回旧物；这段迟来的回应只能缓慢传递。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:vengeful-sealed-path:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:vengeful-sealed-path:settled"
+              ]
+            },
+            "text": "多年后供养者交接了停步与祭告的分寸，你的旧怨仍未尽，却已有能够接续回应的边界，荒径外也少了向人追去的怨火。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:vengeful-sealed-path:done",
+              "long:vengeful-sealed-path:established"
+            ],
+            "resources": {
+              "cohesion": 1
+            },
+            "clear": [
+              "long:vengeful-sealed-path:begun",
+              "long:vengeful-sealed-path:tested",
+              "long:vengeful-sealed-path:setback",
+              "long:vengeful-sealed-path:settled",
+              "long:vengeful-sealed-path:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你最终只在封径深处守住有限魂形，回应仍靠远处祭告传来；无法越过的边界留住了旧怨，也约束了继续侵扰的冲动。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:vengeful-sealed-path:done",
+              "long:vengeful-sealed-path:bounded"
+            ],
+            "resources": {
+              "cohesion": 1
+            },
+            "clear": [
+              "long:vengeful-sealed-path:begun",
+              "long:vengeful-sealed-path:tested",
+              "long:vengeful-sealed-path:setback",
+              "long:vengeful-sealed-path:settled",
+              "long:vengeful-sealed-path:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kami-divided-water",
+    "title": "两处田沟的轮水愿",
+    "group": "species",
+    "species": [
+      "kami"
+    ],
+    "minYears": 12,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "原先相同的谢愿如今分成了两处求水，祠前的人各自盼着先灌自家田沟，你听见不同的祈求，开始核清能够回应的范围。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:kami-divided-water:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:kami-divided-water:begun"
+              ],
+              "min": {
+                "insight": 12,
+                "bond": 11
+              }
+            },
+            "text": "你托祭传言，请守渠者先核两处缺水的时辰，再把能够顺利通行的清水留给约好的那一段，轮水终于有了共同的次序。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:kami-divided-water:tested"
+            ],
+            "resources": {
+              "faith": -1
+            }
+          },
+          {
+            "when": {},
+            "text": "相争的祈求使传言难以听清，你暂缓这次小福，只让守渠者分别说明缺水处，祠前的人须先自己谈妥轮水的时辰。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:kami-divided-water:setback"
+            ],
+            "resources": {
+              "faith": -1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:kami-divided-water:tested"
+              ]
+            },
+            "text": "几年后的旱季仍有人依次到祠前陈愿，守渠者照约核沟；你只回应能够照看的水段，祭告也开始记下未能满足的部分。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:kami-divided-water:settled"
+            ],
+            "resources": {
+              "faith": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "两处田沟渐渐谈妥有限轮水，你再应其中可照看的水段；没人能靠抢先祈愿独占回应，未足之处仍须众人合力处理。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:kami-divided-water:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:kami-divided-water:settled"
+              ]
+            },
+            "text": "轮水约定交给了新的守渠者，祭日多了核沟与陈愿的次序；你的微薄神力有了明确去处，眼前的信仰也能继续积累。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:kami-divided-water:done",
+              "long:kami-divided-water:established"
+            ],
+            "resources": {
+              "faith": 2
+            },
+            "clear": [
+              "long:kami-divided-water:begun",
+              "long:kami-divided-water:tested",
+              "long:kami-divided-water:setback",
+              "long:kami-divided-water:settled",
+              "long:kami-divided-water:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "这次相争收束成由人先议轮水、祠前再陈愿的做法，你守住能够回应的一段，不让未成的求水变作无止境的许诺。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:kami-divided-water:done",
+              "long:kami-divided-water:bounded"
+            ],
+            "resources": {
+              "faith": 1
+            },
+            "clear": [
+              "long:kami-divided-water:begun",
+              "long:kami-divided-water:tested",
+              "long:kami-divided-water:setback",
+              "long:kami-divided-water:settled",
+              "long:kami-divided-water:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kami-changed-invocation",
+    "title": "祭名改变之后",
+    "group": "species",
+    "species": [
+      "kami"
+    ],
+    "minYears": 48,
+    "minAge": 80,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "小祠的祭词换了新的称呼，几位守祠人却说不清它与旧神名的关系，你随不同呼声时强时弱，等待祭日把来由说清。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:kami-changed-invocation:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:kami-changed-invocation:begun"
+              ],
+              "min": {
+                "bond": 12,
+                "insight": 13
+              }
+            },
+            "text": "你应着听得清的旧称托祭传言，请守祠人辨明谢愿的来处，再让新称与旧名一同念过，众人的祈求终于指向同一段守望。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:kami-changed-invocation:tested"
+            ],
+            "resources": {
+              "faith": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "新旧祭词杂在一起，你的声音未能清楚传出；守祠人只得先保留旧称，在旁说明新说法尚未核清，祭事暂时缩短。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:kami-changed-invocation:setback"
+            ],
+            "resources": {
+              "faith": -1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:kami-changed-invocation:tested"
+              ]
+            },
+            "text": "几年后新来的守祠人能说明两种称呼的来由，祭词依旧陈明托付的水源；你的回应不必再随模糊呼声反复分散。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:kami-changed-invocation:settled"
+            ],
+            "resources": {
+              "faith": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "祭日继续沿用能够说清的旧称，新的说法仍留作待问；人们少了些热闹口号，却更能说明自己为何来到小祠陈愿。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:kami-changed-invocation:limited"
+            ],
+            "resources": {
+              "faith": 1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:kami-changed-invocation:settled"
+              ]
+            },
+            "text": "称呼终于随守祠人的交接留下清楚来路，祭日的呼声得以续上；你的守望没有因此扩大，信仰却有了较稳的依托。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:kami-changed-invocation:done",
+              "long:kami-changed-invocation:established"
+            ],
+            "resources": {
+              "faith": 2
+            },
+            "clear": [
+              "long:kami-changed-invocation:begun",
+              "long:kami-changed-invocation:tested",
+              "long:kami-changed-invocation:setback",
+              "long:kami-changed-invocation:settled",
+              "long:kami-changed-invocation:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "小祠最终留住可说清的旧祭词，未定的新称没有强行并入；往后每次改词，都先核托付来由，再请祭日的人共同说明。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:kami-changed-invocation:done",
+              "long:kami-changed-invocation:bounded"
+            ],
+            "resources": {
+              "faith": 1
+            },
+            "clear": [
+              "long:kami-changed-invocation:begun",
+              "long:kami-changed-invocation:tested",
+              "long:kami-changed-invocation:setback",
+              "long:kami-changed-invocation:settled",
+              "long:kami-changed-invocation:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scholar-witness-order",
+    "title": "长年见闻的异本次序",
+    "group": "career",
+    "species": [
+      "magician",
+      "hermit",
+      "shikaisen",
+      "youkai",
+      "vampire"
+    ],
+    "minYears": 48,
+    "careers": [
+      "scholar"
+    ],
+    "minAge": 80,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "你早年校过的地方旧本添了后人的传闻，其中一段把听说写成亲见；书铺请你核定各版的来路，长年见闻开始要与纸页互证。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:scholar-witness-order:begun"
+        ],
+        "resources": {
+          "practice": 1
+        }
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:scholar-witness-order:begun"
+              ],
+              "min": {
+                "insight": 16
+              }
+            },
+            "text": "你按各版刊行时段分开亲见与转述，找出最初出现传闻的一页，核验者终于能沿着次序追问，没有再凭你的年岁定论。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:scholar-witness-order:tested"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "旧本的刊行时段缺了几处，你无法排清全部来路，只将自己确曾见到的部分另列，先撤去那段混入亲见的说法。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:scholar-witness-order:setback"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:scholar-witness-order:tested"
+              ]
+            },
+            "text": "几年后又有新版送来，后辈照次序找到了增写的传闻；你让他们说明证据再定注记，校核开始能够离开你的个人记忆。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:scholar-witness-order:settled"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "后辈继续从可确认的几版核对，缺失时段仍空着；你陪他们辨明每段证言的来路，未核清的部分不再悄悄混入正文。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:scholar-witness-order:limited"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:scholar-witness-order:settled"
+              ]
+            },
+            "text": "异本来路终于交由后辈接续查核，书铺收下这次校核成果；往后的长年见闻可以成为线索，却仍须与记录互相验证。",
+            "effects": {
+              "fortune": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:scholar-witness-order:done",
+              "long:scholar-witness-order:established"
+            ],
+            "resources": {
+              "projects": 1,
+              "apprentices": 1
+            },
+            "clear": [
+              "long:scholar-witness-order:begun",
+              "long:scholar-witness-order:tested",
+              "long:scholar-witness-order:setback",
+              "long:scholar-witness-order:settled",
+              "long:scholar-witness-order:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "这次校核只完成可确认的版次，书铺留下未定目录；你将如何辨明亲见与转述教给后辈，今后缺页也有明确的追查起点。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:scholar-witness-order:done",
+              "long:scholar-witness-order:bounded"
+            ],
+            "resources": {
+              "apprentices": 1
+            },
+            "clear": [
+              "long:scholar-witness-order:begun",
+              "long:scholar-witness-order:tested",
+              "long:scholar-witness-order:setback",
+              "long:scholar-witness-order:settled",
+              "long:scholar-witness-order:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "garden-trial-seed",
+    "title": "变过几季的试种地",
+    "group": "career",
+    "species": [
+      "magician",
+      "hermit",
+      "shikaisen",
+      "youkai",
+      "vampire"
+    ],
+    "minYears": 24,
+    "careers": [
+      "garden"
+    ],
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "你留了多年的种子在新一季长得参差，同样的田沟也不再处处湿润，便与帮工划出几块小试种地，重新查看差别。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:garden-trial-seed:begun"
+        ],
+        "resources": {
+          "practice": 1
+        }
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:garden-trial-seed:begun"
+              ],
+              "min": {
+                "insight": 12,
+                "health": 10
+              }
+            },
+            "text": "你逐季对照各块土地的出苗，把缺水与种子本身的差别分开，留下适合眼前地块的一批种子，先不急着分给所有人。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:garden-trial-seed:tested"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "几块试种地仍难分清差别，你减少下一季试种的范围，保留旧种与新种各一小份，承担这次未能增加收成的损失。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:garden-trial-seed:setback"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:garden-trial-seed:tested"
+              ]
+            },
+            "text": "几年后的试种又遇到不同雨水，帮工能独自辨清几块地的差别；你们按地块留种，旧办法也开始有了可说明的适用范围。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:garden-trial-seed:settled"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "小范围试种积下了较清楚的出苗记录，你把能确认的种子留给熟悉地块，陌生土地仍另作试种，不照搬旧年的期待。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:garden-trial-seed:limited"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:garden-trial-seed:settled"
+              ]
+            },
+            "text": "试种地的照看交给了学会辨差别的后辈，你收妥适合各块地的种子；往后农时变化时，这门旧营生能够从小范围重新验证。",
+            "effects": {
+              "fortune": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:garden-trial-seed:done",
+              "long:garden-trial-seed:established"
+            ],
+            "resources": {
+              "projects": 1,
+              "apprentices": 1
+            },
+            "clear": [
+              "long:garden-trial-seed:begun",
+              "long:garden-trial-seed:tested",
+              "long:garden-trial-seed:setback",
+              "long:garden-trial-seed:settled",
+              "long:garden-trial-seed:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "这轮试种终于收束在熟悉地块，后辈接过继续比较的差事；你把尚未分清的一批种子另作标记，约好来年先试一小块。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:garden-trial-seed:done",
+              "long:garden-trial-seed:bounded"
+            ],
+            "resources": {
+              "practice": 1
+            },
+            "clear": [
+              "long:garden-trial-seed:begun",
+              "long:garden-trial-seed:tested",
+              "long:garden-trial-seed:setback",
+              "long:garden-trial-seed:settled",
+              "long:garden-trial-seed:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "trade-closed-account",
+    "title": "旧主顾停下的账页",
+    "group": "career",
+    "species": [
+      "magician",
+      "hermit",
+      "shikaisen",
+      "youkai",
+      "vampire"
+    ],
+    "minYears": 24,
+    "careers": [
+      "trade"
+    ],
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "一位旧主顾已由亲友料理身后事，账页上的长期订货却仍送到你手里；你先停下新货，核对哪些款项与承诺真正完成。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:trade-closed-account:begun"
+        ],
+        "resources": {
+          "practice": 1
+        }
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:trade-closed-account:begun"
+              ],
+              "min": {
+                "insight": 13,
+                "bond": 10
+              }
+            },
+            "text": "你与料理旧账的人逐项核清货物与付款，只结双方能确认的部分，再让愿意继续的人另订新约，旧账终于没有压成来历不明的债。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:trade-closed-account:tested"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "几笔款项缺了凭据，你把不能核实的索款撤回，认下这一段损失；原订货到此停止，愿意往来的人须重新谈清每一单。",
+            "effects": {
+              "fortune": -2
+            },
+            "xp": 1,
+            "set": [
+              "long:trade-closed-account:setback"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:trade-closed-account:tested"
+              ]
+            },
+            "text": "几年后新主顾要求续订，你带出的后辈能先分开旧账与新约；你们按已经核清的款项交接，长年的信誉不再只靠口头转述。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:trade-closed-account:settled"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "撤回索款之后，几位主顾仍愿意重新订货，你把每笔交接写得更短更清楚；无法核实的旧账没有再次递给后来的人。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:trade-closed-account:limited"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:trade-closed-account:settled"
+              ]
+            },
+            "text": "这段旧账最终结清了可确认的部分，新约也有后辈能接手；你交出一条清楚的货路，往后的多年买卖可以继续换人往来。",
+            "effects": {
+              "fortune": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:trade-closed-account:done",
+              "long:trade-closed-account:established"
+            ],
+            "resources": {
+              "projects": 1,
+              "apprentices": 1
+            },
+            "clear": [
+              "long:trade-closed-account:begun",
+              "long:trade-closed-account:tested",
+              "long:trade-closed-account:setback",
+              "long:trade-closed-account:settled",
+              "long:trade-closed-account:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "旧账的缺口由你承担，新的货单只沿重新约定的范围往返；这次收束留下了交接分寸，长年经营不再靠旧名催别人偿付。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:trade-closed-account:done",
+              "long:trade-closed-account:bounded"
+            ],
+            "resources": {
+              "practice": 1
+            },
+            "clear": [
+              "long:trade-closed-account:begun",
+              "long:trade-closed-account:tested",
+              "long:trade-closed-account:setback",
+              "long:trade-closed-account:settled",
+              "long:trade-closed-account:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "craft-changing-measure",
+    "title": "隔代织具的不同尺寸",
+    "group": "career",
+    "species": [
+      "magician",
+      "hermit",
+      "shikaisen",
+      "youkai",
+      "vampire"
+    ],
+    "minYears": 24,
+    "careers": [
+      "craft"
+    ],
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "你早年做过的织具被后人换上新的部件，原先合用的尺寸已不相接；工房送来几件样物，想请你找出能够独立替换的接合。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:craft-changing-measure:begun"
+        ],
+        "resources": {
+          "practice": 1
+        }
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:craft-changing-measure:begun"
+              ],
+              "min": {
+                "insight": 13,
+                "fortune": 4
+              }
+            },
+            "text": "你分清旧样与新件各自受力的地方，做出能单独替换的接合样件，先让使用者试过，才把尺寸交给工房接下一批。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:craft-changing-measure:tested"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "新件仍在试用时卡住，你拆下未合用的样件，只修好能够核清的一段，工房暂缓接同类整批订单，先记下材料损失。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:craft-changing-measure:setback"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:craft-changing-measure:tested"
+              ]
+            },
+            "text": "几年后织具又换了不同零件，后辈能依受力处自行量尺寸；你陪他们试过接合，不再要求所有部件都照早年的样物。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:craft-changing-measure:settled"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "后辈从那段已经修稳的接合重新试量，几种未合用的样件仍被分开；修理范围虽小，每一件也都能说明为何可用。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:craft-changing-measure:limited"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:craft-changing-measure:settled"
+              ]
+            },
+            "text": "工房交妥了一批能够分别换件的织具，后辈接下尺寸核验；你的多年手艺有了适应新件的做法，旧样也保留了明确来路。",
+            "effects": {
+              "fortune": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:craft-changing-measure:done",
+              "long:craft-changing-measure:established"
+            ],
+            "resources": {
+              "projects": 1,
+              "apprentices": 1
+            },
+            "clear": [
+              "long:craft-changing-measure:begun",
+              "long:craft-changing-measure:tested",
+              "long:craft-changing-measure:setback",
+              "long:craft-changing-measure:settled",
+              "long:craft-changing-measure:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "这次改制只交妥了可核验的一段接合，工房保留试坏的样件作比较；往后的新订单先试尺寸，再决定能够承担多少。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:craft-changing-measure:done",
+              "long:craft-changing-measure:bounded"
+            ],
+            "resources": {
+              "practice": 1
+            },
+            "clear": [
+              "long:craft-changing-measure:begun",
+              "long:craft-changing-measure:tested",
+              "long:craft-changing-measure:setback",
+              "long:craft-changing-measure:settled",
+              "long:craft-changing-measure:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "medicine-changing-stock",
+    "title": "旧方与新来的药材",
+    "group": "career",
+    "species": [
+      "magician",
+      "hermit",
+      "shikaisen",
+      "youkai",
+      "vampire"
+    ],
+    "minYears": 24,
+    "careers": [
+      "medicine"
+    ],
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "药铺新来的常用药材与多年旧标签不合，送药者也换了人；你暂停照旧配制，先核清名目与来路，把待用药材另行分开。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:medicine-changing-stock:begun"
+        ],
+        "resources": {
+          "practice": 1
+        }
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:medicine-changing-stock:begun"
+              ],
+              "min": {
+                "insight": 14,
+                "bond": 9
+              }
+            },
+            "text": "你与送药者逐包核过来路，再对照近年用药记录，请懂这批药材的同行复核；能确认的部分才重新用于原先的常用差事。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:medicine-changing-stock:tested"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "几包药材仍无法核清，你撤下对应的旧标签，暂不继续配制；药铺另请同行处理所需用药，你承担搁置这一批的损失。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:medicine-changing-stock:setback"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:medicine-changing-stock:tested"
+              ]
+            },
+            "text": "几年后的新药材又有变化，后辈能先核来路再看旧记录；你们把需要同行复核的差事单列，熟悉的旧方也须重新确认。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:medicine-changing-stock:settled"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "未能核清的那批药材没有继续流转，后辈从能确认的名目学起；遇到新的疑点，药铺先请同行复核，再决定能否接手。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:medicine-changing-stock:limited"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:medicine-changing-stock:settled"
+              ]
+            },
+            "text": "药材交接终于有人能逐项核验，药铺交妥这轮常用差事；你的多年经验留下复核次序，后辈也能辨明何时应请同行帮助。",
+            "effects": {
+              "fortune": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:medicine-changing-stock:done",
+              "long:medicine-changing-stock:established"
+            ],
+            "resources": {
+              "projects": 1,
+              "apprentices": 1
+            },
+            "clear": [
+              "long:medicine-changing-stock:begun",
+              "long:medicine-changing-stock:tested",
+              "long:medicine-changing-stock:setback",
+              "long:medicine-changing-stock:settled",
+              "long:medicine-changing-stock:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "这轮交接收束在能够确认的药材范围，你把暂缓配制的理由教给后辈；往后旧方再被提起，也先核当次名目与来路。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:medicine-changing-stock:done",
+              "long:medicine-changing-stock:bounded"
+            ],
+            "resources": {
+              "practice": 1
+            },
+            "clear": [
+              "long:medicine-changing-stock:begun",
+              "long:medicine-changing-stock:tested",
+              "long:medicine-changing-stock:setback",
+              "long:medicine-changing-stock:settled",
+              "long:medicine-changing-stock:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "magic-teaching-stop",
+    "title": "学徒第一次自行停术",
+    "group": "career",
+    "species": [
+      "magician",
+      "hermit",
+      "shikaisen",
+      "youkai",
+      "vampire"
+    ],
+    "minYears": 12,
+    "careers": [
+      "magic"
+    ],
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "一位学徒照你的旧演示练小术式，失败后仍急着再试；你想起自己耗过的年月，决定把何时停下也列进往后的教学。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:magic-teaching-stop:begun"
+        ],
+        "resources": {
+          "practice": 1
+        }
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:magic-teaching-stop:begun"
+              ],
+              "min": {
+                "insight": 13,
+                "bond": 10
+              }
+            },
+            "text": "你让学徒先辨出术式偏离的征兆，再亲自演示如何停术，等对方能够独自说清每步理由，才交出下一段练习。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:magic-teaching-stop:tested"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "学徒仍分不清偏离的征兆，你停止更难的演示，只陪对方练完能够收尾的一段；旧教学次序因此要从头调整。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:magic-teaching-stop:setback"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:magic-teaching-stop:tested"
+              ]
+            },
+            "text": "几年后学徒独自遇到类似偏离，先停术再来核对原因；你们从这次失手找出新的练习题，教学开始能承接实际问题。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:magic-teaching-stop:settled"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          },
+          {
+            "when": {},
+            "text": "基础的一段终于能由学徒独自收尾，你们慢慢再辨先前的征兆；进度虽晚了几年，却没有照着旧演示急于添难度。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:magic-teaching-stop:limited"
+            ],
+            "resources": {
+              "practice": 1
+            }
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:magic-teaching-stop:settled"
+              ]
+            },
+            "text": "学徒能独立练完并停下小术式，你把这次经历列入交接的教学次序；长年的魔法营生添了一位懂得核验失手的接续者。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:magic-teaching-stop:done",
+              "long:magic-teaching-stop:established"
+            ],
+            "resources": {
+              "projects": 1,
+              "apprentices": 1
+            },
+            "clear": [
+              "long:magic-teaching-stop:begun",
+              "long:magic-teaching-stop:tested",
+              "long:magic-teaching-stop:setback",
+              "long:magic-teaching-stop:settled",
+              "long:magic-teaching-stop:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "这轮教学只交出能够独自收尾的基础术式，你保留尚未讲通的问题；往后新学徒先学停术，再按实际掌握的部分继续。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:magic-teaching-stop:done",
+              "long:magic-teaching-stop:bounded"
+            ],
+            "resources": {
+              "apprentices": 1
+            },
+            "clear": [
+              "long:magic-teaching-stop:begun",
+              "long:magic-teaching-stop:tested",
+              "long:magic-teaching-stop:setback",
+              "long:magic-teaching-stop:settled",
+              "long:magic-teaching-stop:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "outside-fading-ticket",
+    "title": "外界书签的褪色边角",
+    "group": "experience",
+    "species": [
+      "magician",
+      "hermit",
+      "shikaisen",
+      "youkai",
+      "vampire"
+    ],
+    "minYears": 24,
+    "requires": [
+      "legend:outside-visited"
+    ],
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "外界一日带回的书签边角已褪色，往来者却把听来的别处街景也算进你的见闻；你想起当晚归返，决定分清那天确曾看过什么。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:outside-fading-ticket:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:outside-fading-ticket:begun"
+              ],
+              "min": {
+                "insight": 14
+              }
+            },
+            "text": "你按当日记下的行期重述街巷，说明哪些只是后来听来的故事，记不清的地方留白，旧书签终于只承载那一次往返。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:outside-fading-ticket:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "早年的细节已无法核实，你不再补出模糊街景，只确认当日归返的经历；听来的故事另说，旧书签也不被当作再次开路的凭据。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:outside-fading-ticket:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:outside-fading-ticket:tested"
+              ]
+            },
+            "text": "几年后访客再问外界，你能沿已核清的时段讲述那一天，再说明后来传闻的来路；听者也开始分辨每段是否真的由你亲见。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:outside-fading-ticket:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "访客仍想从书签找出开门办法，你只讲可以确认的那次归返，拒绝用失去的细节拼出新路，有限见闻因而少了夸大的传说。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:outside-fading-ticket:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:outside-fading-ticket:settled"
+              ]
+            },
+            "text": "那次往返最终留下了亲见、传闻与空白各自的来路，褪色书签成为长年见闻的起点；你能继续回想，却没有添出第二次通行。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:outside-fading-ticket:done",
+              "long:outside-fading-ticket:established"
+            ],
+            "clear": [
+              "long:outside-fading-ticket:begun",
+              "long:outside-fading-ticket:tested",
+              "long:outside-fading-ticket:setback",
+              "long:outside-fading-ticket:settled",
+              "long:outside-fading-ticket:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "外界书签的故事收束在当日归返与少量可辨细节，你接受记忆不能复原；往后谈起远方，仍把传闻与亲见逐段说明。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:outside-fading-ticket:done",
+              "long:outside-fading-ticket:bounded"
+            ],
+            "clear": [
+              "long:outside-fading-ticket:begun",
+              "long:outside-fading-ticket:tested",
+              "long:outside-fading-ticket:setback",
+              "long:outside-fading-ticket:settled",
+              "long:outside-fading-ticket:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "soul-route-boundary",
+    "title": "护魂岸路留下的问答",
+    "group": "experience",
+    "species": [
+      "magician",
+      "hermit",
+      "shikaisen",
+      "youkai",
+      "vampire"
+    ],
+    "minYears": 24,
+    "requires": [
+      "event:legendary:soul-seal",
+      "contact:sanzu"
+    ],
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "三途河岸的递送约定隔年又有人来问，你留下的旧见闻却被听成了随时招回亡者，决定把护送一程的界限重新说清。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:soul-route-boundary:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:soul-route-boundary:begun"
+              ],
+              "min": {
+                "insight": 14,
+                "bond": 10
+              }
+            },
+            "text": "你逐项说明归愿、准备与具体途程，先让求问者复述自己的理解；旧岸路终于被认作有限护送的来路，未被许成起死回生。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:soul-route-boundary:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "求问者仍把旧见闻当作复生保证，你停下术式演示，只解释已经发生的岸边往返；无法讲清的护送细节暂不继续转教。",
+            "effects": {
+              "bond": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:soul-route-boundary:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:soul-route-boundary:tested"
+              ]
+            },
+            "text": "几年后有人再拿旧传闻来问，听过说明的人能先说清亲笔归愿与准备的区别；你再核当次问题，没有凭熟路替陌生亡者许诺。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:soul-route-boundary:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你继续只讲可确认的岸路见闻，求问者把夸大的传闻撤回；能否护送仍须具体准备与既有约定，不从未讲通的片段照做。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:soul-route-boundary:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:soul-route-boundary:settled"
+              ]
+            },
+            "text": "护魂问答交给了能说明界限的记录者，旧传闻得以逐条核清；往后有人求问归途，先谈本人愿望与准备，岸路不再替人作保。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:soul-route-boundary:done",
+              "long:soul-route-boundary:established"
+            ],
+            "clear": [
+              "long:soul-route-boundary:begun",
+              "long:soul-route-boundary:tested",
+              "long:soul-route-boundary:setback",
+              "long:soul-route-boundary:settled",
+              "long:soul-route-boundary:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "这轮求问最终收束在有限岸路的见闻，未讲通的术式没有传下；你留住先问归愿与准备的次序，拒绝替未定的归返许诺。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:soul-route-boundary:done",
+              "long:soul-route-boundary:bounded"
+            ],
+            "clear": [
+              "long:soul-route-boundary:begun",
+              "long:soul-route-boundary:tested",
+              "long:soul-route-boundary:setback",
+              "long:soul-route-boundary:settled",
+              "long:soul-route-boundary:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "commons-night-council",
+    "title": "夜里议事的空座",
+    "group": "experience",
+    "species": [
+      "magician",
+      "hermit",
+      "shikaisen",
+      "youkai",
+      "vampire"
+    ],
+    "minYears": 24,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "住处附近几次相争都等着你作主，入夜来访的人越来越多；你发现自己记得旧规，却已不了解他们如今各自承担的难处。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:commons-night-council:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:commons-night-council:begun"
+              ],
+              "min": {
+                "bond": 12,
+                "insight": 13
+              }
+            },
+            "text": "你请来访者轮流说清所需时辰，再把决定交回当事人，先试出一回人人能参加的夜间议事，自己只留下一个旁听的位置。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-night-council:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "来访者仍争着让你裁断，你暂缓集会，分别听完能够说明的难处；几项约定因此迟迟未成，你也不能替缺席的人答应。",
+            "effects": {
+              "bond": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-night-council:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:commons-night-council:tested"
+              ]
+            },
+            "text": "几年后的议事已有人轮流召集，新的分歧由当事人共同商量；你听见一条与旧规不同的新约，第一次无需替他们收尾。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-night-council:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "分开来访的人渐渐能说明自己的约定，你只转达双方同意公开的部分；争议仍须当面谈妥，不能凭你的旧交替别人承诺。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-night-council:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:commons-night-council:settled"
+              ]
+            },
+            "text": "夜间议事换过一轮召集者后仍能继续，你退到那张空座旁，漫长经历成为可来询问的参考，住处附近的决定已有新的承担者。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:commons-night-council:done",
+              "long:commons-night-council:established"
+            ],
+            "clear": [
+              "long:commons-night-council:begun",
+              "long:commons-night-council:tested",
+              "long:commons-night-council:setback",
+              "long:commons-night-council:settled",
+              "long:commons-night-council:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "这轮相争未能形成共同议事，你留下分别来访的时辰；往后只回应自己能承担的部分，每一项新约仍由当事人亲自说定。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:commons-night-council:done",
+              "long:commons-night-council:bounded"
+            ],
+            "clear": [
+              "long:commons-night-council:begun",
+              "long:commons-night-council:tested",
+              "long:commons-night-council:setback",
+              "long:commons-night-council:settled",
+              "long:commons-night-council:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "commons-object-loan",
+    "title": "借物柜的第三轮交接",
+    "group": "experience",
+    "species": [
+      "magician",
+      "hermit",
+      "shikaisen",
+      "youkai",
+      "vampire"
+    ],
+    "minYears": 48,
+    "minAge": 80,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "早年借给邻近往来者的灯罩与防雨罩接连被送回，有人想继续借用，也有人说不清缺件在哪，你决定先清点这批流转的旧物。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:commons-object-loan:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:commons-object-loan:begun"
+              ],
+              "min": {
+                "fortune": 6,
+                "bond": 11
+              }
+            },
+            "text": "你承担少量缺件的损失，让愿意接手的人先把旧物试妥，再约好归还与补件由借用者当面说明，第一轮交接才重新开始。",
+            "effects": {
+              "fortune": -2
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-object-loan:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "几件旧物已无法试用，借用者也凑不齐接手的人，你收回尚可用的部分，只答应少量短借，临时急用仍须另作安排。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-object-loan:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:commons-object-loan:tested"
+              ]
+            },
+            "text": "几年后接手的人将旧物转给下一批借用者，缺件能在归还时说清；你发现流转不必每回经过自己，往来者开始相互照应。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-object-loan:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "短借的旧物总算能按次送回，你保留亲自清点的办法，不再接下无人负责的长期借用；可流转的范围始终小一些。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-object-loan:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:commons-object-loan:settled"
+              ]
+            },
+            "text": "第三轮交接完成时，新接手者自行补齐了常缺的部件，你将借物安排正式交出去，留下的长年旧物成了近旁能共同照看的用度。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:commons-object-loan:done",
+              "long:commons-object-loan:established"
+            ],
+            "clear": [
+              "long:commons-object-loan:begun",
+              "long:commons-object-loan:tested",
+              "long:commons-object-loan:setback",
+              "long:commons-object-loan:settled",
+              "long:commons-object-loan:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "旧物最终只在你能亲自清点的范围短借，你结束了无人接手的长期流转；往后遇到急用，先问归还与接替，再决定借出多少。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:commons-object-loan:done",
+              "long:commons-object-loan:bounded"
+            ],
+            "clear": [
+              "long:commons-object-loan:begun",
+              "long:commons-object-loan:tested",
+              "long:commons-object-loan:setback",
+              "long:commons-object-loan:settled",
+              "long:commons-object-loan:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "commons-slope-recovery",
+    "title": "旧坡重新有人同行",
+    "group": "place",
+    "species": [
+      "magician",
+      "hermit",
+      "shikaisen",
+      "youkai",
+      "vampire"
+    ],
+    "minYears": 80,
+    "minAge": 80,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "住处附近的旧坡被接连大雨冲出断口，曾与你往来的人绕道而行；你望着多年熟悉的地形，决定与邻近来访者一起查看退路。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:commons-slope-recovery:begun"
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:commons-slope-recovery:begun"
+              ],
+              "min": {
+                "insight": 14,
+                "bond": 10
+              }
+            },
+            "text": "你们只在获知能通行的近旁查看坡面，分出还可走的一段，先停用不稳的旧路，再约好按季看看雨水是否继续冲开断口。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-slope-recovery:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "坡面的断口仍在扩大，你撤回恢复旧路的打算，只保留熟悉处的短程会面；来访者另择路线，往返因此变得疏一些。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-slope-recovery:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:commons-slope-recovery:tested"
+              ]
+            },
+            "text": "多年雨水之后，留下的一段逐渐能供约好的短程往返，来访者自行接起按季查看的差事，你们又能在旧坡近旁同行一段。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-slope-recovery:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "短程会面没有被雨水再次截断，你接受往来更慢的安排；有人再问旧路时，你先说清仍未恢复的断口，不凭熟悉就领人走过。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-slope-recovery:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:commons-slope-recovery:settled"
+              ]
+            },
+            "text": "旧坡的查看换过一轮承担者，近旁往返仍能继续，你将改过的路认成新的熟路；长年居处之外终于重新连上一段共同通行。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:commons-slope-recovery:done",
+              "long:commons-slope-recovery:established"
+            ],
+            "clear": [
+              "long:commons-slope-recovery:begun",
+              "long:commons-slope-recovery:tested",
+              "long:commons-slope-recovery:setback",
+              "long:commons-slope-recovery:settled",
+              "long:commons-slope-recovery:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "那段旧路最终没有恢复，你留下能继续会面的短程退路；今后地形再变，往来先从当次可走之处重认，不追索往年的近便。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:commons-slope-recovery:done",
+              "long:commons-slope-recovery:bounded"
+            ],
+            "clear": [
+              "long:commons-slope-recovery:begun",
+              "long:commons-slope-recovery:tested",
+              "long:commons-slope-recovery:setback",
+              "long:commons-slope-recovery:settled",
+              "long:commons-slope-recovery:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "commons-borrowed-authority",
+    "title": "被借用的老资格",
+    "group": "experience",
+    "species": [
+      "magician",
+      "hermit",
+      "shikaisen",
+      "youkai",
+      "vampire"
+    ],
+    "minYears": 120,
+    "minAge": 80,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "一位来访者用你的旧名替自己作了担保，另一方却从未听你答应；多年留下的名声开始被借来压住异议，你决定亲自说明这回立场。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:commons-borrowed-authority:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:commons-borrowed-authority:begun"
+              ],
+              "min": {
+                "insight": 16,
+                "bond": 12
+              }
+            },
+            "text": "你让双方当面听清自己只曾谈过哪一段经历，撤去未答应的担保，再请来访者为当前约定承担责任，争执终于回到具体事情上。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-borrowed-authority:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你的说明被旧传闻盖过，双方仍借年岁争高下，你退还牵涉自己的托付，暂停为新约作证，宁可承担一次失去信任的代价。",
+            "effects": {
+              "bond": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-borrowed-authority:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:commons-borrowed-authority:tested"
+              ]
+            },
+            "text": "几年后又有人请你作保，先说清事项与对方是否在场；你只答应自己真正见证的一段，新约也能容下不同的意见。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-borrowed-authority:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "暂停作证之后，来访者终于不再把你的旧名写进约定，你听见他们另找共同认可的见证者，这段往来须从新的关系重新建立。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-borrowed-authority:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:commons-borrowed-authority:settled"
+              ]
+            },
+            "text": "旧名的担保终于改成逐次当面说明，你仍可留下亲见的一段，却不再被年岁推成无所不知的人；新的承担者也能有自己的声望。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:commons-borrowed-authority:done",
+              "long:commons-borrowed-authority:established"
+            ],
+            "clear": [
+              "long:commons-borrowed-authority:begun",
+              "long:commons-borrowed-authority:tested",
+              "long:commons-borrowed-authority:setback",
+              "long:commons-borrowed-authority:settled",
+              "long:commons-borrowed-authority:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你结束了这批依旧名作保的托付，往后来访只谈真正见过的事情；失去的信任未必全能追回，长年的名声却有了明确边界。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:commons-borrowed-authority:done",
+              "long:commons-borrowed-authority:bounded"
+            ],
+            "clear": [
+              "long:commons-borrowed-authority:begun",
+              "long:commons-borrowed-authority:tested",
+              "long:commons-borrowed-authority:setback",
+              "long:commons-borrowed-authority:settled",
+              "long:commons-borrowed-authority:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "commons-expiring-favor",
+    "title": "旧恩情的停止时辰",
+    "group": "experience",
+    "species": [
+      "magician",
+      "hermit",
+      "shikaisen",
+      "youkai",
+      "vampire"
+    ],
+    "minYears": 80,
+    "minAge": 80,
+    "needsFreedom": true,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "一桩早年顺手帮过的寄放如今连着几批物件送来，接替者只说这是多年旧例；你已腾不出原来的空处，必须把这份恩情重新谈清。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:commons-expiring-favor:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:commons-expiring-favor:begun"
+              ],
+              "min": {
+                "bond": 12,
+                "insight": 13
+              }
+            },
+            "text": "你与仍愿来往的人逐批交还寄物，说明今后只接亲自约过的短期托付，再由他们寻找愿意轮流保管的人，寄放才有了停止时辰。",
+            "effects": {
+              "fortune": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-expiring-favor:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "部分寄物已找不到明确接手者，你先停收新物，托来访者通知原主人认领；空处迟迟未能腾出，旧往来也多了一段尴尬。",
+            "effects": {
+              "bond": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-expiring-favor:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:commons-expiring-favor:tested"
+              ]
+            },
+            "text": "几年后轮流保管的人能自行交接，只在有明确期限时向你求助；那份旧恩情成了可来商量的一次帮助，没有继续压成无尽义务。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-expiring-favor:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "未领的寄物逐件有了去向，你仍不重开长期寄放；来访者从那次等待中学会先问接手的人，旧例也渐渐停在已经归还的一批。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:commons-expiring-favor:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:commons-expiring-favor:settled"
+              ]
+            },
+            "text": "最后一次轮值交接没有再借你的空处，你收回被旧例占去的年月，往后仍能答应新托付，却有了由双方亲自约定的结束时辰。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:commons-expiring-favor:done",
+              "long:commons-expiring-favor:established"
+            ],
+            "clear": [
+              "long:commons-expiring-favor:begun",
+              "long:commons-expiring-favor:tested",
+              "long:commons-expiring-favor:setback",
+              "long:commons-expiring-favor:settled",
+              "long:commons-expiring-favor:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "这批寄物最终按能确认的来路交还，你结束了原来的长期寄放；旧交的尴尬仍在，但以后每次帮忙都能先说明接手与期限。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:commons-expiring-favor:done",
+              "long:commons-expiring-favor:bounded"
+            ],
+            "clear": [
+              "long:commons-expiring-favor:begun",
+              "long:commons-expiring-favor:tested",
+              "long:commons-expiring-favor:setback",
+              "long:commons-expiring-favor:settled",
+              "long:commons-expiring-favor:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spirit-shared-silence",
+    "title": "祭告之后留下的静默",
+    "group": "experience",
+    "species": [
+      "ghost",
+      "vengeful",
+      "kami"
+    ],
+    "minYears": 24,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "近旁祭告多了几种不同的请求，每次气息稍有浮动便被当作应允；你听着越来越急的声音，试着让回应与无言分出界线。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:spirit-shared-silence:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:spirit-shared-silence:begun"
+              ],
+              "min": {
+                "insight": 13,
+                "bond": 9
+              }
+            },
+            "text": "你只在听到能够辨清的旧事时收束气息，其余祭告之后留出静默；主持者开始请众人先说完整，不再抢着解释每一次浮动。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-shared-silence:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "气息仍随相杂的声音散开，你退回安静处，暂不回应连番请求；主持者只能按旧记录说完祭告，众人少了期待中的兆头。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-shared-silence:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:spirit-shared-silence:tested"
+              ]
+            },
+            "text": "几年后的祭告能容下无人解释的静默，新来的主持者先让每个人说完；你听到熟悉的旧事时才聚起气息，回应不再挤作一团。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-shared-silence:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "安静的祭告渐渐代替抢问，主持者说明未见回应仍可把事情说完；你在较远处听着，有限的浮动不再承担所有人的期待。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-shared-silence:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:spirit-shared-silence:settled"
+              ]
+            },
+            "text": "这段静默经过主持者交接后仍被保留，你得以听完不同的声音；往后的祭告有了陈述而不必求准许的一段时辰，驻留也少了争抢。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:spirit-shared-silence:done",
+              "long:spirit-shared-silence:established"
+            ],
+            "clear": [
+              "long:spirit-shared-silence:begun",
+              "long:spirit-shared-silence:tested",
+              "long:spirit-shared-silence:setback",
+              "long:spirit-shared-silence:settled",
+              "long:spirit-shared-silence:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你最终保留远处倾听的分寸，祭告并未换来人人期待的兆头；主持者学会让无言留在原处，新的请求须由仍在世的人自己决定。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:spirit-shared-silence:done",
+              "long:spirit-shared-silence:bounded"
+            ],
+            "clear": [
+              "long:spirit-shared-silence:begun",
+              "long:spirit-shared-silence:tested",
+              "long:spirit-shared-silence:setback",
+              "long:spirit-shared-silence:settled",
+              "long:spirit-shared-silence:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spirit-rerouted-passage",
+    "title": "驻留处旁的新路",
+    "group": "place",
+    "species": [
+      "ghost",
+      "vengeful",
+      "kami"
+    ],
+    "minYears": 48,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "近旁的道路改了方向，更多脚步经过你驻留的地方，夜间浮起的气息使人停步；新的通行与长年停留第一次挤到了同一处。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:spirit-rerouted-passage:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:spirit-rerouted-passage:begun"
+              ],
+              "min": {
+                "insight": 14
+              }
+            },
+            "text": "你收住随脚步向外散开的气息，让熟悉的停留处与通行处分开；来往者渐渐认出可以经过的一段，祭告仍留在约好的远处。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-rerouted-passage:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "杂乱脚步不断牵动气息，你退到较少人经过的近旁，不再跟随通行的声音；原先能够听清的祭告也因此变得断续。",
+            "effects": {
+              "bond": -1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-rerouted-passage:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:spirit-rerouted-passage:tested"
+              ]
+            },
+            "text": "几年后又一批行人走过新路，停留处与通行处仍能分开；主持祭告的人按熟悉时辰到来，道路不必每次因气息浮动而停住。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-rerouted-passage:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "退开的地方渐渐安静下来，祭告者在不会挡住行人的时辰停步；你从较远处听见旧事，长年的停留收窄到较少受扰的一角。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-rerouted-passage:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:spirit-rerouted-passage:settled"
+              ]
+            },
+            "text": "新路经历了几次往返仍可通行，你驻留的气息也有了明确边界；近旁的人不必回避每一次经过，祭告与脚步终于各有去处。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:spirit-rerouted-passage:done",
+              "long:spirit-rerouted-passage:established"
+            ],
+            "clear": [
+              "long:spirit-rerouted-passage:begun",
+              "long:spirit-rerouted-passage:tested",
+              "long:spirit-rerouted-passage:setback",
+              "long:spirit-rerouted-passage:settled",
+              "long:spirit-rerouted-passage:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "你没有回到挤满脚步的旧处，留住近旁的一角安静；往后的驻留听见祭告更少一些，却不再被每次通行都牵着向外散开。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:spirit-rerouted-passage:done",
+              "long:spirit-rerouted-passage:bounded"
+            ],
+            "clear": [
+              "long:spirit-rerouted-passage:begun",
+              "long:spirit-rerouted-passage:tested",
+              "long:spirit-rerouted-passage:setback",
+              "long:spirit-rerouted-passage:settled",
+              "long:spirit-rerouted-passage:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spirit-entangled-stories",
+    "title": "被合在一起的旧事",
+    "group": "experience",
+    "species": [
+      "ghost",
+      "vengeful",
+      "kami"
+    ],
+    "minYears": 80,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "几段年代不同的旧事在祭告中被合成一段传奇，你听到自己的旧名，却辨不出当年牵挂的来由，熟悉的声调也变得陌生。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:spirit-entangled-stories:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:spirit-entangled-stories:begun"
+              ],
+              "min": {
+                "insight": 15,
+                "bond": 10
+              }
+            },
+            "text": "你在能够辨认的一段浮起气息，听到相杂的传说便收束不应；主持者转而对照各自留下的旧记录，几段不同来由才重新分开。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-entangled-stories:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "混杂的传奇一直传唱，你未能留下可辨的回应，退回最清楚的一段记忆；主持者也只能先说旧名，其余来由留待继续查问。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-entangled-stories:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:spirit-entangled-stories:tested"
+              ]
+            },
+            "text": "几年后祭告各说不同的来由，新的主持者不再用一段传奇替代所有旧事；你循真正熟悉的片段聚起气息，留下的记忆重新有了次序。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-entangled-stories:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "旧记录仍不够分开全部传说，祭告只保留能够确认的称呼；你听见那段熟悉声调时稍稍浮起，模糊部分没有再被编成新的经历。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-entangled-stories:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:spirit-entangled-stories:settled"
+              ]
+            },
+            "text": "几段旧事终于能各自传到下一位主持者，你的旧名也重新连上有限的来由；往后的记忆不必再随着混成一段的传奇一起变形。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:spirit-entangled-stories:done",
+              "long:spirit-entangled-stories:established"
+            ],
+            "clear": [
+              "long:spirit-entangled-stories:begun",
+              "long:spirit-entangled-stories:tested",
+              "long:spirit-entangled-stories:setback",
+              "long:spirit-entangled-stories:settled",
+              "long:spirit-entangled-stories:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "传奇的来由始终未能补全，祭告停在可确认的旧名与少量片段；你守住仍可辨的记忆，让未解的部分继续留给在世者查问。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:spirit-entangled-stories:done",
+              "long:spirit-entangled-stories:bounded"
+            ],
+            "clear": [
+              "long:spirit-entangled-stories:begun",
+              "long:spirit-entangled-stories:tested",
+              "long:spirit-entangled-stories:setback",
+              "long:spirit-entangled-stories:settled",
+              "long:spirit-entangled-stories:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spirit-no-longer-a-verdict",
+    "title": "未回应的事情由谁决定",
+    "group": "experience",
+    "species": [
+      "ghost",
+      "vengeful",
+      "kami"
+    ],
+    "minYears": 120,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "近旁有人把长年的祭告当作每件事都必须求得的裁定，迟迟没有回应便不肯行动；你听见一项平常安排被等待拖过了时辰。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:spirit-no-longer-a-verdict:begun"
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:spirit-no-longer-a-verdict:begun"
+              ],
+              "min": {
+                "insight": 16,
+                "bond": 11
+              }
+            },
+            "text": "你守住无言的时段，不随催问浮起，主持者终于请当事人自己商量；他们说完打算再离开，第一次不以未见兆头为停止的理由。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-no-longer-a-verdict:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "催问使气息反复浮动，当事人仍争论哪一回算回应，你退到安静处；主持者只能先结束祭告，把耽搁的安排交回在世者讨论。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-no-longer-a-verdict:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:spirit-no-longer-a-verdict:tested"
+              ]
+            },
+            "text": "几年后的祭告改成说起已经作出的决定，主持者先问是谁愿意承担；你听见熟悉的声音，却无需每回被请作最后的裁定。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-no-longer-a-verdict:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "当事人慢慢能在祭告之后自行商量，仍有人怀疑静默的意思；主持者只说明未见回应，不再替你把沉默编成准许或反对。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-no-longer-a-verdict:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:spirit-no-longer-a-verdict:settled"
+              ]
+            },
+            "text": "旧习经过交接终于改成先由在世者决定、再来陈述近况，你的长年停留多了可以倾听的一段，近旁的人也重新接过自己的责任。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:spirit-no-longer-a-verdict:done",
+              "long:spirit-no-longer-a-verdict:established"
+            ],
+            "clear": [
+              "long:spirit-no-longer-a-verdict:begun",
+              "long:spirit-no-longer-a-verdict:tested",
+              "long:spirit-no-longer-a-verdict:setback",
+              "long:spirit-no-longer-a-verdict:settled",
+              "long:spirit-no-longer-a-verdict:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "这轮等待没有换来明确裁定，近旁的人仍须自己承担之后的安排；你留下安静倾听的分寸，往后的祭告不再保证每事都有回应。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:spirit-no-longer-a-verdict:done",
+              "long:spirit-no-longer-a-verdict:bounded"
+            ],
+            "clear": [
+              "long:spirit-no-longer-a-verdict:begun",
+              "long:spirit-no-longer-a-verdict:tested",
+              "long:spirit-no-longer-a-verdict:setback",
+              "long:spirit-no-longer-a-verdict:settled",
+              "long:spirit-no-longer-a-verdict:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spirit-absent-visitors",
+    "title": "无人来访的几年以后",
+    "group": "experience",
+    "species": [
+      "ghost",
+      "vengeful",
+      "kami"
+    ],
+    "minYears": 80,
+    "stages": [
+      {
+        "delay": 0,
+        "text": "近旁连着几年没有熟悉的祭告，后来一位过路者念起旧名，却把停留的来由说错；你从久静的气息中浮起，旧联系已换了人。",
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1,
+        "set": [
+          "long:spirit-absent-visitors:begun"
+        ]
+      },
+      {
+        "delay": 6,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:spirit-absent-visitors:begun"
+              ],
+              "min": {
+                "insight": 14,
+                "bond": 10
+              }
+            },
+            "text": "你循仍可辨的声调收束气息，不追着错说的来由散开；过路者找到旧记录的保管人，两人约好再来，只说能够确认的一段。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-absent-visitors:tested"
+            ]
+          },
+          {
+            "when": {},
+            "text": "陌生的声调引不起清楚记忆，你退回久静的停留处，没有留下可辨回应；过路者只记下旧名，暂时未能接回原来的祭告。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-absent-visitors:setback"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 9,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:spirit-absent-visitors:tested"
+              ]
+            },
+            "text": "几年后保管人带新的主持者来陈述旧记录，他们讲起从前未被说到的生活小事；你认出其中一段心情，新的联系终于有了来由。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-absent-visitors:settled"
+            ]
+          },
+          {
+            "when": {},
+            "text": "偶尔仍有人经过并念起旧名，你不再追问是否就是原来的声音；只能辨认的少量心情慢慢留下，联系稀疏却不必靠补造往事接续。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 1,
+            "set": [
+              "long:spirit-absent-visitors:limited"
+            ]
+          }
+        ]
+      },
+      {
+        "delay": 12,
+        "branches": [
+          {
+            "when": {
+              "flags": [
+                "long:spirit-absent-visitors:settled"
+              ]
+            },
+            "text": "熟悉的祭告没有回来，新的主持者却能按确认过的来由继续陈述；你沿这段新联系留在近旁，长年的静默终于接上了另一种声音。",
+            "effects": {
+              "bond": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:spirit-absent-visitors:done",
+              "long:spirit-absent-visitors:established"
+            ],
+            "clear": [
+              "long:spirit-absent-visitors:begun",
+              "long:spirit-absent-visitors:tested",
+              "long:spirit-absent-visitors:setback",
+              "long:spirit-absent-visitors:settled",
+              "long:spirit-absent-visitors:limited"
+            ]
+          },
+          {
+            "when": {},
+            "text": "原来的祭告最终没有续回，你守住仍可辨的心情，偶尔听见有人念起旧名；这段安静让往后的联系从当次能认出的片段开始。",
+            "effects": {
+              "insight": 1
+            },
+            "xp": 2,
+            "set": [
+              "long:spirit-absent-visitors:done",
+              "long:spirit-absent-visitors:bounded"
+            ],
+            "clear": [
+              "long:spirit-absent-visitors:begun",
+              "long:spirit-absent-visitors:tested",
+              "long:spirit-absent-visitors:setback",
+              "long:spirit-absent-visitors:settled",
+              "long:spirit-absent-visitors:limited"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

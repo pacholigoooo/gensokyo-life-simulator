@@ -3,7 +3,7 @@
   const STATS=['health','insight','bond','fortune'];
   const LABELS={health:'体魄',insight:'悟性',bond:'缘分',fortune:'家底'};
   const PHASES=['初始','成长','立足','盛年','晚期'];
-  const H=globalThis.TouhouHealth,O=globalThis.TouhouOpportunities,R=globalThis.TouhouRelationships,S=globalThis.TouhouSpiritual,C=globalThis.TouhouContacts,TS=globalThis.TouhouTalentStories,A=globalThis.TouhouAfterlife,K=globalThis.TouhouCareers;
+  const H=globalThis.TouhouHealth,O=globalThis.TouhouOpportunities,R=globalThis.TouhouRelationships,S=globalThis.TouhouSpiritual,C=globalThis.TouhouContacts,TS=globalThis.TouhouTalentStories,A=globalThis.TouhouAfterlife,K=globalThis.TouhouCareers,L=globalThis.TouhouLongYears;
   const forms={...O.forms,...A.forms};
   const SPECIES={human:'人类',long:'长生者',eternal:'不死者',fairy:'妖精',spirit:'灵体',beast:'兽类',construct:'构造物'};
   function random(seed){let x=seed>>>0;return()=>{x+=0x6D2B79F5;let t=Math.imul(x^x>>>15,1|x);t^=t+Math.imul(t^t>>>7,61|t);return((t^t>>>14)>>>0)/4294967296;};}
@@ -66,7 +66,7 @@
     }
     if(character)change(s,initialEffects);
     else if(Object.keys(initialEffects).length)add(s,'talent-start','随身天赋显出最初的影响。',initialEffects,{reason:talents.map(id=>globalThis.TouhouTalents.list.find(t=>t.id===id).name).join(' · ')});
-    s.initial={...s.stats};s.horizon+=s.stats.health-stats.health;H.init(s,rng);R.init(s);S.init(s,rng);A.init(s);K.init(s);if(talents.includes('healthful'))s.vitality+=5;
+    s.initial={...s.stats};s.horizon+=s.stats.health-stats.health;H.init(s,rng);R.init(s);S.init(s,rng);A.init(s);K.init(s);L.init(s);if(talents.includes('healthful'))s.vitality+=5;
     const rich=s.initial.fortune>=7,poor=s.initial.fortune<=3;
     s.flags.add(rich?'well-supplied':poor?'scarce':'modest');
     if(rich){s.tools=!isAnimal(s);s.home=true;}
@@ -95,7 +95,7 @@
     if((s.seen[e.id]||0)>=(e.repeat||1)||s.history.slice(-10).includes(e.id))return false;
     return true;
   }
-  function weight(s,e){let value=e.weight;if(e.id==='chance:magician-found'&&s.flags.has('legend:insight'))value*=2.5;if(e.id==='chance:kami-found'&&s.flags.has('legend:faith'))value*=3;if(e.id==='chance:youkai-found'&&s.flags.has('talent-clue:youkai'))value*=4;for(const [stat,direction]of Object.entries(e.bias||{}))value*=direction>0?(2+s.stats[stat])/7:14/(4+s.stats[stat]);for(const id of s.talents)if(globalThis.TouhouTalents.list.find(t=>t.id===id).boost?.includes(e.id))value*=2;if(e.talentBoost)value*=Math.min(3,1.8**s.talents.filter(id=>e.talentBoost.includes(id)).length);return value/(1+(s.seen[e.id]||0)*1.5);}
+  function weight(s,e){let value=e.weight;if(e.id==='chance:magician-found'&&s.flags.has('legend:insight'))value*=2.5;if(e.id==='chance:kami-found'&&s.flags.has('legend:faith'))value*=globalThis.TouhouLifeConfig.faithOpportunityMultiplier;if(e.id==='chance:youkai-found'&&s.flags.has('talent-clue:youkai'))value*=4;for(const [stat,direction]of Object.entries(e.bias||{}))value*=direction>0?(2+s.stats[stat])/7:14/(4+s.stats[stat]);for(const id of s.talents)if(globalThis.TouhouTalents.list.find(t=>t.id===id).boost?.includes(e.id))value*=2;if(e.talentBoost)value*=Math.min(3,1.8**s.talents.filter(id=>e.talentBoost.includes(id)).length);return value/(1+(s.seen[e.id]||0)*1.5);}
   function choose(s,pool,rng){let n=rng()*pool.reduce((sum,e)=>sum+weight(s,e),0);for(const e of pool){n-=weight(s,e);if(n<0)return e;}return pool[pool.length-1];}
   function applyEvent(s,e,rng,developer=false){
     const previousPartner=R.partner(s);
@@ -112,7 +112,7 @@
     const relation=relationId?s.relations[relationId]:null;
     const relationship=relation?{id:relationId,name:s.people[relationId].name,from:previousStatus,to:relation.status,stage:relation.label,visits:relation.visits}:undefined;
     const relationshipMoment=e.relationshipMoment||R.partnerChange(s,previousPartner)||(relationId?R.romanceClosure(s,relationId):undefined);
-    add(s,e.id,typeof e.text==='function'?e.text(s):e.text,e.effects,{reason,with:e.with,remember:e.remember,scene:e.scene,premise:e.premise,contactMedium:e.contactMedium,relationship,relationshipMoment,developmentMoment:e.developmentMoment,...(e.circleOf?{circleOf:e.circleOf}:{}),...(developer?{developer:true}:{})});
+    add(s,e.id,typeof e.text==='function'?e.text(s):e.text,e.effects,{reason,with:e.with,remember:e.remember,scene:e.scene,premise:e.premise,contactMedium:e.contactMedium,relationship,relationshipMoment,developmentMoment:e.developmentMoment,sharedWith:e.sharedWith,...(e.circleOf?{circleOf:e.circleOf}:{}),...(developer?{developer:true}:{})});
     H.event(s,e);s.seen[e.id]=(s.seen[e.id]||0)+1;s.history.push(e.id);s.flags.add('event:'+e.id);
   }
   function recover(s){
@@ -145,6 +145,8 @@
     if(s.ended||s.character||s.transformation||s.species!=='human'||!forms[kind]||(s.development&&!A.forms[kind])||(A.forms[kind]&&!A.canTransform(s,kind,context)))throw new Error('当前人生不能再次转变种族。');
     const form=forms[kind];
     s.transformation={kind,age:s.age,turn:s.turn,origin:'人类村落普通人',eventId:context.eventId||`chance:${kind}-2-pass`};
+    s.transformation.source=context.source||(/^(partner-learning:|guidance:)/.test(s.transformation.eventId)?'partner-guidance':'independent');
+    if(context.mentorId)s.transformation.mentorId=context.mentorId;
     s.pathHistory.push({kind,result:'transformed',age:s.age});s.opportunity=null;
     s.species=kind;s.life='long';s.habitat=form.habitat;s.location=form.location;
     s.horizon=s.turn+form.chapter+Math.min(24,Math.floor(s.stats.health/2)+Math.floor(s.xp/3));
@@ -169,11 +171,14 @@
     return {species:S.description(s)||(s.character?s.character.identity:s.transformation?forms[s.species].label:SPECIES[s.species]),status:status.join(' · ')||'起居平稳',time:time(s),location:s.location,career:K.description(s)};
   }
   function finish(s,cause){
+    const divineEnding=A.divineEnding(s,cause);
+    if(divineEnding){s.divineEndingId=cause;cause='chapter';}
     globalThis.TouhouAkyuu.finish(s);
     if(s.development)A.fail(s,'unfinished');
     if(s.opportunity){s.pathHistory.push({kind:s.opportunity.kind,result:'unfinished',age:s.age});s.opportunity=null;}
     s.ended=true;s.deathCause=cause;s.earlyDeath=cause==='health'||cause==='pursuit'||(cause==='age'&&s.turn<65);
-    if(A.endings[cause]){[s.ending,s.endingText]=A.endings[cause];}
+    if(divineEnding){[s.ending,s.endingText]=divineEnding;}
+    else if(A.endings[cause]){[s.ending,s.endingText]=A.endings[cause];}
     else if(cause==='pursuit'){s.ending='仙途止于此';s.endingText='追索中的重伤夺去了性命，庵里留下旧日的笔记与未尽的功课。';}
     else if(s.earlyDeath){
       s.ending=s.age<60?'未竟的春秋':'此生落幕';
@@ -196,7 +201,7 @@
     const progress=O.events.filter(e=>eligible(s,e));
     if(progress.length&&rng()<.38)return choose(s,progress,rng);
     const starts=[...O.starts,...A.starts].filter(e=>eligible(s,e));
-    if(starts.length&&rng()<O.discoveryChance(s,starts))return choose(s,starts,rng);
+    if(starts.length&&rng()<O.discoveryChance(s,starts))return O.discovered(s,choose(s,starts,rng));
     const prospect=C.prospect(s,rng);if(prospect)return prospect;
     const local=globalThis.TouhouEvents.localRomance(s,rng,s.meetingPlan.current?.id==='local:spouse');if(local)return local;
     const relation=R.select(s,rng);if(relation)return relation;
@@ -216,6 +221,8 @@
   }
   function completeEvent(s,event,rng,before,developer=false){
     applyEvent(s,event,rng,developer);
+    // 身后续事与原有供养同年发生，保留魂形与香火原有的消耗、恢复节奏。
+    if(s.afterlife){const continuation=L.select(s);if(continuation)applyEvent(s,continuation,rng,developer);const divine=A.continuation(s);if(divine)applyEvent(s,divine,rng,developer);}
     if(['development:shikaisen-transformed','development:shikaisen-wake-failed'].includes(event.id))upkeep(s);
     const vulnerable=['human','beast'].includes(s.life)||!!s.transformation||!!s.hermit||!!s.magic;
     if(s.injured&&(s.character?.regenerates||s.life==='fairy')){s.injured=false;add(s,'regrowth',s.life==='fairy'?'散开的灵气重新聚拢，你又活蹦乱跳起来。':'伤处很快复原，你歇息片刻便重新起身。',{health:2});}
@@ -282,6 +289,7 @@
       if(!pool.length)throw new Error(`第${s.turn}步没有可用事件：${s.character.id}`);
       event=choose(s,pool,rng);
     }else event=selectOrdinary(s,rng,common);
+    if(!s.afterlife){const continuation=L.select(s,event);if(continuation)event=continuation;}
     globalThis.TouhouCompanionship.courtship(s,add);
     completeEvent(s,event,rng,before);
     globalThis.TouhouCompanionship.localMarriage(s,add);

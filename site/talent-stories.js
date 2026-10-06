@@ -602,12 +602,214 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
     set: [done(q)],
     conditions: ['暂无仍在世的邻伴，独自沿用这回调整。']
   });
+  var archive = 'archive';
+  event(archive, 'fragments', words('几册旧记把同一场雪写成不同年份。你留下能互相对照的段落，准备考订这处异文。', '旧栖处几次雪后的气味与记忆里的时序不合。你记住差别，留意熟悉气息怎样更替。', '旧记录把同一次停机记在两个年份。你保留两处记载，准备核对前后的运行次序。'), {}, {
+    label: '旧记异文',
+    phases: [1, 4],
+    min: {
+      insight: 8
+    },
+    xp: 1,
+    set: [mark(archive, 'fragments')],
+    conditions: ['悟性至少8，能发现旧记或自身记忆中的时序差异。']
+  });
+  event(archive, 'collate', words('你花一份用度补齐缺页，对照雪期与收成，认出其中一册把后来的补记当成了旧事。', '你等过几回熟悉气息的更替，把先后发生的变化重新分清，认出了记错的一段。', '你调出相邻几次检修记录，核对耗材与停机间隔，认出一段后来补入的旧编号。'), {
+    fortune: -1,
+    insight: 1
+  }, {
+    label: '逐条考订',
+    requires: [mark(archive, 'fragments')],
+    min: {
+      insight: 10,
+      fortune: 1
+    },
+    devMinXp: 6,
+    when: function when(x) {
+      return x.xp >= 6;
+    },
+    xp: 2,
+    set: [mark(archive, 'collated')],
+    conditions: ['已有异文，悟性至少10、历练至少6、家底至少1；核对证据需要一份用度。']
+  });
+  event(archive, 'verified', words('你将考实的年月与仍待查的传闻分开记好。下一回重读，旧事的先后终于不再混在一起。', '你把已分清的气息更替记牢，不再把那段模糊的记忆当成可靠的来路。', '你将校正的编号与尚未核实的记录分别留存，往后的检修能辨清那次停机的先后。'), {
+    insight: 1
+  }, {
+    label: '旧记定序',
+    requires: [mark(archive, 'collated')],
+    xp: 2,
+    set: [mark(archive, 'verified'), done(archive)],
+    conditions: ['已经逐条考订，保留可核实的结论，不将传闻补作事实。']
+  });
+  event(archive, 'unresolved', words('能对照的旧记还不够，你在疑处留下待考，暂时收好缺页，没有替旧事编出一个年份。', '气息的更替仍对不上记忆，你留在认得的范围，把那段模糊的来路暂且放下。', '记录与耗材的编号仍有缺口，你标出未定的时段，没有让猜测覆盖原来的记载。'), {}, {
+    label: '疑处待考',
+    requires: [mark(archive, 'fragments')],
+    excludes: [mark(archive, 'collated')],
+    when: function when(x) {
+      return x.stats.insight < 10 || x.stats.fortune < 1 || x.xp < 6;
+    },
+    xp: 1,
+    set: [mark(archive, 'unresolved'), done(archive)],
+    conditions: ['尚未考订完成，悟性、历练或核对用度不足，保留疑处并结束这回考订。']
+  });
+  var artisan = 'artisan';
+  event(artisan, 'worn', words('一件旧物总在同一处松动。你先看清受力与磨损的方向，留住尚能用的部分，准备试修。', '熟悉栖处的遮风物歪了，你留意松动处怎样漏风，认清还能抵稳的边角。', '一件备用件总在同一处松动，你核对接口和磨损，保留尚能配合的部分，准备试修。'), {}, {
+    label: '旧物受损',
+    min: {
+      insight: 8
+    },
+    xp: 1,
+    set: [mark(artisan, 'worn')],
+    conditions: ['悟性至少8，先认清身边旧物或栖处遮风物的实际损坏。']
+  });
+  event(artisan, 'fitted', words('你花去一份用料，先试修松动的连接处。几次受力都稳住以后，旧物终于恢复了原来的用途。', '你反复贴近松动的遮风物，把歪斜处抵稳。熟悉栖处渐渐安静，你试过几回才停下。', '你花去一份维护用料，试修备用件的连接处。接口经过几次试运转，终于不再自行松开。'), {
+    fortune: -1,
+    insight: 1
+  }, {
+    label: '试修接缝',
+    requires: [mark(artisan, 'worn')],
+    min: {
+      insight: 10,
+      fortune: 1
+    },
+    devMinXp: 6,
+    when: function when(x) {
+      return x.xp >= 6;
+    },
+    xp: 2,
+    set: [mark(artisan, 'fitted')],
+    conditions: ['已认清损坏，悟性至少10、历练至少6、家底至少1；消耗用料试修，不凭空添置工具。']
+  });
+  event(artisan, 'verified', words('修过的旧物又经住一阵日用，你记下合适的分量。这回省下了换新的开销，也留下了可再用的修法。', '抵稳的遮风物经住一阵风，原来的栖处又能安稳歇息，你省下了另寻落脚处的气力与用度。', '修过的备用件经住一阵运行，你保存合用的参数，省下了换件开销，也留下一份实际检修经验。'), {
+    fortune: 2
+  }, {
+    label: '旧物复用',
+    requires: [mark(artisan, 'fitted')],
+    xp: 1,
+    set: [mark(artisan, 'verified'), done(artisan)],
+    conditions: ['试修已经完成，确认实际耐用后才收回节省的用度。']
+  });
+  event(artisan, 'deferred', words('试修的办法还不稳，你将可用部分留好，收住这次尝试，免得把整件旧物一并试坏。', '松动处仍抵得费力，你退到原有的安静位置，没有为了遮风再挤进不稳的边角。', '接口与用料还无法配合，你留下可用的部分，停止试修，避免连同完好的部件一起损坏。'), {}, {
+    label: '留材收手',
+    requires: [mark(artisan, 'worn')],
+    excludes: [mark(artisan, 'fitted')],
+    when: function when(x) {
+      return x.stats.insight < 10 || x.stats.fortune < 1 || x.xp < 6;
+    },
+    xp: 1,
+    set: [mark(artisan, 'deferred'), done(artisan)],
+    conditions: ['尚未试修完成，悟性、历练或用料不足，保留旧物可用部分并结束尝试。']
+  });
+  var vein = 'earth-vein';
+  event(vein, 'heard', words('静处传来一阵细响，水声和地面轻震错开了半拍。你留意它们的先后，准备察清近处地脉。', '熟悉角落的地面微微震动，水气却晚些才到。你安静停留，记住两种变化的先后。', '底座传来轻震，近处的水声却慢了半拍。你留住两段间隔，准备分辨震动从何处传来。'), {}, {
+    label: '地脉初闻',
+    min: {
+      insight: 9
+    },
+    xp: 1,
+    set: [mark(vein, 'heard')],
+    conditions: ['悟性至少9，只察觉居处近旁的水声与地面震动，不要求远行或新肢体。']
+  });
+  event(vein, 'tested', words('你花去一份用度，在近处反复比较水声与轻震。费力察验之后，认出一处回响是空隙所致，并非地脉改道。', '你在熟悉角落反复辨认轻震与水气，耗去一点气力与余粮，终于认出一处空隙传来的回响。', '你花去一份校验用料，反复比较底座轻震与水声。几次试运转之后，认出偏差来自附近的空隙。'), {
+    health: -1,
+    fortune: -1
+  }, {
+    label: '实察回响',
+    requires: [mark(vein, 'heard')],
+    min: {
+      health: 7,
+      insight: 12,
+      fortune: 1
+    },
+    devMinXp: 8,
+    when: function when(x) {
+      return x.xp >= 8;
+    },
+    xp: 2,
+    set: [mark(vein, 'tested')],
+    conditions: ['已记住回响，体魄至少7、悟性至少12、历练至少8、家底至少1；实察消耗气力与用度。']
+  });
+  event(vein, 'verified', words('你将空隙的回响与真正稳定的震动分清，不再被每次细响牵着耗神。歇过一阵，积下的疲劳缓了一些。', '你认清熟悉角落的稳定轻震，不再追着空隙的回响来回活动，歇下后气力渐渐平稳。', '你分清底座的稳定轻震与空隙回响，减少无用的反复校验，停稳后渐渐缓和了磨损。'), {
+    insight: 1
+  }, {
+    label: '辨脉留力',
+    requires: [mark(vein, 'tested')],
+    wear: -2,
+    xp: 2,
+    set: [mark(vein, 'verified'), done(vein)],
+    conditions: ['已实察近处回响，减去2点累计耗损，不改变寿命、种族或居处。']
+  });
+  event(vein, 'deferred', words('回响仍听得混杂，你察看一阵便觉疲乏，收住这回追辨，留下未能核实的差别。', '轻震与水气仍混在一起，你停留得疲乏，退回熟悉位置，暂时不再追辨那处差别。', '轻震的来源仍无法分清，反复校验开始增加负担，你停下运行，留下尚未核实的间隔。'), {
+    health: -1
+  }, {
+    label: '听脉止步',
+    requires: [mark(vein, 'heard')],
+    excludes: [mark(vein, 'tested')],
+    when: function when(x) {
+      return x.stats.health < 7 || x.stats.insight < 12 || x.stats.fortune < 1 || x.xp < 8;
+    },
+    wear: 1,
+    xp: 1,
+    set: [mark(vein, 'deferred'), done(vein)],
+    conditions: ['尚未实察完成，气力、悟性、历练或察验用度不足，反复追辨仍会疲劳，随后结束这回察验。']
+  });
+  var chart = 'star-chart';
+  event(chart, 'mismatch', words('一幅旧星图的时辰与记忆不合，你留下那处差异，准备核对星位与那次见闻的先后。', '记忆中两次夜间活动的星光方向并不一样。你记住熟悉暗处的差别，留意星光与时刻的关系。', '旧星位记录与计时出现偏差，你保留两组读数，准备核对星位与运行时刻的先后。'), {}, {
+    label: '旧图错时',
+    phases: [1, 4],
+    min: {
+      insight: 10
+    },
+    xp: 1,
+    set: [mark(chart, 'mismatch')],
+    conditions: ['悟性至少10，从旧图、既有记忆或记录中发现差异，不要求当前能看见夜空。']
+  });
+  event(chart, 'calibrated', words('你花一份用度补来对照记录，逐项比较星位与时辰，认出旧图漏记了一段计时的偏差。', '你等过几回熟悉的明暗变化，把记住的星光方向与先后重新对上，认出漏掉的一段时刻。', '你花去一份校准用料，对照旧星位与计时记录，认出偏差来自一次遗漏的计时修正。'), {
+    fortune: -1,
+    insight: 1
+  }, {
+    label: '星位校时',
+    requires: [mark(chart, 'mismatch')],
+    min: {
+      insight: 13,
+      fortune: 2
+    },
+    devMinXp: 8,
+    when: function when(x) {
+      return x.xp >= 8;
+    },
+    xp: 2,
+    set: [mark(chart, 'calibrated')],
+    conditions: ['已有错时记录，悟性至少13、历练至少8、家底至少2；只校验旧见闻，不打开外界或梦境通路。']
+  });
+  event(chart, 'verified', words('你将校过的星位与时辰列在同一页，那次见闻的先后终于排定。仍无依据的图角留白，旧星图有了可复查的次序。', '你记牢星光与明暗变化的先后，不再把不同夜里的见闻混成同一次活动，模糊的方向仍暂且放下。', '你将校正的星位与时刻一同留存，能复查的记录按次序排好，缺失的读数仍保留空处。'), {
+    insight: 1
+  }, {
+    label: '星图定稿',
+    requires: [mark(chart, 'calibrated')],
+    xp: 2,
+    set: [mark(chart, 'verified'), done(chart)],
+    conditions: ['已经校时，只保留可核实的星位与次序，不生成路签或直接授予秘封相遇。']
+  });
+  event(chart, 'unresolved', words('一处星位仍对不上时辰，你标好待考，把旧图收回原处，没有据此定下新的行期。', '星光与明暗的先后仍对不上，你留在熟悉范围，没有把模糊的方向当成新的去路。', '星位与时刻仍有缺口，你保留未定的读数，没有用猜测重新安排运行次序。'), {}, {
+    label: '星位待考',
+    requires: [mark(chart, 'mismatch')],
+    excludes: [mark(chart, 'calibrated')],
+    when: function when(x) {
+      return x.stats.insight < 13 || x.stats.fortune < 2 || x.xp < 8;
+    },
+    xp: 1,
+    set: [mark(chart, 'unresolved'), done(chart)],
+    conditions: ['尚未校时完成，悟性、历练或校验用度不足，留下待考星位并结束这回校订。']
+  });
   // Gold encounters belong to an ordinary adult's lived journey. Each token has a
   // producer and a consumer; none of these events silently change species or revive a person.
   var legendary = [],
     gold = function gold(s) {
       return s.talents.some(function (id) {
-        return ['boundary', 'phoenix', 'blessing'].includes(id);
+        var _globalThis$TouhouTal;
+        return ((_globalThis$TouhouTal = globalThis.TouhouTalents.list.find(function (t) {
+          return t.id === id;
+        })) === null || _globalThis$TouhouTal === void 0 ? void 0 : _globalThis$TouhouTal.grade) === 3;
       });
     };
   var living = function living(s) {
@@ -870,6 +1072,7 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
     bond: 2
   }, {
     label: '四时灯影',
+    weight: 2,
     requires: ['talent:blessing'],
     min: {
       bond: 8
@@ -885,6 +1088,7 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
     insight: 1
   }, {
     label: '四时之约',
+    weight: 2,
     requires: [flag('festival')],
     min: {
       bond: 10,

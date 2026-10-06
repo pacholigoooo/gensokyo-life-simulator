@@ -2,7 +2,7 @@ import {writeTestReport} from './helpers/report-output.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-for(const name of ['config','talents','content-data','relationship-data','events','health','opportunities','encounters','spiritual','afterlife','careers','contacts','memoir','relationships','talent-stories','partner-learning','companionship','guidance','akyuu','engine','dev'])await import('../dist/'+name+'.js');
+for(const name of ['config','talents','content-data','relationship-data','events','health','opportunities','encounters','spiritual','afterlife','careers','contacts','memoir','relationships','talent-stories','partner-learning','companionship','guidance','akyuu','long-years-data','long-years','engine','dev'])await import('../dist/'+name+'.js');
 const E=TouhouEngine,R=TouhouRelationships,D=TouhouDev,C=TouhouContacts,routes=TouhouRelationshipData;
 const scope=JSON.parse(readFileSync(new URL('../docs/romance-scope-v8.json',import.meta.url)));
 const report={method:'All romantic graphs use actual introduction, ordered branch selection, developer queue and engine event application. Fixture age, attributes, experience and profession are controlled; relationship flags/trust/visits are earned by authored events. This is forced rare-route coverage, not a natural-frequency claim.',routes:[]};

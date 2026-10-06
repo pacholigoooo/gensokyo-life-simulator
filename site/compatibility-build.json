@@ -1,5 +1,5 @@
 {
-  "version": "20.0.0",
+  "version": "23.1.0",
   "target": "Chrome / Android WebView 49",
   "syntax": "ES5 classic scripts",
   "tools": {
@@ -35,6 +35,8 @@
     "companionship.js",
     "guidance.js",
     "akyuu.js",
+    "long-years-data.js",
+    "long-years.js",
     "engine.js",
     "companion-summary.js",
     "memoir-image.js",
@@ -43,9 +45,10 @@
   ],
   "source": {
     "afterlife.js": {
-      "sha256": "af69adcdb29dd2c198bcd20fdc82f89b9597b94a64168b393e1cd966736637ae",
+      "sha256": "6c44f4e56c0074f2e46df3fb055ff31f139c1be5cf55d24d2cb2d62ad24f9b81",
       "syntax": {
-        "optionalChaining": 4
+        "nullishCoalescing": 1,
+        "optionalChaining": 12
       },
       "methods": [
         "add",
@@ -53,6 +56,7 @@
         "entries",
         "every",
         "filter",
+        "find",
         "findIndex",
         "floor",
         "has",
@@ -63,6 +67,8 @@
         "push",
         "round",
         "slice",
+        "some",
+        "sort",
         "transform"
       ],
       "published": true
@@ -178,9 +184,9 @@
       "published": true
     },
     "companion-summary.js": {
-      "sha256": "94557fd1ba31a624f8bf3802e6c10e162bae597b534255e86042ce0f84359bb0",
+      "sha256": "11d9359e8b59b9995dee076e7b45b3f225f93a6071524b1b2ec2caf83766e238",
       "syntax": {
-        "optionalChaining": 6,
+        "optionalChaining": 8,
         "nullishCoalescing": 1
       },
       "methods": [
@@ -205,9 +211,10 @@
       "published": true
     },
     "companionship.js": {
-      "sha256": "50b1716e7080fbc59a8b5c843bc1e86e414b2d33f0affc3d8bc0d4fa9003e7a9",
+      "sha256": "cc609813d1488b5a87d6e7c98bcc220ffd622a3979d2d87eac2d48516ccff111",
       "syntax": {
-        "optionalChaining": 2
+        "optionalChaining": 2,
+        "nullishCoalescing": 2
       },
       "methods": [
         "activeCount",
@@ -219,6 +226,7 @@
         "find",
         "introductionDueAt",
         "matches",
+        "mature",
         "mode",
         "pending",
         "push",
@@ -247,7 +255,7 @@
       "published": true
     },
     "config.js": {
-      "sha256": "c374163d0113870a47f47753e6f23e5c2fe6eafaf7eb2b3e54778d30a1bbb993",
+      "sha256": "6ec2b6f62e37a30cb11fe4820f4f6c22713e62280cb6e3cf1b717f8192de4e54",
       "syntax": {},
       "methods": [
         "freeze"
@@ -369,7 +377,7 @@
       "published": true
     },
     "engine.js": {
-      "sha256": "4b59a6254e5c50fa7049b649ea4e7fa97f6ced497063c1ef1e3e2f0b7f3dfc62",
+      "sha256": "724db6880fe4422fe1f7adfd3f062f49584e96ea71b78863fb9a385fe851298d",
       "syntax": {
         "optionalChaining": 44,
         "nullishCoalescing": 3,
@@ -387,12 +395,15 @@
         "childhood",
         "compose",
         "consume",
+        "continuation",
         "courtship",
         "delete",
         "departure",
         "describe",
         "description",
+        "discovered",
         "discoveryChance",
+        "divineEnding",
         "ending",
         "entries",
         "event",
@@ -443,6 +454,7 @@
         "spent",
         "startsWith",
         "strain",
+        "test",
         "text",
         "toFixed",
         "upkeep",
@@ -517,6 +529,39 @@
         "min",
         "push",
         "toFixed"
+      ],
+      "published": true
+    },
+    "long-years-data.js": {
+      "sha256": "256994579cf21fa57bf3aa81194c92c07c29e80470eee238f8e02b51b09a7166",
+      "syntax": {},
+      "methods": [],
+      "published": true
+    },
+    "long-years.js": {
+      "sha256": "ee1cfee57f8b5f8cf4f1e23f55a41c59e1e918dd0cc80074b8703d7d697147b4",
+      "syntax": {
+        "optionalChaining": 7,
+        "nullishCoalescing": 1
+      },
+      "methods": [
+        "ending",
+        "entries",
+        "filter",
+        "find",
+        "floor",
+        "has",
+        "imul",
+        "includes",
+        "max",
+        "min",
+        "push",
+        "random",
+        "replaceAll",
+        "some",
+        "sort",
+        "startsWith",
+        "test"
       ],
       "published": true
     },
@@ -620,14 +665,15 @@
       "published": true
     },
     "opportunities.js": {
-      "sha256": "1cd0c194d9c0b04c77e3b099ff2aa5e3e1c0e3acbc81405e495cb59215ebc5f8",
+      "sha256": "6d56df90c0348bc52cc0d40e0c8bcd6042ab65af02788641e63c3d5a482bf8fc",
       "syntax": {
         "nullishCoalescing": 1,
-        "optionalChaining": 1
+        "optionalChaining": 10
       },
       "methods": [
         "add",
         "delete",
+        "eligible",
         "entries",
         "every",
         "filter",
@@ -673,13 +719,13 @@
       "published": true
     },
     "relationship-data.js": {
-      "sha256": "0ca70796e2f8d96abb89ed8c2f95e6932c7dc5cbc1c2a135ffc1bef0c700bd70",
+      "sha256": "aaa8c3db28ee2b72682e24988cda7182c94ece14bcccaf3e430b3a0f07388d00",
       "syntax": {},
       "methods": [],
       "published": true
     },
     "relationships.js": {
-      "sha256": "6b25629d9f15edb4762f4b8c0b4b1acbda0bd621931fdd4674ae36cc0899658e",
+      "sha256": "c5168b59b27998a0d9eb1b612b31962f8ff38d9fff85153a79370dcc3771a2b3",
       "syntax": {
         "optionalChaining": 33,
         "nullishCoalescing": 2
@@ -718,6 +764,7 @@
         "startsWith",
         "text",
         "values",
+        "variedText",
         "waitingPractice"
       ],
       "published": true
@@ -743,9 +790,9 @@
       "published": true
     },
     "talent-stories.js": {
-      "sha256": "6c120f71dbf2c731e73ead27f33981e5e5a085f2c80f83f6ac2a5358d6239f66",
+      "sha256": "17b8e0f30e6d064331a6b604c45b16ec46cb1b637bb352b1b204f5067a6cb953",
       "syntax": {
-        "optionalChaining": 11
+        "optionalChaining": 12
       },
       "methods": [
         "add",
@@ -767,7 +814,7 @@
       "published": true
     },
     "talents.js": {
-      "sha256": "dd09632f5d75208d680f2b750efb12448c21881aa8aaad13e393c58b0dc0c798",
+      "sha256": "855bd073ef1e76dd677db32e5d941439ffaef8ff09af69bee7d2e3320951e6c4",
       "syntax": {
         "optionalChaining": 2
       },
@@ -786,8 +833,8 @@
   },
   "files": {
     "afterlife.js": {
-      "sha256": "9e8d8c69d5bfa257f220742dcb00b5df04f4dceb269493421893092852beff80",
-      "bytes": 27713
+      "sha256": "1ba6d2a4099578a65212480537aac5859a0d4c11e1bff0638e260b8c960b5761",
+      "bytes": 44418
     },
     "akyuu.js": {
       "sha256": "f1d53e4c059289a3a97b867114d277e0ee8eb05f7dc777309c752a2fb86648b3",
@@ -806,12 +853,12 @@
       "bytes": 1564081
     },
     "companion-summary.js": {
-      "sha256": "563402320967e351f9e9cffdd8b2db27579dc6ff01bc3e41d5ae26d9e8ff633f",
-      "bytes": 12106
+      "sha256": "86960255eb24e8fbfe1ad787ad331ee69fd793e7033f8d3474c7f40153423c4e",
+      "bytes": 12997
     },
     "companionship.js": {
-      "sha256": "6eaef9402e7c3b35c0dd721831efcd3b091532bc3e977431b9618f68ad080216",
-      "bytes": 13929
+      "sha256": "4b30da2f4baa7930916b792dad69ee03be7c3f95ea26698ce76cff02940c86ac",
+      "bytes": 14642
     },
     "compat.css": {
       "sha256": "82e5c81a7a2da62537e21bbe510e04d6275dee39f50172ab3d67618caa9c8eba",
@@ -822,8 +869,8 @@
       "bytes": 118990
     },
     "config.js": {
-      "sha256": "76da6bce82f07bbdeb72f831cd72d89440e92a859617ff66ebd110cbc6633ef5",
-      "bytes": 1804
+      "sha256": "ee152f74583e62693072869b8bc0bfc52f48b4924f16dca261b88be188edc1be",
+      "bytes": 2164
     },
     "contacts.js": {
       "sha256": "d1a0729b78dc9029e9794d037d6f105fffced3c3b4647a6788486e16c605f26f",
@@ -838,8 +885,8 @@
       "bytes": 14550
     },
     "engine.js": {
-      "sha256": "0c40d9827795ecf7dd87b281a726442a3b392ca536ade21b3d26ea99d496cd89",
-      "bytes": 59510
+      "sha256": "4b6096163e53b65ac2fb539ffc5f2bb84743b91cdd9022aa00405c677c08da67",
+      "bytes": 60643
     },
     "events.js": {
       "sha256": "0f726be2c001f847ea2c3128530c65fbf0948315a2e85783e19a5ffe13e52509",
@@ -858,8 +905,16 @@
       "bytes": 189
     },
     "index.html": {
-      "sha256": "aac002806c850304e220f455b0d2e22bdc630d24da7332a3c298b3cbe389a53f",
-      "bytes": 11017
+      "sha256": "481b52e0ff9d097257287423ac1f84b67e1344ae67ec5026508a0d7aec88360b",
+      "bytes": 11108
+    },
+    "long-years-data.js": {
+      "sha256": "4c2a32c8443a957ffe2b5153d6e73636d116483bb5a9dbbf5dd563ae5d04338a",
+      "bytes": 210895
+    },
+    "long-years.js": {
+      "sha256": "4f06f972dc995f0fada840d0d6b7dcabde020548538f611b984358d4c4a15a11",
+      "bytes": 12639
     },
     "memoir-image.js": {
       "sha256": "75f92f2ca46f93f6169b47ed29016160c4b0ed6bb99e9018ca51db27570d45f0",
@@ -874,24 +929,24 @@
       "bytes": 11009
     },
     "opportunities.js": {
-      "sha256": "cc774afe17f97d7a31bff435319aa7a0b2fd986d8468db488d12bc407541a8e8",
-      "bytes": 19277
+      "sha256": "3950786af435ae33b374862b26ab6c38f35b1bccf3888a7d99670051b6cd4764",
+      "bytes": 27429
     },
     "partner-learning.js": {
       "sha256": "c4585f1a4ae22f1c8d6e187b5772aa40bb47196fbbbf9071b94511104e55ddeb",
       "bytes": 39351
     },
     "relationship-data.js": {
-      "sha256": "320699b77e935f48c7fa7126d110f5f538ed0c5aa57ac6cfce3a59e5fbafbf47",
-      "bytes": 3060962
+      "sha256": "76059016037935d198b76c9f6683442bec047a30941c36ed8bed71c894d78a7b",
+      "bytes": 3074255
     },
     "relationships.js": {
-      "sha256": "54629e36709d7d7bb7cd61df98f7c8878d0e6d25d1115a13eab9cbb4244fcf0a",
-      "bytes": 48257
+      "sha256": "4e2ac35bfbdfe09f5dad1ea88f17901c6353244f48c5965c79cc72ea7b85d430",
+      "bytes": 48721
     },
     "sources.html": {
-      "sha256": "27a9e2692170882f97eff575a56439bca87cf2d07061992a413b00b7224d2200",
-      "bytes": 156918
+      "sha256": "b5b95df48814fe2b2beaa9ba878c9f0e941210eb89e6972db545aad86432a86e",
+      "bytes": 157210
     },
     "spiritual.js": {
       "sha256": "39437deb57c8285a50c47a976affc08990c2b833e8dbc03f51265dea2c13904c",
@@ -902,12 +957,12 @@
       "bytes": 18302
     },
     "talent-stories.js": {
-      "sha256": "8245c8f5e7be4714dc512682c257dda22df32915b6e2e183e7d234422efc2fcd",
-      "bytes": 42454
+      "sha256": "4ba1f4b93ecca1e8d05df174105c046caea9a9275a37a30a926d0c88cec4507f",
+      "bytes": 54445
     },
     "talents.js": {
-      "sha256": "6f8c6cf32d664481519647d4a54a2328d0da6d35e233e81f4d0914d0865abad0",
-      "bytes": 14735
+      "sha256": "86592917e33aa63e028d9fa41f8562434c081c915f9118ca44ba1bdea9030a0a",
+      "bytes": 15899
     },
     "THIRD_PARTY_LICENSES.txt": {
       "sha256": "8f25da6e5c3ae66f3300937fc06357fc6de92e90ce8bd8fde20c5c0dc8f7d9c7",
@@ -939,8 +994,8 @@
         {
           "seed": 1,
           "character": null,
-          "sha256": "95a79e76550a7ae397a9f5f7465e033f96831206d254b4827cb71b6717dfcc1e",
-          "events": 145
+          "sha256": "1273d73226c81c0446fb4fa21db456e3ce1bcf2e189af61aff62a2e0281b5d3d",
+          "events": 146
         },
         {
           "seed": 41,
@@ -951,8 +1006,8 @@
         {
           "seed": 1049,
           "character": null,
-          "sha256": "94c6bd7fd03a98b6bb4794c78af629d79647ca01c8f528dea29407fb89814be3",
-          "events": 136
+          "sha256": "02964e3765f998be4eac8cf4e022ac7a542486a383dbd9e199fcdd6cfa512327",
+          "events": 138
         },
         {
           "seed": 23,

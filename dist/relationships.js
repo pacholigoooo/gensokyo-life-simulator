@@ -83,7 +83,7 @@
   if(c.minVisits!==undefined&&r.visits<c.minVisits||c.minYears!==undefined&&s.age-r.startedAt<c.minYears)return false;
   return !c.freePartner||freePartner(s);
  }
- function remember(s,r,key,text){r.history.push({key,age:s.age,text,status:r.status,label:r.label});r.lastAt=s.age;}
+ function remember(s,r,key,text,freshText=text){r.history.push({key,age:s.age,text,...(freshText!==text?{freshText}:{}),status:r.status,label:r.label});r.lastAt=s.age;}
  function begin(s,route,romantic,intro=romantic&&route.romanceIntro?route.romanceIntro:route.intro,romanceAllowed=true,origin='ambient'){
   const view=romantic?romanceView(route):route;
   // 初识是否走恋爱图只决定当下的来往；未相恋的旧友仍可凭真实经历发展。
@@ -143,7 +143,14 @@
   const r=s.relations[route.id];return event(romanceView(route),'young-scene:'+item.key,item.text,{},state=>{r.youngScenes[item.key]=state.age;remember(state,r,'young-scene:'+item.key,item.text);},{scene:'少年篇（二创） · '+route.contact.place,youngScene:true});
  }
  function branchEvent(route,nodeId,b){const young=nodeId.startsWith('young:');return event(nodeId.startsWith('love:')||young?romanceView(route):route,nodeId+':'+b.key,b.text,b.effects,state=>advance(state,route,nodeId,b.key,b),{xp:b.xp||0,wear:b.wear||0,...(young?{scene:'少年篇（二创） · '+route.contact.place,youngScene:true}:{})});}
- function echoEvent(s,route,e){const r=s.relations[route.id],text=e.romanceEcho?globalThis.TouhouCompanionship.text(s,r,e):e.text;return event(r.romancePath?romanceView(route):route,'echo:'+e.key+':'+(r.echoes[e.key]||0),text,e.effects,state=>{r.echoes[e.key]=(r.echoes[e.key]||0)+1;r.lastEchoKey=e.key;r.activityAt['echo:'+e.key]=state.age;remember(state,r,'echo:'+e.key,text);state.people[r.id].close=friendly.has(r.status)?Math.max(2,r.trust):0;});}
+ function echoEvent(s,route,e){
+  const r=s.relations[route.id],C=globalThis.TouhouCompanionship,base=e.romanceEcho?C.text(s,r,e):e.text;
+  const text=e.romanceEcho?C.variedText(s,r,e,'echo:'+e.key,base):base;
+  return event(r.romancePath?romanceView(route):route,'echo:'+e.key+':'+(r.echoes[e.key]||0),text,e.effects,state=>{
+   r.echoes[e.key]=(r.echoes[e.key]||0)+1;r.lastEchoKey=e.key;r.activityAt['echo:'+e.key]=state.age;
+   remember(state,r,'echo:'+e.key,text,base);state.people[r.id].close=friendly.has(r.status)?Math.max(2,r.trust):0;
+  },text!==base?{freshText:base}:{});
+ }
  function echoDueAt(s,route,e){const r=s.relations[route.id];return r.status==='lover'&&route.marriage?(r.activityAt['echo:'+e.key]??r.loveAt)+Math.max(echoDelay(r,e),pace(s,r).echo):r.lastAt+echoDelay(r,e);}
  function canEcho(s,route,e){
   const r=s.relations[route.id];return !s.ended&&!s.afterlife&&!s.dormant&&s.body==='humanoid'&&!!r&&!(r.young&&s.age<20)&&r.next===null&&s.people[r.id].alive&&s.people[r.id].leaveAt>s.age&&(!r.romancePath||e.romanceEcho)&&e.states.includes(r.status)&&(r.status!=='lover'||s.partnerId===r.id)&&(!(r.status==='lover'&&route.marriage)?(r.echoes[e.key]||0)<2:r.lastEchoKey!==e.key&&s.age-r.lastAt>=2&&globalThis.TouhouCompanionship.fresh(s,r,globalThis.TouhouCompanionship.text(s,r,e)))&&(!e.when||matches(s,r,e.when));
@@ -187,10 +194,10 @@
  }
  function dailyDueAt(s,r,d){return (r.activityAt['marriage:'+d.key]??r.marriage.marriedAt)+pace(s,r).daily;}
  function marriageDailyEvent(s,route,d){
-  const r=s.relations[route.id],text=globalThis.TouhouCompanionship.text(s,r,d);return event(r.romancePath?romanceView(route):route,'marriage:daily:'+d.key+':'+(r.marriage.daily[d.key]||0),text,{},state=>{
-   if(marriageStage(state,route)!=='daily'||state.age<dailyDueAt(state,r,d)||state.age-r.lastAt<2||r.marriage.lastDaily===d.key||!globalThis.TouhouCompanionship.fresh(state,r,text))throw Error('婚后日常前置未完成：'+route.id+'/'+d.key);
-   r.marriage.daily[d.key]=(r.marriage.daily[d.key]||0)+1;r.marriage.lastDaily=d.key;r.activityAt['marriage:'+d.key]=state.age;r.label='婚后相伴';remember(state,r,'marriage:daily:'+d.key,text);
-  });
+  const r=s.relations[route.id],C=globalThis.TouhouCompanionship,base=C.text(s,r,d),text=C.variedText(s,r,d,'marriage:daily:'+d.key,base);return event(r.romancePath?romanceView(route):route,'marriage:daily:'+d.key+':'+(r.marriage.daily[d.key]||0),text,{},state=>{
+   if(marriageStage(state,route)!=='daily'||state.age<dailyDueAt(state,r,d)||state.age-r.lastAt<2||r.marriage.lastDaily===d.key||!C.fresh(state,r,base))throw Error('婚后日常前置未完成：'+route.id+'/'+d.key);
+   r.marriage.daily[d.key]=(r.marriage.daily[d.key]||0)+1;r.marriage.lastDaily=d.key;r.activityAt['marriage:'+d.key]=state.age;r.label='婚后相伴';remember(state,r,'marriage:daily:'+d.key,text,base);
+  },text!==base?{freshText:base}:{});
  }
  // Human years are scarce: keep every scene, while placing the confession after its authored minimum acquaintance.
  function nodeDueAt(s,route,r){

@@ -2,7 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-for(const name of ['config','talents','content-data','relationship-data','events','health','opportunities','encounters','spiritual','afterlife','careers','contacts','memoir','relationships','talent-stories','partner-learning','companionship','guidance','akyuu','engine','companion-summary','memoir-image'])await import('../dist/'+name+'.js');
+import {assertInputMigration,assertArchivedV21Source} from './helpers/input-replay-v21.mjs';
+import {assertArchivedV21Fixture,replayAgainstV23} from './helpers/versioned-replay.mjs';
+import {writeTestReport} from './helpers/report-output.mjs';
+for(const name of ['config','talents','content-data','relationship-data','events','health','opportunities','encounters','spiritual','afterlife','careers','contacts','memoir','relationships','talent-stories','partner-learning','companionship','guidance','akyuu','long-years-data','long-years','engine','companion-summary','memoir-image'])await import('../dist/'+name+'.js');
 const E=TouhouEngine,C=TouhouCompanionSummary;
 const entry=(id,age,text,extra={})=>({id,age,time:age+'岁',text,...extra});
 function fixture(id='akyuu',dream=false){
@@ -39,21 +42,32 @@ test('Akyuu fractional death deadlines exclude both absences even when departure
  s.log.push(entry('farewell-akyuu',33,'初次离别。'),entry('akyuu-return:returned',33,'当年归来。'),entry('farewell-akyuu',45,'再度离别。'));
  const a=C.compose(s);assert.equal(a.years,19.4);assert.equal(a.marriedYears,16.4);assert(a.periodText.includes('45岁'));assert.equal(a.outcomeText,'再度离别。');
 });
-test('saved ordinary UI lives preserve every selected memory without changing simulation or RNG',()=>{
- const fixture=JSON.parse(readFileSync(new URL('./fixtures/companion-ui-v20.json',import.meta.url)));
- assert.equal(fixture.version,20);assert.equal(fixture.status,'verified');
+test('saved ordinary UI inputs retain V21 provenance and match V23 mechanics while current memories remain read-only',t=>{
+ const fixture=assertArchivedV21Fixture('companion-ui-v21.json');
+ const oldBytes=readFileSync(new URL('./fixtures/companion-ui-v20.json',import.meta.url)),old=JSON.parse(oldBytes);
+ assert.deepEqual(fixture.origin,{path:'tests/fixtures/companion-ui-v20.json',sha256:createHash('sha256').update(oldBytes).digest('hex')});
+ assert.equal(fixture.version,21);assert.equal(fixture.status,'verified');
  assert.deepEqual(fixture.cases.map(c=>c.kind),['named','local','none']);
- for(const [file,hash]of Object.entries(fixture.sources))assert.equal(createHash('sha256').update(readFileSync(new URL('../'+file,import.meta.url))).digest('hex'),hash,'current V20 presentation source');
- const cases=fixture.cases;
+ for(const [file,hash]of Object.entries(fixture.sources))assertArchivedV21Source(file,hash);
+ const cases=fixture.cases,currentCases=[];
  for(const c of cases){
+  assertInputMigration(c,old.cases.find(prior=>prior.kind===c.kind));
   assert.deepEqual(TouhouTalents.draw(E.random(c.input.seed^0x35dab)),c.input.draft);TouhouTalents.validate(c.input.talents);E.validateAllocation(c.input.stats);
   assert(c.input.talents.every(id=>c.input.draft.includes(id)));assert.equal(c.input.goal,'none');assert.equal(c.input.romanceWish,null);
-  const s=E.createLife(c.input),rng=E.random(c.input.seed^0x9e3779b9);let n=0;while(!s.ended&&n++<600)E.step(s,rng);assert(s.ended);
-  assert.deepEqual(JSON.parse(JSON.stringify(s.log)),c.events,'the actual V20 display input retains its saved log');
+  const {state:s,reference,referenceCompanion,rngCalls}=replayAgainstV23(c.input);
+  const actualKind=s.firstPartnerId===null?'none':s.firstPartnerId==='local:spouse'?'local':'named';
+  const referenceKind=reference.firstPartnerId===null?'none':reference.firstPartnerId==='local:spouse'?'local':'named';
+  assert.equal(actualKind,referenceKind,'current UI role agrees with V23 under the unchanged input');
+  const targetAchieved=actualKind===c.kind&&(c.kind==='none'||s.log.some(e=>e.id===(c.kind==='local'?'common:marry':'relation:'+s.firstPartnerId+':marriage:wedding')));
+  const referenceAchieved=referenceKind===c.kind&&(c.kind==='none'||reference.log.some(e=>e.id===(c.kind==='local'?'common:marry':'relation:'+reference.firstPartnerId+':marriage:wedding')));
+  assert.equal(targetAchieved,referenceAchieved,'current role and wedding coverage agree with V23');
+  if(!targetAchieved)t.diagnostic(c.kind+' seed '+c.input.seed+' now records '+actualKind+'; directed summary tests retain named, local and unpartnered component coverage.');
+  currentCases.push({kind:c.kind,seed:c.input.seed,actualKind,targetAchieved,firstPartnerId:s.firstPartnerId,historicalV21:{actualKind:c.actualKind,targetAchieved:c.targetAchieved},rngCalls});
   const before=structuredClone(s),engineRandom=E.random,unseededRandom=Math.random;let a;
   E.random=()=>{throw Error('presentation requested gameplay RNG');};Math.random=()=>{throw Error('presentation requested unseeded RNG');};
   try{a=C.compose(s);}finally{E.random=engineRandom;Math.random=unseededRandom;}
-  assert.deepEqual(s,before,'compose leaves all state, including sets and flags, intact');assert.equal(a.id,c.firstPartnerId);assert.deepEqual(a,c.companion);
+  assert.deepEqual(s,before,'compose leaves all state, including sets and flags, intact');assert.equal(a.id,reference.firstPartnerId);
+  for(const key of ['id','name','years','marriedYears'])assert.equal(a[key],referenceCompanion[key],key+' settlement fact matches V23');
   if(a.id===null)assert.equal(a.moments.length,0);else assert(a.moments.length>=3&&a.moments.length<=7);
   for(const m of a.moments){assert.equal(m.text,s.log[m.index].text);assert.equal(m.age,s.log[m.index].age);assert.equal(m.time,s.log[m.index].time);}
   if(s.outsideJourney?.partnerId===a.id&&s.log.some(e=>e.id==='legendary:outside-return'))assert(a.moments.some(m=>m.id==='legendary:outside-return'));
@@ -63,6 +77,10 @@ test('saved ordinary UI lives preserve every selected memory without changing si
    assert(a.moments.some(m=>m.id.startsWith('local:marriage:')||m.id.startsWith('common:spouse-')),'local shared scenes remain actual selected memories');
   }
  }
+ const unmet=cases.filter(c=>!c.targetAchieved).map(c=>({kind:c.kind,actualKind:c.actualKind,seed:c.input.seed,firstPartnerId:c.firstPartnerId}));
+ assert.deepEqual(fixture.coverage,{requested:3,achieved:3-unmet.length,unmet},'V21 coverage remains historical');
+ const currentUnmet=currentCases.filter(c=>!c.targetAchieved);
+ writeTestReport('companion-ui-current-v23.1.json',JSON.stringify({version:'23.1.0',baseline:'V23',inputs:'unchanged approved V21 UI cases',historicalCoverage:fixture.coverage,currentCoverage:{requested:3,achieved:3-currentUnmet.length,unmet:currentUnmet},cases:currentCases},null,2)+'\n');
 });
 test('long names and many memories wrap into bounded image pages without dropping text',()=>{
  const partner=C.compose(fixture());partner.name='很长的伴侣姓名·'.repeat(10);partner.moments=Array.from({length:7},(_,i)=>({time:(30+i)+'岁',text:'共同经历，记下这段实际往事。'.repeat(15)}));

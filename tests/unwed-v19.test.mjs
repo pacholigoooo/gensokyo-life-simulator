@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-for(const name of ['config','talents','content-data','relationship-data','events','health','opportunities','encounters','spiritual','afterlife','careers','contacts','memoir','relationships','talent-stories','partner-learning','companionship','guidance','akyuu','engine','companion-summary','memoir-image'])await import('../dist/'+name+'.js');
+for(const name of ['config','talents','content-data','relationship-data','events','health','opportunities','encounters','spiritual','afterlife','careers','contacts','memoir','relationships','talent-stories','partner-learning','companionship','guidance','akyuu','long-years-data','long-years','engine','companion-summary','memoir-image'])await import('../dist/'+name+'.js');
 const E=TouhouEngine,R=TouhouRelationships,C=TouhouCompanionship,Summary=TouhouCompanionSummary,d=TouhouRelationshipData.find(d=>d.id==='reimu');
 const event=id=>TouhouEvents.events.find(e=>e.id==='common:'+id);
 function age(s,n){s.age=s.turn=s.bodyAge=n;s.phase=n<9?0:n<20?1:n<40?2:n<65?3:4;return s;}

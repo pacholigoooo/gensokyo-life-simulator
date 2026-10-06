@@ -3,6 +3,7 @@ function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArra
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
 function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
@@ -57,6 +58,17 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
   var mortal = function mortal(s) {
     return !s.ended && !s.character && s.species === 'human' && !s.transformation;
   };
+  var companyState = function companyState(age) {
+    var id = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+    return {
+      id: id,
+      next: 0,
+      lastAt: age,
+      flags: [],
+      history: [],
+      done: false
+    };
+  };
   var starts = [];
   var mark = function mark(kind, status, title, impact) {
     return {
@@ -105,12 +117,16 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     s.dormant = null;
   }
   function discover(kind, text, rules) {
+    var _ghost$vengeful$kind;
     var extra = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
     starts.push(_objectSpread(_objectSpread({
       id: "chance:".concat(kind, "-found"),
       text: text,
       effects: {},
-      weight: 1,
+      weight: (_ghost$vengeful$kind = {
+        ghost: globalThis.TouhouLifeConfig.ghostOpportunityWeight,
+        vengeful: globalThis.TouhouLifeConfig.vengefulOpportunityWeight
+      }[kind]) !== null && _ghost$vengeful$kind !== void 0 ? _ghost$vengeful$kind : 1,
       repeat: 1
     }, rules), {}, {
       when: function when(s) {
@@ -342,8 +358,28 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         devotees: d.devotees || 0,
         appeasement: 0,
         lastMemoryAt: s.age,
+        belovedScenes: 0,
+        sceneCounts: {},
         recentScenes: [],
         abilities: []
+      };
+      if (kind === 'kami') s.afterlife.divinity = {
+        route: ['water', 'pilgrimage', 'renewal'][(s.seed >>> 0) % 3],
+        stage: 0,
+        lastAt: s.age,
+        merit: 0,
+        history: [],
+        reserve: 0,
+        recovery: null,
+        partnerId: s.partnerId,
+        partnerStage: 0,
+        partnerAt: s.age,
+        partnerCompany: companyState(s.age, s.partnerId),
+        company: {
+          faith: companyState(s.age),
+          misfortune: companyState(s.age)
+        },
+        companyAt: s.age
       };
       s.life = 'spirit';
       s.body = 'spirit';
@@ -374,7 +410,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       ghost: .78,
       vengeful: .68,
       kami: .76
-    }[kind] + (kind === 'kami' && s.flags.has('legend:faith') ? .16 : 0);
+    }[kind] + (kind === 'kami' && s.flags.has('legend:faith') ? .20 : 0);
     if (!sound || rng() >= chance) {
       recordKey(s, "development:".concat(kind, "-departure"), {
         ghost: '最后的气息散入夜色，留下的家书由后来人继续传阅。',
@@ -393,7 +429,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     recordKey(s, "development:".concat(kind, "-transformed"), {
       ghost: '呼吸止息后，一团带着旧日气质的幽灵浮起，你循家书中的歌声认回旧名。',
       vengeful: '肉身的气息断了，缠在证物上的怨念却聚成形，将你留在荒径旁。',
-      kami: '肉身走到尽头，祭日的呼声却将你留在小祠，众人开始向神灵祈愿。'
+      kami: '肉身走到尽头，祭日的呼声将你留作小祠的神灵。你以生前熟悉的人形现身，回应众人的祈愿。'
     }[kind], {
       developmentMoment: mark(kind, 'transformed', forms[kind].label + '之身', {
         ghost: '肉身已逝，靠凝聚的气质延续；记忆会渐渐淡去。',
@@ -423,7 +459,271 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     if (a.kind === 'vengeful' && (a.cohesion <= 0 || s.stats.health <= 0)) return 'exorcised';
     if (a.kind === 'vengeful' && a.resentment <= 0) return 'appeased';
     if (a.kind === 'kami' && (a.faith <= 0 || s.stats.health <= 0)) return 'forgotten';
+    if (a.kind === 'kami' && a.divinity.stage === 5 && a.divinity.history[4].passed && a.divinity.merit >= 3 && a.faith >= 6 && a.devotees >= 4) return divineRoute(s).ending.id;
     return null;
+  }
+  var divineRoute = function divineRoute(s) {
+    return globalThis.TouhouDivineLives.routes.find(function (r) {
+      return r.id === s.afterlife.divinity.route;
+    });
+  };
+  function divineEnding(s, cause) {
+    var _s$afterlife;
+    if (((_s$afterlife = s.afterlife) === null || _s$afterlife === void 0 ? void 0 : _s$afterlife.kind) !== 'kami') return null;
+    var e = divineRoute(s).ending;
+    return cause === e.id ? [e.title, e.text] : null;
+  }
+  function divineEvent(s, key, text, apply) {
+    var extra = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : {};
+    return event('kami', 'divine-' + key, text, {}, apply, _objectSpread({
+      scene: '神灵岁月'
+    }, extra));
+  }
+  // Both daily recollections and authored afterlife visits use the same surviving relationship.
+  function afterlifePartner(s) {
+    var _globalThis$TouhouCon;
+    var id = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : s.partnerId;
+    var p = id && s.people[id],
+      r = id && s.relations[id];
+    if (!id || s.partnerId !== id || s.firstPartnerId !== id || !(p !== null && p !== void 0 && p.alive) || p.leaveAt <= s.age || p.afterlife || p.dormant) return null;
+    if (id !== 'local:spouse' && ((r === null || r === void 0 ? void 0 : r.status) !== 'lover' || r.next !== null)) return null;
+    return {
+      id: id,
+      p: p,
+      dream: p.medium === 'dream' || (r === null || r === void 0 ? void 0 : r.medium) === 'dream',
+      confined: (_globalThis$TouhouCon = globalThis.TouhouContent.find(function (c) {
+        return c.id === id;
+      })) === null || _globalThis$TouhouCon === void 0 ? void 0 : _globalThis$TouhouCon.confined
+    };
+  }
+  function divinePartner(s) {
+    var partner = afterlifePartner(s, s.afterlife.divinity.partnerId);
+    return partner && !partner.dream ? partner : null;
+  }
+  var faithCompany = function faithCompany() {
+    return globalThis.TouhouDivineLives.contacts.characters;
+  };
+  var authoredCompany = function authoredCompany(id) {
+    return id === 'hina' ? globalThis.TouhouMisfortuneContact : faithCompany().find(function (c) {
+      return c.id === id;
+    });
+  };
+  function peerAvailable(s, id) {
+    var p = s.people[id],
+      r = s.relations[id],
+      c = globalThis.TouhouContent.find(function (c) {
+        return c.id === id;
+      });
+    return s.realm === 'gensokyo' && id !== s.partnerId && id !== s.firstPartnerId && !c.confined && (!p || p.alive && p.leaveAt > s.age && !p.afterlife && !p.dormant && p.medium !== 'dream') && (r === null || r === void 0 ? void 0 : r.medium) !== 'dream' && !['lover', 'enemy', 'estranged', 'parted', 'bereaved'].includes(r === null || r === void 0 ? void 0 : r.status);
+  }
+  function closeCompany(s, entry, progress) {
+    var partner = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+    return divineEvent(s, (partner ? 'shared-' : 'company-') + entry.id + '-closed', partner ? entry.partnerInterrupted : entry.interrupted, function () {
+      progress.done = true;
+      progress.closed = true;
+      progress.lastAt = s.age;
+      progress.history.push({
+        stage: 'closed',
+        age: s.age
+      });
+      if (!partner) s.afterlife.divinity.companyAt = s.age;
+    }, {
+      scene: (entry.id === 'hina' ? '厄神来往' : '神明往来') + ' · ' + entry.title
+    });
+  }
+  function companyStep(s, entry, progress) {
+    var partner = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+    var stage = entry[partner ? 'partner' : 'peer'][progress.next];
+    if (!stage || s.age - progress.lastAt < stage.delay) return null;
+    var passed = meets(s, stage.min) && !(stage.requires || []).some(function (f) {
+      return !progress.flags.includes(f);
+    });
+    var choice = passed ? stage.pass : stage.fail,
+      index = progress.next;
+    return divineEvent(s, (partner ? 'shared-' : 'company-') + entry.id + '-' + stage.key, choice.text, function () {
+      var _iterator = _createForOfIteratorHelper(choice.set || []),
+        _step;
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var f = _step.value;
+          if (!progress.flags.includes(f)) progress.flags.push(f);
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+      progress.next++;
+      progress.lastAt = s.age;
+      progress.done = progress.next === 4;
+      progress.history.push({
+        stage: index,
+        key: stage.key,
+        age: s.age,
+        passed: passed
+      });
+      if (!partner) s.afterlife.divinity.companyAt = s.age;
+    }, {
+      "with": [entry.id],
+      sharedWith: partner ? entry.id : undefined,
+      scene: (entry.id === 'hina' ? '厄神来往' : '神明往来') + ' · ' + entry.title,
+      developmentMoment: {
+        kind: entry.id === 'hina' ? 'misfortune-company' : 'divine-company',
+        major: index === 3,
+        status: passed ? '约定落实' : '分歧留存',
+        title: entry.title,
+        impact: choice.text
+      }
+    });
+  }
+  function peerCompany(s, group) {
+    var a = s.afterlife,
+      d = a.divinity,
+      progress = d.company[group];
+    if (progress.done) return null;
+    if (progress.id) {
+      var _entry = authoredCompany(progress.id);
+      if (!peerAvailable(s, progress.id)) return closeCompany(s, _entry, progress);
+      return companyStep(s, _entry, progress);
+    }
+    // Hina handles misfortune independently; her invitation has no worshipper or faith threshold.
+    if (s.age - a.since < (group === 'faith' ? 4 : 8) || group === 'faith' && (a.faith < 4 || a.devotees < 3)) return null;
+    var pool = (group === 'faith' ? faithCompany() : [globalThis.TouhouMisfortuneContact]).filter(function (c) {
+      return peerAvailable(s, c.id);
+    });
+    if (!pool.length) return null;
+    var known = pool.filter(function (c) {
+        return s.people[c.id];
+      }),
+      candidates = known.length ? known : pool;
+    var entry = candidates[(s.seed >>> 0) % candidates.length],
+      old = !!s.people[entry.id];
+    return divineEvent(s, 'company-' + entry.id + '-opening', entry.opening[old ? 'known' : 'new'], function () {
+      progress.id = entry.id;
+      progress.lastAt = s.age;
+      progress.known = old;
+      progress.history.push({
+        stage: 'opening',
+        age: s.age,
+        known: old
+      });
+      d.companyAt = s.age;
+    }, {
+      "with": [entry.id],
+      scene: (group === 'misfortune' ? '厄神来往' : '神明往来') + ' · ' + entry.title
+    });
+  }
+  function companyContinuation(s) {
+    var d = s.afterlife.divinity;
+    if (s.age - d.companyAt < 2) return null;
+    // Older unfinished correspondence goes first; the two finite ledgers do not share flags.
+    var groups = ['faith', 'misfortune'].sort(function (a, b) {
+      return d.company[a].lastAt - d.company[b].lastAt;
+    });
+    var _iterator2 = _createForOfIteratorHelper(groups),
+      _step2;
+    try {
+      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+        var group = _step2.value;
+        var e = peerCompany(s, group);
+        if (e) return e;
+      }
+    } catch (err) {
+      _iterator2.e(err);
+    } finally {
+      _iterator2.f();
+    }
+    return null;
+  }
+  // 每段只推进一次；神职、复兴和伴侣往事共用一个附加位置，不取代原香火消耗。
+  function continuation(s) {
+    var a = s.afterlife;
+    if (s.ended || s.character || (a === null || a === void 0 ? void 0 : a.kind) !== 'kami' || a.faith <= 0 || s.stats.health <= 0) return null;
+    var d = a.divinity,
+      partner = divinePartner(s),
+      authored = authoredCompany(d.partnerId);
+    if (authored && !d.partnerCompany.done) {
+      if (!partner || partner.confined) {
+        if (d.partnerCompany.next > 0) return closeCompany(s, authored, d.partnerCompany, true);
+      } else {
+        var e = companyStep(s, authored, d.partnerCompany, true);
+        if (e) return e;
+      }
+    }
+    if (!authored && d.partnerStage < 2 && s.age - d.partnerAt >= (d.partnerStage === 0 ? 6 : 12)) {
+      if (!partner) {
+        if (d.partnerStage === 1) return divineEvent(s, 'shared-closed', '旧约上的那个人已不能再来祠前。你请守祠人收好合写的两页，往后的祈愿另起一册。', function () {
+          d.partnerStage = 2;
+        });
+        d.partnerStage = 2;
+      } else {
+        var n = d.partnerStage,
+          name = partner.p.name;
+        var body = partner.confined ? ["".concat(name, "托旧日来往的人捎来一页近况，也问起祭日的新规矩。你请守祠人记下回音，把最难安排的一件事说清。"), "".concat(name, "又托人送来修改过的安排，特意留出双方叙旧的时辰。祭日过后，你借祠灯回应那句熟悉的问候。")][n] : ["".concat(name, "来到祠前，读起自己记下的这些年。你以熟悉的人形坐到身旁，讲起如今的打算，两人把各自想做的事写在旧约的另一页。"), "".concat(name, "带来做成之事的消息，又问你如今守护着什么。你与伴侣坐在祠前，讲起新接下的祈愿，两页旧约添上了不同的后续。")][n];
+        return divineEvent(s, 'shared-' + n, body, function () {
+          d.partnerStage++;
+          d.partnerAt = s.age;
+        }, {
+          sharedWith: partner.id,
+          effects: {
+            bond: 1
+          }
+        });
+      }
+    }
+    if (!d.recovery && d.stage >= 2 && d.merit >= 1 && a.faith <= 4) {
+      return divineEvent(s, 'recovery-plan', '祭日的席位空了许多。你请仍在的守祠人逐户问清缘由，暂缓一项赐福，把剩下的神力留给回信。', function () {
+        a.faith = Math.max(0, a.faith - .5);
+        d.recovery = {
+          since: s.age,
+          done: false
+        };
+      });
+    }
+    if (d.recovery && !d.recovery.done && s.age - d.recovery.since >= 4) {
+      var restored = d.merit >= 2 && s.stats.bond >= 12;
+      return divineEvent(s, 'recovery-result', restored ? '守祠人把祭日改到众人能来的时候，几户旧信众再次还愿。你听清了迟来的请求，只应下如今能照看的范围。' : '逐户问过以后，仍只有少数人愿意回来。你记下这些人的心愿，将祭事缩到小祠前，留待来年的回应。', function () {
+        a.faith = Math.min(30, a.faith + (restored ? 4 : 1));
+        a.devotees = Math.min(12, a.devotees + (restored ? 1 : 0));
+        d.recovery.done = true;
+        d.recovery.restored = restored;
+      });
+    }
+    var route = divineRoute(s),
+      stage = route.stages[d.stage];
+    if (!stage || s.age - d.lastAt < stage.delay) return companyContinuation(s);
+    var passed = d.merit >= (stage.meritRequired || 0) && meets(s, stage.min),
+      choice = passed ? stage.pass : stage.fail,
+      index = d.stage;
+    return divineEvent(s, route.id + '-' + stage.key, choice.text, function () {
+      a.faith = Math.max(0, Math.min(30, a.faith + choice.faith));
+      a.devotees = Math.max(0, Math.min(12, a.devotees + choice.devotees));
+      d.merit += choice.merit;
+      d.stage++;
+      d.lastAt = s.age;
+      d.history.push({
+        stage: index,
+        age: s.age,
+        passed: passed,
+        merit: d.merit,
+        faith: a.faith,
+        devotees: a.devotees
+      });
+      if (choice.ability && !a.abilities.includes(choice.ability)) {
+        a.abilities.push(choice.ability);
+        d.reserve = Math.min(3, d.reserve + 1);
+      }
+      if (route.id === 'pilgrimage' && index === 1 && passed) s.location = '村边新聚落的小祠';
+    }, {
+      xp: passed ? 1 : 0,
+      developmentMoment: {
+        kind: 'divinity',
+        major: index === 4,
+        status: passed ? '神职渐成' : '祭事受挫',
+        title: route.title,
+        impact: choice.text
+      }
+    });
   }
   var scenes = {
     ghost: [['drift', '你穿过墓地的石隙，慢慢学会让散开的气息重新聚拢。', {
@@ -500,13 +800,23 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     }]]
   };
   function afterlifeEvent(s, rng) {
+    var _authoredCompany;
     var a = s.afterlife,
       kind = a.kind;
-    // These echoes acknowledge surviving relationships without physical domestic scenes.
-    var loved = s.partnerId ? s.people[s.partnerId] : null;
-    if (loved !== null && loved !== void 0 && loved.alive && s.age - a.lastMemoryAt >= 9) return event(kind, 'beloved-' + s.turn, loved.medium === 'dream' ? '生前相恋的梦境浮上心头，你循着旧日记忆，念起那位梦中人的名字。' : kind === 'kami' ? '生前的伴侣来到祠前，说起这些年的家事。你听着熟悉的声音，灯焰轻轻一动。' : kind === 'ghost' ? '生前的伴侣在墓前念起家书，你停在远处，随熟悉的语调轻轻浮动。' : '生前的伴侣托人送来供物，你留在荒径深处，收住了向外散去的怨气。', {
+    // Kami may appear in human form; dreams and confined partners keep their own channels.
+    var shared = afterlifePartner(s);
+    var memories = {
+      kami: ['伴侣来到祠前，你以熟悉的人形迎上去。两人在石阶上坐下，说起这些年的家事；听到一件好笑的小事，你们又笑到了一起。', '伴侣说起自己的新打算，你听完，指着旧约问起一处还没想妥的安排。对方想了一会儿，又挪近些，与你商量该从哪件小事做起。', '伴侣带来做成的东西，放到你面前，讲起途中吃过的苦。你细看了许久，认真夸起最喜欢的一处；对方笑了，又说起下一年的打算。'],
+      ghost: ['生前的伴侣在墓前念起家书，你停在远处，随熟悉的语调轻轻浮动。', '伴侣带来一份自己的手记，读过你没能见到的新风景。你随念诵浮起，记住了从未同行过的那段路。', '伴侣在墓边改念一首新曲，停在不熟的地方重新试。你随旋律轻轻起伏，原先写在家书里的曲调有了新的尾声。'],
+      vengeful: ['生前的伴侣托人送来供物，你留在荒径深处，收住了向外散去的怨气。', '伴侣托人捎来旧案的新消息，也说自己重新拾起了搁置的事。你把追向来人的怨火压回旧物旁，让信使平安走远。', '供物旁添了一页近况，伴侣说起一桩终于做成的心愿。你读到熟悉的笔迹，守过整夜，没让怨气越出荒径。'],
+      dream: ['生前相恋的梦境浮上心头，你循着旧日记忆，念起那位梦中人的名字。', '旧梦里那处常相见的角落渐渐模糊，你记住对方说过的一句话，把记不清的细节留在原处。', '你将还能记起的梦中约定默念了一遍，最后一次相见的余温散入夜色，此后的思念不再追着梦路走。'],
+      distant: ['生前伴侣托人带来近况，你留在原处听完，把熟悉的话记在心里。', '一页捎来的记事说起伴侣最近的心愿，你听人念到末尾，默记住尚未说完的话。', '转达近况的人已经离开，你回想纸上那些琐碎的小事，旧日相处的片段渐渐清晰。']
+    };
+    var partnerMemories = shared && (shared.dream ? memories.dream : shared.confined ? memories.distant : kind === 'kami' && ((_authoredCompany = authoredCompany(shared.id)) === null || _authoredCompany === void 0 ? void 0 : _authoredCompany.memories) || memories[kind]);
+    if (shared && s.age - a.lastMemoryAt >= 9) return event(kind, 'beloved-' + s.turn, partnerMemories[a.belovedScenes % 3], {
       bond: 1
     }, function () {
+      a.belovedScenes++;
       a.lastMemoryAt = s.age;
       if (kind === 'ghost') a.cohesion += .5;
       if (kind === 'vengeful') a.resentment = Math.max(0, a.resentment - 1);
@@ -520,10 +830,21 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       effects = _pool$Math$min[2],
       apply = _pool$Math$min[3];
     var index = scenes[kind].findIndex(function (scene) {
-      return scene[0] === key;
-    });
-    return event(kind, key + '-' + s.turn, text, effects, function () {
+        return scene[0] === key;
+      }),
+      count = a.sceneCounts[key] || 0;
+    var variants = globalThis.TouhouAfterlifeYears[kind][key],
+      body = count === 0 ? text : variants[(count - 1) % variants.length];
+    var earned = kind === 'kami' && key === 'blessing' && a.divinity.reserve > 0;
+    var blessing = earned ? '你依照多年应愿留下的办法，引一缕清水流入田沟。这回只耗去少许神力，守渠人照约接手后面的清淤。' : body;
+    return event(kind, key + '-' + s.turn, blessing, effects, function () {
+      a.sceneCounts[key] = count + 1;
+      var faith = a.faith;
       apply(a);
+      if (earned) {
+        a.divinity.reserve--;
+        a.faith = Math.max(0, faith - .5);
+      }
       a.recentScenes = [].concat(_toConsumableArray(a.recentScenes), [key]).slice(-3);
       a.abilities = _toConsumableArray(new Set(a.abilities));
       a.scenes++;
@@ -567,8 +888,8 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     var a = s.afterlife,
       d = s.development;
     if (a) {
-      var amount = a.kind === 'kami' ? "信仰".concat(Math.max(0, Math.round(a.faith)), " · 供奉").concat(a.devotees, "户") : a.kind === 'ghost' ? "魂形".concat(Math.max(0, Math.round(a.cohesion)), " · 记忆渐淡") : "魂形".concat(Math.max(0, Math.round(a.cohesion)), " · 怨念").concat(Math.max(0, Math.round(a.resentment)));
-      return amount + (s.partnerId ? ' · 生死相隔' : '');
+      var amount = a.kind === 'kami' ? "信仰".concat(Math.max(0, Math.round(a.faith)), " · 供奉").concat(a.devotees, "户 · ").concat(divineRoute(s).title, " ").concat(a.divinity.stage, "/5") : a.kind === 'ghost' ? "魂形".concat(Math.max(0, Math.round(a.cohesion)), " · 记忆渐淡") : "魂形".concat(Math.max(0, Math.round(a.cohesion)), " · 怨念").concat(Math.max(0, Math.round(a.resentment)));
+      return amount + (s.partnerId ? a.kind === 'kami' ? ' · 神身续缘' : ' · 生死相隔' : '');
     }
     if (d) return s.dormant ? '寄物沉眠' : d.ready ? "".concat(forms[d.kind].label, "因缘已备") : "".concat(forms[d.kind].label, "准备 ").concat(d.progress, "/3");
     if (s.species === 'shikaisen') return '寄物复苏 · 停止老化';
@@ -586,6 +907,8 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     ending: ending,
     endings: endings,
     description: description,
-    fail: fail
+    fail: fail,
+    continuation: continuation,
+    divineEnding: divineEnding
   };
 })();

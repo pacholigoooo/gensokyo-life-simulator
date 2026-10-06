@@ -33,7 +33,7 @@
     const years=number(intervals.reduce((sum,[a,b])=>sum+b-a,0));
     const marriedYears=wedding?number(intervals.reduce((sum,[a,b])=>sum+Math.max(0,b-Math.max(a,wedding.age)),0)):null;
     const until=intervals[intervals.length-1][1];
-    const yearsText=(dream?'梦中相伴 ':'相伴 ')+years+' 年'+(wedding?' · '+(dream?'梦中结缘 ':'婚后 ')+marriedYears+' 年':'');
+    const yearsText=(s.afterlife?.kind==='kami'?(dream?'生前梦中相伴 ':'生前相伴 '):dream?'梦中相伴 ':'相伴 ')+years+' 年'+(wedding?' · '+(dream?'梦中结缘 ':'婚后 ')+marriedYears+' 年':'');
     const periodText=number(begin)+'岁相许，记至'+number(until)+'岁'+(intervals.length>1?'；重逢前的离别时日未计入相伴。':'。');
     let outcomeTitle,outcomeText;
     if(lastStop){
@@ -42,8 +42,9 @@
       outcomeText=lastStop.text;
     }else if(s.afterlife){
       const laterFarewell=log.filter(e=>e.id==='farewell-'+id&&e.age>limit).at(-1);
-      outcomeTitle=laterFarewell?(dream?'生死相隔 · 梦路渐远':'生死相隔 · 伴侣已故'):'生死相隔';
-      outcomeText='你在'+number(limit)+'岁告别生前的生活。'+(laterFarewell?laterFarewell.time+'，'+laterFarewell.text:'这段相伴留在旧日记忆里。');
+      const kami=s.afterlife.kind==='kami';
+      outcomeTitle=laterFarewell?(dream?'生死相隔 · 梦路渐远':kami?'成神以后 · 伴侣已故':'生死相隔 · 伴侣已故'):kami?(dream?'成神以后 · 旧梦相思':'成神以后 · 旧缘相续'):'生死相隔';
+      outcomeText='你在'+number(limit)+'岁'+(kami?'受祭成神。':'告别生前的生活。')+(laterFarewell?laterFarewell.time+'，'+laterFarewell.text:kami&&!dream?'此后，你以神灵的身份与伴侣继续来往，新的相见记在神灵岁月里。':'这段相伴留在旧日记忆里。');
     }
     else if(s.deathCause==='chapter'){outcomeTitle=wedding?'仍在相守':'相恋未终';outcomeText='此卷暂时合上，你们的'+(dream?'梦中相伴':'相伴')+'仍在继续。';}
     else{outcomeTitle='相伴至此生终点';outcomeText=dream?'你的人生走到终点，这段梦中相恋随此卷收束。':'你先走到了人生终点，此卷结束时，'+name+'仍然在世。';}
@@ -53,7 +54,10 @@
     const reunion=id==='akyuu'?log.find(e=>e.id==='akyuu-return:returned'&&e.age<=limit):null;
     keep(reunion);
     const shared=log.filter(e=>{
+      // 成神后的祠前来往保留为共同经历；单列的生前相伴年数仍截止肉身死亡。
+      if(s.afterlife?.kind==='kami'&&e.age>=limit&&e.sharedWith===id&&e.id.startsWith('development:kami-divine-shared-'))return true;
       if(!intervals.some(([a,b])=>e.age>=a&&e.age<=b)||e.id==='ending'||e.id==='farewell-'+id||e.id.startsWith('remembrance:'))return false;
+      if(e.sharedWith===id)return true;
       return local?/^common:(?:local-date-|spouse-)/.test(e.id)||e.id.startsWith('local:marriage:'):
         e.id.startsWith('relation:'+id+':')||e.circleOf===id||e.with?.includes(id)||e.id.startsWith('guidance:'+id+':')||id==='akyuu'&&e.id==='akyuu-return:aftercare';
     });

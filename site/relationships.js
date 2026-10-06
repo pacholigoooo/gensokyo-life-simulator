@@ -245,13 +245,17 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
     return !c.freePartner || freePartner(s);
   }
   function remember(s, r, key, text) {
-    r.history.push({
+    var freshText = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : text;
+    r.history.push(_objectSpread(_objectSpread({
       key: key,
       age: s.age,
-      text: text,
+      text: text
+    }, freshText !== text ? {
+      freshText: freshText
+    } : {}), {}, {
       status: r.status,
       label: r.label
-    });
+    }));
     r.lastAt = s.age;
   }
   function begin(s, route, romantic) {
@@ -450,14 +454,18 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
   }
   function echoEvent(s, route, e) {
     var r = s.relations[route.id],
-      text = e.romanceEcho ? globalThis.TouhouCompanionship.text(s, r, e) : e.text;
+      C = globalThis.TouhouCompanionship,
+      base = e.romanceEcho ? C.text(s, r, e) : e.text;
+    var text = e.romanceEcho ? C.variedText(s, r, e, 'echo:' + e.key, base) : base;
     return event(r.romancePath ? romanceView(route) : route, 'echo:' + e.key + ':' + (r.echoes[e.key] || 0), text, e.effects, function (state) {
       r.echoes[e.key] = (r.echoes[e.key] || 0) + 1;
       r.lastEchoKey = e.key;
       r.activityAt['echo:' + e.key] = state.age;
-      remember(state, r, 'echo:' + e.key, text);
+      remember(state, r, 'echo:' + e.key, text, base);
       state.people[r.id].close = friendly.has(r.status) ? Math.max(2, r.trust) : 0;
-    });
+    }, text !== base ? {
+      freshText: base
+    } : {});
   }
   function echoDueAt(s, route, e) {
     var _r$activityAt;
@@ -560,15 +568,19 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
   }
   function marriageDailyEvent(s, route, d) {
     var r = s.relations[route.id],
-      text = globalThis.TouhouCompanionship.text(s, r, d);
+      C = globalThis.TouhouCompanionship,
+      base = C.text(s, r, d),
+      text = C.variedText(s, r, d, 'marriage:daily:' + d.key, base);
     return event(r.romancePath ? romanceView(route) : route, 'marriage:daily:' + d.key + ':' + (r.marriage.daily[d.key] || 0), text, {}, function (state) {
-      if (marriageStage(state, route) !== 'daily' || state.age < dailyDueAt(state, r, d) || state.age - r.lastAt < 2 || r.marriage.lastDaily === d.key || !globalThis.TouhouCompanionship.fresh(state, r, text)) throw Error('婚后日常前置未完成：' + route.id + '/' + d.key);
+      if (marriageStage(state, route) !== 'daily' || state.age < dailyDueAt(state, r, d) || state.age - r.lastAt < 2 || r.marriage.lastDaily === d.key || !C.fresh(state, r, base)) throw Error('婚后日常前置未完成：' + route.id + '/' + d.key);
       r.marriage.daily[d.key] = (r.marriage.daily[d.key] || 0) + 1;
       r.marriage.lastDaily = d.key;
       r.activityAt['marriage:' + d.key] = state.age;
       r.label = '婚后相伴';
-      remember(state, r, 'marriage:daily:' + d.key, text);
-    });
+      remember(state, r, 'marriage:daily:' + d.key, text, base);
+    }, text !== base ? {
+      freshText: base
+    } : {});
   }
   // Human years are scarce: keep every scene, while placing the confession after its authored minimum acquaintance.
   function nodeDueAt(s, route, r) {

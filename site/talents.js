@@ -422,6 +422,31 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
     },
     years: 5
   }, {
+    id: 'archive',
+    name: '岁时藏书',
+    grade: 2,
+    description: '悟性+3；可考订旧记，证据不够时保留疑处。',
+    enhancement: {
+      story: 'archive',
+      finite: true
+    },
+    initial: {
+      insight: 3
+    }
+  }, {
+    id: 'artisan',
+    name: '百年匠心',
+    grade: 2,
+    description: '悟性+2、家底+2；试修旧物可省下用度，准备不足时收住尝试。',
+    enhancement: {
+      story: 'artisan',
+      finite: true
+    },
+    initial: {
+      insight: 2,
+      fortune: 2
+    }
+  }, {
     id: 'boundary',
     name: '隙间一梦',
     grade: 3,
@@ -479,6 +504,32 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
         fortune: 1
       }
     }]
+  }, {
+    id: 'earth-vein',
+    name: '山川听脉',
+    grade: 3,
+    description: '体魄+3、悟性+4；可实察近处地脉，分清水声与震动，气力不足时止步。',
+    enhancement: {
+      story: 'earth-vein',
+      finite: true
+    },
+    initial: {
+      health: 3,
+      insight: 4
+    }
+  }, {
+    id: 'star-chart',
+    name: '星河旧约',
+    grade: 3,
+    description: '悟性+4、家底+3；可校订旧星图的时辰，未能核实的星位留下待考。',
+    enhancement: {
+      story: 'star-chart',
+      finite: true
+    },
+    initial: {
+      insight: 4,
+      fortune: 3
+    }
   }];
   function conflict(id, selected) {
     var t = list.find(function (t) {

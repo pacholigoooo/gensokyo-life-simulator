@@ -1,6 +1,6 @@
 {
   "name": "touhou-life",
-  "version": "20.0.0",
+  "version": "23.1.0",
   "private": true,
   "type": "module",
   "scripts": {

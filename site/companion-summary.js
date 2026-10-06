@@ -17,6 +17,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     return Number(value.toFixed(1));
   };
   function compose(s) {
+    var _s$afterlife;
     var id = s.firstPartnerId;
     if (!id) return {
       id: null,
@@ -104,7 +105,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       return sum + Math.max(0, b - Math.max(a, wedding.age));
     }, 0)) : null;
     var until = intervals[intervals.length - 1][1];
-    var yearsText = (dream ? '梦中相伴 ' : '相伴 ') + years + ' 年' + (wedding ? ' · ' + (dream ? '梦中结缘 ' : '婚后 ') + marriedYears + ' 年' : '');
+    var yearsText = (((_s$afterlife = s.afterlife) === null || _s$afterlife === void 0 ? void 0 : _s$afterlife.kind) === 'kami' ? dream ? '生前梦中相伴 ' : '生前相伴 ' : dream ? '梦中相伴 ' : '相伴 ') + years + ' 年' + (wedding ? ' · ' + (dream ? '梦中结缘 ' : '婚后 ') + marriedYears + ' 年' : '');
     var periodText = number(begin) + '岁相许，记至' + number(until) + '岁' + (intervals.length > 1 ? '；重逢前的离别时日未计入相伴。' : '。');
     var outcomeTitle, outcomeText;
     if (lastStop) {
@@ -115,8 +116,9 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       var laterFarewell = log.filter(function (e) {
         return e.id === 'farewell-' + id && e.age > limit;
       }).at(-1);
-      outcomeTitle = laterFarewell ? dream ? '生死相隔 · 梦路渐远' : '生死相隔 · 伴侣已故' : '生死相隔';
-      outcomeText = '你在' + number(limit) + '岁告别生前的生活。' + (laterFarewell ? laterFarewell.time + '，' + laterFarewell.text : '这段相伴留在旧日记忆里。');
+      var kami = s.afterlife.kind === 'kami';
+      outcomeTitle = laterFarewell ? dream ? '生死相隔 · 梦路渐远' : kami ? '成神以后 · 伴侣已故' : '生死相隔 · 伴侣已故' : kami ? dream ? '成神以后 · 旧梦相思' : '成神以后 · 旧缘相续' : '生死相隔';
+      outcomeText = '你在' + number(limit) + '岁' + (kami ? '受祭成神。' : '告别生前的生活。') + (laterFarewell ? laterFarewell.time + '，' + laterFarewell.text : kami && !dream ? '此后，你以神灵的身份与伴侣继续来往，新的相见记在神灵岁月里。' : '这段相伴留在旧日记忆里。');
     } else if (s.deathCause === 'chapter') {
       outcomeTitle = wedding ? '仍在相守' : '相恋未终';
       outcomeText = '此卷暂时合上，你们的' + (dream ? '梦中相伴' : '相伴') + '仍在继续。';
@@ -141,13 +143,16 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     }) : null;
     keep(reunion);
     var shared = log.filter(function (e) {
-      var _e$with;
+      var _s$afterlife2, _e$with;
+      // 成神后的祠前来往保留为共同经历；单列的生前相伴年数仍截止肉身死亡。
+      if (((_s$afterlife2 = s.afterlife) === null || _s$afterlife2 === void 0 ? void 0 : _s$afterlife2.kind) === 'kami' && e.age >= limit && e.sharedWith === id && e.id.startsWith('development:kami-divine-shared-')) return true;
       if (!intervals.some(function (_ref5) {
         var _ref6 = _slicedToArray(_ref5, 2),
           a = _ref6[0],
           b = _ref6[1];
         return e.age >= a && e.age <= b;
       }) || e.id === 'ending' || e.id === 'farewell-' + id || e.id.startsWith('remembrance:')) return false;
+      if (e.sharedWith === id) return true;
       return local ? /^common:(?:local-date-|spouse-)/.test(e.id) || e.id.startsWith('local:marriage:') : e.id.startsWith('relation:' + id + ':') || e.circleOf === id || ((_e$with = e["with"]) === null || _e$with === void 0 ? void 0 : _e$with.includes(id)) || e.id.startsWith('guidance:' + id + ':') || id === 'akyuu' && e.id === 'akyuu-return:aftercare';
     });
     var outside = log.find(function (e) {

@@ -16,6 +16,7 @@ export async function addRomances(routes){
   assert(route&&!seen.has(d.id),'Unknown or repeated romance '+d.id);seen.add(d.id);
   assert(d.echoes.length>= (d.extension?2:3),d.id+': romantic echoes');
   for(const e of d.echoes){assert(typeof e.text==='string'&&e.text.length>=15&&e.text.length<=85,d.id+': active echo');assert(typeof e.settledText==='string'&&e.settledText.length>=15&&e.settledText.length<=85&&e.settledText!==e.text,d.id+': settled echo');assert.deepEqual(e.states,['lover'],d.id+': intimate echo state');assert(/亲|吻/.test(d.echoes.map(x=>x.text).join('')),d.id+': missing kiss');}
+  for(const e of d.echoes)if(e.settledVariants){assert(Array.isArray(e.settledVariants)&&e.settledVariants.length===4,d.id+': four later scenes');assert.equal(new Set([e.settledText,...e.settledVariants]).size,5,d.id+': distinct later scenes');for(const t of e.settledVariants)assert(typeof t==='string'&&t.length>=15&&t.length<=85,d.id+': later scene text');}
   if(d.extension){assert(['keine','yuuka'].includes(d.id),d.id+': existing romance extension');}
   else{
    assert(typeof d.title==='string'&&d.title.length<=30,d.id+': title');

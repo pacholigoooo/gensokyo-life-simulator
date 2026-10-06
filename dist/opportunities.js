@@ -16,19 +16,35 @@
   }
   const human = s => !s.character && s.species === 'human' && !s.transformation;
   const canBegin = s => human(s) && !s.opportunity && !s.development && !globalThis.TouhouPartnerLearning.inProgress(s) && s.opportunityAttempts < 2;
+  function mikoAvailable(s) {
+    const p=s.people?.miko,r=s.relations?.miko;
+    return !!p&&p.alive&&p.leaveAt>s.age&&p.close>=3&&!p.afterlife&&!p.dormant&&p.medium!=='dream'&&r?.medium!=='dream'&&r?.status!=='lover'&&s.realm==='gensokyo'&&s.partnerId!=='miko'&&!s.afterlife&&!s.dormant;
+  }
+  // Replace only a successfully drawn hermit discovery; this adds neither a roll nor a start weight.
+  function discovered(s,event) {
+    if(event?.id!=='chance:hermit-found'||!mikoAvailable(s)||s.careerDevelopment?.transition||!globalThis.TouhouEngine.eligible(s,event))return event;
+    return {...event,id:'mentorship:miko:hermit-found',mentorId:'miko',remember:['miko'],scene:'师徒修持 · 神子',
+      text:'你向相识的神子求学。她先托你照看杂务，见你肯认真练习，才留下一段行气功课。你收好纸页，开始逐日记下疑处。',
+      dev:{...event.dev,mentorId:'miko'},when:state=>event.when(state)&&!state.careerDevelopment?.transition&&mikoAvailable(state),
+      apply:state=>{begin(state,'hermit');state.opportunity.mentorId='miko';}};
+  }
   function begin(s,kind) {if(kind==='youkai')s.flags.delete('talent-clue:youkai');s.opportunity={kind,stage:1,since:s.age,startedAge:s.age};s.opportunityAttempts++;}
   function pass(s) {s.opportunity.stage=2;s.opportunity.since=s.age;}
   function fail(s,kind) {s.pathHistory.push({kind,result:'failed',age:s.age});s.failedPaths.push(kind);s.opportunity=null;}
+  // Only an underprepared final trial waits longer; no new draw, attempt or stat grant.
+  function trialDue(s,stage,delay,passed) {
+    return s.age-s.opportunity.since>=delay+(stage===2&&!passed?globalThis.TouhouLifeConfig.livingFinalGraceYears:0);
+  }
   function start(kind,text,rule) {
     starts.push({id:'chance:'+kind+'-found',text,effects:{},weight:globalThis.TouhouLifeConfig.livingOpportunityWeight,repeat:1,
       ...rule,dev:{kind,start:true},when:s=>canBegin(s)&&!s.failedPaths.includes(kind),apply:s=>begin(s,kind)});
   }
   function trial(kind,stage,delay,thresholds,success,failure) {
-    const ready=s=>human(s)&&s.opportunity?.kind===kind&&s.opportunity.stage===stage&&s.age-s.opportunity.since>=delay;
+    const ready=s=>human(s)&&s.opportunity?.kind===kind&&s.opportunity.stage===stage&&s.age-s.opportunity.since>=delay&&!(kind==='hermit'&&s.opportunity.mentorId==='miko');
     for(const [passed,definition] of [[true,success],[false,failure]]) {
       const apply=definition.apply;
       events.push({id:`chance:${kind}-${stage}-${passed?'pass':'fail'}`,weight:1,repeat:1,effects:{},...definition,
-        dev:{kind,stage,delay,thresholds,passed},when:s=>ready(s)&&Object.entries(thresholds).every(([key,value])=>(key==='xp'?s.xp:s.stats[key])>=value)===passed,
+        dev:{kind,stage,delay,thresholds,passed},when:s=>ready(s)&&trialDue(s,stage,delay,passed)&&Object.entries(thresholds).every(([key,value])=>(key==='xp'?s.xp:s.stats[key])>=value)===passed,
         apply:s=>{if(apply)apply(s);if(passed){if(stage===1)pass(s);else globalThis.TouhouEngine.transform(s,kind);}else fail(s,kind);}
       });
     }
@@ -50,6 +66,34 @@
   trial('hermit',2,5,{health:8,insight:10,xp:10},
     {text:'积年修持让身体渐离衰朽，你成为仙人，仍须日日精进。',effects:{health:3,insight:1},wear:-3},
     {text:'杂念与病痛打断修持，你收好行气法，回到平常作息。',effects:{health:-1,insight:1},wear:2});
+
+  function mikoTrial(stage,delay,thresholds,success,failure) {
+    const ready=s=>human(s)&&s.opportunity?.kind==='hermit'&&s.opportunity.mentorId==='miko'&&s.opportunity.stage===stage&&s.age-s.opportunity.since>=delay;
+    for(const [passed,definition] of [[true,success],[false,failure]]) {
+      const id=stage===2&&passed?'mentorship:miko:hermit-transformed':`mentorship:miko:hermit-${stage}-${passed?'pass':'fail'}`;
+      const {present,alone,apply,...rules}=definition;
+      events.push({id,weight:1,repeat:1,effects:{},...rules,mentorId:'miko',remember:['miko'],scene:'师徒修持 · 神子',
+        text:s=>mikoAvailable(s)?present:alone,
+        dev:{kind:'hermit',stage,delay,thresholds,passed,mentorId:'miko'},
+        when:s=>ready(s)&&trialDue(s,stage,delay,passed)&&Object.entries(thresholds).every(([key,value])=>(key==='xp'?s.xp:s.stats[key])>=value)===passed,
+        apply:s=>{if(apply)apply(s);if(passed){if(stage===1)pass(s);else globalThis.TouhouEngine.transform(s,'hermit',{eventId:id,source:'mentor-guidance',mentorId:'miko'});}else fail(s,'hermit');}});
+    }
+  }
+  // The mentor's absence changes the scene, not the student's earned progress or thresholds.
+  mikoTrial(1,3,{health:6,insight:8},
+    {present:'三年里，你做完杂务也不曾搁下功课。神子听过你的心得，指出急躁之处。你渐能调匀气息，在山间结庵自修。',
+      alone:'三年里，你照着旧功课练习，如今已无法再向神子请教。你核清每次调息的变化，渐有章法，在山间结庵自修。',
+      effects:{fortune:-2,health:1},xp:3,apply:s=>{s.habitat='mountain';s.location='山中小庵';s.home=false;}},
+    {present:'三年的功课仍没能练稳。神子听出你行气时的勉强，劝你先养回气力。你收好纸页，停下这次苦修。',
+      alone:'三年的功课仍没能练稳。旧页旁积下许多未解的疑处，你独自停下苦修，先养回寻常气力。',
+      effects:{health:1,fortune:-1}});
+  mikoTrial(2,5,{health:8,insight:10,xp:10},
+    {present:'结庵后的五年里，你把神子指出的错处逐一练过。身体渐离衰朽，你修成仙人。她核过你的进境，仍嘱你日日修持，提防地狱追索。',
+      alone:'结庵后的五年里，你依着旧功课逐一核清错处。身体渐离衰朽，你独自修成仙人。旧页留在案边，日日修持与地狱追索仍要自己面对。',
+      effects:{health:3,insight:1},wear:-3},
+    {present:'结庵后的五年没能稳住修持。神子劝你别再硬撑，你收好仍未练通的功课，带着病痛回到平常作息。',
+      alone:'结庵后的五年没能稳住修持。杂念与病痛渐重，你独自收好仍未练通的功课，回到平常作息。',
+      effects:{health:-1,insight:1},wear:2});
 
   start('magician','旧书摊的一册魔导书吸引了你，几页小术式尚能辨清。',
     {minAge:18,maxAge:60,min:{insight:8,fortune:3},talentBoost:['scroll','reader','curious'],habitats:['village','outskirts','forest']});
@@ -90,6 +134,10 @@
   later('hermit','medicine','你辨认山间药草，留下一份应付修行中的病痛。',{}, {apply:s=>s.remedy=true});
   later('hermit','paths','昔日上山的小路已被草木盖住，你慢慢重新认路。',{insight:1});
   later('hermit','balance','一段稳妥修持让你更能驾驭气息，身体轻松了些。',{health:1},{xp:2,wear:-.5});
+  after.push({id:'mentorship:miko:hermit-old-lesson',mentorId:'miko',remember:['miko'],scene:'师徒修持 · 旧功课',
+    text:s=>mikoAvailable(s)?'成仙已过十二年，你重读初学的旧页，把新近的疑处写信请教神子。她回信提醒你重练最初的一段；你试过才补上注解，仍照常修持，留意追索。':'成仙已过十二年，你重读初学的旧页。如今无法再向神子请教，你独自检验最初的一段，把新的体会写在边栏，仍照常修持，留意追索。',
+    effects:{insight:1},xp:1,weight:2,repeat:1,
+    when:s=>!s.character&&s.species==='hermit'&&s.transformation?.source==='mentor-guidance'&&s.transformation.mentorId==='miko'&&s.transformation.eventId==='mentorship:miko:hermit-transformed'&&s.age-s.transformation.age>=12});
   later('magician','meal','炉边煮了一餐旧日饭食，你为了熟悉的味道慢慢吃完。',{bond:1});
   later('magician','spell','舍食后的空余时日，被你分给一本迟迟读不通的旧书。',{insight:1},{xp:2});
   later('magician','growth','你再习停止衰老的法术，窗外又换过一轮新叶。',{health:1},{xp:1,wear:-.5,when:s=>!s.magic.ageless});
@@ -111,5 +159,5 @@
     later(kind,'pursuit','退治的术光逼近，你带伤暂避山林，等追索远去才返回。',{health:-4,fortune:-2},{wear:8,repeat:2,apply:s=>s.injured=true});
   }
   after.push({id:'changed:human-magic',text:'清晨吃过饭，你照常练习让纸片轻轻飞起。',effects:{insight:1},weight:2,repeat:4,xp:1,when:s=>human(s)&&s.flags.has('human-magic')});
-  globalThis.TouhouOpportunities={forms,starts,events,after,abandoned,discoveryChance};
+  globalThis.TouhouOpportunities={forms,starts,events,after,abandoned,discoveryChance,discovered};
 })();

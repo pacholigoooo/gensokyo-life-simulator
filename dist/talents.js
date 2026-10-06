@@ -39,9 +39,13 @@
  {id:'home',name:'一隅安居',grade:2,description:'初始有安稳住处，家底+3；可留旧识歇脚，接待要花用度。',enhancement:{story:'home',finite:true},initial:{fortune:3},start:'home'},
  {id:'patient',name:'积年成器',grade:2,description:'第20、40、60步悟性+1、历练+2；积累足够可提早一次舍虫研习。',enhancement:{story:'patient',finite:true},triggers:[{at:[20,40,60],text:'多年反复积下的经验，终于显出用处。',effects:{insight:1},xp:2}]},
  {id:'healthful',name:'生机绵长',grade:2,description:'体魄+4、生涯余力增加；调整活动可减耗，逞力仍会累。',enhancement:{story:'healthful',finite:true},initial:{health:4},years:5},
+ {id:'archive',name:'岁时藏书',grade:2,description:'悟性+3；可考订旧记，证据不够时保留疑处。',enhancement:{story:'archive',finite:true},initial:{insight:3}},
+ {id:'artisan',name:'百年匠心',grade:2,description:'悟性+2、家底+2；试修旧物可省下用度，准备不足时收住尝试。',enhancement:{story:'artisan',finite:true},initial:{insight:2,fortune:2}},
  {id:'boundary',name:'隙间一梦',grade:3,description:'悟性+6、缘分+4；梦路中藏着外界的归途，也可能带来秘封夜谈。',enhancement:{story:'boundary',finite:true},initial:{insight:6,bond:4},flag:'boundary'},
  {id:'phoenix',name:'余火不灭',grade:3,description:'体魄+6、悟性+2，首次濒危恢复8点；余火有机会凝成护魂信物。',enhancement:{story:'phoenix',finite:true},initial:{health:6,insight:2},triggers:[{lowHealth:1,once:true,text:'一息余火仍在，你终于重新睁开了眼睛。',effects:{health:8}}]},
- {id:'blessing',name:'四季眷顾',grade:3,description:'四项+3；第20、40、60步体魄与家底+1；守灯结下的祭祀之缘可助成神。',enhancement:{story:'blessing',finite:true},initial:{health:3,insight:3,bond:3,fortune:3},triggers:[{at:[20,40,60],text:'四时流转，你的日子又多了一分余裕。',effects:{health:1,fortune:1}}]}
+ {id:'blessing',name:'四季眷顾',grade:3,description:'四项+3；第20、40、60步体魄与家底+1；守灯结下的祭祀之缘可助成神。',enhancement:{story:'blessing',finite:true},initial:{health:3,insight:3,bond:3,fortune:3},triggers:[{at:[20,40,60],text:'四时流转，你的日子又多了一分余裕。',effects:{health:1,fortune:1}}]},
+ {id:'earth-vein',name:'山川听脉',grade:3,description:'体魄+3、悟性+4；可实察近处地脉，分清水声与震动，气力不足时止步。',enhancement:{story:'earth-vein',finite:true},initial:{health:3,insight:4}},
+ {id:'star-chart',name:'星河旧约',grade:3,description:'悟性+4、家底+3；可校订旧星图的时辰，未能核实的星位留下待考。',enhancement:{story:'star-chart',finite:true},initial:{insight:4,fortune:3}}
  ];
  function conflict(id,selected){const t=list.find(t=>t.id===id);return selected.find(x=>t.exclude?.includes(x)||list.find(t=>t.id===x).exclude?.includes(id));}
  function validate(ids){if(ids.length!==3||new Set(ids).size!==3||ids.some(id=>!list.some(t=>t.id===id)))throw new Error('请选择三个不同的天赋。');for(const id of ids)if(conflict(id,ids.filter(x=>x!==id)))throw new Error('所选天赋互斥。');}

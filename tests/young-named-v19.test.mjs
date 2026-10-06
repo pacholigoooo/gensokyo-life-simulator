@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,readdirSync} from 'node:fs';
-for(const name of ['config','talents','content-data','relationship-data','events','health','opportunities','encounters','spiritual','afterlife','careers','contacts','memoir','relationships','talent-stories','partner-learning','companionship','guidance','akyuu','engine','companion-summary','memoir-image'])await import('../dist/'+name+'.js');
+for(const name of ['config','talents','content-data','relationship-data','events','health','opportunities','encounters','spiritual','afterlife','careers','contacts','memoir','relationships','talent-stories','partner-learning','companionship','guidance','akyuu','long-years-data','long-years','engine','companion-summary','memoir-image'])await import('../dist/'+name+'.js');
 const E=TouhouEngine,R=TouhouRelationships,C=TouhouContacts,Summary=TouhouCompanionSummary;
 const ids=['reimu','marisa','kosuzu','akyuu'],routes=TouhouRelationshipData,route=id=>routes.find(r=>r.id===id);
 const romances=readdirSync(new URL('../data/romances/',import.meta.url)).filter(f=>f.endsWith('.json')).flatMap(f=>JSON.parse(readFileSync(new URL('../data/romances/'+f,import.meta.url))));

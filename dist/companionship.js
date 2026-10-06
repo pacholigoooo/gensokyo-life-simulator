@@ -7,6 +7,11 @@
   return shared>=30||aging&&s.bodyAge>=60||r.id==='akyuu'&&globalThis.TouhouAkyuu.age(s)>=28||r.id!=='akyuu'&&!p.ageless&&p.life==='human'&&p.leaveAt-s.age<=8;
  }
  function text(s,r,item){return settled(s,r)?item.settledText:item.text;}
+ function variedText(s,r,item,key,base){
+  if(!item.settledVariants||!settled(s,r))return base;
+  const count=r.history.filter(h=>h.key===key&&(h.freshText??h.text)===base).length;
+  return count?item.settledVariants[(count-1)%item.settledVariants.length]:base;
+ }
  const localScenes=[
   {key:'walk',text:'晚饭后，你们沿着村边散步。伴侣向你摊开手掌，你握上去，两人放慢脚步，商量下回赶集想买什么。',settledText:'散步走到熟悉的岔口，你伸手等了等。伴侣与你十指相扣，说今天想走短些，你们便转向回家的小路。'},
   {key:'cheek',text:'伴侣端着空碗凑过来，夸你今天的汤调得好。你放下汤勺，笑着亲了亲近在眼前的脸；对方用额头轻碰你一下，又把碗递来讨半碗汤。',settledText:'早饭时，伴侣靠过来替你拨开不爱吃的配料，你顺势亲了一下对方的脸。那只手顿了顿，随即笑着点点你的额头，催你趁热吃。'},
@@ -43,7 +48,9 @@
  }
  function fresh(s,r,body){
   const scenes=r.history.filter(h=>h.key.startsWith('echo:love:')||h.key.startsWith('marriage:daily:')||h.key.startsWith('circle:'));
-  return !scenes.slice(-6).some(h=>h.text===body)&&!scenes.some(h=>h.text===body&&s.age-h.age<12);
+  // Alternate wording keeps the original scene's freshness gate and decision timing.
+  const same=h=>(h.freshText??h.text)===body;
+  return !scenes.slice(-6).some(same)&&!scenes.some(h=>same(h)&&s.age-h.age<(globalThis.TouhouLongYears.mature(s)?36:12));
  }
  function eligibleVisit(s,r,v){
   // 梦篇和回忆只叙述亲友，不能据此把异时代人物登记为现实来客或开放通路。
@@ -79,5 +86,5 @@
    }};
   }};
  }
- globalThis.TouhouCompanionship={settled,text,courtship,localMarriage,fresh,eligibleVisit,candidate};
+ globalThis.TouhouCompanionship={settled,text,variedText,courtship,localMarriage,fresh,eligibleVisit,candidate};
 })();

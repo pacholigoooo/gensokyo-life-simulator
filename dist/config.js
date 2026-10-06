@@ -5,6 +5,10 @@ globalThis.TouhouConfig = Object.freeze({ordinary:0.95, main:0.0375, hifuu:0.008
 globalThis.TouhouLifeConfig = Object.freeze({
  // 符合条件的年度机遇共抽一次；天赋亲和和已取得的妖术线索会增加发现率。
  opportunityChance:.002, opportunityMultiplier:55, livingOpportunityWeight:3,
+ // 生前末段未达标时可多修两年；成功时点与实际门槛保持原样，到期仍可失败。
+ livingFinalGraceYears:2,
+ // V22按普通完整人生基线调低两个身后入口；这些是候选权重，整生比例由独立采样校准。
+ ghostOpportunityWeight:.88, vengefulOpportunityWeight:.82, faithOpportunityMultiplier:6,
  encounterChance:.18, relationshipChance:.04, contactChance:.045,
  romanceIntroWeight:3, romanceWishWeight:6, contactWishWeight:8, pc98RomanceWeight:.7,
  // 先抽有机会前往的来处，再完成通路和人物前置；这些权重不直接指定恋人。
