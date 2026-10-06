@@ -1,0 +1,4096 @@
+[
+  {
+    "id": "reimu",
+    "name": "博丽灵梦",
+    "category": "main",
+    "work": "th06",
+    "debut": "th01",
+    "works": [
+      "th01",
+      "th06",
+      "th02",
+      "th03",
+      "th04",
+      "th05",
+      "th07",
+      "th07.5",
+      "th08",
+      "th09",
+      "th10",
+      "th10.5",
+      "th11",
+      "th12",
+      "th12.3",
+      "th13",
+      "th13.5",
+      "th14",
+      "th14.5",
+      "th15",
+      "th15.5",
+      "th16",
+      "th17",
+      "th17.5",
+      "th18",
+      "th19",
+      "th20",
+      "th06nc",
+      "cola",
+      "ssib",
+      "wahh",
+      "fs",
+      "le",
+      "fss",
+      "th12.5",
+      "th12.8",
+      "th14.3",
+      "th16.5",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th06.html",
+      "https://thbwiki.cc/%E5%8D%9A%E4%B8%BD%E7%81%B5%E6%A2%A6",
+      "https://en.touhouwiki.net/wiki/Reimu_Hakurei",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/妖精大战争",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/秘封噩梦日记",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "旧作与Windows同名人物合并；旧作经历与现行设定的连续性不全部保证，不能无依据把两时代所有事件写成同一人生。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "marisa",
+    "name": "雾雨魔理沙",
+    "category": "main",
+    "work": "th06",
+    "debut": "th02",
+    "works": [
+      "th02",
+      "th06",
+      "th03",
+      "th04",
+      "th05",
+      "th07",
+      "th07.5",
+      "th08",
+      "th09",
+      "th10",
+      "th10.5",
+      "th11",
+      "th12",
+      "th12.3",
+      "th13",
+      "th13.5",
+      "th14",
+      "th14.5",
+      "th15",
+      "th15.5",
+      "th16",
+      "th17",
+      "th17.5",
+      "th18",
+      "th19",
+      "th20",
+      "th06nc",
+      "cola",
+      "ssib",
+      "wahh",
+      "fs",
+      "le",
+      "fss",
+      "th12.5",
+      "th12.8",
+      "th14.3",
+      "th16.5",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th06.html",
+      "https://thbwiki.cc/%E9%9B%BE%E9%9B%A8%E9%AD%94%E7%90%86%E6%B2%99",
+      "https://en.touhouwiki.net/wiki/Marisa_Kirisame",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/妖精大战争",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/秘封噩梦日记",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "旧作与Windows同名人物合并；旧作经历与现行设定的连续性不全部保证，不能无依据把两时代所有事件写成同一人生。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "rumia",
+    "name": "露米娅",
+    "category": "main",
+    "work": "th06",
+    "debut": "th06",
+    "works": [
+      "th06",
+      "th06nc",
+      "th09.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th06.html",
+      "https://thbwiki.cc/%E9%9C%B2%E7%B1%B3%E5%A8%85",
+      "https://en.touhouwiki.net/wiki/Rumia",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "daiyousei",
+    "name": "大妖精",
+    "category": "main",
+    "work": "th06",
+    "debut": "th06",
+    "works": [
+      "th06",
+      "th06nc",
+      "th12.8"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th06.html",
+      "https://thbwiki.cc/%E5%A4%A7%E5%A6%96%E7%B2%BE",
+      "https://en.touhouwiki.net/wiki/Daiyousei",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/妖精大战争"
+    ],
+    "continuityNotes": "没有公开正式个人名；此处采用惯用描述性称呼，不能宣称其称呼就是官方姓名。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "descriptive-midboss"
+  },
+  {
+    "id": "cirno",
+    "name": "琪露诺",
+    "category": "main",
+    "work": "th06",
+    "debut": "th06",
+    "works": [
+      "th06",
+      "th07",
+      "th09",
+      "th12.3",
+      "th16",
+      "th06nc",
+      "th09.5",
+      "th12.8",
+      "th14.3",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th06.html",
+      "https://thbwiki.cc/%E7%90%AA%E9%9C%B2%E8%AF%BA",
+      "https://en.touhouwiki.net/wiki/Cirno",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/妖精大战争",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "meiling",
+    "name": "红美铃",
+    "category": "main",
+    "work": "th06",
+    "debut": "th06",
+    "works": [
+      "th06",
+      "th07.5",
+      "th12.3",
+      "th06nc",
+      "th09.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th06.html",
+      "https://thbwiki.cc/%E7%BA%A2%E7%BE%8E%E9%93%83",
+      "https://en.touhouwiki.net/wiki/Hong_Meiling",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "koakuma",
+    "name": "小恶魔",
+    "category": "main",
+    "work": "th06",
+    "debut": "th06",
+    "works": [
+      "th06",
+      "th06nc"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th06.html",
+      "https://thbwiki.cc/%E5%B0%8F%E6%81%B6%E9%AD%94",
+      "https://en.touhouwiki.net/wiki/Koakuma",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "没有公开正式个人名；此处采用惯用描述性称呼，不能宣称其称呼就是官方姓名。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "descriptive-midboss"
+  },
+  {
+    "id": "patchouli",
+    "name": "帕秋莉·诺蕾姬",
+    "category": "main",
+    "work": "th06",
+    "debut": "th06",
+    "works": [
+      "th06",
+      "th07.5",
+      "th08",
+      "th10.5",
+      "th11",
+      "th12.3",
+      "th06nc",
+      "th20",
+      "th09.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th06.html",
+      "https://thbwiki.cc/%E5%B8%95%E7%A7%8B%E8%8E%89%C2%B7%E8%AF%BA%E8%95%BE%E5%A7%AC",
+      "https://en.touhouwiki.net/wiki/Patchouli_Knowledge",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "sakuya",
+    "name": "十六夜咲夜",
+    "category": "main",
+    "work": "th06",
+    "debut": "th06",
+    "works": [
+      "th06",
+      "th07",
+      "th07.5",
+      "th08",
+      "th09",
+      "th10.5",
+      "th12.3",
+      "th14",
+      "th18",
+      "th06nc",
+      "th20",
+      "th09.5",
+      "th14.3",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th06.html",
+      "https://thbwiki.cc/%E5%8D%81%E5%85%AD%E5%A4%9C%E5%92%B2%E5%A4%9C",
+      "https://en.touhouwiki.net/wiki/Sakuya_Izayoi",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "remilia",
+    "name": "蕾米莉亚·斯卡蕾特",
+    "category": "main",
+    "work": "th06",
+    "debut": "th06",
+    "works": [
+      "th06",
+      "th07.5",
+      "th08",
+      "th10.5",
+      "th12.3",
+      "th06nc",
+      "th20",
+      "th09.5",
+      "th14.3",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th06.html",
+      "https://thbwiki.cc/%E8%95%BE%E7%B1%B3%E8%8E%89%E4%BA%9A%C2%B7%E6%96%AF%E5%8D%A1%E8%95%BE%E7%89%B9",
+      "https://en.touhouwiki.net/wiki/Remilia_Scarlet",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "flandre",
+    "name": "芙兰朵露·斯卡蕾特",
+    "category": "main",
+    "work": "th06",
+    "debut": "th06",
+    "works": [
+      "th06",
+      "th17.5",
+      "th06nc",
+      "th09.5",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th06.html",
+      "https://thbwiki.cc/%E8%8A%99%E5%85%B0%E6%9C%B5%E9%9C%B2%C2%B7%E6%96%AF%E5%8D%A1%E8%95%BE%E7%89%B9",
+      "https://en.touhouwiki.net/wiki/Flandre_Scarlet",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "letty",
+    "name": "蕾蒂·霍瓦特洛克",
+    "category": "main",
+    "work": "th07",
+    "debut": "th07",
+    "works": [
+      "th07",
+      "th09.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th07.html",
+      "https://thbwiki.cc/%E8%95%BE%E8%92%82%C2%B7%E9%9C%8D%E7%93%A6%E7%89%B9%E6%B4%9B%E5%85%8B",
+      "https://en.touhouwiki.net/wiki/Letty_Whiterock",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "chen",
+    "name": "橙",
+    "category": "main",
+    "work": "th07",
+    "debut": "th07",
+    "works": [
+      "th07",
+      "th09.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th07.html",
+      "https://thbwiki.cc/%E6%A9%99",
+      "https://en.touhouwiki.net/wiki/Chen",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "alice",
+    "name": "爱丽丝·玛格特洛依德",
+    "category": "main",
+    "work": "th07",
+    "debut": "th05",
+    "works": [
+      "th05",
+      "th07",
+      "th07.5",
+      "th08",
+      "th10.5",
+      "th11",
+      "th12.3",
+      "th09.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th07.html",
+      "https://thbwiki.cc/%E7%88%B1%E4%B8%BD%E4%B8%9D%C2%B7%E7%8E%9B%E6%A0%BC%E7%89%B9%E6%B4%9B%E4%BE%9D%E5%BE%B7",
+      "https://en.touhouwiki.net/wiki/Alice_Margatroid",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖"
+    ],
+    "continuityNotes": "旧作与Windows同名人物合并；旧作经历与现行设定的连续性不全部保证，不能无依据把两时代所有事件写成同一人生。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "lily_white",
+    "name": "莉莉霍瓦特",
+    "category": "main",
+    "work": "th07",
+    "debut": "th07",
+    "works": [
+      "th07",
+      "th12.8"
+    ],
+    "sources": [
+      "https://thbwiki.cc/莉莉霍瓦特",
+      "https://www16.big.or.jp/~zun/html/th07.html",
+      "https://thbwiki.cc/%E8%8E%89%E8%8E%89%E7%99%BD",
+      "https://en.touhouwiki.net/wiki/Lily_White",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/妖精大战争"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "lunasa",
+    "name": "露娜萨·普莉兹姆利巴",
+    "category": "main",
+    "work": "th07",
+    "debut": "th07",
+    "works": [
+      "th07"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th07.html",
+      "https://thbwiki.cc/%E9%9C%B2%E5%A8%9C%E8%90%A8%C2%B7%E6%99%AE%E8%8E%89%E5%85%B9%E5%A7%86%E5%88%A9%E5%B7%B4",
+      "https://en.touhouwiki.net/wiki/Lunasa_Prismriver",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "merlin",
+    "name": "梅露兰·普莉兹姆利巴",
+    "category": "main",
+    "work": "th07",
+    "debut": "th07",
+    "works": [
+      "th07"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th07.html",
+      "https://thbwiki.cc/%E6%A2%85%E9%9C%B2%E5%85%B0%C2%B7%E6%99%AE%E8%8E%89%E5%85%B9%E5%A7%86%E5%88%A9%E5%B7%B4",
+      "https://en.touhouwiki.net/wiki/Merlin_Prismriver",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "lyrica",
+    "name": "莉莉卡·普莉兹姆利巴",
+    "category": "main",
+    "work": "th07",
+    "debut": "th07",
+    "works": [
+      "th07"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th07.html",
+      "https://thbwiki.cc/%E8%8E%89%E8%8E%89%E5%8D%A1%C2%B7%E6%99%AE%E8%8E%89%E5%85%B9%E5%A7%86%E5%88%A9%E5%B7%B4",
+      "https://en.touhouwiki.net/wiki/Lyrica_Prismriver",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "youmu",
+    "name": "魂魄妖梦",
+    "category": "main",
+    "work": "th07",
+    "debut": "th07",
+    "works": [
+      "th07",
+      "th07.5",
+      "th08",
+      "th09",
+      "th10.5",
+      "th12.3",
+      "th13",
+      "th17",
+      "th18",
+      "th09.5",
+      "th14.3",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th07.html",
+      "https://thbwiki.cc/%E9%AD%82%E9%AD%84%E5%A6%96%E6%A2%A6",
+      "https://en.touhouwiki.net/wiki/Youmu_Konpaku",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "yuyuko",
+    "name": "西行寺幽幽子",
+    "category": "main",
+    "work": "th07",
+    "debut": "th07",
+    "works": [
+      "th07",
+      "th07.5",
+      "th08",
+      "th10.5",
+      "th12.3",
+      "th13",
+      "th20",
+      "th09.5",
+      "th14.3",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th07.html",
+      "https://thbwiki.cc/%E8%A5%BF%E8%A1%8C%E5%AF%BA%E5%B9%BD%E5%B9%BD%E5%AD%90",
+      "https://en.touhouwiki.net/wiki/Yuyuko_Saigyouji",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "ran",
+    "name": "八云蓝",
+    "category": "main",
+    "work": "th07",
+    "debut": "th07",
+    "works": [
+      "th07",
+      "th08",
+      "th19",
+      "th09.5",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th07.html",
+      "https://thbwiki.cc/%E5%85%AB%E4%BA%91%E8%93%9D",
+      "https://en.touhouwiki.net/wiki/Ran_Yakumo",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "yukari",
+    "name": "八云紫",
+    "category": "main",
+    "work": "th07",
+    "debut": "th07",
+    "works": [
+      "th07",
+      "th07.5",
+      "th08",
+      "th10.5",
+      "th11",
+      "th12.3",
+      "th15.5",
+      "ssib",
+      "th20",
+      "th09.5",
+      "th14.3",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th07.html",
+      "https://thbwiki.cc/%E5%85%AB%E4%BA%91%E7%B4%AB",
+      "https://en.touhouwiki.net/wiki/Yukari_Yakumo",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "suika",
+    "name": "伊吹萃香",
+    "category": "main",
+    "work": "th07.5",
+    "debut": "th07.5",
+    "works": [
+      "th07.5",
+      "th10.5",
+      "th11",
+      "th12.3",
+      "th13.5",
+      "th19",
+      "le",
+      "th09.5",
+      "th12.5",
+      "th14.3",
+      "th16.5",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www.tasofro.net/touhou/",
+      "https://thbwiki.cc/%E4%BC%8A%E5%90%B9%E8%90%83%E9%A6%99",
+      "https://en.touhouwiki.net/wiki/Suika_Ibuki",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/秘封噩梦日记",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "wriggle",
+    "name": "莉格露·奈特巴格",
+    "category": "main",
+    "work": "th08",
+    "debut": "th08",
+    "works": [
+      "th08",
+      "th09.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th08.html",
+      "https://thbwiki.cc/%E8%8E%89%E6%A0%BC%E9%9C%B2%C2%B7%E5%A5%88%E7%89%B9%E5%B7%B4%E6%A0%BC",
+      "https://en.touhouwiki.net/wiki/Wriggle_Nightbug",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "mystia",
+    "name": "米斯蒂娅·萝蕾拉",
+    "category": "main",
+    "work": "th08",
+    "debut": "th08",
+    "works": [
+      "th08"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th08.html",
+      "https://thbwiki.cc/%E7%B1%B3%E6%96%AF%E8%92%82%E5%A8%85%C2%B7%E8%90%9D%E8%95%BE%E6%8B%89",
+      "https://en.touhouwiki.net/wiki/Mystia_Lorelei",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "keine",
+    "name": "上白泽慧音",
+    "category": "main",
+    "work": "th08",
+    "debut": "th08",
+    "works": [
+      "th08",
+      "th09.5",
+      "th14.3"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th08.html",
+      "https://thbwiki.cc/%E4%B8%8A%E7%99%BD%E6%B3%BD%E6%85%A7%E9%9F%B3",
+      "https://en.touhouwiki.net/wiki/Keine_Kamishirasawa",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/弹幕天邪鬼"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "tewi",
+    "name": "因幡天为",
+    "category": "main",
+    "work": "th08",
+    "debut": "th08",
+    "works": [
+      "th08",
+      "th09",
+      "ssib",
+      "th09.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th08.html",
+      "https://thbwiki.cc/%E5%9B%A0%E5%B9%A1%E5%A4%A9%E4%B8%BA",
+      "https://en.touhouwiki.net/wiki/Tewi_Inaba",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "reisen",
+    "name": "铃仙·优昙华院·因幡",
+    "category": "main",
+    "work": "th08",
+    "debut": "th08",
+    "works": [
+      "th08",
+      "th09",
+      "th10.5",
+      "th12.3",
+      "th14.5",
+      "th15",
+      "th15.5",
+      "ssib",
+      "th09.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th08.html",
+      "https://thbwiki.cc/%E9%93%83%E4%BB%99%C2%B7%E4%BC%98%E6%98%99%E5%8D%8E%E9%99%A2%C2%B7%E5%9B%A0%E5%B9%A1",
+      "https://en.touhouwiki.net/wiki/Reisen_Udongein_Inaba",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "eirin",
+    "name": "八意永琳",
+    "category": "main",
+    "work": "th08",
+    "debut": "th08",
+    "works": [
+      "th08",
+      "ssib",
+      "th20",
+      "th09.5",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th08.html",
+      "https://thbwiki.cc/%E5%85%AB%E6%84%8F%E6%B0%B8%E7%90%B3",
+      "https://en.touhouwiki.net/wiki/Eirin_Yagokoro",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "kaguya",
+    "name": "蓬莱山辉夜",
+    "category": "main",
+    "work": "th08",
+    "debut": "th08",
+    "works": [
+      "th08",
+      "ssib",
+      "th09.5",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th08.html",
+      "https://thbwiki.cc/%E8%93%AC%E8%8E%B1%E5%B1%B1%E8%BE%89%E5%A4%9C",
+      "https://en.touhouwiki.net/wiki/Kaguya_Houraisan",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "mokou",
+    "name": "藤原妹红",
+    "category": "main",
+    "work": "th08",
+    "debut": "th08",
+    "works": [
+      "th08",
+      "th14.5",
+      "th15.5",
+      "cilr",
+      "th09.5",
+      "th14.3",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th08.html",
+      "https://thbwiki.cc/%E8%97%A4%E5%8E%9F%E5%A6%B9%E7%BA%A2",
+      "https://en.touhouwiki.net/wiki/Fujiwara_no_Mokou",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "aya",
+    "name": "射命丸文",
+    "category": "main",
+    "work": "th09",
+    "debut": "bair",
+    "works": [
+      "bair",
+      "th09",
+      "th10",
+      "th10.5",
+      "th11",
+      "th12.3",
+      "th16",
+      "afieu",
+      "th09.5",
+      "th12.5",
+      "th12.8",
+      "th14.3"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th09.html",
+      "https://thbwiki.cc/%E5%B0%84%E5%91%BD%E4%B8%B8%E6%96%87",
+      "https://en.touhouwiki.net/wiki/Aya_Shameimaru",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/妖精大战争",
+      "https://thbwiki.cc/弹幕天邪鬼"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "medicine",
+    "name": "梅蒂欣·梅兰可莉",
+    "category": "main",
+    "work": "th09",
+    "debut": "th09",
+    "works": [
+      "th09",
+      "th09.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th09.html",
+      "https://thbwiki.cc/%E6%A2%85%E8%92%82%E6%AC%A3%C2%B7%E6%A2%85%E5%85%B0%E5%8F%AF%E8%8E%89",
+      "https://en.touhouwiki.net/wiki/Medicine_Melancholy",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "yuuka",
+    "name": "风见幽香",
+    "category": "main",
+    "work": "th09",
+    "debut": "th04",
+    "works": [
+      "th04",
+      "th09",
+      "th05"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th09.html",
+      "https://thbwiki.cc/%E9%A3%8E%E8%A7%81%E5%B9%BD%E9%A6%99",
+      "https://en.touhouwiki.net/wiki/Yuuka_Kazami",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "旧作与Windows同名人物合并；旧作经历与现行设定的连续性不全部保证，不能无依据把两时代所有事件写成同一人生。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "komachi",
+    "name": "小野塚小町",
+    "category": "main",
+    "work": "th09",
+    "debut": "th09",
+    "works": [
+      "th09",
+      "th10.5",
+      "th12.3",
+      "wahh",
+      "th09.5",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th09.html",
+      "https://thbwiki.cc/%E5%B0%8F%E9%87%8E%E5%A1%9A%E5%B0%8F%E7%94%BA",
+      "https://en.touhouwiki.net/wiki/Komachi_Onozuka",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "eiki",
+    "name": "四季映姬·夜摩仙那度",
+    "category": "main",
+    "work": "th09",
+    "debut": "th09",
+    "works": [
+      "th09",
+      "th09.5",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th09.html",
+      "https://thbwiki.cc/%E5%9B%9B%E5%AD%A3%E6%98%A0%E5%A7%AC%C2%B7%E5%A4%9C%E6%91%A9%E4%BB%99%E9%82%A3%E5%BA%A6",
+      "https://en.touhouwiki.net/wiki/Eiki_Shiki%2C_Yamaxanadu",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "shizuha",
+    "name": "秋静叶",
+    "category": "main",
+    "work": "th10",
+    "debut": "th10",
+    "works": [
+      "th10",
+      "th12.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th10.html",
+      "https://thbwiki.cc/%E7%A7%8B%E9%9D%99%E5%8F%B6",
+      "https://en.touhouwiki.net/wiki/Shizuha_Aki",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "minoriko",
+    "name": "秋穰子",
+    "category": "main",
+    "work": "th10",
+    "debut": "th10",
+    "works": [
+      "th10",
+      "th12.5",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th10.html",
+      "https://thbwiki.cc/%E7%A7%8B%E7%A9%B0%E5%AD%90",
+      "https://en.touhouwiki.net/wiki/Minoriko_Aki",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "hina",
+    "name": "键山雏",
+    "category": "main",
+    "work": "th10",
+    "debut": "th10",
+    "works": [
+      "th10",
+      "th12.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th10.html",
+      "https://thbwiki.cc/%E9%94%AE%E5%B1%B1%E9%9B%8F",
+      "https://en.touhouwiki.net/wiki/Hina_Kagiyama",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "nitori",
+    "name": "河城荷取",
+    "category": "main",
+    "work": "th10",
+    "debut": "th10",
+    "works": [
+      "th10",
+      "th10.5",
+      "th11",
+      "th12.3",
+      "th13.5",
+      "th14.5",
+      "th15.5",
+      "th17.5",
+      "th12.5",
+      "th14.3",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th10.html",
+      "https://thbwiki.cc/%E6%B2%B3%E5%9F%8E%E8%8D%B7%E5%8F%96",
+      "https://en.touhouwiki.net/wiki/Nitori_Kawashiro",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "momiji",
+    "name": "犬走椛",
+    "category": "main",
+    "work": "th10",
+    "debut": "th10",
+    "works": [
+      "th10",
+      "th12.5",
+      "th14.3"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th10.html",
+      "https://thbwiki.cc/%E7%8A%AC%E8%B5%B0%E6%A4%9B",
+      "https://en.touhouwiki.net/wiki/Momiji_Inubashiri",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/弹幕天邪鬼"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "sanae",
+    "name": "东风谷早苗",
+    "category": "main",
+    "work": "th10",
+    "debut": "th10",
+    "works": [
+      "th10",
+      "th11",
+      "th12",
+      "th12.3",
+      "th13",
+      "th14.5",
+      "th18",
+      "th19",
+      "th20",
+      "th12.5",
+      "th14.3",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th10.html",
+      "https://thbwiki.cc/%E4%B8%9C%E9%A3%8E%E8%B0%B7%E6%97%A9%E8%8B%97",
+      "https://en.touhouwiki.net/wiki/Sanae_Kochiya",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "kanako",
+    "name": "八坂神奈子",
+    "category": "main",
+    "work": "th10",
+    "debut": "th10",
+    "works": [
+      "th10",
+      "th11",
+      "th12.3",
+      "th17.5",
+      "th20",
+      "th12.5",
+      "th14.3",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th10.html",
+      "https://thbwiki.cc/%E5%85%AB%E5%9D%82%E7%A5%9E%E5%A5%88%E5%AD%90",
+      "https://en.touhouwiki.net/wiki/Kanako_Yasaka",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "suwako",
+    "name": "洩矢诹访子",
+    "category": "main",
+    "work": "th10",
+    "debut": "th10",
+    "works": [
+      "th10",
+      "th12.3",
+      "th12.5",
+      "th14.3",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th10.html",
+      "https://thbwiki.cc/%E6%B4%A9%E7%9F%A2%E8%AF%B9%E8%AE%BF%E5%AD%90",
+      "https://en.touhouwiki.net/wiki/Suwako_Moriya",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "iku",
+    "name": "永江衣玖",
+    "category": "main",
+    "work": "th10.5",
+    "debut": "th10.5",
+    "works": [
+      "th10.5",
+      "th12.3",
+      "th12.5",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www.tasofro.net/touhou105/",
+      "https://thbwiki.cc/%E6%B0%B8%E6%B1%9F%E8%A1%A3%E7%8E%96",
+      "https://en.touhouwiki.net/wiki/Iku_Nagae",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "tenshi",
+    "name": "比那名居天子",
+    "category": "main",
+    "work": "th10.5",
+    "debut": "th10.5",
+    "works": [
+      "th10.5",
+      "th12.3",
+      "th15.5",
+      "th12.5",
+      "th14.3",
+      "th16.5",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www.tasofro.net/touhou105/",
+      "https://thbwiki.cc/%E6%AF%94%E9%82%A3%E5%90%8D%E5%B1%85%E5%A4%A9%E5%AD%90",
+      "https://en.touhouwiki.net/wiki/Tenshi_Hinanawi",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/秘封噩梦日记",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "kisume",
+    "name": "琪斯美",
+    "category": "main",
+    "work": "th11",
+    "debut": "th11",
+    "works": [
+      "th11",
+      "th12.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th11.html",
+      "https://thbwiki.cc/%E7%90%AA%E6%96%AF%E7%BE%8E",
+      "https://en.touhouwiki.net/wiki/Kisume",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "yamame",
+    "name": "黑谷山女",
+    "category": "main",
+    "work": "th11",
+    "debut": "th11",
+    "works": [
+      "th11",
+      "th12.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th11.html",
+      "https://thbwiki.cc/%E9%BB%91%E8%B0%B7%E5%B1%B1%E5%A5%B3",
+      "https://en.touhouwiki.net/wiki/Yamame_Kurodani",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "parsee",
+    "name": "水桥帕露西",
+    "category": "main",
+    "work": "th11",
+    "debut": "th11",
+    "works": [
+      "th11",
+      "th12.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th11.html",
+      "https://thbwiki.cc/%E6%B0%B4%E6%A1%A5%E5%B8%95%E9%9C%B2%E8%A5%BF",
+      "https://en.touhouwiki.net/wiki/Parsee_Mizuhashi",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "yuugi",
+    "name": "星熊勇仪",
+    "category": "main",
+    "work": "th11",
+    "debut": "th11",
+    "works": [
+      "th11",
+      "th17.5",
+      "th12.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th11.html",
+      "https://thbwiki.cc/%E6%98%9F%E7%86%8A%E5%8B%87%E4%BB%AA",
+      "https://en.touhouwiki.net/wiki/Yuugi_Hoshiguma",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "satori",
+    "name": "古明地觉",
+    "category": "main",
+    "work": "th11",
+    "debut": "th11",
+    "works": [
+      "th11",
+      "fss",
+      "th20",
+      "th12.5",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th11.html",
+      "https://thbwiki.cc/%E5%8F%A4%E6%98%8E%E5%9C%B0%E8%A7%89",
+      "https://en.touhouwiki.net/wiki/Satori_Komeiji",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "rin",
+    "name": "火焰猫燐",
+    "category": "main",
+    "work": "th11",
+    "debut": "th11",
+    "works": [
+      "th11",
+      "th19",
+      "th20",
+      "th12.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th11.html",
+      "https://thbwiki.cc/%E7%81%AB%E7%84%B0%E7%8C%AB%E7%87%90",
+      "https://en.touhouwiki.net/wiki/Rin_Kaenbyou",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "utsuho",
+    "name": "灵乌路空",
+    "category": "main",
+    "work": "th11",
+    "debut": "th11",
+    "works": [
+      "th11",
+      "th12.3",
+      "th17.5",
+      "th12.5",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th11.html",
+      "https://thbwiki.cc/%E7%81%B5%E4%B9%8C%E8%B7%AF%E7%A9%BA",
+      "https://en.touhouwiki.net/wiki/Utsuho_Reiuji",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "koishi",
+    "name": "古明地恋",
+    "category": "main",
+    "work": "th11",
+    "debut": "th11",
+    "works": [
+      "th11",
+      "th13.5",
+      "th14.5",
+      "th15.5",
+      "th20",
+      "th12.5",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th11.html",
+      "https://thbwiki.cc/%E5%8F%A4%E6%98%8E%E5%9C%B0%E6%81%8B",
+      "https://en.touhouwiki.net/wiki/Koishi_Komeiji",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "nazrin",
+    "name": "娜兹玲",
+    "category": "main",
+    "work": "th12",
+    "debut": "th12",
+    "works": [
+      "th12",
+      "th19",
+      "th12.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th12.html",
+      "https://thbwiki.cc/%E5%A8%9C%E5%85%B9%E7%8E%B2",
+      "https://en.touhouwiki.net/wiki/Nazrin",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "kogasa",
+    "name": "多多良小伞",
+    "category": "main",
+    "work": "th12",
+    "debut": "th12",
+    "works": [
+      "th12",
+      "th13",
+      "th12.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th12.html",
+      "https://thbwiki.cc/%E5%A4%9A%E5%A4%9A%E8%89%AF%E5%B0%8F%E4%BC%9E",
+      "https://en.touhouwiki.net/wiki/Kogasa_Tatara",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "ichirin",
+    "name": "云居一轮",
+    "category": "main",
+    "work": "th12",
+    "debut": "th12",
+    "works": [
+      "th12",
+      "th13.5",
+      "th14.5",
+      "th15.5",
+      "th12.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th12.html",
+      "https://thbwiki.cc/%E4%BA%91%E5%B1%85%E4%B8%80%E8%BD%AE",
+      "https://en.touhouwiki.net/wiki/Ichirin_Kumoi",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "unzan",
+    "name": "云山",
+    "category": "main",
+    "work": "th12",
+    "debut": "th12",
+    "works": [
+      "th12",
+      "th13.5",
+      "th14.5",
+      "th15.5",
+      "th12.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th12.html",
+      "https://thbwiki.cc/%E4%BA%91%E5%B1%B1",
+      "https://en.touhouwiki.net/wiki/Unzan",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "murasa",
+    "name": "村纱水蜜",
+    "category": "main",
+    "work": "th12",
+    "debut": "th12",
+    "works": [
+      "th12",
+      "th17.5",
+      "th12.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th12.html",
+      "https://thbwiki.cc/%E6%9D%91%E7%BA%B1%E6%B0%B4%E8%9C%9C",
+      "https://en.touhouwiki.net/wiki/Minamitsu_Murasa",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "shou",
+    "name": "寅丸星",
+    "category": "main",
+    "work": "th12",
+    "debut": "th12",
+    "works": [
+      "th12",
+      "th12.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th12.html",
+      "https://thbwiki.cc/%E5%AF%85%E4%B8%B8%E6%98%9F",
+      "https://en.touhouwiki.net/wiki/Shou_Toramaru",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "byakuren",
+    "name": "圣白莲",
+    "category": "main",
+    "work": "th12",
+    "debut": "th12",
+    "works": [
+      "th12",
+      "th13.5",
+      "th14.5",
+      "th15.5",
+      "th12.5",
+      "th14.3",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th12.html",
+      "https://thbwiki.cc/%E5%9C%A3%E7%99%BD%E8%8E%B2",
+      "https://en.touhouwiki.net/wiki/Byakuren_Hijiri",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "nue",
+    "name": "封兽鵺",
+    "category": "main",
+    "work": "th12",
+    "debut": "th12",
+    "works": [
+      "th12",
+      "th13",
+      "th12.5",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th12.html",
+      "https://thbwiki.cc/%E5%B0%81%E5%85%BD%E9%B5%BA",
+      "https://en.touhouwiki.net/wiki/Nue_Houjuu",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "hatate",
+    "name": "姬海棠果",
+    "category": "main",
+    "work": "th12.5",
+    "debut": "th12.5",
+    "works": [
+      "th12.5",
+      "th14.3"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th125.html",
+      "https://thbwiki.cc/%E5%A7%AC%E6%B5%B7%E6%A3%A0%E6%9E%9C",
+      "https://en.touhouwiki.net/wiki/Hatate_Himekaidou",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/东方文花帖DS",
+      "https://thbwiki.cc/弹幕天邪鬼"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "kyouko",
+    "name": "幽谷响子",
+    "category": "main",
+    "work": "th13",
+    "debut": "th13",
+    "works": [
+      "th13",
+      "th14.3"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th13.html",
+      "https://thbwiki.cc/%E5%B9%BD%E8%B0%B7%E5%93%8D%E5%AD%90",
+      "https://en.touhouwiki.net/wiki/Kyouko_Kasodani",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕天邪鬼"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "yoshika",
+    "name": "宫古芳香",
+    "category": "main",
+    "work": "th13",
+    "debut": "th13",
+    "works": [
+      "th13",
+      "th14.3"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th13.html",
+      "https://thbwiki.cc/%E5%AE%AB%E5%8F%A4%E8%8A%B3%E9%A6%99",
+      "https://en.touhouwiki.net/wiki/Yoshika_Miyako",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕天邪鬼"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "seiga",
+    "name": "霍青娥",
+    "category": "main",
+    "work": "th13",
+    "debut": "th13",
+    "works": [
+      "th13",
+      "th14.3"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th13.html",
+      "https://thbwiki.cc/%E9%9C%8D%E9%9D%92%E5%A8%A5",
+      "https://en.touhouwiki.net/wiki/Seiga_Kaku",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕天邪鬼"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "tojiko",
+    "name": "苏我屠自古",
+    "category": "main",
+    "work": "th13",
+    "debut": "th13",
+    "works": [
+      "th13"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th13.html",
+      "https://thbwiki.cc/%E8%8B%8F%E6%88%91%E5%B1%A0%E8%87%AA%E5%8F%A4",
+      "https://en.touhouwiki.net/wiki/Soga_no_Tojiko",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "futo",
+    "name": "物部布都",
+    "category": "main",
+    "work": "th13",
+    "debut": "th13",
+    "works": [
+      "th13",
+      "th13.5",
+      "th14.5",
+      "th15.5",
+      "th14.3"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th13.html",
+      "https://thbwiki.cc/%E7%89%A9%E9%83%A8%E5%B8%83%E9%83%BD",
+      "https://en.touhouwiki.net/wiki/Mononobe_no_Futo",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕天邪鬼"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "miko",
+    "name": "丰聪耳神子",
+    "category": "main",
+    "work": "th13",
+    "debut": "th13",
+    "works": [
+      "th13",
+      "th13.5",
+      "th14.5",
+      "th15.5",
+      "th14.3",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th13.html",
+      "https://thbwiki.cc/%E4%B8%B0%E8%81%AA%E8%80%B3%E7%A5%9E%E5%AD%90",
+      "https://en.touhouwiki.net/wiki/Toyosatomimi_no_Miko",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "mamizou",
+    "name": "二岩猯藏",
+    "category": "main",
+    "work": "th13",
+    "debut": "th13",
+    "works": [
+      "th13",
+      "th13.5",
+      "th14.5",
+      "th15.5",
+      "th19",
+      "fs",
+      "th14.3",
+      "th16.5",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th13.html",
+      "https://thbwiki.cc/%E4%BA%8C%E5%B2%A9%E7%8C%AF%E8%97%8F",
+      "https://en.touhouwiki.net/wiki/Mamizou_Futatsuiwa",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/秘封噩梦日记",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "kokoro",
+    "name": "秦心",
+    "category": "main",
+    "work": "th13.5",
+    "debut": "th13.5",
+    "works": [
+      "th13.5",
+      "th14.5",
+      "th15.5"
+    ],
+    "sources": [
+      "https://www.tasofro.net/touhou135/",
+      "https://thbwiki.cc/%E7%A7%A6%E5%BF%83",
+      "https://en.touhouwiki.net/wiki/Hata_no_Kokoro",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "wakasagihime",
+    "name": "若鹭姬",
+    "category": "main",
+    "work": "th14",
+    "debut": "th14",
+    "works": [
+      "th14",
+      "th14.3",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th14.html",
+      "https://thbwiki.cc/%E8%8B%A5%E9%B9%AD%E5%A7%AC",
+      "https://en.touhouwiki.net/wiki/Wakasagihime",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "sekibanki",
+    "name": "赤蛮奇",
+    "category": "main",
+    "work": "th14",
+    "debut": "th14",
+    "works": [
+      "th14",
+      "th14.3",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th14.html",
+      "https://thbwiki.cc/%E8%B5%A4%E8%9B%AE%E5%A5%87",
+      "https://en.touhouwiki.net/wiki/Sekibanki",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "kagerou",
+    "name": "今泉影狼",
+    "category": "main",
+    "work": "th14",
+    "debut": "th14",
+    "works": [
+      "th14",
+      "th14.3"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th14.html",
+      "https://thbwiki.cc/%E4%BB%8A%E6%B3%89%E5%BD%B1%E7%8B%BC",
+      "https://en.touhouwiki.net/wiki/Kagerou_Imaizumi",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕天邪鬼"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "benben",
+    "name": "九十九弁弁",
+    "category": "main",
+    "work": "th14",
+    "debut": "th14",
+    "works": [
+      "th14",
+      "th14.3"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th14.html",
+      "https://thbwiki.cc/%E4%B9%9D%E5%8D%81%E4%B9%9D%E5%BC%81%E5%BC%81",
+      "https://en.touhouwiki.net/wiki/Benben_Tsukumo",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕天邪鬼"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "yatsuhashi",
+    "name": "九十九八桥",
+    "category": "main",
+    "work": "th14",
+    "debut": "th14",
+    "works": [
+      "th14",
+      "th14.3"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th14.html",
+      "https://thbwiki.cc/%E4%B9%9D%E5%8D%81%E4%B9%9D%E5%85%AB%E6%A1%A5",
+      "https://en.touhouwiki.net/wiki/Yatsuhashi_Tsukumo",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕天邪鬼"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "seija",
+    "name": "鬼人正邪",
+    "category": "main",
+    "work": "th14",
+    "debut": "th14",
+    "works": [
+      "th14",
+      "th14.3"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th14.html",
+      "https://thbwiki.cc/%E9%AC%BC%E4%BA%BA%E6%AD%A3%E9%82%AA",
+      "https://en.touhouwiki.net/wiki/Seija_Kijin",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕天邪鬼"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "shinmyoumaru",
+    "name": "少名针妙丸",
+    "category": "main",
+    "work": "th14",
+    "debut": "th14",
+    "works": [
+      "th14",
+      "th14.5",
+      "th15.5",
+      "th14.3",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th14.html",
+      "https://thbwiki.cc/%E5%B0%91%E5%90%8D%E9%92%88%E5%A6%99%E4%B8%B8",
+      "https://en.touhouwiki.net/wiki/Shinmyoumaru_Sukuna",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "raiko",
+    "name": "堀川雷鼓",
+    "category": "main",
+    "work": "th14",
+    "debut": "th14",
+    "works": [
+      "th14",
+      "th14.3",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th14.html",
+      "https://thbwiki.cc/%E5%A0%80%E5%B7%9D%E9%9B%B7%E9%BC%93",
+      "https://en.touhouwiki.net/wiki/Raiko_Horikawa",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕天邪鬼",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "sumireko",
+    "name": "宇佐见堇子",
+    "category": "main",
+    "work": "th14.5",
+    "debut": "th14.5",
+    "works": [
+      "th14.5",
+      "th15.5",
+      "cola",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www.tasofro.net/touhou145/",
+      "https://thbwiki.cc/%E5%AE%87%E4%BD%90%E8%A7%81%E5%A0%87%E5%AD%90",
+      "https://en.touhouwiki.net/wiki/Sumireko_Usami",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "seiran",
+    "name": "清兰",
+    "category": "main",
+    "work": "th15",
+    "debut": "th15",
+    "works": [
+      "th15",
+      "th19",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th15.html",
+      "https://thbwiki.cc/%E6%B8%85%E5%85%B0",
+      "https://en.touhouwiki.net/wiki/Seiran",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "ringo",
+    "name": "铃瑚",
+    "category": "main",
+    "work": "th15",
+    "debut": "th15",
+    "works": [
+      "th15",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th15.html",
+      "https://thbwiki.cc/%E9%93%83%E7%91%9A",
+      "https://en.touhouwiki.net/wiki/Ringo",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "doremy",
+    "name": "哆来咪·苏伊特",
+    "category": "main",
+    "work": "th15",
+    "debut": "th15",
+    "works": [
+      "th15",
+      "th15.5",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th15.html",
+      "https://thbwiki.cc/%E5%93%86%E6%9D%A5%E5%92%AA%C2%B7%E8%8B%8F%E4%BC%8A%E7%89%B9",
+      "https://en.touhouwiki.net/wiki/Doremy_Sweet",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "sagume",
+    "name": "稀神探女",
+    "category": "main",
+    "work": "th15",
+    "debut": "th15",
+    "works": [
+      "th15",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th15.html",
+      "https://thbwiki.cc/%E7%A8%80%E7%A5%9E%E6%8E%A2%E5%A5%B3",
+      "https://en.touhouwiki.net/wiki/Sagume_Kishin",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "clownpiece",
+    "name": "克劳恩皮丝",
+    "category": "main",
+    "work": "th15",
+    "debut": "th15",
+    "works": [
+      "th15",
+      "vfs",
+      "th16.5",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th15.html",
+      "https://thbwiki.cc/%E5%85%8B%E5%8A%B3%E6%81%A9%E7%9A%AE%E4%B8%9D",
+      "https://en.touhouwiki.net/wiki/Clownpiece",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/秘封噩梦日记",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "junko",
+    "name": "纯狐",
+    "category": "main",
+    "work": "th15",
+    "debut": "th15",
+    "works": [
+      "th15",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th15.html",
+      "https://thbwiki.cc/%E7%BA%AF%E7%8B%90",
+      "https://en.touhouwiki.net/wiki/Junko",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "hecatia",
+    "name": "赫卡提亚·拉碧斯拉祖利",
+    "category": "main",
+    "work": "th15",
+    "debut": "th15",
+    "works": [
+      "th15",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th15.html",
+      "https://thbwiki.cc/%E8%B5%AB%E5%8D%A1%E6%8F%90%E4%BA%9A%C2%B7%E6%8B%89%E7%A2%A7%E6%96%AF%E6%8B%89%E7%A5%96%E5%88%A9",
+      "https://en.touhouwiki.net/wiki/Hecatia_Lapislazuli",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "joon",
+    "name": "依神女苑",
+    "category": "main",
+    "work": "th15.5",
+    "debut": "th15.5",
+    "works": [
+      "th15.5"
+    ],
+    "sources": [
+      "https://www.tasofro.net/touhou155/",
+      "https://thbwiki.cc/%E4%BE%9D%E7%A5%9E%E5%A5%B3%E8%8B%91",
+      "https://en.touhouwiki.net/wiki/Joon_Yorigami",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "shion",
+    "name": "依神紫苑",
+    "category": "main",
+    "work": "th15.5",
+    "debut": "th15.5",
+    "works": [
+      "th15.5"
+    ],
+    "sources": [
+      "https://www.tasofro.net/touhou155/",
+      "https://thbwiki.cc/%E4%BE%9D%E7%A5%9E%E7%B4%AB%E8%8B%91",
+      "https://en.touhouwiki.net/wiki/Shion_Yorigami",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "eternity",
+    "name": "爱塔妮缇拉尔瓦",
+    "category": "main",
+    "work": "th16",
+    "debut": "th16",
+    "works": [
+      "th16",
+      "th16.5",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th16.html",
+      "https://thbwiki.cc/%E7%88%B1%E5%A1%94%E5%A6%AE%E7%BC%87%E6%8B%89%E5%B0%94%E7%93%A6",
+      "https://en.touhouwiki.net/wiki/Eternity_Larva",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/秘封噩梦日记",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "nemuno",
+    "name": "坂田合欢",
+    "category": "main",
+    "work": "th16",
+    "debut": "th16",
+    "works": [
+      "th16",
+      "th16.5",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th16.html",
+      "https://thbwiki.cc/%E5%9D%82%E7%94%B0%E5%90%88%E6%AC%A2",
+      "https://en.touhouwiki.net/wiki/Nemuno_Sakata",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/秘封噩梦日记",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "aunn",
+    "name": "高丽野阿吽",
+    "category": "main",
+    "work": "th16",
+    "debut": "th16",
+    "works": [
+      "th16",
+      "th19",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th16.html",
+      "https://thbwiki.cc/%E9%AB%98%E4%B8%BD%E9%87%8E%E9%98%BF%E5%90%BD",
+      "https://en.touhouwiki.net/wiki/Aunn_Komano",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "narumi",
+    "name": "矢田寺成美",
+    "category": "main",
+    "work": "th16",
+    "debut": "th16",
+    "works": [
+      "th16",
+      "th16.5",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th16.html",
+      "https://thbwiki.cc/%E7%9F%A2%E7%94%B0%E5%AF%BA%E6%88%90%E7%BE%8E",
+      "https://en.touhouwiki.net/wiki/Narumi_Yatadera",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/秘封噩梦日记",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "mai_teireida",
+    "name": "丁礼田舞",
+    "category": "main",
+    "work": "th16",
+    "debut": "th16",
+    "works": [
+      "th16",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th16.html",
+      "https://thbwiki.cc/%E4%B8%81%E7%A4%BC%E7%94%B0%E8%88%9E",
+      "https://en.touhouwiki.net/wiki/Mai_Teireida",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "satono",
+    "name": "尔子田里乃",
+    "category": "main",
+    "work": "th16",
+    "debut": "th16",
+    "works": [
+      "th16",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th16.html",
+      "https://thbwiki.cc/%E5%B0%94%E5%AD%90%E7%94%B0%E9%87%8C%E4%B9%83",
+      "https://en.touhouwiki.net/wiki/Satono_Nishida",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "okina",
+    "name": "摩多罗隐岐奈",
+    "category": "main",
+    "work": "th16",
+    "debut": "th16",
+    "works": [
+      "th16",
+      "th17.5",
+      "vfs",
+      "th20",
+      "th16.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th16.html",
+      "https://thbwiki.cc/%E6%91%A9%E5%A4%9A%E7%BD%97%E9%9A%90%E5%B2%90%E5%A5%88",
+      "https://en.touhouwiki.net/wiki/Okina_Matara",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/秘封噩梦日记"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "eika",
+    "name": "戎璎花",
+    "category": "main",
+    "work": "th17",
+    "debut": "th17",
+    "works": [
+      "th17",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th17.html",
+      "https://thbwiki.cc/%E6%88%8E%E7%92%8E%E8%8A%B1",
+      "https://en.touhouwiki.net/wiki/Eika_Ebisu",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "urumi",
+    "name": "牛崎润美",
+    "category": "main",
+    "work": "th17",
+    "debut": "th17",
+    "works": [
+      "th17",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th17.html",
+      "https://thbwiki.cc/%E7%89%9B%E5%B4%8E%E6%B6%A6%E7%BE%8E",
+      "https://en.touhouwiki.net/wiki/Urumi_Ushizaki",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "kutaka",
+    "name": "庭渡久侘歌",
+    "category": "main",
+    "work": "th17",
+    "debut": "th17",
+    "works": [
+      "th17",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th17.html",
+      "https://thbwiki.cc/%E5%BA%AD%E6%B8%A1%E4%B9%85%E4%BE%98%E6%AD%8C",
+      "https://en.touhouwiki.net/wiki/Kutaka_Niwatari",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "yachie",
+    "name": "吉吊八千慧",
+    "category": "main",
+    "work": "th17",
+    "debut": "th17",
+    "works": [
+      "th17",
+      "th19"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th17.html",
+      "https://thbwiki.cc/%E5%90%89%E5%90%8A%E5%85%AB%E5%8D%83%E6%85%A7",
+      "https://en.touhouwiki.net/wiki/Yachie_Kicchou",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "mayumi",
+    "name": "杖刀偶磨弓",
+    "category": "main",
+    "work": "th17",
+    "debut": "th17",
+    "works": [
+      "th17"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th17.html",
+      "https://thbwiki.cc/%E6%9D%96%E5%88%80%E5%81%B6%E7%A3%A8%E5%BC%93",
+      "https://en.touhouwiki.net/wiki/Mayumi_Joutouguu",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "keiki",
+    "name": "埴安神袿姬",
+    "category": "main",
+    "work": "th17",
+    "debut": "th17",
+    "works": [
+      "th17",
+      "th20"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th17.html",
+      "https://thbwiki.cc/%E5%9F%B4%E5%AE%89%E7%A5%9E%E8%A2%BF%E5%A7%AC",
+      "https://en.touhouwiki.net/wiki/Keiki_Haniyasushin",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "saki",
+    "name": "骊驹早鬼",
+    "category": "main",
+    "work": "th17",
+    "debut": "th17",
+    "works": [
+      "th17",
+      "th19",
+      "th20",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th17.html",
+      "https://thbwiki.cc/%E9%AA%8A%E9%A9%B9%E6%97%A9%E9%AC%BC",
+      "https://en.touhouwiki.net/wiki/Saki_Kurokoma",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "yuma",
+    "name": "饕餮尤魔",
+    "category": "main",
+    "work": "th17.5",
+    "debut": "th17.5",
+    "works": [
+      "th17.5",
+      "th17",
+      "th19"
+    ],
+    "sources": [
+      "https://www.tasofro.net/touhou175/",
+      "https://thbwiki.cc/%E9%A5%95%E9%A4%AE%E5%B0%A4%E9%AD%94",
+      "https://en.touhouwiki.net/wiki/Yuuma_Toutetsu",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "mike",
+    "name": "豪德寺三花",
+    "category": "main",
+    "work": "th18",
+    "debut": "th18",
+    "works": [
+      "th18",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th18.html",
+      "https://thbwiki.cc/%E8%B1%AA%E5%BE%B7%E5%AF%BA%E4%B8%89%E8%8A%B1",
+      "https://en.touhouwiki.net/wiki/Mike_Goutokuji",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "takane",
+    "name": "山城高岭",
+    "category": "main",
+    "work": "th18",
+    "debut": "th18",
+    "works": [
+      "th18",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th18.html",
+      "https://thbwiki.cc/%E5%B1%B1%E5%9F%8E%E9%AB%98%E5%B2%AD",
+      "https://en.touhouwiki.net/wiki/Takane_Yamashiro",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "sannyo",
+    "name": "驹草山如",
+    "category": "main",
+    "work": "th18",
+    "debut": "th18",
+    "works": [
+      "th18",
+      "le"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th18.html",
+      "https://thbwiki.cc/%E9%A9%B9%E8%8D%89%E5%B1%B1%E5%A6%82",
+      "https://en.touhouwiki.net/wiki/Sannyo_Komakusa",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "misumaru",
+    "name": "玉造魅须丸",
+    "category": "main",
+    "work": "th18",
+    "debut": "th18",
+    "works": [
+      "th18",
+      "th20"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th18.html",
+      "https://thbwiki.cc/%E7%8E%89%E9%80%A0%E9%AD%85%E9%A1%BB%E4%B8%B8",
+      "https://en.touhouwiki.net/wiki/Misumaru_Tamatsukuri",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "tsukasa",
+    "name": "菅牧典",
+    "category": "main",
+    "work": "th18",
+    "debut": "th18",
+    "works": [
+      "th18",
+      "th19",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th18.html",
+      "https://thbwiki.cc/%E8%8F%85%E7%89%A7%E5%85%B8",
+      "https://en.touhouwiki.net/wiki/Tsukasa_Kudamaki",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "megumu",
+    "name": "饭纲丸龙",
+    "category": "main",
+    "work": "th18",
+    "debut": "th18",
+    "works": [
+      "th18",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th18.html",
+      "https://thbwiki.cc/%E9%A5%AD%E7%BA%B2%E4%B8%B8%E9%BE%99",
+      "https://en.touhouwiki.net/wiki/Megumu_Iizunamaru",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "chimata",
+    "name": "天弓千亦",
+    "category": "main",
+    "work": "th18",
+    "debut": "th18",
+    "works": [
+      "th18",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th18.html",
+      "https://thbwiki.cc/%E5%A4%A9%E5%BC%93%E5%8D%83%E4%BA%A6",
+      "https://en.touhouwiki.net/wiki/Chimata_Tenkyuu",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "momoyo",
+    "name": "姬虫百百世",
+    "category": "main",
+    "work": "th18",
+    "debut": "th18",
+    "works": [
+      "th18",
+      "th18.5"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th18.html",
+      "https://thbwiki.cc/%E5%A7%AC%E8%99%AB%E7%99%BE%E7%99%BE%E4%B8%96",
+      "https://en.touhouwiki.net/wiki/Momoyo_Himemushi",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/弹幕狂们的黑市"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "biten",
+    "name": "孙美天",
+    "category": "main",
+    "work": "th19",
+    "debut": "th19",
+    "works": [
+      "th19"
+    ],
+    "sources": [
+      "https://touhou-project.news/news/9171/",
+      "https://thbwiki.cc/%E5%AD%99%E7%BE%8E%E5%A4%A9",
+      "https://en.touhouwiki.net/wiki/Son_Biten",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "enoko",
+    "name": "三头慧之子",
+    "category": "main",
+    "work": "th19",
+    "debut": "th19",
+    "works": [
+      "th19",
+      "th20"
+    ],
+    "sources": [
+      "https://touhou-project.news/news/9171/",
+      "https://thbwiki.cc/%E4%B8%89%E5%A4%B4%E6%85%A7%E4%B9%8B%E5%AD%90",
+      "https://en.touhouwiki.net/wiki/Enoko_Mitsugashira",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "chiyari",
+    "name": "天火人血枪",
+    "category": "main",
+    "work": "th19",
+    "debut": "th19",
+    "works": [
+      "th19"
+    ],
+    "sources": [
+      "https://touhou-project.news/news/9171/",
+      "https://thbwiki.cc/%E5%A4%A9%E7%81%AB%E4%BA%BA%E8%A1%80%E6%9E%AA",
+      "https://en.touhouwiki.net/wiki/Chiyari_Tenkajin",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "hisami",
+    "name": "豫母都日狭美",
+    "category": "main",
+    "work": "th19",
+    "debut": "th19",
+    "works": [
+      "th19"
+    ],
+    "sources": [
+      "https://touhou-project.news/news/9171/",
+      "https://thbwiki.cc/%E8%B1%AB%E6%AF%8D%E9%83%BD%E6%97%A5%E7%8B%AD%E7%BE%8E",
+      "https://en.touhouwiki.net/wiki/Hisami_Yomotsu",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "zanmu",
+    "name": "日白残无",
+    "category": "main",
+    "work": "th19",
+    "debut": "th19",
+    "works": [
+      "th19",
+      "th20"
+    ],
+    "sources": [
+      "https://touhou-project.news/news/9171/",
+      "https://thbwiki.cc/%E6%97%A5%E7%99%BD%E6%AE%8B%E6%97%A0",
+      "https://en.touhouwiki.net/wiki/Zanmu_Nippaku",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "ubame",
+    "name": "尘塚姥芽",
+    "category": "main",
+    "work": "th20",
+    "debut": "th20",
+    "works": [
+      "th20"
+    ],
+    "sources": [
+      "https://touhou-project.news/news/13976/",
+      "https://thbwiki.cc/%E5%B0%98%E5%A1%9A%E5%A7%A5%E8%8A%BD",
+      "https://en.touhouwiki.net/wiki/Ubame_Chirizuka",
+      "https://en.wikipedia.org/wiki/Fossilized_Wonders",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "chimi",
+    "name": "封兽魑魅",
+    "category": "main",
+    "work": "th20",
+    "debut": "th20",
+    "works": [
+      "th20"
+    ],
+    "sources": [
+      "https://touhou-project.news/news/13976/",
+      "https://thbwiki.cc/%E5%B0%81%E5%85%BD%E9%AD%91%E9%AD%85",
+      "https://en.touhouwiki.net/wiki/Chimi_Houjuu",
+      "https://en.wikipedia.org/wiki/Fossilized_Wonders",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "nareko",
+    "name": "道神驯子",
+    "category": "main",
+    "work": "th20",
+    "debut": "th20",
+    "works": [
+      "th20"
+    ],
+    "sources": [
+      "https://touhou-project.news/news/13976/",
+      "https://thbwiki.cc/%E9%81%93%E7%A5%9E%E9%A9%AF%E5%AD%90",
+      "https://en.touhouwiki.net/wiki/Nareko_Michigami",
+      "https://en.wikipedia.org/wiki/Fossilized_Wonders",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "yuiman",
+    "name": "维缦·浅间",
+    "category": "main",
+    "work": "th20",
+    "debut": "th20",
+    "works": [
+      "th20"
+    ],
+    "sources": [
+      "https://touhou-project.news/news/13976/",
+      "https://thbwiki.cc/%E7%BB%B4%E7%BC%A6%C2%B7%E6%B5%85%E9%97%B4",
+      "https://en.touhouwiki.net/wiki/Yuiman_Asama",
+      "https://en.wikipedia.org/wiki/Fossilized_Wonders",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "日文名ユイマン・浅間；中文采用维缦·浅间，与维缦·浅间/维缦浅间等标点写法去重。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "ariya",
+    "name": "磐永阿梨夜",
+    "category": "main",
+    "work": "th20",
+    "debut": "th20",
+    "works": [
+      "th20"
+    ],
+    "sources": [
+      "https://touhou-project.news/news/13976/",
+      "https://thbwiki.cc/%E7%A3%90%E6%B0%B8%E9%98%BF%E6%A2%A8%E5%A4%9C",
+      "https://en.touhouwiki.net/wiki/Ariya_Iwanaga",
+      "https://en.wikipedia.org/wiki/Fossilized_Wonders",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "nina",
+    "name": "渡里贝子",
+    "category": "main",
+    "work": "th20",
+    "debut": "th20",
+    "works": [
+      "th20"
+    ],
+    "sources": [
+      "https://touhou-project.news/news/13976/",
+      "https://thbwiki.cc/%E6%B8%A1%E9%87%8C%E8%B4%9D%E5%AD%90",
+      "https://en.touhouwiki.net/wiki/Nina_Watari",
+      "https://en.wikipedia.org/wiki/Fossilized_Wonders",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "日文名渡里ニナ；渡里贝子、渡里妮娜属于同一角色的中文译名，不重复计数。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "rinnosuke",
+    "name": "森近霖之助",
+    "category": "main",
+    "work": "cola",
+    "debut": "cola",
+    "works": [
+      "cola",
+      "th13.5",
+      "pmiss",
+      "wahh",
+      "fs"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E6%A3%AE%E8%BF%91%E9%9C%96%E4%B9%8B%E5%8A%A9",
+      "https://en.touhouwiki.net/wiki/Rinnosuke_Morichika",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "sunny",
+    "name": "桑尼米尔克",
+    "category": "main",
+    "work": "ealnd",
+    "debut": "ealnd",
+    "works": [
+      "ealnd",
+      "sbnd",
+      "osp",
+      "vfs",
+      "th12.8"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E6%A1%91%E5%B0%BC%E7%B1%B3%E5%B0%94%E5%85%8B",
+      "https://en.touhouwiki.net/wiki/Sunny_Milk",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/妖精大战争"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "luna",
+    "name": "露娜切露德",
+    "category": "main",
+    "work": "ealnd",
+    "debut": "ealnd",
+    "works": [
+      "ealnd",
+      "sbnd",
+      "osp",
+      "vfs",
+      "th12.8"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E9%9C%B2%E5%A8%9C%E5%88%87%E9%9C%B2%E5%BE%B7",
+      "https://en.touhouwiki.net/wiki/Luna_Child",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/妖精大战争"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "star",
+    "name": "斯塔萨菲雅",
+    "category": "main",
+    "work": "ealnd",
+    "debut": "ealnd",
+    "works": [
+      "ealnd",
+      "sbnd",
+      "osp",
+      "vfs",
+      "th12.8"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E6%96%AF%E5%A1%94%E8%90%A8%E8%8F%B2%E9%9B%85",
+      "https://en.touhouwiki.net/wiki/Star_Sapphire",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/妖精大战争"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "akyuu",
+    "name": "稗田阿求",
+    "category": "main",
+    "work": "pmiss",
+    "debut": "pmi",
+    "works": [
+      "pmi",
+      "pmiss",
+      "sopm",
+      "fs"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E7%A8%97%E7%94%B0%E9%98%BF%E6%B1%82",
+      "https://en.touhouwiki.net/wiki/Hieda_no_Akyuu",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "toyohime",
+    "name": "绵月丰姬",
+    "category": "main",
+    "work": "ssib",
+    "debut": "ssib",
+    "works": [
+      "ssib",
+      "cilr",
+      "iote",
+      "th20"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E7%BB%B5%E6%9C%88%E4%B8%B0%E5%A7%AC",
+      "https://en.touhouwiki.net/wiki/Watatsuki_no_Toyohime",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "儚月抄与TH20中的丰姬合并。TH20是重要新游戏出场，不是角色首次登场。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "yorihime",
+    "name": "绵月依姬",
+    "category": "main",
+    "work": "ssib",
+    "debut": "ssib",
+    "works": [
+      "ssib",
+      "cilr",
+      "iote"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E7%BB%B5%E6%9C%88%E4%BE%9D%E5%A7%AC",
+      "https://en.touhouwiki.net/wiki/Watatsuki_no_Yorihime",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "reisen2",
+    "name": "铃仙（二号）",
+    "category": "main",
+    "work": "ssib",
+    "debut": "ssib",
+    "works": [
+      "ssib",
+      "cilr",
+      "iote"
+    ],
+    "sources": [
+      "https://en.touhouwiki.net/wiki/Reisen",
+      "https://thbwiki.cc/Reisen",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "儚月抄的月兔レイセン，独立于铃仙·优昙华院·因幡；“二号”只是区分说明。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "kasen",
+    "name": "茨木华扇",
+    "category": "main",
+    "work": "wahh",
+    "debut": "wahh",
+    "works": [
+      "wahh",
+      "th14.5",
+      "th15.5",
+      "th17"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E8%8C%A8%E6%9C%A8%E5%8D%8E%E6%89%87",
+      "https://en.touhouwiki.net/wiki/Kasen_Ibaraki",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "茨华仙、茨木华扇、茨木童子及其右臂均归入华扇一条；断臂具独立行动但不增设另一人生角色。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "kosuzu",
+    "name": "本居小铃",
+    "category": "main",
+    "work": "fs",
+    "debut": "fs",
+    "works": [
+      "fs"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E6%9C%AC%E5%B1%85%E5%B0%8F%E9%93%83",
+      "https://en.touhouwiki.net/wiki/Kosuzu_Motoori",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "miyoi",
+    "name": "奥野田美宵",
+    "category": "main",
+    "work": "le",
+    "debut": "le",
+    "works": [
+      "le"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E5%A5%A5%E9%87%8E%E7%94%B0%E7%BE%8E%E5%AE%B5",
+      "https://en.touhouwiki.net/wiki/Miyoi_Okunoda",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "mizuchi",
+    "name": "宫出口瑞灵",
+    "category": "main",
+    "work": "fss",
+    "debut": "fss",
+    "works": [
+      "fss"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E5%AE%AB%E5%87%BA%E5%8F%A3%E7%91%9E%E7%81%B5",
+      "https://en.touhouwiki.net/wiki/Mizuchi_Miyadeguchi",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "跨作品身份按同一角色去重；作品表列重要出场，不是每次背景客串或提及的逐页索引。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "singyoku",
+    "name": "神玉",
+    "category": "pc98",
+    "work": "th01",
+    "debut": "th01",
+    "works": [
+      "th01"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E7%A5%9E%E7%8E%89",
+      "https://en.touhouwiki.net/wiki/SinGyoku",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "yuugenmagan",
+    "name": "幽幻魔眼",
+    "category": "pc98",
+    "work": "th01",
+    "debut": "th01",
+    "works": [
+      "th01"
+    ],
+    "sources": [
+      "https://thbwiki.cc/幽幻魔眼",
+      "https://thbwiki.cc/%E5%B9%BD%E7%8E%84%E9%AD%94%E7%9C%BC",
+      "https://en.touhouwiki.net/wiki/YuugenMagan",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "elis",
+    "name": "依莉斯",
+    "category": "pc98",
+    "work": "th01",
+    "debut": "th01",
+    "works": [
+      "th01"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E4%BE%9D%E8%8E%89%E6%96%AF",
+      "https://en.touhouwiki.net/wiki/Elis",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "sariel",
+    "name": "萨丽爱尔",
+    "category": "pc98",
+    "work": "th01",
+    "debut": "th01",
+    "works": [
+      "th01"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E8%90%A8%E4%B8%BD%E7%88%B1%E5%B0%94",
+      "https://en.touhouwiki.net/wiki/Sariel",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "mima",
+    "name": "魅魔",
+    "category": "pc98",
+    "work": "th01",
+    "debut": "th01",
+    "works": [
+      "th01",
+      "th02",
+      "th03",
+      "th05"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E9%AD%85%E9%AD%94",
+      "https://en.touhouwiki.net/wiki/Mima",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "kikuri",
+    "name": "菊理",
+    "category": "pc98",
+    "work": "th01",
+    "debut": "th01",
+    "works": [
+      "th01"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E8%8F%8A%E7%90%86",
+      "https://en.touhouwiki.net/wiki/Kikuri",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "konngara",
+    "name": "矜羯罗",
+    "category": "pc98",
+    "work": "th01",
+    "debut": "th01",
+    "works": [
+      "th01"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E7%9F%9C%E7%BE%AF%E7%BD%97",
+      "https://en.touhouwiki.net/wiki/Konngara",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "genjii",
+    "name": "玄爷",
+    "category": "pc98",
+    "work": "th02",
+    "debut": "th02",
+    "works": [
+      "th02",
+      "th03",
+      "th04",
+      "th05"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E7%8E%84%E7%88%B7",
+      "https://en.touhouwiki.net/wiki/Genjii",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "rika",
+    "name": "里香",
+    "category": "pc98",
+    "work": "th02",
+    "debut": "th02",
+    "works": [
+      "th02"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E9%87%8C%E9%A6%99",
+      "https://en.touhouwiki.net/wiki/Rika",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "meira",
+    "name": "明罗",
+    "category": "pc98",
+    "work": "th02",
+    "debut": "th02",
+    "works": [
+      "th02"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E6%98%8E%E7%BD%97",
+      "https://en.touhouwiki.net/wiki/Meira",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "ellen",
+    "name": "爱莲",
+    "category": "pc98",
+    "work": "th03",
+    "debut": "th03",
+    "works": [
+      "th03"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E7%88%B1%E8%8E%B2",
+      "https://en.touhouwiki.net/wiki/Ellen",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "kotohime",
+    "name": "小兔姬",
+    "category": "pc98",
+    "work": "th03",
+    "debut": "th03",
+    "works": [
+      "th03"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E5%B0%8F%E5%85%94%E5%A7%AC",
+      "https://en.touhouwiki.net/wiki/Kotohime",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "kana",
+    "name": "卡娜·安娜贝拉尔",
+    "category": "pc98",
+    "work": "th03",
+    "debut": "th03",
+    "works": [
+      "th03"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E5%8D%A1%E5%A8%9C%C2%B7%E5%AE%89%E5%A8%9C%E8%B4%9D%E6%8B%89%E5%B0%94",
+      "https://en.touhouwiki.net/wiki/Kana_Anaberal",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "rikako",
+    "name": "朝仓理香子",
+    "category": "pc98",
+    "work": "th03",
+    "debut": "th03",
+    "works": [
+      "th03"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E6%9C%9D%E4%BB%93%E7%90%86%E9%A6%99%E5%AD%90",
+      "https://en.touhouwiki.net/wiki/Rikako_Asakura",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "chiyuri",
+    "name": "北白河千百合",
+    "category": "pc98",
+    "work": "th03",
+    "debut": "th03",
+    "works": [
+      "th03"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E5%8C%97%E7%99%BD%E6%B2%B3%E5%8D%83%E7%99%BE%E5%90%88",
+      "https://en.touhouwiki.net/wiki/Chiyuri_Kitashirakawa",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "yumemi",
+    "name": "冈崎梦美",
+    "category": "pc98",
+    "work": "th03",
+    "debut": "th03",
+    "works": [
+      "th03"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E5%86%88%E5%B4%8E%E6%A2%A6%E7%BE%8E",
+      "https://en.touhouwiki.net/wiki/Yumemi_Okazaki",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "ruukoto",
+    "name": "留琴",
+    "category": "pc98",
+    "work": "th03",
+    "debut": "th03",
+    "works": [
+      "th03"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E7%95%99%E7%90%B4",
+      "https://en.touhouwiki.net/wiki/Ruukoto",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "mimi",
+    "name": "咪咪号",
+    "category": "pc98",
+    "work": "th03",
+    "debut": "th03",
+    "works": [
+      "th03"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E5%92%AA%E5%92%AA%E5%8F%B7",
+      "https://en.touhouwiki.net/wiki/Mimi-chan",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "梦时空结局出现的有名导弹，并非人类；不能按普通人类生活套写。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "socrates",
+    "name": "苏格拉底",
+    "category": "pc98",
+    "work": "th03",
+    "debut": "th03",
+    "works": [
+      "th03"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E8%8B%8F%E6%A0%BC%E6%8B%89%E5%BA%95",
+      "https://en.touhouwiki.net/wiki/Sokrates",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "爱莲的有名猫伴侣；官方角色为非人类，不与现实历史人物苏格拉底混同。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "orange",
+    "name": "奥莲姬",
+    "category": "pc98",
+    "work": "th04",
+    "debut": "th04",
+    "works": [
+      "th04"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E5%A5%A5%E8%8E%B2%E5%A7%AC",
+      "https://en.touhouwiki.net/wiki/Orange",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "kurumi",
+    "name": "胡桃",
+    "category": "pc98",
+    "work": "th04",
+    "debut": "th04",
+    "works": [
+      "th04"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E8%83%A1%E6%A1%83",
+      "https://en.touhouwiki.net/wiki/Kurumi",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "elly",
+    "name": "艾丽",
+    "category": "pc98",
+    "work": "th04",
+    "debut": "th04",
+    "works": [
+      "th04"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E8%89%BE%E4%B8%BD",
+      "https://en.touhouwiki.net/wiki/Elly",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "mugetsu",
+    "name": "梦月",
+    "category": "pc98",
+    "work": "th04",
+    "debut": "th04",
+    "works": [
+      "th04"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E6%A2%A6%E6%9C%88",
+      "https://en.touhouwiki.net/wiki/Mugetsu",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "gengetsu",
+    "name": "幻月",
+    "category": "pc98",
+    "work": "th04",
+    "debut": "th04",
+    "works": [
+      "th04"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E5%B9%BB%E6%9C%88",
+      "https://en.touhouwiki.net/wiki/Gengetsu",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "sara",
+    "name": "萨拉",
+    "category": "pc98",
+    "work": "th05",
+    "debut": "th05",
+    "works": [
+      "th05"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E8%90%A8%E6%8B%89",
+      "https://en.touhouwiki.net/wiki/Sara",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "louise",
+    "name": "露易兹",
+    "category": "pc98",
+    "work": "th05",
+    "debut": "th05",
+    "works": [
+      "th05"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E9%9C%B2%E6%98%93%E5%85%B9",
+      "https://en.touhouwiki.net/wiki/Louise",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "yuki",
+    "name": "雪",
+    "category": "pc98",
+    "work": "th05",
+    "debut": "th05",
+    "works": [
+      "th05"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E9%9B%AA",
+      "https://en.touhouwiki.net/wiki/Yuki",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "mai",
+    "name": "舞",
+    "category": "pc98",
+    "work": "th05",
+    "debut": "th05",
+    "works": [
+      "th05"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E8%88%9E",
+      "https://en.touhouwiki.net/wiki/Mai",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "yumeko",
+    "name": "梦子",
+    "category": "pc98",
+    "work": "th05",
+    "debut": "th05",
+    "works": [
+      "th05"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E6%A2%A6%E5%AD%90",
+      "https://en.touhouwiki.net/wiki/Yumeko",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "shinki",
+    "name": "神绮",
+    "category": "pc98",
+    "work": "th05",
+    "debut": "th05",
+    "works": [
+      "th05"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E7%A5%9E%E7%BB%AE",
+      "https://en.touhouwiki.net/wiki/Shinki",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "PC-98旧作人物；Windows时代是否保留全部旧设定未确证，路线应单独呈现旧作背景。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "renko",
+    "name": "宇佐见莲子",
+    "category": "hifuu",
+    "work": "gfc",
+    "debut": "gfc",
+    "works": [
+      "gfc",
+      "csd",
+      "r53",
+      "ma",
+      "uc",
+      "tga",
+      "ntj",
+      "dlfr",
+      "dboa",
+      "tss",
+      "taboo",
+      "aur"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/music.html",
+      "https://touhou-project.news/news/17653/",
+      "https://touhou-project.news/news/17834/",
+      "https://thbwiki.cc/%E5%AE%87%E4%BD%90%E8%A7%81%E8%8E%B2%E5%AD%90",
+      "https://en.touhouwiki.net/wiki/Renko_Usami",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/灵长新益京/附带故事",
+      "https://thbwiki.cc/虹色的北斗七星"
+    ],
+    "continuityNotes": "秘封CD的近未来外界人物；梅莉与八云紫、莲子与堇子不能直接认定同一人。uc与tss无附带故事，仅图像/专辑关联。2026 aur已从公告与Booklet转录核对。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "maribel",
+    "name": "玛艾露贝莉·赫恩",
+    "category": "hifuu",
+    "work": "gfc",
+    "debut": "gfc",
+    "works": [
+      "gfc",
+      "csd",
+      "r53",
+      "ma",
+      "uc",
+      "tga",
+      "ntj",
+      "dlfr",
+      "dboa",
+      "tss",
+      "taboo",
+      "aur"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/music.html",
+      "https://touhou-project.news/news/17653/",
+      "https://touhou-project.news/news/17834/",
+      "https://thbwiki.cc/%E7%8E%9B%E8%89%BE%E9%9C%B2%E8%B4%9D%E8%8E%89%C2%B7%E8%B5%AB%E6%81%A9",
+      "https://en.touhouwiki.net/wiki/Maribel_Hearn",
+      "https://thbwiki.cc/官方角色列表/纯文字列表",
+      "https://thbwiki.cc/灵长新益京/附带故事",
+      "https://thbwiki.cc/虹色的北斗七星"
+    ],
+    "continuityNotes": "秘封CD的近未来外界人物；梅莉与八云紫、莲子与堇子不能直接认定同一人。uc与tss无附带故事，仅图像/专辑关联。2026 aur已从公告与Booklet转录核对。",
+    "sourceStatus": "姓名与初登场按可读取的THBWiki官方角色索引核对；作品关联为重要出场集合，非逐页客串清单。Touhou Wiki是保留的辅助复核URL。",
+    "scope": "principal"
+  },
+  {
+    "id": "youki",
+    "name": "魂魄妖忌",
+    "category": "main",
+    "work": "th07",
+    "debut": "th07",
+    "works": [
+      "th07"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E9%AD%82%E9%AD%84%E5%A6%96%E5%BF%8C",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "白玉楼前任园艺师与妖梦之祖父、师父；原作设定与ZUN追加信息，现居地点不明，路线采用在任时期的想象片段。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "layla",
+    "name": "蕾拉·普莉兹姆利巴",
+    "category": "main",
+    "work": "th07",
+    "debut": "th07",
+    "works": [
+      "th07"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E8%95%BE%E6%8B%89%C2%B7%E6%99%AE%E8%8E%89%E5%85%B9%E5%A7%86%E5%88%A9%E5%B7%B4",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "人类四姐妹的四女，创造了骚灵三姐妹；不能把人类姐姐与如今的三位骚灵等同。已自然寿终，路线采用生前的二创回忆。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "change",
+    "name": "嫦娥",
+    "category": "main",
+    "work": "ssib",
+    "debut": "ssib",
+    "works": [
+      "ssib",
+      "th15"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E5%AB%A6%E5%A8%A5",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "明确在世的月都女神、月兔支配者；因蓬莱药被囚禁，外形资料稀少。没有作为TH15敌机登场，日常剧情是二创想象。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "maruchi",
+    "name": "玛○奇",
+    "category": "pc98",
+    "work": "th03",
+    "debut": "th03",
+    "works": [
+      "th03"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E7%8E%9B%E2%97%8B%E5%A5%87",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "灵梦线结局被梦美召出的家务机器人；名字原有伏字。不能补成其他作品的同名机器人，不能与留琴合并。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "laika",
+    "name": "莱卡",
+    "category": "main",
+    "work": "cola",
+    "debut": "cola",
+    "works": [
+      "cola",
+      "scow"
+    ],
+    "sources": [
+      "https://thbwiki.cc/碎片角色列表"
+    ],
+    "continuityNotes": "香霖堂外来韦编第8话的机器狗，被转生幼犬之灵依附；不同于现实航天犬。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "zenki",
+    "name": "前鬼",
+    "category": "main",
+    "work": "ssib",
+    "debut": "ssib",
+    "works": [
+      "ssib",
+      "cilr"
+    ],
+    "sources": [
+      "https://thbwiki.cc/碎片角色列表"
+    ],
+    "continuityNotes": "紫的乌鸦式神之一；原作有一只式神被丰姬杀死，但不能无证据指定是哪只，路线用任务之前的想象。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "goki",
+    "name": "后鬼",
+    "category": "main",
+    "work": "ssib",
+    "debut": "ssib",
+    "works": [
+      "ssib",
+      "cilr"
+    ],
+    "sources": [
+      "https://thbwiki.cc/碎片角色列表"
+    ],
+    "continuityNotes": "与前鬼分开的乌鸦式神；不等同其他鬼族角色。原作战后存亡的逐名对应未明。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "koutei",
+    "name": "黄帝",
+    "category": "main",
+    "work": "wahh",
+    "debut": "wahh",
+    "works": [
+      "wahh",
+      "th14.5",
+      "th15.5"
+    ],
+    "sources": [
+      "https://thbwiki.cc/碎片角色列表"
+    ],
+    "continuityNotes": "华扇的有名宠物龙；不是现实神话帝王黄帝。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "mukou",
+    "name": "务光",
+    "category": "main",
+    "work": "wahh",
+    "debut": "wahh",
+    "works": [
+      "wahh",
+      "th14.5",
+      "th15.5"
+    ],
+    "sources": [
+      "https://thbwiki.cc/碎片角色列表"
+    ],
+    "continuityNotes": "华扇捕获的有名雷兽，以玉米为食；雷声相关能力与毒性要和普通鸟类区分。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "kume",
+    "name": "久米",
+    "category": "main",
+    "work": "wahh",
+    "debut": "wahh",
+    "works": [
+      "wahh",
+      "th14.5",
+      "th15.5"
+    ],
+    "sources": [
+      "https://thbwiki.cc/碎片角色列表"
+    ],
+    "continuityNotes": "华扇的年长大鹫，曾负责飞行与购物，后由竿打接任；不能写成幼虎。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "kanda",
+    "name": "竿打",
+    "category": "main",
+    "work": "wahh",
+    "debut": "wahh",
+    "works": [
+      "wahh",
+      "th14.5",
+      "th15.5"
+    ],
+    "sources": [
+      "https://thbwiki.cc/碎片角色列表"
+    ],
+    "continuityNotes": "华扇的较年轻大鹫，接替久米，经验和毅力还需训练；不是虎。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "houso",
+    "name": "彭祖",
+    "category": "main",
+    "work": "wahh",
+    "debut": "wahh",
+    "works": [
+      "wahh",
+      "th14.5",
+      "th15.5"
+    ],
+    "sources": [
+      "https://thbwiki.cc/碎片角色列表"
+    ],
+    "continuityNotes": "华扇的有名宠物虎，守卫茨华仙邸，受命不能主动伤人；不是大鹫。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "manzairaku",
+    "name": "万岁乐",
+    "category": "main",
+    "work": "wahh",
+    "debut": "wahh",
+    "works": [
+      "wahh",
+      "th14.5",
+      "th15.5"
+    ],
+    "sources": [
+      "https://thbwiki.cc/碎片角色列表"
+    ],
+    "continuityNotes": "外界来的有名海豹，进入幻想乡后由河童照料，也被华扇召唤；不是华扇养大的普通虎。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "unshou",
+    "name": "运松翁",
+    "category": "main",
+    "work": "wahh",
+    "debut": "wahh",
+    "works": [
+      "wahh"
+    ],
+    "sources": [
+      "https://thbwiki.cc/碎片角色列表"
+    ],
+    "continuityNotes": "人类村落老渔夫；捡到河童手臂并交换药物的原作故事已经核对。是否等同史纪受访者仅推测，不合并。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "suiki",
+    "name": "水鬼",
+    "category": "main",
+    "work": "wahh",
+    "debut": "wahh",
+    "works": [
+      "wahh"
+    ],
+    "sources": [
+      "https://thbwiki.cc/碎片角色列表"
+    ],
+    "continuityNotes": "追捕青娥的地狱鬼神长之一，原作有以高压水墙包围青娥的行动；其他身份资料少。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "hakusen",
+    "name": "白仙",
+    "category": "main",
+    "work": "fs",
+    "debut": "fs",
+    "works": [
+      "fs"
+    ],
+    "sources": [
+      "https://thbwiki.cc/碎片角色列表"
+    ],
+    "continuityNotes": "能操纵老鼠的大陆鼠仙，以绘猫肖像作为不让鼠袭击的记号；不是无名寺子屋学生。",
+    "scope": "named-support",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "namazu",
+    "name": "大鲶鱼",
+    "category": "main",
+    "work": "th12.3",
+    "debut": "th12.3",
+    "works": [
+      "th12.3",
+      "th15.5"
+    ],
+    "sources": [
+      "https://thbwiki.cc/%E5%A4%A7%E9%B2%B6%E9%B1%BC",
+      "https://thbwiki.cc/官方角色列表/纯文字列表"
+    ],
+    "continuityNotes": "采用有符卡的美铃梦境Boss；TH10.5对话中地底大鲶鱼与梦中个体的同一性未获确认，不将两者生涯强行相连。",
+    "scope": "descriptive-boss",
+    "sourceStatus": "人物身份与重要出场已用可读取的专业维基原作资料/碎片索引核对；路线新增事件为二次创作。"
+  },
+  {
+    "id": "myouren",
+    "name": "命莲",
+    "category": "main",
+    "work": "th12",
+    "debut": "th12",
+    "works": [
+      "th12"
+    ],
+    "sources": [
+      "https://www16.big.or.jp/~zun/html/th12top.html",
+      "https://thbwiki.cc/碎片角色列表",
+      "https://thbwiki.cc/附带文档:东方星莲船/角色设定&ExStory"
+    ],
+    "continuityNotes": "圣白莲的弟弟，传说中的僧侣；在白莲之前逝世。原作背景有人物法术与传授记述，本项目采用生前的二创回忆篇章，不编造在现今命莲寺复活。",
+    "scope": "named-support",
+    "sourceStatus": "已核对专业碎片索引与TH12身份背景；独立生活事件为本项目二创。"
+  }
+]

@@ -1,0 +1,838 @@
+[
+  {
+    "id": "singyoku",
+    "title": "守门人的下值时分",
+    "source": "https://thbwiki.cc/神玉",
+    "start": "red-sleeve",
+    "nodes": {
+      "red-sleeve": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "threshold",
+            "when": {
+              "min": {
+                "insight": 6
+              }
+            },
+            "text": "旧梦里，你停在门槛外问候，神玉以红发女子的形态侧过脸，专心听你说完。",
+            "effects": {},
+            "next": "gate-hour",
+            "label": "门槛外的目光",
+            "trust": 1,
+            "set": [
+              "kept-threshold"
+            ]
+          },
+          {
+            "key": "wait",
+            "when": {},
+            "text": "旧梦里，神玉以红发女子的形态指了指门槛，你收回脚，她向你露出一点笑意。",
+            "effects": {},
+            "next": "gate-hour",
+            "label": "红袖初近",
+            "trust": 1,
+            "set": [
+              "waited-outside"
+            ]
+          }
+        ]
+      },
+      "gate-hour": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "remembered",
+            "when": {
+              "relationFlags": [
+                "kept-threshold"
+              ]
+            },
+            "text": "旧梦里，你按约停在门外，神玉下值便来找你，说今天想听一件属于你的事。",
+            "effects": {},
+            "next": "rain-eave",
+            "label": "下值来找你",
+            "trust": 1,
+            "set": [
+              "shared-hour"
+            ]
+          },
+          {
+            "key": "earlier",
+            "when": {},
+            "text": "旧梦里，神玉在门边认出你，主动约了收门的时辰，留出一会儿与你说话。",
+            "effects": {},
+            "next": "rain-eave",
+            "label": "门边的约定",
+            "trust": 1,
+            "set": [
+              "off-duty-invitation"
+            ]
+          }
+        ]
+      },
+      "rain-eave": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "dry-place",
+            "when": {},
+            "text": "梦里的细雨斜过门前，神玉拉好帘角，指着身旁的干处让你靠近。",
+            "effects": {},
+            "next": "quiet-bell",
+            "label": "帘下留一处",
+            "trust": 1,
+            "set": [
+              "sheltered-together"
+            ]
+          }
+        ]
+      },
+      "quiet-bell": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "hour",
+            "when": {
+              "relationFlags": [
+                "shared-hour"
+              ]
+            },
+            "text": "旧梦里，下值的钟声响过，神玉迟迟没有离开，轻声说起期待你来时的心情。",
+            "effects": {},
+            "next": "gate-promise",
+            "label": "钟声后的心意",
+            "trust": 1,
+            "set": [
+              "red-sleeve-affection"
+            ]
+          },
+          {
+            "key": "invitation",
+            "when": {},
+            "text": "旧梦里，神玉为赴你的约早早收好袖口，见面时承认自己已经等了好一会儿。",
+            "effects": {},
+            "next": "gate-promise",
+            "label": "等候你的红袖",
+            "trust": 1,
+            "set": [
+              "red-sleeve-affection"
+            ]
+          }
+        ]
+      },
+      "gate-promise": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "two-names",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "red-sleeve-affection"
+              ]
+            },
+            "text": "旧梦的下值钟响了，神玉仍以红发女子形态留在门边。你说想以恋人身份等她，她握住你的手，答应也这样等你。",
+            "effects": {},
+            "next": "lantern-walk",
+            "label": "门前相许",
+            "status": "lover"
+          },
+          {
+            "key": "visitor",
+            "when": {},
+            "text": "旧梦里，你们把心事说开，神玉继续以朋友相待，门前的问候仍有回应。",
+            "effects": {},
+            "next": null,
+            "label": "门边友人",
+            "status": "friend"
+          }
+        ]
+      },
+      "lantern-walk": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "walk",
+            "when": {},
+            "text": "旧梦里，神玉以约定的女子形态下值，与你牵手走过门旁的小径，沿途数着灯。",
+            "effects": {},
+            "next": null,
+            "label": "守门人的散步"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "sleeve-kiss",
+        "states": [
+          "lover"
+        ],
+        "text": "旧梦中，女子形态的神玉伸手邀你跑到灯前。你回握，停稳后她挨近与你相望，含笑吻来；你拥住她回吻，她挽着你的胳膊，慢慢看完那盏灯。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 4,
+        "settledText": "旧梦里，你替女子形态的神玉挑掉袖上的草籽，她翻过袖口，笑着请你再看看。"
+      },
+      {
+        "key": "threshold-marks",
+        "states": [
+          "lover"
+        ],
+        "text": "旧梦门外，神玉以女子形态邀你踩着灯影前行；影子重合时，她先握紧你的手。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 4,
+        "settledText": "旧梦里，你与女子形态的神玉分头扫清门前落叶，最后把两堆并在一起，挽手歇息。"
+      },
+      {
+        "key": "off-duty",
+        "states": [
+          "lover"
+        ],
+        "text": "旧梦下值后，女子形态的神玉请你闭眼听脚步，绕到另一边唤你，再笑着接住你伸来的手。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 4,
+        "settledText": "旧梦里，女子形态的神玉靠着门柱与你猜云的形状，你们各认出一张脸，争着指给对方看。"
+      }
+    ],
+    "farewell": "旧梦门前的灯慢慢远去，你记着神玉下值后向你伸来的那只手。",
+    "interrupted": "旧梦里，你说已有相伴的人，女子形态的神玉收回未说完的心意，照旧在门前与你问候。"
+  },
+  {
+    "id": "yuugenmagan",
+    "title": "五道目光的暗号",
+    "source": "https://thbwiki.cc/幽幻魔眼",
+    "start": "soft-beam",
+    "nodes": {
+      "soft-beam": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "angles",
+            "when": {
+              "min": {
+                "insight": 6
+              }
+            },
+            "text": "旧梦里，你按光影的角度避开照射，幽幻魔眼收弱一道光，像在仔细端详你的脸。",
+            "effects": {},
+            "next": "blink-code",
+            "label": "目光放轻",
+            "trust": 1,
+            "set": [
+              "read-angle"
+            ]
+          },
+          {
+            "key": "shade",
+            "when": {},
+            "text": "你退到梦中门柱的影里，五道目光慢慢移开，给你留下一小片柔和的光。",
+            "effects": {},
+            "next": "blink-code",
+            "label": "柱影旁的光",
+            "trust": 1,
+            "set": [
+              "kept-shade"
+            ]
+          }
+        ]
+      },
+      "blink-code": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "answer",
+            "when": {
+              "relationFlags": [
+                "read-angle"
+              ]
+            },
+            "text": "旧梦里，你试着用灯影回应，幽幻魔眼主动闪出相同节拍，等你把下一句说完。",
+            "effects": {},
+            "next": "night-margin",
+            "label": "灯影里的答话",
+            "trust": 1,
+            "set": [
+              "answered-light"
+            ]
+          },
+          {
+            "key": "spell",
+            "when": {},
+            "text": "旧梦里，幽幻魔眼把短短光字投在石柱上，主动告诉你，这回是在等你回来。",
+            "effects": {},
+            "next": "night-margin",
+            "label": "等你的光字",
+            "trust": 1,
+            "set": [
+              "read-light-words"
+            ]
+          }
+        ]
+      },
+      "night-margin": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "rest",
+            "when": {},
+            "text": "你在梦中看得眼酸，幽幻魔眼把光移向远处，缓缓写下让你歇息的话。",
+            "effects": {},
+            "next": "named-gaze",
+            "label": "留给你的暗处",
+            "trust": 1,
+            "set": [
+              "quiet-light"
+            ]
+          }
+        ]
+      },
+      "named-gaze": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "rhythm",
+            "when": {
+              "relationFlags": [
+                "answered-light"
+              ]
+            },
+            "text": "旧梦里，熟悉的灯影节拍在门边亮起，幽幻魔眼写下喜欢你的字，等着你的回应。",
+            "effects": {},
+            "next": "light-vow",
+            "label": "节拍传来喜欢",
+            "trust": 1,
+            "set": [
+              "light-affection"
+            ]
+          },
+          {
+            "key": "words",
+            "when": {},
+            "text": "旧梦里，幽幻魔眼将等候你的那行字写得很慢，最后添上喜欢，光停在你眼前。",
+            "effects": {},
+            "next": "light-vow",
+            "label": "光字里的心意",
+            "trust": 1,
+            "set": [
+              "light-affection"
+            ]
+          }
+        ]
+      },
+      "light-vow": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "answered",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "light-affection"
+              ]
+            },
+            "text": "旧梦门柱上，幽幻魔眼把喜欢的光字留着等你。你敲出愿意相恋的节拍，五道光逐拍回同一句，把彼此的心意说定。",
+            "effects": {},
+            "next": "shared-shadow",
+            "label": "五道光相许",
+            "status": "lover"
+          },
+          {
+            "key": "unhurried",
+            "when": {},
+            "text": "你们约好继续以朋友来往，梦门旁的光字渐渐变成平常的问候。",
+            "effects": {},
+            "next": null,
+            "label": "梦门光友",
+            "status": "friend"
+          }
+        ]
+      },
+      "shared-shadow": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "constellation",
+            "when": {},
+            "text": "相恋后你在梦门前讲起一天的见闻，幽幻魔眼以五道柔光替故事排出星图。",
+            "effects": {},
+            "next": null,
+            "label": "为你排开的星图"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "light-kiss",
+        "states": [
+          "lover"
+        ],
+        "text": "旧梦里，幽幻魔眼将五道柔光转向你，等你说完小事。你笑着送一记飞吻，暖光停在额前，轻快闪了两下；你靠近那片柔光，再敲一拍回应。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 4,
+        "settledText": "旧梦里，你揉了揉看累的眼睛，幽幻魔眼便将光移向远处；你敲出谢意，它轻闪回应。"
+      },
+      {
+        "key": "quiet-map",
+        "states": [
+          "lover"
+        ],
+        "text": "旧梦门前，你追着幽幻魔眼排开的星点猜图案；猜中时，五道光齐亮，邀你再来一局。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 4,
+        "settledText": "旧梦里，你与幽幻魔眼轮流选一处石纹，用指尖和光点慢慢描完，像一起翻看旧地图。"
+      },
+      {
+        "key": "greeting-code",
+        "states": [
+          "lover"
+        ],
+        "text": "旧梦里，你试着敲出一句喜欢，幽幻魔眼把同样的心意闪了两遍，催你靠近看清。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 4,
+        "settledText": "旧梦门旁，你哼着随口的小调，幽幻魔眼跟着长短明灭，等你停下才亮出听懂的暗号。"
+      }
+    ],
+    "farewell": "梦门的五道光淡去以前，你仍记得彼此认得的问候节拍。",
+    "interrupted": "旧梦里，你在光下说明已有伴侣，幽幻魔眼将心意收成一句祝愿，与你保持梦中的友谊。"
+  },
+  {
+    "id": "suiki",
+    "title": "水墙以外的约会",
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "start": "dry-bank",
+    "nodes": {
+      "dry-bank": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "layers",
+            "when": {
+              "min": {
+                "insight": 7
+              }
+            },
+            "text": "你指出水墙最外层的回流，水鬼多问了一句你的名字，目光停了片刻。",
+            "effects": {},
+            "next": "bank-call",
+            "label": "水声里记住姓名",
+            "trust": 1,
+            "set": [
+              "observed-flow"
+            ]
+          },
+          {
+            "key": "steady",
+            "when": {},
+            "text": "你在干岸稳住被水声惊乱的步子，水鬼收回视线前，低声记下了你的名字。",
+            "effects": {},
+            "next": "bank-call",
+            "label": "干岸上的目光",
+            "trust": 1,
+            "set": [
+              "stood-on-bank"
+            ]
+          }
+        ]
+      },
+      "bank-call": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "drawn",
+            "when": {
+              "relationFlags": [
+                "observed-flow"
+              ]
+            },
+            "text": "水鬼带着回流的草图来找你，讲完试场的事，又问你最近过得怎样。",
+            "effects": {},
+            "next": "cold-cloak",
+            "label": "携图来问近况",
+            "trust": 1,
+            "set": [
+              "shared-flow-chart"
+            ]
+          },
+          {
+            "key": "outside",
+            "when": {},
+            "text": "水鬼走到干岸请你散步，特地约在停试的时辰，好听清你说的每句话。",
+            "effects": {},
+            "next": "cold-cloak",
+            "label": "停试时的邀请",
+            "trust": 1,
+            "set": [
+              "quiet-bank-meeting"
+            ]
+          }
+        ]
+      },
+      "cold-cloak": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "warm",
+            "when": {},
+            "text": "水雾浸凉了衣袖，水鬼领你走到有暖炉的休息处，守着你把袖口烘干。",
+            "effects": {},
+            "next": "water-line",
+            "label": "暖炉旁等你",
+            "trust": 1,
+            "set": [
+              "waited-at-hearth"
+            ]
+          }
+        ]
+      },
+      "water-line": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "line",
+            "when": {
+              "relationFlags": [
+                "shared-flow-chart"
+              ]
+            },
+            "text": "你摊开先前那张回流图，水鬼在空白处写下想见你，落笔时停顿了很久。",
+            "effects": {},
+            "next": "clear-answer",
+            "label": "图边写下心事",
+            "trust": 1,
+            "set": [
+              "water-affection"
+            ]
+          },
+          {
+            "key": "voice",
+            "when": {},
+            "text": "停试后的岸边十分安静，水鬼主动说起每次等你来时，心里升起的期待。",
+            "effects": {},
+            "next": "clear-answer",
+            "label": "水停后的心声",
+            "trust": 1,
+            "set": [
+              "water-affection"
+            ]
+          }
+        ]
+      },
+      "clear-answer": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "choice",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "water-affection"
+              ]
+            },
+            "text": "停试后的干岸静下来，水鬼问今后的邀约可否当作恋人的约会。你郑重答应，也说出自己的喜欢，两人牵手约好下一回。",
+            "effects": {},
+            "next": "ripple-hour",
+            "label": "干岸定情",
+            "status": "lover"
+          },
+          {
+            "key": "respect",
+            "when": {},
+            "text": "水鬼听完你的回答，与你约好只作朋友；下回会面照常选在干岸。",
+            "effects": {},
+            "next": null,
+            "label": "岸边朋友",
+            "status": "friend"
+          }
+        ]
+      },
+      "ripple-hour": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "ripples",
+            "when": {},
+            "text": "下值后的水鬼陪你沿岸走了一段，听你数水纹，自己也学着数起最细的那圈。",
+            "effects": {},
+            "next": null,
+            "label": "下值后的水纹"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "bank-kiss",
+        "states": [
+          "lover"
+        ],
+        "text": "停试的干岸上，水鬼伸手邀你看远处水色。你回握走近，转身时与水鬼相望，笑着轻吻对方额头；水鬼回吻后揽住你的肩，两人沿稳岸看水波。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 4,
+        "settledText": "你在干岸辨认水面浮来的叶子，水鬼蹲在身旁与你比对叶脉，听完还想再找一片。"
+      },
+      {
+        "key": "sleeve-warmth",
+        "states": [
+          "lover"
+        ],
+        "text": "水鬼发觉你手冷，邀你到暖炉边烘袖，伸出掌心给你比。你笑着贴上手掌，水鬼轻轻回握；两人挨着坐下，比谁的指尖先暖起来。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 4,
+        "settledText": "停试后，你与水鬼把湿外衣挂开，替彼此挪好挡风的位置，再慢慢说完今天的事。"
+      },
+      {
+        "key": "flow-story",
+        "states": [
+          "lover"
+        ],
+        "text": "水鬼约你在停试的干岸猜水声来自哪一层，特意等你作答，猜对便与你轻轻击掌。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 4,
+        "settledText": "你们坐在干岸，各拾几块平石比形状；水鬼把像小舟的一块转向你，请你给它取名。"
+      }
+    ],
+    "farewell": "你留下的岸边见闻收在试场的旧柜里，水鬼记得听你说话的那些停试时分。",
+    "interrupted": "你说起已有伴侣的日子，水鬼听完便收好心事，与你继续作岸边的朋友。"
+  },
+  {
+    "id": "namazu",
+    "title": "摇晃梦岸的安静时刻",
+    "source": "https://thbwiki.cc/游戏对话:东方非想天则/红美铃",
+    "start": "signboard",
+    "nodes": {
+      "signboard": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "wiring",
+            "when": {
+              "min": {
+                "insight": 6
+              }
+            },
+            "text": "美铃梦里，你看着全电气化的招牌问起细处，大鲶鱼停住夸耀，认真听了你的疑问。",
+            "effects": {},
+            "next": "small-stage",
+            "label": "夸耀声中留意你",
+            "trust": 1,
+            "set": [
+              "asked-about-sign"
+            ]
+          },
+          {
+            "key": "laugh",
+            "when": {},
+            "text": "美铃梦里，招牌在梦中歪到一旁，你忍不住笑出声，大鲶鱼凑过来问你究竟在笑什么。",
+            "effects": {},
+            "next": "small-stage",
+            "label": "梦岸上的笑声",
+            "trust": 1,
+            "set": [
+              "laughed-at-board"
+            ]
+          }
+        ]
+      },
+      "small-stage": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "explain",
+            "when": {
+              "relationFlags": [
+                "asked-about-sign"
+              ]
+            },
+            "text": "美铃梦里，大鲶鱼主动挪来一块平稳的石头，邀你坐下，接着回答上回招牌里的疑问。",
+            "effects": {},
+            "next": "steady-dream",
+            "label": "专为你留座",
+            "trust": 1,
+            "set": [
+              "heard-dream-plan"
+            ]
+          },
+          {
+            "key": "show",
+            "when": {},
+            "text": "美铃梦里，梦岸亮起一盏小灯，大鲶鱼兴冲冲地找你来看，说今天的观众只有你。",
+            "effects": {},
+            "next": "steady-dream",
+            "label": "邀你看一盏灯",
+            "trust": 1,
+            "set": [
+              "private-dream-show"
+            ]
+          }
+        ]
+      },
+      "steady-dream": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "calm",
+            "when": {},
+            "text": "美铃梦里，你被梦里的震动惊得站不稳，大鲶鱼停下动作，等你坐好才轻声开口。",
+            "effects": {},
+            "next": "quiet-admission",
+            "label": "为你停下震动",
+            "trust": 1,
+            "set": [
+              "calmed-dream-bank"
+            ]
+          }
+        ]
+      },
+      "quiet-admission": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "listener",
+            "when": {
+              "relationFlags": [
+                "heard-dream-plan"
+              ]
+            },
+            "text": "美铃梦里，大鲶鱼讲到一半忽然停住，承认自己盼着你来听，连准备开场的话都改了几遍。",
+            "effects": {},
+            "next": "dream-partner",
+            "label": "开场前的期待",
+            "trust": 1,
+            "set": [
+              "dream-affection"
+            ]
+          },
+          {
+            "key": "lamp",
+            "when": {},
+            "text": "美铃梦里，那盏小灯在梦岸亮着，大鲶鱼告诉你，想让你每次来都能看见它。",
+            "effects": {},
+            "next": "dream-partner",
+            "label": "为你亮着的灯",
+            "trust": 1,
+            "set": [
+              "dream-affection"
+            ]
+          }
+        ]
+      },
+      "dream-partner": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "together",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "dream-affection"
+              ]
+            },
+            "text": "美铃梦里，大鲶鱼停下热闹的开场，认真问你愿不愿与它相恋。你答应并说出喜欢，它也回应，邀你坐近些听完心里话。",
+            "effects": {},
+            "next": "unhurried-talk",
+            "label": "梦岸相恋",
+            "status": "lover"
+          },
+          {
+            "key": "audience",
+            "when": {},
+            "text": "美铃梦里，你们约好继续做梦里的朋友，大鲶鱼留着那处座位，等你来听新的见闻。",
+            "effects": {},
+            "next": null,
+            "label": "梦岸旧友",
+            "status": "friend"
+          }
+        ]
+      },
+      "unhurried-talk": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "listen",
+            "when": {},
+            "text": "美铃梦里，你们在安静的梦岸聊起白天小事，大鲶鱼听得专心，连招牌歪了也过会儿才留意，笑着说还想听后来怎样。",
+            "effects": {},
+            "next": null,
+            "label": "只听你说的时刻"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "dream-kiss",
+        "states": [
+          "lover"
+        ],
+        "text": "美铃梦里，大鲶鱼放轻动静凑近，等你讲完趣事。你笑着送飞吻，明亮梦光在额前闪了两下；它得意摆尾，把那片光排成笑脸，等你再鼓掌。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 4,
+        "settledText": "美铃梦里，大鲶鱼歇下夸张的开场，你在平稳岸边哼半支曲子，它轻声接上，陪你唱完。"
+      },
+      {
+        "key": "stable-seat",
+        "states": [
+          "lover"
+        ],
+        "text": "美铃梦里，大鲶鱼邀你沿稳住的岸线找最佳看灯处，每换一个角度，都先问你是否站得舒服。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 4,
+        "settledText": "美铃梦里，你替岸边座石拂掉沙，大鲶鱼让水光停在远些的地方，陪你看水纹一圈圈散开。"
+      },
+      {
+        "key": "little-story",
+        "states": [
+          "lover"
+        ],
+        "text": "美铃梦里，你给大鲶鱼出一个家常谜语，它夸张地猜了好几次；你笑着揭底，又等它来考你。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 4,
+        "settledText": "美铃梦里，你把今天的见闻分成几小段，大鲶鱼每听完一段便问一句，记住你在意的人和事。"
+      }
+    ],
+    "farewell": "美铃梦里的岸边渐渐远去，你仍记得大鲶鱼放轻动静、认真听你说话的模样。那段安静的相恋时光，留在醒后的回忆里。",
+    "interrupted": "美铃梦里，你告诉大鲶鱼已有相伴的人，它收起告白，往后仍在梦岸与你以朋友身份听故事。"
+  }
+]

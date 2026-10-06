@@ -1,0 +1,2521 @@
+[
+  {
+    "id": "nitori",
+    "title": "水轮旁的价钱",
+    "romance": false,
+    "source": "https://thbwiki.cc/河城荷取#东方求闻口授",
+    "entry": {
+      "minAge": 18,
+      "maxAge": 55,
+      "habitats": [
+        "village",
+        "outskirts",
+        "mountain"
+      ],
+      "min": {
+        "insight": 5
+      }
+    },
+    "talents": [
+      "handy",
+      "craft",
+      "merchant",
+      "careful"
+    ],
+    "careers": [
+      "craft",
+      "garden",
+      "trade"
+    ],
+    "intro": {
+      "text": "溪边的旧水轮卡住了。荷取从水里捞起一根断轴，让你拿着，自己钻回轮下找坏掉的齿。",
+      "effects": {
+        "insight": 1
+      },
+      "next": "bench",
+      "label": "溪边初识"
+    },
+    "nodes": {
+      "bench": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "craft",
+            "when": {
+              "careers": [
+                "craft"
+              ]
+            },
+            "text": "再到溪边时，你认出她换过的轴套，帮着削好配件。荷取把一张试机图摊到你面前，终于肯解释水轮怎样带动抽水筒。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "flume",
+            "label": "合做配件",
+            "trust": 2,
+            "set": [
+              "fitted"
+            ],
+            "xp": 2
+          },
+          {
+            "key": "handy",
+            "when": {
+              "talentsAny": [
+                "handy",
+                "craft"
+              ]
+            },
+            "text": "你带着趁手的工具再来，把卡住轮子的毛刺磨掉。荷取递过试机图，让你沿着线找出还没接上的一段。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "flume",
+            "label": "借手试造",
+            "trust": 2,
+            "set": [
+              "fitted"
+            ],
+            "xp": 1
+          },
+          {
+            "key": "rough",
+            "when": {},
+            "text": "你把尺寸抄反了，新轴总塞不进轮心。荷取拆下配件叫你看差在哪里，还说再试机时先别碰水闸。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "flume",
+            "label": "配件不合",
+            "trust": -1,
+            "set": [
+              "mismeasured"
+            ],
+            "xp": 1
+          }
+        ]
+      },
+      "flume": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "steady",
+            "when": {
+              "min": {
+                "insight": 8
+              },
+              "relationFlags": [
+                "fitted"
+              ]
+            },
+            "text": "又到试机的季节，你按图接稳抽水筒。荷取拨开乱流，水终于送到高处的田沟；她把你接稳的那段水筒指给围观的人看。",
+            "effects": {
+              "fortune": 1
+            },
+            "next": "bill",
+            "label": "水送到田",
+            "trust": 2,
+            "status": "friend",
+            "set": [
+              "working"
+            ],
+            "xp": 2
+          },
+          {
+            "key": "leak",
+            "when": {},
+            "text": "抽水筒转了几回便漏水，你忙着扶住松管，还是湿透了袖子。荷取停住乱流，拆开坏件，说下一轮材料还得重新买。",
+            "effects": {
+              "health": -1
+            },
+            "next": "bill",
+            "label": "试机漏水",
+            "trust": -1,
+            "set": [
+              "leaking"
+            ],
+            "xp": 1
+          }
+        ]
+      },
+      "bill": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "question",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "荷取开来的材料账里，多了一笔你没听过的调试费。你指着当初的价钱追问，她抱起胳膊，说研究失败也要吃饭。",
+            "effects": {},
+            "next": "bargain",
+            "label": "账外的价钱",
+            "trust": -1,
+            "set": [
+              "grudge"
+            ]
+          },
+          {
+            "key": "advance",
+            "when": {
+              "min": {
+                "fortune": 8
+              }
+            },
+            "text": "你先付了新一轮材料费，再问坏件到底算谁的。荷取把钱收好，却避开了坏件该算谁的问题；这次你不肯拿一句河童技术来搪塞。",
+            "effects": {
+              "fortune": -2
+            },
+            "next": "bargain",
+            "label": "付钱再问",
+            "set": [
+              "grudge"
+            ]
+          },
+          {
+            "key": "refuse",
+            "when": {},
+            "text": "你付不起不断添上的费用，把那根旧轴放回岸边。荷取说账还没谈完，你说自己也不是一座随时能掏钱的仓库。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "scrap",
+            "label": "拆伙争执",
+            "trust": -2,
+            "set": [
+              "grudge"
+            ]
+          }
+        ]
+      },
+      "bargain": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "merchant",
+            "when": {
+              "talentsAny": [
+                "merchant"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你把材料、试工和卖成品的收益分开算给她看。荷取起初嫌烦，算到最后却愿意让你分一份，条件是坏了还得一起修。",
+            "effects": {
+              "fortune": 1
+            },
+            "next": "sale",
+            "label": "谈成分账",
+            "trust": 2,
+            "status": "friend",
+            "set": [
+              "genuine_plan"
+            ],
+            "clear": [
+              "grudge"
+            ]
+          },
+          {
+            "key": "specific",
+            "when": {
+              "min": {
+                "insight": 11,
+                "bond": 7
+              }
+            },
+            "text": "你只让她解释那笔新费用，不把整台机器说成骗局。荷取终于拆开背包示范，承认价钱能重谈，也承认你出的力不能白算。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "sale",
+            "label": "把话谈透",
+            "trust": 2,
+            "status": "friend",
+            "set": [
+              "genuine_plan"
+            ],
+            "clear": [
+              "grudge"
+            ]
+          },
+          {
+            "key": "quarrel",
+            "when": {},
+            "text": "你气得连她每个新零件都怀疑起来。荷取把试机图卷回去，说你若觉得简单，大可在下次集市拿自己的成品来比。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "sale",
+            "label": "争成对手",
+            "trust": -2,
+            "status": "rival",
+            "set": [
+              "grudge"
+            ]
+          }
+        ]
+      },
+      "scrap": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "return",
+            "when": {
+              "min": {
+                "insight": 8,
+                "bond": 6
+              }
+            },
+            "text": "你把试机时借过的配件送回，也承认争执不该拖成连东西都不还。荷取没有免掉所有费用，却肯把原先争过的那一笔减去一半。",
+            "effects": {
+              "fortune": -1
+            },
+            "next": "sale",
+            "label": "归还旧件",
+            "trust": 2,
+            "status": "reconciled",
+            "set": [
+              "clean_hands"
+            ],
+            "clear": [
+              "grudge"
+            ]
+          },
+          {
+            "key": "copy",
+            "when": {},
+            "text": "你照着记住的试机图做了一套装置，准备绕过荷取自己卖。她在河岸看见时没有争辩，只把自己的图锁回了背包。",
+            "effects": {
+              "fortune": -1
+            },
+            "next": "sale",
+            "label": "私仿成品",
+            "trust": -2,
+            "status": "rival",
+            "set": [
+              "copied"
+            ]
+          }
+        ]
+      },
+      "sale": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "counterfeit",
+            "when": {
+              "relationFlags": [
+                "copied"
+              ]
+            },
+            "text": "你卖出的仿制筒漏了水，买主拿着湿零件去找荷取。她当面拆穿来源，让你自己收回货物，今后别再拿河童的名字招徕。",
+            "effects": {
+              "fortune": -2,
+              "bond": -1
+            },
+            "next": "flood",
+            "label": "仿货败露",
+            "trust": -3,
+            "status": "enemy",
+            "set": [
+              "fake_sale"
+            ]
+          },
+          {
+            "key": "together",
+            "when": {
+              "relationFlags": [
+                "genuine_plan"
+              ],
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "集市上有人嫌抽水筒古怪，你当场转给他看。荷取忙着收钱，也没忘递给你应得的那份；散摊时两人一起拆下沾泥的轮子。",
+            "effects": {
+              "fortune": 2
+            },
+            "next": "flood",
+            "label": "一同卖货",
+            "trust": 1,
+            "set": [
+              "co_sale"
+            ],
+            "xp": 1
+          },
+          {
+            "key": "odd_jobs",
+            "when": {},
+            "text": "这一趟集市，你在河童摊外帮买主分辨用途，遇到机器的难题仍叫荷取来答。她按忙碌的时辰给你报酬，收摊时让你搭手搬走空箱。",
+            "effects": {
+              "fortune": 1
+            },
+            "next": "flood",
+            "label": "摊外短工"
+          }
+        ]
+      },
+      "flood": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "amends",
+            "when": {
+              "relationFlags": [
+                "fake_sale"
+              ],
+              "min": {
+                "bond": 8,
+                "health": 5
+              }
+            },
+            "text": "水势上涨时，你先帮岸边人家搬走浮物，又把仿货的旧账拿来承担。荷取听完没说原谅，只让你扶住水筒，自己把积水引开。",
+            "effects": {
+              "health": -1,
+              "fortune": -1
+            },
+            "next": "reckoning",
+            "label": "补过旧账",
+            "trust": 2,
+            "status": "reconciled",
+            "set": [
+              "made_amends",
+              "shared_flood"
+            ],
+            "clear": [
+              "fake_sale",
+              "grudge"
+            ]
+          },
+          {
+            "key": "hold",
+            "when": {
+              "min": {
+                "health": 7
+              }
+            },
+            "text": "为了不让涨水冲进村田，你撑住摇晃的旧闸。荷取把急流拨向空沟，这一次两人都顾不上谈价钱，直到岸边安静才松手。",
+            "effects": {
+              "health": -1
+            },
+            "next": "reckoning",
+            "label": "同挡涨水",
+            "trust": 1,
+            "set": [
+              "shared_flood"
+            ],
+            "wear": 1
+          },
+          {
+            "key": "warning",
+            "when": {},
+            "text": "你无力久留急流旁，便去村口传出涨水的消息。再到岸边时，荷取正在收拾浸湿的工具，叫你替她把空箱搬上高处。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "reckoning",
+            "label": "先报水势",
+            "trust": 1
+          }
+        ]
+      },
+      "reckoning": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "unsettled",
+            "when": {
+              "relationFlags": [
+                "fake_sale"
+              ]
+            },
+            "text": "荷取另换了试机的地方，听见你的脚步便收起图纸。你仍能去河童市场买东西，谈起合做，她却只给你一句免谈。",
+            "effects": {
+              "bond": -1
+            },
+            "next": null,
+            "label": "旧账成敌",
+            "status": "enemy"
+          },
+          {
+            "key": "repaired",
+            "when": {
+              "relationFlags": [
+                "made_amends"
+              ]
+            },
+            "text": "你与荷取重谈旧账，约定往后只做能当面说清的买卖。她仍把要紧图纸锁好，留在岸边的座位却没有再收走。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "缓缓和解",
+            "status": "reconciled"
+          },
+          {
+            "key": "partner",
+            "when": {
+              "minTrust": 4,
+              "relationFlags": [
+                "shared_flood"
+              ],
+              "missingRelationFlags": [
+                "grudge"
+              ]
+            },
+            "text": "荷取开始把难做的零件带来找你，赚到钱也会抱怨材料又涨。你们仍会争价，遇到坏机器却知道该先叫谁来。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "长年搭档",
+            "status": "confidant"
+          },
+          {
+            "key": "distant",
+            "when": {},
+            "text": "荷取把合作图纸收回自己的箱子。你留下买卖的来往，不再把她每次开价当成亲近，也不再催她把研究说给你听。",
+            "effects": {},
+            "next": null,
+            "label": "只余买卖",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "new-wheel",
+        "states": [
+          "friend",
+          "confidant",
+          "reconciled"
+        ],
+        "when": {
+          "relationFlags": [
+            "shared_flood"
+          ]
+        },
+        "text": "荷取抱来一套新轮子，先拉你看旧闸的水位。这次报价还没谈，她已经把要你试的轴套摆在岸边。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "key": "market-cut",
+        "states": [
+          "friend",
+          "confidant"
+        ],
+        "when": {
+          "relationFlags": [
+            "co_sale"
+          ]
+        },
+        "text": "散摊时荷取数了两回铜钱，才把你那份推过来。你替她找出夹在油布里的零钱，她一边收好一边嘀咕又差点亏本。",
+        "effects": {
+          "fortune": 1
+        }
+      },
+      {
+        "key": "locked-box",
+        "states": [
+          "enemy",
+          "rival"
+        ],
+        "text": "你在集市认出熟悉的水轮，荷取却把图样压在箱底。买货可以，问起内部怎么做，她立刻转去招呼别的客人。",
+        "effects": {
+          "bond": -1
+        }
+      },
+      {
+        "key": "bank-seat",
+        "states": [
+          "estranged",
+          "reconciled"
+        ],
+        "text": "你重过溪岸，荷取只叫你让开搬货的路。等箱子搬完，她又把湿板凳挪到石边，没说你是不是还要坐。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "荷取仍记得你接过断轴时的手势。新水轮转起来后，她把与你争过的那笔价钱又念叨了一遍。",
+      "enemy": "你的名字还留在荷取的旧账里。她收起当年的试机图，不再拿那次合做给新的买主讲。",
+      "confidant": "荷取修理难做的零件时，仍记得该找你商量。旧账上的价钱有过争执，共事的日子也留在旁边。",
+      "reconciled": "荷取记得那次重谈旧账的约定，往后的买卖仍要当面说清；水轮旁也留着和解后的旧事。",
+      "estranged": "荷取把合作图纸收在箱中，你们后来只谈买卖。旧水轮的转声，留住了更早时候的来往。"
+    },
+    "contact": {
+      "domain": "village",
+      "place": "人里附近的溪边"
+    },
+    "preparedEntry": {
+      "minAge": 18,
+      "maxAge": 55,
+      "min": {
+        "insight": 5
+      },
+      "flags": [
+        "visit:nitori"
+      ]
+    }
+  },
+  {
+    "id": "aya",
+    "title": "照片外的人",
+    "romance": false,
+    "source": "https://thbwiki.cc/射命丸文#东方求闻史纪",
+    "entry": {
+      "minAge": 18,
+      "maxAge": 55,
+      "habitats": [
+        "village",
+        "outskirts",
+        "mountain"
+      ],
+      "min": {
+        "insight": 5
+      }
+    },
+    "talents": [
+      "notes",
+      "curious",
+      "wander",
+      "reader"
+    ],
+    "careers": [
+      "scholar",
+      "trade",
+      "travel"
+    ],
+    "intro": {
+      "text": "你在村口指出旧报道里的错地名。射命丸文停下相机，追问你为何知道那条溪，连离开的脚步也收住了。",
+      "effects": {
+        "insight": 1
+      },
+      "next": "witness",
+      "label": "改一个地名"
+    },
+    "nodes": {
+      "witness": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "seen",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "文来打听一座塌桥，你带她看仍留在河岸的朽木。她蹲下拍桥柱，问完又问你当时站在哪边，直到水声盖过最后一句话。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "image",
+            "label": "亲眼所见",
+            "trust": 2,
+            "set": [
+              "seen_bridge"
+            ],
+            "xp": 1
+          },
+          {
+            "key": "rumor",
+            "when": {},
+            "text": "你只听过塌桥的传言，却把几个人的话混着讲。文追问谁亲眼见过，你答不出来；她还是把相机扛去了河边。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "image",
+            "label": "说不清来源",
+            "trust": -1,
+            "set": [
+              "uncertain_bridge"
+            ]
+          }
+        ]
+      },
+      "image": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "shade",
+            "when": {
+              "species": [
+                "youkai",
+                "magician",
+                "vampire"
+              ]
+            },
+            "text": "修桥人怕你的形貌上报引来退治，你请文只拍桥上的手。她先嫌题材少了一半，最后还是换了位置，让镜头避开你的脸。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "headline",
+            "label": "镜头留白",
+            "trust": 1,
+            "set": [
+              "face_spared"
+            ]
+          },
+          {
+            "key": "care",
+            "when": {
+              "min": {
+                "bond": 8
+              }
+            },
+            "text": "文要把帮忙的人全拍进去，你指给她看一个躲到木柱后的工匠。她问过那人的意思才换镜头，你帮她扶住反光的布。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "headline",
+            "label": "顾到旁人",
+            "trust": 2,
+            "set": [
+              "face_spared"
+            ]
+          },
+          {
+            "key": "caught",
+            "when": {},
+            "text": "你只顾替文搬开挡镜头的木料，自己的脸也进了照片。她说画面正好，修桥的人却追来问你，为什么谁都没先问他们。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "headline",
+            "label": "照片惹怨",
+            "trust": -1,
+            "set": [
+              "faces_exposed"
+            ]
+          }
+        ]
+      },
+      "headline": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "notice",
+            "when": {
+              "min": {
+                "insight": 10
+              }
+            },
+            "text": "新报把塌桥写得像一场妖怪袭击，连你说朽木的话也只剩半句。你找文要回完整说法，她却先夸那张照片引来了许多读者。",
+            "effects": {},
+            "next": "retort",
+            "label": "半句话的代价",
+            "trust": -1,
+            "set": [
+              "misquoted"
+            ]
+          },
+          {
+            "key": "hurt",
+            "when": {},
+            "text": "邻里拿着新报来质问，你才发现迟疑的话被写成了证言。文说报道已经传开，你觉得自己只替她留下了最难堪的那部分。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "counterfeit",
+            "label": "成了报道的人",
+            "trust": -2,
+            "set": [
+              "misquoted"
+            ]
+          }
+        ]
+      },
+      "retort": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "wood",
+            "when": {
+              "relationFlags": [
+                "seen_bridge"
+              ],
+              "min": {
+                "insight": 10,
+                "bond": 8
+              }
+            },
+            "text": "你带文再摸一次断桥柱，说自己不怕署名，只怕工匠被错怪。她终于重拍朽木，把更正写进新报；你仍没有替她那次截话开脱。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "rain",
+            "label": "带她再看",
+            "trust": 2,
+            "status": "reconciled",
+            "set": [
+              "correction"
+            ],
+            "clear": [
+              "misquoted"
+            ]
+          },
+          {
+            "key": "quarrel",
+            "when": {},
+            "text": "你拿着报纸堵住文，越说越像只想让她当众认输。她收回相机，说你有怨可以直讲，别再拿没有亲见的部分压她。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "rain",
+            "label": "争出新裂痕",
+            "trust": -2,
+            "status": "rival",
+            "set": [
+              "press_grudge"
+            ]
+          }
+        ]
+      },
+      "counterfeit": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "stop",
+            "when": {
+              "min": {
+                "insight": 9,
+                "bond": 7
+              }
+            },
+            "text": "你想过编一条文毁桥的消息，话到嘴边还是停下。你只讲自己被截去的原话，她听完很久，答应重新找修桥人问一遍。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "rain",
+            "label": "停住报复",
+            "trust": 2,
+            "status": "reconciled",
+            "set": [
+              "correction"
+            ],
+            "clear": [
+              "misquoted"
+            ]
+          },
+          {
+            "key": "revenge",
+            "when": {},
+            "text": "你反编文故意弄坏桥的消息，想让她也尝到被议论的滋味。她找到你时只问证据，你说不出来，她便不再把你当取材同伴。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "rain",
+            "label": "捏造反击",
+            "trust": -3,
+            "status": "enemy",
+            "set": [
+              "false_rumor"
+            ]
+          }
+        ]
+      },
+      "rain": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "steady",
+            "when": {
+              "min": {
+                "health": 7
+              }
+            },
+            "text": "暴风把桥边摊布卷起来，你拉住险些砸人的木架。文一扇压低狂风，回头又把落水的报箱捞起；这次没有人停下来拍照。",
+            "effects": {
+              "health": -1
+            },
+            "next": "second_story",
+            "label": "风里共事",
+            "trust": 1,
+            "set": [
+              "storm_together"
+            ],
+            "wear": 1
+          },
+          {
+            "key": "shelter",
+            "when": {},
+            "text": "急风迎面时你站不稳，文收住风把你送到石檐下。你替她按住湿报，听她抱怨相机差点被水打坏，两人暂时都没提那篇旧报。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "second_story",
+            "label": "同在檐下",
+            "trust": 1,
+            "set": [
+              "storm_together"
+            ]
+          }
+        ]
+      },
+      "second_story": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "admit",
+            "when": {
+              "relationFlags": [
+                "false_rumor"
+              ],
+              "min": {
+                "insight": 11,
+                "bond": 8
+              }
+            },
+            "text": "又有人向文打听塌桥，你当着来人承认自己捏造过报复的话。她没有帮你抹平难堪，但愿意听你把亲见与怨气分开说完。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "offer",
+            "label": "收回假话",
+            "trust": 2,
+            "status": "reconciled",
+            "set": [
+              "correction"
+            ],
+            "clear": [
+              "false_rumor",
+              "press_grudge"
+            ]
+          },
+          {
+            "key": "shut_out",
+            "when": {
+              "relationFlags": [
+                "false_rumor"
+              ]
+            },
+            "text": "文宁可多跑几趟，也不再从你这里打听新消息。你在桥边听见她问其他人，才明白那次编出的假话仍挡在两人之间。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "offer",
+            "label": "不再取材",
+            "status": "enemy"
+          },
+          {
+            "key": "listen",
+            "when": {
+              "relationFlags": [
+                "correction"
+              ],
+              "minTrust": 2
+            },
+            "text": "文带来另一桩消息，你先让她听完当事人不愿见报的部分。她这次没有催你剪短，临走还问起你自己的生计。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "offer",
+            "label": "报道之外",
+            "trust": 2,
+            "status": "friend",
+            "set": [
+              "person_heard"
+            ]
+          },
+          {
+            "key": "brief",
+            "when": {},
+            "text": "文再来问河岸近况，你只答亲眼见过的几件事。她仍礼貌地道谢，提起那篇旧报道，两人却很快又把话收了回去。",
+            "effects": {},
+            "next": "offer",
+            "label": "留着距离",
+            "set": [
+              "brief_contact"
+            ]
+          }
+        ]
+      },
+      "offer": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "companion",
+            "when": {
+              "minTrust": 4,
+              "relationFlags": [
+                "person_heard",
+                "storm_together"
+              ]
+            },
+            "text": "文邀你同去山口找一个新题材，只带到天狗守望外的短路。她放慢飞行等你赶来，说有些事也想先听你怎样看。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "distance",
+            "label": "一起走短路",
+            "trust": 1,
+            "set": [
+              "walked_together"
+            ],
+            "xp": 1
+          },
+          {
+            "key": "no_source",
+            "when": {
+              "relationFlags": [
+                "false_rumor"
+              ]
+            },
+            "text": "文在摊边向别人问新消息，看见你也只是点头。你们没有再谈能上报的事，她卷好纸便飞走，把那次编出的假话仍留在两人之间。",
+            "effects": {},
+            "next": "distance",
+            "label": "不再向你取材",
+            "status": "enemy"
+          },
+          {
+            "key": "business",
+            "when": {},
+            "text": "文把新报放在你常路过的摊边，问近来有没有能写的事。你做完手里的零活，她便卷好报纸飞走，旧误会没有借这次闲话被说开。",
+            "effects": {},
+            "next": "distance",
+            "label": "只谈见闻"
+          }
+        ]
+      },
+      "distance": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "enemy",
+            "when": {
+              "relationFlags": [
+                "false_rumor"
+              ]
+            },
+            "text": "你的话传到文耳里，她总会另找人问一遍。相遇时她照样行礼，收相机的动作却很快；你们已经不肯把消息交给对方。",
+            "effects": {
+              "bond": -1
+            },
+            "next": null,
+            "label": "礼貌的敌意",
+            "status": "enemy"
+          },
+          {
+            "key": "close",
+            "when": {
+              "relationFlags": [
+                "walked_together"
+              ],
+              "minTrust": 4
+            },
+            "text": "文开始向你抱怨难采访的人，也会听你说一件上不了报的小烦恼。相机仍随身带着，坐下来时却不必总先对准谁。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "镜头外的朋友",
+            "status": "confidant"
+          },
+          {
+            "key": "repair",
+            "when": {
+              "relationFlags": [
+                "correction"
+              ],
+              "minTrust": 1
+            },
+            "text": "文仍会拿错地名来让你挑，也知道你不会替她掩饰夸大。你们未能忘掉旧报，却能在争论后把同一条河岸走完。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "争论着来往",
+            "status": "reconciled"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "文飞过村口，你偶尔抬头，却不再追着问新报。她记得你改过的地名，至于后来没说完的话，两人都留给了各自的路。",
+            "effects": {},
+            "next": null,
+            "label": "各自的路",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "unprinted",
+        "states": [
+          "friend",
+          "confidant"
+        ],
+        "when": {
+          "relationFlags": [
+            "person_heard"
+          ]
+        },
+        "text": "文来讲一件没登报的小事，讲到一半先笑了。你问为什么不写，她说偶尔留给一个人听，也不算浪费消息。",
+        "effects": {
+          "bond": 1
+        }
+      },
+      {
+        "key": "bridge-photo",
+        "states": [
+          "confidant",
+          "reconciled"
+        ],
+        "when": {
+          "relationFlags": [
+            "correction"
+          ]
+        },
+        "text": "文翻出新拍的桥柱给你看，笑说这回可没有妖怪袭击。你指出照片旁又少了一个字，她伸手拿走，嘴上还在辩。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "key": "other-witness",
+        "states": [
+          "enemy",
+          "rival"
+        ],
+        "text": "你刚开口讲河岸的变化，文已经转去问另一个目击者。她没有失礼，只把你的话放到了最后才考虑。",
+        "effects": {
+          "bond": -1
+        }
+      },
+      {
+        "key": "passing-wind",
+        "states": [
+          "estranged"
+        ],
+        "text": "一阵风送来新报，文的身影已越过屋顶。你读到一个熟悉的地名，折好纸，仍没沿着她飞走的方向追过去。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "文还记得你改过的那个地名。后来再拍河岸，她把一张没打算登报的照片留进自己的文花帖。",
+      "enemy": "文重过旧桥，仍会把那次争执算进消息的分量。她没有再向别人重复你们之间的私话。",
+      "confidant": "文翻过未曾登报的照片，记起那些坐下来便能谈起的小烦恼，还有你认真纠正过的地名。",
+      "reconciled": "旧报上的争论没有被抹去，文也记得后来与你走完的那段河岸。",
+      "estranged": "文记着你改过的地名，村口却少了追问新报的声音；那些没说完的话，停在了各自的路上。"
+    },
+    "contact": {
+      "domain": "village",
+      "place": "人里的采写路"
+    },
+    "preparedEntry": {
+      "minAge": 18,
+      "maxAge": 55,
+      "min": {
+        "insight": 5
+      },
+      "flags": [
+        "visit:aya"
+      ]
+    }
+  },
+  {
+    "id": "eirin",
+    "title": "药柜没有开的那层",
+    "romance": false,
+    "source": "https://thbwiki.cc/八意永琳#东方求闻史纪",
+    "entry": {
+      "minAge": 18,
+      "maxAge": 55,
+      "habitats": [
+        "village",
+        "outskirts",
+        "forest",
+        "mountain"
+      ],
+      "species": [
+        "human",
+        "hermit"
+      ],
+      "max": {
+        "health": 7
+      }
+    },
+    "talents": [
+      "herbal",
+      "patient",
+      "curious"
+    ],
+    "careers": [
+      "garden",
+      "scholar"
+    ],
+    "intro": {
+      "text": "一只妖怪兔把你领到永远亭。永琳问过你的不适，让你先坐稳，说诊费不急着结清，再把新配的药放到桌边。",
+      "effects": {
+        "health": 1
+      },
+      "next": "followup",
+      "label": "竹林求诊"
+    },
+    "nodes": {
+      "followup": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "explain",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "再去复诊时，你讲清哪些不适少了，哪些仍会回来。永琳问得很细，听出你也好奇药物，便让你看看庭边新长的药草。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "garden",
+            "label": "病情之外",
+            "trust": 1,
+            "set": [
+              "plain_account"
+            ]
+          },
+          {
+            "key": "unclear",
+            "when": {},
+            "text": "你把几次不适混着说，永琳只好重新问起作息。她没有嫌你讲得慢，临走叮嘱你下次别只顾说自己好多了。",
+            "effects": {
+              "health": 1
+            },
+            "next": "letter",
+            "label": "说不清近况",
+            "trust": -1
+          }
+        ]
+      },
+      "garden": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "herbs",
+            "when": {
+              "talentsAny": [
+                "herbal"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你认出药圃里形似却气味不同的草，没把它们混进同一只筐。永琳让你继续看叶背，又指出哪一种只能给妖怪用。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "change",
+            "label": "分辨药草",
+            "trust": 2,
+            "status": "mentor",
+            "set": [
+              "learning"
+            ],
+            "xp": 2
+          },
+          {
+            "key": "farmer",
+            "when": {
+              "careers": [
+                "garden"
+              ],
+              "relationFlags": [
+                "plain_account"
+              ],
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "你提起田里两种总分不清的草。永琳让你摸叶柄，先纠正辨草的偏差，再讲为什么同一种药也要看服用者；你听懂的比原先以为的少。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "change",
+            "label": "田野里的疑问",
+            "trust": 2,
+            "status": "mentor",
+            "set": [
+              "learning"
+            ],
+            "xp": 2
+          },
+          {
+            "key": "carry",
+            "when": {},
+            "text": "你只能帮忙搬空筐，听到药草的分别仍跟不上。永琳停住话，拿两片叶让你闻，直到你终于发现气味不是一回事。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "change",
+            "label": "从叶片学起",
+            "trust": 1,
+            "set": [
+              "garden_help"
+            ],
+            "xp": 1
+          }
+        ]
+      },
+      "letter": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "written",
+            "when": {
+              "talentsAny": [
+                "reader",
+                "notes"
+              ]
+            },
+            "text": "你把难当面讲清的近况写给永琳，也承认自己怕又犯病。回信先答了病情，末尾才说害怕不必装成一切无事。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "change",
+            "label": "写出担心",
+            "trust": 2,
+            "set": [
+              "plain_account"
+            ]
+          },
+          {
+            "key": "rabbit",
+            "when": {},
+            "text": "送药的兔子又来时，你请它捎去真实的近况。永琳让你再到永远亭说完，这回你没急着用一句没事结束。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "change",
+            "label": "再把话讲完",
+            "trust": 1,
+            "set": [
+              "plain_account"
+            ]
+          }
+        ]
+      },
+      "change": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "new_body",
+            "when": {
+              "species": [
+                "youkai",
+                "magician",
+                "vampire"
+              ]
+            },
+            "text": "你的身体已和初诊时不同，永琳没有沿用人类的旧方。她听过变化才重新配药，叫你把想凑着用的旧药包交出来。",
+            "effects": {
+              "health": 1,
+              "insight": 1
+            },
+            "next": "request",
+            "label": "换了身体的复诊",
+            "trust": 1,
+            "set": [
+              "body_reconsidered"
+            ]
+          },
+          {
+            "key": "notice",
+            "when": {
+              "min": {
+                "insight": 10
+              }
+            },
+            "text": "你发现不适总在忙过头后回来，向永琳讲了停工时的变化。她调整这次的新药，也问你是否肯把生活里的忙乱一并减下来。",
+            "effects": {
+              "health": 1
+            },
+            "next": "request",
+            "label": "药外的作息",
+            "trust": 1,
+            "set": [
+              "plain_account"
+            ]
+          },
+          {
+            "key": "same_packet",
+            "when": {},
+            "text": "你又想照从前的名字拿药，永琳却先问这几次发作是否一样。等你答完，她重配了这一回的份量，没拿旧方当省事的理由。",
+            "effects": {
+              "health": 1
+            },
+            "next": "request",
+            "label": "重新诊看",
+            "trust": 1
+          }
+        ]
+      },
+      "request": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "ask_limits",
+            "when": {
+              "relationFlags": [
+                "learning"
+              ],
+              "min": {
+                "insight": 11
+              }
+            },
+            "text": "你问药能治到哪里，也承认自己想活得长些。永琳没有讲封柜里的事，只问你愿不愿先学会照看活着的人；你答应从眼前的事做起。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "colleague",
+            "label": "先学眼前的事",
+            "trust": 2,
+            "set": [
+              "accepted_limits"
+            ]
+          },
+          {
+            "key": "money",
+            "when": {
+              "min": {
+                "fortune": 9
+              }
+            },
+            "text": "你带来攒下的钱，以为长生也能向她订购。永琳只取了当次药费，退回其余，随后收起药柜钥匙，没有答应这个请求。",
+            "effects": {
+              "fortune": -1
+            },
+            "next": "temptation",
+            "label": "买不到的请求",
+            "trust": -1
+          },
+          {
+            "key": "escape",
+            "when": {},
+            "text": "你求永琳给一种再也不必怕病痛与寿限的药。她听完却没有开那层柜子，你盯着柜门，头一次觉得她的沉默难以忍受。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "temptation",
+            "label": "怕有尽头",
+            "trust": -1
+          }
+        ]
+      },
+      "temptation": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "patient",
+            "when": {
+              "talentsAny": [
+                "patient"
+              ]
+            },
+            "text": "反复来诊后，你终于能把怕死说成怕死，没有再催她许诺。永琳放下手里的药杵，问起你还想怎样过往后的日子。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "colleague",
+            "label": "不再催问",
+            "trust": 2,
+            "set": [
+              "accepted_limits"
+            ]
+          },
+          {
+            "key": "understand",
+            "when": {
+              "min": {
+                "insight": 11,
+                "bond": 8
+              }
+            },
+            "text": "你承认自己曾把她当成逃离所有痛苦的捷径。永琳说病人可以盼得多，她却不会为讨好你，把不肯说的事当场说开。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "colleague",
+            "label": "承认求得太多",
+            "trust": 2,
+            "set": [
+              "accepted_limits"
+            ]
+          },
+          {
+            "key": "copy",
+            "when": {},
+            "text": "你偷抄过药柜抽屉里的片段，自行试药后不适更重。永琳仍替你诊治，只拒绝再让你进药房；你们的私下往来到此停住。",
+            "effects": {
+              "health": -2,
+              "bond": -1
+            },
+            "next": "repair",
+            "label": "越过药柜",
+            "trust": -3,
+            "status": "enemy",
+            "set": [
+              "trespassed"
+            ],
+            "injury": true,
+            "wear": 2
+          }
+        ]
+      },
+      "repair": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "return",
+            "when": {
+              "min": {
+                "bond": 8,
+                "insight": 9
+              }
+            },
+            "text": "你带来当初私抄的残页，当面讲清试过什么，承认那不是她开的药。永琳收回纸，让你坐在诊室外，这次多留你谈了一会儿。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "colleague",
+            "label": "交回残页",
+            "trust": 2,
+            "status": "reconciled",
+            "set": [
+              "accepted_limits",
+              "returned_note"
+            ],
+            "clear": [
+              "trespassed"
+            ]
+          },
+          {
+            "key": "blame",
+            "when": {},
+            "text": "你仍把自行试药的不适怪到永琳身上。她愿意继续看诊，却让兔子收回药房门边的凳子，不再与你谈那层柜子。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "colleague",
+            "label": "只留诊疗",
+            "trust": -1,
+            "status": "enemy"
+          }
+        ]
+      },
+      "colleague": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "closed",
+            "when": {
+              "relationFlags": [
+                "trespassed"
+              ]
+            },
+            "text": "你再到永远亭时，只在诊室等候。永琳照常问近况，私抄的事却没有被一次复诊冲淡；你仍不能跟她进药房。",
+            "effects": {
+              "health": 1
+            },
+            "next": "door",
+            "label": "诊室里的距离",
+            "status": "enemy"
+          },
+          {
+            "key": "learn",
+            "when": {
+              "relationFlags": [
+                "learning",
+                "accepted_limits"
+              ],
+              "minTrust": 4
+            },
+            "text": "永琳拿一味新收的药草让你讲用途。你讲到一半被她纠正，她却继续听下去；你终于明白这段受教不是一张通往长生的凭据。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "door",
+            "label": "继续受教",
+            "trust": 1,
+            "status": "mentor",
+            "set": [
+              "taught_again"
+            ],
+            "xp": 2
+          },
+          {
+            "key": "waiting",
+            "when": {},
+            "text": "候诊的人挤在门外，你帮着搬好座椅，让问诊的人先把话讲完。永琳路过时叫了你的名字，闲下来又问你这段日子过得怎样。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "door",
+            "label": "诊室外的小忙",
+            "trust": 1,
+            "set": [
+              "waiting_help"
+            ]
+          }
+        ]
+      },
+      "door": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "refused",
+            "when": {
+              "relationFlags": [
+                "trespassed"
+              ]
+            },
+            "text": "你与永琳之间只剩问诊时的往来。她没有拿旧怨改药，也没有再向你解释药柜里藏着什么；你知道这道门为何没开。",
+            "effects": {},
+            "next": null,
+            "label": "旧怨与诊疗",
+            "status": "enemy"
+          },
+          {
+            "key": "student",
+            "when": {
+              "relationFlags": [
+                "taught_again"
+              ],
+              "minTrust": 4
+            },
+            "text": "你能向永琳讲出自己的疑问，也知道有些答案听不懂。她偶尔嫌你想得慢，仍让你坐下，把一片新叶翻到背面再看。",
+            "effects": {
+              "insight": 1
+            },
+            "next": null,
+            "label": "药圃里的师友",
+            "status": "mentor"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "accepted_limits"
+              ],
+              "minTrust": 1
+            },
+            "text": "复诊之外，你也会留在永远亭说一会儿生活里的事。永琳不替你许诺永远，却记得上回没讲完的近况，问你后来怎样了。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "药方外的来往",
+            "status": "friend"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "你不再追问封柜，永琳也不再邀你久坐。每次求诊仍能得到回答，只是药包拿到手后，你便沿兔子指的路离开。",
+            "effects": {},
+            "next": null,
+            "label": "各留一段路",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "new-leaf",
+        "states": [
+          "mentor"
+        ],
+        "when": {
+          "relationFlags": [
+            "taught_again"
+          ]
+        },
+        "text": "永琳让你看一株刚长出的药草。你先闻气味才说名字，她纠正最后一点，又把叶子转过来问你为什么。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "key": "unfinished-talk",
+        "states": [
+          "friend",
+          "reconciled",
+          "mentor"
+        ],
+        "text": "永琳问过你的身体，才提起上回没讲完的生活小事。你说了很久，她收好新药，还没有催你走。",
+        "effects": {
+          "bond": 1
+        }
+      },
+      {
+        "key": "care-without-favor",
+        "states": [
+          "enemy"
+        ],
+        "text": "你来求诊，永琳仍问清近况才配新药。药房的门没有为你打开，诊室里的座位却照常留给病人。",
+        "effects": {
+          "health": 1
+        }
+      },
+      {
+        "key": "rabbit-message",
+        "states": [
+          "estranged"
+        ],
+        "text": "兔子捎来永琳对近况的答话，药也是照这一回重新备的。你收好药包，谢过来人，没有再托它捎去私人请求。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "永琳记得你问诊时的神情，也记得没能立刻说清的牵挂。药杵轻响，她仍把病人的话听到最后。",
+      "enemy": "永琳收好了与你有关的旧药案。诊室里仍接待新的病人，那层你追问过的药柜没有因此打开。",
+      "mentor": "永琳翻看药叶时，记起你曾提出的疑问，也记起你坐在一旁慢慢想明白的样子。",
+      "estranged": "诊室仍照常开门，永琳记着你的旧药案；你们后来的来往，都留在问诊与离去之间。"
+    },
+    "contact": {
+      "domain": "forest",
+      "place": "永远亭"
+    },
+    "preparedIntro": {
+      "text": "你按预约到永远亭核对作息。永琳问清近来的饮食睡眠，留下一份便于复查的记录。",
+      "effects": {
+        "health": 1
+      },
+      "next": "followup",
+      "label": "永远亭的诊察"
+    },
+    "preparedEntry": {
+      "minAge": 18,
+      "maxAge": 55,
+      "flags": [
+        "visit:eirin"
+      ]
+    }
+  },
+  {
+    "id": "yuuka",
+    "title": "花径留给谁",
+    "romance": true,
+    "source": "https://thbwiki.cc/风见幽香#东方求闻史纪",
+    "entry": {
+      "minAge": 20,
+      "maxAge": 55,
+      "habitats": [
+        "village",
+        "outskirts"
+      ],
+      "min": {
+        "insight": 6,
+        "bond": 5
+      }
+    },
+    "talents": [
+      "herbal",
+      "patient",
+      "promise"
+    ],
+    "careers": [
+      "garden"
+    ],
+    "intro": {
+      "text": "你在村口扶起被风吹倒的花盆，把折枝也扶稳。幽香停下买花的脚步，问你为何留着它；你指给她看枝上还活着的芽。",
+      "effects": {
+        "bond": 1
+      },
+      "next": "cutting",
+      "label": "村口的一盆花"
+    },
+    "nodes": {
+      "cutting": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "gardener",
+            "when": {
+              "careers": [
+                "garden"
+              ],
+              "training": {
+                "career": "practice:garden"
+              }
+            },
+            "text": "幽香看你剪去坏枝、留下活芽，记住了你的手法。她邀你到花田外看落种，指着花径讲清摘枝的规矩，你应下后才走近。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "season",
+            "label": "看花与动手",
+            "trust": 2,
+            "set": [
+              "kept_boundary"
+            ],
+            "xp": 1
+          },
+          {
+            "key": "ask",
+            "when": {
+              "talentsAny": [
+                "herbal",
+                "patient"
+              ],
+              "min": {
+                "insight": 7
+              }
+            },
+            "text": "你先问幽香折枝还能怎样养，她挑出一段落枝让你辨芽。见你答得慢，她把枝翻过来等你看；你认出新芽，她笑着点头。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "season",
+            "label": "先问落枝",
+            "trust": 2,
+            "set": [
+              "kept_boundary"
+            ],
+            "xp": 1
+          },
+          {
+            "key": "pluck",
+            "when": {},
+            "text": "你以为喜欢便可以掐一枝带走，手伸出就被她的伞柄敲开。幽香笑着叫你自己去养一盆，别拿她的花省这份功夫。",
+            "effects": {
+              "health": -1
+            },
+            "next": "season",
+            "label": "伸错了手",
+            "trust": -2,
+            "set": [
+              "touched"
+            ]
+          }
+        ]
+      },
+      "season": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "garden",
+            "when": {
+              "careers": [
+                "garden"
+              ],
+              "min": {
+                "insight": 8,
+                "health": 6
+              },
+              "training": {
+                "career": "practice:garden"
+              }
+            },
+            "text": "幽香来人里买花时绕到你的花畦，说想看看上回留下的芽。你带她看新花与排水沟，她问起你的照料，也问起你喜欢的颜色。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "shortcut",
+            "label": "自己养开的花",
+            "trust": 2,
+            "set": [
+              "shared_bloom"
+            ],
+            "xp": 1
+          },
+          {
+            "key": "night",
+            "when": {
+              "species": [
+                "vampire"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你讲起夜里照料花的习惯，幽香约你在暮色中看花。你带她看新芽，她让一朵将合的花开放，问你夜间看它有怎样的颜色。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "shortcut",
+            "label": "暮色里的花",
+            "trust": 2,
+            "set": [
+              "shared_bloom"
+            ],
+            "xp": 1
+          },
+          {
+            "key": "careful",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "幽香来花畦看你养开的花，你指着叶片讲起怎样辨认干渴。她俯身看过，问起你的近况；你也请她多坐一会儿。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "shortcut",
+            "label": "认出花的需要",
+            "trust": 2,
+            "set": [
+              "shared_bloom"
+            ],
+            "xp": 1
+          },
+          {
+            "key": "failed",
+            "when": {},
+            "text": "自己的花畦空了一半，幽香指着枯苗问你怎样浇过水。你摸到过湿的泥，认下照料的疏忽，她让你先松土，再试着养下一株。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "shortcut",
+            "label": "过湿的花畦",
+            "trust": -1,
+            "set": [
+              "failed_bed"
+            ],
+            "xp": 1
+          }
+        ]
+      },
+      "shortcut": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "around",
+            "when": {
+              "relationFlags": [
+                "kept_boundary"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你带送货人绕过花苗，幽香在路口候你，认出你记得旧规矩。见你走热了，她递来茶；你接过杯子，问她这回想带你看什么。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "thorns",
+            "label": "绕过花苗",
+            "trust": 1,
+            "set": [
+              "spared_bed"
+            ]
+          },
+          {
+            "key": "crush",
+            "when": {},
+            "text": "你跟着送货人抄近路，车轮压倒花苗。幽香连车带人掀回田外，撑伞指着倒下的花，让你记住擅闯花畦的后果。",
+            "effects": {
+              "health": -2,
+              "bond": -1
+            },
+            "next": "mending",
+            "label": "压过花苗",
+            "trust": -3,
+            "status": "rival",
+            "set": [
+              "trampled"
+            ],
+            "injury": true,
+            "wear": 2
+          }
+        ]
+      },
+      "thorns": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "plain",
+            "when": {
+              "min": {
+                "bond": 8
+              },
+              "minTrust": 3
+            },
+            "text": "你坦言看人被她吓走时会难受。幽香笑问你还敢当面说，听你把话讲完，才挪开凳前的伞，让你坐下听她说花田的规矩。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "invitation",
+            "label": "把不喜欢也说出",
+            "trust": 1,
+            "set": [
+              "spoke_plainly"
+            ]
+          },
+          {
+            "key": "boast",
+            "when": {},
+            "text": "你夸口总有一天不必畏她的力气，幽香便掀起旁边的石凳让你看看。你避开落石，听她问，你究竟想看花，还是想把她比下去。",
+            "effects": {
+              "health": -1
+            },
+            "next": "invitation",
+            "label": "想争过她",
+            "trust": -2,
+            "status": "rival",
+            "set": [
+              "pride"
+            ],
+            "wear": 1
+          }
+        ]
+      },
+      "mending": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "plant",
+            "when": {
+              "min": {
+                "health": 6,
+                "bond": 6
+              }
+            },
+            "text": "你带新苗来认下压花的过错，在幽香指的空地补种。她看着你挖好土，等最后一盆放稳，才让出提水的位置，叫你照料到底。",
+            "effects": {
+              "health": -1
+            },
+            "next": "invitation",
+            "label": "亲手补种",
+            "trust": 4,
+            "status": "reconciled",
+            "set": [
+              "mended",
+              "kept_boundary"
+            ],
+            "clear": [
+              "touched",
+              "trampled",
+              "pride",
+              "barred"
+            ],
+            "xp": 1
+          },
+          {
+            "key": "slow",
+            "when": {
+              "max": {
+                "health": 5
+              },
+              "min": {
+                "bond": 8
+              }
+            },
+            "text": "你带新苗来，认下压花的过错，也讲清身体无力搬土。幽香松了土，让你慢慢浇水；你逐株照料，把那回的道歉说完整。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "invitation",
+            "label": "慢慢补过",
+            "trust": 4,
+            "status": "reconciled",
+            "set": [
+              "mended",
+              "kept_boundary"
+            ],
+            "clear": [
+              "touched",
+              "trampled",
+              "pride",
+              "barred"
+            ]
+          },
+          {
+            "key": "price",
+            "when": {},
+            "text": "过了几轮花季，你仍只问赔多少钱。幽香把伞横在花径前，说花是你踩倒的，照料也是你的责任，叫你今后走田外。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "invitation",
+            "label": "不肯认下",
+            "trust": -2,
+            "status": "enemy",
+            "set": [
+              "barred"
+            ]
+          }
+        ]
+      },
+      "invitation": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "barred",
+            "when": {
+              "relationFlags": [
+                "barred"
+              ]
+            },
+            "text": "你听说花田又开了，托人在幽香买花时问起旧花径。她仍让你走田外，你想起那次赔价的争执，把脚步停在村口。",
+            "effects": {},
+            "next": "place",
+            "label": "听说花开",
+            "status": "enemy"
+          },
+          {
+            "key": "replanted",
+            "when": {
+              "relationFlags": [
+                "mended"
+              ],
+              "minTrust": 1
+            },
+            "text": "你补种的花开了，幽香在田边叫住你，领你看新芽。你俯身看得久，她抬高一朵花让你站着看；你谢她，也问起别处的花。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "voice",
+            "label": "补种后的花季",
+            "trust": 1,
+            "set": [
+              "shared_bloom"
+            ]
+          },
+          {
+            "key": "invited",
+            "when": {
+              "relationFlags": [
+                "shared_bloom",
+                "kept_boundary"
+              ],
+              "minTrust": 3
+            },
+            "text": "幽香来村口找你，说花田新开了一丛，想带你一起看。你跟她沿留出的窄径走，她让花重新开放，把伞朝你这边倾了些。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "voice",
+            "label": "她来邀你看花",
+            "trust": 1,
+            "set": [
+              "invited_path"
+            ]
+          },
+          {
+            "key": "outside",
+            "when": {},
+            "text": "你站在田外看花，幽香隔着花径问你的花畦后来怎样。你讲完新芽的事，问她这里的花期，两人各站一侧说了几句。",
+            "effects": {},
+            "next": "voice",
+            "label": "田外说几句话"
+          }
+        ]
+      },
+      "voice": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "affection",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "talentsAny": [
+                "promise",
+                "patient"
+              ],
+              "relationFlags": [
+                "shared_bloom",
+                "kept_boundary"
+              ],
+              "missingRelationFlags": [
+                "pride",
+                "barred"
+              ],
+              "training": {
+                "talent": "practice:promise"
+              }
+            },
+            "text": "你说每次来访都盼着见她，幽香合起伞，笑说也会留意花径上的脚步。她问你往后是否还来，你说想一直陪她看花，她望着你点了头。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "place",
+            "label": "说出彼此心意",
+            "trust": 1,
+            "status": "confidant",
+            "set": [
+              "affection_named"
+            ]
+          },
+          {
+            "key": "cold",
+            "when": {
+              "maxTrust": 0
+            },
+            "text": "你问如今可否走近，幽香把伞转向花径，叫你想清当年讲过的话。你站在田外提起旧争执，她听完仍让你留在原处。",
+            "effects": {},
+            "next": "place",
+            "label": "话仍没说开"
+          },
+          {
+            "key": "changed",
+            "when": {
+              "species": [
+                "youkai",
+                "magician",
+                "vampire"
+              ]
+            },
+            "text": "你与幽香谈起如今的形貌，也提起初见时那盆折花。她问你还愿不愿沿旧路来，你指着脚下的空处，说仍记得怎样走。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "place",
+            "label": "仍认得旧来路",
+            "trust": 1,
+            "set": [
+              "talked_flowers"
+            ]
+          },
+          {
+            "key": "flowers",
+            "when": {},
+            "text": "你讲起住处的小花，幽香说这一季更喜欢另一种颜色。你们争了几句，各自说了喜欢的理由。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "place",
+            "label": "各有喜欢的花",
+            "trust": 1,
+            "set": [
+              "talked_flowers"
+            ]
+          }
+        ]
+      },
+      "place": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "barrier",
+            "when": {
+              "relationFlags": [
+                "barred"
+              ]
+            },
+            "text": "你再从田外路过，幽香把伞柄横回小径。你站在田外看了一会儿花，独自离开。",
+            "effects": {},
+            "next": "years",
+            "label": "隔在花田之外",
+            "status": "enemy"
+          },
+          {
+            "key": "lover",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "shared_bloom",
+                "kept_boundary",
+                "affection_named"
+              ],
+              "missingRelationFlags": [
+                "pride",
+                "barred"
+              ]
+            },
+            "text": "花径旁，你终于问幽香愿不愿做恋人。她收伞望着你，笑说自己也喜欢你，伸出手来；你握住，她收紧手指，陪你走进花阴。",
+            "effects": {
+              "bond": 2
+            },
+            "next": "years",
+            "label": "花径上确立恋人",
+            "trust": 1,
+            "status": "lover",
+            "set": [
+              "paired"
+            ]
+          },
+          {
+            "key": "friend",
+            "when": {
+              "minTrust": 3,
+              "relationFlags": [
+                "kept_boundary"
+              ],
+              "missingRelationFlags": [
+                "pride"
+              ]
+            },
+            "text": "幽香肯在花畦旁留一个位置，让你坐着说近况。遇到与你不同的看法，你也会说。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "years",
+            "label": "花畦边的朋友",
+            "status": "friend"
+          },
+          {
+            "key": "distant",
+            "when": {},
+            "text": "你们说起旧事，又争到当年谁该让步。幽香让你走田外的路，你沿外侧离开，后来往来的脚步也留远了些。",
+            "effects": {},
+            "next": "years",
+            "label": "相识而疏远",
+            "status": "estranged"
+          }
+        ]
+      },
+      "years": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "together",
+            "when": {
+              "relationFlags": [
+                "paired"
+              ]
+            },
+            "text": "花径换过几回模样，你记下与幽香说开心意的那一季，也记下共赏的花。回看这些旧事，当年牵手的那一页仍留得清楚。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "记下花径旧岁月"
+          },
+          {
+            "key": "enemy",
+            "when": {
+              "relationFlags": [
+                "barred"
+              ]
+            },
+            "text": "后来几轮花季，你们仍为那次越界争执。你从田外望见新花，幽香把伞横在花径前，提醒你该走哪条路。",
+            "effects": {
+              "bond": -1
+            },
+            "next": null,
+            "label": "花开也不相让",
+            "status": "enemy"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "minTrust": 3,
+              "relationFlags": [
+                "kept_boundary",
+                "shared_bloom"
+              ],
+              "missingRelationFlags": [
+                "pride"
+              ]
+            },
+            "text": "你与幽香仍会为一株花的长法争论，下一次来却也肯听她说完。花径旁的位置，她还给你留着。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "多年看花的朋友",
+            "status": "friend"
+          },
+          {
+            "key": "quiet_distance",
+            "when": {},
+            "text": "你后来很少再绕到花田，在别处养自己的花。偶尔想起幽香，记得她让花开放的样子，也记得两人留下的那些争执。",
+            "effects": {},
+            "next": null,
+            "label": "各自的花季",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "parasol",
+        "states": [
+          "lover"
+        ],
+        "when": {
+          "relationFlags": [
+            "paired"
+          ]
+        },
+        "text": "幽香把伞搁在两人之间，让你看新花。你说更喜欢花叶，她笑着与你争了几句，最后拉近凳子，陪你把那片叶看够。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      },
+      {
+        "key": "different-flowers",
+        "states": [
+          "friend",
+          "confidant",
+          "reconciled"
+        ],
+        "when": {
+          "relationFlags": [
+            "shared_bloom"
+          ]
+        },
+        "text": "你带幽香看自己新养的花，她嫌颜色太淡，你却喜欢。两人各说各的，离开时她仍指给你一处还能再长出芽的地方。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "key": "slow-path",
+        "states": [
+          "friend",
+          "confidant",
+          "lover"
+        ],
+        "when": {
+          "relationFlags": [
+            "kept_boundary"
+          ]
+        },
+        "text": "花径变窄了，幽香用伞尖拨开低枝，等你沿空处走完。你问这季花会开多久，她说先把眼前这一段看完。",
+        "effects": {
+          "bond": 1
+        }
+      },
+      {
+        "key": "closed-path",
+        "states": [
+          "enemy"
+        ],
+        "when": {
+          "relationFlags": [
+            "barred"
+          ]
+        },
+        "text": "你才靠近旧花径，幽香便把伞撑在尽头。她笑着让你回想那次压花的事，她让你停在田外。",
+        "effects": {
+          "bond": -1
+        }
+      },
+      {
+        "key": "other-garden",
+        "states": [
+          "estranged"
+        ],
+        "text": "你在自己的住处养花，听说太阳花田又开了。你摸了摸眼前的新叶，继续照看自己的小花畦。",
+        "effects": {}
+      },
+      {
+        "key": "joined-hands",
+        "states": [
+          "lover"
+        ],
+        "text": "幽香领你穿过花田，伸手等在窄径那头。你握住她，说喜欢这样一起走；她笑着收紧手指，领你再看下一丛。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      },
+      {
+        "key": "parasol-close",
+        "states": [
+          "lover"
+        ],
+        "text": "雨落下来，幽香把你拉到伞下，肩膀挨着你。你问能否多走一会儿，她笑你贪看，脚步放缓，与你沿空处慢慢走。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      },
+      {
+        "key": "ribbon",
+        "states": [
+          "lover"
+        ],
+        "text": "你送幽香一条素色缎带。后来她用它系着亲手选的花束，递给你时转了转结；你夸系得好，她让你替她也系一束。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      },
+      {
+        "key": "tea-date",
+        "states": [
+          "lover"
+        ],
+        "text": "幽香把茶桌摆到花阴里，来唤你坐到身旁。她拂去你肩上的落瓣，你替她斟茶，听她说这回特意挑了你喜欢的花。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      },
+      {
+        "key": "flower-scent",
+        "states": [
+          "lover"
+        ],
+        "text": "你说她今天的花香很好闻，幽香俯身凑近，笑问闻清楚了吗。你轻轻碰了碰她的手，她便握住，让你再陪她坐一会儿。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      },
+      {
+        "key": "rest-close",
+        "states": [
+          "lover"
+        ],
+        "text": "花田的活做完了，幽香邀你到树下歇脚。你靠着她看云，她听你讲近来的小事，指尖轻轻拨过你额前的碎发。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      },
+      {
+        "key": "return-hug",
+        "states": [
+          "lover"
+        ],
+        "text": "花田边，幽香收伞迎你，问这回能待多久。你笑着走进她张开的双臂，说想陪她看完花；她搂住你的背，等你松手才邀你喝茶。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      },
+      {
+        "key": "warm-cup",
+        "states": [
+          "lover"
+        ],
+        "text": "你看花看得手凉，幽香把温茶塞进你掌心，用自己的手拢住杯沿。你碰了碰她的指尖，说暖了，她仍挨着你一起看花。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      }
+    ],
+    "farewell": {
+      "friend": "幽香记得那个肯停步扶住折花的人。后来又一回花开，她仍知道哪些喜欢的话与你说过。",
+      "enemy": "幽香记着那次越界与随后的争执，伞仍横在旧花径前。你留在田外的脚步，也留在这段往来的旧事里。",
+      "lover": "幽香收好与你共用的伞，让新花沿两人走过的小路开放。她记得初次牵手，也记得多年相伴时你说过的小事。",
+      "estranged": "幽香仍记得你扶起过的那盆花。新花又开时，她偶尔想起从旧路来访的你。"
+    },
+    "contact": {
+      "domain": "village",
+      "place": "人里外的花摊"
+    },
+    "preparedEntry": {
+      "minAge": 20,
+      "maxAge": 55,
+      "min": {
+        "insight": 6,
+        "bond": 5
+      },
+      "flags": [
+        "visit:yuuka"
+      ]
+    }
+  }
+]

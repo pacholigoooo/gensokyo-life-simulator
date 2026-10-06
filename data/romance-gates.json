@@ -1,0 +1,1322 @@
+[
+  {
+    "id": "reimu",
+    "category": "main",
+    "group": "shrine-daily",
+    "label": "神社日常",
+    "transition": false,
+    "text": "你把祭日用纸送到博丽神社，灵梦核过这次差事，往后从廊下帮工与普通访客往来开始。"
+  },
+  {
+    "id": "marisa",
+    "category": "main",
+    "group": "forest",
+    "label": "神社林间与魔法森林",
+    "transition": false,
+    "text": "你沿已经认熟的森林小径到作坊递交材料，魔理沙说明这次试验要避开的地方，后续仍按约来访。"
+  },
+  {
+    "id": "rumia",
+    "category": "main",
+    "group": "forest",
+    "label": "神社林间与魔法森林",
+    "transition": false,
+    "text": "你跟采集队走过有路标的林路，遇到露米娅时先说清归程，在约好的路边完成一次普通交谈。"
+  },
+  {
+    "id": "daiyousei",
+    "category": "main",
+    "group": "lake",
+    "label": "湖畔与演奏场",
+    "transition": false,
+    "text": "你随湖边运送走到芦湾，先与大妖精把漂来的叶舟放回浅水，见面与返程都留在认熟的岸边。"
+  },
+  {
+    "id": "cirno",
+    "category": "main",
+    "group": "lake",
+    "label": "湖畔与演奏场",
+    "transition": false,
+    "text": "你沿认熟的湖岸捞回木盆，先听琪露诺说清她的冰面游戏，自己仍站在可返回的浅岸。"
+  },
+  {
+    "id": "meiling",
+    "category": "main",
+    "group": "mansion-gate",
+    "label": "红魔馆门前与送货厅",
+    "transition": false,
+    "text": "你接下送花委托来到红魔馆门前，美铃核过货物与来意，后续仍从门前交接相识。"
+  },
+  {
+    "id": "koakuma",
+    "category": "main",
+    "group": "mansion-library",
+    "label": "红魔馆图书馆",
+    "transition": true,
+    "text": "你持还书单到红魔馆门前，门卫核过来意，指给你外书架的位置。小恶魔收好书单，约定这次取回凭条的时刻。"
+  },
+  {
+    "id": "patchouli",
+    "category": "main",
+    "group": "mansion-library",
+    "label": "红魔馆图书馆",
+    "transition": true,
+    "text": "你把读书疑问交到馆门，帕秋莉让人领你到图书馆的空桌。你照她指的位置放好纸笔，记下回程的会客廊。"
+  },
+  {
+    "id": "sakuya",
+    "category": "main",
+    "group": "mansion-gate",
+    "label": "红魔馆门前与送货厅",
+    "transition": false,
+    "text": "你持送货清单到红魔馆交接厅，咲夜核过来意后指定摆放位置，访客身份限于此次送货。"
+  },
+  {
+    "id": "remilia",
+    "category": "main",
+    "group": "mansion-private",
+    "label": "红魔馆夜宴与地下会客",
+    "transition": true,
+    "text": "你在红魔馆门前出示夜宴请帖。来客被领到会客厅，蕾米莉亚问过姓名，指给你离席时可走的廊道。"
+  },
+  {
+    "id": "flandre",
+    "category": "main",
+    "group": "mansion-private",
+    "label": "红魔馆夜宴与地下会客",
+    "transition": true,
+    "text": "送玩具的委托写明了地下会客时段。你随接待者到指定门边，芙兰朵露接过玩具，指着积木问你想看哪一盒。"
+  },
+  {
+    "id": "letty",
+    "category": "main",
+    "group": "mountain",
+    "label": "妖怪山访客与山麓",
+    "transition": false,
+    "text": "你沿允许的冬季山径认熟雪地石标，先在背风坡与蕾蒂相识，返程仍走来时的小路。"
+  },
+  {
+    "id": "chen",
+    "category": "main",
+    "group": "boundary-introduction",
+    "label": "贤者与结界引见",
+    "transition": true,
+    "text": "你随林路接应送猫粮到迷途之家外缘。橙指给你放篮子的墙根，等你摆稳，又带你看回去时该认的树标。"
+  },
+  {
+    "id": "alice",
+    "category": "main",
+    "group": "village-public",
+    "label": "人里公开妖怪往来",
+    "transition": true,
+    "text": "祭场正在搭人偶戏台，你接过布景卷送到棚边。爱丽丝指好存放处，道谢后请你沿空着的过道去看演出。"
+  },
+  {
+    "id": "lily_white",
+    "category": "main",
+    "group": "forest",
+    "label": "神社林间与魔法森林",
+    "transition": false,
+    "text": "你循林缘春花坡走过播种地，先与报春的莉莉打招呼，下次仍从同一条小径来。"
+  },
+  {
+    "id": "lunasa",
+    "category": "main",
+    "group": "lake",
+    "label": "湖畔与演奏场",
+    "transition": false,
+    "text": "你作为听众到湖岸演奏台，等露娜萨拉完这一段再说话，后续仍在公开演奏处见面。"
+  },
+  {
+    "id": "merlin",
+    "category": "main",
+    "group": "lake",
+    "label": "湖畔与演奏场",
+    "transition": false,
+    "text": "你到湖岸试台交还散落的谱纸，先等梅露兰试完号声，再约定下次旁听的时段。"
+  },
+  {
+    "id": "lyrica",
+    "category": "main",
+    "group": "lake",
+    "label": "湖畔与演奏场",
+    "transition": false,
+    "text": "你在湖岸演奏处听到旧钟般的音色，先向莉莉卡说清在哪里听过，往来从谈乐声开始。"
+  },
+  {
+    "id": "youmu",
+    "category": "main",
+    "group": "netherworld",
+    "label": "冥界与白玉楼",
+    "transition": false,
+    "text": "你随祭祀差事获白玉楼来访安排，妖梦先指出庭道与试剑石面，帮工结束后依约回到人世。"
+  },
+  {
+    "id": "yuyuko",
+    "category": "main",
+    "group": "netherworld",
+    "label": "冥界与白玉楼",
+    "transition": false,
+    "text": "你持祭祀递送的访客安排到白玉楼廊下，幽幽子先接过点心核明来意，玩家每次仍依约返家。"
+  },
+  {
+    "id": "ran",
+    "category": "main",
+    "group": "boundary-introduction",
+    "label": "贤者与结界引见",
+    "transition": true,
+    "text": "你在林缘递交巡路记录，蓝逐一核过岔口的数目。她指给你可以折返的石标，等你记清才收起算筹。"
+  },
+  {
+    "id": "yukari",
+    "category": "main",
+    "group": "boundary-introduction",
+    "label": "贤者与结界引见",
+    "transition": true,
+    "text": "神社界线旁，两段路影重在一起。你停步报上来意，紫用扇尖指出通往人里的那段，叫你沿石阶走回去。"
+  },
+  {
+    "id": "suika",
+    "category": "main",
+    "group": "shrine-guests",
+    "label": "神社来客与祭日",
+    "transition": true,
+    "text": "神社宴会正在筹备，你搬来一捆木凳。萃香指好摆放的地方，与你各扶一端，摆稳后才放手去取下一张。"
+  },
+  {
+    "id": "wriggle",
+    "category": "main",
+    "group": "forest",
+    "label": "神社林间与魔法森林",
+    "transition": false,
+    "text": "你沿认熟的夜路观察萤光，先等莉格露停下虫群再询问这段路怎么走，记住原路返回。"
+  },
+  {
+    "id": "mystia",
+    "category": "main",
+    "group": "forest",
+    "label": "神社林间与魔法森林",
+    "transition": false,
+    "text": "你沿有路标的林路来到八目鳗夜摊，先作为客人点餐问路，回程仍走认熟的小径。"
+  },
+  {
+    "id": "keine",
+    "category": "main",
+    "group": "village-daily",
+    "label": "人里日常",
+    "transition": false,
+    "text": "你把缺页村史带到寺子屋，先按慧音的批注补好抄本，双方从日间共读开始往来。"
+  },
+  {
+    "id": "tewi",
+    "category": "main",
+    "group": "bamboo",
+    "label": "迷途竹林",
+    "transition": true,
+    "text": "你随竹林接应到兔路边，天为举起竹枝指了一个岔口。你照着沿路树标再走一遍，记清返回人里的方向。"
+  },
+  {
+    "id": "reisen",
+    "category": "main",
+    "group": "village-public",
+    "label": "人里公开妖怪往来",
+    "transition": true,
+    "text": "你把订药单送到人里的药摊，铃仙核过名字与瓶签，将取药的日期写在纸角。你收好凭条，替她让出摊前的空处。"
+  },
+  {
+    "id": "eirin",
+    "category": "main",
+    "group": "eientei",
+    "label": "永远亭来访",
+    "transition": true,
+    "text": "你按约走进永远亭，永琳逐项核过身体近况和起居记录，说明复查时要留意什么，才让你带着记录回去。"
+  },
+  {
+    "id": "kaguya",
+    "category": "main",
+    "group": "eientei",
+    "label": "永远亭来访",
+    "transition": true,
+    "text": "你随竹林接应把点心送到永远亭，来客被领到会客廊。辉夜接过盒子问了问时令，听你说完才叫人带你返回。"
+  },
+  {
+    "id": "mokou",
+    "category": "main",
+    "group": "bamboo",
+    "label": "迷途竹林",
+    "transition": true,
+    "text": "你接下一趟竹林运送，妹红带你辨认路旁的石标。到交接处，她等你放好货，再与你沿干土小径走回人里。"
+  },
+  {
+    "id": "aya",
+    "category": "main",
+    "group": "village-public",
+    "label": "人里公开妖怪往来",
+    "transition": true,
+    "text": "文在人里采写新开的铺子，你向她说清街道上的几处变化。她核对门牌，在纸上记下你的名字，道谢后收好笔。"
+  },
+  {
+    "id": "medicine",
+    "category": "main",
+    "group": "poison-field",
+    "label": "无名之丘毒草外缘",
+    "transition": true,
+    "text": "你随引路者到无名之丘外缘，梅蒂欣指着田边石头让你停在那儿。你放下修理布包，听她说完来意再沿原路回去。"
+  },
+  {
+    "id": "yuuka",
+    "category": "main",
+    "group": "flower-garden",
+    "label": "幽香花田访客",
+    "transition": true,
+    "text": "你随送花的差事来到花田外，幽香接过花篮，指给你可以走的田埂。你看清落脚处，交还篮子后循田埂返回。"
+  },
+  {
+    "id": "komachi",
+    "category": "main",
+    "group": "sanzu",
+    "label": "三途河指定岸边",
+    "transition": false,
+    "text": "你随祭祀递送队到获准停留的三途河岸，小町先说明祭物与船绳的位置，办完由引路者带回。"
+  },
+  {
+    "id": "eiki",
+    "category": "main",
+    "group": "higan",
+    "label": "彼岸官署与口岸",
+    "transition": false,
+    "text": "你持彼岸官署的旁听安排到指定庭院，映姬先核过来意；这是一段活人短访，不是玩家已经死亡。"
+  },
+  {
+    "id": "wakasagihime",
+    "category": "main",
+    "group": "lake",
+    "label": "湖畔与演奏场",
+    "transition": false,
+    "text": "你沿获准的岸边小径到浅湾，先隔岸问若鹭姬哪里可以停留，不把湖路当成入水居住的能力。"
+  },
+  {
+    "id": "sekibanki",
+    "category": "main",
+    "group": "village-public",
+    "label": "人里公开妖怪往来",
+    "transition": true,
+    "text": "街坊托你把一包针线送到窄巷，赤蛮奇核过收件名字，将布包收在手边。你向她问清出巷的路，再沿街口返回。"
+  },
+  {
+    "id": "kagerou",
+    "category": "main",
+    "group": "bamboo",
+    "label": "迷途竹林",
+    "transition": true,
+    "text": "你随竹林接应到林缘交付布料，影狼指给你避开刺藤的小径。你认清路标，放下布包后照那条路回村。"
+  },
+  {
+    "id": "benben",
+    "category": "main",
+    "group": "village-public",
+    "label": "人里公开妖怪往来",
+    "transition": true,
+    "text": "你到村外演奏场递送谱纸，弁弁核过页数，将它们收进琴盒旁。她指给你听众的座位，等你坐稳才继续试弦。"
+  },
+  {
+    "id": "yatsuhashi",
+    "category": "main",
+    "group": "village-public",
+    "label": "人里公开妖怪往来",
+    "transition": true,
+    "text": "你把新琴弦送到村外琴台，八桥接过纸包，请你替她扶住一角。弦装好后，她让你到台边听一遍音。"
+  },
+  {
+    "id": "seija",
+    "category": "main",
+    "group": "forest",
+    "label": "神社林间与魔法森林",
+    "transition": false,
+    "text": "你沿已认熟的荒路到村外废塔，先向正邪说明这次来意与返程，旗帜帮工不代表加入她的叛乱或代她反抗。"
+  },
+  {
+    "id": "shinmyoumaru",
+    "category": "main",
+    "group": "shrine-guests",
+    "label": "神社来客与祭日",
+    "transition": true,
+    "text": "你到神社交付几块小木板，针妙丸从碗沿探头，指好存放的位置。你把木板摆低些，等她自己走过去查看。"
+  },
+  {
+    "id": "raiko",
+    "category": "main",
+    "group": "village-public",
+    "label": "人里公开妖怪往来",
+    "transition": true,
+    "text": "演奏场请你送来新脚垫，雷鼓接过后试了两次踏板。你按她指的方向压稳垫角，等鼓点停下再归还工具。"
+  },
+  {
+    "id": "sumireko",
+    "category": "main",
+    "group": "outside-dream",
+    "label": "外界之梦",
+    "transition": false,
+    "text": "你先在相续的外界之梦里记清醒返时刻，再在课桌旁与堇子讨论笔记，外界现实身份仍保持原样。"
+  },
+  {
+    "id": "seiran",
+    "category": "main",
+    "group": "village-public",
+    "label": "人里公开妖怪往来",
+    "transition": true,
+    "text": "你替街坊到清兰的团子摊取点心，她核过包数，将竹签夹在凭条旁。你接好纸包，让出空处给后面的客人。"
+  },
+  {
+    "id": "ringo",
+    "category": "main",
+    "group": "village-public",
+    "label": "人里公开妖怪往来",
+    "transition": true,
+    "text": "你在铃瑚摊前买了几串团子，顺手替她扶住歪斜的招牌。她道谢，问了问集市的位置，听你说完才系好招牌绳。"
+  },
+  {
+    "id": "doremy",
+    "category": "main",
+    "group": "dream",
+    "label": "相续梦境",
+    "transition": false,
+    "text": "相续梦境先带你认出可以醒返的岔路，哆来咪核过你记得的门，再在同一处展开普通交谈。"
+  },
+  {
+    "id": "sagume",
+    "category": "main",
+    "group": "moon-dream",
+    "label": "月面与神灵梦路",
+    "transition": false,
+    "text": "你先记住可醒返的月面梦路，再在月都桥廊向探女说明模型试作来意，依手势确认可以靠近的位置。"
+  },
+  {
+    "id": "clownpiece",
+    "category": "main",
+    "group": "shrine-guests",
+    "label": "神社来客与祭日",
+    "transition": true,
+    "text": "你到神社送来修木板的小工具，皮丝从廊边探头指着松开的木片。你压稳边角，等她取出火把，再收好工具。"
+  },
+  {
+    "id": "junko",
+    "category": "main",
+    "group": "moon-dream",
+    "label": "月面与神灵梦路",
+    "transition": false,
+    "text": "你先经可醒返的月影梦路到静海边，纯狐愿意停下来听这次来意后再交谈，不把她写成月都普通居民。"
+  },
+  {
+    "id": "hecatia",
+    "category": "main",
+    "group": "hell",
+    "label": "地狱引路与神灵会见",
+    "transition": false,
+    "text": "你随地狱引路到获准会面台，赫卡提亚先说明这次接应与三身同一主体，之后再按约观看示范。"
+  },
+  {
+    "id": "joon",
+    "category": "main",
+    "group": "temple",
+    "label": "命莲寺公开来往",
+    "transition": true,
+    "text": "你把新衣扣送到命莲寺外廊，女苑比过两种颜色，将选中的一枚放回布包。你们核清费用，再各自收好凭条。"
+  },
+  {
+    "id": "shion",
+    "category": "main",
+    "group": "shrine-guests",
+    "label": "神社来客与祭日",
+    "transition": true,
+    "text": "你在神社旧檐下收起淋湿的垫席，紫苑帮你按住被风掀开的那角。两人把垫席移到干处，再各取一张坐稳。"
+  },
+  {
+    "id": "eternity",
+    "category": "main",
+    "group": "forest",
+    "label": "神社林间与魔法森林",
+    "transition": false,
+    "text": "你沿认熟的森林路来到冬眠洞口外，先问拉尔瓦哪里方便停留，不擅自闯进她的栖处。"
+  },
+  {
+    "id": "nemuno",
+    "category": "main",
+    "group": "sanctuary",
+    "label": "山林圣域边缘",
+    "transition": true,
+    "text": "你沿山路到合欢圣域外，说明清理倒枝的差事。她用柴刀指好可搬走的部分，你收妥枝条，沿来时的小径返回。"
+  },
+  {
+    "id": "aunn",
+    "category": "main",
+    "group": "shrine-guests",
+    "label": "神社来客与祭日",
+    "transition": true,
+    "text": "你到神社交还扫帚，阿吽领你看参道旁新堆的落叶。你按她指的方向留出过道，两人再把扫帚放回檐下。"
+  },
+  {
+    "id": "narumi",
+    "category": "main",
+    "group": "forest",
+    "label": "神社林间与魔法森林",
+    "transition": false,
+    "text": "你把供物放在森林供桌指定的位置，成美确认来意后与你说话，回程照旧沿路标走。"
+  },
+  {
+    "id": "satono",
+    "category": "main",
+    "group": "backdoor",
+    "label": "后户之国与秘神引路",
+    "transition": false,
+    "text": "你从获准的后门到竹叶练舞地，先与里乃核清参与试拍与醒返的安排，不替她补出失去的人类记忆。"
+  },
+  {
+    "id": "mai_teireida",
+    "category": "main",
+    "group": "backdoor",
+    "label": "后户之国与秘神引路",
+    "transition": false,
+    "text": "你循后户许可到笹叶踏舞地，先听舞说明今天的试步范围，双方从一次可结束的练习相识。"
+  },
+  {
+    "id": "okina",
+    "category": "main",
+    "group": "backdoor",
+    "label": "后户之国与秘神引路",
+    "transition": false,
+    "text": "你只从隐岐奈开启并获准使用的门进入舞台，先核清回程暗号与来意，秘神愿意再见也不替玩家创造贤者身份。"
+  },
+  {
+    "id": "eika",
+    "category": "main",
+    "group": "sanzu",
+    "label": "三途河指定岸边",
+    "transition": false,
+    "text": "你随获准跨境的引路抵达赛之河原，只在指定岸边与璎花垒石，结束后仍回到在世的住处。"
+  },
+  {
+    "id": "urumi",
+    "category": "main",
+    "group": "sanzu",
+    "label": "三途河指定岸边",
+    "transition": false,
+    "text": "你先凭现有跨境接应到三途河的鱼篓岸，润美指出可停留的岸石，帮工结束仍随原路返程。"
+  },
+  {
+    "id": "kutaka",
+    "category": "main",
+    "group": "higan",
+    "label": "彼岸官署与口岸",
+    "transition": false,
+    "text": "你凭现有异界访客许可到口岸，久侘歌核验目的地与返回位置后，双方才在栏边完成问候。"
+  },
+  {
+    "id": "yachie",
+    "category": "main",
+    "group": "animal-realm",
+    "label": "畜生界组织与灵长园",
+    "transition": false,
+    "text": "你随畜生界接应到鬼杰组会见处，先把来意与出口写清，再与八千慧谈棋；能力造成的顺从不当作心意。"
+  },
+  {
+    "id": "mayumi",
+    "category": "main",
+    "group": "animal-realm",
+    "label": "畜生界组织与灵长园",
+    "transition": false,
+    "text": "你凭畜生界访客安排到灵长园修整台，磨弓先指定可碰的陶甲部分，双方从这次帮工相识。"
+  },
+  {
+    "id": "keiki",
+    "category": "main",
+    "group": "animal-realm",
+    "label": "畜生界组织与灵长园",
+    "transition": false,
+    "text": "你凭畜生界访客安排到灵长园工坊，先向袿姬说明试作的来意与返回处，造型力量仍由她施展。"
+  },
+  {
+    "id": "saki",
+    "category": "main",
+    "group": "animal-realm",
+    "label": "畜生界组织与灵长园",
+    "transition": false,
+    "text": "你凭畜生界访客安排到劲牙组疾行场，先与早鬼约定可以展示的步法与终点，访客身份不自动变成部下。"
+  },
+  {
+    "id": "yuma",
+    "category": "main",
+    "group": "blood-pool",
+    "label": "旧血池地狱",
+    "transition": true,
+    "text": "你随旧血池的接应到岸台交货，尤魔核过包里的旧器物，指给你可卸货的位置。你放好货箱，跟着引路者折返。"
+  },
+  {
+    "id": "shizuha",
+    "category": "main",
+    "group": "mountain",
+    "label": "妖怪山访客与山麓",
+    "transition": false,
+    "text": "你随赏秋向导到山麓红叶林，先在允许停留的位置与静叶问候，不擅自采折她在照看的树叶。"
+  },
+  {
+    "id": "minoriko",
+    "category": "main",
+    "group": "harvest-festival",
+    "label": "人里收获祭与田边",
+    "transition": true,
+    "text": "收获祭请你送来供物，穰子在田边看过谷穗，指好摆放的席面。你将篮子放稳，再顺着田埂把空筐带回。"
+  },
+  {
+    "id": "hina",
+    "category": "main",
+    "group": "mountain",
+    "label": "妖怪山访客与山麓",
+    "transition": false,
+    "text": "你沿获准溪径走到下游，先按雏的提醒留在岸边说话，见面不以靠近她的厄运为条件。"
+  },
+  {
+    "id": "nitori",
+    "category": "main",
+    "group": "village-public",
+    "label": "人里公开妖怪往来",
+    "transition": true,
+    "text": "溪边修水轮缺一根新轴，你带工具来交付。荷取核过尺寸，指给你放包的干石；修好后，你沿溪岸回村。"
+  },
+  {
+    "id": "momiji",
+    "category": "main",
+    "group": "mountain",
+    "label": "妖怪山访客与山麓",
+    "transition": false,
+    "text": "你随向导走到瀑布外哨，椛核过来意并指出禁入岔口，后续见面仍限于哨外。"
+  },
+  {
+    "id": "sanae",
+    "category": "main",
+    "group": "moriya",
+    "label": "守矢神社祭事",
+    "transition": true,
+    "text": "你随参拜队到守矢外庭，早苗接过祭纸，领你看供物放置的地方。你记清返程石阶，帮着把纸包摆到干处。"
+  },
+  {
+    "id": "kanako",
+    "category": "main",
+    "group": "moriya",
+    "label": "守矢神社祭事",
+    "transition": true,
+    "text": "你随农务差事到守矢祭场，神奈子听过山脚水沟的情况，指着图问了几处高差。你补好标记，沿参拜路返回。"
+  },
+  {
+    "id": "suwako",
+    "category": "main",
+    "group": "moriya",
+    "label": "守矢神社祭事",
+    "transition": true,
+    "text": "你随祭事接应到旧祭石，诹访子指着湿土里的水迹，请你看看山脚是否也这样。你说完近况，记清来时的祭径。"
+  },
+  {
+    "id": "iku",
+    "category": "main",
+    "group": "mountain",
+    "label": "妖怪山访客与山麓",
+    "transition": false,
+    "text": "你沿获准山路到可站稳的坡边，先听衣玖讲完龙的消息，自己的回程仍走山路。"
+  },
+  {
+    "id": "tenshi",
+    "category": "main",
+    "group": "mountain",
+    "label": "妖怪山访客与山麓",
+    "transition": false,
+    "text": "你随山麓搬运队来到碎石坡，先与天子完成石材交接；这次相遇不把玩家变成天人或送上天界。"
+  },
+  {
+    "id": "kisume",
+    "category": "main",
+    "group": "old-hell",
+    "label": "风穴与旧地狱",
+    "transition": false,
+    "text": "你随风穴运送的向导认熟往返岔路，先在停留处向桶中的琪斯美打招呼，再循原路返回。"
+  },
+  {
+    "id": "yamame",
+    "category": "main",
+    "group": "old-hell",
+    "label": "风穴与旧地狱",
+    "transition": false,
+    "text": "你随获准修梁的队伍进风穴，山女先指出可以检查的梁面，双方从这次修理相识。"
+  },
+  {
+    "id": "parsee",
+    "category": "main",
+    "group": "old-hell",
+    "label": "风穴与旧地狱",
+    "transition": false,
+    "text": "你随旧都接应走到入口桥侧，先向帕露西讲清递送来意，之后仍按同一桥路往返。"
+  },
+  {
+    "id": "yuugi",
+    "category": "main",
+    "group": "old-hell",
+    "label": "风穴与旧地狱",
+    "transition": false,
+    "text": "你随旧都运送队到石阶广场，先向勇仪说明自己能搬的重量，普通比试或帮工先于心意。"
+  },
+  {
+    "id": "satori",
+    "category": "main",
+    "group": "earth-spirit-palace",
+    "label": "地灵殿与炉外来访",
+    "transition": true,
+    "text": "地灵殿接下食盆修理的委托，你随接应到获准外廊。觉指给你放包的位置，问过裂纹的来历，再让人带你回旧都。"
+  },
+  {
+    "id": "rin",
+    "category": "main",
+    "group": "earth-spirit-palace",
+    "label": "地灵殿与炉外来访",
+    "transition": true,
+    "text": "你随地灵殿的接应到冷却坡送轮销，燐将车停在平处，指好要换的一边。你交清工具，再沿炉外小路返回。"
+  },
+  {
+    "id": "utsuho",
+    "category": "main",
+    "group": "earth-spirit-palace",
+    "label": "地灵殿与炉外来访",
+    "transition": true,
+    "text": "你随炉外接应送来新木牌，空在凉廊举起旧牌与你核对颜色。换好后，她指给你返程的门，让你沿廊道回去。"
+  },
+  {
+    "id": "koishi",
+    "category": "main",
+    "group": "village-public",
+    "label": "人里公开妖怪往来",
+    "transition": true,
+    "text": "你在村外花篱路问到一处岔口，恋指着两边的花说各自通往哪里。你记下她的名字，沿她指的方向走回人里。"
+  },
+  {
+    "id": "nazrin",
+    "category": "main",
+    "group": "graveyard",
+    "label": "墓地与寻物锻造",
+    "transition": false,
+    "text": "你受失物寻回的介绍到无缘塚，先向娜兹玲说清物件特征，找到后沿已经认熟的小路返回。"
+  },
+  {
+    "id": "kogasa",
+    "category": "main",
+    "group": "graveyard",
+    "label": "墓地与寻物锻造",
+    "transition": false,
+    "text": "你持工具修理委托到命莲寺墓地棚外，先与小伞核对刃口与交还日期，再按约来取。"
+  },
+  {
+    "id": "ichirin",
+    "category": "main",
+    "group": "temple",
+    "label": "命莲寺公开来往",
+    "transition": true,
+    "text": "你随搬物的差事到命莲寺，一轮指好垫席的存放处，领你绕过台阶边的水迹。交完席子，你沿寺门返回。"
+  },
+  {
+    "id": "murasa",
+    "category": "main",
+    "group": "lake",
+    "label": "湖畔与演奏场",
+    "transition": false,
+    "text": "你受停泊处递送的介绍到船边，水蜜说明可以登上的位置，你先完成这次船上帮工再随原路回岸。"
+  },
+  {
+    "id": "shou",
+    "category": "main",
+    "group": "temple",
+    "label": "命莲寺公开来往",
+    "transition": true,
+    "text": "你把供物送到命莲寺，星核过金属匠印，将清单夹在盒旁。你照她指的位置放好供物，空箱仍从山门带回。"
+  },
+  {
+    "id": "byakuren",
+    "category": "main",
+    "group": "temple",
+    "label": "命莲寺公开来往",
+    "transition": true,
+    "text": "你随递送队到命莲寺，白莲接过包裹，与你将重物挪到檐下。她问清回程的路，等你歇稳再送你到寺门。"
+  },
+  {
+    "id": "nue",
+    "category": "main",
+    "group": "temple",
+    "label": "命莲寺公开来往",
+    "transition": true,
+    "text": "你来寺外询问一张失落的请帖，鵺指着树下的纸角让你看。你拾起核对名字，她看过后朝寺门指了指。"
+  },
+  {
+    "id": "hatate",
+    "category": "main",
+    "group": "mountain",
+    "label": "妖怪山访客与山麓",
+    "transition": false,
+    "text": "你受取材的介绍到山坡，先向果说明自己在山脚见过什么，往返仍限于已经获准的山路。"
+  },
+  {
+    "id": "sunny",
+    "category": "main",
+    "group": "forest",
+    "label": "神社林间与魔法森林",
+    "transition": false,
+    "text": "你沿神社旁的林径辨认真实的岔口，桑尼现身后先与你完成普通问候，记好自己走过的路。"
+  },
+  {
+    "id": "luna",
+    "category": "main",
+    "group": "forest",
+    "label": "神社林间与魔法森林",
+    "transition": false,
+    "text": "你沿已认熟的林地夜径停步，露娜解除消音后，你们先说清来访与返程的时刻。"
+  },
+  {
+    "id": "star",
+    "category": "main",
+    "group": "forest",
+    "label": "神社林间与魔法森林",
+    "transition": false,
+    "text": "你沿神社旁的林径来到空坪，先与斯塔核对树后的动静，下次仍在同一片空地打招呼。"
+  },
+  {
+    "id": "kyouko",
+    "category": "main",
+    "group": "temple",
+    "label": "命莲寺公开来往",
+    "transition": true,
+    "text": "你到命莲寺门前问路，响子放下扫帚，指给你绕回人里的小径。你照着复述一遍，她点头，又拿起扫帚去清落叶。"
+  },
+  {
+    "id": "yoshika",
+    "category": "main",
+    "group": "history-dream",
+    "label": "生前与往昔之梦",
+    "transition": false,
+    "text": "你先明示进入本作想象芳香生前的旧梦，再让梦中能自主表达的她介绍诗页，现世青娥的命令不参与同意。"
+  },
+  {
+    "id": "seiga",
+    "category": "main",
+    "group": "seiga-house",
+    "label": "青娥旧宅与邪仙奇术",
+    "transition": true,
+    "text": "旧宅修理的差事把你带到墓地边，青娥领你看门框上的裂处。你记下工具尺寸，问清下次递交的位置，再沿原路返回。"
+  },
+  {
+    "id": "tojiko",
+    "category": "main",
+    "group": "senkai",
+    "label": "仙界与神灵庙道场",
+    "transition": true,
+    "text": "你随神灵庙接应递送旧壶，屠自古指出石阶上可停留的位置。你放好壶与清单，记清回程的岔口后告辞。"
+  },
+  {
+    "id": "futo",
+    "category": "main",
+    "group": "senkai",
+    "label": "仙界与神灵庙道场",
+    "transition": true,
+    "text": "你随接应到神灵庙道场门外，布都收起盘子，领你看摆放水槽的空地。你递交工具，沿她指的门口回到来路。"
+  },
+  {
+    "id": "miko",
+    "category": "main",
+    "group": "senkai",
+    "label": "仙界与神灵庙道场",
+    "transition": true,
+    "text": "你随接应到神灵庙道场，神子让你把听诉纸放到桌边。她问清这次递送的来意，交回凭条，再指出返程的入口。"
+  },
+  {
+    "id": "mamizou",
+    "category": "main",
+    "group": "village-public",
+    "label": "人里公开妖怪往来",
+    "transition": true,
+    "text": "你在集市外帮忙整理旧货，猯藏翻过一只碗，与你核对底下的刻痕。价签写好后，你们把碗摆回棚边。"
+  },
+  {
+    "id": "kokoro",
+    "category": "main",
+    "group": "village-public",
+    "label": "人里公开妖怪往来",
+    "transition": true,
+    "text": "你到演出场递送席面，心指给你舞台前的一片空地。你把席子铺平，等她试过落脚的位置，再去收整余下的布卷。"
+  },
+  {
+    "id": "elis",
+    "category": "pc98",
+    "group": "makai-dream",
+    "label": "旧作魔界梦路",
+    "transition": false,
+    "text": "你先沿独立旧作魔界梦路认清维纳废墟的回程，再在楼角向依莉斯说明这次来访，不迁入现代魔界。"
+  },
+  {
+    "id": "sariel",
+    "category": "pc98",
+    "group": "makai-dream",
+    "label": "旧作魔界梦路",
+    "transition": false,
+    "text": "你先循独立旧作魔界梦路到堕落神殿台阶，在可返回的位置向萨丽爱尔问候，不套用宗教同名人物前史。"
+  },
+  {
+    "id": "mima",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你先记下独立旧作梦路与醒返时刻，再在旧神社庭院向魅魔说明来意，不给现代幻想乡补一个突然归来的魅魔。"
+  },
+  {
+    "id": "kikuri",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你沿旧作之梦到炎之腐界，先在可返回的月轮前问候菊理，不借宗教同名传说替她补身份或身体。"
+  },
+  {
+    "id": "konngara",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你沿旧作之梦到静寂神殿，先在停剑处说明来意，再按相续梦路反复来访，不借同名典故补前史。"
+  },
+  {
+    "id": "rika",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你先记熟独立旧作梦里的试车坡，再向里香说明递交撑杆的差事，往后沿梦中原路返回。"
+  },
+  {
+    "id": "meira",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你循旧作梦路到练剑处，先等明罗停下剑再问来意，关于博丽之力的追问不改成已确认的爱情。"
+  },
+  {
+    "id": "ellen",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你先记熟独立旧作梦里的魔法店门，再向爱莲报上这次访客的名字，忘事时由双方重新相认。"
+  },
+  {
+    "id": "kotohime",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你先在独立旧作梦中认清收藏屋入口，再向小兔姬说明交还旧物的来意，不替其自称警察补公职。"
+  },
+  {
+    "id": "kana",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你沿独立旧作梦路到旧洋馆，先回应卡娜弄出的柜门响声，再由她自己决定是否接待这次来客。"
+  },
+  {
+    "id": "rikako",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你先沿旧作梦路到实验屋门外，再向理香子说明试验帮工的来意，自己的技能不因相识自动改变。"
+  },
+  {
+    "id": "chiyuri",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你先沿独立旧作梦路认清可能性空间移动船的来客位置，再与千百合完成轻箱交接，保留原作年龄边界。"
+  },
+  {
+    "id": "yumemi",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你先在独立旧作梦中核清研究舱的来客位置，再与梦美讨论所见的魔力证据，不把她搬到现代人里任职。"
+  },
+  {
+    "id": "ruukoto",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你先辨清这是独立旧作梦中的家务机器人留琴，再由她自己决定今天要做的事，梦内自主表达明确属于本作二创。"
+  },
+  {
+    "id": "orange",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你沿旧作之梦认熟后山旧路，先在空处向奥莲姬报上来意，再等她愿意停下展示后交谈。"
+  },
+  {
+    "id": "kurumi",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你先沿旧作梦路停在血之湖岸，向胡桃说明为何来访，获她回应后仍在约定岸边往返。"
+  },
+  {
+    "id": "elly",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你先沿旧作梦路停在梦幻馆大门外，艾丽核过来意后指出可以站的门边，不借送货擅入馆内。"
+  },
+  {
+    "id": "mugetsu",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你先辨清独立旧作梦里的交锋空地，等梦月愿意停下后问候；女仆装不被推成替谁任职的证据。"
+  },
+  {
+    "id": "gengetsu",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你沿独立旧作梦路到交锋空地，先等幻月收起急弹再说明来意，后续会面仍留在这段梦中。"
+  },
+  {
+    "id": "sara",
+    "category": "pc98",
+    "group": "makai-dream",
+    "label": "旧作魔界梦路",
+    "transition": false,
+    "text": "你先沿独立旧作魔界梦路停在入口，萨拉核过来意后再指出可往返的门边位置。"
+  },
+  {
+    "id": "louise",
+    "category": "pc98",
+    "group": "makai-dream",
+    "label": "旧作魔界梦路",
+    "transition": false,
+    "text": "你先在独立旧作魔界梦中与露易兹核清去梦中集市的路，陪同范围留在该梦篇，不宣称现实移居。"
+  },
+  {
+    "id": "yuki",
+    "category": "pc98",
+    "group": "makai-dream",
+    "label": "旧作魔界梦路",
+    "transition": false,
+    "text": "你先沿独立旧作魔界梦路认清冰雪坡上的落脚处，雪愿意停下后再说明这次递送或帮工来意。"
+  },
+  {
+    "id": "mai",
+    "category": "pc98",
+    "group": "makai-dream",
+    "label": "旧作魔界梦路",
+    "transition": false,
+    "text": "你先沿独立旧作魔界梦路到冰雪世界空处，与旧作的舞完成问候，不与丁礼田舞混为一人。"
+  },
+  {
+    "id": "yumeko",
+    "category": "pc98",
+    "group": "makai-dream",
+    "label": "旧作魔界梦路",
+    "transition": false,
+    "text": "你先获独立旧作魔界梦中的万魔殿侧廊会客安排，再向梦子说明收帘的帮工来意。"
+  },
+  {
+    "id": "shinki",
+    "category": "pc98",
+    "group": "makai-dream",
+    "label": "旧作魔界梦路",
+    "transition": false,
+    "text": "你先沿独立旧作魔界梦路获造物厅来访安排，向神绮说明折纸的来意，玩家不因此成为她创造的魔界居民。"
+  },
+  {
+    "id": "mike",
+    "category": "main",
+    "group": "mountain",
+    "label": "妖怪山访客与山麓",
+    "transition": false,
+    "text": "你随集市差事到妖怪山脚，三花核过这次摊位来意，双方先从照看摊牌与招呼客人相识。"
+  },
+  {
+    "id": "takane",
+    "category": "main",
+    "group": "mountain",
+    "label": "妖怪山访客与山麓",
+    "transition": false,
+    "text": "你沿允许的山林货路送来旧木箱，高岭核过来意后指定交接处，下次仍循这条货路来。"
+  },
+  {
+    "id": "sannyo",
+    "category": "main",
+    "group": "mountain",
+    "label": "妖怪山访客与山麓",
+    "transition": false,
+    "text": "你持山中来客邀约到伪天棚，先与山如说清旁观或交易的安排，不把烟的影响当心意。"
+  },
+  {
+    "id": "misumaru",
+    "category": "main",
+    "group": "mountain-special",
+    "label": "山中首领、神具与矿洞",
+    "transition": true,
+    "text": "你随制玉台的接应送磨石到洞外，魅须丸核过来意，指好放置位置。你交清磨石，再沿山路带回空盒。"
+  },
+  {
+    "id": "tsukasa",
+    "category": "main",
+    "group": "mountain",
+    "label": "妖怪山访客与山麓",
+    "transition": false,
+    "text": "你沿山间访客路到传话亭，先核对典递来的口信和自己的差事，往返不等于加入天狗势力。"
+  },
+  {
+    "id": "megumu",
+    "category": "main",
+    "group": "mountain-special",
+    "label": "山中首领、神具与矿洞",
+    "transition": true,
+    "text": "你随货物引荐到观星台，龙核过送来的记录，问了问山脚交易的情况。你答完，将空袋收好，依接应的山径返回。"
+  },
+  {
+    "id": "chimata",
+    "category": "main",
+    "group": "mountain",
+    "label": "妖怪山访客与山麓",
+    "transition": false,
+    "text": "你随山中集市差事摆出旧工具，先与千亦说清交易的归属与来意，双方从一次真实买卖相识。"
+  },
+  {
+    "id": "momoyo",
+    "category": "main",
+    "group": "mountain-special",
+    "label": "山中首领、神具与矿洞",
+    "transition": true,
+    "text": "你随矿路接应送工具到通风支洞，百百世指着一块平岩让你卸货。交清数目后，你仍跟着向导走回洞外。"
+  },
+  {
+    "id": "biten",
+    "category": "main",
+    "group": "sanctuary",
+    "label": "山林圣域边缘",
+    "transition": true,
+    "text": "你沿山路来取被猴群搬走的果篮，美天在石边问清失主，让猴群把篮子抬过来。你核好数目，循原路带回去。"
+  },
+  {
+    "id": "enoko",
+    "category": "main",
+    "group": "forest",
+    "label": "神社林间与魔法森林",
+    "transition": false,
+    "text": "你沿森林访客路送来约好的食物，先与慧之子辨清捕兽夹的位置，再留在可站稳的小径上交谈。"
+  },
+  {
+    "id": "chiyari",
+    "category": "main",
+    "group": "blood-pool",
+    "label": "旧血池地狱",
+    "transition": true,
+    "text": "你随旧血池接应到岸边修桶，血枪将火球移开，指好铁桶漏水的那面。你量过裂边，收好工具沿原路返回。"
+  },
+  {
+    "id": "hisami",
+    "category": "main",
+    "group": "hell",
+    "label": "地狱引路与神灵会见",
+    "transition": false,
+    "text": "你凭地狱短访引路停在入口，与日狭美先说清停留时间、报酬与原路返回，受她招呼不等于被追捕入狱。"
+  },
+  {
+    "id": "zanmu",
+    "category": "main",
+    "group": "hell",
+    "label": "地狱引路与神灵会见",
+    "transition": false,
+    "text": "你经地狱接应到残无允许短访的僧房，先说清传话差事与回程，普通棋谈之后才考虑私人来往。"
+  },
+  {
+    "id": "ubame",
+    "category": "main",
+    "group": "sanctuary",
+    "label": "山林圣域边缘",
+    "transition": true,
+    "text": "你随林缘接应到旧兽道，姥芽看过背篓，将几株外来草籽挑出。你把篓放在她指的空处，办完再沿路标返回。"
+  },
+  {
+    "id": "chimi",
+    "category": "main",
+    "group": "sanctuary",
+    "label": "山林圣域边缘",
+    "transition": true,
+    "text": "你随圣域引路到溪岸交付药草，魑魅从水雾里指了一块岸石。你将纸包放好，听她说完这次来意，再沿溪径折返。"
+  },
+  {
+    "id": "nareko",
+    "category": "main",
+    "group": "sealed-mountain",
+    "label": "净秽山地下设施与旧神社",
+    "transition": true,
+    "text": "你随净秽山接应到地下祭坛，驯子横起问号杖，问清这次短访的来意。你把供物放在坛边，仍随引路者原路返回。"
+  },
+  {
+    "id": "yuiman",
+    "category": "main",
+    "group": "sealed-mountain",
+    "label": "净秽山地下设施与旧神社",
+    "transition": true,
+    "text": "你随净秽山接应到四季竖穴，维缦挑了草坡边的一处空地，问你送来的是哪张画。你展开纸页，记好归路再告辞。"
+  },
+  {
+    "id": "ariya",
+    "category": "main",
+    "group": "sealed-mountain",
+    "label": "净秽山地下设施与旧神社",
+    "transition": true,
+    "text": "你沿指定通路到解封后的旧神社，阿梨夜接过花篮，自选一处有光的石台。你放好花，沿来时的通路返回。"
+  },
+  {
+    "id": "nina",
+    "category": "main",
+    "group": "forest",
+    "label": "神社林间与魔法森林",
+    "transition": false,
+    "text": "你循林路引荐到空地，先问贝子哪处是幻楼、哪处是实地，把自己的归路核清再听她介绍景象。"
+  },
+  {
+    "id": "akyuu",
+    "category": "main",
+    "group": "village-daily",
+    "label": "人里日常",
+    "transition": false,
+    "text": "你按普通访客的安排把旧书送到稗田邸，阿求核过缺页，日后仍以抄校或谈书为来意。"
+  },
+  {
+    "id": "toyohime",
+    "category": "main",
+    "group": "moon-dream",
+    "label": "月面与神灵梦路",
+    "transition": false,
+    "text": "你先沿可醒返的月面梦路到海边，由丰姬选择接应的外侧石径，再作为这次梦访来客问候。"
+  },
+  {
+    "id": "yorihime",
+    "category": "main",
+    "group": "moon-dream",
+    "label": "月面与神灵梦路",
+    "transition": false,
+    "text": "你先沿可醒返的月面梦路停在训练场外，依姬指定演示与站位，梦访不使玩家成为月之使者。"
+  },
+  {
+    "id": "reisen2",
+    "category": "main",
+    "group": "moon-dream",
+    "label": "月面与神灵梦路",
+    "transition": false,
+    "text": "你循已记清醒返的月面梦路到绵月家信房外，先与二号铃仙完成空纸交接，不与地上的优昙华院铃仙合并。"
+  },
+  {
+    "id": "kasen",
+    "category": "main",
+    "group": "hermit-estate",
+    "label": "华扇仙邸",
+    "transition": true,
+    "text": "你随山中引荐到华扇仙邸，按她指的位置放下鸟食。幼鹰伸爪取食时，你退到架边看了一会儿，再沿访客路返回。"
+  },
+  {
+    "id": "kosuzu",
+    "category": "main",
+    "group": "village-daily",
+    "label": "人里日常",
+    "transition": false,
+    "text": "你在铃奈庵借还书时向小铃请教难认的文字，下次来仍先交清书册与借阅记录。"
+  },
+  {
+    "id": "miyoi",
+    "category": "main",
+    "group": "village-public",
+    "label": "人里公开妖怪往来",
+    "transition": true,
+    "text": "你把一筐菜送到鲵吞亭，美宵核过清单，将空篮递回。你帮她把筐挪到后柜边，记下下一回送菜的时辰。"
+  },
+  {
+    "id": "mizuchi",
+    "category": "main",
+    "group": "supervised-spirit",
+    "label": "瑞灵相续之梦",
+    "transition": true,
+    "text": "你循梦路走到旧祭室的供台，瑞灵用自己的影指点了点空纸，问你认得哪个字。梦醒后，你把那段问候记在纸边。"
+  },
+  {
+    "id": "layla",
+    "category": "main",
+    "group": "history-dream",
+    "label": "生前与往昔之梦",
+    "transition": false,
+    "text": "你先辨清这是一段蕾拉尚在人世的往昔之梦，再从旧宅门前的普通来客问候开始，不把她复活到现世。"
+  },
+  {
+    "id": "change",
+    "category": "main",
+    "group": "moon-dream",
+    "label": "月面与神灵梦路",
+    "transition": false,
+    "text": "你先在月面梦中辨清月牢外的影子，隔墙与嫦娥问候；梦内回应不撤销现实幽闭或改变她的蟾蜍形态。"
+  },
+  {
+    "id": "maruchi",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你先辨清独立旧作梦中的玛○奇，再问她愿不愿共同收扫落叶，梦内自主选择明确属于本作二创。"
+  },
+  {
+    "id": "singyoku",
+    "category": "pc98",
+    "group": "pc98-dream",
+    "label": "旧作相续梦路",
+    "transition": false,
+    "text": "你先沿旧作梦路停在旧神社门外，神玉以女性人形自主回应后，才按这次守门问候继续往来。"
+  },
+  {
+    "id": "yuugenmagan",
+    "category": "pc98",
+    "group": "makai-dream",
+    "label": "旧作魔界梦路",
+    "transition": false,
+    "text": "你先在独立旧作魔界梦中认清大门外的回程，再试着向幽幻魔眼表达来意；其自主回应明确属于本作梦内二创。"
+  },
+  {
+    "id": "suiki",
+    "category": "main",
+    "group": "hell",
+    "label": "地狱引路与神灵会见",
+    "transition": false,
+    "text": "你循地狱访客通路到水墙外的干岸，水鬼先指出可站的位置，双方从观察或试作的普通来意相识。"
+  },
+  {
+    "id": "namazu",
+    "category": "main",
+    "group": "dream",
+    "label": "相续梦境",
+    "transition": false,
+    "text": "你先辨清这是本作接续美铃梦中Boss形象的梦岸，记住醒返，再与大鲶鱼谈那块全电气化招牌。"
+  }
+]

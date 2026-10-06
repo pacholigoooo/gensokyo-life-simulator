@@ -1,0 +1,532 @@
+[
+  {
+    "id": "canon:red-mist:1",
+    "text": "你读到红雾遮住湖面的旧记，抄下几处容易认错的岔路。",
+    "effects": {
+      "insight": 1
+    },
+    "weight": 1,
+    "repeat": 1,
+    "minAge": 18,
+    "realms": [
+      "gensokyo"
+    ],
+    "bodies": [
+      "humanoid"
+    ],
+    "careers": [
+      "craft",
+      "trade"
+    ],
+    "habitats": [
+      "village",
+      "outskirts"
+    ],
+    "min": {
+      "insight": 4
+    },
+    "set": [
+      "canon:red-mist:1"
+    ],
+    "excludes": [
+      "canon:red-mist:1"
+    ]
+  },
+  {
+    "id": "canon:red-mist:2",
+    "text": "你照旧记重描送货路上的木牌，把岔路箭头刻得更深。",
+    "effects": {
+      "fortune": -1,
+      "insight": 1
+    },
+    "weight": 1,
+    "repeat": 1,
+    "minAge": 18,
+    "realms": [
+      "gensokyo"
+    ],
+    "bodies": [
+      "humanoid"
+    ],
+    "careers": [
+      "craft",
+      "trade"
+    ],
+    "habitats": [
+      "village",
+      "outskirts"
+    ],
+    "min": {
+      "insight": 5,
+      "fortune": 2
+    },
+    "set": [
+      "canon:red-mist:2"
+    ],
+    "excludes": [
+      "canon:red-mist:2"
+    ],
+    "requires": [
+      "canon:red-mist:1"
+    ]
+  },
+  {
+    "id": "canon:red-mist:3",
+    "text": "你核过沿途路标，循着箭头带邻人送妥一车货，收下一点带路钱。",
+    "effects": {
+      "fortune": 1,
+      "bond": 1
+    },
+    "weight": 1,
+    "repeat": 1,
+    "minAge": 18,
+    "realms": [
+      "gensokyo"
+    ],
+    "bodies": [
+      "humanoid"
+    ],
+    "careers": [
+      "craft",
+      "trade"
+    ],
+    "habitats": [
+      "village",
+      "outskirts"
+    ],
+    "min": {
+      "bond": 4,
+      "health": 4
+    },
+    "set": [
+      "canon:red-mist:3"
+    ],
+    "excludes": [
+      "canon:red-mist:3"
+    ],
+    "requires": [
+      "canon:red-mist:2"
+    ]
+  },
+  {
+    "id": "canon:spring-snow:1",
+    "text": "你翻出春雪迟迟不退的旧粮账，在今年的用度旁添了几笔。",
+    "effects": {
+      "insight": 1
+    },
+    "weight": 1,
+    "repeat": 1,
+    "minAge": 18,
+    "realms": [
+      "gensokyo"
+    ],
+    "bodies": [
+      "humanoid"
+    ],
+    "careers": [
+      "garden",
+      "trade"
+    ],
+    "habitats": [
+      "village",
+      "outskirts"
+    ],
+    "min": {
+      "insight": 4
+    },
+    "set": [
+      "canon:spring-snow:1"
+    ],
+    "excludes": [
+      "canon:spring-snow:1"
+    ]
+  },
+  {
+    "id": "canon:spring-snow:2",
+    "text": "你按旧粮账学会轮换储粮，垫高粮缸，给这一季的袋口缝上记号。",
+    "effects": {
+      "fortune": -1
+    },
+    "weight": 1,
+    "repeat": 1,
+    "minAge": 18,
+    "realms": [
+      "gensokyo"
+    ],
+    "bodies": [
+      "humanoid"
+    ],
+    "careers": [
+      "garden",
+      "trade"
+    ],
+    "habitats": [
+      "village",
+      "outskirts"
+    ],
+    "min": {
+      "fortune": 3
+    },
+    "set": [
+      "canon:spring-snow:2"
+    ],
+    "excludes": [
+      "canon:spring-snow:2"
+    ],
+    "requires": [
+      "canon:spring-snow:1"
+    ]
+  },
+  {
+    "id": "canon:spring-snow:3",
+    "text": "邻家青黄不接，你依储粮的旧法取出本季余粮，分给邻人并收下借条。",
+    "effects": {
+      "bond": 1
+    },
+    "weight": 1,
+    "repeat": 1,
+    "minAge": 18,
+    "realms": [
+      "gensokyo"
+    ],
+    "bodies": [
+      "humanoid"
+    ],
+    "careers": [
+      "garden",
+      "trade"
+    ],
+    "habitats": [
+      "village",
+      "outskirts"
+    ],
+    "min": {
+      "bond": 4
+    },
+    "set": [
+      "canon:spring-snow:3"
+    ],
+    "excludes": [
+      "canon:spring-snow:3"
+    ],
+    "requires": [
+      "canon:spring-snow:2"
+    ]
+  },
+  {
+    "id": "canon:eternal-night:1",
+    "text": "你听同行说起天迟迟不亮的永夜旧闻，记下夜行最易失散的路口。",
+    "effects": {
+      "insight": 1
+    },
+    "weight": 1,
+    "repeat": 1,
+    "minAge": 18,
+    "realms": [
+      "gensokyo"
+    ],
+    "bodies": [
+      "humanoid"
+    ],
+    "careers": [
+      "trade",
+      "medicine"
+    ],
+    "habitats": [
+      "village",
+      "outskirts"
+    ],
+    "min": {
+      "insight": 4
+    },
+    "set": [
+      "canon:eternal-night:1"
+    ],
+    "excludes": [
+      "canon:eternal-night:1"
+    ]
+  },
+  {
+    "id": "canon:eternal-night:2",
+    "text": "你按记下的路口与同行约好候灯相见，错过时辰便各自回村。",
+    "effects": {
+      "bond": 1
+    },
+    "weight": 1,
+    "repeat": 1,
+    "minAge": 18,
+    "realms": [
+      "gensokyo"
+    ],
+    "bodies": [
+      "humanoid"
+    ],
+    "careers": [
+      "trade",
+      "medicine"
+    ],
+    "habitats": [
+      "village",
+      "outskirts"
+    ],
+    "min": {
+      "bond": 4
+    },
+    "set": [
+      "canon:eternal-night:2"
+    ],
+    "excludes": [
+      "canon:eternal-night:2"
+    ],
+    "requires": [
+      "canon:eternal-night:1"
+    ]
+  },
+  {
+    "id": "canon:eternal-night:3",
+    "text": "你依约在灯下等到同行，一起交妥包裹，领回约定的脚钱。",
+    "effects": {
+      "fortune": 1,
+      "bond": 1
+    },
+    "weight": 1,
+    "repeat": 1,
+    "minAge": 18,
+    "realms": [
+      "gensokyo"
+    ],
+    "bodies": [
+      "humanoid"
+    ],
+    "careers": [
+      "trade",
+      "medicine"
+    ],
+    "habitats": [
+      "village",
+      "outskirts"
+    ],
+    "min": {
+      "health": 4
+    },
+    "set": [
+      "canon:eternal-night:3"
+    ],
+    "excludes": [
+      "canon:eternal-night:3"
+    ],
+    "requires": [
+      "canon:eternal-night:2"
+    ]
+  },
+  {
+    "id": "canon:myouren-temple:1",
+    "text": "你听人讲命莲寺建成后的参访旧事，打听到白日走参道的路。",
+    "effects": {
+      "insight": 1
+    },
+    "weight": 1,
+    "repeat": 1,
+    "minAge": 18,
+    "realms": [
+      "gensokyo"
+    ],
+    "bodies": [
+      "humanoid"
+    ],
+    "careers": [
+      "craft",
+      "trade"
+    ],
+    "habitats": [
+      "village",
+      "outskirts"
+    ],
+    "min": {
+      "insight": 4
+    },
+    "set": [
+      "canon:myouren-temple:1"
+    ],
+    "excludes": [
+      "canon:myouren-temple:1"
+    ]
+  },
+  {
+    "id": "canon:myouren-temple:2",
+    "text": "你沿打听来的参道看过告示，留下帮忙补几把扫帚的约定。",
+    "effects": {
+      "bond": 1
+    },
+    "weight": 1,
+    "repeat": 1,
+    "minAge": 18,
+    "realms": [
+      "gensokyo"
+    ],
+    "bodies": [
+      "humanoid"
+    ],
+    "careers": [
+      "craft",
+      "trade"
+    ],
+    "habitats": [
+      "village",
+      "outskirts"
+    ],
+    "min": {
+      "bond": 4
+    },
+    "set": [
+      "canon:myouren-temple:2"
+    ],
+    "excludes": [
+      "canon:myouren-temple:2"
+    ],
+    "requires": [
+      "canon:myouren-temple:1"
+    ]
+  },
+  {
+    "id": "canon:myouren-temple:3",
+    "text": "你如约送去补好的扫帚，认得了管杂务的僧人，走前又核过归路。",
+    "effects": {
+      "fortune": -1,
+      "bond": 1
+    },
+    "weight": 1,
+    "repeat": 1,
+    "minAge": 18,
+    "realms": [
+      "gensokyo"
+    ],
+    "bodies": [
+      "humanoid"
+    ],
+    "careers": [
+      "craft",
+      "trade"
+    ],
+    "habitats": [
+      "village",
+      "outskirts"
+    ],
+    "min": {
+      "fortune": 2,
+      "health": 4
+    },
+    "set": [
+      "canon:myouren-temple:3"
+    ],
+    "excludes": [
+      "canon:myouren-temple:3"
+    ],
+    "requires": [
+      "canon:myouren-temple:2"
+    ]
+  },
+  {
+    "id": "canon:ability-market:1",
+    "text": "你听摊主讲起能力卡流通的旧闻，把问过的价钱记在账边。",
+    "effects": {
+      "insight": 1
+    },
+    "weight": 1,
+    "repeat": 1,
+    "minAge": 18,
+    "realms": [
+      "gensokyo"
+    ],
+    "bodies": [
+      "humanoid"
+    ],
+    "careers": [
+      "trade"
+    ],
+    "habitats": [
+      "village",
+      "outskirts"
+    ],
+    "min": {
+      "insight": 4
+    },
+    "set": [
+      "canon:ability-market:1"
+    ],
+    "excludes": [
+      "canon:ability-market:1"
+    ]
+  },
+  {
+    "id": "canon:ability-market:2",
+    "text": "你照账边记下的摊位核过当季价钱，为同行理出一张报价单。",
+    "effects": {
+      "insight": 1
+    },
+    "weight": 1,
+    "repeat": 1,
+    "minAge": 18,
+    "realms": [
+      "gensokyo"
+    ],
+    "bodies": [
+      "humanoid"
+    ],
+    "careers": [
+      "trade"
+    ],
+    "habitats": [
+      "village",
+      "outskirts"
+    ],
+    "min": {
+      "insight": 6
+    },
+    "set": [
+      "canon:ability-market:2"
+    ],
+    "excludes": [
+      "canon:ability-market:2"
+    ],
+    "requires": [
+      "canon:ability-market:1"
+    ]
+  },
+  {
+    "id": "canon:ability-market:3",
+    "text": "你把旧报价核成现价，代人跑完一笔卡牌买卖，交清货款后留下工钱。",
+    "effects": {
+      "fortune": 1,
+      "bond": 1
+    },
+    "weight": 1,
+    "repeat": 1,
+    "minAge": 18,
+    "realms": [
+      "gensokyo"
+    ],
+    "bodies": [
+      "humanoid"
+    ],
+    "careers": [
+      "trade"
+    ],
+    "habitats": [
+      "village",
+      "outskirts"
+    ],
+    "min": {
+      "bond": 5
+    },
+    "set": [
+      "canon:ability-market:3"
+    ],
+    "excludes": [
+      "canon:ability-market:3"
+    ],
+    "requires": [
+      "canon:ability-market:2"
+    ]
+  }
+]

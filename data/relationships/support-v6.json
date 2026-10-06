@@ -1,0 +1,6508 @@
+[
+  {
+    "id": "youki",
+    "title": "看一遍的木刀",
+    "romance": false,
+    "source": "https://thbwiki.cc/魂魄妖忌",
+    "contact": {
+      "domain": "history-dream",
+      "place": "旧日白玉楼庭院",
+      "premise": "你反复梦见妖忌仍在白玉楼任职的年月，在旧日庭院续上这段二创来往。"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "health": 5,
+        "insight": 5
+      }
+    },
+    "talents": [
+      "craft",
+      "careful",
+      "steady"
+    ],
+    "careers": [
+      "garden",
+      "craft"
+    ],
+    "intro": {
+      "text": "旧梦把你带到交班前的庭院，妖忌挥刀修枝，你在木桩外停步。",
+      "effects": {},
+      "next": "watch",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "watch": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "feet",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你先看脚步如何绕开树根，妖忌收刀后把同一条窄路留给你。",
+            "effects": {},
+            "next": "roots",
+            "label": "看清落脚",
+            "trust": 1,
+            "set": [
+              "watched_feet"
+            ]
+          },
+          {
+            "key": "ask",
+            "when": {},
+            "text": "你追着问每一刀的口诀，妖忌喝住话头，用刀背指向庭中的木桩。",
+            "effects": {},
+            "next": "roots",
+            "label": "闭口再看"
+          }
+        ]
+      },
+      "roots": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "slow",
+            "when": {
+              "min": {
+                "health": 6
+              }
+            },
+            "text": "你沿根隙慢慢清走落枝，脚步落在嫩芽之间。妖忌让你留下扫帚。",
+            "effects": {},
+            "next": "steel",
+            "label": "清枝不伤根",
+            "trust": 1,
+            "set": [
+              "kept_roots"
+            ]
+          },
+          {
+            "key": "rush",
+            "when": {},
+            "text": "你抄近路踩倒新芽，妖忌收走扫帚，让你蹲下扶正那一小片土。",
+            "effects": {},
+            "next": "steel",
+            "label": "踩坏新芽",
+            "trust": -1,
+            "set": [
+              "hurt_roots"
+            ]
+          }
+        ]
+      },
+      "steel": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "observe",
+            "when": {
+              "relationFlags": [
+                "watched_feet"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你拿木刀重走他的落脚处，妖忌默默用刀背拨开你的手腕，让你看清偏开的刀势。",
+            "effects": {},
+            "next": "frost",
+            "label": "偷得一式",
+            "trust": 1,
+            "set": [
+              "wooden_form"
+            ]
+          },
+          {
+            "key": "edge",
+            "when": {},
+            "text": "你要借真刀才肯练，妖忌把刀收入鞘中，递来一截重量合适的木头。",
+            "effects": {},
+            "next": "frost",
+            "label": "留在木刀前"
+          }
+        ]
+      },
+      "frost": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "steady",
+            "when": {
+              "min": {
+                "health": 7
+              }
+            },
+            "text": "你踩稳结霜的石阶搬开折枝，妖忌在旁停刀，等你腾出整条通路。",
+            "effects": {},
+            "next": "challenge",
+            "label": "霜阶共事",
+            "trust": 1,
+            "set": [
+              "cleared_steps"
+            ]
+          },
+          {
+            "key": "slip",
+            "when": {},
+            "text": "你在霜阶上滑了一步，妖忌用刀鞘挡住落枝，叫你换到平地继续。",
+            "effects": {
+              "health": -1
+            },
+            "next": "challenge",
+            "label": "换到平地",
+            "injury": true
+          }
+        ]
+      },
+      "challenge": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "contest",
+            "when": {
+              "relationFlags": [
+                "wooden_form"
+              ],
+              "min": {
+                "insight": 9
+              },
+              "max": {
+                "bond": 4
+              }
+            },
+            "text": "你把偷学的步法用于抢他的先手，妖忌第一次转身正对你，木刀碰出闷响。",
+            "effects": {},
+            "next": "answer",
+            "label": "争一刀高下",
+            "trust": -1,
+            "set": [
+              "challenged"
+            ],
+            "status": "rival"
+          },
+          {
+            "key": "accept",
+            "when": {},
+            "text": "你收起争先的念头，指给他看清出的石阶。妖忌从头再走一遍刀路。",
+            "effects": {},
+            "next": "lesson",
+            "label": "再看完整刀路",
+            "trust": 1
+          }
+        ]
+      },
+      "answer": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "bow",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你放下木刀，认下抢招时踩乱的落脚。妖忌拨正你的脚尖，让比试停在这里。",
+            "effects": {},
+            "next": "departure",
+            "label": "认错后继续",
+            "trust": 1,
+            "set": [
+              "bowed_after_challenge"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "press",
+            "when": {},
+            "text": "你坚持只有打赢才算学会，妖忌用刀背封住进路，把比试留成一个未解的结。",
+            "effects": {},
+            "next": "departure",
+            "label": "未解的胜负",
+            "trust": -1
+          }
+        ]
+      },
+      "lesson": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "roots",
+            "when": {
+              "relationFlags": [
+                "kept_roots",
+                "wooden_form"
+              ],
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "你从修枝动作里辨出木刀的停势，妖忌撤掉一根木桩，让你自己找新的步位。",
+            "effects": {},
+            "next": "departure",
+            "label": "从庭务学刀",
+            "trust": 1,
+            "set": [
+              "understood_stop"
+            ],
+            "status": "mentor"
+          },
+          {
+            "key": "sweep",
+            "when": {},
+            "text": "刀势没接上，你先把木桩旁的碎枝扫净。妖忌收刀站定，让你看下一轮。",
+            "effects": {},
+            "next": "departure",
+            "label": "以庭务相伴",
+            "trust": 1
+          }
+        ]
+      },
+      "departure": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "reconcile",
+            "when": {
+              "relationFlags": [
+                "challenged",
+                "bowed_after_challenge"
+              ]
+            },
+            "text": "离庭的旧梦渐近，你放下争胜的念头。妖忌把木刀横放，默许你站到近处。",
+            "effects": {},
+            "next": null,
+            "label": "刀前缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "mentor",
+            "when": {
+              "relationFlags": [
+                "understood_stop"
+              ],
+              "minTrust": 4
+            },
+            "text": "你独自绕过空下的木桩，妖忌看完才收刀，轻轻点了一下头。你握着木刀，记住那处落脚。",
+            "effects": {},
+            "next": null,
+            "label": "不言的师友",
+            "status": "mentor"
+          },
+          {
+            "key": "rival",
+            "when": {
+              "relationFlags": [
+                "challenged"
+              ],
+              "missingRelationFlags": [
+                "bowed_after_challenge"
+              ]
+            },
+            "text": "你把木刀竖在庭边等下一场，妖忌没有允诺。梦里的距离由那场未完比试留下。",
+            "effects": {},
+            "next": null,
+            "label": "未完的对手",
+            "status": "rival"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "妖忌继续修剪庭木，你在外圈拾枝，隔着树干看他的刀起落，脚步始终留在木桩之外。",
+            "effects": {},
+            "next": null,
+            "label": "庭外相识",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "silent-step",
+        "states": [
+          "mentor"
+        ],
+        "text": "旧梦里少了一根木桩，你径直踩准空位，妖忌把刀势放慢，让你看清这一回的转身。",
+        "effects": {}
+      },
+      {
+        "key": "blade-sound",
+        "states": [
+          "rival"
+        ],
+        "text": "旧梦的木刀又碰出一声闷响，你和妖忌各守落脚，上回抢过的先手又成了一场较量。",
+        "effects": {}
+      },
+      {
+        "key": "near-bough",
+        "states": [
+          "reconciled"
+        ],
+        "text": "妖忌在旧梦中拨开垂枝，让你从近处看刀。你走过树根时特意放慢脚步。",
+        "effects": {}
+      },
+      {
+        "key": "outer-garden",
+        "states": [
+          "estranged"
+        ],
+        "text": "你在旧梦的外圈听见修枝声，妖忌隔着庭木挥刀，你抱着落枝，等那阵刀光收回。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "mentor": "一生末页，你梦回那根被撤去的木桩，照旧踩进空处，记得妖忌看完刀路才点下的头。",
+      "reconciled": "旧梦里的木刀横放在庭边，你记得争先之后获准站近的那一回，根隙中的脚步渐渐安静。",
+      "rival": "一生写尽，那场旧梦中的木刀比试始终没分出胜负，闷响与双方各守的落脚处还记得清。",
+      "estranged": "梦里的修枝声隔着树木传来。你拾起庭外的落枝，这一生看过的刀光始终在外圈之外。"
+    }
+  },
+  {
+    "id": "layla",
+    "title": "空椅上的名字",
+    "romance": false,
+    "source": "https://thbwiki.cc/蕾拉·普莉兹姆利巴",
+    "contact": {
+      "domain": "history-dream",
+      "place": "蕾拉生前的旧宅",
+      "premise": "你在蕾拉尚在人世的旧宅里与她相遇，这段二创往昔之梦随每次入睡接续。"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "bond": 5
+      }
+    },
+    "talents": [
+      "notes",
+      "neighborly",
+      "promise"
+    ],
+    "careers": [
+      "scholar",
+      "craft"
+    ],
+    "intro": {
+      "text": "你在生前旧事的梦里来到宅门，蕾拉正把一张空椅挪向没有人坐的窗边。",
+      "effects": {},
+      "next": "window",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "window": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "listen",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你听蕾拉说完窗边曾坐着谁，静静留在空椅旁。她给你挪出一张小凳。",
+            "effects": {},
+            "next": "album",
+            "label": "听完空椅的旧事",
+            "trust": 1,
+            "set": [
+              "listened_empty_chair"
+            ]
+          },
+          {
+            "key": "comfort",
+            "when": {},
+            "text": "你说宅子总会热闹起来，蕾拉把空椅推回墙边，转而问你门外有没有下雨。",
+            "effects": {},
+            "next": "album",
+            "label": "话题停在天气"
+          }
+        ]
+      },
+      "album": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "ask",
+            "when": {
+              "min": {
+                "insight": 7
+              }
+            },
+            "text": "你看到合起的家中旧册，先问她哪一页能看。蕾拉自己翻开有四个名字的一页。",
+            "effects": {},
+            "next": "voices",
+            "label": "由她翻开旧册",
+            "trust": 1,
+            "set": [
+              "asked_album"
+            ]
+          },
+          {
+            "key": "pry",
+            "when": {},
+            "text": "你趁她找蜡烛翻开旧册，蕾拉回来后把册子合上，连灯也挪远了一些。",
+            "effects": {},
+            "next": "voices",
+            "label": "擅翻旧册",
+            "trust": -1,
+            "set": [
+              "pried_album"
+            ]
+          }
+        ]
+      },
+      "voices": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "wait",
+            "when": {
+              "relationFlags": [
+                "listened_empty_chair"
+              ],
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "墙边传来像姐姐的声音，你等蕾拉先回应。她告诉你那声音如今也会向她问话。",
+            "effects": {},
+            "next": "supper",
+            "label": "听见新的回应",
+            "trust": 1,
+            "set": [
+              "accepted_voices"
+            ]
+          },
+          {
+            "key": "compare",
+            "when": {},
+            "text": "你追问那声音像不像原来的姐姐。蕾拉反复纠正你的称呼，最后只留下自己的名字。",
+            "effects": {},
+            "next": "supper",
+            "label": "名字说不拢",
+            "trust": -1,
+            "set": [
+              "compared_sisters"
+            ]
+          }
+        ]
+      },
+      "supper": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "share",
+            "when": {
+              "min": {
+                "fortune": 4
+              }
+            },
+            "text": "你带来的面包放上小桌，蕾拉分出两人的份量，给墙边的声音留下一段闲话。",
+            "effects": {},
+            "next": "question",
+            "label": "生前的小饭桌",
+            "trust": 1,
+            "set": [
+              "shared_supper"
+            ]
+          },
+          {
+            "key": "empty",
+            "when": {},
+            "text": "你空着手来，蕾拉把自己的面包分成两半。你们坐在桌边听屋里细碎的声响。",
+            "effects": {},
+            "next": "question",
+            "label": "分开一份面包",
+            "trust": 1
+          }
+        ]
+      },
+      "question": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "separate",
+            "when": {
+              "relationFlags": [
+                "accepted_voices"
+              ],
+              "missingRelationFlags": [
+                "pried_album"
+              ]
+            },
+            "text": "你说出人类姐姐与眼前声音的不同名字，蕾拉松开攥紧的衣角，肯继续讲旧日。",
+            "effects": {},
+            "next": "choice",
+            "label": "分别记住名字",
+            "trust": 1,
+            "set": [
+              "named_separately"
+            ],
+            "status": "friend"
+          },
+          {
+            "key": "hurt",
+            "when": {},
+            "text": "你把她的陪伴说成随时能换的幻影，蕾拉端走自己的盘子，窗边的小凳空了下来。",
+            "effects": {},
+            "next": "repair",
+            "label": "伤了陪伴的名字",
+            "trust": -2,
+            "set": [
+              "dismissed_voices"
+            ],
+            "status": "estranged"
+          }
+        ]
+      },
+      "repair": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "admit",
+            "when": {
+              "min": {
+                "bond": 8
+              }
+            },
+            "text": "你承认替墙边的声音擅定了名字，停下来听蕾拉说。她把小凳放回桌边。",
+            "effects": {},
+            "next": "choice",
+            "label": "把名字还给她",
+            "trust": 2,
+            "set": [
+              "apologized"
+            ],
+            "clear": [
+              "dismissed_voices",
+              "compared_sisters",
+              "pried_album"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "insist",
+            "when": {},
+            "text": "你仍要她按你的话去解释墙边声音，蕾拉把饭桌移进屋内，只在门口接下问候。",
+            "effects": {},
+            "next": "choice",
+            "label": "止于门前",
+            "trust": -1
+          }
+        ]
+      },
+      "choice": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "her-choice",
+            "when": {
+              "minTrust": 3,
+              "relationFlags": [
+                "shared_supper"
+              ]
+            },
+            "text": "蕾拉决定把窗帘换个方向，你帮她扶稳旧凳，听她讲这次是自己喜欢的颜色。",
+            "effects": {},
+            "next": "threshold",
+            "label": "给新日子留位置",
+            "trust": 1,
+            "set": [
+              "chose_new_curtain"
+            ]
+          },
+          {
+            "key": "leave",
+            "when": {},
+            "text": "蕾拉自己搬动窗边的小凳，你在门外等她忙完，看她把屋里的位置重新摆好。",
+            "effects": {},
+            "next": "threshold",
+            "label": "门外等候"
+          }
+        ]
+      },
+      "threshold": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "repair-end",
+            "when": {
+              "relationFlags": [
+                "apologized"
+              ],
+              "minTrust": 1
+            },
+            "text": "门槛内的小凳重新有了你的座位，蕾拉愿意谈到旧事，也会打断你说自己的近况。",
+            "effects": {},
+            "next": null,
+            "label": "旧梦中的缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "named_separately",
+                "chose_new_curtain"
+              ],
+              "minTrust": 4
+            },
+            "text": "蕾拉在梦中的饭桌边叫你的名字，你们从空椅的旧事说到近况，愿意听彼此把话讲完。",
+            "effects": {},
+            "next": null,
+            "label": "生前梦中的友人",
+            "status": "friend"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "蕾拉关门前向你点头，屋内的声音沿窗帘传来。你们的来往停在她愿意开的那道门。",
+            "effects": {},
+            "next": null,
+            "label": "止于宅门",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "chosen-color",
+        "states": [
+          "friend"
+        ],
+        "text": "旧梦里蕾拉换了一块窗帘，你先问她喜欢哪一面，她笑着把新颜色展给你看。",
+        "effects": {}
+      },
+      {
+        "key": "small-stool",
+        "states": [
+          "friend",
+          "reconciled"
+        ],
+        "text": "生前旧梦的小桌边有一张空凳，蕾拉叫你坐下，把这次想到的话慢慢说完。",
+        "effects": {}
+      },
+      {
+        "key": "own-name",
+        "states": [
+          "reconciled"
+        ],
+        "text": "蕾拉在旧梦中纠正你一个称呼，你停下来听清，她也愿意把后面的话继续说下去。",
+        "effects": {}
+      },
+      {
+        "key": "shut-door",
+        "states": [
+          "estranged"
+        ],
+        "text": "旧梦中的宅门只开了一小半，蕾拉接下你的问候，窗边的声音留在门后的房间里。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "此生末页，你梦回蕾拉生前的小饭桌，那张小凳还在。谈完空椅的旧事，她曾说起喜欢的新颜色。",
+      "reconciled": "生前旧梦里，小凳从远处挪回了桌边。你记得蕾拉打断旧事，开始讲自己近况的那一刻。",
+      "estranged": "生前梦里的宅门开过一小半，蕾拉收下门外的问候。你听着窗帘后的细声，停在门槛前。"
+    }
+  },
+  {
+    "id": "change",
+    "title": "隔墙的停拍",
+    "romance": false,
+    "source": "https://thbwiki.cc/嫦娥",
+    "contact": {
+      "domain": "moon-dream",
+      "place": "月牢外的梦影",
+      "premise": "你在二创星月梦中隔墙与嫦娥相见；她被囚的肉身始终留在月牢，回应来自梦影。"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "insight": 6
+      }
+    },
+    "talents": [
+      "moon",
+      "stargaze",
+      "patient"
+    ],
+    "careers": [
+      "scholar"
+    ],
+    "intro": {
+      "text": "星月的梦把你留在幽闭之所的外影，嫦娥以蟾蜍姿态伏在墙内，身后是闭合的门影。",
+      "effects": {},
+      "next": "knock",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "knock": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "pause",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你听捣杵声里的一段空拍，等到那里才轻敲石壁。墙内的蟾蜍向声响偏了一点头。",
+            "effects": {},
+            "next": "shadow",
+            "label": "听懂空拍",
+            "trust": 1,
+            "set": [
+              "heard_pause"
+            ]
+          },
+          {
+            "key": "loud",
+            "when": {},
+            "text": "你用响声盖过捣杵，墙内的蟾蜍缩到暗处，梦里的墙影也跟着厚了一层。",
+            "effects": {},
+            "next": "shadow",
+            "label": "声响被挡住",
+            "trust": -1,
+            "set": [
+              "drowned_pause"
+            ]
+          }
+        ]
+      },
+      "shadow": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "mark",
+            "when": {
+              "relationFlags": [
+                "heard_pause"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你在墙外摆三粒梦石记下停拍，嫦娥用前足挪出一道浅痕，留在同一片影子里。",
+            "effects": {},
+            "next": "names",
+            "label": "隔墙留浅痕",
+            "trust": 1,
+            "set": [
+              "shared_marks"
+            ]
+          },
+          {
+            "key": "count",
+            "when": {},
+            "text": "你数捣杵数到半途便乱了，墙内只有一小道爪痕，你在外影耐心从头辨声。",
+            "effects": {},
+            "next": "names",
+            "label": "从头辨声"
+          }
+        ]
+      },
+      "names": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "present",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你向墙内报出自己如今的名字，随后静静等待。嫦娥沿墙走近，停在能听见的地方。",
+            "effects": {},
+            "next": "gate",
+            "label": "留下自己的名字",
+            "trust": 1,
+            "set": [
+              "gave_own_name"
+            ]
+          },
+          {
+            "key": "past",
+            "when": {},
+            "text": "你把地上的传闻一口气问出来，嫦娥伏回暗处，爪痕之外再没有新的回应。",
+            "effects": {},
+            "next": "gate",
+            "label": "旧怨无人作答",
+            "trust": -1,
+            "set": [
+              "pressed_old_grudge"
+            ]
+          }
+        ]
+      },
+      "gate": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "stay",
+            "when": {
+              "relationFlags": [
+                "shared_marks"
+              ],
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "梦里的门影忽然松动，你停在原位等她。嫦娥留在墙内，把爪尖放回浅痕旁。",
+            "effects": {},
+            "next": "quiet",
+            "label": "不替她推门",
+            "trust": 1,
+            "set": [
+              "left_gate_alone"
+            ]
+          },
+          {
+            "key": "open",
+            "when": {},
+            "text": "你把松动的门影当作邀请，伸手推开一道裂隙。嫦娥后退，墙外的梦石散成冷光。",
+            "effects": {},
+            "next": "rift",
+            "label": "误推门影",
+            "trust": -2,
+            "set": [
+              "pushed_gate"
+            ],
+            "status": "estranged"
+          }
+        ]
+      },
+      "rift": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "withdraw",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你把手收回，承认自己把会面当成了越墙。嫦娥停下后退，墙影恢复原来的距离。",
+            "effects": {},
+            "next": "repair",
+            "label": "收回越墙之手",
+            "trust": 1,
+            "set": [
+              "withdrew"
+            ]
+          },
+          {
+            "key": "force",
+            "when": {},
+            "text": "你继续扩开门影，墙内的蟾蜍消失在阴影后，梦中只剩捣杵声把两边分开。",
+            "effects": {},
+            "next": "repair",
+            "label": "墙影闭合",
+            "trust": -1,
+            "set": [
+              "forced_shadow"
+            ]
+          }
+        ]
+      },
+      "repair": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "wait",
+            "when": {
+              "relationFlags": [
+                "withdrew"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你站稳在外影重新辨认空拍，双手垂在身侧。嫦娥用爪尖压住墙边一点光，回应停在那里。",
+            "effects": {},
+            "next": "quiet",
+            "label": "隔墙恢复回应",
+            "trust": 1,
+            "set": [
+              "restored_pause"
+            ],
+            "clear": [
+              "forced_shadow"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "silent",
+            "when": {},
+            "text": "你在墙外等了一阵，捣杵仍按自己的节拍继续。这一回没有爪痕接住你的声音。",
+            "effects": {},
+            "next": "quiet",
+            "label": "没有接上的声音"
+          }
+        ]
+      },
+      "quiet": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "together",
+            "when": {
+              "relationFlags": [
+                "shared_marks",
+                "gave_own_name"
+              ],
+              "minTrust": 3
+            },
+            "text": "你们隔墙守住同一段停拍，嫦娥伏着不动，你也把想追问的话留到寂静之后。",
+            "effects": {},
+            "next": "last",
+            "label": "隔墙同听停拍",
+            "trust": 1,
+            "set": [
+              "kept_quiet_together"
+            ],
+            "status": "friend"
+          },
+          {
+            "key": "distant",
+            "when": {},
+            "text": "这一回只听到捣杵的远声，墙内一片沉寂，你等过一轮便从墙外醒来。",
+            "effects": {},
+            "next": "last",
+            "label": "止于墙外静听"
+          }
+        ]
+      },
+      "last": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "repaired",
+            "when": {
+              "relationFlags": [
+                "pushed_gate",
+                "restored_pause"
+              ],
+              "minTrust": 1
+            },
+            "text": "嫦娥在梦墙内向浅痕挪近，你在外侧回应空拍。你们把会面的距离留在各自这一边。",
+            "effects": {},
+            "next": null,
+            "label": "月牢梦影缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "left_gate_alone",
+                "kept_quiet_together"
+              ],
+              "minTrust": 4
+            },
+            "text": "月牢的梦影保持闭合。嫦娥听到你的停拍便移向墙边，隔墙的来往有了熟悉的位置。",
+            "effects": {},
+            "next": null,
+            "label": "隔墙梦友",
+            "status": "friend"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "嫦娥的身影留在墙内深处，你听过远远的捣杵声，从月牢闭合的门影前醒来。",
+            "effects": {},
+            "next": null,
+            "label": "隔墙疏远",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "pause-answer",
+        "states": [
+          "friend"
+        ],
+        "text": "月牢梦影里的一段空拍接上爪尖的浅响，你在墙外停住，嫦娥伏到熟悉的阴影边。",
+        "effects": {}
+      },
+      {
+        "key": "three-shadows",
+        "states": [
+          "friend"
+        ],
+        "text": "你在月牢外影摆开三粒新梦石，墙内留下短短爪痕，停拍有了这回的记号。",
+        "effects": {},
+        "when": {
+          "relationFlags": [
+            "shared_marks"
+          ]
+        }
+      },
+      {
+        "key": "unforced-door",
+        "states": [
+          "reconciled"
+        ],
+        "text": "月牢的门影轻轻一晃，你站在原处等回应，墙内的蟾蜍仍伏在能看清的那片阴影中。",
+        "effects": {}
+      },
+      {
+        "key": "far-pestle",
+        "states": [
+          "estranged"
+        ],
+        "text": "月牢外影没有接上新的浅响，你听过一轮远处捣杵，便从那道闭合的梦墙前醒来。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "此生末页，你梦回幽闭的月牢，捣杵声里仍听得出那段熟悉停拍，墙内浅痕曾回应墙外的名字。",
+      "reconciled": "旧梦里的月牢门始终闭合。你记得收回推门的手以后，墙内爪尖慢慢留下的新回应。",
+      "estranged": "一生写尽，你在月牢外的旧梦里听过最后一轮捣杵，蟾蜍伏在深处，停拍之后依旧沉寂。"
+    }
+  },
+  {
+    "id": "maruchi",
+    "title": "被扫进簸箕的字",
+    "romance": false,
+    "source": "https://thbwiki.cc/玛○奇",
+    "contact": {
+      "domain": "pc98-dream",
+      "place": "旧作博丽神社廊下",
+      "premise": "你在《梦时空》旧作连续性的二创梦篇中帮玛○奇做神社家务，每次沿梦里的廊道往返。"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "insight": 5
+      }
+    },
+    "talents": [
+      "handy",
+      "craft",
+      "careful"
+    ],
+    "careers": [
+      "craft"
+    ],
+    "intro": {
+      "text": "旧作之梦落在神社廊下，玛○奇扫过你脚边的落叶，你提起簸箕跟了上去。",
+      "effects": {},
+      "next": "broom",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "broom": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "match",
+            "when": {
+              "talentsAny": [
+                "handy",
+                "careful"
+              ],
+              "min": {
+                "insight": 6
+              }
+            },
+            "text": "你把簸箕贴着扫帚的停处放下，玛○奇少走半圈，将落叶整齐推到你这一侧。",
+            "effects": {},
+            "next": "paper",
+            "label": "配合扫除节奏",
+            "trust": 1,
+            "set": [
+              "matched_broom"
+            ]
+          },
+          {
+            "key": "cross",
+            "when": {},
+            "text": "你把簸箕横到扫帚前，玛○奇绕过阻挡多走一圈，你只接住了散开的几片叶。",
+            "effects": {},
+            "next": "paper",
+            "label": "挡住扫除线路"
+          }
+        ]
+      },
+      "paper": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "sort",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你从落叶里拾出写着字的旧纸，先放到干处。玛○奇停下扫帚，绕过那块地面。",
+            "effects": {},
+            "next": "threshold",
+            "label": "另放有字旧纸",
+            "trust": 1,
+            "set": [
+              "saved_paper"
+            ]
+          },
+          {
+            "key": "trash",
+            "when": {},
+            "text": "你让玛○奇把有字旧纸也扫入簸箕，纸角被湿叶黏住，你才看见里面未读的字。",
+            "effects": {},
+            "next": "threshold",
+            "label": "字纸混进湿叶",
+            "trust": -1,
+            "set": [
+              "discarded_paper"
+            ]
+          }
+        ]
+      },
+      "threshold": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "lift",
+            "when": {
+              "min": {
+                "health": 6
+              }
+            },
+            "text": "你抬起门槛边松动的木板，玛○奇从空出的窄道推走积尘，回来时让你先落下。",
+            "effects": {},
+            "next": "rain",
+            "label": "一同清开门槛",
+            "trust": 1,
+            "set": [
+              "cleared_threshold"
+            ]
+          },
+          {
+            "key": "wedge",
+            "when": {},
+            "text": "你搬不动松板，便拿木楔固定一角。玛○奇沿缝扫走积尘，留下更窄的来路。",
+            "effects": {},
+            "next": "rain",
+            "label": "窄缝扫除",
+            "trust": 1
+          }
+        ]
+      },
+      "rain": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "wait",
+            "when": {
+              "relationFlags": [
+                "matched_broom"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "湿廊下的扫帚拖出水痕，你先让玛○奇停在干处，再把积水分段送到檐外。",
+            "effects": {},
+            "next": "order",
+            "label": "暂停湿地扫除",
+            "trust": 1,
+            "set": [
+              "waited_dry"
+            ]
+          },
+          {
+            "key": "push",
+            "when": {},
+            "text": "你催玛○奇继续扫湿廊，簸箕沿水痕打滑。它停在门槛前，扫帚横着挡住去路。",
+            "effects": {},
+            "next": "order",
+            "label": "催促受阻",
+            "trust": -1,
+            "set": [
+              "overloaded_chore"
+            ]
+          }
+        ]
+      },
+      "order": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "undo",
+            "when": {
+              "relationFlags": [
+                "discarded_paper"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你把那次混入湿叶的错认下来，另做一只放字纸的浅盒。玛○奇将扫帚转向盒外。",
+            "effects": {},
+            "next": "rework",
+            "label": "补上字纸的位置",
+            "trust": 1,
+            "set": [
+              "paper_repair"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "rush",
+            "when": {
+              "relationFlags": [
+                "overloaded_chore"
+              ],
+              "max": {
+                "bond": 4
+              }
+            },
+            "text": "你把新的杂务一齐堆到它面前，玛○奇反复绕不过门槛，簸箕与扫帚挤在一起。",
+            "effects": {},
+            "next": "rework",
+            "label": "堆满扫除路径",
+            "trust": -1,
+            "set": [
+              "kept_overloading"
+            ],
+            "status": "estranged"
+          },
+          {
+            "key": "divide",
+            "when": {},
+            "text": "你先清开自己放下的杂物，再把扫除分成两段。玛○奇沿空出来的廊道继续。",
+            "effects": {},
+            "next": "finish",
+            "label": "把廊道让出来",
+            "trust": 1,
+            "set": [
+              "divided_tasks"
+            ]
+          }
+        ]
+      },
+      "rework": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "reduce",
+            "when": {
+              "min": {
+                "insight": 9,
+                "bond": 6
+              }
+            },
+            "text": "你搬走堆叠的杂物，等它完成一段才接下一只簸箕。玛○奇的扫帚终于转出门槛。",
+            "effects": {},
+            "next": "finish",
+            "label": "改掉堆叠杂务",
+            "trust": 1,
+            "set": [
+              "reduced_load"
+            ],
+            "clear": [
+              "kept_overloading"
+            ]
+          },
+          {
+            "key": "withdraw",
+            "when": {},
+            "text": "你取走自己的杂物，玛○奇继续它那边的扫除。两只簸箕不再放到同一处。",
+            "effects": {},
+            "next": "finish",
+            "label": "各扫各的廊道",
+            "trust": -1
+          }
+        ]
+      },
+      "finish": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "pair",
+            "when": {
+              "minTrust": 3,
+              "relationFlags": [
+                "cleared_threshold"
+              ]
+            },
+            "text": "你接走最后一簸箕落叶，玛○奇把扫帚靠在干处。清开的门槛正好容两人通过。",
+            "effects": {},
+            "next": "last-chore",
+            "label": "一起收完落叶",
+            "trust": 1,
+            "set": [
+              "finished_together"
+            ],
+            "status": "friend"
+          },
+          {
+            "key": "separate",
+            "when": {},
+            "text": "你收好自己的簸箕，玛○奇把未清的一角慢慢扫完，干净的廊道留在两边之间。",
+            "effects": {},
+            "next": "last-chore",
+            "label": "各自收尾"
+          }
+        ]
+      },
+      "last-chore": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "repaired",
+            "when": {
+              "relationFlags": [
+                "paper_repair"
+              ],
+              "minTrust": 2
+            },
+            "text": "有字的纸落进浅盒，落叶进入簸箕。玛○奇的扫帚在两者间绕开，你也接准了这一回。",
+            "effects": {},
+            "next": null,
+            "label": "扫除中的缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "matched_broom",
+                "finished_together"
+              ],
+              "missingRelationFlags": [
+                "kept_overloading"
+              ],
+              "minTrust": 4
+            },
+            "text": "你举起簸箕等在停处。玛○奇沿熟悉的节奏送来落叶，旧作之梦里的廊道又清出一截。",
+            "effects": {},
+            "next": null,
+            "label": "一同扫除的伙伴",
+            "status": "friend"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "玛○奇绕过你放簸箕的位置继续工作，你在另一端清扫，旧作之梦留下两条不相交的水痕。",
+            "effects": {},
+            "next": null,
+            "label": "分开的扫除",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "leaf-pile",
+        "states": [
+          "friend"
+        ],
+        "text": "旧作之梦里，玛○奇把落叶扫成一小堆，你在停处接好簸箕，它顺着空出的廊道走过。",
+        "effects": {}
+      },
+      {
+        "key": "paper-box",
+        "states": [
+          "reconciled"
+        ],
+        "text": "旧作廊下有字的纸被你先放进浅盒，玛○奇绕过盒沿，扫走旁边积下的细尘。",
+        "effects": {},
+        "when": {
+          "relationFlags": [
+            "paper_repair"
+          ]
+        }
+      },
+      {
+        "key": "dry-corner",
+        "states": [
+          "friend",
+          "reconciled"
+        ],
+        "text": "你在旧作廊下等它扫完自己的那段，玛○奇把扫帚挪开，给你留下收拾簸箕的地方。",
+        "effects": {}
+      },
+      {
+        "key": "other-end",
+        "states": [
+          "estranged"
+        ],
+        "text": "旧作之梦里，你和玛○奇各扫一段廊道，簸箕分别放在两端，檐下的水痕渐渐干了。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "此生末页，你梦回旧作廊下，仍记得接叶时该将簸箕放在哪里，扫帚便能顺着停处推来。",
+      "reconciled": "旧作之梦里，有字的纸放进浅盒，落叶扫入簸箕。你记得分清它们以后，玛○奇怎样绕过盒沿。",
+      "estranged": "最后一回旧作之梦，你提着簸箕站在廊道这端，看玛○奇沿另一段地面清扫，水痕逐渐干去。"
+    }
+  },
+  {
+    "id": "laika",
+    "title": "门槛边的短哨",
+    "romance": false,
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "contact": {
+      "domain": "forest",
+      "place": "香霖堂店门"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "bond": 5
+      }
+    },
+    "talents": [
+      "neighborly",
+      "handy",
+      "patient"
+    ],
+    "careers": [
+      "craft",
+      "trade"
+    ],
+    "intro": {
+      "text": "你沿林路来到香霖堂门口放下包，机器犬莱卡踏到门槛边，幼犬之灵对着包角嗅了嗅。",
+      "effects": {},
+      "next": "threshold",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "threshold": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "wait",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你把手放低，等莱卡自己踏过门槛。它嗅过袖口，安静停在你的随身包旁。",
+            "effects": {},
+            "next": "rattle",
+            "label": "等它自己靠近",
+            "trust": 1,
+            "set": [
+              "familiar_scent"
+            ]
+          },
+          {
+            "key": "reach",
+            "when": {},
+            "text": "你越过门槛伸手摸它，莱卡连退两步，机足碰到木边，你收回手等它停稳。",
+            "effects": {},
+            "next": "rattle",
+            "label": "伸手太快",
+            "trust": -1,
+            "set": [
+              "startled_dog"
+            ]
+          }
+        ]
+      },
+      "rattle": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "quiet",
+            "when": {
+              "min": {
+                "insight": 7
+              }
+            },
+            "text": "包里的小物相碰作响，你先裹住它们。莱卡从门内探出头，跟着安静的包走近。",
+            "effects": {},
+            "next": "whistle",
+            "label": "收住陌生响声",
+            "trust": 1,
+            "set": [
+              "quiet_bundle"
+            ]
+          },
+          {
+            "key": "shake",
+            "when": {},
+            "text": "你晃包想引莱卡出来，响声让它绕到门后，你等了很久也没等到它追出来。",
+            "effects": {},
+            "next": "whistle",
+            "label": "响声赶远犬灵",
+            "trust": -1,
+            "set": [
+              "shook_bundle"
+            ]
+          }
+        ]
+      },
+      "whistle": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "short",
+            "when": {
+              "relationFlags": [
+                "quiet_bundle"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你只吹一声短哨便停，莱卡从门后踏出来，在你身边停住，等下一回短响。",
+            "effects": {},
+            "next": "ball",
+            "label": "短哨对应停步",
+            "trust": 1,
+            "set": [
+              "learned_whistle"
+            ]
+          },
+          {
+            "key": "many",
+            "when": {},
+            "text": "你连着换了几种哨声，莱卡来回转头，最终伏在门槛内，没有跟上你的叫唤。",
+            "effects": {},
+            "next": "ball",
+            "label": "哨声没有接上"
+          }
+        ]
+      },
+      "ball": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "offer",
+            "when": {
+              "min": {
+                "fortune": 3
+              }
+            },
+            "text": "你把新布球滚到门外，莱卡追过去顶回一段，又将身体压低，等你再滚一次。",
+            "effects": {},
+            "next": "check",
+            "label": "布球往返",
+            "trust": 1,
+            "set": [
+              "played_ball"
+            ]
+          },
+          {
+            "key": "corner",
+            "when": {},
+            "text": "你没有带玩具，便绕到它看得见的门边坐下。莱卡沿包角嗅了一圈，伏在旁边。",
+            "effects": {},
+            "next": "check",
+            "label": "门边陪伏",
+            "trust": 1
+          }
+        ]
+      },
+      "check": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "wait",
+            "when": {
+              "relationFlags": [
+                "familiar_scent"
+              ],
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "莱卡的机足忽然卡住，你扶住门边，等它停稳，把手轻轻留在它能避开的低处。",
+            "effects": {},
+            "next": "rest",
+            "label": "卡顿时等它停稳",
+            "trust": 1,
+            "set": [
+              "waited_joint"
+            ]
+          },
+          {
+            "key": "pull",
+            "when": {},
+            "text": "你以为它不肯走，硬把机足拖过门槛。莱卡缩进门后，短响在木板下断了一截。",
+            "effects": {},
+            "next": "repair",
+            "label": "硬拖过门槛",
+            "trust": -2,
+            "set": [
+              "pulled_joint"
+            ],
+            "status": "estranged"
+          }
+        ]
+      },
+      "repair": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "gentle",
+            "when": {
+              "min": {
+                "bond": 8
+              }
+            },
+            "text": "你把包放在它能嗅到的位置，自己坐远一些。莱卡先探近包，再慢慢停到你的袖边。",
+            "effects": {},
+            "next": "rest",
+            "label": "让它再选距离",
+            "trust": 2,
+            "set": [
+              "returned_by_choice"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "call",
+            "when": {},
+            "text": "你站在门外反复叫它，莱卡只对陌生响声抬头，仍把身体留在门槛之后。",
+            "effects": {},
+            "next": "rest",
+            "label": "门外的叫唤",
+            "trust": -1
+          }
+        ]
+      },
+      "rest": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "beside",
+            "when": {
+              "relationFlags": [
+                "played_ball",
+                "learned_whistle"
+              ],
+              "minTrust": 3
+            },
+            "text": "你收起新带的布球只吹一声短哨，莱卡踏到门边，在你身旁安静伏下。",
+            "effects": {},
+            "next": "homeward",
+            "label": "玩耍后一起静伏",
+            "trust": 1,
+            "set": [
+              "rested_beside"
+            ],
+            "status": "friend"
+          },
+          {
+            "key": "inside",
+            "when": {},
+            "text": "莱卡伏在店门里，你在门外收好随身包。它听见包带轻响，只转了转朝向。",
+            "effects": {},
+            "next": "homeward",
+            "label": "隔门歇息"
+          }
+        ]
+      },
+      "homeward": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "repaired",
+            "when": {
+              "relationFlags": [
+                "pulled_joint",
+                "returned_by_choice"
+              ],
+              "minTrust": 1
+            },
+            "text": "你起身时先让出门槛，莱卡走来嗅过袖口。你放低手等它站稳，它也留在你身旁。",
+            "effects": {},
+            "next": null,
+            "label": "犬灵重新靠近",
+            "status": "reconciled"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "familiar_scent",
+                "rested_beside"
+              ],
+              "minTrust": 4
+            },
+            "text": "莱卡辨出离开的包带声，踏到门口停住。你回头吹一声短哨，它在原地等你看见。",
+            "effects": {},
+            "next": null,
+            "label": "门边认得的人",
+            "status": "friend"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "莱卡听见包带声便留在门内，你从门外离开，短哨只落在空下来的门槛旁。",
+            "effects": {},
+            "next": null,
+            "label": "没有靠近的犬灵",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "recognition",
+        "states": [
+          "friend"
+        ],
+        "text": "你放低随身包，莱卡循着熟悉的气味踏到门边，等你蹲下才把身体靠近袖口。",
+        "effects": {}
+      },
+      {
+        "key": "short-answer",
+        "states": [
+          "friend"
+        ],
+        "text": "一声短哨从店门外响起，莱卡转向你停住，你收起哨声，让它自己决定靠近几步。",
+        "effects": {},
+        "when": {
+          "relationFlags": [
+            "learned_whistle"
+          ]
+        }
+      },
+      {
+        "key": "chosen-distance",
+        "states": [
+          "reconciled"
+        ],
+        "text": "你坐到莱卡能看见的门外，它先嗅包带，再慢慢踏近。你把手留在它容易避开的低处。",
+        "effects": {}
+      },
+      {
+        "key": "behind-door",
+        "states": [
+          "estranged"
+        ],
+        "text": "莱卡留在香霖堂门内，陌生包带擦过门边时它转向阴影，你在门外等过片刻便收包离开。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "此生末页，你还记得香霖堂门边那几步轻响。短哨停下，莱卡自己走来，嗅过你低放的袖口。",
+      "reconciled": "你记得放下包坐远的那一回，莱卡先嗅过包带，才慢慢走到袖边，门槛前的等待终于有了回应。",
+      "estranged": "最后几次包带声擦过门槛，莱卡留在店门内。你在门外收包，那声短哨只响给自己听。"
+    }
+  },
+  {
+    "id": "myouren",
+    "title": "飞钵落下的地方",
+    "romance": false,
+    "source": "https://thbwiki.cc/附带文档:东方星莲船/角色设定&ExStory",
+    "contact": {
+      "domain": "history-dream",
+      "place": "命莲生前的山寺",
+      "premise": "你反复进入命莲尚在人世的山寺旧梦，与他续上二创来往，观看据传说写成的法术演示。"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "insight": 5
+      }
+    },
+    "talents": [
+      "herbal",
+      "patient",
+      "reader"
+    ],
+    "careers": [
+      "garden",
+      "scholar"
+    ],
+    "intro": {
+      "text": "生前旧梦的山路把你带到寺前，命莲托起一只钵，问你这一程想把饭送到哪里。",
+      "effects": {},
+      "next": "bowl",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "bowl": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "destination",
+            "when": {
+              "min": {
+                "insight": 7
+              }
+            },
+            "text": "你把送饭的位置说清，命莲放出飞钵。你沿山路赶到时，饭已稳稳落在约好的地方。",
+            "effects": {},
+            "next": "meal",
+            "label": "先说清钵的落处",
+            "trust": 1,
+            "set": [
+              "named_destination"
+            ]
+          },
+          {
+            "key": "wonder",
+            "when": {},
+            "text": "你只盯着钵飞起的样子，命莲让它回到掌边，带着你走完本来要送饭的山路。",
+            "effects": {},
+            "next": "meal",
+            "label": "跟着走一趟山路"
+          }
+        ]
+      },
+      "meal": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "portion",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你与命莲把饭分成合适的份量，先留给远路的需要，再坐在寺阶上吃自己的那份。",
+            "effects": {},
+            "next": "river",
+            "label": "分饭与共食",
+            "trust": 1,
+            "set": [
+              "shared_portions"
+            ]
+          },
+          {
+            "key": "measure",
+            "when": {},
+            "text": "你按能换到多少粮来算这一钵饭，命莲将算盘推开，把自己的那份放回钵里。",
+            "effects": {},
+            "next": "river",
+            "label": "算盘落在钵外",
+            "trust": -1,
+            "set": [
+              "valued_payment"
+            ]
+          }
+        ]
+      },
+      "river": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "walk",
+            "when": {
+              "min": {
+                "health": 6
+              }
+            },
+            "text": "山水涨过浅石，你与命莲提起衣角走过，到了干处才把钵里的饭分开。",
+            "effects": {},
+            "next": "request",
+            "label": "涉水送饭",
+            "trust": 1,
+            "set": [
+              "crossed_river"
+            ]
+          },
+          {
+            "key": "fly",
+            "when": {},
+            "text": "你走不过涨水，命莲让饭钵先越到对岸，自己陪你沿较远的山路慢慢绕行。",
+            "effects": {},
+            "next": "request",
+            "label": "钵飞人绕路",
+            "trust": 1,
+            "set": [
+              "took_long_way"
+            ]
+          }
+        ]
+      },
+      "request": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "care",
+            "when": {
+              "relationFlags": [
+                "named_destination",
+                "shared_portions"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你问法术怎样顾到看不见的需要。命莲在钵边留一处空位，叫你先说那人想要什么。",
+            "effects": {},
+            "next": "practice",
+            "label": "询问远处的需要",
+            "trust": 1,
+            "set": [
+              "asked_care"
+            ]
+          },
+          {
+            "key": "profit",
+            "when": {},
+            "text": "你请他把飞钵借来替你搬尽别人的粮食，命莲把钵收回，问你为何只说所得多少。",
+            "effects": {},
+            "next": "return",
+            "label": "把飞钵当作所得",
+            "trust": -2,
+            "set": [
+              "asked_profit"
+            ]
+          }
+        ]
+      },
+      "return": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "admit",
+            "when": {
+              "min": {
+                "bond": 8
+              }
+            },
+            "text": "你承认想借法术省去询问，带来自己肯分出的粮。命莲让你亲手把这一程送完。",
+            "effects": {},
+            "next": "claim",
+            "label": "亲手补上送粮",
+            "trust": 2,
+            "set": [
+              "made_delivery"
+            ]
+          },
+          {
+            "key": "defend",
+            "when": {},
+            "text": "你继续拿远路辛苦替自己争辩，命莲让钵留在寺中，与你只谈这回的普通山路。",
+            "effects": {},
+            "next": "claim",
+            "label": "飞钵留在寺中",
+            "trust": -1,
+            "status": "estranged"
+          }
+        ]
+      },
+      "practice": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "purpose",
+            "when": {
+              "relationFlags": [
+                "asked_care"
+              ],
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "你先记住饭该落在哪里，再照着命莲的手势练习。钵纹丝不动，你托起它，自己走上送饭的路。",
+            "effects": {},
+            "next": "claim",
+            "label": "学会先问落处",
+            "trust": 1,
+            "set": [
+              "learned_purpose"
+            ],
+            "status": "mentor"
+          },
+          {
+            "key": "repeat",
+            "when": {},
+            "text": "你照着手势试了几回，钵始终沉在掌中。命莲陪你托着它出门，沿山路把饭送到。",
+            "effects": {},
+            "next": "claim",
+            "label": "手势之后仍送饭",
+            "trust": 1
+          }
+        ]
+      },
+      "claim": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "release",
+            "when": {
+              "relationFlags": [
+                "asked_profit",
+                "made_delivery"
+              ]
+            },
+            "text": "有人把那次送粮说成你的神通，你当着命莲改口，只承认自己走过那段路。",
+            "effects": {},
+            "next": "last-visit",
+            "label": "不领法术的名声",
+            "trust": 1,
+            "set": [
+              "corrected_claim"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "plain",
+            "when": {
+              "relationFlags": [
+                "learned_purpose"
+              ]
+            },
+            "text": "你的钵始终飞不起来，便把问清的去处一处处走完。命莲在寺阶上听你说路途。",
+            "effects": {},
+            "next": "last-visit",
+            "label": "把落处走完",
+            "trust": 1
+          },
+          {
+            "key": "boast",
+            "when": {},
+            "text": "你说起飞钵时把自己的功劳讲得太大，命莲听到一半便将钵转向寺内。",
+            "effects": {},
+            "next": "last-visit",
+            "label": "夸大的飞钵故事",
+            "trust": -1,
+            "set": [
+              "boasted_power"
+            ]
+          }
+        ]
+      },
+      "last-visit": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "repair-end",
+            "when": {
+              "relationFlags": [
+                "made_delivery",
+                "corrected_claim"
+              ],
+              "minTrust": 1
+            },
+            "text": "旧梦中命莲把钵放在你面前，你说这次会亲手走完。那场逐利的争执才有了后续。",
+            "effects": {},
+            "next": null,
+            "label": "寺阶前缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "mentor",
+            "when": {
+              "relationFlags": [
+                "learned_purpose",
+                "crossed_river"
+              ],
+              "minTrust": 4
+            },
+            "text": "你把去处与份量先说完才拿起钵。命莲点头听你讲山路，法术之外的功课留了下来。",
+            "effects": {},
+            "next": null,
+            "label": "生前梦里的师友",
+            "status": "mentor"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "shared_portions"
+              ],
+              "minTrust": 3,
+              "missingRelationFlags": [
+                "boasted_power",
+                "asked_profit"
+              ]
+            },
+            "text": "你和命莲坐到山寺阶边分饭，讲这一程走了多远。他托着飞钵，听你说亲自送到的几处。",
+            "effects": {},
+            "next": null,
+            "label": "山路上的同伴",
+            "status": "friend"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "命莲把钵收在寺阶内，你从普通山路离开。旧梦里的来往没能越过所得与需要的分歧。",
+            "effects": {},
+            "next": null,
+            "label": "止于寺阶",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "ordinary-road",
+        "states": [
+          "mentor"
+        ],
+        "text": "命莲在生前旧梦里听你先说落处，你提起普通饭钵出门，把那段山路一处处走完。",
+        "effects": {}
+      },
+      {
+        "key": "shared-rice",
+        "states": [
+          "friend"
+        ],
+        "text": "生前山寺的阶边分开两份饭，你与命莲各说这一程的远近，飞钵安静留在他掌边。",
+        "effects": {}
+      },
+      {
+        "key": "no-borrowed-name",
+        "states": [
+          "reconciled"
+        ],
+        "text": "旧梦里你把未曾学会的神通说清，命莲听完送粮的山路，留出钵边的一处空位。",
+        "effects": {}
+      },
+      {
+        "key": "bowl-inside",
+        "states": [
+          "estranged"
+        ],
+        "text": "命莲的钵留在旧梦的寺阶内，你隔着山路看了一阵，托起自己的饭钵，继续沿路送饭。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "mentor": "此生末页，你梦回命莲生前的寺阶，记得先问送饭的去处。钵虽飞不起来，山路却亲手走完了。",
+      "friend": "生前旧梦里，命莲与你坐在山寺阶边分饭。走到这一生末尾，你还记得那次从路远谈到饭量的闲话。",
+      "reconciled": "你梦见生前的命莲将钵放回面前，让你再说清这一程。改口后亲手送粮的路，至今还能记起。",
+      "estranged": "生前旧梦的钵收在寺门内，你站在山路上回望，想起那场关于所得与需要的争执，沿来路离开。"
+    }
+  },
+  {
+    "id": "zenki",
+    "title": "乌鸦落过的枝",
+    "romance": false,
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "contact": {
+      "domain": "history-dream",
+      "place": "月面行动前的地上巡枝",
+      "premise": "你在月面行动以前的地上巡枝与前鬼相识，二创往昔之梦沿这条林隙接续。"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "insight": 6
+      }
+    },
+    "talents": [
+      "forest",
+      "careful",
+      "notes"
+    ],
+    "careers": [
+      "garden",
+      "craft"
+    ],
+    "intro": {
+      "text": "往昔之梦停在月面行动以前，前鬼巡过地上林梢，在你头顶的枯枝上收翅。",
+      "effects": {},
+      "next": "marker",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "marker": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "perch",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你记住前鬼落枝后的朝向，等它飞开才沿下方走近，将双手留在身侧。",
+            "effects": {},
+            "next": "detour",
+            "label": "认清落枝方向",
+            "trust": 1,
+            "set": [
+              "read_perch"
+            ]
+          },
+          {
+            "key": "bait",
+            "when": {},
+            "text": "你拿亮纸去引前鬼落低，它绕开你的手，落到更高的枝上，把巡线留在树顶。",
+            "effects": {},
+            "next": "detour",
+            "label": "亮纸引错方向",
+            "trust": -1,
+            "set": [
+              "baited_raven"
+            ]
+          }
+        ]
+      },
+      "detour": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "walk",
+            "when": {
+              "min": {
+                "health": 6
+              }
+            },
+            "text": "你绕过湿坡把掉下的枯枝搬开，前鬼从空出的林隙穿过，落回能看见你的枝头。",
+            "effects": {},
+            "next": "glint",
+            "label": "清开林下窄道",
+            "trust": 1,
+            "set": [
+              "cleared_underpath"
+            ]
+          },
+          {
+            "key": "wait",
+            "when": {},
+            "text": "湿坡挡住脚步，你在坡下等前鬼绕飞回来，它落在另一侧，与你隔着一段低雾。",
+            "effects": {},
+            "next": "glint",
+            "label": "坡下等返航"
+          }
+        ]
+      },
+      "glint": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "remove",
+            "when": {
+              "relationFlags": [
+                "read_perch"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你拾走树下混进枝影的碎亮片。前鬼循着原来的方向飞过，稳稳落回巡线中的高枝。",
+            "effects": {},
+            "next": "fog",
+            "label": "撤去假闪光",
+            "trust": 1,
+            "set": [
+              "removed_glints"
+            ]
+          },
+          {
+            "key": "add",
+            "when": {},
+            "text": "你把新亮片挂到低枝，想看前鬼是否记得你。它急转落低，错开了原来巡过的林隙。",
+            "effects": {},
+            "next": "fog",
+            "label": "诱偏巡枝",
+            "trust": -1,
+            "set": [
+              "false_glints"
+            ]
+          }
+        ]
+      },
+      "fog": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "route",
+            "when": {
+              "relationFlags": [
+                "read_perch",
+                "removed_glints"
+              ],
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "雾里看不清枝梢，你沿认过的落枝方向退到坡下，前鬼循林隙飞出，与你相遇。",
+            "effects": {},
+            "next": "post",
+            "label": "雾中相遇",
+            "trust": 1,
+            "set": [
+              "met_in_fog"
+            ],
+            "status": "friend"
+          },
+          {
+            "key": "trace",
+            "when": {},
+            "text": "你跟着鸦影越追越深，最后只能靠近新留下的爪痕，前鬼在高处连续叫了几声。",
+            "effects": {},
+            "next": "leak",
+            "label": "追进巡线深处",
+            "trust": -1
+          }
+        ]
+      },
+      "leak": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "take",
+            "when": {
+              "min": {
+                "insight": 8
+              },
+              "max": {
+                "bond": 4
+              }
+            },
+            "text": "你把巡枝的隐蔽入口刻在木板上留作近路，前鬼俯冲啄裂板角，挡在入口前。",
+            "effects": {},
+            "next": "return",
+            "label": "擅记隐蔽入口",
+            "trust": -2,
+            "set": [
+              "took_hidden_route"
+            ],
+            "status": "enemy"
+          },
+          {
+            "key": "back",
+            "when": {},
+            "text": "你取下新挂的亮片，顺坡退回低处，听过深林里的鸦鸣，等前鬼自己返航。",
+            "effects": {},
+            "next": "return",
+            "label": "撤回坡下",
+            "trust": 1,
+            "set": [
+              "backed_out"
+            ]
+          }
+        ]
+      },
+      "return": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "restore",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你沿巡枝检查，把碍事的东西收走，空手退到坡下。前鬼从你上方平稳掠过。",
+            "effects": {},
+            "next": "post",
+            "label": "撤掉人为引路",
+            "trust": 2,
+            "set": [
+              "restored_line"
+            ],
+            "clear": [
+              "false_glints"
+            ]
+          },
+          {
+            "key": "insist",
+            "when": {},
+            "text": "你仍把亮片举在手里等它落低，前鬼只从高枝绕过，再没有穿进你伸手的那条路。",
+            "effects": {},
+            "next": "post",
+            "label": "仍想让巡枝改向",
+            "trust": -1,
+            "status": "estranged"
+          }
+        ]
+      },
+      "post": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "recognize",
+            "when": {
+              "relationFlags": [
+                "cleared_underpath"
+              ],
+              "minTrust": 3
+            },
+            "text": "前鬼落回清过的窄道上方，你放下手里的枝，让它巡完后才从林下通过。",
+            "effects": {},
+            "next": "accord",
+            "label": "在巡线下相认",
+            "trust": 1,
+            "set": [
+              "kept_return_space"
+            ]
+          },
+          {
+            "key": "edge",
+            "when": {},
+            "text": "前鬼沿树顶巡去，你只走坡下能辨认的部分，树枝与雾将两段路分开。",
+            "effects": {},
+            "next": "accord",
+            "label": "只走坡下的路"
+          }
+        ]
+      },
+      "accord": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "enemy",
+            "when": {
+              "relationFlags": [
+                "took_hidden_route"
+              ],
+              "missingRelationFlags": [
+                "restored_line"
+              ]
+            },
+            "text": "你把手伸向隐蔽入口。前鬼俯冲逼你退出，往昔之梦的巡枝从此成了彼此争执的去处。",
+            "effects": {},
+            "next": null,
+            "label": "巡线上的敌意",
+            "status": "enemy"
+          },
+          {
+            "key": "repair",
+            "when": {
+              "relationFlags": [
+                "restored_line"
+              ],
+              "minTrust": 1
+            },
+            "text": "你停在坡下，双手放低，等前鬼巡完一圈才看它飞近，尖喙从头顶平稳掠过。",
+            "effects": {},
+            "next": null,
+            "label": "巡枝恢复距离",
+            "status": "reconciled"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "met_in_fog",
+                "kept_return_space"
+              ],
+              "minTrust": 4
+            },
+            "text": "前鬼巡过雾中的林隙，在你上方收翅停住。你认得它的返程，也给它留着同一条路。",
+            "effects": {},
+            "next": null,
+            "label": "往昔巡枝的伙伴",
+            "status": "friend"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "前鬼的鸦影留在树顶，你站在坡下听过几声啼鸣，低雾将彼此的来路隔开。",
+            "effects": {},
+            "next": null,
+            "label": "坡上坡下",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "fog-wing",
+        "states": [
+          "friend"
+        ],
+        "text": "往昔地上的雾漫过低枝，前鬼从你认过的林隙飞出，你在坡下留着空出的落脚处。",
+        "effects": {}
+      },
+      {
+        "key": "unmarked-line",
+        "states": [
+          "reconciled"
+        ],
+        "text": "旧梦里的巡枝清去了亮片，前鬼沿原来的林隙飞过你身旁，平稳落向高处。",
+        "effects": {}
+      },
+      {
+        "key": "barred-gap",
+        "states": [
+          "enemy"
+        ],
+        "text": "往昔之梦里前鬼挡在隐蔽林隙前，你在树下停住，尖喙与木板裂角之间的争执没有散去。",
+        "effects": {}
+      },
+      {
+        "key": "high-perch",
+        "states": [
+          "estranged"
+        ],
+        "text": "旧梦中前鬼在高枝收翅，你从坡下走过，听那声鸦鸣越过树顶，沿自己的山路返回。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "此生末页，你梦回月面行动前的树林，仍认得雾中的返程，在坡下等前鬼收翅落近。",
+      "reconciled": "往昔旧梦里，你撤去假亮片，收回双手。前鬼平稳掠过之后，坡下又有了可以等候的地方。",
+      "enemy": "往昔旧梦的隐蔽入口前，尖喙仍朝向那块裂板角。擅记巡线后的争执，随你走到一生末尾。",
+      "estranged": "最后的往昔之梦里，鸦鸣越过树顶。你站在坡下，看前鬼沿那条返航林隙飞远。"
+    }
+  },
+  {
+    "id": "goki",
+    "title": "不能乱学的鸦声",
+    "romance": false,
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "contact": {
+      "domain": "history-dream",
+      "place": "月面行动前的回航树林",
+      "premise": "你在月面行动以前的地上回航树林与后鬼相识，反复入梦，续上这段二创往昔来往。"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "insight": 5,
+        "bond": 5
+      }
+    },
+    "talents": [
+      "notes",
+      "patient",
+      "steady"
+    ],
+    "careers": [
+      "scholar",
+      "craft"
+    ],
+    "intro": {
+      "text": "往昔地上的梦里，一声短鸦鸣落到林间，后鬼停在枝头，等你从树下的岔路走近。",
+      "effects": {},
+      "next": "call",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "call": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "listen",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你听清短鸣后的停顿，等它落下才抬头。后鬼随停顿转头，望向林后的岔路。",
+            "effects": {},
+            "next": "echo",
+            "label": "听清停顿",
+            "trust": 1,
+            "set": [
+              "heard_gap"
+            ]
+          },
+          {
+            "key": "answer",
+            "when": {},
+            "text": "你把每一声鸦鸣都学出来，后鬼接连转向两条岔路，最后升到较远的枝上。",
+            "effects": {},
+            "next": "echo",
+            "label": "乱学回航声音",
+            "trust": -1,
+            "set": [
+              "copied_calls"
+            ]
+          }
+        ]
+      },
+      "echo": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "separate",
+            "when": {
+              "relationFlags": [
+                "heard_gap"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "石壁把鸦声送回，你留在真正响过短鸣的林隙前，后鬼从枝间低掠出来。",
+            "effects": {},
+            "next": "cord",
+            "label": "辨出石壁回声",
+            "trust": 1,
+            "set": [
+              "knew_echo"
+            ]
+          },
+          {
+            "key": "follow",
+            "when": {},
+            "text": "你跟回声绕到石壁后。后鬼落在另一侧叫了两声，你隔着岩石才发现两条路不相通。",
+            "effects": {},
+            "next": "cord",
+            "label": "跟错回声"
+          }
+        ]
+      },
+      "cord": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "free",
+            "when": {
+              "min": {
+                "insight": 7
+              }
+            },
+            "text": "后鬼的爪被旧绳缠住，你先稳住绳端再解松，放手后让它自己飞回那根低枝。",
+            "effects": {},
+            "next": "shadow",
+            "label": "解绳后放飞",
+            "trust": 1,
+            "set": [
+              "freed_cord"
+            ]
+          },
+          {
+            "key": "tug",
+            "when": {},
+            "text": "你想一把扯掉缠爪的绳，后鬼拍翅挣开，绳断在石边，它留在高枝避开你的手。",
+            "effects": {},
+            "next": "shadow",
+            "label": "扯绳惊走",
+            "trust": -1,
+            "set": [
+              "pulled_cord"
+            ]
+          }
+        ]
+      },
+      "shadow": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "recognize",
+            "when": {
+              "relationFlags": [
+                "knew_echo"
+              ],
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "远处鸦影沿石壁滑过，你等真正的短鸣落下才移动，后鬼停在你能看清的枝端。",
+            "effects": {},
+            "next": "report",
+            "label": "只应真正的短鸣",
+            "trust": 1,
+            "set": [
+              "trusted_call"
+            ]
+          },
+          {
+            "key": "borrow",
+            "when": {},
+            "text": "你用学来的鸦鸣试着把它引到自己选的岔路。后鬼在路口急转，将你的声音甩在身后。",
+            "effects": {},
+            "next": "claim",
+            "label": "擅借鸦鸣引路",
+            "trust": -2,
+            "set": [
+              "misused_call"
+            ]
+          }
+        ]
+      },
+      "claim": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "stop",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你收住学来的鸦鸣，改用敲岩石报出位置。后鬼向响声转头，在上方停住急转。",
+            "effects": {},
+            "next": "release",
+            "label": "改用自己的声音",
+            "trust": 1,
+            "set": [
+              "stopped_mimic"
+            ]
+          },
+          {
+            "key": "repeat",
+            "when": {},
+            "text": "你坚持学短鸣追它转向，后鬼用更尖的叫声盖过你的声音，不肯落到近处。",
+            "effects": {},
+            "next": "release",
+            "label": "短鸣变成争执",
+            "trust": -1,
+            "set": [
+              "kept_mimic"
+            ],
+            "status": "enemy"
+          }
+        ]
+      },
+      "release": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "patient",
+            "when": {
+              "relationFlags": [
+                "stopped_mimic"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你站到两条岔路以外，让后鬼先完成回航。它折回来，沿原来的方向从头顶掠过。",
+            "effects": {},
+            "next": "report",
+            "label": "给回航留出空隙",
+            "trust": 1,
+            "set": [
+              "left_flight_open"
+            ],
+            "clear": [
+              "kept_mimic"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "wait",
+            "when": {},
+            "text": "你停下追逐，在岩石旁等了一阵。后鬼从更远的枝头收住声音，没有向你这边回航。",
+            "effects": {},
+            "next": "report",
+            "label": "岩石旁独自等候"
+          }
+        ]
+      },
+      "report": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "share",
+            "when": {
+              "relationFlags": [
+                "freed_cord"
+              ],
+              "minTrust": 3
+            },
+            "text": "你搬走枝下的旧绳，后鬼沿清出的落枝试停，脚爪不再碰到那段旧缠绕。",
+            "effects": {},
+            "next": "final-call",
+            "label": "清掉曾缠爪的绳",
+            "trust": 1,
+            "set": [
+              "cleared_cord"
+            ],
+            "status": "friend"
+          },
+          {
+            "key": "pass",
+            "when": {},
+            "text": "你只把自己经过的岔路让开，后鬼从枝间穿过，短鸣随着飞远的鸦影落向另一边。",
+            "effects": {},
+            "next": "final-call",
+            "label": "各走自己的岔路"
+          }
+        ]
+      },
+      "final-call": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "repair",
+            "when": {
+              "relationFlags": [
+                "misused_call",
+                "left_flight_open"
+              ],
+              "minTrust": 1
+            },
+            "text": "你敲岩石回应短鸣，后鬼在近枝落稳。敲声停下才响起鸦鸣，两边都认得各自的停顿。",
+            "effects": {},
+            "next": null,
+            "label": "回航声音缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "trusted_call",
+                "cleared_cord"
+              ],
+              "minTrust": 4
+            },
+            "text": "真正的短鸦鸣落向林隙，你在枝下停步。后鬼收翅落近，双方都能认出这一回的声音。",
+            "effects": {},
+            "next": null,
+            "label": "旧梦里的回航伙伴",
+            "status": "friend"
+          },
+          {
+            "key": "enemy",
+            "when": {
+              "relationFlags": [
+                "misused_call",
+                "kept_mimic"
+              ]
+            },
+            "text": "你模仿的短鸣被后鬼的尖叫截断。它俯冲把你逼离岔路，旧梦里的声音留成了争执。",
+            "effects": {},
+            "next": null,
+            "label": "召唤声的敌意",
+            "status": "enemy"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "后鬼的短鸣越过石壁，你留在这边听它渐远，往昔之梦的两条岔路各自隐进树林。",
+            "effects": {},
+            "next": null,
+            "label": "石壁两侧",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "true-call",
+        "states": [
+          "friend"
+        ],
+        "text": "旧梦的石壁送回一声假回响，你停在真正短鸣的方向，后鬼在近枝收住翅膀。",
+        "effects": {}
+      },
+      {
+        "key": "own-knock",
+        "states": [
+          "reconciled"
+        ],
+        "text": "你在往昔树林里轻敲岩石，后鬼向响声转头，鸦鸣与敲声各自停顿，等另一边回应。",
+        "effects": {}
+      },
+      {
+        "key": "sharp-answer",
+        "states": [
+          "enemy"
+        ],
+        "text": "往昔之梦的岔路传来模仿短鸣，后鬼的尖叫随即截住它，你停在不许靠近的石壁边。",
+        "effects": {}
+      },
+      {
+        "key": "distant-echo",
+        "states": [
+          "estranged"
+        ],
+        "text": "回声从旧梦石壁后绕来，你停在自己认得的岔路，后鬼的身影沿另一条回航线渐渐远去。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "一生末页，你在往昔地上的旧梦中又听到真短鸣，转向认过的近枝，后鬼曾在那里收翅。",
+      "reconciled": "往昔旧梦里，短鸦鸣停下才响起你的敲击。留出回航的空隙后，两种声音终于都听得清。",
+      "enemy": "往昔之梦里，你模仿的短鸣被尖叫截住。石壁送回最后一阵回响，岔路两侧仍隔着争执。",
+      "estranged": "最后的往昔旧梦里，后鬼沿另一条回航线飞远。你站在自己的岔路上，听石壁送回最后一声。"
+    }
+  },
+  {
+    "id": "koutei",
+    "title": "云比池水重",
+    "romance": false,
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "contact": {
+      "domain": "mountain",
+      "place": "仙邸旁的龙池"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "health": 5,
+        "insight": 5
+      }
+    },
+    "talents": [
+      "herbal",
+      "forest",
+      "patient"
+    ],
+    "careers": [
+      "garden"
+    ],
+    "intro": {
+      "text": "你经山中引荐穿过仙界入口，来到仙邸池边，黄帝浮在浅水中，向空桶吐出一小股水。",
+      "effects": {},
+      "next": "pool",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "pool": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "steady",
+            "when": {
+              "min": {
+                "health": 7
+              }
+            },
+            "text": "你扶稳池边的空桶接水，黄帝贴着水沿抬起身体，细流连成一线，稳稳落进桶底。",
+            "effects": {},
+            "next": "weight",
+            "label": "接住细水",
+            "trust": 1,
+            "set": [
+              "steady_bucket"
+            ]
+          },
+          {
+            "key": "tip",
+            "when": {},
+            "text": "你抬桶时重心不稳，水沿桶口溅回池里。黄帝缩低身体，只朝原来的水面吐水。",
+            "effects": {},
+            "next": "weight",
+            "label": "晃动的水桶"
+          }
+        ]
+      },
+      "weight": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "small",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你只添到自己能稳拿的水位，黄帝绕着桶沿游一圈，把新吐的水落在剩下的空处。",
+            "effects": {},
+            "next": "cloud",
+            "label": "留出空水位",
+            "trust": 1,
+            "set": [
+              "kept_small_load"
+            ]
+          },
+          {
+            "key": "full",
+            "when": {},
+            "text": "你把桶填得满满，想让黄帝吐出更多水。它抵住池沿，吐出的细流忽然断了一截。",
+            "effects": {},
+            "next": "cloud",
+            "label": "求过满的一桶",
+            "trust": -1,
+            "set": [
+              "asked_too_much"
+            ]
+          }
+        ]
+      },
+      "cloud": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "low",
+            "when": {
+              "relationFlags": [
+                "kept_small_load"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "黄帝让水雾凝在池上方，你把桶放低，小小云团悬在浅水上，雨点落回桶中。",
+            "effects": {},
+            "next": "bank",
+            "label": "低云回水",
+            "trust": 1,
+            "set": [
+              "waited_low_cloud"
+            ],
+            "status": "friend"
+          },
+          {
+            "key": "high",
+            "when": {},
+            "text": "你举桶去追升起的雾，黄帝奋力托高云团，池边的细水散成一阵没有落准的雨。",
+            "effects": {},
+            "next": "rain",
+            "label": "催高了云团",
+            "trust": -1,
+            "set": [
+              "raised_cloud"
+            ]
+          }
+        ]
+      },
+      "rain": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "shelter",
+            "when": {
+              "min": {
+                "health": 6
+              }
+            },
+            "text": "云团落雨偏向池外，你搬开被浇湿的木桶，黄帝沿池边收低身体，把雨缩回水面。",
+            "effects": {},
+            "next": "bank",
+            "label": "把雨让回池中",
+            "trust": 1,
+            "set": [
+              "lowered_rain"
+            ]
+          },
+          {
+            "key": "display",
+            "when": {},
+            "text": "你还举桶追那阵雨，黄帝翻起的水打湿你的衣襟，你退开后才看见它伏回浅处。",
+            "effects": {
+              "health": -1
+            },
+            "next": "strain",
+            "label": "追雨弄湿衣襟",
+            "trust": -1,
+            "set": [
+              "kept_display"
+            ]
+          }
+        ]
+      },
+      "strain": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "stop",
+            "when": {
+              "min": {
+                "bond": 7,
+                "insight": 8
+              }
+            },
+            "text": "你放下桶，蹲在池边等黄帝缓过来。它活动身体，朝空水面重新吐出细流。",
+            "effects": {},
+            "next": "bank",
+            "label": "停止催云",
+            "trust": 2,
+            "set": [
+              "stopped_demand"
+            ],
+            "clear": [
+              "kept_display"
+            ]
+          },
+          {
+            "key": "leave",
+            "when": {},
+            "text": "你放下追雨的桶离开池沿，黄帝独自伏在浅处，见到你靠近也不再托起云团。",
+            "effects": {},
+            "next": "bank",
+            "label": "云团不再托向你",
+            "trust": -1,
+            "status": "estranged"
+          }
+        ]
+      },
+      "bank": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "clear",
+            "when": {
+              "relationFlags": [
+                "steady_bucket"
+              ],
+              "min": {
+                "health": 7
+              }
+            },
+            "text": "你清开池沿卡住木桶的碎石。黄帝从腾出的浅处游过，水纹沿空出的地方慢慢散开。",
+            "effects": {},
+            "next": "mist",
+            "label": "清开桶底碎石",
+            "trust": 1,
+            "set": [
+              "cleared_pool_edge"
+            ]
+          },
+          {
+            "key": "watch",
+            "when": {},
+            "text": "你把桶放到离池较远的位置，黄帝绕过池沿的碎石活动，你在岸上看它试吐细水。",
+            "effects": {},
+            "next": "mist",
+            "label": "岸上看细水"
+          }
+        ]
+      },
+      "mist": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "quiet",
+            "when": {
+              "relationFlags": [
+                "waited_low_cloud"
+              ],
+              "minTrust": 3
+            },
+            "text": "你让雾在池面自己散开，黄帝浮到近岸，水纹碰过空桶后才渐渐平下来。",
+            "effects": {},
+            "next": "balance",
+            "label": "不催着雾变大",
+            "trust": 1,
+            "set": [
+              "shared_small_rain"
+            ]
+          },
+          {
+            "key": "plain",
+            "when": {},
+            "text": "黄帝只吐出短短水流，你把桶口挪到流下的位置，蹲低身子，听细水落进桶底。",
+            "effects": {},
+            "next": "balance",
+            "label": "只接眼前的细流",
+            "trust": 1
+          }
+        ]
+      },
+      "balance": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "repair",
+            "when": {
+              "relationFlags": [
+                "raised_cloud",
+                "stopped_demand"
+              ],
+              "minTrust": 1
+            },
+            "text": "你将空桶放低，退开一点等黄帝选择。它游近桶边，把一小股细水送进留空的桶底。",
+            "effects": {},
+            "next": null,
+            "label": "池边缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "shared_small_rain",
+                "cleared_pool_edge"
+              ],
+              "minTrust": 4
+            },
+            "text": "黄帝游到你扶稳的桶旁，低低的云团落下一阵小雨，你蹲在池边，听熟悉的雨点敲桶。",
+            "effects": {},
+            "next": null,
+            "label": "细水相认的伙伴",
+            "status": "friend"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "黄帝在池里独自活动，你抱着空桶站在岸上，看过一回雾散，才沿来时的路返回。",
+            "effects": {},
+            "next": null,
+            "label": "池与岸的距离",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "little-rain",
+        "states": [
+          "friend"
+        ],
+        "text": "黄帝送来池边的一小阵雨，你把桶扶稳在低处，雨点落进桶里后它便浮回浅水。",
+        "effects": {}
+      },
+      {
+        "key": "clear-edge",
+        "states": [
+          "friend"
+        ],
+        "text": "你搬走新滚到池沿的碎石，黄帝沿腾出的水面游近，短短水流接上桶底的声音。",
+        "effects": {}
+      },
+      {
+        "key": "low-bucket",
+        "states": [
+          "reconciled"
+        ],
+        "text": "你把空桶放在池边低处，黄帝先绕它游过，再决定是否送水，你蹲在岸上静静等它。",
+        "effects": {}
+      },
+      {
+        "key": "separate-water",
+        "states": [
+          "estranged"
+        ],
+        "text": "黄帝在池内试吐水雾，你站在较远的岸上收好木桶，看云影自行散开后起身返回。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "一生末页，你记得扶桶时那阵细小的雨，黄帝游到低处送水，云影在池面轻轻散开。",
+      "reconciled": "你把空桶放低，等黄帝缓过来的那一回，还记得清。停止催云以后，它曾将细水送进桶底。",
+      "estranged": "最后几次到池边，你站在岸上收好空桶，看黄帝独自在池中试吐水雾，再沿山路离开。"
+    }
+  },
+  {
+    "id": "mukou",
+    "title": "雷声外的玉米台",
+    "romance": false,
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "contact": {
+      "domain": "mountain",
+      "place": "雷兽的食台旁"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "insight": 6,
+        "health": 4
+      }
+    },
+    "talents": [
+      "herbal",
+      "careful",
+      "patient"
+    ],
+    "careers": [
+      "garden"
+    ],
+    "intro": {
+      "text": "你经山中引荐穿过仙界入口，送来一篮新玉米，务光伏在食台下，雷声从它身旁低低滚过。",
+      "effects": {},
+      "next": "corn",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "corn": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "new",
+            "when": {
+              "min": {
+                "fortune": 4
+              }
+            },
+            "text": "你把新玉米放到食台上，另磨一小袋连芯细粉备在身边，务光循着食物气味探近。",
+            "effects": {},
+            "next": "distance",
+            "label": "食台与细粉",
+            "trust": 1,
+            "set": [
+              "prepared_corn_powder"
+            ]
+          },
+          {
+            "key": "few",
+            "when": {},
+            "text": "你把仅有的玉米分到食台，留下少量连芯细粉在袋里，务光慢慢吃完自己这一份。",
+            "effects": {},
+            "next": "distance",
+            "label": "少量分食与准备",
+            "trust": 1,
+            "set": [
+              "prepared_corn_powder"
+            ]
+          }
+        ]
+      },
+      "distance": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "stay",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你在雷声变响前退到食台外侧，务光嗅过新玉米，身体沿熟悉的窝口伏了回去。",
+            "effects": {},
+            "next": "rumble",
+            "label": "不凑近毒雷",
+            "trust": 1,
+            "set": [
+              "kept_sound_distance"
+            ]
+          },
+          {
+            "key": "heed",
+            "when": {},
+            "text": "你凑近追听雷响，神思一阵昏沉，赶忙吞下这次带来的连芯粉，退到食台外才定住。",
+            "effects": {
+              "health": -2
+            },
+            "next": "rumble",
+            "label": "追听后的教训",
+            "trust": -1,
+            "set": [
+              "heedless_sound"
+            ]
+          }
+        ]
+      },
+      "rumble": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "move",
+            "when": {
+              "relationFlags": [
+                "kept_sound_distance"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你趁务光安静时垫稳滚动的食台，低雷再响，玉米仍稳稳放在窝边，等它循味取食。",
+            "effects": {},
+            "next": "bowl",
+            "label": "垫稳滚动食台",
+            "trust": 1,
+            "set": [
+              "steady_food_table"
+            ]
+          },
+          {
+            "key": "offer",
+            "when": {},
+            "text": "你把玉米举在响雷一侧想引它出来，务光追着食物偏头，雷声逼得你把手缩回。",
+            "effects": {},
+            "next": "bowl",
+            "label": "拿食物诱向雷声",
+            "trust": -1,
+            "set": [
+              "baited_thunder"
+            ]
+          }
+        ]
+      },
+      "bowl": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "enough",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "务光吃完后嗅着空食台，你添上合适的一份便退开，等它自己沿窝口过来。",
+            "effects": {},
+            "next": "storm",
+            "label": "添食后收回双手",
+            "trust": 1,
+            "set": [
+              "did_not_take_food"
+            ]
+          },
+          {
+            "key": "take",
+            "when": {},
+            "text": "你拿走它正要吃的玉米想让它追你，务光伏低身体，雷声从食台下猛地滚出。",
+            "effects": {},
+            "next": "storm",
+            "label": "夺食激起雷声",
+            "trust": -2,
+            "set": [
+              "took_its_food"
+            ]
+          }
+        ]
+      },
+      "storm": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "wait",
+            "when": {
+              "relationFlags": [
+                "steady_food_table",
+                "did_not_take_food"
+              ],
+              "min": {
+                "health": 6
+              }
+            },
+            "text": "雨里你把新玉米送到稳住的食台，随即避开响雷的方向。务光吃过后伏到近窝。",
+            "effects": {},
+            "next": "settle",
+            "label": "风雨中送来新食",
+            "trust": 1,
+            "set": [
+              "fed_in_storm"
+            ],
+            "status": "friend"
+          },
+          {
+            "key": "pull",
+            "when": {},
+            "text": "你想把务光从雨中拖到干处，它收紧身体不肯移动。你只好放下新玉米退开。",
+            "effects": {},
+            "next": "amends",
+            "label": "硬拉没有成功",
+            "trust": -1,
+            "set": [
+              "forced_shelter"
+            ],
+            "status": "estranged"
+          }
+        ]
+      },
+      "amends": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "leave-food",
+            "when": {
+              "min": {
+                "bond": 8,
+                "insight": 8
+              }
+            },
+            "text": "你放下新玉米，停到雷声之外，双手收在篮边，等务光自己选好取食的时候。",
+            "effects": {},
+            "next": "settle",
+            "label": "还它取食的位置",
+            "trust": 2,
+            "set": [
+              "returned_food_choice"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "call",
+            "when": {},
+            "text": "你隔着雷响催它出来，务光只嗅向食物，伏着不动。你等到响声渐远才离开。",
+            "effects": {},
+            "next": "settle",
+            "label": "等不到跟随",
+            "trust": -1
+          }
+        ]
+      },
+      "settle": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "near",
+            "when": {
+              "relationFlags": [
+                "fed_in_storm"
+              ],
+              "minTrust": 3
+            },
+            "text": "雷声暂歇，务光沿食台嗅到篮边，吃过新玉米便伏下。你坐在外侧，听低雷渐渐收住。",
+            "effects": {},
+            "next": "last-food",
+            "label": "雷声之外相认",
+            "trust": 1,
+            "set": [
+              "rested_near_table"
+            ]
+          },
+          {
+            "key": "far",
+            "when": {},
+            "text": "务光把身体留在窝口，你将新食放上食台就退开，篮沿与它之间隔着一段雷响。",
+            "effects": {},
+            "next": "last-food",
+            "label": "食台两侧"
+          }
+        ]
+      },
+      "last-food": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "repair",
+            "when": {
+              "relationFlags": [
+                "returned_food_choice"
+              ],
+              "minTrust": 1
+            },
+            "text": "你放下新玉米，退到篮外等待。务光循着气味来到原位，低雷渐收，食台旁安静下来。",
+            "effects": {},
+            "next": null,
+            "label": "食台边缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "kept_sound_distance",
+                "rested_near_table"
+              ],
+              "minTrust": 4
+            },
+            "text": "新玉米的气味让务光从窝口探近，你把篮放在雷声之外，它吃完后愿意伏在近处。",
+            "effects": {},
+            "next": null,
+            "label": "食台外认得的人",
+            "status": "friend"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "你将食物放上台，退到雷声外等过一阵，务光始终伏在窝口。你收回空篮，沿路离开。",
+            "effects": {},
+            "next": null,
+            "label": "未接近的雷兽",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "fresh-corn",
+        "states": [
+          "friend"
+        ],
+        "text": "你给食台送来新玉米，务光循着气味探近，吃完后伏在篮外，你等雷声收住才离开。",
+        "effects": {}
+      },
+      {
+        "key": "quiet-table",
+        "states": [
+          "friend"
+        ],
+        "text": "务光安静的一段时间里，你垫稳食台的新松处，它嗅着添来的新食，在近窝伏下。",
+        "effects": {},
+        "when": {
+          "relationFlags": [
+            "steady_food_table"
+          ]
+        }
+      },
+      {
+        "key": "chosen-food",
+        "states": [
+          "reconciled"
+        ],
+        "text": "你放下新玉米后退到雷声之外，务光自己从窝口过来，沿气味取食，你安静提着空篮等候。",
+        "effects": {}
+      },
+      {
+        "key": "rumble-apart",
+        "states": [
+          "estranged"
+        ],
+        "text": "食台上留下这一回的新玉米，务光伏在雷声内侧，你在外侧等了一阵便收篮离开。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "一生末页，你还认得食台边那阵气味。务光吃完新玉米，曾伏到篮子近旁，低雷在身后渐收。",
+      "reconciled": "你记得放下食物、收手退开的那一回，务光按自己的步子取食，食台两侧的雷响慢慢放低。",
+      "estranged": "你一次次将新玉米放上食台，收篮时，务光仍伏在窝口。直到此生末尾，两边依旧隔着雷声。"
+    }
+  },
+  {
+    "id": "kume",
+    "title": "老鹫停在低枝",
+    "romance": false,
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "contact": {
+      "domain": "mountain",
+      "place": "老鹫的栖木旁"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "health": 5
+      }
+    },
+    "talents": [
+      "forest",
+      "steady",
+      "patient"
+    ],
+    "careers": [
+      "garden",
+      "craft"
+    ],
+    "intro": {
+      "text": "你经山中引荐穿过仙界入口，来到仙邸栖木旁，久米停在低枝，翅边的风推着你带来的轻篮。",
+      "effects": {},
+      "next": "landing",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "landing": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "clear",
+            "when": {
+              "min": {
+                "health": 7
+              }
+            },
+            "text": "你把栖木下横着的旧枝搬到一旁，久米顺着空处展翅落低，在枝头安稳收翅。",
+            "effects": {},
+            "next": "load",
+            "label": "给低落枝留空",
+            "trust": 1,
+            "set": [
+              "cleared_low_perch"
+            ]
+          },
+          {
+            "key": "high",
+            "when": {},
+            "text": "你把轻篮举到高处等它，久米看过篮子，换到旁边更低的枝头，慢慢站稳。",
+            "effects": {},
+            "next": "load",
+            "label": "错等在高处"
+          }
+        ]
+      },
+      "load": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "light",
+            "when": {
+              "min": {
+                "insight": 7
+              }
+            },
+            "text": "你把轻篮分成小份，先在栖木边试稳绳带，久米低头碰过篮沿才展翅。",
+            "effects": {},
+            "next": "flight",
+            "label": "分开小份载物",
+            "trust": 1,
+            "set": [
+              "split_load"
+            ]
+          },
+          {
+            "key": "heap",
+            "when": {},
+            "text": "你将许多杂物并进一只篮子，久米试抬后落回枝上，篮底重重碰到木边。",
+            "effects": {},
+            "next": "flight",
+            "label": "合成过重一篮",
+            "trust": -1,
+            "set": [
+              "overloaded_old_wing"
+            ]
+          }
+        ]
+      },
+      "flight": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "under",
+            "when": {
+              "relationFlags": [
+                "split_load"
+              ],
+              "min": {
+                "health": 6
+              }
+            },
+            "text": "久米沿低处送过轻篮，你从栖木下方接住，放下篮子，让它收翅歇过这一程。",
+            "effects": {},
+            "next": "wind",
+            "label": "接稳后让它停翅",
+            "trust": 1,
+            "set": [
+              "allowed_landing_rest"
+            ]
+          },
+          {
+            "key": "urge",
+            "when": {},
+            "text": "你在久米落回枝上时举起另一篮，它低头收紧翅膀，没有接下你催着续上的差事。",
+            "effects": {},
+            "next": "wind",
+            "label": "催着再飞",
+            "trust": -1,
+            "set": [
+              "urged_repeat"
+            ],
+            "status": "estranged"
+          }
+        ]
+      },
+      "wind": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "shelter",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "山风横过栖木，你把轻篮收回地面，久米移到背风枝头，老翅慢慢收拢。",
+            "effects": {},
+            "next": "rest",
+            "label": "风里收回载物",
+            "trust": 1,
+            "set": [
+              "read_crosswind"
+            ]
+          },
+          {
+            "key": "prove",
+            "when": {},
+            "text": "你要看久米是否还能顶风飞，轻篮便留在枝边，它绕开篮沿，缩到更低的背风处。",
+            "effects": {},
+            "next": "rest",
+            "label": "拿旧翅证明本领",
+            "trust": -1,
+            "set": [
+              "tested_old_wing"
+            ]
+          }
+        ]
+      },
+      "rest": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "accept",
+            "when": {
+              "relationFlags": [
+                "allowed_landing_rest",
+                "read_crosswind"
+              ]
+            },
+            "text": "你自己沿山路搬完这回的物品，回到栖木边，看久米仍在低枝歇息，便坐在树下等它。",
+            "effects": {},
+            "next": "unburden",
+            "label": "人走山路让翅歇息",
+            "trust": 1,
+            "set": [
+              "carried_own_load"
+            ],
+            "status": "friend"
+          },
+          {
+            "key": "ask",
+            "when": {},
+            "text": "你把没送出的篮子留在栖木边等它接手，久米移向枝头另一端，离篮子更远。",
+            "effects": {},
+            "next": "persuade",
+            "label": "仍等它接下差事",
+            "trust": -1
+          }
+        ]
+      },
+      "persuade": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "carry",
+            "when": {
+              "min": {
+                "bond": 7,
+                "health": 6
+              }
+            },
+            "text": "你把久米没接的篮子背上肩，沿山路自己搬走。它在低枝移动，停在你能看见的地方。",
+            "effects": {},
+            "next": "unburden",
+            "label": "自己背走重篮",
+            "trust": 2,
+            "set": [
+              "stopped_burdening"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "hold",
+            "when": {},
+            "text": "你守着未送的篮子继续等。久米将老翅紧紧收住，移到背风的枝端，你在路边站了很久。",
+            "effects": {},
+            "next": "unburden",
+            "label": "没有等来的起飞",
+            "trust": -1
+          }
+        ]
+      },
+      "unburden": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "near",
+            "when": {
+              "relationFlags": [
+                "cleared_low_perch"
+              ],
+              "minTrust": 3
+            },
+            "text": "你空着双肩坐到栖木下。久米落到清过的低枝，低头望着你，两边都安静歇过一阵。",
+            "effects": {},
+            "next": "low-branch",
+            "label": "低枝下相伴",
+            "trust": 1,
+            "set": [
+              "sat_without_task"
+            ]
+          },
+          {
+            "key": "past",
+            "when": {},
+            "text": "你空手经过栖木，久米收翅停在枝端，你抬头看过它，继续沿自己的山路走。",
+            "effects": {},
+            "next": "low-branch",
+            "label": "各自经过山路"
+          }
+        ]
+      },
+      "low-branch": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "repair",
+            "when": {
+              "relationFlags": [
+                "stopped_burdening"
+              ],
+              "minTrust": 1
+            },
+            "text": "你背走物品后回来，久米落到近枝歇息。你在树下坐定，等它慢慢将老翅收好。",
+            "effects": {},
+            "next": null,
+            "label": "老翅前的缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "carried_own_load",
+                "sat_without_task"
+              ],
+              "minTrust": 4
+            },
+            "text": "久米从低枝垂下目光，你空手坐在树下，看它收好老翅，陪它在背风处歇过这一程。",
+            "effects": {},
+            "next": null,
+            "label": "低枝下的伙伴",
+            "status": "friend"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "久米收翅留在背风处，你背起未送的物品，沿山路离开，篮带在肩上一点点勒紧。",
+            "effects": {},
+            "next": null,
+            "label": "重篮与低枝",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "unloaded-visit",
+        "states": [
+          "friend"
+        ],
+        "text": "你空手来到久米的低枝下，在树边坐定。它转向你收住翅膀，两边安静歇过这一趟。",
+        "effects": {}
+      },
+      {
+        "key": "new-wind",
+        "states": [
+          "friend"
+        ],
+        "text": "山风推来一根新折枝，你将它搬出落枝下方，久米挪向空出的背风处，安稳收翅。",
+        "effects": {}
+      },
+      {
+        "key": "shoulder-basket",
+        "states": [
+          "reconciled"
+        ],
+        "text": "你背着新篮子从栖木下经过，久米沿低枝转头，看你抬手扶稳肩带，自己走上山路。",
+        "effects": {}
+      },
+      {
+        "key": "closed-wing",
+        "states": [
+          "estranged"
+        ],
+        "text": "久米在背风枝上收着老翅，你沿下方山路经过，背好自己的物品，望过枝头便继续走。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "此生末页，你记得空手坐在树下的那一阵。久米收着老翅低头看你，待送的篮子已留在别处。",
+      "reconciled": "那回你将篮子背上肩，自己走完山路。回来时，久米落到近枝，安静看你坐下歇息。",
+      "estranged": "最后一次经过栖木，你仍背着物品。久米在低枝背风处收翅，你扶稳肩带，走向更远的山路。"
+    }
+  },
+  {
+    "id": "kanda",
+    "title": "两端提起的绳结",
+    "romance": false,
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "contact": {
+      "domain": "mountain",
+      "place": "年轻大鹫的送货栖木"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "health": 5,
+        "insight": 4
+      }
+    },
+    "talents": [
+      "handy",
+      "forest",
+      "steady"
+    ],
+    "careers": [
+      "craft",
+      "trade"
+    ],
+    "intro": {
+      "text": "你经山中引荐穿过仙界入口，沿送货小路走到栖木下，竿打朝货篮探头，爪尖试着找稳绳带。",
+      "effects": {},
+      "next": "bundle",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "bundle": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "balance",
+            "when": {
+              "min": {
+                "insight": 7
+              }
+            },
+            "text": "你把篮中物品分到两侧，竿打换爪试提，稳稳落住，篮沿在两根绳带间保持平正。",
+            "effects": {},
+            "next": "knot",
+            "label": "货篮两侧均重",
+            "trust": 1,
+            "set": [
+              "balanced_basket"
+            ]
+          },
+          {
+            "key": "lump",
+            "when": {},
+            "text": "你把重物都塞进篮角，竿打试提时篮身歪斜，爪尖收回，等你把它放平。",
+            "effects": {},
+            "next": "knot",
+            "label": "歪向一侧的货篮",
+            "trust": -1,
+            "set": [
+              "lopsided_load"
+            ]
+          }
+        ]
+      },
+      "knot": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "firm",
+            "when": {
+              "talentsAny": [
+                "handy",
+                "craft"
+              ],
+              "min": {
+                "insight": 6
+              }
+            },
+            "text": "你将绳结的松处一一收紧，再用手提过两端，竿打才把爪尖落到试稳的位置。",
+            "effects": {},
+            "next": "launch",
+            "label": "先用人手试绳",
+            "trust": 1,
+            "set": [
+              "tested_knot"
+            ]
+          },
+          {
+            "key": "guess",
+            "when": {},
+            "text": "你凭着外观认绳结够紧，竿打刚抬爪篮沿就松下一截，你只好把它接回地面。",
+            "effects": {},
+            "next": "launch",
+            "label": "外观不能算牢靠",
+            "trust": -1,
+            "set": [
+              "untested_knot"
+            ]
+          }
+        ]
+      },
+      "launch": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "help",
+            "when": {
+              "min": {
+                "health": 7
+              }
+            },
+            "text": "你先托住篮底帮竿打提起，等它稳住双爪才松手，年轻的翅膀有了完整的起飞空隙。",
+            "effects": {},
+            "next": "route",
+            "label": "松手前先托稳",
+            "trust": 1,
+            "set": [
+              "supported_launch"
+            ]
+          },
+          {
+            "key": "drop",
+            "when": {},
+            "text": "你在竿打换爪时便放开篮底，它急忙落回低枝，货篮在你脚边撞出一声闷响。",
+            "effects": {},
+            "next": "route",
+            "label": "换爪时放手太早",
+            "trust": -1,
+            "set": [
+              "dropped_too_soon"
+            ]
+          }
+        ]
+      },
+      "route": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "white-rock",
+            "when": {
+              "relationFlags": [
+                "balanced_basket",
+                "tested_knot"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你沿白岩下的低路跟着送货，竿打绕开侧风，在能让你接篮的低枝收住翅膀。",
+            "effects": {},
+            "next": "hurry",
+            "label": "低路接到货篮",
+            "trust": 1,
+            "set": [
+              "used_low_route"
+            ],
+            "status": "friend"
+          },
+          {
+            "key": "higher",
+            "when": {},
+            "text": "你举手指向更快的高路，竿打载着货篮急转，篮中一小包落到近处的石坡。",
+            "effects": {},
+            "next": "search",
+            "label": "催向高路落包",
+            "trust": -1,
+            "set": [
+              "lost_small_package"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "find",
+            "when": {
+              "min": {
+                "health": 6,
+                "insight": 7
+              }
+            },
+            "text": "你沿石坡找回落下的小包，放进篮中后自己提着走完低路，竿打沿枝头跟到终点。",
+            "effects": {},
+            "next": "hurry",
+            "label": "找回后自己提篮",
+            "trust": 2,
+            "set": [
+              "recovered_package"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "notice",
+            "when": {},
+            "text": "你找不到落包，便把缺少的一份说清，背走剩下的货物。竿打在近枝等你收回绳带。",
+            "effects": {},
+            "next": "hurry",
+            "label": "承认缺少一份",
+            "trust": 1,
+            "set": [
+              "admitted_loss"
+            ]
+          }
+        ]
+      },
+      "hurry": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "pause",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "竿打停翅时，你把下一篮留在地面，站在栖木下等它先歇过这一趟，再接下一份。",
+            "effects": {},
+            "next": "perch",
+            "label": "货篮之间留歇息",
+            "trust": 1,
+            "set": [
+              "left_flight_pause"
+            ]
+          },
+          {
+            "key": "urge",
+            "when": {},
+            "text": "你举着下一篮催竿打接上，它把爪缩回枝端，货篮留在你高举却没人接的手里。",
+            "effects": {},
+            "next": "perch",
+            "label": "催着续上下一篮",
+            "trust": -1,
+            "set": [
+              "kept_hurrying"
+            ],
+            "status": "estranged"
+          }
+        ]
+      },
+      "perch": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "clear",
+            "when": {
+              "relationFlags": [
+                "supported_launch"
+              ],
+              "minTrust": 3
+            },
+            "text": "你把低枝下接篮的位置清出来，竿打载过一份轻货，在你等到爪稳后才松开绳带。",
+            "effects": {},
+            "next": "arrival",
+            "label": "熟悉的接篮位置",
+            "trust": 1,
+            "set": [
+              "shared_landing"
+            ]
+          },
+          {
+            "key": "ground",
+            "when": {},
+            "text": "你把接篮的位置留在地面，竿打先落枝再将篮子放低，你沿绳带收回这一份货物。",
+            "effects": {},
+            "next": "arrival",
+            "label": "先落枝再接货",
+            "trust": 1
+          }
+        ]
+      },
+      "arrival": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "repair",
+            "when": {
+              "relationFlags": [
+                "recovered_package"
+              ],
+              "missingRelationFlags": [
+                "kept_hurrying"
+              ],
+              "minTrust": 2
+            },
+            "text": "你在低枝下等竿打落稳，它将绳带放低。那次找回落包以后，你们都记得要慢一拍。",
+            "effects": {},
+            "next": null,
+            "label": "送货路上的缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "used_low_route",
+                "left_flight_pause",
+                "shared_landing"
+              ],
+              "minTrust": 4
+            },
+            "text": "你等竿打的爪落稳才接走货篮。它停在近枝收翅，低路的两端都认得了对方的停步。",
+            "effects": {},
+            "next": null,
+            "label": "接篮的伙伴",
+            "status": "friend"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "你背起货物走上山路，竿打收爪停在低枝，那只等着起飞的篮子仍压在你肩上。",
+            "effects": {},
+            "next": null,
+            "label": "错开的送货节奏",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "balanced-load",
+        "states": [
+          "friend"
+        ],
+        "text": "你把这回的轻货分到两侧，竿打试提后稳稳起飞，低路尽头留着你等它落爪的位置。",
+        "effects": {}
+      },
+      {
+        "key": "rest-between",
+        "states": [
+          "friend"
+        ],
+        "text": "两份轻货之间，你把篮子放在地面，竿打在近枝收翅，你坐在树下等它歇过这一阵。",
+        "effects": {}
+      },
+      {
+        "key": "low-road",
+        "states": [
+          "reconciled"
+        ],
+        "text": "你把新货篮放在白岩低路旁，竿打试稳爪尖才提起，沿风较缓的低处送来这一份。",
+        "effects": {}
+      },
+      {
+        "key": "unclaimed-basket",
+        "states": [
+          "estranged"
+        ],
+        "text": "竿打停在栖木端没有接你举起的绳带，你将这一篮背回肩上，从自己的山路走远。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "此生末页，你还记得低路两端该怎样接篮。竿打落爪以后松下绳带，你先等稳才伸手。",
+      "reconciled": "找回落包后，你们改走低路。你记得货篮两端提稳的绳结，也记得竿打停翅时该留出的歇息。",
+      "estranged": "最后几趟送货，你将货篮背上自己的肩。竿打停在栖木端，收起爪尖，看你沿山路走远。"
+    }
+  },
+  {
+    "id": "houso",
+    "title": "虎爪不越的山门",
+    "romance": false,
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "contact": {
+      "domain": "mountain",
+      "place": "茨华仙邸山门外"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "insight": 5,
+        "bond": 4
+      }
+    },
+    "talents": [
+      "forest",
+      "steady",
+      "careful"
+    ],
+    "careers": [
+      "garden"
+    ],
+    "intro": {
+      "text": "你经山中引荐穿过仙界入口，停在获准的仙邸山门外，彭祖伏在草边，鼻尖转向你的气味。",
+      "effects": {},
+      "next": "scent",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "scent": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "halt",
+            "when": {
+              "min": {
+                "insight": 7
+              }
+            },
+            "text": "你在彭祖抬头时停住，站在门外让它嗅过袖口，等它认清这股陌生的气味。",
+            "effects": {},
+            "next": "gate",
+            "label": "先停在山门外",
+            "trust": 1,
+            "set": [
+              "halted_at_gate"
+            ]
+          },
+          {
+            "key": "cross",
+            "when": {},
+            "text": "你以为伏着的虎不会管路，径直跨向门内。彭祖起身挡住，你退回它留出的外侧。",
+            "effects": {},
+            "next": "gate",
+            "label": "越门被挡回",
+            "trust": -1,
+            "set": [
+              "crossed_gate"
+            ]
+          }
+        ]
+      },
+      "gate": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "low",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你把带来的木框放到门外低处，彭祖绕框嗅过一圈，伏回能看见你双手的位置。",
+            "effects": {},
+            "next": "claw",
+            "label": "让它看清双手",
+            "trust": 1,
+            "set": [
+              "showed_empty_hands"
+            ]
+          },
+          {
+            "key": "hide",
+            "when": {},
+            "text": "你把木框藏在背后靠近。彭祖沿你绕行的方向挪步，始终将身体留在门口与你之间。",
+            "effects": {},
+            "next": "claw",
+            "label": "遮掩带来的东西",
+            "trust": -1,
+            "set": [
+              "hid_bundle"
+            ]
+          }
+        ]
+      },
+      "claw": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "leave",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "彭祖在粗木上磨爪，你等它走开才搬掉碎屑，双手沿空出的木边慢慢收拾。",
+            "effects": {},
+            "next": "fur",
+            "label": "磨爪处留空",
+            "trust": 1,
+            "set": [
+              "left_claw_space"
+            ]
+          },
+          {
+            "key": "interrupt",
+            "when": {},
+            "text": "你拿木框去挡它磨爪，彭祖将框推回门外，爪痕横在木面上，你才把手收回。",
+            "effects": {},
+            "next": "fur",
+            "label": "误挡磨爪粗木",
+            "trust": -1
+          }
+        ]
+      },
+      "fur": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "respect",
+            "when": {
+              "relationFlags": [
+                "halted_at_gate"
+              ],
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你看到草上落下的虎毛，把它们留在原处，彭祖嗅过那片草后靠近木框边。",
+            "effects": {},
+            "next": "watch",
+            "label": "不借虎毛起贪念",
+            "trust": 1,
+            "set": [
+              "left_fur_alone"
+            ]
+          },
+          {
+            "key": "blade",
+            "when": {},
+            "text": "你量起彭祖的毛皮，亮出小刀想割下近爪的毛束。它低伏露齿，迫使你退到门外。",
+            "effects": {},
+            "next": "confront",
+            "label": "向毛皮伸刀",
+            "trust": -2,
+            "set": [
+              "drew_blade"
+            ]
+          }
+        ]
+      },
+      "confront": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "sheathe",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你把小刀收进鞘中放远，彭祖留在门口，目光仍盯着你收回的那只手。",
+            "effects": {},
+            "next": "withdraw",
+            "label": "收刀退离门口",
+            "trust": 1,
+            "set": [
+              "sheathed_blade"
+            ]
+          },
+          {
+            "key": "feint",
+            "when": {},
+            "text": "你又拿小刀试探它的距离，彭祖压低身体截住进路，山门外的低吼不肯让你靠近。",
+            "effects": {},
+            "next": "withdraw",
+            "label": "持刀继续试探",
+            "trust": -1,
+            "set": [
+              "kept_blade_out"
+            ],
+            "status": "enemy"
+          }
+        ]
+      },
+      "withdraw": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "empty",
+            "when": {
+              "relationFlags": [
+                "sheathed_blade"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你空手回到门外站定，双手放低。彭祖绕你嗅过一圈，回到粗木旁伏下。",
+            "effects": {},
+            "next": "watch",
+            "label": "不再追近的双手",
+            "trust": 1,
+            "set": [
+              "returned_empty"
+            ],
+            "clear": [
+              "kept_blade_out"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "far",
+            "when": {},
+            "text": "你退到更远的山路上，彭祖伏在门前，草地隔在两边，你站过片刻便沿路返回。",
+            "effects": {},
+            "next": "watch",
+            "label": "退到远处山路"
+          }
+        ]
+      },
+      "watch": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "alongside",
+            "when": {
+              "relationFlags": [
+                "showed_empty_hands",
+                "left_claw_space"
+              ],
+              "minTrust": 3
+            },
+            "text": "你把新碎木收到门外。彭祖伏在粗木旁看你收拾，虎爪与双手都有各自落下的位置。",
+            "effects": {},
+            "next": "leave",
+            "label": "门外一同停留",
+            "trust": 1,
+            "set": [
+              "sat_outside_gate"
+            ],
+            "status": "friend"
+          },
+          {
+            "key": "pass",
+            "when": {},
+            "text": "你在门外等风过去，彭祖转向守着的门内，草边的低吼让你停在原来的位置。",
+            "effects": {},
+            "next": "leave",
+            "label": "只在路边避风"
+          }
+        ]
+      },
+      "leave": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "enemy",
+            "when": {
+              "relationFlags": [
+                "drew_blade"
+              ],
+              "missingRelationFlags": [
+                "returned_empty"
+              ]
+            },
+            "text": "你想再靠近毛皮，彭祖露齿堵住进路，低吼逼你停在门外，它仍守在原处。",
+            "effects": {},
+            "next": null,
+            "label": "刀前的敌意",
+            "status": "enemy"
+          },
+          {
+            "key": "repair",
+            "when": {
+              "relationFlags": [
+                "returned_empty"
+              ],
+              "minTrust": 1
+            },
+            "text": "你停在门外摊开双手，彭祖闻过便伏回粗木边，低吼渐收，你在草边安静等候。",
+            "effects": {},
+            "next": null,
+            "label": "山门外缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "left_fur_alone",
+                "sat_outside_gate"
+              ],
+              "minTrust": 4
+            },
+            "text": "你收好门外的新碎木，彭祖嗅过袖口便伏回山门。你沿来路离开，听它在门边收住低吼。",
+            "effects": {},
+            "next": null,
+            "label": "守门虎认得的人",
+            "status": "friend"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "你走向山路，彭祖回到门前伏下，那片草地始终隔在袖口与山门之间。",
+            "effects": {},
+            "next": null,
+            "label": "门外的距离",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "familiar-sleeve",
+        "states": [
+          "friend"
+        ],
+        "text": "彭祖嗅过你低放的袖口便伏回山门，你留在门外，将这回落下的新碎木收到一旁。",
+        "effects": {}
+      },
+      {
+        "key": "claw-wood",
+        "states": [
+          "friend"
+        ],
+        "text": "你把磨爪处新落的木屑清到一旁，彭祖等你收回手才落爪，粗木的两侧各留一段空处。",
+        "effects": {}
+      },
+      {
+        "key": "empty-return",
+        "states": [
+          "reconciled"
+        ],
+        "text": "你空手停在山门外，彭祖绕近嗅过袖口，低吼放轻，便沿草边伏回粗木旁。",
+        "effects": {}
+      },
+      {
+        "key": "teeth-at-gate",
+        "states": [
+          "enemy"
+        ],
+        "text": "你在彭祖面前伸手试探，它露齿截住进路，你收手停在门外，听低吼在草边响起。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "一生末页，你记得门外清碎木时那股气味。彭祖嗅过袖口伏回山门，草边曾容你安静停步。",
+      "reconciled": "你空手回到山门外的那一回，还记得清。小刀放远，彭祖才绕近嗅袖，再伏回磨爪的粗木旁。",
+      "enemy": "最后几次站到门前，彭祖仍露齿挡路。你记得亮刀那一回，低吼始终隔在爪痕与刀鞘之间。",
+      "estranged": "最后一次沿山路走远，你回头看彭祖伏回门前，草地隔在两边，那股陌生气味也渐渐散去。"
+    }
+  },
+  {
+    "id": "manzairaku",
+    "title": "掌声停下的时候",
+    "romance": false,
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "contact": {
+      "domain": "lake",
+      "place": "置行堀的近岸浅水"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "bond": 5
+      }
+    },
+    "talents": [
+      "neighborly",
+      "patient",
+      "steady"
+    ],
+    "careers": [
+      "garden"
+    ],
+    "intro": {
+      "text": "你沿许可的水岸通路来到置行堀浅水边，万岁乐浮出水面，朝你拍下的第一声掌响转头。",
+      "effects": {},
+      "next": "clap",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "clap": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "pause",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你拍一声掌便等万岁乐自己浮近，它在水边探头，下一声响起前也能停在原处。",
+            "effects": {},
+            "next": "float",
+            "label": "掌声之间等回应",
+            "trust": 1,
+            "set": [
+              "waited_clap"
+            ]
+          },
+          {
+            "key": "many",
+            "when": {},
+            "text": "你接连拍掌想让它快些过来，万岁乐朝几个回响转头，最后潜回了浅水下。",
+            "effects": {},
+            "next": "float",
+            "label": "掌响太多"
+          }
+        ]
+      },
+      "float": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "near",
+            "when": {
+              "min": {
+                "insight": 7
+              }
+            },
+            "text": "你把新浮球轻推到近水，万岁乐顶回一小段，水面留出能往返的短距离。",
+            "effects": {},
+            "next": "dive",
+            "label": "近水浮球往返",
+            "trust": 1,
+            "set": [
+              "played_near_float"
+            ]
+          },
+          {
+            "key": "far",
+            "when": {},
+            "text": "你把新浮球掷向远流，万岁乐追过一段便掉头回来，浮球顺着水漂出这一片浅处。",
+            "effects": {},
+            "next": "dive",
+            "label": "浮球被掷得太远",
+            "trust": -1,
+            "set": [
+              "lost_float"
+            ]
+          }
+        ]
+      },
+      "dive": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "wait",
+            "when": {
+              "relationFlags": [
+                "waited_clap"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "万岁乐潜下时，你收住掌声，静静等它游过这一圈，看它自己慢慢浮出浅水。",
+            "effects": {},
+            "next": "show",
+            "label": "潜水时不催掌声",
+            "trust": 1,
+            "set": [
+              "allowed_quiet_dive"
+            ]
+          },
+          {
+            "key": "summon",
+            "when": {},
+            "text": "你隔着水面追着拍掌，万岁乐浮起又潜下，浪花在你的掌声边反复散开。",
+            "effects": {},
+            "next": "show",
+            "label": "掌声追着潜水",
+            "trust": -1,
+            "set": [
+              "chased_with_noise"
+            ]
+          }
+        ]
+      },
+      "show": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "one",
+            "when": {
+              "relationFlags": [
+                "played_near_float"
+              ],
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "万岁乐将新浮球顶出水面，你只接它愿意做的一次，笑过便让浮球停在近水。",
+            "effects": {},
+            "next": "shelter",
+            "label": "表演后留下停顿",
+            "trust": 1,
+            "set": [
+              "accepted_one_turn"
+            ],
+            "status": "friend"
+          },
+          {
+            "key": "again",
+            "when": {},
+            "text": "你在万岁乐伏到岸边后仍拍掌索演，它只将鼻尖转向更安静的水，继续伏着歇息。",
+            "effects": {},
+            "next": "stop",
+            "label": "伏下后继续催演",
+            "trust": -2,
+            "set": [
+              "demanded_more"
+            ]
+          }
+        ]
+      },
+      "stop": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "rest",
+            "when": {
+              "min": {
+                "bond": 8
+              }
+            },
+            "text": "你收住掌声，把新浮球推远，万岁乐慢慢闭目，身旁的水纹一圈圈平下来。",
+            "effects": {},
+            "next": "shelter",
+            "label": "给伏岸留安静",
+            "trust": 2,
+            "set": [
+              "stopped_demand"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "loud",
+            "when": {},
+            "text": "你把掌拍得更响，万岁乐翻入浅水，原来伏着的位置只留下湿痕与没接上的掌声。",
+            "effects": {},
+            "next": "shelter",
+            "label": "从掌声旁游开",
+            "trust": -1,
+            "status": "estranged"
+          }
+        ]
+      },
+      "shelter": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "shade",
+            "when": {
+              "min": {
+                "health": 6
+              }
+            },
+            "text": "你将水边一块松板挪到不挡下水的位置，万岁乐绕过板沿，在安静的浅处停下来。",
+            "effects": {},
+            "next": "cue",
+            "label": "清开回水位置",
+            "trust": 1,
+            "set": [
+              "cleared_water_edge"
+            ]
+          },
+          {
+            "key": "still",
+            "when": {},
+            "text": "你搬不动松板，便退到不挡下水的那一侧，万岁乐从原来的间隙慢慢游回浅处。",
+            "effects": {},
+            "next": "cue",
+            "label": "让开下水的间隙",
+            "trust": 1
+          }
+        ]
+      },
+      "cue": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "choice",
+            "when": {
+              "relationFlags": [
+                "allowed_quiet_dive"
+              ],
+              "minTrust": 3
+            },
+            "text": "你拍一声掌便将手放下，万岁乐自己浮到近处，在水边探头，安静停过这一回。",
+            "effects": {},
+            "next": "shore",
+            "label": "掌声后由它选择",
+            "trust": 1,
+            "set": [
+              "chose_to_approach"
+            ]
+          },
+          {
+            "key": "watch",
+            "when": {},
+            "text": "你把双手收在身前静看，万岁乐沿浅水游过，绕向另一侧，水纹慢慢离岸远去。",
+            "effects": {},
+            "next": "shore",
+            "label": "只看水中游过"
+          }
+        ]
+      },
+      "shore": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "repair",
+            "when": {
+              "relationFlags": [
+                "demanded_more",
+                "stopped_demand"
+              ],
+              "minTrust": 1
+            },
+            "text": "掌声停下，万岁乐在岸边伏好。你坐远些等它，听水声在表演之后渐渐平下来。",
+            "effects": {},
+            "next": null,
+            "label": "浅水边缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "accepted_one_turn",
+                "chose_to_approach",
+                "cleared_water_edge"
+              ],
+              "minTrust": 4
+            },
+            "text": "万岁乐从浅水里浮近，你放下双手等它停好，它在近岸探头，愿意再与你玩一回。",
+            "effects": {},
+            "next": null,
+            "label": "掌声外的伙伴",
+            "status": "friend"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "万岁乐绕向浅水另一侧，你收住掌声，在岸上看过它的游圈，双手慢慢放回身前。",
+            "effects": {},
+            "next": null,
+            "label": "没有接近的掌声",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "one-turn",
+        "states": [
+          "friend"
+        ],
+        "text": "你把新浮球轻推到近水，万岁乐顶回一小段，玩过一回便在岸边伏好，你收球等它歇息。",
+        "effects": {}
+      },
+      {
+        "key": "quiet-surface",
+        "states": [
+          "friend"
+        ],
+        "text": "万岁乐潜入浅水，你静静等它浮起，水面接上自己的涟漪之后才有你的一声掌响。",
+        "effects": {}
+      },
+      {
+        "key": "rest-after-show",
+        "states": [
+          "reconciled"
+        ],
+        "text": "你收好新浮球，等万岁乐歇过这一阵。它伏在岸边，鼻尖向水，你安静坐在远些的位置。",
+        "effects": {}
+      },
+      {
+        "key": "water-circle",
+        "states": [
+          "estranged"
+        ],
+        "text": "你在岸边看万岁乐沿浅水绕向另一侧，双手收在身前，等那圈水纹慢慢散开。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "此生末页，你记得万岁乐自己浮近的那一回。玩过便伏到岸边，你收好球，陪它安静歇息。",
+      "reconciled": "你记得表演之后坐远等待的那一阵，万岁乐自己选好伏下的位置，水纹按它的节奏散开。",
+      "estranged": "最后一次停在岸边，万岁乐沿浅水绕向另一侧。你收住掌声，看着水纹离开双手能触到的地方。"
+    }
+  },
+  {
+    "id": "unshou",
+    "title": "鱼钱之外的药瓶",
+    "romance": false,
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "contact": {
+      "domain": "village",
+      "place": "运松翁的渔夫小屋"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "health": 4,
+        "bond": 4
+      }
+    },
+    "talents": [
+      "herbal",
+      "handy",
+      "thrifty"
+    ],
+    "careers": [
+      "garden",
+      "craft",
+      "trade"
+    ],
+    "intro": {
+      "text": "你在河边看见运松翁收起一张旧网，他把漏鱼的结口举给你看，门边还放着一只药瓶。",
+      "effects": {},
+      "next": "net",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "net": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "mend",
+            "when": {
+              "talentsAny": [
+                "handy",
+                "craft"
+              ],
+              "min": {
+                "insight": 6
+              }
+            },
+            "text": "你替运松翁补牢结口，跟他各提一端，将网拖回浅处，刚进网的小鱼稳稳留在结内。",
+            "effects": {},
+            "next": "catch",
+            "label": "一起补网拖网",
+            "trust": 1,
+            "set": [
+              "mended_net"
+            ]
+          },
+          {
+            "key": "hold",
+            "when": {},
+            "text": "你没学会补结，便提住他指定的一端。运松翁慢慢收网，叫你先看清鱼从哪里漏走。",
+            "effects": {},
+            "next": "catch",
+            "label": "先看漏鱼的结口",
+            "trust": 1
+          }
+        ]
+      },
+      "catch": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "leave",
+            "when": {
+              "min": {
+                "insight": 7
+              }
+            },
+            "text": "你把太小的鱼放回浅水，运松翁挑出足够两人吃的一份，剩下的沿网口放回河里。",
+            "effects": {},
+            "next": "bottle",
+            "label": "共留一顿鱼饭",
+            "trust": 1,
+            "set": [
+              "left_small_fish"
+            ]
+          },
+          {
+            "key": "price",
+            "when": {},
+            "text": "你按每尾能卖多少来数鱼，运松翁听着算盘响，把够吃的那份先放到灶边。",
+            "effects": {},
+            "next": "bottle",
+            "label": "鱼先算成价钱"
+          }
+        ]
+      },
+      "bottle": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "ask",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你问门边药瓶是否另有价钱。运松翁说那是给伤口用的，鱼钱归鱼钱，治伤不用付钱。",
+            "effects": {},
+            "next": "labor",
+            "label": "听清免费治伤",
+            "trust": 1,
+            "set": [
+              "heard_free_remedy"
+            ]
+          },
+          {
+            "key": "doubt",
+            "when": {},
+            "text": "你认定治伤总该多收一笔。运松翁把药瓶放回门边，让你先坐下看看手上磨破的口子。",
+            "effects": {},
+            "next": "labor",
+            "label": "仍将药当生意",
+            "trust": -1,
+            "set": [
+              "priced_remedy"
+            ]
+          }
+        ]
+      },
+      "labor": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "share",
+            "when": {
+              "min": {
+                "health": 7
+              }
+            },
+            "text": "你替运松翁搬来新木，跟他把门边湿滑的一段铺平，药瓶旁的凳子也能放稳了。",
+            "effects": {},
+            "next": "offer",
+            "label": "一起铺平门前湿地",
+            "trust": 1,
+            "set": [
+              "helped_doorstep"
+            ],
+            "status": "friend"
+          },
+          {
+            "key": "stay",
+            "when": {},
+            "text": "你搬不动重木，便坐在门边削出小楔，运松翁拿去垫稳凳脚，留你吃完这一顿鱼。",
+            "effects": {},
+            "next": "offer",
+            "label": "削楔换来同桌",
+            "trust": 1,
+            "set": [
+              "shared_fish_meal"
+            ]
+          }
+        ]
+      },
+      "offer": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "goods",
+            "when": {
+              "relationFlags": [
+                "heard_free_remedy"
+              ],
+              "min": {
+                "fortune": 4
+              }
+            },
+            "text": "你将干净布条送到门边，留给免费治伤用。运松翁收下布卷，把卖鱼的钱放进自己的小袋。",
+            "effects": {},
+            "next": "river-rest",
+            "label": "添布不添药价",
+            "trust": 1,
+            "set": [
+              "left_clean_cloth"
+            ]
+          },
+          {
+            "key": "cut",
+            "when": {},
+            "text": "你提议替他接治伤的活再抽一份药钱，运松翁摇头，将药瓶挪到你碰不到的里侧。",
+            "effects": {},
+            "next": "amends",
+            "label": "向免费秘药抽钱",
+            "trust": -2,
+            "set": [
+              "asked_remedy_cut"
+            ],
+            "status": "estranged"
+          }
+        ]
+      },
+      "amends": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "withdraw",
+            "when": {
+              "min": {
+                "bond": 8
+              }
+            },
+            "text": "你认下把治伤当成买卖的提议，带来一卷不标价的布条。运松翁放回门边的药瓶。",
+            "effects": {},
+            "next": "river-rest",
+            "label": "撤掉抽药钱的提议",
+            "trust": 2,
+            "set": [
+              "withdrew_cut"
+            ],
+            "clear": [
+              "priced_remedy"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "argue",
+            "when": {},
+            "text": "你继续拿辛苦替药价辩护，运松翁只肯与你结清鱼钱，药瓶留在小屋更深的地方。",
+            "effects": {},
+            "next": "river-rest",
+            "label": "只能谈鱼钱",
+            "trust": -1
+          }
+        ]
+      },
+      "river-rest": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "beside",
+            "when": {
+              "relationFlags": [
+                "left_small_fish"
+              ],
+              "minTrust": 3
+            },
+            "text": "你和运松翁在浅河边坐下，鱼竿搁得比上次更低，两人谈过够吃的份量才等鱼上钩。",
+            "effects": {},
+            "next": "doorway",
+            "label": "浅河边同等鱼",
+            "trust": 1,
+            "set": [
+              "waited_river_together"
+            ]
+          },
+          {
+            "key": "separate",
+            "when": {},
+            "text": "你在另一段河边放下鱼竿，运松翁收着自己的网，水面把两边没说完的话分开。",
+            "effects": {},
+            "next": "doorway",
+            "label": "两段河边各自等候"
+          }
+        ]
+      },
+      "doorway": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "repair",
+            "when": {
+              "relationFlags": [
+                "asked_remedy_cut",
+                "withdrew_cut"
+              ],
+              "minTrust": 1
+            },
+            "text": "运松翁把新布卷放在药瓶旁，你先问该搬哪段木头，门边又能谈起鱼钱以外的事情。",
+            "effects": {},
+            "next": null,
+            "label": "小屋门前缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "mentor",
+            "when": {
+              "relationFlags": [
+                "mended_net",
+                "waited_river_together",
+                "left_clean_cloth"
+              ],
+              "minTrust": 4
+            },
+            "text": "你先补稳网结再留下够吃的鱼。运松翁把旧结举来让你看，免费治伤的药瓶仍在门边。",
+            "effects": {},
+            "next": null,
+            "label": "渔网与药瓶的师友",
+            "status": "mentor"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "waited_river_together"
+              ],
+              "minTrust": 3,
+              "missingRelationFlags": [
+                "asked_remedy_cut"
+              ]
+            },
+            "text": "运松翁让出浅河边一块坐处，你与他聊够吃的鱼，门边那瓶秘药照旧留给免费的治伤。",
+            "effects": {},
+            "next": null,
+            "label": "浅河边的友人",
+            "status": "friend"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "你与运松翁只在卖鱼时说几句，药瓶留在小屋深处，谈到药价时，他便转向自己的鱼网。",
+            "effects": {},
+            "next": null,
+            "label": "止于鱼钱",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "old-net-knot",
+        "states": [
+          "mentor"
+        ],
+        "text": "运松翁把新松开的网结举给你看，你补稳后与他各提一端，药瓶依旧留给免费的治伤。",
+        "effects": {}
+      },
+      {
+        "key": "enough-for-meal",
+        "states": [
+          "friend"
+        ],
+        "text": "你与运松翁在浅河边各放一根鱼竿，谈起够吃的份量，等上钩的一尾再慢慢收线。",
+        "effects": {}
+      },
+      {
+        "key": "unpriced-cloth",
+        "states": [
+          "reconciled"
+        ],
+        "text": "你将新布条送到小屋门边，留给免费治伤用。运松翁收好布卷，给你挪出凳脚。",
+        "effects": {}
+      },
+      {
+        "key": "fish-account",
+        "states": [
+          "estranged"
+        ],
+        "text": "运松翁与你结清这一回鱼钱，药瓶仍留在屋内深处。你收好买来的鱼，沿河边离开。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "mentor": "一生末页，你还记得运松翁举起旧网教你补结，药瓶放在门边，卖鱼的钱装进小袋，各有去处。",
+      "friend": "你记得浅河边共坐时两根竿尖的倒影，够吃的鱼先分出来，治伤的药瓶留在门边，等有需要的人。",
+      "reconciled": "你记得收回抽药钱的提议，送来干净布卷的那一回。运松翁放回药瓶，垫稳的凳子又容你坐下。",
+      "estranged": "最后一次结清鱼钱，你从小屋门外离开。运松翁将药瓶留在深处，药价那场争论始终没谈拢。"
+    }
+  },
+  {
+    "id": "suiki",
+    "title": "干岸上的水墙",
+    "romance": false,
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "contact": {
+      "domain": "hell",
+      "place": "鬼神长的水墙试场",
+      "premise": "你沿本作二创的地狱访客通路往返干岸，在获准的位置观察水鬼的高压水墙。"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "health": 5,
+        "insight": 5
+      }
+    },
+    "talents": [
+      "steady",
+      "careful",
+      "patient"
+    ],
+    "careers": [
+      "craft",
+      "scholar"
+    ],
+    "intro": {
+      "text": "你循许可来到地狱水墙外，水鬼令水层压成窄道，看着你先在干岸站稳。",
+      "effects": {},
+      "next": "layer",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "layer": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "read",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你看出外层水压比里层更急，先绕到平缓一侧，水鬼将两层水墙错开让你看清。",
+            "effects": {},
+            "next": "bank",
+            "label": "辨出不同水层",
+            "trust": 1,
+            "set": [
+              "read_layers"
+            ]
+          },
+          {
+            "key": "touch",
+            "when": {},
+            "text": "你把各层都当成同一片流水，伸手便被外层水压推回。水鬼收紧水墙，让你先在干岸站稳。",
+            "effects": {
+              "health": -1
+            },
+            "next": "bank",
+            "label": "误认高压流水",
+            "trust": -1
+          }
+        ]
+      },
+      "bank": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "firm",
+            "when": {
+              "min": {
+                "health": 7
+              }
+            },
+            "text": "你搬开干岸挡路的石块，留出站稳与退出的位置，水鬼让新的水层沿空处升起。",
+            "effects": {},
+            "next": "pressure",
+            "label": "清开干岸退路",
+            "trust": 1,
+            "set": [
+              "cleared_dry_bank"
+            ]
+          },
+          {
+            "key": "edge",
+            "when": {},
+            "text": "你搬不动重石，便从窄岸侧着经过，水鬼让水墙停在原处，等你自己退回平地。",
+            "effects": {},
+            "next": "pressure",
+            "label": "窄岸侧身退回"
+          }
+        ]
+      },
+      "pressure": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "ask",
+            "when": {
+              "relationFlags": [
+                "read_layers"
+              ],
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "你问水层为何能挡住横行却挡不住地下的路。水鬼把水压移向地面，让差别留在眼前。",
+            "effects": {},
+            "next": "trace",
+            "label": "看清水与地的差别",
+            "trust": 1,
+            "set": [
+              "understood_ground"
+            ]
+          },
+          {
+            "key": "boast",
+            "when": {},
+            "text": "你说只要使力便能从水墙冲过。水鬼撤开一道外层，水流把你推回干岸，衣襟尽湿。",
+            "effects": {
+              "health": -1
+            },
+            "next": "trace",
+            "label": "空谈冲过水墙",
+            "trust": -1,
+            "set": [
+              "boasted_force"
+            ],
+            "injury": true
+          }
+        ]
+      },
+      "trace": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "honest",
+            "when": {
+              "relationFlags": [
+                "cleared_dry_bank"
+              ],
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你报出岸上新裂的一条浅缝，说自己只看见这段。水鬼让水墙停在缝旁，细看它的走向。",
+            "effects": {},
+            "next": "test",
+            "label": "只报看见的浅缝",
+            "trust": 1,
+            "set": [
+              "reported_only_trace"
+            ]
+          },
+          {
+            "key": "false",
+            "when": {},
+            "text": "你把不知通向何处的浅缝说成逃走者的通路，想趁水鬼移开水墙时偷过内侧。",
+            "effects": {},
+            "next": "caught",
+            "label": "谎报通路偷渡",
+            "trust": -2,
+            "set": [
+              "false_escape_trace"
+            ]
+          }
+        ]
+      },
+      "caught": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "admit",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "水墙在内侧截住你的退路，你认下偷渡的谎话，指回自己捏造的那段岸缝。",
+            "effects": {},
+            "next": "repair",
+            "label": "指回捏造的岸缝",
+            "trust": 1,
+            "set": [
+              "admitted_false_trace"
+            ]
+          },
+          {
+            "key": "double",
+            "when": {},
+            "text": "你给岸缝编出更多细节。水鬼将内外水层合紧，水声盖住你的争辩，退路也被截住。",
+            "effects": {},
+            "next": "repair",
+            "label": "谎话叠上水层",
+            "trust": -1,
+            "set": [
+              "repeated_lie"
+            ],
+            "status": "enemy"
+          }
+        ]
+      },
+      "repair": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "correct",
+            "when": {
+              "relationFlags": [
+                "admitted_false_trace"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你把亲见与猜测分开逐段指出。水鬼移开截路的外层，留着内层水墙不许你继续越界。",
+            "effects": {},
+            "next": "test",
+            "label": "纠正谎话后退回",
+            "trust": 1,
+            "set": [
+              "corrected_trace"
+            ],
+            "clear": [
+              "repeated_lie"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "back",
+            "when": {},
+            "text": "你退到原来的干岸，水鬼将水层压回闭合的位置。你补讲岸缝，他只顾着看水墙内侧。",
+            "effects": {},
+            "next": "test",
+            "label": "只获退回干岸"
+          }
+        ]
+      },
+      "test": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "proof",
+            "when": {
+              "relationFlags": [
+                "understood_ground"
+              ],
+              "minTrust": 3
+            },
+            "text": "你站在干岸指出水压改变时的裂缝回声。水鬼依次移开两层水，与你核对实际见到的差别。",
+            "effects": {},
+            "next": "last-wall",
+            "label": "以所见核对水层",
+            "trust": 1,
+            "set": [
+              "checked_actual_gap"
+            ],
+            "status": "mentor"
+          },
+          {
+            "key": "watch",
+            "when": {},
+            "text": "水鬼在原处升起多层水墙，你站在许可的干岸，一层层看水纹怎样随水压改变。",
+            "effects": {},
+            "next": "last-wall",
+            "label": "干岸观水"
+          }
+        ]
+      },
+      "last-wall": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "enemy",
+            "when": {
+              "relationFlags": [
+                "false_escape_trace"
+              ],
+              "missingRelationFlags": [
+                "corrected_trace"
+              ]
+            },
+            "text": "水鬼将内层水墙合在你欲越过的地方，偷渡的谎话留下敌意，地狱的这一段路止于干岸。",
+            "effects": {},
+            "next": null,
+            "label": "水墙前的敌意",
+            "status": "enemy"
+          },
+          {
+            "key": "repair",
+            "when": {
+              "relationFlags": [
+                "corrected_trace"
+              ],
+              "minTrust": 1
+            },
+            "text": "你只说亲眼见到的浅缝，水鬼听完才调整外层，来往从获准的干岸重新接上。",
+            "effects": {},
+            "next": null,
+            "label": "干岸上缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "mentor",
+            "when": {
+              "relationFlags": [
+                "reported_only_trace",
+                "checked_actual_gap"
+              ],
+              "minTrust": 4
+            },
+            "text": "水鬼逐层移开水墙让你观察，你在干岸听裂缝回声，慢慢学会分辨水压变化留下的不同水纹。",
+            "effects": {},
+            "next": null,
+            "label": "水层旁的师友",
+            "status": "mentor"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "水墙随水鬼的追索合上，你在许可的干岸站过片刻，关于岸缝的话停在水声里，只好沿路返回。",
+            "effects": {},
+            "next": null,
+            "label": "干岸与内层",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "different-layers",
+        "states": [
+          "mentor"
+        ],
+        "text": "水鬼在试场错开两层高压水，你站在干岸辨认其差别，沿着许可的位置继续看水纹。",
+        "effects": {}
+      },
+      {
+        "key": "honest-crack",
+        "states": [
+          "mentor"
+        ],
+        "text": "新裂的岸缝出现在干岸边，你只报亲见的那段，水鬼调整外层水墙，听完回声再继续。",
+        "effects": {}
+      },
+      {
+        "key": "corrected-word",
+        "states": [
+          "reconciled"
+        ],
+        "text": "你在水墙外说清亲见的那一段，将猜测另说。水鬼留出干岸，听完才调整内侧的水压。",
+        "effects": {}
+      },
+      {
+        "key": "closed-inner",
+        "states": [
+          "enemy"
+        ],
+        "text": "你试探地狱水墙的内侧，水鬼立即合起水层，旧日谎报后的敌意随高压水声逼回干岸。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "mentor": "一生末页，你还听得出那两层高压水的差别。水鬼将它们错开时，裂缝回声曾让你站定细听。",
+      "reconciled": "你记得纠正谎报后退回干岸的那一回，水鬼听完亲见之处，才让外层水墙错开了一点。",
+      "enemy": "最后一次试探岸缝，水鬼合起内层水墙。偷渡时的谎话仍横在两边，高压水声截住了去路。",
+      "estranged": "你记得干岸上那段相识，关于岸缝的话始终没说通。水墙随追索合上，你也沿许可的路返回。"
+    }
+  },
+  {
+    "id": "hakusen",
+    "title": "猫眼之外的鼠声",
+    "romance": false,
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "contact": {
+      "domain": "village",
+      "place": "村郊猫画临时摊"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "insight": 5
+      }
+    },
+    "talents": [
+      "reader",
+      "craft",
+      "handy"
+    ],
+    "careers": [
+      "scholar",
+      "craft",
+      "trade"
+    ],
+    "intro": {
+      "text": "你在村郊临时画摊求一张驱鼠的画，白仙铺开纸，先让你听案后窸窣的鼠声。",
+      "effects": {},
+      "next": "paper",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "paper": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "clean",
+            "when": {
+              "min": {
+                "insight": 7
+              }
+            },
+            "text": "你把干净纸铺平再落笔，白仙指过未皱的纸角，一声低鸣让案后的鼠声停下来。",
+            "effects": {},
+            "next": "eye",
+            "label": "纸角与低鸣",
+            "trust": 1,
+            "set": [
+              "heard_mouse_signal"
+            ]
+          },
+          {
+            "key": "shape",
+            "when": {},
+            "text": "你只盯着猫该画得多凶，白仙把你弄皱的纸换平，案后鼠声沿另一边继续响。",
+            "effects": {},
+            "next": "eye",
+            "label": "只看猫的样子"
+          }
+        ]
+      },
+      "eye": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "compare",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你照着猫眼试画一张，案后鼠声照旧响起。白仙将自己的画移近，鼠声才慢慢停下。",
+            "effects": {},
+            "next": "night",
+            "label": "猫形不是驱鼠法",
+            "trust": 1,
+            "set": [
+              "compared_ordinary_copy"
+            ]
+          },
+          {
+            "key": "praise",
+            "when": {},
+            "text": "你将猫眼夸成威力所在，白仙只低头把画移向案后，让你仔细听那处最近的鼠声。",
+            "effects": {},
+            "next": "night",
+            "label": "夸在猫眼之上"
+          }
+        ]
+      },
+      "night": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "listen",
+            "when": {
+              "relationFlags": [
+                "heard_mouse_signal"
+              ],
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "你守在猫画旁听见白仙的低鸣先起，鼠声随后绕开，画纸原来只标出不该袭扰的地方。",
+            "effects": {},
+            "next": "threshold",
+            "label": "辨清画与鼠群",
+            "trust": 1,
+            "set": [
+              "knew_picture_mark"
+            ]
+          },
+          {
+            "key": "guess",
+            "when": {},
+            "text": "你听到鼠声绕开便认定猫眼发了法力。白仙收起笔，在你面前将两张画纸换了位置。",
+            "effects": {},
+            "next": "threshold",
+            "label": "把结果归给画法"
+          }
+        ]
+      },
+      "threshold": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "ask",
+            "when": {
+              "relationFlags": [
+                "knew_picture_mark"
+              ],
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你问白仙何处能放这一张记号，他自己指向门槛外，叫你别把别处的纸也说成同样有效。",
+            "effects": {},
+            "next": "query",
+            "label": "问清记号的去处",
+            "trust": 1,
+            "set": [
+              "asked_real_mark"
+            ]
+          },
+          {
+            "key": "copy-sale",
+            "when": {},
+            "text": "你要把自己临摹的猫画拿去按同样价钱卖。白仙收回原画，案后的鼠声也一齐响起。",
+            "effects": {},
+            "next": "sale",
+            "label": "临摹画也要卖作神效",
+            "trust": -2,
+            "set": [
+              "sold_false_copy"
+            ]
+          }
+        ]
+      },
+      "sale": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "admit",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你将要出售的临摹画取回，不再宣称它能驱鼠。白仙看着纸角，等你把价签也拆掉。",
+            "effects": {},
+            "next": "undo",
+            "label": "取回虚称神效的画",
+            "trust": 1,
+            "set": [
+              "withdrew_copy"
+            ]
+          },
+          {
+            "key": "insist",
+            "when": {},
+            "text": "你坚持只要画得像便该卖同样价钱，白仙收起原画，鼠声在案后密密接成一片。",
+            "effects": {},
+            "next": "undo",
+            "label": "仍拿猫形当神效",
+            "trust": -1,
+            "set": [
+              "kept_false_sale"
+            ],
+            "status": "rival"
+          }
+        ]
+      },
+      "undo": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "plain",
+            "when": {
+              "relationFlags": [
+                "withdrew_copy"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你把临摹画留作普通画纸，拆完价签后承认自己只学过猫形。白仙才将原画放回案前。",
+            "effects": {},
+            "next": "query",
+            "label": "承认只学过画猫",
+            "trust": 1,
+            "set": [
+              "corrected_copy_claim"
+            ],
+            "clear": [
+              "kept_false_sale"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "aside",
+            "when": {},
+            "text": "你带临摹画退到案旁。白仙将原画收在自己那边，两张猫形隔着画案，各有各的位置。",
+            "effects": {},
+            "next": "query",
+            "label": "原画没有再交来"
+          }
+        ]
+      },
+      "query": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "honest",
+            "when": {
+              "relationFlags": [
+                "knew_picture_mark"
+              ],
+              "minTrust": 3
+            },
+            "text": "你问记号怎样让鼠群听从白仙，他将笔留近一些，让你照着画形练习，自己听案后鼠声。",
+            "effects": {},
+            "next": "signature",
+            "label": "问到真正的鼠声",
+            "trust": 1,
+            "set": [
+              "spoke_actual_method"
+            ],
+            "status": "mentor"
+          },
+          {
+            "key": "demand",
+            "when": {},
+            "text": "你要白仙只教猫眼不提鼠群，他收起案边的笔，让一张普通临摹留在你面前。",
+            "effects": {},
+            "next": "signature",
+            "label": "只求不问来路的神效",
+            "trust": -1
+          }
+        ]
+      },
+      "signature": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "repair",
+            "when": {
+              "relationFlags": [
+                "sold_false_copy",
+                "corrected_copy_claim"
+              ],
+              "minTrust": 1
+            },
+            "text": "你把普通猫画与白仙的记号分开放好，他重新展开原画，鼠声在两种纸之间停了一停。",
+            "effects": {},
+            "next": null,
+            "label": "画案前缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "mentor",
+            "when": {
+              "relationFlags": [
+                "asked_real_mark",
+                "spoke_actual_method"
+              ],
+              "minTrust": 4
+            },
+            "text": "白仙让你看同一笔如何画出不同猫形，你先承认画法与役鼠有别，才在近案处继续学画。",
+            "effects": {},
+            "next": null,
+            "label": "只学画法的师友",
+            "status": "mentor"
+          },
+          {
+            "key": "rival",
+            "when": {
+              "relationFlags": [
+                "sold_false_copy"
+              ],
+              "missingRelationFlags": [
+                "corrected_copy_claim"
+              ]
+            },
+            "text": "你把临摹画仍当驱鼠神效。白仙收起原画不许借名，猫形的生意成了彼此争执的由头。",
+            "effects": {},
+            "next": null,
+            "label": "猫画生意的对手",
+            "status": "rival"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "白仙将原画收在案内，你拿着普通猫形退开，关于鼠声的问题才说到一半，笔已被他收远。",
+            "effects": {},
+            "next": null,
+            "label": "画案两侧",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "different-eyes",
+        "states": [
+          "mentor"
+        ],
+        "text": "白仙在画案前改出两种猫眼，你辨清笔法，再听他用低鸣回应案后的鼠声，将两样记牢。",
+        "effects": {}
+      },
+      {
+        "key": "separate-paper",
+        "states": [
+          "reconciled"
+        ],
+        "text": "你将新临摹的猫画作为普通画纸放在一边，白仙的记号留在另一边，案后鼠声慢慢停住。",
+        "effects": {}
+      },
+      {
+        "key": "unborrowed-name",
+        "states": [
+          "rival"
+        ],
+        "text": "你给临摹画添上夸大价签，白仙卷起原画，叫你收回借名的说法，两人又为这一笔猫眼争起来。",
+        "effects": {}
+      },
+      {
+        "key": "far-brush",
+        "states": [
+          "estranged"
+        ],
+        "text": "白仙将笔收在画案内侧，你在远处看猫形渐成，只听到零碎鼠声，看过一阵便带纸离开。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "mentor": "一生末页，你记得普通猫画怎样落笔，也记得白仙的低鸣怎样接上鼠声，画案前的两种本事各听过一遍。",
+      "reconciled": "你拆下虚称驱鼠的价签，白仙才重新展开原画。普通临摹与记号各放一边的那一回，你仍记得清。",
+      "rival": "最后几次争价，白仙照旧收起原画，拒绝让你的临摹借名。那笔猫眼画得再像，也总在价签前谈僵。",
+      "estranged": "最后一次站到画案边，白仙把笔收在内侧。你抱着普通猫画，听过那阵鼠声，带未问完的话离开。"
+    }
+  },
+  {
+    "id": "namazu",
+    "title": "震动世界的招牌",
+    "romance": false,
+    "source": "https://thbwiki.cc/大鲶鱼",
+    "contact": {
+      "domain": "dream",
+      "place": "摇晃的梦岸",
+      "premise": "这段反复相遇的二创梦岸取美铃梦中Boss的大鲶鱼形象，震动与全电气化的招牌都随梦展开。"
+    },
+    "entry": {
+      "minAge": 18,
+      "min": {
+        "insight": 5
+      }
+    },
+    "talents": [
+      "curious",
+      "steady",
+      "boundary"
+    ],
+    "careers": [
+      "craft",
+      "scholar"
+    ],
+    "intro": {
+      "text": "你落进反复摇晃的梦岸，大鲶鱼顶开写着全电气化的招牌，水里的影子朝你挤来。",
+      "effects": {},
+      "next": "sign",
+      "label": "初次相遇"
+    },
+    "nodes": {
+      "sign": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "cost",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你先问这块招牌会把电送到哪里，鲶鱼将梦岸震开一条缝，露出下方乱窜的亮线。",
+            "effects": {},
+            "next": "shore",
+            "label": "看清招牌下的亮线",
+            "trust": 1,
+            "set": [
+              "looked_under_sign"
+            ]
+          },
+          {
+            "key": "cheer",
+            "when": {},
+            "text": "你只为全电气化的招牌拍掌，鲶鱼得意地鼓起身体，岸边的小屋跟着晃成斜影。",
+            "effects": {},
+            "next": "shore",
+            "label": "为招牌先喝彩",
+            "trust": -1,
+            "set": [
+              "cheered_shaking"
+            ]
+          }
+        ]
+      },
+      "shore": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "brace",
+            "when": {
+              "min": {
+                "health": 7
+              }
+            },
+            "text": "你扶稳梦岸上摇晃的桥板。鲶鱼从板下游过，水纹漫到边沿，你站着的那一段仍露在水外。",
+            "effects": {},
+            "next": "wire",
+            "label": "桥板下的共同一程",
+            "trust": 1,
+            "set": [
+              "held_dream_plank"
+            ]
+          },
+          {
+            "key": "fall",
+            "when": {},
+            "text": "你抓不稳晃动的桥板，跌进梦水后抱住浮木，鲶鱼绕过你，桥影散成一片水光。",
+            "effects": {
+              "health": -1
+            },
+            "next": "wire",
+            "label": "抱着浮木看震动",
+            "injury": true
+          }
+        ]
+      },
+      "wire": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "separate",
+            "when": {
+              "relationFlags": [
+                "looked_under_sign"
+              ],
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你指出亮线贴着水纹跑错了方向。鲶鱼扭身换了一条梦沟，招牌下的一角终于不再乱闪。",
+            "effects": {},
+            "next": "mud",
+            "label": "把亮线与水纹分开",
+            "trust": 1,
+            "set": [
+              "separated_dream_current"
+            ]
+          },
+          {
+            "key": "believe",
+            "when": {},
+            "text": "你把乱闪都当成招牌的好处，鲶鱼抖开更大的梦水，亮线穿过你刚站过的地方。",
+            "effects": {},
+            "next": "mud",
+            "label": "乱闪也被说成好处",
+            "trust": -1,
+            "set": [
+              "excused_current"
+            ]
+          }
+        ]
+      },
+      "mud": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "hold",
+            "when": {
+              "relationFlags": [
+                "held_dream_plank"
+              ],
+              "min": {
+                "health": 6
+              }
+            },
+            "text": "岸土化成梦泥，你沿扶过的桥板站稳，鲶鱼收低尾摆，让一段岸影重新露在水外。",
+            "effects": {},
+            "next": "bargain",
+            "label": "梦泥中留住岸影",
+            "trust": 1,
+            "set": [
+              "kept_dream_shore"
+            ]
+          },
+          {
+            "key": "big",
+            "when": {},
+            "text": "你要它把整片梦岸都震成新样子，鲶鱼翻起尾巴，招牌与小屋一起沉进了梦泥。",
+            "effects": {},
+            "next": "bargain",
+            "label": "把毁岸当作新景",
+            "trust": -1,
+            "set": [
+              "asked_total_shake"
+            ]
+          }
+        ]
+      },
+      "bargain": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "limit",
+            "when": {
+              "relationFlags": [
+                "separated_dream_current"
+              ],
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "你用露出的岸影驳那块万能招牌。鲶鱼在你面前鼓起身体，愿把下一次震动摆成一场比试。",
+            "effects": {},
+            "next": "face",
+            "label": "为岸影争一场高下",
+            "trust": 1,
+            "set": [
+              "challenged_advert"
+            ],
+            "status": "rival"
+          },
+          {
+            "key": "accept",
+            "when": {},
+            "text": "你答应替招牌的震动喝彩，梦泥向岸外漫开。鲶鱼将身体抬得更大，挡住回望的小屋。",
+            "effects": {},
+            "next": "repair",
+            "label": "把毁岸继续喝成好处",
+            "trust": -2,
+            "set": [
+              "endorsed_destroying"
+            ]
+          }
+        ]
+      },
+      "face": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "point",
+            "when": {
+              "relationFlags": [
+                "kept_dream_shore"
+              ],
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "你在比试中守住岸影，指出逼近屋影的亮线。鲶鱼缩低身体，亮线停到你脚前。",
+            "effects": {},
+            "next": "rebuild",
+            "label": "守住一段岸影",
+            "trust": 1,
+            "set": [
+              "won_shore_argument"
+            ],
+            "status": "friend"
+          },
+          {
+            "key": "match",
+            "when": {},
+            "text": "你追着震动抢先迈步。鲶鱼把梦沟翻成大浪，两边的胜负只留在招牌晃动的响声里。",
+            "effects": {},
+            "next": "rebuild",
+            "label": "只争梦里的声势",
+            "trust": -1,
+            "set": [
+              "kept_boasting"
+            ]
+          }
+        ]
+      },
+      "repair": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "reverse",
+            "when": {
+              "min": {
+                "bond": 7,
+                "insight": 8
+              }
+            },
+            "text": "你收回替毁岸喝彩的话，指向梦泥旁的屋影。鲶鱼沿那里收低尾摆，水位退低，屋影显出一点。",
+            "effects": {},
+            "next": "rebuild",
+            "label": "撤回毁岸的喝彩",
+            "trust": 2,
+            "set": [
+              "retracted_cheer"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "more",
+            "when": {},
+            "text": "你继续称更大的震动才像新世界。鲶鱼翻尾将亮线与小屋一齐吞进梦水，招牌只剩回声。",
+            "effects": {},
+            "next": "rebuild",
+            "label": "仍为更大毁岸喝彩",
+            "trust": -1,
+            "set": [
+              "kept_destroying"
+            ]
+          }
+        ]
+      },
+      "rebuild": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "enemy",
+            "when": {
+              "relationFlags": [
+                "endorsed_destroying",
+                "kept_destroying"
+              ]
+            },
+            "text": "你想回到招牌后的岸。鲶鱼却将梦泥压向你，曾替毁岸喝彩的来往留下了被吞没的去路。",
+            "effects": {},
+            "next": null,
+            "label": "毁岸中的敌意",
+            "status": "enemy"
+          },
+          {
+            "key": "repair",
+            "when": {
+              "relationFlags": [
+                "endorsed_destroying",
+                "retracted_cheer"
+              ],
+              "minTrust": 1
+            },
+            "text": "你留在浮出的小屋影旁，大鲶鱼将梦水停到另一侧，收回的喝彩给岸边留出了一段缓和。",
+            "effects": {},
+            "next": null,
+            "label": "梦岸边缓和",
+            "status": "reconciled"
+          },
+          {
+            "key": "friend",
+            "when": {
+              "relationFlags": [
+                "won_shore_argument"
+              ],
+              "minTrust": 4
+            },
+            "text": "鲶鱼将亮线收在岸外的梦沟里，你扶稳桥影，看这一段地面安稳留下，沿桥走过才放手。",
+            "effects": {},
+            "next": null,
+            "label": "梦岸上的伙伴",
+            "status": "friend"
+          },
+          {
+            "key": "rival",
+            "when": {},
+            "text": "你站在晃动的招牌外与鲶鱼争下一场，梦沟各留一段声势，两边都要赢过对方才肯停下。",
+            "effects": {},
+            "next": null,
+            "label": "梦里的声势对手",
+            "status": "rival"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "kept-shore",
+        "states": [
+          "friend"
+        ],
+        "text": "大鲶鱼从梦沟里鼓起身体，亮线停在岸影之外，你沿扶住的新桥影走过这一段水。",
+        "effects": {}
+      },
+      {
+        "key": "floating-house",
+        "states": [
+          "reconciled"
+        ],
+        "text": "小屋影子浮在梦水边，你收住毁岸的喝彩，大鲶鱼放低尾摆，水面慢慢平下去。",
+        "effects": {}
+      },
+      {
+        "key": "louder-sign",
+        "states": [
+          "rival"
+        ],
+        "text": "梦里的全电气化招牌重新摇响，你与鲶鱼各指向自己的梦沟，争下一场谁能留下岸影。",
+        "effects": {}
+      },
+      {
+        "key": "mud-block",
+        "states": [
+          "enemy"
+        ],
+        "text": "大鲶鱼翻起梦泥压住回岸方向，你退到招牌残影外，盯着堵住去路的浪，等它翻到更远处。",
+        "effects": {}
+      }
+    ],
+    "farewell": {
+      "friend": "此生末页，你梦回大鲶鱼停水的那段岸，仍认得扶稳的桥影，亮线沿另一条梦沟慢慢收住。",
+      "reconciled": "最后的梦里，小屋影子露出一点，大鲶鱼收低尾摆。你记得撤回毁岸喝彩后，两边都停过一阵。",
+      "rival": "最后一回梦里，你和鲶鱼仍在招牌外争高下。两条梦沟各响过一阵，谁也不肯先认输。",
+      "enemy": "最后的梦里，鲶鱼翻尾压住回岸方向。你站在招牌残影外，看梦泥堵在两边，毁岸的喝彩还记得清。"
+    }
+  }
+]

@@ -1,0 +1,1019 @@
+{
+  "version": "v19-proposal",
+  "status": "research-proposal-with-separate-buildable-text-data",
+  "enabled": false,
+  "buildInput": false,
+  "reviewedAt": "2026-10-06",
+  "baselineCommit": "5444be2446f676b346b405a35931a88aa1b01d1c",
+  "document": "docs/young-named-routes-v19.md",
+  "textOrigin": "All scene text is newly written fan fiction, not canonical quotations.",
+  "ageClarificationStatus": "Main thread selected explicit youthful fan-fiction design for reimu/marisa/kosuzu using the recommended option; user can still correct that choice.",
+  "scope": [
+    "reimu",
+    "marisa",
+    "akyuu",
+    "kosuzu"
+  ],
+  "commonContract": {
+    "playerScope": {
+      "species": [
+        "human"
+      ],
+      "body": "humanoid",
+      "realm": "gensokyo",
+      "characterMode": false,
+      "afterlife": false,
+      "dormant": false
+    },
+    "confession": {
+      "playerMinAge": 16,
+      "minYears": 6,
+      "minVisits": 4,
+      "minTrust": 4,
+      "freePartner": true,
+      "mutualConsent": true,
+      "preserveRomanceAllowed": true,
+      "aliveBoth": true,
+      "requireAllFourAuthoredFriendNodes": true,
+      "minGapAfterFourthNode": 1
+    },
+    "relationshipRecord": {
+      "firstMeetingSetsStartedAt": true,
+      "firstMeetingTrust": 0,
+      "firstMeetingVisits": 1,
+      "nodeVisitIncrement": 1,
+      "countOnlyActuallyNarratedMeetings": true,
+      "noRetroactiveVisitOrTrust": true,
+      "preservePeopleMetAt": true,
+      "sameNamedPersonAfter18": true,
+      "noReinitialization": true
+    },
+    "nodeSemantics": {
+      "order": "ordered source romance predecessors",
+      "sourceConditionPrefix": "love:",
+      "setSourceFlagOnlyAfterActualMatchingAction": true,
+      "fallbackNeverGrantsSuccessFlag": true,
+      "preserveAuthoredDelays": true,
+      "existingV17HumanDelayOption": "Only if deliberately retained by the main implementation: each independent romance node delay may remain capped at one year for ordinary human lives; still wait startedAt+6.",
+      "ordinaryGraphCompletionIsSeparate": true
+    },
+    "ageFailure": {
+      "mode": "wait-and-recheck",
+      "keepCursor": true,
+      "neverTreatMissingAgeOrYearsAsExplicitRejection": true
+    },
+    "romanceFailure": {
+      "explicitDeclineEndsCourtship": true,
+      "anotherPartnerEndsCourtship": true,
+      "keepFriendshipHistory": true,
+      "respectExistingClosedOrEstrangedState": true
+    },
+    "content": {
+      "youngerThan18": "teen-companionship-only",
+      "adultOriginalScenesPlayerMinAge": 20,
+      "adultOriginalScenesPersonMinAge": 18,
+      "preserveAnyHigherOriginalGate": true,
+      "noAdultEchoFallbackForTeens": true,
+      "noSkillOrLongevityGrantedByTeenCompanionship": true
+    },
+    "marriage": {
+      "proposalPlayerMinAge": 20,
+      "planningPlayerMinAge": 20,
+      "weddingPlayerMinAge": 20,
+      "personMinAgeAllStages": 18,
+      "minTrust": 4,
+      "preserveOriginalCourtshipYears": true,
+      "preserveTwoOriginalAdultDates": true,
+      "preserveProposalPlanningWeddingOrder": true,
+      "preserveAnyHigherOriginalGate": true
+    },
+    "adultHandoff": {
+      "minAge": 18,
+      "originalAdultDateGateRemains20": true,
+      "preserveStartedAtLoveAtAndFlags": true,
+      "doNotRepeatConfession": true,
+      "doNotMarkOrdinaryGraphComplete": true,
+      "preserveExistingOrdinaryCursorAndConsequences": true,
+      "sourceEpilogueMustActuallyOccur": true
+    },
+    "notPerformed": [
+      "production source mutation by this agent",
+      "existing data mutation by this agent",
+      "tests by this agent",
+      "life simulation by this agent",
+      "sampling by this agent",
+      "build by this agent",
+      "publish by this agent"
+    ],
+    "youngEntryPolicy": {
+      "playerAgeAtMeet": [
+        10,
+        11
+      ],
+      "skipExistingPeopleWithoutYouthAgeEvidence": true,
+      "neverOverwriteAgeOrLifespan": true,
+      "akyuuDoesNotRerollOrLimitAgeGapToTwo": true
+    }
+  },
+  "sources": [
+    {
+      "id": "pmiss-reimu",
+      "type": "primary-text-bilingual-transcript",
+      "officialHost": false,
+      "title": "东方求闻史纪·博丽灵梦",
+      "locator": "P112–116; occupation, residence and daily-life paragraphs",
+      "url": "https://thbwiki.cc/东方求闻史纪/博丽灵梦/中日对照",
+      "supports": [
+        "shrine identity",
+        "sweeping and tea",
+        "shopping in the village"
+      ],
+      "doesNotSupport": [
+        "exact canonical age",
+        "age of becoming shrine maiden"
+      ]
+    },
+    {
+      "id": "pmiss-marisa",
+      "type": "primary-text-bilingual-transcript",
+      "officialHost": false,
+      "title": "东方求闻史纪·雾雨魔理沙",
+      "locator": "P117–120; identity and experiment logs",
+      "url": "https://thbwiki.cc/东方求闻史纪/雾雨魔理沙/中日对照",
+      "supports": [
+        "human using magic",
+        "light and heat research",
+        "recording successes and failures"
+      ],
+      "doesNotSupport": [
+        "exact canonical age",
+        "age of leaving home",
+        "childhood workshop chronology"
+      ]
+    },
+    {
+      "id": "pmiss-birth",
+      "type": "primary-text-transcript",
+      "officialHost": false,
+      "title": "东方求闻史纪·文文新闻",
+      "locator": "P159; birth announcement and Akyuu's correction",
+      "url": "https://thbwiki.cc/东方求闻史纪/文文新闻",
+      "supports": [
+        "Akyuu's birth announcement in season 109, Fumizuki",
+        "inherited memory is limited"
+      ],
+      "doesNotSupport": [
+        "current late-anchor age",
+        "treating reincarnation as bodily adulthood"
+      ]
+    },
+    {
+      "id": "pmiss-akyuu",
+      "type": "primary-text-bilingual-transcript",
+      "officialHost": false,
+      "title": "东方求闻史纪·独白",
+      "locator": "P151–155; first-generation age, memory and lifespan",
+      "url": "https://thbwiki.cc/东方求闻史纪/独白/中日对照",
+      "supports": [
+        "the age eighteen passage concerns first-generation Aichi",
+        "Akyuu's current-life memory and short lifespan"
+      ],
+      "doesNotSupport": [
+        "current Akyuu is eighteen",
+        "exact simulated natural limit of 26–30"
+      ]
+    },
+    {
+      "id": "fs1",
+      "type": "primary-manga-bilingual-transcript",
+      "officialHost": false,
+      "title": "东方铃奈庵·第一话",
+      "locator": "P5–7 borrowing; P14 print/binding; P17 family; P19–20 forbidden books",
+      "url": "https://thbwiki.cc/东方铃奈庵/第一话",
+      "supports": [
+        "ordinary lending routine",
+        "family nearby",
+        "dangerous-book boundary"
+      ],
+      "doesNotSupport": [
+        "Kosuzu is canonically sixteen",
+        "age ten ability awakening"
+      ]
+    },
+    {
+      "id": "fs-publisher-jp",
+      "type": "authorized-publisher-retailer",
+      "officialHost": true,
+      "title": "BOOK☆WALKER·东方铃奈庵第一卷",
+      "url": "https://bookwalker.jp/de4742077e-7882-4e74-8287-7b772a54e3d8/",
+      "supports": [
+        "authorized work and character context"
+      ],
+      "doesNotSupport": [
+        "exact character age"
+      ]
+    },
+    {
+      "id": "fs-publisher-en",
+      "type": "publisher",
+      "officialHost": true,
+      "title": "Yen Press·Forbidden Scrollery Vol. 1",
+      "url": "https://yenpress.com/titles/9780316511896-forbidden-scrollery-vol-1",
+      "supports": [
+        "bibliophile Kosuzu and translation ability",
+        "T (Teen) is an audience rating"
+      ],
+      "doesNotSupport": [
+        "T (Teen) is the character's age"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "id": "reimu",
+      "name": "博丽灵梦",
+      "enabled": false,
+      "authorization": "main-thread-selected-explicit-youthful-fiction-design-user-correction-pending",
+      "title": "廊下接雨的朋友",
+      "canonAge": {
+        "kind": "unknown",
+        "years": null,
+        "note": "Reviewed sources do not supply an exact age; no PC98-derived age."
+      },
+      "ageModel": {
+        "kind": "explicit-fan-fiction-same-age",
+        "playerAgeAtMeet": [
+          10,
+          11
+        ],
+        "personAgeAtMeet": "player age at actual first meeting",
+        "store": [
+          "ageAtMeet",
+          "ageModelSource",
+          "youngFirstMeetingAt"
+        ],
+        "label": "本作少年时期二创：初见时与你同岁；原作确龄未知。",
+        "newUnmetPersonOnly": true
+      },
+      "sourceIds": [
+        "pmiss-reimu"
+      ],
+      "originalFiles": {
+        "ordinary": "data/relationships/early-v6.json",
+        "romance": "data/romances/early.json",
+        "marriage": "data/marriages/early.json",
+        "age": "data/chronicles/early.json"
+      },
+      "entry": {
+        "playerMinAge": 10,
+        "playerMaxAge": 11,
+        "preservedMinStats": {
+          "bond": 4
+        },
+        "contactDomain": "shrine",
+        "text": "家人带你送祭纸，灵梦正挪开接雨的木盆。你帮她把湿纸移到廊内，两人一张张摊平，约好以后送纸时再来。",
+        "setsOnly": [
+          "young:reimu:met"
+        ],
+        "neverSets": [
+          "heard-wishes",
+          "private-talk"
+        ]
+      },
+      "friendNodes": [
+        {
+          "key": "rain_cup",
+          "sourceNode": "rain_cup",
+          "delay": 1,
+          "primaryWhen": {
+            "min": {
+              "insight": 6
+            }
+          },
+          "primaryText": "你认出漏水的瓦缝，递瓦片给灵梦补好。盆里不再滴水，她让你把湿纸移到廊内，两人一起摊平。",
+          "primarySet": [
+            "love:mended_eave"
+          ],
+          "fallbackText": "你没找准漏雨的地方，便扶稳木盆。灵梦把另一盆推到廊内，两人接住湿纸，等雨停后再查。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "tea_kind"
+        },
+        {
+          "key": "tea_kind",
+          "sourceNode": "tea_kind",
+          "delay": 2,
+          "primaryWhen": {
+            "min": {
+              "bond": 6
+            }
+          },
+          "primaryText": "灵梦在村里买茶，问你上回那杯是否太浓。你说喜欢淡些，她在纸包上画了记号，约好下次试试。",
+          "primarySet": [
+            "love:named_tea"
+          ],
+          "fallbackText": "灵梦买完茶叫住你，说祭纸又快用完。你问哪天能来帮忙，她约好时辰，也说忙完可以坐下喝一杯。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "roof_check"
+        },
+        {
+          "key": "roof_check",
+          "sourceNode": "roof_check",
+          "delay": 1,
+          "primaryWhen": {
+            "relationFlags": [
+              "love:mended_eave"
+            ]
+          },
+          "primaryText": "又到雨季，你站在廊下看补过的地方。灵梦指给你一处新湿痕，你们重新摆好盆，原先那一处倒真没漏。",
+          "primarySet": [],
+          "fallbackText": "你来帮灵梦把接雨盆挪回原处，忙到雨停。她数好最后几张干纸，你们把没湿的一叠留到下次祭日。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "kept_cup"
+        },
+        {
+          "key": "kept_cup",
+          "sourceNode": "kept_cup",
+          "delay": 2,
+          "primaryWhen": {
+            "relationFlags": [
+              "love:named_tea"
+            ]
+          },
+          "primaryText": "灵梦泡了你说过的淡茶，自己尝完直嫌没味。你笑着分她一块点心，她留下那只杯，说下回还用它。",
+          "primarySet": [],
+          "fallbackText": "祭纸收好，灵梦给你留一块坐垫。你们坐在廊下喝茶，约好下回来时各带一个近来的小故事。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "young_shrine_answer"
+        }
+      ],
+      "confession": {
+        "key": "young_shrine_answer",
+        "sourceConfession": "shrine_answer",
+        "personMinAge": 16,
+        "text": "灵梦把你常用的杯放好，说喜欢你，问以后能否做恋人。你认真答愿意；她笑着约下次一起喝茶，各自的功课也别耽误。",
+        "waitText": "你们喝完廊下的茶，约好下回还来。灵梦把杯收好，今日的心事先留在朋友之间，往来照旧。",
+        "declineText": "灵梦听完心意，说愿意继续做茶友。你应下，把杯放回原处，往后仍按约来帮祭纸的忙。",
+        "conservativeEarliestPlayerAgeIfMeet10": 17,
+        "earliestWithExistingV17HumanPaceIfExplicitlyRetained": 16
+      },
+      "failure": {
+        "trigger": "deliberately promises shrine favors to others without asking Reimu",
+        "text": "你向来客许下未经灵梦同意的愿望，她问你拿什么保证。你说不出，两人的私约暂缓，纸上那句承诺也得向来客说清。",
+        "trustDelta": -2,
+        "mode": "estranged-until-real-correction",
+        "ordinaryConsequencesToPreserve": [
+          "false-promise",
+          "corrected-wishes"
+        ]
+      },
+      "teenCompanionship": [
+        {
+          "key": "paper_break",
+          "text": "祭纸裁到一半，灵梦提议歇一会儿。你们坐在廊下，各讲一件这周没做好的事，喝完茶再把歪边裁齐。"
+        },
+        {
+          "key": "kite_choice",
+          "text": "灵梦把纸鸢递来，先问你想放多高。你们轮着执线，看它越过鸟居；回程各收好自己的东西，约定下回再试。"
+        }
+      ],
+      "adultHandoff": {
+        "sourceEpilogue": "love:morning_sweep",
+        "earliestEpilogueAge": 18,
+        "continuation": "Same couple actually sweeps the steps and shares morning tea before original adult dates become eligible at twenty.",
+        "preserveOrdinaryCursor": [
+          "roof",
+          "paper",
+          "rain",
+          "rumour",
+          "correction",
+          "wind",
+          "after",
+          "end"
+        ],
+        "neverInferOrdinaryFlags": [
+          "found-leak",
+          "heard-wishes",
+          "dry-altar",
+          "private-talk"
+        ],
+        "sourceEpilogueMustActuallyOccur": true,
+        "teenEpilogueMayAlreadyHaveOccurred": "The buildable text data includes an age-appropriate sixth-node epilogue. If actually performed before eighteen, do not replay it or infer unfinished ordinary plot; retain completion and continue original adult activities only at their age gates."
+      }
+    },
+    {
+      "id": "marisa",
+      "name": "雾雨魔理沙",
+      "enabled": false,
+      "authorization": "main-thread-selected-explicit-youthful-fiction-design-user-correction-pending",
+      "title": "记下失败的星光",
+      "canonAge": {
+        "kind": "unknown",
+        "years": null,
+        "note": "No exact age or childhood departure chronology is supplied by the reviewed source."
+      },
+      "ageModel": {
+        "kind": "explicit-fan-fiction-same-age",
+        "playerAgeAtMeet": [
+          10,
+          11
+        ],
+        "personAgeAtMeet": "player age at actual first meeting",
+        "store": [
+          "ageAtMeet",
+          "ageModelSource",
+          "youngFirstMeetingAt"
+        ],
+        "label": "本作少年时期二创：初见时与你同岁；原作确龄未知。",
+        "newUnmetPersonOnly": true
+      },
+      "sourceIds": [
+        "pmiss-marisa"
+      ],
+      "originalFiles": {
+        "ordinary": "data/relationships/early-v6.json",
+        "romance": "data/romances/early.json",
+        "marriage": "data/marriages/early.json",
+        "age": "data/chronicles/early.json"
+      },
+      "entry": {
+        "playerMinAge": 10,
+        "playerMaxAge": 11,
+        "preservedMinStats": {
+          "insight": 5,
+          "health": 5
+        },
+        "contactDomain": "forest",
+        "requiresActuallyNarratedKnownPath": true,
+        "text": "【本作少年时期二创，原作确龄未知】你随家人循熟路到作坊，一路记下往返路标，初见与你同岁的魔理沙。她请你站在窗边看烟痕，也指清回程的岔口。",
+        "setsOnly": [
+          "young:marisa:met",
+          "contact:forest"
+        ],
+        "neverSets": [
+          "co-research"
+        ],
+        "actualFirstMeetingMayGrantContactForest": true,
+        "contactGrantRule": "Only the actually narrated first meeting after health>=5 and family-guided known-path traversal grants contact:forest; memories and unperformed visits grant nothing."
+      },
+      "friendNodes": [
+        {
+          "key": "smoke_formula",
+          "sourceNode": "smoke_formula",
+          "delay": 1,
+          "primaryWhen": {
+            "min": {
+              "insight": 6
+            }
+          },
+          "primaryText": "瓶底又剩了一圈焦粉，你指出烟从哪边冒起。魔理沙在试验簿画下位置，让你下回来看看猜得准不准。",
+          "primarySet": [
+            "love:logged_smoke"
+          ],
+          "fallbackText": "你没看懂瓶底的粉，便帮魔理沙推开窗。烟散后她画出三种可能，叫你下回来看看究竟是哪一种。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "star_invite"
+        },
+        {
+          "key": "star_invite",
+          "sourceNode": "star_invite",
+          "delay": 2,
+          "primaryWhen": {
+            "min": {
+              "health": 6
+            }
+          },
+          "primaryText": "魔理沙邀你沿认熟的小径去空坡看新光。她试过两次才亮起来，你说这回看清了，她赶紧记下用了多久。",
+          "primarySet": [
+            "love:hill_stars"
+          ],
+          "fallbackText": "走空坡太累，你便在作坊窗边看小试验。魔理沙把亮度调低，问你这回是否看清，也记下失败的那一回。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "failed_batch"
+        },
+        {
+          "key": "failed_batch",
+          "sourceNode": "failed_batch",
+          "delay": 2,
+          "primaryWhen": {
+            "relationFlags": [
+              "love:logged_smoke"
+            ]
+          },
+          "primaryText": "新配方仍失败了，你把上回的记录翻给她。魔理沙核过焦粉，说这页先别揉掉，下回还得拿来比。",
+          "primarySet": [],
+          "fallbackText": "新配方没亮起来，魔理沙正想揉掉那页。你请她从头讲一遍，听完才把纸铺平，帮她标好试过的次序。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "small_lantern"
+        },
+        {
+          "key": "small_lantern",
+          "sourceNode": "small_lantern",
+          "delay": 1,
+          "primaryWhen": {
+            "relationFlags": [
+              "love:hill_stars"
+            ]
+          },
+          "primaryText": "魔理沙把一盏小星灯放到你面前，要你先看看是否晃眼。你说正好，她把记过的亮度夹在底下，叫你带回去。",
+          "primarySet": [],
+          "fallbackText": "魔理沙清出窗边一张椅子，叫你下回别再站着看。你帮她贴好纸签，两人约好再核一遍那本试验簿。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "young_hat_edge"
+        }
+      ],
+      "confession": {
+        "key": "young_hat_edge",
+        "sourceConfession": "hat_edge",
+        "personMinAge": 16,
+        "text": "魔理沙捏着帽边，说下回想约你以恋人的身份来看星光。你说也喜欢她；她松口气，赶紧把这一天记在试验簿的新页上。",
+        "waitText": "魔理沙把试验簿留在桌上，约你下回来核新页。你们先把这回的光色说清，朋友的往来仍继续。",
+        "declineText": "魔理沙把帽子戴正，说先做一起看新魔法的朋友。你应下，约好下回带纸来，把失败的那一回也记好。",
+        "conservativeEarliestPlayerAgeIfMeet10": 17,
+        "earliestWithExistingV17HumanPaceIfExplicitlyRetained": 16
+      },
+      "failure": {
+        "trigger": "deliberately alters specimen labels or takes false credit for Marisa's recipe",
+        "text": "魔理沙发现瓶签被改，你还把配方说成自己的。她合上试验簿，要你先向听见的人更正，下一次私约也暂时取消。",
+        "trustDelta": -2,
+        "mode": "estranged-until-real-correction",
+        "ordinaryConsequencesToPreserve": [
+          "false-recipe",
+          "recipe-repaired",
+          "contested-method"
+        ]
+      },
+      "teenCompanionship": [
+        {
+          "key": "crooked_shade",
+          "text": "星灯的纸罩歪了一边，你与魔理沙各画一种改法。她先试你的那张，失败后笑着留下折痕，说两种都得记。"
+        },
+        {
+          "key": "stone_stars",
+          "text": "魔理沙带来三块普通石头，坚称各像不同星座。你也给它们取名，两人在纸上画到饭点，便收好纸各自回家。"
+        }
+      ],
+      "adultHandoff": {
+        "sourceEpilogue": "love:working_lunch",
+        "earliestEpilogueAge": 18,
+        "continuation": "Actually pause work for lunch, then write a new desired star shape; revalidate the original forest contact before adult visits.",
+        "adultContactMinStats": {
+          "health": 5
+        },
+        "preserveOrdinaryCursor": [
+          "powder",
+          "shelves",
+          "beam",
+          "claim",
+          "retell",
+          "borrow",
+          "newstar",
+          "end"
+        ],
+        "neverInferOrdinaryFlags": [
+          "sorted-powder",
+          "marked-beam",
+          "shared-credit",
+          "returned-notes",
+          "co-research"
+        ],
+        "sourceEpilogueMustActuallyOccur": true,
+        "teenEpilogueMayAlreadyHaveOccurred": "The buildable text data includes an age-appropriate sixth-node epilogue. If actually performed before eighteen, do not replay it or infer unfinished ordinary plot; retain completion and continue original adult activities only at their age gates."
+      }
+    },
+    {
+      "id": "akyuu",
+      "name": "稗田阿求",
+      "enabled": false,
+      "authorization": "proposal-under-existing-simulated-own-age-model",
+      "title": "小谜稿旁的闲页",
+      "canonAge": {
+        "kind": "unknown-at-current-anchor",
+        "years": null,
+        "birthAnnouncement": "season 109 Fumizuki",
+        "note": "Aichi's first-volume age eighteen is not Akyuu's current age."
+      },
+      "ageModel": {
+        "kind": "preserve-existing-akyuu-function",
+        "personAgeAtMeet": [
+          12,
+          14
+        ],
+        "playerAgeAtMeet": [
+          10,
+          11
+        ],
+        "ownAgeFormula": "ageAtMeet + (alive ? playerCurrentAge : deadAt) - metAt - suspendedYears",
+        "preserveNaturalLimit": [
+          26,
+          30
+        ],
+        "preserveSuspendedYears": true,
+        "label": "本作少年时期相遇：阿求沿既有独立年龄成长；原作当前确龄未知。",
+        "rerollAge": false,
+        "note": "Player enters at 10–11; Akyuu remains 12–14 from the existing independent model. No two-year gap restriction; maximum first-meeting gap is four. Her own eighteen-year confession gate is unchanged."
+      },
+      "sourceIds": [
+        "pmiss-birth",
+        "pmiss-akyuu",
+        "fs1"
+      ],
+      "originalFiles": {
+        "ordinary": "data/relationships/recent-print-v6.json",
+        "romance": "data/romances/recent-print.json",
+        "marriage": "data/marriages/recent-print.json",
+        "ageFunction": "dist/akyuu.js",
+        "age": "data/chronicles/recent-print.json"
+      },
+      "entry": {
+        "playerMinAge": 10,
+        "playerMaxAge": 11,
+        "preservedMinStats": {
+          "insight": 7
+        },
+        "contactDomain": "village",
+        "text": "家人带你送旧书到稗田邸，阿求先核清缺页，再递来一张自己练笔的小谜稿，问你愿不愿按页上的线索猜一猜。",
+        "setsOnly": [
+          "young:akyuu:met"
+        ],
+        "neverSets": [
+          "finished_novel",
+          "kept_rest",
+          "checked_words"
+        ],
+        "notCanonicalClaim": "No claim that her later published mystery series already existed at age twelve."
+      },
+      "friendNodes": [
+        {
+          "key": "mystery_clue",
+          "sourceNode": "mystery_clue",
+          "delay": 1,
+          "primaryWhen": {
+            "min": {
+              "insight": 6
+            }
+          },
+          "primaryText": "你看出阿求的小谜稿少交代一扇门，她在页边添了记号。你问能否先别揭谜底，她把下一页盖住，等你再猜。",
+          "primarySet": [
+            "love:clue_marked"
+          ],
+          "fallbackText": "你猜错小谜稿中的人，阿求忍住笑，把关键页递回来。你们再读一次，这回先把每个人走过的门记清。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "reader_invitation"
+        },
+        {
+          "key": "reader_invitation",
+          "sourceNode": "reader_invitation",
+          "delay": 2,
+          "primaryWhen": {
+            "min": {
+              "bond": 6
+            }
+          },
+          "primaryText": "阿求请你按约来读新稿，你听完她最喜欢的一段才说想法。她在日程留下一小格，也说读完就去庭里歇歇。",
+          "primarySet": [
+            "love:reading_hour"
+          ],
+          "fallbackText": "阿求把新稿放到书房门边，请你来听这回怎样藏线索。你问好能坐多久，约定读完便各自歇息。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "fair_solution"
+        },
+        {
+          "key": "fair_solution",
+          "sourceNode": "fair_solution",
+          "delay": 1,
+          "primaryWhen": {
+            "relationFlags": [
+              "love:clue_marked"
+            ]
+          },
+          "primaryText": "你指出那扇门出现得太迟，阿求把前页补好。她请你再照书里的时辰读一次，看看这回是否猜得出来。",
+          "primarySet": [],
+          "fallbackText": "你们把新稿从头读一遍，阿求听你说谜底来得太突然。她把漏写的时辰补在前页，再请你试着猜一次。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "private_margin"
+        },
+        {
+          "key": "private_margin",
+          "sourceNode": "private_margin",
+          "delay": 1,
+          "primaryWhen": {
+            "relationFlags": [
+              "love:reading_hour"
+            ]
+          },
+          "primaryText": "阿求在谜稿旁放一张空纸，请你只写庭里听见的声音。你写下落雨，她补了一声鸟鸣，约好今天不再校稿。",
+          "primarySet": [],
+          "fallbackText": "阿求递来一张空页，请你写喜欢的庭院声音。你写完放下笔，两人听了一阵鸟鸣，今日的谜稿便先合上。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "young_this_life_vow"
+        }
+      ],
+      "confession": {
+        "key": "young_this_life_vow",
+        "sourceConfession": "this_life_vow",
+        "personMinAge": 18,
+        "mustUseAkyuuAgeFunction": true,
+        "text": "阿求在闲页写下喜欢你，问你是否愿意做恋人。你认真答愿意；她笑着说下次也想听你的近事，书稿可以等歇够了再读。",
+        "waitText": "你们把闲页收好，仍按朋友的约定读书谈天。阿求说今天想早些休息，你便与她约好另一日再来。",
+        "declineText": "阿求把闲页收进册中，说愿意与你做朋友。你应下，往后仍按约来猜谜，也听她讲庭院的小事。",
+        "conservativeEarliestPlayerAgeIfMeet10AndPerson12": 16,
+        "ageExamples": [
+          {
+            "metPlayer": 10,
+            "metPerson": 12,
+            "afterActualYears": 6,
+            "player": 16,
+            "person": 18
+          },
+          {
+            "metPlayer": 10,
+            "metPerson": 14,
+            "afterActualYears": 6,
+            "player": 16,
+            "person": 20
+          },
+          {
+            "metPlayer": 11,
+            "metPerson": 12,
+            "afterActualYears": 6,
+            "player": 17,
+            "person": 18
+          }
+        ]
+      },
+      "failure": {
+        "trigger": "pressures an unwell Akyuu to continue proofreading or knowingly alters testimony",
+        "text": "阿求说想歇息，你仍追问稿页，还把口述改成顺口的答案。她收起纸，请你先离开；下回是否续约，得等你把原话找回。",
+        "trustDelta": -2,
+        "mode": "estranged-until-real-correction-and-consent",
+        "ordinaryConsequencesToPreserve": [
+          "pressed_work",
+          "altered_words",
+          "corrected"
+        ],
+        "neverGrants": [
+          "kept_rest",
+          "checked_words"
+        ]
+      },
+      "teenCompanionship": [
+        {
+          "key": "one_riddle",
+          "text": "阿求请你各写一个谜面，今天只猜第一条。你们笑着改掉太明显的提示，剩下那条留到下回，不为赶完而多坐。"
+        },
+        {
+          "key": "garden_news",
+          "text": "庭里花影移过凳脚，你说起自己的功课，阿求讲起想读的新书。待她说想休息，你便把借书单交给家人，约好另一日再来。"
+        }
+      ],
+      "adultHandoff": {
+        "sourceEpilogue": "love:garden_epilogue",
+        "earliestEpilogueAge": 18,
+        "continuation": "Actually read the last page and set down the pen in the garden; teenage private puzzles never imply completion of the ordinary novel plot.",
+        "preserveOrdinaryCursor": [
+          "clue",
+          "copy",
+          "truth",
+          "novel",
+          "rest",
+          "fault",
+          "ending",
+          "last"
+        ],
+        "neverInferOrdinaryFlags": [
+          "found_gap",
+          "checked_words",
+          "asked_position",
+          "shared_novel",
+          "kept_rest",
+          "corrected",
+          "finished_novel"
+        ],
+        "preserveReturnContract": {
+          "ownMinAge": 18,
+          "minVisits": 7,
+          "minTrust": 4,
+          "requiresRealPriorLove": true,
+          "requiresOwnWrittenWishAndOriginalStrength": true,
+          "notGuaranteedEntryOrSurvival": true
+        },
+        "sourceEpilogueMustActuallyOccur": true,
+        "teenEpilogueMayAlreadyHaveOccurred": "The buildable text data includes an age-appropriate sixth-node epilogue. If actually performed before eighteen, do not replay it or infer unfinished ordinary plot; retain completion and continue original adult activities only at their age gates."
+      }
+    },
+    {
+      "id": "kosuzu",
+      "name": "本居小铃",
+      "enabled": false,
+      "authorization": "main-thread-selected-explicit-youthful-fiction-design-user-correction-pending",
+      "title": "两枚书签与下一册",
+      "canonAge": {
+        "kind": "unknown",
+        "years": null,
+        "note": "Publisher teen rating and shop employment do not establish character age."
+      },
+      "ageModel": {
+        "kind": "explicit-fan-fiction-same-age",
+        "playerAgeAtMeet": [
+          10,
+          11
+        ],
+        "personAgeAtMeet": "player age at actual first meeting",
+        "store": [
+          "ageAtMeet",
+          "ageModelSource",
+          "youngFirstMeetingAt"
+        ],
+        "label": "本作少年时期二创：初见时与你同岁；原作确龄未知。",
+        "newUnmetPersonOnly": true
+      },
+      "sourceIds": [
+        "fs1",
+        "fs-publisher-jp",
+        "fs-publisher-en"
+      ],
+      "originalFiles": {
+        "ordinary": "data/relationships/village-forest.json",
+        "romance": "data/romances/recent-print.json",
+        "marriage": "data/marriages/recent-print.json",
+        "age": "data/chronicles/recent-print.json"
+      },
+      "entry": {
+        "playerMinAge": 10,
+        "playerMaxAge": 11,
+        "preservedMinStats": {
+          "insight": 4
+        },
+        "habitats": [
+          "village",
+          "outskirts"
+        ],
+        "preservedOriginalSpecies": [
+          "human",
+          "hermit"
+        ],
+        "teenScopeSpecies": [
+          "human"
+        ],
+        "contactDomain": "village",
+        "text": "家人带你到铃奈庵借普通游记，小铃在柜台边核清书页。你问一处褪色印字，她找来另一页比给你看，约好还书时再说。",
+        "setsOnly": [
+          "young:kosuzu:met"
+        ],
+        "neverSets": [
+          "found-title",
+          "guarded-shelf",
+          "mended-rumour"
+        ],
+        "notCanonicalClaim": "No claim that all-language ability had canonically awakened at age ten."
+      },
+      "friendNodes": [
+        {
+          "key": "faded_letters",
+          "sourceNode": "faded_letters",
+          "delay": 1,
+          "primaryWhen": {
+            "min": {
+              "insight": 6
+            }
+          },
+          "primaryText": "旧游记的印字褪了一笔，你照样摹下来。小铃拿另一页给你比，说先分清笔画，再猜它写的是哪里。",
+          "primarySet": [
+            "love:letter_copied"
+          ],
+          "fallbackText": "你把旧印字抄得挤成一团，小铃找来另一页，与你拆清笔画。她留一块空纸，请你这回慢些摹。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "spare_bookmark"
+        },
+        {
+          "key": "spare_bookmark",
+          "sourceNode": "spare_bookmark",
+          "delay": 2,
+          "primaryWhen": {
+            "min": {
+              "bond": 6
+            }
+          },
+          "primaryText": "小铃请你做借书签，你们各画一枚小铃，才发现两个人画得不同。她把纸分好，说下次还书时各用自己的。",
+          "primarySet": [
+            "love:bookmark_made"
+          ],
+          "fallbackText": "小铃叫你一起裁一批空书签，递来好写字的纸。你们按册名分好，留了两张空白的，约好下次再画。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "closed_scroll"
+        },
+        {
+          "key": "closed_scroll",
+          "sourceNode": "closed_scroll",
+          "delay": 1,
+          "primaryWhen": {
+            "relationFlags": [
+              "love:letter_copied"
+            ]
+          },
+          "primaryText": "卷边的警示与你摹过的字很像。你问清后把卷放回，小铃合好封套，取出一册普通山行记与你继续读。",
+          "primarySet": [],
+          "fallbackText": "你看不懂卷边的警示，便先向小铃问清。她合好封套，与你挑一册普通游记；那卷今日就不拆开了。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "handwritten_note"
+        },
+        {
+          "key": "handwritten_note",
+          "sourceNode": "handwritten_note",
+          "delay": 1,
+          "primaryWhen": {
+            "relationFlags": [
+              "love:bookmark_made"
+            ]
+          },
+          "primaryText": "小铃在旧书签背面写下想再一起读下一册，先请你读给她听。你念完，她也说了自己最想重看的那一页。",
+          "primarySet": [],
+          "fallbackText": "小铃把一张亲手写的短句夹在游记里，约你再读下一册。你先读完，她也讲起自己想再看一遍的故事。",
+          "fallbackSet": [],
+          "trustBothBranches": 1,
+          "next": "young_readable_heart"
+        }
+      ],
+      "confession": {
+        "key": "young_readable_heart",
+        "sourceConfession": "readable_heart",
+        "personMinAge": 16,
+        "text": "小铃在新书签写下想做你的恋人，念到一半又笑着重念。你说也喜欢她；两人约好下次借书时，把各自想看的故事带来。",
+        "waitText": "小铃把游记登记好，与你约下回再读下一册。你们先各留一张书签，朋友的来往照旧继续。",
+        "declineText": "小铃说愿意继续做借书谈故事的朋友。你应下，把书签收好，往后仍按约借还，也听她讲新书。",
+        "conservativeEarliestPlayerAgeIfMeet10": 16
+      },
+      "failure": {
+        "trigger": "opens a sealed forbidden book against the warning or deliberately spreads an unverified rumor",
+        "text": "你擅拆封套，又把没核清的怪事讲给客人。小铃收回那卷，暂缓私约；她请你先把话向听见的人说清。",
+        "trustDelta": -2,
+        "mode": "estranged-until-real-rumor-correction",
+        "ordinaryConsequencesToPreserve": [
+          "shut-shelf",
+          "spread-rumour",
+          "mended-rumour"
+        ]
+      },
+      "teenCompanionship": [
+        {
+          "key": "bookmarks_sorted",
+          "text": "你们把借书签按册名排好，小铃发现两枚小铃画反了方向。她留下一张给你，再各自说说这周最想读的书。"
+        },
+        {
+          "key": "two_maps",
+          "text": "游记写到陌生的山路，你与小铃各画一张猜想的地图。她坚持桥应在东边，你们把两张夹进书里，等下册来了再核。"
+        }
+      ],
+      "adultHandoff": {
+        "sourceEpilogue": "love:after_lending",
+        "earliestEpilogueAge": 18,
+        "continuation": "Actually register the returned book and continue the travelogue before original adult dates become eligible at twenty.",
+        "preserveOrdinaryCursor": [
+          "pages",
+          "borrow",
+          "ink",
+          "seal",
+          "recover",
+          "search",
+          "telling",
+          "shelf"
+        ],
+        "ordinaryShortestAuthoredYears": 12,
+        "neverInferOrdinaryFlags": [
+          "found-edition",
+          "read-margins",
+          "noticed-ink",
+          "guarded-shelf",
+          "found-title",
+          "mended-rumour"
+        ],
+        "oldFriendEntryWithoutTeenRecordRemainsPlayerMinAge": 24,
+        "sourceEpilogueMustActuallyOccur": true,
+        "teenEpilogueMayAlreadyHaveOccurred": "The buildable text data includes an age-appropriate sixth-node epilogue. If actually performed before eighteen, do not replay it or infer unfinished ordinary plot; retain completion and continue original adult activities only at their age gates."
+      }
+    }
+  ],
+  "remainingDecisions": [
+    "The main thread selected explicit fan-fiction youth ages with visible labels; incorporate any later user correction before final delivery.",
+    "Preserve source delays and the actual existing ordinary-human pacing policy; verify true six-year acquaintance independently of node timing.",
+    "Keep any existing ordinary graph cursor and consequences; never mark an unfinished original story complete because the young graph finished.",
+    "Main thread must integrate and verify narrow route/content/own-age gates at selection and mutation points before claiming implementation."
+  ],
+  "buildableTextFile": "data/young-romances.json",
+  "scopeStatus": "Text data delivered to main thread; integration and execution verification belong to main thread."
+}

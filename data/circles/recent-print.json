@@ -1,0 +1,814 @@
+[
+  {
+    "id": "mike",
+    "visits": [
+      {
+        "key": "mike_circle_reimu",
+        "person": "reimu",
+        "relation": "虹龙洞调查中的卡牌交易与直接交锋",
+        "source": "https://thbwiki.cc/游戏对话:东方虹龙洞/博丽灵梦",
+        "text": "灵梦来摊挑两份今日熟果，三花先选红的，你挑软的；她尝过各半块，说两种都要，三花笑着称重，你扶纸袋，三人把价钱算得明明白白。",
+        "scenes": [
+          {
+            "key": "mike_circle_reimu_price_board",
+            "text": "灵梦问价牌为何大小不同，三花说大牌给远处人看。你请她退几步，她指小牌说这块得重写。"
+          },
+          {
+            "key": "mike_circle_reimu_bag_fold",
+            "text": "灵梦嫌纸袋口窄，你撑袋边，三花换折法。她提着试过，说这回装得下，两人便照样再折一只。"
+          },
+          {
+            "key": "mike_circle_reimu_awning_chime",
+            "text": "小铃乱响，三花伸爪拨，你稳挂绳。灵梦指被风碰到的木角，三人挪铃，再听它响了一声。"
+          }
+        ]
+      }
+    ],
+    "note": "来源为虹龙洞一面对话，只支持相遇、交锋和卡牌交易；三人看普通货价牌与来访为二创。"
+  },
+  {
+    "id": "takane",
+    "visits": [
+      {
+        "key": "takane_circle_marisa",
+        "person": "marisa",
+        "relation": "虹龙洞中交锋后议价的交易双方",
+        "source": "https://thbwiki.cc/游戏对话:东方虹龙洞/雾雨魔理沙",
+        "text": "魔理沙在林缘试提空箱，高岭说长边省力，你帮着转正箱子。她试过你们商量的握法，笑说下回也这样装；高岭望向你，把另一只箱递来。",
+        "scenes": [
+          {
+            "key": "takane_circle_marisa_crate_balance",
+            "text": "魔理沙想同时提两箱，高岭请她先试平衡。你垫好空箱，三人换摆位，她笑说这回不会撞腿。"
+          },
+          {
+            "key": "takane_circle_marisa_rope_price",
+            "text": "谈完货，高岭拿两截粗细绳，魔理沙问价差。你量长度，她试结后选细的，高岭记好数目给她看。"
+          },
+          {
+            "key": "takane_circle_marisa_lunch_wrap",
+            "text": "高岭教魔理沙用新布包饭，你扶碗沿。她拽紧对角又松一点，说这样好开包，三人再折一遍。"
+          }
+        ]
+      }
+    ],
+    "note": "来源为虹龙洞二面对话，交锋后魔理沙改为购买卡牌；此次普通装箱讨论为二创，不推定原作私交。"
+  },
+  {
+    "id": "sannyo",
+    "visits": [
+      {
+        "key": "sannyo_circle_mamizou",
+        "person": "mamizou",
+        "relation": "醉蝶华中赌场往来的庄家与赌客",
+        "source": "https://thbwiki.cc/二岩猯藏",
+        "text": "猯藏在烟散的空棚里连猜错两次骰点，山如敲桌笑，你把漏数的一颗推回；三人清醒地换讲趣话，猯藏学山如的口气，你们笑着请她讲自己的故事。",
+        "scenes": [
+          {
+            "key": "sannyo_circle_mamizou_clear_tea",
+            "text": "烟散棚里，猯藏摸到凉杯，山如续热水，你推近杯垫。三人聊爱哪种茶香，她先闻一遍才答。"
+          },
+          {
+            "key": "sannyo_circle_mamizou_story_voice",
+            "text": "烟散后，猯藏问趣话哪句是山如写的。你认出敲桌那段，山如说漏了末句；三人轮念，笑着接上。"
+          },
+          {
+            "key": "sannyo_circle_mamizou_snack_share",
+            "text": "山如散烟后端团子，猯藏猜甜馅，你猜咸。各掰一只，她笑请猜中的你先挑，也给猯藏留好一份。"
+          }
+        ]
+      }
+    ],
+    "note": "醉蝶华第二十九、三十话资料记载猯藏入局及建议山如开分场；清醒的三人趣话为二创，不用烟改变心意。"
+  },
+  {
+    "id": "misumaru",
+    "visits": [
+      {
+        "key": "misumaru_circle_reimu",
+        "person": "reimu",
+        "relation": "博丽阴阳玉的制造者与使用者",
+        "source": "https://thbwiki.cc/游戏对话:东方虹龙洞/博丽灵梦",
+        "text": "灵梦在通风处看磨玉清水里沉下的纹，魅须丸解释弯处，你帮着换一盆；三人轮流猜哪道先散，灵梦猜错也笑，催你们各指一种最像阴阳玉的圆线。",
+        "scenes": [
+          {
+            "key": "misumaru_circle_reimu_jade_weight",
+            "text": "灵梦问两块玉料一样大为何不同重。魅须丸请她轮流掂，你记说法；她笑着说这块倒好认。"
+          },
+          {
+            "key": "misumaru_circle_reimu_circle_trace",
+            "text": "魅须丸画圆，灵梦说像半个阴阳玉，你接另一弧。三人比形，她故意画扁，魅须丸笑着补齐。"
+          },
+          {
+            "key": "misumaru_circle_reimu_work_stool",
+            "text": "灵梦试坐矮凳，嫌膝前挤。你挪水盆，魅须丸调凳位；她再坐便能伸腿，邀你们也试空出的地方。"
+          }
+        ]
+      }
+    ],
+    "note": "虹龙洞四面对话支持魅须丸制造博丽阴阳玉并与灵梦直接交锋；普通玉纹讨论为二创，不新增玉器能力。"
+  },
+  {
+    "id": "tsukasa",
+    "visits": [
+      {
+        "key": "tsukasa_circle_megumu",
+        "person": "megumu",
+        "relation": "大天狗与其可靠管狐助手",
+        "source": "https://thbwiki.cc/菅牧典#东方虹龙洞",
+        "text": "龙将两张当日路线签带到亭下，典核一段，你核另一段；发现同一转角画反，三人沿栏比好方向，龙听两人重新说清，点头让典先选歇脚的时辰。",
+        "scenes": [
+          {
+            "key": "tsukasa_circle_megumu_tube_order",
+            "text": "龙送传话筒来，典按去向排，你扶稳架子。龙问哪只先走，她指清，两人核时辰再系标带。"
+          },
+          {
+            "key": "tsukasa_circle_megumu_route_words",
+            "text": "龙说路口说明第二句易听反，你照字走几步。典改成左右两个短词，她点头，请你从头复述。"
+          },
+          {
+            "key": "tsukasa_circle_megumu_rest_time",
+            "text": "事情办妥，龙问典何时能歇。她先看与你约的时间，再讲空闲；龙请你们试点心，听完才合记录。"
+          }
+        ]
+      }
+    ],
+    "note": "虹龙洞设定文档明确典是龙的可靠助手；亭下小访、普通路线签与对双方的回应为二创。"
+  },
+  {
+    "id": "megumu",
+    "visits": [
+      {
+        "key": "megumu_circle_tsukasa",
+        "person": "tsukasa",
+        "relation": "大天狗与管狐助手",
+        "source": "https://thbwiki.cc/菅牧典#东方虹龙洞",
+        "text": "典在观星台提起普通新灯试走两级，你扶稳灯柄，龙调好挡光角；典走回便笑说看清了两人的影子，三人再试一回，选出不晃眼的那一面。",
+        "scenes": [
+          {
+            "key": "megumu_circle_tsukasa_message_sort",
+            "text": "典递来三张口信，龙按先后摊开，你压纸角。最急的一张少时辰，她当场补清，龙请她再念一遍。"
+          },
+          {
+            "key": "megumu_circle_tsukasa_telescope_focus",
+            "text": "典想看小星，龙调镜，你扶稳支架。她看过便换你，站旁形容星色，龙笑听两人比较。"
+          },
+          {
+            "key": "megumu_circle_tsukasa_meal_choice",
+            "text": "典问晚饭放哪儿，龙选背风处，你试碗底稳不稳。三人挪桌，她先尝一口，再请你们说爱吃哪菜。"
+          }
+        ]
+      }
+    ],
+    "note": "设定文档支持助手关系；许可观星台内的三人设计为二创，没有把传话视作玩家已认识典。"
+  },
+  {
+    "id": "chimata",
+    "visits": [
+      {
+        "key": "chimata_circle_megumu",
+        "person": "megumu",
+        "relation": "卡牌通货的合作筹划者，利益曾有冲突",
+        "source": "https://thbwiki.cc/游戏对话:东方虹龙洞/博丽灵梦",
+        "text": "龙在闭市摊边拉稳一端旗绳，你托住另一端，千亦给两人留出同样长的余线；三人各说一种系法，龙试过便把结交还，让你们挑这次都顺手的办法。",
+        "scenes": [
+          {
+            "key": "chimata_circle_megumu_stall_width",
+            "text": "闭市后，龙量桌间空隙，千亦说要留过路人。你走过试宽窄，她再挪一寸，请你们看看能否并行。"
+          },
+          {
+            "key": "chimata_circle_megumu_sale_story",
+            "text": "千亦讲今日交换，龙追问为何换那件。你补听见的用途，三人讲齐顺序，她说这回懂价钱怎么定了。"
+          },
+          {
+            "key": "chimata_circle_megumu_lamp_return",
+            "text": "龙取下借灯，千亦查提柄，你擦底边。灯照过空摊，她们指哪处还有货，你看清，三人一起收妥。"
+          }
+        ]
+      }
+    ],
+    "note": "虹龙洞五面对话支持卡牌合作及利益冲突，不支持原作已和解；此次愿意短谈、普通摊旗建议为二创。"
+  },
+  {
+    "id": "momoyo",
+    "visits": [
+      {
+        "key": "momoyo_circle_megumu",
+        "person": "megumu",
+        "relation": "挖掘虹龙洞的委托双方与亲友",
+        "source": "https://thbwiki.cc/姬虫百百世#东方虹龙洞",
+        "text": "百百世托起样架重的一边，你换小垫块，龙在通风口扶稳另一侧；架子站好，龙笑着请你们各放一块新小样，百百世兴冲冲讲哪道矿纹今日最难找。",
+        "scenes": [
+          {
+            "key": "momoyo_circle_megumu_rock_description",
+            "text": "龙问为何留这块矿样，百百世指亮纹，你转另一面给她看。听完，她请你们各说最喜欢哪道纹。"
+          },
+          {
+            "key": "momoyo_circle_megumu_support_plan",
+            "text": "百百世想加层样架，龙问通风口够不够宽。你用木条示意，三人试间距，她拍手说先留这格空着。"
+          },
+          {
+            "key": "momoyo_circle_megumu_rest_story",
+            "text": "龙问歇工趣事，百百世夸你投石跳两下。你说她认真学手势，她抢着补偏掉的一投，龙听得笑起来。"
+          }
+        ]
+      }
+    ],
+    "note": "虹龙洞设定文档称龙为百百世亲友，并记以龙珠委托挖洞；此次看普通样架为二创，不实证噬龙能力。"
+  },
+  {
+    "id": "biten",
+    "visits": [
+      {
+        "key": "biten_circle_yachie",
+        "person": "yachie",
+        "relation": "鬼杰组组长与加入组织的美天",
+        "source": "https://thbwiki.cc/孙美天",
+        "text": "八千慧在山麓听美天讲一段夸张的果园见闻，你用落枝圈出弯路；她追问漏掉的转角，美天笑着添一圈，三人再走这小段，八千慧请两人各认一处脚印。",
+        "scenes": [
+          {
+            "key": "biten_circle_yachie_route_report",
+            "text": "八千慧问今日路线，美天讲远处转角，你补起点。她再问坡位，美天用枝画全，三人重新核过。"
+          },
+          {
+            "key": "biten_circle_yachie_stick_rest",
+            "text": "美天放好棒，八千慧问为何握处朝外。你试拿法，美天示范另一边；选好位置，她说省了绕步。"
+          },
+          {
+            "key": "biten_circle_yachie_monkey_share",
+            "text": "分完猴群小果，美天报剩数，你排空盘。八千慧核过，请她说清明日留多少，她认真答完。"
+          }
+        ]
+      }
+    ],
+    "note": "兽王园剧情资料支持美天加入鬼杰组、效力八千慧；短访与果园路题为二创，不用屈服能力替代选择。"
+  },
+  {
+    "id": "enoko",
+    "visits": [
+      {
+        "key": "enoko_circle_saki",
+        "person": "saki",
+        "relation": "劲牙组组长与山犬下属",
+        "source": "https://thbwiki.cc/三头慧之子",
+        "text": "林缘，早鬼先认一串浅印，你指落叶后的转角，慧之子合稳夹口嗅嗅熟路；三人找到同一处树根，早鬼笑着称赞两人的线索，慧之子兴奋地挑下一题。",
+        "scenes": [
+          {
+            "key": "enoko_circle_saki_footprints",
+            "text": "早鬼看林缘浅印，慧之子合稳夹口说像小兽，你指步距短。三人看清转角，她点末印，问各自依据。"
+          },
+          {
+            "key": "enoko_circle_saki_leaf_crown",
+            "text": "早鬼说叶圈少一片，你扶圈边，慧之子挑圆叶补上。她笑着放到树根，请你们看像什么。"
+          },
+          {
+            "key": "enoko_circle_saki_pace_match",
+            "text": "熟路平段上，早鬼先走，慧之子合稳夹口与你试同样步速。到树阴停下，她问哪儿累，慧之子说这段刚好。"
+          }
+        ]
+      }
+    ],
+    "note": "兽王园剧情支持早鬼怀柔慧之子并纳入劲牙组；早鬼灵形短访与纯真路题为二创，夹口始终合稳。"
+  },
+  {
+    "id": "chiyari",
+    "visits": [
+      {
+        "key": "chiyari_circle_zanmu",
+        "person": "zanmu",
+        "relation": "旧识与参与残无布局的血枪",
+        "source": "https://thbwiki.cc/天火人血枪",
+        "text": "血枪把当日新画的怪火影放到干石岸，残无猜成弯树，你猜成小鱼；三人各补一句故事，残无听完笑着催血枪说结尾，她握你的手，挑了最怪的一种。",
+        "scenes": [
+          {
+            "key": "chiyari_circle_zanmu_arrival_time",
+            "text": "残无来到干岸，血枪放远火球，问能坐多久。你讲返程时刻，她说自己的空闲，三人坐定再聊近事。"
+          },
+          {
+            "key": "chiyari_circle_zanmu_stone_names",
+            "text": "残无说小石像僧房窗，血枪偏说像歪嘴。你添怪叫法，三人笑着轮流解释，她将这次名字记在纸边。"
+          },
+          {
+            "key": "chiyari_circle_zanmu_short_reply",
+            "text": "短访将完，残无问地面趣事。你讲半段请血枪接，她补刚听的灯影；残无笑着点头，等两人说完结尾。"
+          }
+        ]
+      }
+    ],
+    "note": "兽王园剧情资料记二人为老相识，血枪受残无指使；许可短访与普通小图为二创，火球远置，不增加传送。"
+  },
+  {
+    "id": "hisami",
+    "visits": [
+      {
+        "key": "hisami_circle_zanmu",
+        "person": "zanmu",
+        "relation": "地狱事务往来与日狭美单向景仰的人",
+        "source": "https://thbwiki.cc/豫母都日狭美#东方兽王园",
+        "text": "残无在藤架旁替两人托稳普通灯罩，你试灯位，日狭美找能看清回程的那一角；三人换着站远，残无听完你们的说法，日狭美自己选好当日位置。",
+        "scenes": [
+          {
+            "key": "hisami_circle_zanmu_basket_sort",
+            "text": "日狭美急着报收果数，你提醒空篮也算进了。她重数，残无看过藤架旁的篮，请两人另放待洗果。"
+          },
+          {
+            "key": "hisami_circle_zanmu_business_words",
+            "text": "日狭美报完差事，残无问何时结束。你摊开记录，她按先后读清；残无点头，她才笑着合好纸页。"
+          },
+          {
+            "key": "hisami_circle_zanmu_shade_seats",
+            "text": "藤架影子换边，残无说原座晒了，日狭美请她另选。你搬凳试光，坐定后，三人聊今日哪串最甜。"
+          }
+        ]
+      }
+    ],
+    "note": "兽王园设定支持事务往来和日狭美单向景仰，不是原作恋人；本次三人工作短谈与主动选位为二创。"
+  },
+  {
+    "id": "zanmu",
+    "visits": [
+      {
+        "key": "zanmu_circle_hisami",
+        "person": "hisami",
+        "relation": "地狱事务中的受托者与揽客者",
+        "source": "https://thbwiki.cc/豫母都日狭美#东方兽王园",
+        "text": "日狭美在僧房石桌摆一道短棋，你试直路，残无试弯路；她看两人各走一回，笑着将难的一格挪远，残无邀你重试，三人轮流讲为何停在这里。",
+        "scenes": [
+          {
+            "key": "zanmu_circle_hisami_errand_finish",
+            "text": "日狭美报完差事，残无问哪段最慢。你用石表示转角，她补清停留处；残无听完，请她先歇。"
+          },
+          {
+            "key": "zanmu_circle_hisami_leaf_arrange",
+            "text": "日狭美将落叶摆成葡萄串，残无嫌中间挤，你挪一片。换过排法，她笑问像不像，残无请你先答。"
+          },
+          {
+            "key": "zanmu_circle_hisami_winding_tale",
+            "text": "僧房闲下，日狭美讲绕路趣事，你接末句。残无问原结尾，她再讲清，三人比较哪种更好笑。"
+          }
+        ]
+      }
+    ],
+    "note": "兽王园设定支持事务关系；石桌短棋与双方接纳此次来访为二创，不以虚无或景仰代替个人意愿。"
+  },
+  {
+    "id": "ubame",
+    "visits": [
+      {
+        "key": "ubame_circle_reimu",
+        "person": "reimu",
+        "relation": "锦上京圣域结界事件中的直接交锋者",
+        "source": "https://thbwiki.cc/游戏对话:东方锦上京/博丽灵梦（红）",
+        "text": "许可林缘，灵梦停步看兽道边的自然落枝，姥芽指出新脚印，你挪去挡路的一根；三人沿边走过，灵梦听完两人的判断，轻声说这一段看得清楚多了。",
+        "scenes": [
+          {
+            "key": "ubame_circle_reimu_visitor_boundary",
+            "text": "灵梦来许可林缘问能看哪段。姥芽用落枝指范围，你补返程转角；她站边路，请先讲眼前林况。"
+          },
+          {
+            "key": "ubame_circle_reimu_bark_sound",
+            "text": "灵梦敲落树皮，嫌声空。姥芽讲两片厚薄不同，你各敲一声；三人听过，她挑薄的再试。"
+          },
+          {
+            "key": "ubame_circle_reimu_return_mark",
+            "text": "灵梦问返程两岔路哪边干，你讲刚走过的情况。姥芽看枝梢风向再答，三人说清这次回程。"
+          }
+        ]
+      }
+    ],
+    "note": "锦上京一面对话支持结界事件交锋；这次愿意听说明为二创，没有推定二人原作是好友或扩大圣域准入。"
+  },
+  {
+    "id": "chimi",
+    "visits": [
+      {
+        "key": "chimi_circle_nareko",
+        "person": "nareko",
+        "relation": "创造驯子的自然之妖与自主石神",
+        "source": "https://thbwiki.cc/道神驯子",
+        "text": "溪岸，驯子短访时挑一块水纹石出题，魑魅先猜弯口，你猜细支；她听过两种理由便换一面，三人轮流摆出新线索，魑魅笑着请你这回先选。",
+        "scenes": [
+          {
+            "key": "chimi_circle_nareko_stream_turn",
+            "text": "驯子问溪流为何拐弯，你用落叶指水势，魑魅点高石。她说这能出题，自己先画起点。"
+          },
+          {
+            "key": "chimi_circle_nareko_leaf_hole",
+            "text": "驯子请你与魑魅透过叶孔看溪石。你说像眼睛，她说像小窗；驯子开心地换角度，再请两人猜。"
+          },
+          {
+            "key": "chimi_circle_nareko_water_level",
+            "text": "湿痕渐浅，驯子问上回水位。魑魅指暗线，你讲刚来时的样子；三人比过，她在新线添短标。"
+          }
+        ]
+      }
+    ],
+    "note": "锦上京剧情资料明确魑魅创造驯子并安置她；此次自主短访为二创，创造关系不等于对人格下命令。"
+  },
+  {
+    "id": "nareko",
+    "visits": [
+      {
+        "key": "nareko_circle_chimi",
+        "person": "chimi",
+        "relation": "自主石神与创造并安置她的自然之妖",
+        "source": "https://thbwiki.cc/道神驯子",
+        "text": "入口外自然岩边，魑魅停下看水退过的湿痕，你描一段，驯子将它编成短谜；魑魅听你们轮流给线索，指到最窄的一条，驯子开心地拉手说答中了。",
+        "scenes": [
+          {
+            "key": "nareko_circle_chimi_stream_guess",
+            "text": "入口外岩边，驯子问哪道石缝最响。你指近处，魑魅换位听；三人说清站位，她重新出题。"
+          },
+          {
+            "key": "nareko_circle_chimi_leaf_sort",
+            "text": "驯子问怎么认叶背，你翻一片，魑魅指浅色面。她自己翻另一片，笑着请两人核对。"
+          },
+          {
+            "key": "nareko_circle_chimi_fair_rules",
+            "text": "魑魅说新谜有两个答案，你各试一回。驯子认真听，自己改第三句，再问如今能不能猜中。"
+          }
+        ]
+      }
+    ],
+    "note": "资料支持创造和安置关系；自然岩边短访为二创，魑魅不进入人工殿内生活，驯子沿原入口守职。"
+  },
+  {
+    "id": "yuiman",
+    "visits": [
+      {
+        "key": "yuiman_circle_kanako",
+        "person": "kanako",
+        "relation": "原作明确的同乡与旧友",
+        "source": "https://thbwiki.cc/维缦·浅间",
+        "text": "会客石台，神奈子与维缦各拿一角普通鹿纹新布，你扶中段看纹路展开；三人换着选朝光的方向，维缦思绪清楚地挑定一面，神奈子听两人的理由，笑着松手。",
+        "scenes": [
+          {
+            "key": "yuiman_circle_kanako_cloth_choice",
+            "text": "神奈子来会客石台，维缦亲自拿两块布，你展平窄的。她问用途，维缦思绪清楚地讲自己的选择。"
+          },
+          {
+            "key": "yuiman_circle_kanako_present_tale",
+            "text": "神奈子问开心事，维缦讲亲手编的结，你说最难的一圈。三人翻看成品，她笑着请维缦再示一遍。"
+          },
+          {
+            "key": "yuiman_circle_kanako_rest_choice",
+            "text": "短谈后，神奈子问还想聊多久。维缦说精神，你讲返程；三人选都想听的近事，坐好慢慢讲完。"
+          }
+        ]
+      }
+    ],
+    "note": "锦上京角色关系资料支持维缦与神奈子同乡旧友；恢复自由后的许可会客短访为二创，不宣称修复全部旧记忆。"
+  },
+  {
+    "id": "ariya",
+    "visits": [
+      {
+        "key": "ariya_circle_yuiman",
+        "person": "yuiman",
+        "relation": "同一神社的两位祭神，阿梨夜曾为救维缦出手",
+        "source": "https://thbwiki.cc/磐永阿梨夜#东方锦上京",
+        "text": "维缦在旧神社石台指到一片刚长出的新叶，阿梨夜把瓶转半圈，你垫稳布角；三人慢慢比较两面的绿，维缦说喜欢向光的一边，也请两人讲各自的选择。",
+        "scenes": [
+          {
+            "key": "ariya_circle_yuiman_flower_water",
+            "text": "维缦问花瓶换水几次，阿梨夜指水位，你托瓶底。三人倾去旧水，她慢慢倒新的，请你们看够不够。"
+          },
+          {
+            "key": "ariya_circle_yuiman_cloth_fold",
+            "text": "阿梨夜嫌瓶垫太厚，你摊开对角，三人各压平一边。维缦看瓶站稳，笑着请她选朝光的一面。"
+          },
+          {
+            "key": "ariya_circle_yuiman_visit_minutes",
+            "text": "短谈将完，维缦问下次带哪种新枝。阿梨夜选细叶，你说附近颜色；三人约好时辰，留好回程。"
+          }
+        ]
+      }
+    ],
+    "note": "锦上京设定文档支持同祀关系及阿梨夜因挽救维缦而动摇；红灵梦Stage6明说丰姬已解开封印。本作在解封后旧神社安排短访，不重演被封印的现况。"
+  },
+  {
+    "id": "nina",
+    "visits": [
+      {
+        "key": "nina_circle_marisa",
+        "person": "marisa",
+        "relation": "带贝子游览地上并积累生活经验的同行",
+        "source": "https://thbwiki.cc/东方香霖堂/东方外来韦编第11话",
+        "text": "真实空地上，魔理沙先指一朵真花，贝子按花瓣变出小窗影，你添旁边亲眼见过的树；她绕着看完，笑着问两人哪处最难，贝子握手讲了自己的那一角。",
+        "scenes": [
+          {
+            "key": "nina_circle_marisa_real_shadow",
+            "text": "真实步道上，魔理沙指树影问太阳方向。你指来光处，贝子挪步确认，三人再选真树比影子。"
+          },
+          {
+            "key": "nina_circle_marisa_rain_count",
+            "text": "魔理沙问真花盆积水深浅，你拿枝试，贝子自己看湿线。三人比较几盆，挑出最浅的一只。"
+          },
+          {
+            "key": "nina_circle_marisa_window_shape",
+            "text": "魔理沙请贝子照真花画幻景窗，你数花瓣。窗成后，三人站真实土路换角度，她说清哪处是新添的。"
+          }
+        ]
+      }
+    ],
+    "note": "香霖堂外来韦编第十一话原文支持魔理沙带贝子游览自然、介绍她；本次三人看真实花与幻景为二创。"
+  },
+  {
+    "id": "akyuu",
+    "visits": [
+      {
+        "key": "akyuu_circle_kosuzu",
+        "person": "kosuzu",
+        "relation": "铃奈庵往来中结交、品位相近的好友",
+        "source": "https://thbwiki.cc/东方Project人妖名鉴_常世篇/第7部分",
+        "text": "小铃在阿求的新稿里挑一句最难念的，你试一种语气，阿求试另一种；三人轮流对读，读到同一个错音便笑，小铃把那句圈出，请两人各写一个短标题。",
+        "scenes": [
+          {
+            "key": "akyuu_circle_kosuzu_story_ending",
+            "text": "小铃问新故事的人为何折返，你讲读到的线索，阿求摊前页。三人对照过，她笑说想再添半句。"
+          },
+          {
+            "key": "akyuu_circle_kosuzu_garden_guess",
+            "text": "庭边，阿求请小铃猜落花来处。你指檐角，她看树梢，各说缘由；阿求将有趣的两种记在闲页。"
+          },
+          {
+            "key": "akyuu_circle_kosuzu_binding_thread",
+            "text": "小铃看薄稿装线，你托书脊，阿求压纸。三人补松处，她翻过，说这回读到中间也不会散。"
+          }
+        ]
+      }
+    ],
+    "note": "人妖名鉴常世篇的小铃条目明确她与阿求关系很好、品位相似；本次普通新稿讨论为二创，未预设玩家与小铃私交。"
+  },
+  {
+    "id": "toyohime",
+    "visits": [
+      {
+        "key": "toyohime_circle_yorihime",
+        "person": "yorihime",
+        "relation": "月之公主亲姐妹",
+        "source": "https://thbwiki.cc/绵月丰姬",
+        "text": "月海梦里，依姬站在桃阴看两人用普通小石摆山海路，你留弯，丰姬添直段；三人各选一条慢慢比，依姬笑着把多余小石收拢，请两人给这次的小路取名。",
+        "scenes": [
+          {
+            "key": "toyohime_circle_yorihime_dream_clouds",
+            "text": "月海梦里，丰姬说云像扇，你说像船。依姬听完各讲的弯角，笑指云下小影，请两人换个看法。"
+          },
+          {
+            "key": "toyohime_circle_yorihime_dream_peach_plate",
+            "text": "梦中丰姬摆熟桃，依姬留清甜一半，你选小瓣。三人慢慢分好，她听过两人的口味，再端空碟。"
+          },
+          {
+            "key": "toyohime_circle_yorihime_dream_cloth_fold",
+            "text": "梦中桃阴下，丰姬叠手绢成小峰，你折窄船。依姬陪你们展开重折，笑说要学各自选的那种。"
+          }
+        ]
+      }
+    ],
+    "note": "儚月抄资料支持绵月姐妹关系；三人同场仅在许可月海梦中，为二创，不新增现实月都旅程。"
+  },
+  {
+    "id": "yorihime",
+    "visits": [
+      {
+        "key": "yorihime_circle_toyohime",
+        "person": "toyohime",
+        "relation": "月之公主亲姐妹",
+        "source": "https://thbwiki.cc/绵月丰姬",
+        "text": "梦里，依姬收势送神，你扶好靠稳的杖，丰姬陪两人试一段缓步；走到同一停顿处，她笑着说脚步合得上，听你们各讲缘由，再请依姬选今日的闲题。",
+        "scenes": [
+          {
+            "key": "yorihime_circle_toyohime_dream_staff_shapes",
+            "text": "梦中收势送神后，丰姬问杖架木杖为何长短不同。依姬讲解，你递近短杖，三人比握处距离。"
+          },
+          {
+            "key": "yorihime_circle_toyohime_dream_meal_order",
+            "text": "梦里丰姬带点心来，依姬放好木杖，问你爱哪份。三人各选一块，丰姬先讲缘由，再听你们的。"
+          },
+          {
+            "key": "yorihime_circle_toyohime_dream_breath_pause",
+            "text": "梦中外缘，依姬收势送神，与丰姬数呼吸，你坐近听。三人聊此刻想歇多久，她定好自己的闲时。"
+          }
+        ]
+      }
+    ],
+    "note": "儚月抄资料支持姐妹关系；此处为梦内短访和本人答话，不使用降神代答或新增现实来客。"
+  },
+  {
+    "id": "reisen2",
+    "visits": [
+      {
+        "key": "reisen2_circle_toyohime",
+        "person": "toyohime",
+        "relation": "收养并为新月兔命名的绵月家成员",
+        "source": "https://thbwiki.cc/绵月丰姬",
+        "text": "月面梦里，丰姬先拆一封普通闲信猜小画，你念半句，铃仙接后半句；三人各给它取一个怪题目，丰姬笑着选两人的合句，铃仙递笔请你再添一笔。",
+        "scenes": [
+          {
+            "key": "reisen2_circle_toyohime_dream_name_write",
+            "text": "月面梦里，丰姬请铃仙写自己的名字，你扶纸角。写完，她问最喜欢哪笔，三人轮看，听铃仙自己说。"
+          },
+          {
+            "key": "reisen2_circle_toyohime_dream_parcel_size",
+            "text": "梦中信房外，丰姬量包裹，铃仙要留宽边，你试放纸册。折过布角，她见铃仙拿稳，邀你们挑绳色。"
+          },
+          {
+            "key": "reisen2_circle_toyohime_dream_moon_compare",
+            "text": "月面梦里，你说铃仙画的右月更弯，她又画一只。三人轮找差别，丰姬请她讲今日最想看的月色。"
+          }
+        ]
+      }
+    ],
+    "note": "儚月抄剧情资料记绵月姐妹接纳并命名Reisen；此处二号月兔的梦内闲信短访为二创，不混作地面铃仙。"
+  },
+  {
+    "id": "kasen",
+    "visits": [
+      {
+        "key": "kasen_circle_reimu",
+        "person": "reimu",
+        "relation": "常到博丽神社指导与帮助灵梦的华扇",
+        "source": "https://thbwiki.cc/茨木华扇",
+        "text": "仙邸外，灵梦读当日兽粮短签，你提空容器，华扇按份装好；三人换着核一遍，灵梦发现两份叫法不同，听你们解释后笑着添一字，请华扇再看是否清楚。",
+        "scenes": [
+          {
+            "key": "kasen_circle_reimu_food_portion",
+            "text": "灵梦问兽粮哪份该少，你递小容器，华扇讲今日分量。三人核过，灵梦把多的一点放回原碗。"
+          },
+          {
+            "key": "kasen_circle_reimu_perch_shadow",
+            "text": "灵梦说木影像怪角，你猜翅，华扇指真鸟。三人换站位，她笑着认出尾影，邀两人再看一处。"
+          },
+          {
+            "key": "kasen_circle_reimu_lunch_tale",
+            "text": "华扇忙完请灵梦歇脚，你摆三份点心。她讲路上笑话，华扇问漏的结尾，你学语气，三人笑着重讲。"
+          }
+        ]
+      }
+    ],
+    "note": "茨歌仙剧情资料支持华扇指导和帮助灵梦；仙邸外短访与普通兽粮签为二创，不改变动物病情或增加延寿。"
+  },
+  {
+    "id": "kosuzu",
+    "visits": [
+      {
+        "key": "kosuzu_circle_akyuu",
+        "person": "akyuu",
+        "relation": "品位相近并常有借书往来的好友",
+        "source": "https://thbwiki.cc/东方Project人妖名鉴_常世篇/第7部分",
+        "text": "账台旁，阿求将普通新书里的短句读到一半，小铃猜末字，你说另一种；三人翻开答案各笑一回，阿求听你们讲猜错的缘由，再替两人挑一句更难的。",
+        "scenes": [
+          {
+            "key": "kosuzu_circle_akyuu_print_spacing",
+            "text": "阿求嫌印稿第二行挤，小铃量字距，你指卡住的地方。三人画清行距，她请小铃再试念一遍。"
+          },
+          {
+            "key": "kosuzu_circle_akyuu_book_wrap",
+            "text": "小铃替阿求包两本闲书，你扶书脊。她说书角露着，三人换折法；试提稳后，她笑请你们记住这结。"
+          },
+          {
+            "key": "kosuzu_circle_akyuu_cupboard_title",
+            "text": "阿求问游记在哪层，小铃说换过位置。你照提示取来，三人看封题，她将新层数写进借书记录。"
+          }
+        ]
+      }
+    ],
+    "note": "人妖名鉴常世篇明确好友、相似品位及阿求频繁出入铃奈庵；三人讨论普通书签为二创，不把妖魔书变成安全道具。"
+  },
+  {
+    "id": "miyoi",
+    "visits": [
+      {
+        "key": "miyoi_circle_mamizou",
+        "person": "mamizou",
+        "relation": "鲵吞亭妖怪酒馆的参与者与料理者",
+        "source": "https://thbwiki.cc/奥野田美宵",
+        "text": "开门前，清醒的猯藏尝一口普通新菜，说咸香很好，美宵想多留清甜，你也说出自己的口味；三人清醒地分盘各试，猯藏笑着称赞两人保留的两种配法。",
+        "scenes": [
+          {
+            "key": "miyoi_circle_mamizou_awake_tableware",
+            "text": "开门前，猯藏问为何小碗在里。你照取用顺序摆，美宵讲今日安排；三人听清，留近处空位。"
+          },
+          {
+            "key": "miyoi_circle_mamizou_awake_garnish",
+            "text": "猯藏嫌葱香配菜颜色淡，美宵想留青叶，你试摆角边。三人看过，她笑说这次好认了。"
+          },
+          {
+            "key": "miyoi_circle_mamizou_awake_story",
+            "text": "开门前，猯藏讲路上趣话，美宵与你各猜结尾。她笑说原话更短，慢慢讲完，再听你们喜欢哪句。"
+          }
+        ]
+      }
+    ],
+    "note": "醉蝶华剧情资料记猯藏参与筹划妖怪酒馆、美宵料理；本次开门前清醒品菜为二创，不以醉态记忆能力改变认识。"
+  },
+  {
+    "id": "mizuchi",
+    "visits": [
+      {
+        "key": "mizuchi_circle_satori",
+        "person": "satori",
+        "relation": "智灵奇传中的调查追捕者与被追捕的怨灵",
+        "source": "https://thbwiki.cc/宫出口瑞灵",
+        "text": "梦中供台旁，觉先说一个简单词，你讲开头，瑞灵用自己的怨灵形体接故事；三人轮流只补一句，觉听两人的怪结尾便笑，瑞灵握手请你挑下一次从哪句开始。",
+        "scenes": [
+          {
+            "key": "mizuchi_circle_satori_spirit_names",
+            "text": "梦里，觉问名字哪笔改过，瑞灵用自己的怨灵形体指末角。你讲刚才画法，她请两人各说为何喜欢。"
+          },
+          {
+            "key": "mizuchi_circle_satori_spirit_plot_turn",
+            "text": "梦里，觉讲故事开头，你猜转折，瑞灵以自己的形体另接一段。三人逐句说清，她笑问哪种更合前文。"
+          },
+          {
+            "key": "mizuchi_circle_satori_spirit_seat_light",
+            "text": "梦里，觉说供台旁字纸清楚些，瑞灵用自己的影指转页。你挪凳，三人试坐读句，慢慢比声音往哪边传。"
+          }
+        ]
+      }
+    ],
+    "note": "智灵奇传第七章第四话支持瑞灵被带至神灵庙受审，判决未明。本作仅在相续梦中安排她与玩家、觉同意短谈；梦内旧祭室不是现实获释，瑞灵不附体旁人。"
+  },
+  {
+    "id": "layla",
+    "visits": [
+      {
+        "key": "layla_circle_lunasa",
+        "person": "lunasa",
+        "relation": "蕾拉创造的骚灵，拥有原人类姐姐的身形",
+        "source": "https://thbwiki.cc/蕾拉·普莉兹姆利巴",
+        "text": "生前旧宅梦里，蕾拉忆起自己创造的骚灵露娜萨曾陪她看窗的样子，模仿姐姐问花朝哪边；你答一处，她笑着接另一句，再讲那时两个影子怎样挨近。",
+        "memoryOnly": true,
+        "scenes": [
+          {
+            "key": "layla_circle_lunasa_history_lunasa_light",
+            "text": "生前旧宅梦里，蕾拉忆起骚灵露娜萨陪看窗光，曾问光落哪边。你请她指，她画旧影，再讲当时的回答。"
+          },
+          {
+            "key": "layla_circle_lunasa_history_lunasa_colour",
+            "text": "往昔梦里，蕾拉讲自己创造的骚灵露娜萨曾听她选布色。你选浅布，她笑着回忆那时为何偏选深蓝。"
+          },
+          {
+            "key": "layla_circle_lunasa_history_lunasa_bird",
+            "text": "生前旧宅梦中，蕾拉忆骚灵露娜萨陪听鸟声。你问多短，她哼一段，再讲姐姐当时怎样请她从头慢说。"
+          }
+        ]
+      }
+    ],
+    "note": "妖妖梦设定及ZUN邮件支持蕾拉创造姐姐身形的骚灵并可对话；此处仅历史梦中忆及陪窗谈话，二创细节，不把寿终后的演奏经历前移。"
+  },
+  {
+    "id": "change",
+    "visits": [
+      {
+        "key": "change_circle_junko",
+        "person": "junko",
+        "relation": "绀珠传中对嫦娥怀有仇恨的纯狐",
+        "source": "https://thbwiki.cc/游戏对话:东方绀珠传/博丽灵梦",
+        "text": "梦墙两边，你说起旧事记录里纯狐满怀怒意呼她名字的一段；蟾蜍形态的嫦娥以前足轻拍墙面，请你慢慢讲清，再隔墙回应自己今日的心情。",
+        "memoryOnly": true,
+        "scenes": [
+          {
+            "key": "change_circle_junko_toad_record_name",
+            "text": "梦墙两边，你读纯狐呼嫦娥名字的旧记录。蟾蜍形态的她用前足请你停下，问那句当时发生了什么。"
+          },
+          {
+            "key": "change_circle_junko_toad_record_map",
+            "text": "星月梦里，你隔墙读月面方位，讲清纯狐敌意所指。蟾蜍形态的嫦娥用前足指疑处，请再慢读原文。"
+          },
+          {
+            "key": "change_circle_junko_toad_record_close",
+            "text": "梦墙两边，你合起纯狐旧事记录，问想再听哪段。嫦娥用蟾蜍前足接拍，说想听醒时水声，你慢慢接过去。"
+          }
+        ]
+      }
+    ],
+    "note": "绀珠传对话支持纯狐敌意，原作未明确嫦娥是否知晓纯狐；仅由主角讲旧事，梦中回应为二创，不让仇敌来访或和解。"
+  },
+  {
+    "id": "maruchi",
+    "visits": [
+      {
+        "key": "maruchi_circle_yumemi",
+        "person": "yumemi",
+        "relation": "梦时空结局中介绍玛○奇的教授",
+        "source": "https://thbwiki.cc/玛○奇",
+        "text": "旧作梦里，梦美在廊边量两张矮凳的距离。玛○奇说想留宽些，你试过回身也赞同。三人挪到能坐稳的位置，梦美笑说这回照两人的习惯。",
+        "scenes": [
+          {
+            "key": "maruchi_circle_yumemi_autonomous_yumemi_fold",
+            "text": "旧作梦里，梦美问包布怎样折。玛○奇折成方形，你扶对角；三人试厚度，她说下块想换成长边。"
+          },
+          {
+            "key": "maruchi_circle_yumemi_autonomous_yumemi_brush",
+            "text": "旧作梦中，玛○奇从梦美带来的刷子里挑了一把软毛刷。你试握处，她讲喜欢的缘由；梦美听完，请两人各示一段动作。"
+          },
+          {
+            "key": "maruchi_circle_yumemi_autonomous_yumemi_seat",
+            "text": "旧作梦里，梦美问坐处怎样摆。玛○奇指向栏边，说想坐着听风。你挪凳，三人试过回身空间，她坐下后笑着点头。"
+          }
+        ]
+      }
+    ],
+    "note": "梦时空灵梦结局仅支持梦美提供家务机器人，未确证制造者、人格或恋爱能力；自主梦人格、选择与来访均明确二创。"
+  }
+]

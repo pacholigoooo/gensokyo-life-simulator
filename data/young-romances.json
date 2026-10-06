@@ -1,0 +1,252 @@
+[
+  {
+    "id": "reimu",
+    "canonAge": "unknown",
+    "ageModel": "same-age-fiction",
+    "intro": {
+      "text": "你随家人送祭纸到神社，初见与你同岁的灵梦。她正挪开接雨盆，你帮着把湿纸移到廊内，约好以后送纸时再来。",
+      "label": "少年篇 · 送纸初识",
+      "effects": {}
+    },
+    "entry": {
+      "minAge": 10,
+      "maxAge": 11,
+      "min": {
+        "bond": 4
+      }
+    },
+    "texts": {
+      "love:rain_cup": {
+        "rain_cup_chosen": "你认出漏水的瓦缝，递瓦片给灵梦补好。盆里不再滴水，她让你把湿纸移到廊内，两人一起摊平。",
+        "rain_cup_other": "你没找准漏雨的地方，便扶稳木盆。灵梦把另一盆推到廊内，两人接住湿纸，等雨停后再查。"
+      },
+      "love:tea_kind": {
+        "tea_kind_chosen": "灵梦在村里买茶，问你上回那杯是否太浓。你说喜欢淡些，她在纸包上画了记号，约好下次试试。",
+        "tea_kind_other": "灵梦买完茶叫住你，说祭纸又快用完。你问哪天能来帮忙，她约好时辰，也说忙完可以坐下喝一杯。"
+      },
+      "love:roof_check": {
+        "roof_check_chosen": "又到雨季，你站在廊下看补过的地方。灵梦指给你一处新湿痕，你们重新摆好盆，原先那一处倒真没漏。",
+        "roof_check_other": "你来帮灵梦把接雨盆挪回原处，忙到雨停。她数好最后几张干纸，你们把没湿的一叠留到下次祭日。"
+      },
+      "love:kept_cup": {
+        "kept_cup_chosen": "灵梦泡了你说过的淡茶，自己尝完直嫌没味。你笑着分她一块点心，她留下那只杯，说下回还用它。",
+        "kept_cup_other": "祭纸收好，灵梦给你留一块坐垫。你们坐在廊下喝茶，约好下回来时各带一个近来的小故事。"
+      },
+      "love:shrine_answer": {
+        "shrine_answer_mutual": "灵梦把你常用的杯推来，说喜欢你，想和你做恋人。你刚答也喜欢她，她便握住你的手，低头笑着嘀咕怎么拖到今天才说。",
+        "shrine_answer_friend": "灵梦听完心意，说愿意继续做茶友。你应下，把杯放回原处，往后仍按约来帮祭纸的忙。"
+      },
+      "love:morning_sweep": {
+        "morning_sweep_together": "清早你到神社扫阶，灵梦叫你过来喝茶。你挨着她坐下，她顺势靠上你的肩，茶凉了才想起还剩半院落叶。"
+      }
+    },
+    "scenes": [
+      {
+        "key": "paper_break",
+        "text": "祭纸裁到一半，你捧着歪掉的一张逗灵梦。她笑着凑来瞧，你忍不住轻亲她的脸；她愣了一下，握住你的手，说纸都忘裁了。"
+      },
+      {
+        "key": "kite_choice",
+        "text": "纸鸢忽然往下栽，灵梦赶紧攥住你执线的手。两人救回纸鸢，松了口气；她却没松手，还说这样放得稳些。"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://thbwiki.cc/东方求闻史纪/博丽灵梦/中日对照",
+        "claim": "《求闻史纪》P112–116原作转录支持博丽神社身份、扫院喝茶与村中买物；不提供确切年龄或继任年龄。10–11岁同龄相遇与恋爱属于本作少年时期二创。"
+      }
+    ]
+  },
+  {
+    "id": "marisa",
+    "canonAge": "unknown",
+    "ageModel": "same-age-fiction",
+    "intro": {
+      "text": "你随家人循熟路到作坊，一路记下往返路标，初见与你同岁的魔理沙。她请你站在窗边看烟痕，也指清回程的岔口。",
+      "label": "少年篇 · 熟路到作坊",
+      "effects": {}
+    },
+    "entry": {
+      "minAge": 10,
+      "maxAge": 11,
+      "min": {
+        "insight": 5,
+        "health": 5
+      }
+    },
+    "texts": {
+      "love:smoke_formula": {
+        "smoke_formula_chosen": "瓶底又剩了一圈焦粉，你指出烟从哪边冒起。魔理沙在试验簿画下位置，让你下回来看看猜得准不准。",
+        "smoke_formula_other": "你没看懂瓶底的粉，便帮魔理沙推开窗。烟散后她画出三种可能，叫你下回来看看究竟是哪一种。"
+      },
+      "love:star_invite": {
+        "star_invite_chosen": "魔理沙邀你沿认熟的小径去空坡看新光。她试过两次才亮起来，你说这回看清了，她赶紧记下用了多久。",
+        "star_invite_other": "走空坡太累，你便在作坊窗边看小试验。魔理沙把亮度调低，问你这回是否看清，也记下失败的那一回。"
+      },
+      "love:failed_batch": {
+        "failed_batch_chosen": "新配方仍失败了，你把上回的记录翻给她。魔理沙核过焦粉，说这页先别揉掉，下回还得拿来比。",
+        "failed_batch_other": "新配方没亮起来，魔理沙正想揉掉那页。你请她从头讲一遍，听完才把纸铺平，帮她标好试过的次序。"
+      },
+      "love:small_lantern": {
+        "small_lantern_chosen": "魔理沙把一盏小星灯放到你面前，要你先看看是否晃眼。你说正好，她把记过的亮度夹在底下，叫你带回去。",
+        "small_lantern_other": "魔理沙清出窗边一张椅子，叫你下回别再站着看。你帮她贴好纸签，两人约好再核一遍那本试验簿。"
+      },
+      "love:hat_edge": {
+        "hat_edge_mutual": "魔理沙捏着帽边，忽然说喜欢你，下次要以恋人的身份约你。听你说也喜欢她，她高兴得抱了你一下，松开时反倒忘了刚想说什么。",
+        "hat_edge_friend": "魔理沙把帽子戴正，说先做一起看新魔法的朋友。你应下，约好下回带纸来，把失败的那一回也记好。"
+      },
+      "love:working_lunch": {
+        "working_lunch_together": "试验做到午后，魔理沙先夹好笔，挨着你坐下吃饭。她肩头轻撞你一下，问刚才的新星形好不好看，眼睛却一直望着你。"
+      }
+    },
+    "scenes": [
+      {
+        "key": "crooked_shade",
+        "text": "星灯终于亮稳，你兴奋地抱住魔理沙。她也笑着搂紧你，松开前飞快亲了你的脸；见你还发愣，她压低帽檐，催你快看灯。"
+      },
+      {
+        "key": "stone_stars",
+        "text": "魔理沙带来三块石头，坚称各像不同星座。你笑着给它们取名，她听到一半把手塞进你掌心；你握紧了，她才继续讲那颗最亮的。"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://thbwiki.cc/东方求闻史纪/雾雨魔理沙/中日对照",
+        "claim": "《求闻史纪》P117–120原作转录支持人类魔法使、光热研究与记录试验成败；不提供确龄或离家年龄。少年相遇、作坊时点与情意属于本作二创。"
+      }
+    ]
+  },
+  {
+    "id": "akyuu",
+    "canonAge": "unknown",
+    "ageModel": "akyuu-existing",
+    "intro": {
+      "text": "你随家人送旧书到稗田邸，阿求先核清缺页，再递来一张练笔的小谜稿，问你愿不愿按线索猜一猜。",
+      "label": "少年篇 · 小谜稿读友",
+      "effects": {}
+    },
+    "entry": {
+      "minAge": 10,
+      "min": {
+        "insight": 7
+      },
+      "maxAge": 11
+    },
+    "texts": {
+      "love:mystery_clue": {
+        "mystery_clue_perceived": "你看出阿求的小谜稿少交代一扇门，她在页边添了记号。你问能否先别揭谜底，她把下一页盖住，等你再猜。",
+        "mystery_clue_first_try": "你猜错小谜稿中的人，阿求忍住笑，把关键页递回来。你们再读一次，这回先把每个人走过的门记清。"
+      },
+      "love:reader_invitation": {
+        "reader_invitation_answered": "阿求请你按约来读新稿，你听完她最喜欢的一段才说想法。她在日程留下一小格，也说读完就去庭里歇歇。",
+        "reader_invitation_invited": "阿求把新稿放到书房门边，请你来听这回怎样藏线索。你问好能坐多久，约定读完便各自歇息。"
+      },
+      "love:fair_solution": {
+        "fair_solution_remembered": "你指出那扇门出现得太迟，阿求把前页补好。她请你再照书里的时辰读一次，看看这回是否猜得出来。",
+        "fair_solution_learned": "你们把新稿从头读一遍，阿求听你说谜底来得太突然。她把漏写的时辰补在前页，再请你试着猜一次。"
+      },
+      "love:private_margin": {
+        "private_margin_returned": "阿求在谜稿旁放一张空纸，请你只写庭里听见的声音。你写下落雨，她补了一声鸟鸣，约好今天不再校稿。",
+        "private_margin_offered": "阿求递来一张空页，请你写喜欢的庭院声音。你写完放下笔，两人听了一阵鸟鸣，今日的谜稿便先合上。"
+      },
+      "love:this_life_vow": {
+        "this_life_vow_chosen": "阿求在闲页写下喜欢你，问你愿不愿做恋人。你急着答应，连话都说重了一遍；她笑着握住你的手，将那张纸留在你掌心。",
+        "this_life_vow_friends": "阿求把闲页收进册中，说愿意与你做朋友。你应下，往后仍按约来猜谜，也听她讲庭院的小事。"
+      },
+      "love:garden_epilogue": {
+        "garden_epilogue_together": "谜稿读完，你还挨着阿求坐在庭里。她把手搭进你掌中，说今天想多听听你的事；你握着她的手，说着说着又忘了看花。"
+      }
+    },
+    "scenes": [
+      {
+        "key": "one_riddle",
+        "text": "阿求写的谜面把你难住了。你挪近求个提示，她轻轻亲了你的脸，笑问现在还能猜吗；你牵住她的手，说得重读一遍才行。"
+      },
+      {
+        "key": "garden_news",
+        "text": "你讲起近来的糗事，阿求笑得往你肩头靠。你顺势环住她，她停了笑仍没坐直，低声让你接着讲；书册就先合在膝上。"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://thbwiki.cc/东方求闻史纪/文文新闻",
+        "claim": "《求闻史纪》P159出生新闻标为第109季文月；不能由此推出本作任意初见或晚锚点确龄。"
+      },
+      {
+        "url": "https://thbwiki.cc/东方求闻史纪/独白/中日对照",
+        "claim": "P151–155独白中的十八岁指初代阿一开始编书；阿求现世年龄不能用先代知识替代。本作初见12–14与寿限26–30是既有模拟配置，少年谜题练笔和相许为新编。"
+      }
+    ],
+    "canonAgeEvidence": "《求闻史纪》P159：第109季文月出生；本作当前相遇年龄与原作晚锚点确龄分开。"
+  },
+  {
+    "id": "kosuzu",
+    "canonAge": "unknown",
+    "ageModel": "same-age-fiction",
+    "intro": {
+      "text": "你随家人到铃奈庵借普通游记，初见与你同岁的小铃。你问一处褪色印字，她找来另一页比给你看，约好还书时再说。",
+      "label": "少年篇 · 普通游记初识",
+      "effects": {}
+    },
+    "entry": {
+      "minAge": 10,
+      "maxAge": 11,
+      "habitats": [
+        "village",
+        "outskirts"
+      ],
+      "species": [
+        "human",
+        "hermit"
+      ],
+      "min": {
+        "insight": 4
+      }
+    },
+    "texts": {
+      "love:faded_letters": {
+        "faded_letters_perceived": "旧游记的印字褪了一笔，你照样摹下来。小铃拿另一页给你比，说先分清笔画，再猜它写的是哪里。",
+        "faded_letters_first_try": "你把旧印字抄得挤成一团，小铃找来另一页，与你拆清笔画。她留一块空纸，请你这回慢些摹。"
+      },
+      "love:spare_bookmark": {
+        "spare_bookmark_answered": "小铃请你做借书签，你们各画一枚小铃，才发现两个人画得不同。她把纸分好，说下次还书时各用自己的。",
+        "spare_bookmark_invited": "小铃叫你一起裁一批空书签，递来好写字的纸。你们按册名分好，留了两张空白的，约好下次再画。"
+      },
+      "love:closed_scroll": {
+        "closed_scroll_remembered": "卷边的警示与你摹过的字很像。你问清后把卷放回，小铃合好封套，取出一册普通山行记与你继续读。",
+        "closed_scroll_learned": "你看不懂卷边的警示，便先向小铃问清。她合好封套，与你挑一册普通游记；那卷今日就不拆开了。"
+      },
+      "love:handwritten_note": {
+        "handwritten_note_returned": "小铃在旧书签背面写下想再一起读下一册，先请你读给她听。你念完，她也说了自己最想重看的那一页。",
+        "handwritten_note_offered": "小铃把一张亲手写的短句夹在游记里，约你再读下一册。你先读完，她也讲起自己想再看一遍的故事。"
+      },
+      "love:readable_heart": {
+        "readable_heart_chosen": "小铃念着想做你恋人的书签，念到一半紧张地笑了。你说也喜欢她，她立刻扑来抱住你；你回抱着她，两人笑得把后半句都忘了。",
+        "readable_heart_friends": "小铃说愿意继续做借书谈故事的朋友。你应下，把书签收好，往后仍按约借还，也听她讲新书。"
+      },
+      "love:after_lending": {
+        "after_lending_together": "归还的书册登记好，小铃拉开身旁的椅子。你们挨着读游记，她一边指给你看有趣的句子，一边将空着的手悄悄递来。"
+      }
+    },
+    "scenes": [
+      {
+        "key": "bookmarks_sorted",
+        "text": "小铃把画反的书签举到脸边，逗得你笑起来。你凑过去轻亲她的脸，她呆了一瞬，随即把书签贴上你的脸颊，说这样才算一对。"
+      },
+      {
+        "key": "two_maps",
+        "text": "游记里那座桥的位置终于揭晓，小铃猜对了，得意地挽住你的胳膊。你夸她眼尖，她越靠越近，又小声承认刚才其实没把握。"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://thbwiki.cc/东方铃奈庵/第一话",
+        "claim": "第一话P5–7借还、P14印刷装订、P17家人及P19–20妖魔书危险支持书屋主题；未给角色确龄或能力觉醒年龄。少年普通印字与书签往来是本作二创。"
+      },
+      {
+        "url": "https://yenpress.com/titles/9780316511896-forbidden-scrollery-vol-1",
+        "claim": "正版出版社介绍小铃的爱书与读字能力；T(Teen)是读者分级，不能当作小铃的年龄。"
+      }
+    ]
+  }
+]

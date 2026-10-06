@@ -1,0 +1,7089 @@
+[
+  {
+    "id": "mike",
+    "continuity": "windows",
+    "anchor": {
+      "label": "黑市教学以后",
+      "text": "你已离开排斥三花猫的旧群体，在妖怪之山脚做自己的买卖。卡牌流通后，你还向魔理沙介绍过黑市弹币，往后的故事从熟悉摊位的招财猫写起。",
+      "age": {
+        "kind": "unknown",
+        "label": "已独立经商，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "g18"
+        ],
+        "note": "设定给旧群体经历和离开，不给出生年。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g18",
+        "title": "虹龙洞正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方虹龙洞/Omake",
+        "type": "primary-transcript",
+        "locator": "各角色设定，中日对照全文"
+      },
+      {
+        "id": "r18",
+        "title": "虹龙洞灵梦路线",
+        "url": "https://thbwiki.cc/游戏对话:东方虹龙洞/博丽灵梦",
+        "type": "primary-transcript",
+        "locator": "Stage 1–6 已读交涉，结局未统一"
+      },
+      {
+        "id": "black",
+        "title": "弹幕狂们的黑市魔理沙剧情",
+        "url": "https://thbwiki.cc/游戏对话:弹幕狂们的黑市/雾雨魔理沙",
+        "type": "primary-transcript",
+        "locator": "Tutorial、End、4th、6th 全部剧情"
+      }
+    ],
+    "history": [
+      {
+        "id": "mike:h01",
+        "label": "已知起点",
+        "work": "虹龙洞",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你因三花毛色受到同族排斥，拒绝被染成白猫，离开旧群体后在山间自在生活。",
+        "sourceIds": [
+          "g18"
+        ],
+        "note": ""
+      },
+      {
+        "id": "mike:h02",
+        "label": "卡牌调查",
+        "work": "虹龙洞",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "灵梦调查卡牌时遇见你，你坚持货物必须付款，拒绝让她借退治的名义直接带走。",
+        "sourceIds": [
+          "r18"
+        ],
+        "note": ""
+      },
+      {
+        "id": "mike:h03",
+        "label": "黑市开业",
+        "work": "黑市",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你与收集卡牌的魔理沙交手，提醒她从弹幕中提取弹币，装备还得继续积累。",
+        "sourceIds": [
+          "black"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "虹龙洞",
+        "title": "虹龙洞",
+        "participation": "participant",
+        "historyIds": [
+          "mike:h01",
+          "mike:h02"
+        ],
+        "sourceIds": [
+          "g18",
+          "r18"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "黑市",
+        "title": "黑市",
+        "participation": "participant",
+        "historyIds": [
+          "mike:h03"
+        ],
+        "sourceIds": [
+          "black"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "集市又添了几家摊位，你把旧招牌擦亮，给自己的货列出清楚的价钱。接下来的日子，你想留下愿意再来的客人。",
+      "years": 30,
+      "goal": {
+        "name": "留住三色小摊",
+        "description": "凭自己的货物和手艺养活山脚小摊，留下愿意再来的熟客。"
+      },
+      "milestones": [
+        {
+          "text": "你重新排开货摊，把招财和揽客的手势分开试用。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "fortune",
+            "min": 6
+          },
+          "pass": "一季账目有了结余，摊租和下一批进货都能按时付。",
+          "fail": "摊租仍要分次交，你替邻摊招客，慢慢填上空货架。",
+          "passEffects": {
+            "fortune": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "老客记住哪样货好用，带朋友来挑，也认准了你的三色尾巴。",
+          "fail": "客人爱逗你的尾巴，买完却少有再来；你翻账本找原因。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "你把卖得最稳的货摆在外沿，收好招牌，等下一次赶集。",
+          "effects": {}
+        }
+      ],
+      "success": "小摊终于有了自己的名字，摊租和进货都能按时付。别人再提三色毛，你只把新货递给他看，熟客已经认准了这里。",
+      "bittersweet": "摊位没扩成大铺，几名老客却一直照顾生意。你把还缺的钱列在账尾，照旧抖开三色尾巴，下一季继续慢慢攒。",
+      "failure": "这一季的热闹没留下足够收入，你暂时收起货架，去替别人招客。招牌仍在手里，等货源和摊租凑齐，还能重新摆开。",
+      "eventOverrides": [
+        {
+          "id": "mike:ev01",
+          "text": "你在新摊前轮流试招财和揽客，钱与客还是常常只来一边；你把结果记在价签背面。"
+        },
+        {
+          "id": "mike:ev06",
+          "text": "新邻摊拿你的三花毛色开玩笑，你把货架搬到明亮处，照旧用自己的招牌招呼客人。"
+        }
+      ],
+      "reviewedEventIds": [
+        "mike:ev01",
+        "mike:ev02",
+        "mike:ev03",
+        "mike:ev04",
+        "mike:ev05",
+        "mike:ev06",
+        "mike:ev07",
+        "mike:ev08",
+        "mike:ev09",
+        "mike:ev10",
+        "mike:ev11",
+        "mike:ev12",
+        "mike:ev13",
+        "mike:ev14",
+        "mike:ev15",
+        "mike:ev16",
+        "mike:ev17",
+        "mike:ev18",
+        "mike:ev19",
+        "mike:ev20",
+        "mike:ev21",
+        "mike:ev22",
+        "mike:ev23",
+        "mike:ev24",
+        "mike:ev25",
+        "mike:ev26",
+        "mike:ev27",
+        "mike:ev28",
+        "mike:ev29",
+        "mike:ev30",
+        "mike:ev31",
+        "mike:ev32",
+        "mike:ev33",
+        "mike:ev34",
+        "mike:ev35",
+        "mike:ev36"
+      ]
+    }
+  },
+  {
+    "id": "takane",
+    "continuity": "windows",
+    "anchor": {
+      "label": "黑市主线收束以后",
+      "text": "你是秘天崖的山童领袖，已组织过卡牌黑市。魔理沙与荷取扰乱价格后，你答应放开管理权，又与魔理沙商量维持黑市一阵；续篇接着处理这笔旧生意。",
+      "age": {
+        "kind": "unknown",
+        "label": "山童领袖，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "g18"
+        ],
+        "note": "领袖、商人身份可证，实际年岁未知。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g18",
+        "title": "虹龙洞正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方虹龙洞/Omake",
+        "type": "primary-transcript",
+        "locator": "各角色设定，中日对照全文"
+      },
+      {
+        "id": "r18",
+        "title": "虹龙洞灵梦路线",
+        "url": "https://thbwiki.cc/游戏对话:东方虹龙洞/博丽灵梦",
+        "type": "primary-transcript",
+        "locator": "Stage 1–6 已读交涉，结局未统一"
+      },
+      {
+        "id": "black",
+        "title": "弹幕狂们的黑市魔理沙剧情",
+        "url": "https://thbwiki.cc/游戏对话:弹幕狂们的黑市/雾雨魔理沙",
+        "type": "primary-transcript",
+        "locator": "Tutorial、End、4th、6th 全部剧情"
+      }
+    ],
+    "history": [
+      {
+        "id": "takane:h01",
+        "label": "已知起点",
+        "work": "虹龙洞",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你率住在森林里的山童经商，与河童既竞争也相互依赖，除了技术也重视资金流动。",
+        "sourceIds": [
+          "g18"
+        ],
+        "note": ""
+      },
+      {
+        "id": "takane:h02",
+        "label": "秘天崖交涉",
+        "work": "虹龙洞",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "灵梦来到山童据点查卡牌，你守着秘天崖与她交手，仍将卡牌视为可以交易的商品。",
+        "sourceIds": [
+          "r18"
+        ],
+        "note": ""
+      },
+      {
+        "id": "takane:h03",
+        "label": "黑市管理",
+        "work": "黑市",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你控制黑市价格，荷取的卡牌打乱系统后，你提出投降与放开管理权，仍被魔理沙拉去交战。",
+        "sourceIds": [
+          "black"
+        ],
+        "note": ""
+      },
+      {
+        "id": "takane:h04",
+        "label": "保留黑市",
+        "work": "黑市",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "魔理沙舍不得停止收集卡牌，你答应在她与千亦之间周旋，黑市于是暂时继续营业。",
+        "sourceIds": [
+          "black"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "虹龙洞",
+        "title": "虹龙洞",
+        "participation": "participant",
+        "historyIds": [
+          "takane:h01",
+          "takane:h02"
+        ],
+        "sourceIds": [
+          "g18",
+          "r18"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "黑市",
+        "title": "黑市",
+        "participation": "participant",
+        "historyIds": [
+          "takane:h03",
+          "takane:h04"
+        ],
+        "sourceIds": [
+          "black"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "黑市旧账还没理完，林中已经有人来问下一批货。你重新核对价目与运送路线，想把这回生意做得能经得起长久盘问。",
+      "years": 30,
+      "goal": {
+        "name": "稳住森林商路",
+        "description": "将黑市技术用在可持续的森林商路，让族人按约收回货款。"
+      },
+      "milestones": [
+        {
+          "text": "你将黑市账目另装一匣，把新商路成本摊在桌上。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "价格波动被算进合同，族人知道这一趟会挣多少。",
+          "fail": "行情比旧表走得快，你暂停买卖，把过时价目收回。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "fortune",
+            "min": 6
+          },
+          "pass": "余钱够修工具与付路费，族人不用再临时赊账。",
+          "fail": "回款总慢半拍，你缩减库存，逐家去收欠账。",
+          "passEffects": {
+            "fortune": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          }
+        },
+        {
+          "text": "你核完最后一车货，把可继续的路线圈给族人看。",
+          "effects": {}
+        }
+      ],
+      "success": "账目和商路终于对得上，山童照约出货、收钱，林中生意有了可重复的秩序。你留下新价表，准备下一轮行情。",
+      "bittersweet": "你保住几条熟悉商路，另几笔账还在追讨。秘天崖的货箱没有散，你把利润与风险分开记，先让族人走稳妥路线。",
+      "failure": "扩张的商路没养活库存，你关掉几个货点，带族人收回工具。森林仍是据点，这一卷末尾，先得把亏欠结清。",
+      "eventOverrides": [
+        {
+          "id": "takane:ev01",
+          "text": "你给新商路挑了一把小铲，检查刃口再挂上腰侧；旧工具仍留给熟悉那条路的山童。"
+        },
+        {
+          "id": "takane:ev02",
+          "text": "你背起这季新配的木箱，把怕潮的货移到上层，交代族人按同样办法装车。"
+        },
+        {
+          "id": "takane:ev06",
+          "text": "新买家想压价，你先算清运输和损耗，愿意让出的数目只写在这一批合同上。"
+        },
+        {
+          "id": "takane:ev07",
+          "text": "你将新商路收到的钱单列一页，旧黑市的收益与欠款不再混进同一本账。"
+        }
+      ],
+      "reviewedEventIds": [
+        "takane:ev01",
+        "takane:ev02",
+        "takane:ev03",
+        "takane:ev04",
+        "takane:ev05",
+        "takane:ev06",
+        "takane:ev07",
+        "takane:ev08",
+        "takane:ev09",
+        "takane:ev10",
+        "takane:ev11",
+        "takane:ev12",
+        "takane:ev13",
+        "takane:ev14",
+        "takane:ev15",
+        "takane:ev16",
+        "takane:ev17",
+        "takane:ev18",
+        "takane:ev19",
+        "takane:ev20",
+        "takane:ev21",
+        "takane:ev22",
+        "takane:ev23",
+        "takane:ev24",
+        "takane:ev25",
+        "takane:ev26",
+        "takane:ev27",
+        "takane:ev28",
+        "takane:ev29",
+        "takane:ev30",
+        "takane:ev31",
+        "takane:ev32",
+        "takane:ev33",
+        "takane:ev34",
+        "takane:ev35",
+        "takane:ev36"
+      ]
+    }
+  },
+  {
+    "id": "sannyo",
+    "continuity": "windows",
+    "anchor": {
+      "label": "鲵吞亭分场与牡丹调查以后",
+      "text": "你仍在伪天棚主持赌局，烟草之烟能让喧闹客人安静下来。鲵吞亭也开了你主持的赌场分场；在山间见到红色地带后，你顺着传闻亲自找到了牡丹池。",
+      "age": {
+        "kind": "unknown",
+        "label": "已主持赌局，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "g18"
+        ],
+        "note": "原文无出生与初学摇骰的年龄。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g18",
+        "title": "虹龙洞正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方虹龙洞/Omake",
+        "type": "primary-transcript",
+        "locator": "各角色设定，中日对照全文"
+      },
+      {
+        "id": "r18",
+        "title": "虹龙洞灵梦路线",
+        "url": "https://thbwiki.cc/游戏对话:东方虹龙洞/博丽灵梦",
+        "type": "primary-transcript",
+        "locator": "Stage 1–6 已读交涉，结局未统一"
+      },
+      {
+        "id": "le75",
+        "title": "醉蝶华第75话",
+        "url": "https://thbwiki.cc/东方醉蝶华/第七十五话",
+        "type": "primary-transcript",
+        "locator": "P1–16中文逐页全文；日文待补"
+      }
+    ],
+    "history": [
+      {
+        "id": "sannyo:h01",
+        "label": "已知起点",
+        "work": "虹龙洞",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你是开设赌局的山女郎，天狗、河童与山童都来光顾，烟草之烟让争执的赌客平静下来。",
+        "sourceIds": [
+          "g18"
+        ],
+        "note": ""
+      },
+      {
+        "id": "sannyo:h02",
+        "label": "矿口相遇",
+        "work": "虹龙洞",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "灵梦追卡牌来到矿口，你将她当成来赌钱的人，交手后让她继续向虹龙洞深处调查。",
+        "sourceIds": [
+          "r18"
+        ],
+        "note": ""
+      },
+      {
+        "id": "sannyo:h03",
+        "label": "第75话·牡丹与赌局",
+        "work": "醉蝶华75",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你在鲵吞亭主持赌场分场，摇出两个一后让赌局暂歇；又向美宵与客人说起山中忽隐忽现的红色地带，随后亲自找到牡丹池。",
+        "sourceIds": [
+          "le75"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "虹龙洞",
+        "title": "虹龙洞",
+        "participation": "participant",
+        "historyIds": [
+          "sannyo:h01",
+          "sannyo:h02"
+        ],
+        "sourceIds": [
+          "g18",
+          "r18"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "醉蝶华75",
+        "title": "醉蝶华75",
+        "participation": "participant",
+        "historyIds": [
+          "sannyo:h03"
+        ],
+        "sourceIds": [
+          "le75"
+        ],
+        "note": "P1–16中文转录全文已读；分场在鲵吞亭，仍保留伪天棚主业，未读76以后的调查结果。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "伪天棚换来一批新客，你把旧骰盅放回桌心，先请他们读完桌边赌约。熟悉的赌坊仍要热闹，你想少收拾几场赖账和翻桌。",
+      "years": 30,
+      "goal": {
+        "name": "立下清楚赌约",
+        "description": "让赌客认同开局前的赌约，减少赖账与翻桌造成的争执。"
+      },
+      "milestones": [
+        {
+          "text": "你将新赌约挂到灯下，烟管搁在随手能拿的地方。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你看穿暗中换筹，开局前就把漏洞讲清楚。",
+          "fail": "对方钻了赌约空子，你重写条款，先认下这一局损失。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "客人愿意按约认输，桌边也有人替你劝住争吵。",
+          "fail": "你仍要喷烟压下争执，各人对条款各有说法。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "最后一桌散去，你点清筹码，把改好的赌约留在明日开局处。",
+          "effects": {}
+        }
+      ],
+      "success": "赌约比烟管更常被客人指给旁人看。赌坊照旧热闹，你仍坐庄，却能在收桌以后，安静喝完一杯热茶。",
+      "bittersweet": "几桌熟客认了新约，新来的人仍要你亲自看着。你没有放下烟管，只把有效的条款留下，下一回继续讲清楚。",
+      "failure": "新约没压住赖账，几场纠纷耗掉耐性。你暂时关掉最难管的一桌，烟气在空椅旁散开，先给赌坊留个清静夜晚。",
+      "eventOverrides": [
+        {
+          "id": "sannyo:ev04",
+          "text": "新客摆出大赌客的架势，你听完开价才揭骰盅，让他看清这一桌的规矩。"
+        },
+        {
+          "id": "sannyo:ev05",
+          "text": "这一桌谈到最容易争吵的筹码，你让伙计换上热茶，烟管仍稳稳握在手里。"
+        },
+        {
+          "id": "sannyo:ev06",
+          "text": "你从新桌收到的庄钱里划出一份，交代伙计修门帘，别把它混进客人的筹码。"
+        },
+        {
+          "id": "sannyo:ev08",
+          "text": "你试了试新换的骰盅，手腕仍稳，只是落桌声与旧盅不同。"
+        }
+      ],
+      "reviewedEventIds": [
+        "sannyo:ev01",
+        "sannyo:ev02",
+        "sannyo:ev03",
+        "sannyo:ev04",
+        "sannyo:ev05",
+        "sannyo:ev06",
+        "sannyo:ev07",
+        "sannyo:ev08",
+        "sannyo:ev09",
+        "sannyo:ev10",
+        "sannyo:ev11",
+        "sannyo:ev12",
+        "sannyo:ev13",
+        "sannyo:ev14",
+        "sannyo:ev15",
+        "sannyo:ev16",
+        "sannyo:ev17",
+        "sannyo:ev18",
+        "sannyo:ev19",
+        "sannyo:ev20",
+        "sannyo:ev21",
+        "sannyo:ev22",
+        "sannyo:ev23",
+        "sannyo:ev24",
+        "sannyo:ev25",
+        "sannyo:ev26",
+        "sannyo:ev27",
+        "sannyo:ev28",
+        "sannyo:ev29",
+        "sannyo:ev30",
+        "sannyo:ev31",
+        "sannyo:ev32",
+        "sannyo:ev33",
+        "sannyo:ev34",
+        "sannyo:ev35",
+        "sannyo:ev36"
+      ]
+    }
+  },
+  {
+    "id": "misumaru",
+    "continuity": "windows",
+    "anchor": {
+      "label": "虹龙洞 Extra 争执以后",
+      "text": "你是制作勾玉与灵梦阴阳玉的神明，已察觉龙珠被大批开采。你与典、百百世起过争执，也借卡牌援助过调查者；续篇从整理矿材和旧玉开始。",
+      "age": {
+        "kind": "unknown",
+        "label": "已造神具，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "g18"
+        ],
+        "note": "神具与工艺已有历史，不给初次制玉或出生年份。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g18",
+        "title": "虹龙洞正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方虹龙洞/Omake",
+        "type": "primary-transcript",
+        "locator": "各角色设定，中日对照全文"
+      },
+      {
+        "id": "r18",
+        "title": "虹龙洞灵梦路线",
+        "url": "https://thbwiki.cc/游戏对话:东方虹龙洞/博丽灵梦",
+        "type": "primary-transcript",
+        "locator": "Stage 1–6 已读交涉，结局未统一"
+      },
+      {
+        "id": "ex18",
+        "title": "虹龙洞灵梦 Extra",
+        "url": "https://thbwiki.cc/游戏对话:东方虹龙洞/博丽灵梦_ExStory",
+        "type": "primary-transcript",
+        "locator": "Extra 全部对话"
+      }
+    ],
+    "history": [
+      {
+        "id": "misumaru:h01",
+        "label": "已知起点",
+        "work": "虹龙洞",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你以古老矿物制作勾玉，保留魂魄的部分信息；灵梦使用的阴阳玉也是你的作品。",
+        "sourceIds": [
+          "g18",
+          "r18"
+        ],
+        "note": ""
+      },
+      {
+        "id": "misumaru:h02",
+        "label": "洞窟调查",
+        "work": "虹龙洞",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你提醒灵梦洞内氧气稀薄，解释龙珠与卡牌的关系，引她离开深洞去山顶找大天狗。",
+        "sourceIds": [
+          "r18"
+        ],
+        "note": ""
+      },
+      {
+        "id": "misumaru:h03",
+        "label": "开采争执",
+        "work": "虹龙洞 Extra",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "典将你说成盗采者，百百世便要交战；你申明对龙珠的权利，把力量借给灵梦应战。",
+        "sourceIds": [
+          "ex18"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "虹龙洞",
+        "title": "虹龙洞",
+        "participation": "participant",
+        "historyIds": [
+          "misumaru:h01",
+          "misumaru:h02"
+        ],
+        "sourceIds": [
+          "g18",
+          "r18"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "虹龙洞 Extra",
+        "title": "虹龙洞 Extra",
+        "participation": "participant",
+        "historyIds": [
+          "misumaru:h03"
+        ],
+        "sourceIds": [
+          "ex18"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "矿洞的争执暂歇，你把几块仍能制玉的材料搬到干燥处，比对旧作品的痕迹。以后怎样取材、怎样修复，你想写得清楚些。",
+      "years": 40,
+      "goal": {
+        "name": "给矿玉留下来历",
+        "description": "记清可用矿玉的出处与耗损，让后来的制作者知道怎样珍惜材料。"
+      },
+      "milestones": [
+        {
+          "text": "你给矿玉系上标签，记下纹路、出处与取走的分量。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你分清旧损与新耗，修复的勾玉没有混入错认的记忆。",
+          "fail": "几块玉的记录对不上，你将它们另放一匣，暂不制器。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "pass": "你稳住手力与呼吸，细小磨面也能按次序完成。",
+          "fail": "连日加工让手上失准，你暂停这批工序，先保住原材。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          }
+        },
+        {
+          "text": "你把可用的玉与记录入匣，留出下一批材料的位置。",
+          "effects": {}
+        }
+      ],
+      "success": "来历和修复记录伴着矿玉保存下来，后来的制作者可以沿它们查问。你合上玉匣，这卷留下了仍能被珍惜的材料。",
+      "bittersweet": "有些玉修好，有些来历还在追查。你给未明部分留下空格，先传下可靠的记录，不急着让每块玉都发亮。",
+      "failure": "这批材料没照预想制成新器，你封存不能确认的玉。记录仍留在匣上，至少后来的人知道，哪些地方还不能轻用。",
+      "eventOverrides": [
+        {
+          "id": "misumaru:ev01",
+          "text": "你在新玉料里看见熟悉的光，沿纹路检查它适不适合这一批勾玉。"
+        },
+        {
+          "id": "misumaru:ev03",
+          "text": "新料比旧料滑，你换了握法，指尖将它稳在正确的磨面上。"
+        },
+        {
+          "id": "misumaru:ev16",
+          "text": "这一匣新玉绕成圈时，你逐个试过回应的光，暗下去的那枚仍留桌上检查。"
+        },
+        {
+          "id": "misumaru:ev26",
+          "text": "你从匣底取出先前留的玉，重新看过纹路，将尚可修复的部分记在标签上。"
+        }
+      ],
+      "reviewedEventIds": [
+        "misumaru:ev01",
+        "misumaru:ev02",
+        "misumaru:ev03",
+        "misumaru:ev04",
+        "misumaru:ev05",
+        "misumaru:ev06",
+        "misumaru:ev07",
+        "misumaru:ev08",
+        "misumaru:ev09",
+        "misumaru:ev10",
+        "misumaru:ev11",
+        "misumaru:ev12",
+        "misumaru:ev13",
+        "misumaru:ev14",
+        "misumaru:ev15",
+        "misumaru:ev16",
+        "misumaru:ev17",
+        "misumaru:ev18",
+        "misumaru:ev19",
+        "misumaru:ev20",
+        "misumaru:ev21",
+        "misumaru:ev22",
+        "misumaru:ev23",
+        "misumaru:ev24",
+        "misumaru:ev25",
+        "misumaru:ev26",
+        "misumaru:ev27",
+        "misumaru:ev28",
+        "misumaru:ev29",
+        "misumaru:ev30",
+        "misumaru:ev31",
+        "misumaru:ev32",
+        "misumaru:ev33",
+        "misumaru:ev34",
+        "misumaru:ev35",
+        "misumaru:ev36"
+      ]
+    }
+  },
+  {
+    "id": "tsukasa",
+    "continuity": "windows",
+    "anchor": {
+      "label": "兽王园委托闹剧以后",
+      "text": "你是熟悉大天狗生意的管狐，也在兽王园四处寻找获利机会。残无让你接近灵梦的委托成了被看穿的闹剧；这卷接着处理下一批消息与欠账。",
+      "age": {
+        "kind": "unknown",
+        "label": "已任助手与使者，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "fox"
+        ],
+        "note": "原设定给种族、能力与职务，无出生年。"
+      }
+    },
+    "sources": [
+      {
+        "id": "fox",
+        "title": "菅牧典官方设定转录",
+        "url": "https://thbwiki.cc/菅牧典#一设资料",
+        "type": "primary-transcript",
+        "locator": "只取一设资料块：虹龙洞设定与兽王园游戏说明"
+      },
+      {
+        "id": "ex18",
+        "title": "虹龙洞灵梦 Extra",
+        "url": "https://thbwiki.cc/游戏对话:东方虹龙洞/博丽灵梦_ExStory",
+        "type": "primary-transcript",
+        "locator": "Extra 全部对话"
+      },
+      {
+        "id": "t19",
+        "title": "兽王园菅牧典路线",
+        "url": "https://thbwiki.cc/游戏对话:东方兽王园/菅牧典",
+        "type": "primary-transcript",
+        "locator": "Stage 1–6、Ending 09 全文"
+      }
+    ],
+    "history": [
+      {
+        "id": "tsukasa:h01",
+        "label": "已知起点",
+        "work": "虹龙洞",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你替龙协调集市神与大蜈蚣，利用对方心中的弱点说话，让各方获利的同时卷进争执。",
+        "sourceIds": [
+          "fox"
+        ],
+        "note": ""
+      },
+      {
+        "id": "tsukasa:h02",
+        "label": "矿洞挑拨",
+        "work": "虹龙洞 Extra",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你说魅须丸与灵梦结伙盗采，催百百世动手，又想先将争执报给大天狗判断。",
+        "sourceIds": [
+          "ex18"
+        ],
+        "note": ""
+      },
+      {
+        "id": "tsukasa:h03",
+        "label": "遍访势力",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你的路线里，你向早苗提借神社的交易，被蓝引去地底，再穿梭于美天、早鬼与日狭美之间。",
+        "sourceIds": [
+          "t19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "tsukasa:h04",
+        "label": "残无委托",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "残无让你接近灵梦，灵梦识破来意；残无却将这次任务当成玩笑，你仍盘算怎样获利。",
+        "sourceIds": [
+          "t19"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "虹龙洞",
+        "title": "虹龙洞",
+        "participation": "participant",
+        "historyIds": [
+          "tsukasa:h01"
+        ],
+        "sourceIds": [
+          "fox"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "虹龙洞 Extra",
+        "title": "虹龙洞 Extra",
+        "participation": "participant",
+        "historyIds": [
+          "tsukasa:h02"
+        ],
+        "sourceIds": [
+          "ex18"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "兽王园",
+        "title": "兽王园",
+        "participation": "participant",
+        "historyIds": [
+          "tsukasa:h03",
+          "tsukasa:h04"
+        ],
+        "sourceIds": [
+          "t19"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "你从上一场闹剧抽身，袖中又多了几张委托单。每条消息都有价，但这次你想辨清谁肯付钱，谁只打算把麻烦推过来。",
+      "years": 30,
+      "goal": {
+        "name": "做成一笔明账",
+        "description": "用能核实的消息做成委托，收齐报酬，免得委托人转头一起追债。"
+      },
+      "milestones": [
+        {
+          "text": "你记下报酬与期限，先挑一件能查清来由的委托。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你分清真消息和试探，把可证明的一条交给出价者。",
+          "fail": "几条话彼此矛盾，你晚了交件，只好退回部分订金。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "fortune",
+            "min": 6
+          },
+          "pass": "这次按约结账，周转钱没有再被空许诺借走。",
+          "fail": "委托人改口压价，你收回未交的消息，账上添了争议。",
+          "passEffects": {
+            "fortune": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          }
+        },
+        {
+          "text": "你封好结清的账页，未了的单子另收着，再听下一场风声。",
+          "effects": {}
+        }
+      ],
+      "success": "你做成了一笔有凭据的委托，钱也落进袖中。下一位客人仍要小心你的笑，你却先把价钱和交件日期摆到桌上。",
+      "bittersweet": "一方付了账，另一方仍在争吵。你收好已证实的消息，绕开最麻烦的门口，带着还够用的周转钱继续跑腿。",
+      "failure": "委托没照预想结清，几条消息将追问引到面前。你暂收新单，先将说过的话逐句核对，找一个能脱身的价。",
+      "eventOverrides": [
+        {
+          "id": "tsukasa:ev17",
+          "text": "委托人临时取消任务，你将封好的消息收回袖里，改问另一家愿不愿意付这个价。"
+        }
+      ],
+      "reviewedEventIds": [
+        "tsukasa:ev01",
+        "tsukasa:ev02",
+        "tsukasa:ev03",
+        "tsukasa:ev04",
+        "tsukasa:ev05",
+        "tsukasa:ev06",
+        "tsukasa:ev07",
+        "tsukasa:ev08",
+        "tsukasa:ev09",
+        "tsukasa:ev10",
+        "tsukasa:ev11",
+        "tsukasa:ev12",
+        "tsukasa:ev13",
+        "tsukasa:ev14",
+        "tsukasa:ev15",
+        "tsukasa:ev16",
+        "tsukasa:ev17",
+        "tsukasa:ev18",
+        "tsukasa:ev19",
+        "tsukasa:ev20",
+        "tsukasa:ev21",
+        "tsukasa:ev22",
+        "tsukasa:ev23",
+        "tsukasa:ev24",
+        "tsukasa:ev25",
+        "tsukasa:ev26",
+        "tsukasa:ev27",
+        "tsukasa:ev28",
+        "tsukasa:ev29",
+        "tsukasa:ev30",
+        "tsukasa:ev31",
+        "tsukasa:ev32",
+        "tsukasa:ev33",
+        "tsukasa:ev34",
+        "tsukasa:ev35",
+        "tsukasa:ev36"
+      ]
+    }
+  },
+  {
+    "id": "megumu",
+    "continuity": "windows",
+    "anchor": {
+      "label": "卡牌市场建立以后",
+      "text": "你仍是妖怪之山的大天狗，已借龙珠与集市神推动能力卡牌交易。你能命令普通天狗，却不能让所有山中妖怪听从；续篇从维护生意和山路秩序开始。",
+      "age": {
+        "kind": "unknown",
+        "label": "已任大天狗，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "g18"
+        ],
+        "note": "原作无初学飞行与出生年龄。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g18",
+        "title": "虹龙洞正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方虹龙洞/Omake",
+        "type": "primary-transcript",
+        "locator": "各角色设定，中日对照全文"
+      },
+      {
+        "id": "r18",
+        "title": "虹龙洞灵梦路线",
+        "url": "https://thbwiki.cc/游戏对话:东方虹龙洞/博丽灵梦",
+        "type": "primary-transcript",
+        "locator": "Stage 1–6 已读交涉，结局未统一"
+      }
+    ],
+    "history": [
+      {
+        "id": "megumu:h01",
+        "label": "已知起点",
+        "work": "虹龙洞",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你统率普通天狗，熟识开矿的百百世，也让管狐典替你在集市神与矿工之间传话协调。",
+        "sourceIds": [
+          "g18"
+        ],
+        "note": ""
+      },
+      {
+        "id": "megumu:h02",
+        "label": "卡牌计划",
+        "work": "虹龙洞",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你借龙珠与千亦合作制卡，交易恢复她的力量；她壮大以后，合作也变成互相牵制。",
+        "sourceIds": [
+          "g18"
+        ],
+        "note": ""
+      },
+      {
+        "id": "megumu:h03",
+        "label": "山顶交涉",
+        "work": "虹龙洞",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "灵梦到山顶调查，你在交手后让她继续去见千亦，仍把人类的行动算进自己的安排。",
+        "sourceIds": [
+          "r18"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "虹龙洞",
+        "title": "虹龙洞",
+        "participation": "participant",
+        "historyIds": [
+          "megumu:h01",
+          "megumu:h02",
+          "megumu:h03"
+        ],
+        "sourceIds": [
+          "g18",
+          "r18"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "山顶又送来矿材与市场报告，你将各家争执铺在同一张山路图上。要让货物走得下去，这次还得分别问清他们的条件。",
+      "years": 40,
+      "goal": {
+        "name": "让山路照约通行",
+        "description": "与山中各方定下能遵守的通行与出货约定，减少生意带来的内耗。"
+      },
+      "milestones": [
+        {
+          "text": "你重画山路与货点，标清天狗命令能管到的地方。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你找出反复卡货的原因，分别写明各家要承担的事。",
+          "fail": "报告彼此遮掩，你停掉冲突的一段路，逐个查经手人。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "各家肯按约让路，巡查少了几次无用争执。",
+          "fail": "天狗照令巡查，别的势力仍不认约，你亲自出面交涉。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "你核完新一季路线，把认下的约定交给使者分送。",
+          "effects": {}
+        }
+      ],
+      "success": "山路终于能够按约出货，命令与交涉各有了去处。你看完最后一份报告，下一季可以沿着已经认下的旧约继续谈。",
+      "bittersweet": "巡查已经顺畅，几处货点仍起争执。你留下可执行的部分，将不肯认约的名字另记一页，生意先沿现有线路走。",
+      "failure": "各家没认下同一份约定，几条路只好暂封。你收回过宽的命令，让天狗守住能守的路，再重新计算这笔生意。",
+      "eventOverrides": [
+        {
+          "id": "megumu:ev01",
+          "text": "你巡过新划的夜航路线，停在山顶看星光，把看不清的山脊另记在图上。"
+        },
+        {
+          "id": "megumu:ev03",
+          "text": "雾遮住新路的树梢，你调整巡查高度，让跟随的天狗照新标记飞过去。"
+        },
+        {
+          "id": "megumu:ev06",
+          "text": "一位山中妖怪拒绝按天狗命令让路，你停下使者，改派人谈这一段路的条件。"
+        }
+      ],
+      "reviewedEventIds": [
+        "megumu:ev01",
+        "megumu:ev02",
+        "megumu:ev03",
+        "megumu:ev04",
+        "megumu:ev05",
+        "megumu:ev06",
+        "megumu:ev07",
+        "megumu:ev08",
+        "megumu:ev09",
+        "megumu:ev10",
+        "megumu:ev11",
+        "megumu:ev12",
+        "megumu:ev13",
+        "megumu:ev14",
+        "megumu:ev15",
+        "megumu:ev16",
+        "megumu:ev17",
+        "megumu:ev18",
+        "megumu:ev19",
+        "megumu:ev20",
+        "megumu:ev21",
+        "megumu:ev22",
+        "megumu:ev23",
+        "megumu:ev24",
+        "megumu:ev25",
+        "megumu:ev26",
+        "megumu:ev27",
+        "megumu:ev28",
+        "megumu:ev29",
+        "megumu:ev30",
+        "megumu:ev31",
+        "megumu:ev32",
+        "megumu:ev33",
+        "megumu:ev34",
+        "megumu:ev35",
+        "megumu:ev36"
+      ]
+    }
+  },
+  {
+    "id": "chimata",
+    "continuity": "windows",
+    "anchor": {
+      "label": "黑市调查以后",
+      "text": "你已借能力卡牌交易恢复集市神的力量。黑市一度避开你的控制，你与荷取合作，托魔理沙查高岭的安排；续篇仍从守护交换本身的神明写起。",
+      "age": {
+        "kind": "unknown",
+        "label": "已复兴的集市神，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "g18"
+        ],
+        "note": "集市衰落与神力恢复是相对阶段，不是出生时钟。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g18",
+        "title": "虹龙洞正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方虹龙洞/Omake",
+        "type": "primary-transcript",
+        "locator": "各角色设定，中日对照全文"
+      },
+      {
+        "id": "r18",
+        "title": "虹龙洞灵梦路线",
+        "url": "https://thbwiki.cc/游戏对话:东方虹龙洞/博丽灵梦",
+        "type": "primary-transcript",
+        "locator": "Stage 1–6 已读交涉，结局未统一"
+      },
+      {
+        "id": "black",
+        "title": "弹幕狂们的黑市魔理沙剧情",
+        "url": "https://thbwiki.cc/游戏对话:弹幕狂们的黑市/雾雨魔理沙",
+        "type": "primary-transcript",
+        "locator": "Tutorial、End、4th、6th 全部剧情"
+      }
+    ],
+    "history": [
+      {
+        "id": "chimata:h01",
+        "label": "衰落与复兴",
+        "work": "虹龙洞",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "集市衰落曾让你失去力量，你接受龙的卡牌计划，经正当买卖的交换又让你恢复存在感。",
+        "sourceIds": [
+          "g18"
+        ],
+        "note": ""
+      },
+      {
+        "id": "chimata:h02",
+        "label": "月虹市场",
+        "work": "虹龙洞",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你知道大天狗想借你的力量，面对追来的调查者仍坚持卡牌必须经买卖，才能发挥效力。",
+        "sourceIds": [
+          "r18"
+        ],
+        "note": ""
+      },
+      {
+        "id": "chimata:h03",
+        "label": "黑市调查",
+        "work": "黑市",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你考验魔理沙不用黑市的实力，指出高岭控制价格，再引她去找荷取，设法夺回市场管理。",
+        "sourceIds": [
+          "black"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "虹龙洞",
+        "title": "虹龙洞",
+        "participation": "participant",
+        "historyIds": [
+          "chimata:h01",
+          "chimata:h02"
+        ],
+        "sourceIds": [
+          "g18",
+          "r18"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "黑市",
+        "title": "黑市",
+        "participation": "participant",
+        "historyIds": [
+          "chimata:h03"
+        ],
+        "sourceIds": [
+          "black"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "黑市的风声还在，你选了一处愿意公开摆摊的空地，请双方面对面谈价。你想让货物换了主人以后，仍有人愿意回来。",
+      "years": 40,
+      "goal": {
+        "name": "让交换得到承认",
+        "description": "让新集市的买卖得到双方承认，留下可继续开市的规矩与收入。"
+      },
+      "milestones": [
+        {
+          "text": "你划出新摊位，先请卖家说清手里是什么货。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "双方弄清货物与价钱，成交后的争议也有了可查说法。",
+          "fail": "几件货来历不明，你暂缓交易，请摊主先补应答。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "fortune",
+            "min": 6
+          },
+          "pass": "收入够付场地与修缮，下一次开市有了本钱。",
+          "fail": "成交虽多，场地钱却不足；你缩小摊位，先保住开市日。",
+          "passEffects": {
+            "fortune": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          }
+        },
+        {
+          "text": "最后一件货被带走，你将下一次开市日期写上牌子。",
+          "effects": {}
+        }
+      ],
+      "success": "新集市按约继续开着，货物与价钱都有人说清。你站在空下来的摊位间，等待下一批愿意亲自交换的人走进来。",
+      "bittersweet": "一些摊位留下，一些买卖仍要核问。你不急着铺满空地，只把已经认下的规矩写好，留给下一回开市的客人。",
+      "failure": "这处集市没能维持原先规模，你将摊位并到小场地。未了的争执还在处理，交换的灯却没有因此全都熄掉。",
+      "eventOverrides": [
+        {
+          "id": "chimata:ev01",
+          "text": "你看着新摊主完成一笔交易，试过归属的变化后，请双方把价钱写在同一张收据上。"
+        },
+        {
+          "id": "chimata:ev07",
+          "text": "你从这一季收入留下一笔开市钱，修缮和下次牌告都从这里支出。"
+        }
+      ],
+      "reviewedEventIds": [
+        "chimata:ev01",
+        "chimata:ev02",
+        "chimata:ev03",
+        "chimata:ev04",
+        "chimata:ev05",
+        "chimata:ev06",
+        "chimata:ev07",
+        "chimata:ev08",
+        "chimata:ev09",
+        "chimata:ev10",
+        "chimata:ev11",
+        "chimata:ev12",
+        "chimata:ev13",
+        "chimata:ev14",
+        "chimata:ev15",
+        "chimata:ev16",
+        "chimata:ev17",
+        "chimata:ev18",
+        "chimata:ev19",
+        "chimata:ev20",
+        "chimata:ev21",
+        "chimata:ev22",
+        "chimata:ev23",
+        "chimata:ev24",
+        "chimata:ev25",
+        "chimata:ev26",
+        "chimata:ev27",
+        "chimata:ev28",
+        "chimata:ev29",
+        "chimata:ev30",
+        "chimata:ev31",
+        "chimata:ev32",
+        "chimata:ev33",
+        "chimata:ev34",
+        "chimata:ev35",
+        "chimata:ev36"
+      ]
+    }
+  },
+  {
+    "id": "momoyo",
+    "continuity": "windows",
+    "anchor": {
+      "label": "虹龙洞 Extra 战斗以后",
+      "text": "你仍在虹龙洞深处开采龙珠，是与大天狗相熟的大蜈蚣。典将来访者说成盗采者，你因此打过一场；续篇从已有矿道、工人和矿材的负责人写起。",
+      "age": {
+        "kind": "unknown",
+        "label": "采矿负责人，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "g18"
+        ],
+        "note": "噬龙称号不能推出真实吞龙或实际年龄，设定明确无人确认。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g18",
+        "title": "虹龙洞正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方虹龙洞/Omake",
+        "type": "primary-transcript",
+        "locator": "各角色设定，中日对照全文"
+      },
+      {
+        "id": "ex18",
+        "title": "虹龙洞灵梦 Extra",
+        "url": "https://thbwiki.cc/游戏对话:东方虹龙洞/博丽灵梦_ExStory",
+        "type": "primary-transcript",
+        "locator": "Extra 全部对话"
+      }
+    ],
+    "history": [
+      {
+        "id": "momoyo:h01",
+        "label": "已知起点",
+        "work": "虹龙洞",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你以噬龙闻名，也能食用龙珠，与龙熟识并为她开采；传闻是否真能吞龙，仍无人确认。",
+        "sourceIds": [
+          "g18"
+        ],
+        "note": ""
+      },
+      {
+        "id": "momoyo:h02",
+        "label": "矿道交战",
+        "work": "虹龙洞 Extra",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "典报有盗采者，你不等大天狗裁断便与灵梦交手；战后欣赏她好战，还想再和她打一场。",
+        "sourceIds": [
+          "ex18"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "虹龙洞",
+        "title": "虹龙洞",
+        "participation": "participant",
+        "historyIds": [
+          "momoyo:h01"
+        ],
+        "sourceIds": [
+          "g18"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "虹龙洞 Extra",
+        "title": "虹龙洞 Extra",
+        "participation": "participant",
+        "historyIds": [
+          "momoyo:h02"
+        ],
+        "sourceIds": [
+          "ex18"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "支洞越来越窄，你把这次要开的矿道画在石壁上，让工人先看退路。你仍想挖到好材料，也想让每车货都能原路运回。",
+      "years": 40,
+      "goal": {
+        "name": "把新矿道带回去",
+        "description": "带工人完成可反复走的矿道，弄清矿层与塌方边界再继续开采。"
+      },
+      "milestones": [
+        {
+          "text": "你在支洞口留退路标记，移走挡回程的松石。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "pass": "你撑住最难的一段工序，工人按次序将碎料运出去。",
+          "fail": "岩层比预料松，你收回工具，先重新支好通道。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你辨清能采的矿层，将易坍塌边界写进矿道图。",
+          "fail": "几处岩纹看不明白，你封住支路，另选材料试。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "text": "你领最后一车矿材回到洞口，将新路线留在石板上。",
+          "effects": {}
+        }
+      ],
+      "success": "新矿道能按图来回，工人知道哪里能采、哪里该停。你清点完工具，又咬下一块龙珠，这卷留下了一条走得通的路。",
+      "bittersweet": "一段支洞打通，另一段仍封着。你将可靠矿层交给工人，自己守着尚未看明白的岩壁，下一回再试这口硬石。",
+      "failure": "支洞没能稳定下来，你领工人退回旧路，封起松动洞口。好材料仍在里面，这一次先将人、工具与旧路保住。",
+      "eventOverrides": [
+        {
+          "id": "momoyo:ev03",
+          "text": "你侧身钻进新探的窄支洞，先量回程空间，再在洞口留下标记。"
+        },
+        {
+          "id": "momoyo:ev07",
+          "text": "你把新支洞的碎料装进空篓，带回洞口分辨能用的矿质。"
+        },
+        {
+          "id": "momoyo:ev08",
+          "text": "买家给这批石粉开了新价，你挑一撮看成色，另写价目给工人。"
+        }
+      ],
+      "reviewedEventIds": [
+        "momoyo:ev01",
+        "momoyo:ev02",
+        "momoyo:ev03",
+        "momoyo:ev04",
+        "momoyo:ev05",
+        "momoyo:ev06",
+        "momoyo:ev07",
+        "momoyo:ev08",
+        "momoyo:ev09",
+        "momoyo:ev10",
+        "momoyo:ev11",
+        "momoyo:ev12",
+        "momoyo:ev13",
+        "momoyo:ev14",
+        "momoyo:ev15",
+        "momoyo:ev16",
+        "momoyo:ev17",
+        "momoyo:ev18",
+        "momoyo:ev19",
+        "momoyo:ev20",
+        "momoyo:ev21",
+        "momoyo:ev22",
+        "momoyo:ev23",
+        "momoyo:ev24",
+        "momoyo:ev25",
+        "momoyo:ev26",
+        "momoyo:ev27",
+        "momoyo:ev28",
+        "momoyo:ev29",
+        "momoyo:ev30",
+        "momoyo:ev31",
+        "momoyo:ev32",
+        "momoyo:ev33",
+        "momoyo:ev34",
+        "momoyo:ev35",
+        "momoyo:ev36"
+      ]
+    }
+  },
+  {
+    "id": "biten",
+    "continuity": "windows",
+    "anchor": {
+      "label": "兽王园势力分配以后",
+      "text": "你是鬼杰组在地上的游击队员，掌管山间猿群，也愿意以悟空转世自称。你奉八千慧之命迎击过来访者；续篇从已有法器和组织关系的美天写起。",
+      "age": {
+        "kind": "unknown",
+        "label": "已成猿神，实际年龄不详",
+        "years": null,
+        "sourceIds": [
+          "g19"
+        ],
+        "note": "最近觉醒不等于出生；悟空转世是听信的说法。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g19",
+        "title": "兽王园正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方兽王园/Omake",
+        "type": "primary-transcript",
+        "locator": "五名新角色设定全文"
+      },
+      {
+        "id": "b19",
+        "title": "兽王园孙美天路线",
+        "url": "https://thbwiki.cc/游戏对话:东方兽王园/孙美天",
+        "type": "primary-transcript",
+        "locator": "本人玩家路线Stage 1–6及Ending 14全文；不代表其他自机或对手路线"
+      }
+    ],
+    "history": [
+      {
+        "id": "biten:h01",
+        "label": "觉醒与加入",
+        "work": "兽王园",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你原是猴子，吞食山姥圣域的幽灵后有了鬼的身体，经残无安排结识八千慧，加入鬼杰组。",
+        "sourceIds": [
+          "g19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "biten:h02",
+        "label": "自称转世",
+        "work": "兽王园",
+        "kind": "report",
+        "certainty": "reported",
+        "text": "你相信自己是悟空转世，以名号振奋猿群；原文交代这是你接受的解释，没有确认前世确是悟空。",
+        "sourceIds": [
+          "g19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "biten:h03",
+        "label": "地上迎击",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你的路线里，你守山麓迎击来者，与早苗谈朋友，又经日狭美指引去见萃香，听到对局势的另一种说法。",
+        "sourceIds": [
+          "b19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "biten:h04",
+        "label": "结局14·重回鬼杰组",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你的路线结局里，你向灵梦讲起残无的安排，仍然崇拜她；回畜生界见八千慧消沉后，你感到内疚，自愿重新追随鬼杰组。",
+        "sourceIds": [
+          "b19"
+        ],
+        "note": "回去是美天自己的决定，不是残无另一次命令；不合并其他玩家结局。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "兽王园",
+        "title": "兽王园",
+        "participation": "participant",
+        "historyIds": [
+          "biten:h01",
+          "biten:h02",
+          "biten:h03",
+          "biten:h04"
+        ],
+        "sourceIds": [
+          "g19",
+          "b19"
+        ],
+        "note": "设定文档与本人Stage 1–6、Ending 14已读；其余自机路线未合并，玩家经过均标route-dependent。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "战后的山路又有新队伍经过，你召回分散的猿群，先查清他们从哪条路回来。接下来的日子，你想试着领好这支已有的队伍。",
+      "years": 30,
+      "goal": {
+        "name": "让猿群有安稳归路",
+        "description": "带猿群认清回家的路线，遇强敌时也不因威名贸然冲散。"
+      },
+      "milestones": [
+        {
+          "text": "你带猿群走过归路，给慢走的同伴也留了标记。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你分清威吓与来犯，指挥猿群避开不值得打的一仗。",
+          "fail": "你被挑衅引得追远，回来发现队伍散了，只好逐处叫归队。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "猿群愿按信号行动，也有人回头去接落后的同伴。",
+          "fail": "你喊得响，队伍却各跑各的；你先陪胆小的同伴走熟路。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "你看着这一队各自回住处，把法器靠在树边，山路暂时静下来。",
+          "effects": {}
+        }
+      ],
+      "success": "猿群认得回家的路，也认得你的信号。你仍高声自报威名，却肯先清点同伴再追敌，这卷的山林少了几个失散夜晚。",
+      "bittersweet": "猿群记住一部分路线，遇强敌仍会散开。你留在易走错的岔口，先领回眼前几只，明天再陪另一队走一遍。",
+      "failure": "威名没把队伍聚稳，追逐耗掉同伴的信任。你收起远征打算，留在山路逐个找回他们，从最短的归途重新带起。",
+      "eventOverrides": [
+        {
+          "id": "biten:ev02",
+          "text": "你挑根顺手木棒试新练法，出战的法器仍留身旁，练完就一同收好。"
+        },
+        {
+          "id": "biten:ev09",
+          "text": "遇上新对手，你把惯常威名报得更响，回头看猿群也跟着学你的口气。"
+        },
+        {
+          "id": "biten:ev27",
+          "text": "你听见林外有人喊这卷新得的绰号，先应一声，再回头数跟来的猿群。"
+        }
+      ],
+      "reviewedEventIds": [
+        "biten:ev01",
+        "biten:ev02",
+        "biten:ev03",
+        "biten:ev04",
+        "biten:ev05",
+        "biten:ev06",
+        "biten:ev07",
+        "biten:ev08",
+        "biten:ev09",
+        "biten:ev10",
+        "biten:ev11",
+        "biten:ev12",
+        "biten:ev13",
+        "biten:ev14",
+        "biten:ev15",
+        "biten:ev16",
+        "biten:ev17",
+        "biten:ev18",
+        "biten:ev19",
+        "biten:ev20",
+        "biten:ev21",
+        "biten:ev22",
+        "biten:ev23",
+        "biten:ev24",
+        "biten:ev25",
+        "biten:ev26",
+        "biten:ev27",
+        "biten:ev28",
+        "biten:ev29",
+        "biten:ev30",
+        "biten:ev31",
+        "biten:ev32",
+        "biten:ev33",
+        "biten:ev34",
+        "biten:ev35",
+        "biten:ev36"
+      ]
+    }
+  },
+  {
+    "id": "enoko",
+    "continuity": "windows",
+    "anchor": {
+      "label": "萃香说明不死因缘以后",
+      "text": "你是不死山犬，已在魔法森林活过数百年，也担任劲牙组地上分队队长。宝玉与残无让你卷进地狱安排；续篇接着写带队和布置陷阱的生活。",
+      "age": {
+        "kind": "unknown",
+        "label": "已活数百年的不死山犬",
+        "years": null,
+        "sourceIds": [
+          "g19",
+          "e19"
+        ],
+        "note": "自身路线萃香明确说吃残无肉后的诅咒持续数百年，没有具体出生年。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g19",
+        "title": "兽王园正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方兽王园/Omake",
+        "type": "primary-transcript",
+        "locator": "五名新角色设定全文"
+      },
+      {
+        "id": "e19",
+        "title": "兽王园三头慧之子路线",
+        "url": "https://thbwiki.cc/游戏对话:东方兽王园/三头慧之子",
+        "type": "primary-transcript",
+        "locator": "本人玩家路线Stage 1–6及Ending 15全文；不代表其他自机或对手路线"
+      }
+    ],
+    "history": [
+      {
+        "id": "enoko:h01",
+        "label": "不死因缘",
+        "work": "兽王园",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你在残无还是人类时吃过她的肉，随后长久不死；再次听到她的声音，得到宝玉，拿起时污秽被净化，能力觉醒。",
+        "sourceIds": [
+          "g19",
+          "e19"
+        ],
+        "note": "Omake先写声音要求吃宝玉，再写手にしたとたん发生净化与觉醒；取得后的变化不证明已吞食。Stage4仍颈挂宝玉。"
+      },
+      {
+        "id": "enoko:h02",
+        "label": "组织与宝玉",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "早鬼将你纳入劲牙组，宝玉净化生命的力量又连到地狱安排；你仍以山犬之身带着捕兽夹行动。",
+        "sourceIds": [
+          "g19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "enoko:h03",
+        "label": "追问缘由",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你的路线里，传送将你带向地狱，萃香说起数百年前吃肉的因缘，你把眼前宝玉与旧事联系起来。",
+        "sourceIds": [
+          "e19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "enoko:h04",
+        "label": "结局15·托付宝玉",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你的路线结局里，你把宝玉借给魔理沙研究，盼摆脱残无的诅咒；丢弃的宝玉仍会返回，魔理沙几次被送进地狱也不肯停手。",
+        "sourceIds": [
+          "e19"
+        ],
+        "note": "Stage3答应事后借出，Ending15实际托付研究；诅咒并未在此解除。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "兽王园",
+        "title": "兽王园",
+        "participation": "participant",
+        "historyIds": [
+          "enoko:h01",
+          "enoko:h02",
+          "enoko:h03",
+          "enoko:h04"
+        ],
+        "sourceIds": [
+          "g19",
+          "e19"
+        ],
+        "note": "设定文档与本人Stage 1–6、Ending 15已读；其余自机路线未合并，玩家经过均标route-dependent。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "森林换过几轮树叶，你仍在旧道巡查，拆下坏掉的捕兽夹。你想留出一条不用猜测的归路，让陷阱只等该等的猎物。",
+      "years": 60,
+      "goal": {
+        "name": "留下一条安全林路",
+        "description": "区分猎路与归路，让林中队伍不会再踏进自己布的夹口。"
+      },
+      "milestones": [
+        {
+          "text": "你沿归路查夹口，在人会走的地方先挂醒目路标。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你看出陷阱遮挡的死角，挪开夹口，整段路都能看清。",
+          "fail": "草长得太快，你漏看夹口，只好拆掉这一段重新布置。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "pass": "你走过最难一段，夹口与身体的动作始终分得清楚。",
+          "fail": "反复试夹让动作越来越乱，你收起机关，先留普通标记。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          }
+        },
+        {
+          "text": "你收回最后一只坏夹，听队伍走过归路，林中只剩清楚脚步。",
+          "effects": {}
+        }
+      ],
+      "success": "归路与猎路分开，后来走进森林的队伍能循标记找到出口。你依旧活着、依旧巡林，这一卷留下了能够放心走的路。",
+      "bittersweet": "几段路已辨得清楚，深处陷阱仍要亲自检查。你不怕等待，先把能用的路标留好，树叶再落几回也能继续修补。",
+      "failure": "这次布置没让队伍放心，你拆掉危险的一片夹口，守在旧路旁。长久生命没有替你做好这件事，下次仍得亲手重来。",
+      "eventOverrides": [
+        {
+          "id": "enoko:ev01",
+          "text": "你舔过刚恢复的爪边，伤口已经合拢；看见旧林地时，仍想起从前挨过那一下。"
+        },
+        {
+          "id": "enoko:ev03",
+          "text": "你将新换的捕兽夹放到草窝旁，试松紧，再沿熟悉路径避开夹口。"
+        },
+        {
+          "id": "enoko:ev15",
+          "text": "冷风让你缩起身子，你抖开毛，旧日受伤的记忆浮上来；伤处却早已重新长好。"
+        },
+        {
+          "id": "enoko:ev28",
+          "text": "你按记住的地形回旧猎路，停在曾受伤的地方，重新看看这一段夹口。"
+        }
+      ],
+      "reviewedEventIds": [
+        "enoko:ev01",
+        "enoko:ev02",
+        "enoko:ev03",
+        "enoko:ev04",
+        "enoko:ev05",
+        "enoko:ev06",
+        "enoko:ev07",
+        "enoko:ev08",
+        "enoko:ev09",
+        "enoko:ev10",
+        "enoko:ev11",
+        "enoko:ev12",
+        "enoko:ev13",
+        "enoko:ev14",
+        "enoko:ev15",
+        "enoko:ev16",
+        "enoko:ev17",
+        "enoko:ev18",
+        "enoko:ev19",
+        "enoko:ev20",
+        "enoko:ev21",
+        "enoko:ev22",
+        "enoko:ev23",
+        "enoko:ev24",
+        "enoko:ev25",
+        "enoko:ev26",
+        "enoko:ev27",
+        "enoko:ev28",
+        "enoko:ev29",
+        "enoko:ev30",
+        "enoko:ev31",
+        "enoko:ev32",
+        "enoko:ev33",
+        "enoko:ev34",
+        "enoko:ev35",
+        "enoko:ev36"
+      ]
+    }
+  },
+  {
+    "id": "chiyari",
+    "continuity": "windows",
+    "anchor": {
+      "label": "兽王园地狱交涉以后",
+      "text": "你是旧血池地狱的天火人，仍与刚欲同盟来往，也认识残无。你起初不满卓柏卡布拉这个叫法，后来也考虑在地上沿用；此后继续与血火和地狱的旧识为伴。",
+      "age": {
+        "kind": "unknown",
+        "label": "旧血池已有长期生活，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "g19"
+        ],
+        "note": "设定说在尤魔来前已生活很久，大貉目击只是传闻。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g19",
+        "title": "兽王园正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方兽王园/Omake",
+        "type": "primary-transcript",
+        "locator": "五名新角色设定全文"
+      },
+      {
+        "id": "c19",
+        "title": "兽王园天火人血枪路线",
+        "url": "https://thbwiki.cc/游戏对话:东方兽王园/天火人血枪",
+        "type": "primary-transcript",
+        "locator": "本人玩家路线Stage 1–6及Ending 16全文；不代表其他自机或对手路线"
+      }
+    ],
+    "history": [
+      {
+        "id": "chiyari:h01",
+        "label": "已知起点",
+        "work": "兽王园",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你在旧血池用血与怨恨养火，早于尤魔到来就已久居；有人说你是大貉，原文也对目击存疑。",
+        "sourceIds": [
+          "g19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "chiyari:h02",
+        "label": "同盟来往",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你加入刚欲同盟，又与旧识残无保持联系，还向往她身边更浓的怨恨，并非只听一个首领驱使。",
+        "sourceIds": [
+          "g19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "chiyari:h03",
+        "label": "传送圈",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你用传送陷阱捉弄过猯藏，却不能借它亲自前往新地狱；经燐提醒走正规通道后，你见到向导日狭美。",
+        "sourceIds": [
+          "c19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "chiyari:h04",
+        "label": "结局16·地上名号",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你的路线结局里，你在神社听说卓柏卡布拉遭人悬赏，觉得沿用这个叫法也很有趣；地上的目击传闻热闹一阵，又渐渐平息。",
+        "sourceIds": [
+          "c19"
+        ],
+        "note": "沿用外来称号不等于原作确认妖怪种族改变。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "兽王园",
+        "title": "兽王园",
+        "participation": "participant",
+        "historyIds": [
+          "chiyari:h01",
+          "chiyari:h02",
+          "chiyari:h03",
+          "chiyari:h04"
+        ],
+        "sourceIds": [
+          "g19",
+          "c19"
+        ],
+        "note": "设定文档与本人Stage 1–6、Ending 16已读；其余自机路线未合并，玩家经过均标route-dependent。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "旧血池的火色又变，你蹲在岸边辨认是哪股血流换了来处。以后的日子，你想留出一块既能养火、又能让来客站稳的地方。",
+      "years": 40,
+      "goal": {
+        "name": "给血火划定边界",
+        "description": "找出能稳定燃烧而不蔓延的池岸，让来访者知道可以站在哪里。"
+      },
+      "milestones": [
+        {
+          "text": "你分开变色血流，引到岸边，先看火焰沿哪条裂缝跑。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你辨清怨恨与杂质，火停在池边，没有越过石线。",
+          "fail": "几股血流混在一起，火沿裂缝窜远，你另选岸地再试。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "pass": "你守住这一轮燃烧节奏，来客走后仍能按原样收火。",
+          "fail": "火色忽明忽暗，你退回旧池，让身体与火焰先缓过来。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          }
+        },
+        {
+          "text": "你在稳妥池沿留石线，坐下听血流，等下一次来客。",
+          "effects": {}
+        }
+      ],
+      "success": "池岸能够稳稳养火，来客也知道站在哪边。你坐回石线旁，听见陌生异名时仍不耐烦，却不用每回先扑灭乱火。",
+      "bittersweet": "一股火已经守住，旁边血流还在变。你在能停留的地方多放几块石，先与来客坐完这一回，难辨的那股以后再试。",
+      "failure": "新池沿没能稳定下来，你封住引流口，退回旧血池。这一卷没留下新场地，仍留下几处已知不能靠近的裂缝。",
+      "eventOverrides": [
+        {
+          "id": "chiyari:ev03",
+          "text": "你试着收拢新血流燃起的火，惯常手法这回慢了半拍；你盯住火色，再调了一次。"
+        }
+      ],
+      "reviewedEventIds": [
+        "chiyari:ev01",
+        "chiyari:ev02",
+        "chiyari:ev03",
+        "chiyari:ev04",
+        "chiyari:ev05",
+        "chiyari:ev06",
+        "chiyari:ev07",
+        "chiyari:ev08",
+        "chiyari:ev09",
+        "chiyari:ev10",
+        "chiyari:ev11",
+        "chiyari:ev12",
+        "chiyari:ev13",
+        "chiyari:ev14",
+        "chiyari:ev15",
+        "chiyari:ev16",
+        "chiyari:ev17",
+        "chiyari:ev18",
+        "chiyari:ev19",
+        "chiyari:ev20",
+        "chiyari:ev21",
+        "chiyari:ev22",
+        "chiyari:ev23",
+        "chiyari:ev24",
+        "chiyari:ev25",
+        "chiyari:ev26",
+        "chiyari:ev27",
+        "chiyari:ev28",
+        "chiyari:ev29",
+        "chiyari:ev30",
+        "chiyari:ev31",
+        "chiyari:ev32",
+        "chiyari:ev33",
+        "chiyari:ev34",
+        "chiyari:ev35",
+        "chiyari:ev36"
+      ]
+    }
+  },
+  {
+    "id": "hisami",
+    "continuity": "windows",
+    "anchor": {
+      "label": "兽王园接引任务以后",
+      "text": "你仍在地狱入口接引亡者，按人数领取报酬，也想得到残无注意。你带过来访者去见她，也因自己的期待改过安排；续篇从这份差事继续。",
+      "age": {
+        "kind": "unknown",
+        "label": "已任黄泉接引，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "g19"
+        ],
+        "note": "无幼年或学徒年龄；敬慕残无不等于双方恋爱。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g19",
+        "title": "兽王园正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方兽王园/Omake",
+        "type": "primary-transcript",
+        "locator": "五名新角色设定全文"
+      },
+      {
+        "id": "h19",
+        "title": "兽王园豫母都日狭美路线",
+        "url": "https://thbwiki.cc/游戏对话:东方兽王园/豫母都日狭美",
+        "type": "primary-transcript",
+        "locator": "本人玩家路线Stage 1–6及Ending 17全文；不代表其他自机或对手路线"
+      }
+    ],
+    "history": [
+      {
+        "id": "hisami:h01",
+        "label": "已知起点",
+        "work": "兽王园",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你以无法逃脱的追赶将目标带进地狱，按人数领取报酬，也把一份分给来客，因此常能超额完成差事。",
+        "sourceIds": [
+          "g19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "hisami:h02",
+        "label": "敬慕残无",
+        "work": "兽王园",
+        "kind": "report",
+        "certainty": "reported",
+        "text": "你仰慕残无，期待她注意甚至责备自己；设定只写你的期待，没有确认对方给过同样的感情回应。",
+        "sourceIds": [
+          "g19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "hisami:h03",
+        "label": "接引与改道",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你的路线里，你接引慧之子与血枪，听萃香说合作危险；见残无时仍盼因偏离指示得到责备。",
+        "sourceIds": [
+          "h19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "hisami:h04",
+        "label": "结局17·宴会邀请",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你的路线结局里，你在地狱宴会外羡慕众人能与残无喝酒；终于等到她叫自己进来，你欣喜地接受邀请。",
+        "sourceIds": [
+          "h19"
+        ],
+        "note": "邀请赴宴并未确认残无回应日狭美的恋爱期待。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "兽王园",
+        "title": "兽王园",
+        "participation": "participant",
+        "historyIds": [
+          "hisami:h01",
+          "hisami:h02",
+          "hisami:h03",
+          "hisami:h04"
+        ],
+        "sourceIds": [
+          "g19",
+          "h19"
+        ],
+        "note": "设定文档与本人Stage 1–6、Ending 17已读；其余自机路线未合并，玩家经过均标route-dependent。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "入口又积下一批接引单，你将名单、道路与许可一一对好。你仍盼残无看见自己，也想让这次交件少些擅自改道的波折。",
+      "years": 40,
+      "goal": {
+        "name": "做完一次清楚接引",
+        "description": "按约把亡者送到应去的地方，分清差事所需与自己想得到的关注。"
+      },
+      "milestones": [
+        {
+          "text": "你核对姓名与路口，给有返程许可的使者留出旁门。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "亡者肯听路程说明，按约抵达，名单不用再靠反复追赶补齐。",
+          "fail": "几人被你的话吓得躲开，你去追赶，约好的时间又迟了些。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你分清公事与私愿，按原路线把名单交进地狱。",
+          "fail": "想到可能受责备，你又改了路口，回来得补写整份说明。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "text": "你将交清的单子收好，望向地狱深处，再等下一批名单。",
+          "effects": {}
+        }
+      ],
+      "success": "这批亡者按约抵达，接引单的路口都能查清。残无是否留意由她自己决定，你先把完成的差事放好，再等有人叫你的名。",
+      "bittersweet": "一段接引已完成，另一段仍要补交。你将想受关注的念头另放心里，重新按名单找人，地狱入口的路仍要走下去。",
+      "failure": "接引被自己的期待绕乱，几份名单退回重办。你停在路口读完每条指示，先将应送的亡者领回正确方向。",
+      "eventOverrides": [
+        {
+          "id": "hisami:ev01",
+          "text": "新接引对象来到路口，你核过名单才伸手，说明这一程该往哪里走。"
+        },
+        {
+          "id": "hisami:ev03",
+          "text": "你查看新返程许可，给能离开的使者指出旁门；未经许可的亡者仍不能从这里回去。"
+        },
+        {
+          "id": "hisami:ev12",
+          "text": "地狱入口换了标记，你沿熟悉的路核过新岔口，把名单分到正确方向。"
+        }
+      ],
+      "reviewedEventIds": [
+        "hisami:ev01",
+        "hisami:ev02",
+        "hisami:ev03",
+        "hisami:ev04",
+        "hisami:ev05",
+        "hisami:ev06",
+        "hisami:ev07",
+        "hisami:ev08",
+        "hisami:ev09",
+        "hisami:ev10",
+        "hisami:ev11",
+        "hisami:ev12",
+        "hisami:ev13",
+        "hisami:ev14",
+        "hisami:ev15",
+        "hisami:ev16",
+        "hisami:ev17",
+        "hisami:ev18",
+        "hisami:ev19",
+        "hisami:ev20",
+        "hisami:ev21",
+        "hisami:ev22",
+        "hisami:ev23",
+        "hisami:ev24",
+        "hisami:ev25",
+        "hisami:ev26",
+        "hisami:ev27",
+        "hisami:ev28",
+        "hisami:ev29",
+        "hisami:ev30",
+        "hisami:ev31",
+        "hisami:ev32",
+        "hisami:ev33",
+        "hisami:ev34",
+        "hisami:ev35",
+        "hisami:ev36"
+      ]
+    }
+  },
+  {
+    "id": "zanmu",
+    "continuity": "windows",
+    "anchor": {
+      "label": "兽王园安排以后",
+      "text": "你已由乱世僧人变为地狱之鬼，也在地狱迁移和地上势力分配中作过安排。你把解决地上纷争的机会留给灵梦；续篇从这位幕后安排者之后的选择写起。",
+      "age": {
+        "kind": "unknown",
+        "label": "战国时代已为僧人，岁数不详",
+        "years": null,
+        "sourceIds": [
+          "g19"
+        ],
+        "note": "历史时期与数百年经营可证，不按出版年份推当前年龄。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g19",
+        "title": "兽王园正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方兽王园/Omake",
+        "type": "primary-transcript",
+        "locator": "五名新角色设定全文"
+      },
+      {
+        "id": "z19",
+        "title": "兽王园日白残无路线",
+        "url": "https://thbwiki.cc/游戏对话:东方兽王园/日白残无",
+        "type": "primary-transcript",
+        "locator": "本人玩家路线Stage 1–6及Ending 19全文；不代表其他自机或对手路线"
+      }
+    ],
+    "history": [
+      {
+        "id": "zanmu:h01",
+        "label": "由人入鬼",
+        "work": "兽王园",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你在战国乱世吸收幽灵与动物灵，放弃人类之身成为鬼，自愿进地狱，逐渐赢得其他鬼的服从。",
+        "sourceIds": [
+          "g19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "zanmu:h02",
+        "label": "地狱迁移",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你提出分开新旧地狱的安排，长久留意秩序；地上土地失去主人后，又谋划兽灵势力的分配。",
+        "sourceIds": [
+          "g19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "zanmu:h03",
+        "label": "三个新部下",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你安排美天、慧之子、血枪进入三方组织，让各方分担地上控制，避免兽灵与地狱鬼直接争战。",
+        "sourceIds": [
+          "g19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "zanmu:h04",
+        "label": "灵梦的选择",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你的路线里，你压下八千慧行动，试探萃香，再让灵梦以战斗结束事态，她却没有照预设理解安排。",
+        "sourceIds": [
+          "z19"
+        ],
+        "note": ""
+      },
+      {
+        "id": "zanmu:h05",
+        "label": "结局19·留下野生",
+        "work": "兽王园",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你的路线里，你击败不肯照安排战斗的灵梦，后来赴神社宴会；本想把地上与畜生界纳入地狱管理，却改为让它们自行维持平衡。",
+        "sourceIds": [
+          "z19"
+        ],
+        "note": "仅残无本人路线的胜负与Ending19；旁白解释计划改变，不能替其他玩家路线确定胜负。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "兽王园",
+        "title": "兽王园",
+        "participation": "participant",
+        "historyIds": [
+          "zanmu:h01",
+          "zanmu:h02",
+          "zanmu:h03",
+          "zanmu:h04",
+          "zanmu:h05"
+        ],
+        "sourceIds": [
+          "g19",
+          "z19"
+        ],
+        "note": "设定文档与本人Stage 1–6、Ending 19已读；其余自机路线未合并，玩家经过均标route-dependent。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "新的争执又送到座前，你听完来使才展开空白的会谈名单。你习惯预先安排人心，这次想听各方亲口说出怎样相处。",
+      "years": 60,
+      "goal": {
+        "name": "留出各方自己作答",
+        "description": "开一次各方可以自行作答的会谈，减少临时改意造成的争战。"
+      },
+      "milestones": [
+        {
+          "text": "你留出会谈座位，将各方愿说与不肯说的话分开听。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你看见条件里的冲突，先问清，让对方自己改过约定。",
+          "fail": "各方话仍互相遮掩，你收回过早判断，把日期推后一轮。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "来使敢在你面前说异议，也愿将认下的约定带回去。",
+          "fail": "众人仍只猜你意图，口头答应，离开后各做各的。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "你合上记录，将已经认下的约定交还各方保存。",
+          "effects": {}
+        }
+      ],
+      "success": "会谈留下各方自己认下的约定，来使不再只猜你的心意。你翻开空白的下一页，这卷暂时无需替所有人写好结局。",
+      "bittersweet": "几方开始照约行事，另几方仍绕着你的安排打转。你留下有效的话，继续听新来使说，地狱里的争执还没有尽头。",
+      "failure": "众人没认下同一份约定，你收回这轮安排，不让空许诺变成开战借口。会谈的门仍留着，下回先谈真正愿说的话。",
+      "eventOverrides": [
+        {
+          "id": "zanmu:ev01",
+          "text": "你取出旧僧衣看了会儿，纹路让乱世旧事浮起；收好以后，仍坐回地狱座前。"
+        },
+        {
+          "id": "zanmu:ev02",
+          "text": "你将旧日用过的钵从匣里挪到案上，来使看见，你只说这是留下的旧物。"
+        },
+        {
+          "id": "zanmu:ev08",
+          "text": "这回你不催来使给预想的答复，只让他坐完一盏茶，再自己开口。"
+        }
+      ],
+      "reviewedEventIds": [
+        "zanmu:ev01",
+        "zanmu:ev02",
+        "zanmu:ev03",
+        "zanmu:ev04",
+        "zanmu:ev05",
+        "zanmu:ev06",
+        "zanmu:ev07",
+        "zanmu:ev08",
+        "zanmu:ev09",
+        "zanmu:ev10",
+        "zanmu:ev11",
+        "zanmu:ev12",
+        "zanmu:ev13",
+        "zanmu:ev14",
+        "zanmu:ev15",
+        "zanmu:ev16",
+        "zanmu:ev17",
+        "zanmu:ev18",
+        "zanmu:ev19",
+        "zanmu:ev20",
+        "zanmu:ev21",
+        "zanmu:ev22",
+        "zanmu:ev23",
+        "zanmu:ev24",
+        "zanmu:ev25",
+        "zanmu:ev26",
+        "zanmu:ev27",
+        "zanmu:ev28",
+        "zanmu:ev29",
+        "zanmu:ev30",
+        "zanmu:ev31",
+        "zanmu:ev32",
+        "zanmu:ev33",
+        "zanmu:ev34",
+        "zanmu:ev35",
+        "zanmu:ev36"
+      ]
+    }
+  },
+  {
+    "id": "ubame",
+    "continuity": "windows",
+    "anchor": {
+      "label": "香霖堂外来韦编11以后",
+      "text": "你仍率领圣域山姥，已与族人亲查金字塔。你向灵梦提出旧神社可能被月之设施覆盖的猜想，却不在意山名；续篇接着守护这片古林。",
+      "age": {
+        "kind": "unknown",
+        "label": "古老山姥首领，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "g20"
+        ],
+        "note": "古老与族群等级不提供数字；遗迹起源在小说内仍是人物推测。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g20",
+        "title": "锦上京正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方锦上京/Omake",
+        "type": "primary-transcript",
+        "locator": "六名新角色及丰姬设定全文"
+      },
+      {
+        "id": "r20",
+        "title": "锦上京红灵梦路线",
+        "url": "https://thbwiki.cc/游戏对话:东方锦上京/博丽灵梦（红）",
+        "type": "primary-transcript",
+        "locator": "Stage 1–3 全部，4–6 已读段落"
+      },
+      {
+        "id": "cola11",
+        "title": "香霖堂外来韦编11《锦上的审美》",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第11话",
+        "type": "primary-transcript",
+        "locator": "正文全文"
+      }
+    ],
+    "history": [
+      {
+        "id": "ubame:h01",
+        "label": "已知起点",
+        "work": "锦上京",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你是古林山姥首领，维护族群与森林，排斥来改变环境的外人，其他山姥也认可你的强势。",
+        "sourceIds": [
+          "g20"
+        ],
+        "note": ""
+      },
+      {
+        "id": "ubame:h02",
+        "label": "圣域相遇",
+        "work": "锦上京",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "灵梦调查异变来到林中，你与她交手；外界怎么称呼这座山，不如森林是否被打扰要紧。",
+        "sourceIds": [
+          "r20"
+        ],
+        "note": ""
+      },
+      {
+        "id": "ubame:h03",
+        "label": "金字塔调查",
+        "work": "香霖堂外来韦编11",
+        "kind": "report",
+        "certainty": "reported",
+        "text": "你与族人探查金字塔，向灵梦提出旧神社被月之盖子覆盖的解释；调查可证，遗迹起源仍是你的假说。",
+        "sourceIds": [
+          "cola11"
+        ],
+        "note": "不将人物的遗迹假说升格为已证实历史。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "锦上京",
+        "title": "锦上京",
+        "participation": "participant",
+        "historyIds": [
+          "ubame:h01",
+          "ubame:h02"
+        ],
+        "sourceIds": [
+          "g20",
+          "r20"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "香霖堂外来韦编11",
+        "title": "香霖堂外来韦编11",
+        "participation": "participant",
+        "historyIds": [
+          "ubame:h03"
+        ],
+        "sourceIds": [
+          "cola11"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "金字塔的议论仍在林外，你回到族人常走的树间，察看新踏出的脚印。接下来的日子，你想把该停步的地方说得明白些。",
+      "years": 40,
+      "goal": {
+        "name": "给古林留一条边界",
+        "description": "带族人划清可接待来客的边界，让古林深处少受无意闯入的打扰。"
+      },
+      "milestones": [
+        {
+          "text": "你巡过外缘，把来访者常走错的地方记下。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "pass": "你移过倒木，守住易被踏开的边缘，留出回头通道。",
+          "fail": "风雨改了地形，边界被踩散，你从新树根再认。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "族人认同接待线，肯在外缘接话，来访不再总变成追逐。",
+          "fail": "各人守一段，来客听到不同说法；你挨处解释。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "你走完古林边界，回炉边听族人报过各自守的地方。",
+          "effects": {}
+        }
+      ],
+      "success": "古林外缘有了能说清的边界，族人照约接待，深处仍能静静生长。你守着熟悉的树影，遗迹旧名留给外面的人争论。",
+      "bittersweet": "几处边界认稳，风雨后的空隙仍要巡查。你把族人分到要紧处，炉旁先留一张可以慢慢补全的林图。",
+      "failure": "这轮边界没被认下，你撤回太宽的接待线，守住古林旧道。新脚印仍要查问，族人今晚先在同一处炉火旁歇下。",
+      "eventOverrides": [
+        {
+          "id": "ubame:ev01",
+          "text": "你沿族人常走的路巡一圈，停在新脚印旁，让附近山姥先看过它通向哪里。"
+        },
+        {
+          "id": "ubame:ev28",
+          "text": "你领路回到常走的深林，摸过旧标记，指出这一季还能通行的地方。"
+        }
+      ],
+      "reviewedEventIds": [
+        "ubame:ev01",
+        "ubame:ev02",
+        "ubame:ev03",
+        "ubame:ev04",
+        "ubame:ev05",
+        "ubame:ev06",
+        "ubame:ev07",
+        "ubame:ev08",
+        "ubame:ev09",
+        "ubame:ev10",
+        "ubame:ev11",
+        "ubame:ev12",
+        "ubame:ev13",
+        "ubame:ev14",
+        "ubame:ev15",
+        "ubame:ev16",
+        "ubame:ev17",
+        "ubame:ev18",
+        "ubame:ev19",
+        "ubame:ev20",
+        "ubame:ev21",
+        "ubame:ev22",
+        "ubame:ev23",
+        "ubame:ev24",
+        "ubame:ev25",
+        "ubame:ev26",
+        "ubame:ev27",
+        "ubame:ev28",
+        "ubame:ev29",
+        "ubame:ev30",
+        "ubame:ev31",
+        "ubame:ev32",
+        "ubame:ev33",
+        "ubame:ev34",
+        "ubame:ev35",
+        "ubame:ev36"
+      ]
+    }
+  },
+  {
+    "id": "chimi",
+    "continuity": "windows",
+    "anchor": {
+      "label": "锦上京森林相遇以后",
+      "text": "你是聚于山河之气的古老魑魅，少与人类照面。调查者已经穿过森林来过，你仍偏爱不被开发的深林；续篇从熟悉自然变化、继续寻找安静栖处的你写起。",
+      "age": {
+        "kind": "unknown",
+        "label": "早于妖怪一词的存在，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "g20"
+        ],
+        "note": "文档只给相对古老背景，不给可换算年数。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g20",
+        "title": "锦上京正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方锦上京/Omake",
+        "type": "primary-transcript",
+        "locator": "六名新角色及丰姬设定全文"
+      },
+      {
+        "id": "r20",
+        "title": "锦上京红灵梦路线",
+        "url": "https://thbwiki.cc/游戏对话:东方锦上京/博丽灵梦（红）",
+        "type": "primary-transcript",
+        "locator": "Stage 1–3 全部，4–6 已读段落"
+      }
+    ],
+    "history": [
+      {
+        "id": "chimi:h01",
+        "label": "已知起点",
+        "work": "锦上京",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你从山河之气显出形状，比妖怪一词还古老；森林开发时这类存在渐隐，并非有意向人捣乱。",
+        "sourceIds": [
+          "g20"
+        ],
+        "note": ""
+      },
+      {
+        "id": "chimi:h02",
+        "label": "森林指路",
+        "work": "锦上京",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "红灵梦来到圣域，你惊讶真正人类能够进入，谈起森林与祭坛的异常，交手后让她继续往地下寻去。",
+        "sourceIds": [
+          "r20"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "锦上京",
+        "title": "锦上京",
+        "participation": "participant",
+        "historyIds": [
+          "chimi:h01",
+          "chimi:h02"
+        ],
+        "sourceIds": [
+          "g20",
+          "r20"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "林外的新声音沿水路传进来，你循着山河之气寻找能停留的林隙。你不向每个路人现形，只想让熟悉声音还能在这里相遇。",
+      "years": 40,
+      "goal": {
+        "name": "保住熟悉的山河声",
+        "description": "寻找容纳林中旧气息的栖地，让来客知道哪些地方不该惊扰。"
+      },
+      "milestones": [
+        {
+          "text": "你沿变化的水路停几次，记住能聚气的石岸与树根。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你分清林外杂声，在安静林隙凝成清楚形影。",
+          "fail": "山气彼此打散，你离开林隙，沿旧溪继续寻找。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "来客听懂提醒，停在外缘，也肯告诉后来的人绕开深处。",
+          "fail": "你的话仍像风声，来客没听懂，你换明显标记再试。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "你收起形影，沿仍旧清楚的水声回到熟悉深林。",
+          "effects": {}
+        }
+      ],
+      "success": "林隙能留下旧气息，来客也懂得停在哪里。你时而显形、时而随山气散开，这卷末尾仍听得见熟悉水声。",
+      "bittersweet": "一处栖地安稳，林外声音却仍传来。你让听懂提醒的人留在外缘，自己沿更深的溪，慢慢找下一处停留。",
+      "failure": "新林隙没留住形影，你随山气退回深处。来客还未学会听你的话，旧溪仍在，下一卷可以沿水声再找。",
+      "eventOverrides": [],
+      "reviewedEventIds": [
+        "chimi:ev01",
+        "chimi:ev02",
+        "chimi:ev03",
+        "chimi:ev04",
+        "chimi:ev05",
+        "chimi:ev06",
+        "chimi:ev07",
+        "chimi:ev08",
+        "chimi:ev09",
+        "chimi:ev10",
+        "chimi:ev11",
+        "chimi:ev12",
+        "chimi:ev13",
+        "chimi:ev14",
+        "chimi:ev15",
+        "chimi:ev16",
+        "chimi:ev17",
+        "chimi:ev18",
+        "chimi:ev19",
+        "chimi:ev20",
+        "chimi:ev21",
+        "chimi:ev22",
+        "chimi:ev23",
+        "chimi:ev24",
+        "chimi:ev25",
+        "chimi:ev26",
+        "chimi:ev27",
+        "chimi:ev28",
+        "chimi:ev29",
+        "chimi:ev30",
+        "chimi:ev31",
+        "chimi:ev32",
+        "chimi:ev33",
+        "chimi:ev34",
+        "chimi:ev35",
+        "chimi:ev36"
+      ]
+    }
+  },
+  {
+    "id": "nareko",
+    "continuity": "windows",
+    "anchor": {
+      "label": "地下祭坛职责说明以后",
+      "text": "你是地下祭坛的道祖神，职责是挡住危险从里面出来、保护外面人类。你曾被遗忘，也向初次来访的人类猜过谜；续篇接着处理重新说清的守道责任。",
+      "age": {
+        "kind": "unknown",
+        "label": "被遗忘后仍守道的神，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "g20"
+        ],
+        "note": "被遗忘不是幼年；原文明确不是守金字塔门的神。"
+      },
+      "identity": "阻挡地下危险外出的道祖神",
+      "location": "圣域地下祭坛"
+    },
+    "sources": [
+      {
+        "id": "g20",
+        "title": "锦上京正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方锦上京/Omake",
+        "type": "primary-transcript",
+        "locator": "六名新角色及丰姬设定全文"
+      },
+      {
+        "id": "r20",
+        "title": "锦上京红灵梦路线",
+        "url": "https://thbwiki.cc/游戏对话:东方锦上京/博丽灵梦（红）",
+        "type": "primary-transcript",
+        "locator": "Stage 1–3 全部，4–6 已读段落"
+      }
+    ],
+    "history": [
+      {
+        "id": "nareko:h01",
+        "label": "已知起点",
+        "work": "锦上京",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "祭坛藏在地下，旧香火失落，你仍挡住里面的东西走出去；久候让你忘记最初究竟在防什么。",
+        "sourceIds": [
+          "g20"
+        ],
+        "note": ""
+      },
+      {
+        "id": "nareko:h02",
+        "label": "人类与猜谜",
+        "work": "锦上京",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "真正人类来到祭坛，你热衷让灵梦猜谜；交手后解释自己保护人类，挡住危险向外逃出的道路。",
+        "sourceIds": [
+          "r20"
+        ],
+        "note": ""
+      },
+      {
+        "id": "nareko:h03",
+        "label": "指向南口",
+        "work": "锦上京",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "红灵梦继续调查时，你说明四处入口的位置，指引她从南边深入，不再将她当作该拦下的异物。",
+        "sourceIds": [
+          "r20"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "锦上京",
+        "title": "锦上京",
+        "participation": "participant",
+        "historyIds": [
+          "nareko:h01",
+          "nareko:h02",
+          "nareko:h03"
+        ],
+        "sourceIds": [
+          "g20",
+          "r20"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "祭坛终于又有人停步，你擦去路牌尘土，把守道方向写清。接下来的日子，你想辨清谁该回到外面，谁必须留在里面。",
+      "years": 40,
+      "goal": {
+        "name": "守清向外的通路",
+        "description": "分清可返程的人类与必须拦下的危险，让守道的对象重新被理解。"
+      },
+      "milestones": [
+        {
+          "text": "你重新画路牌方向，向来客说明这条路在拦什么。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你分清人类与混在后面的异物，分别指路和封道。",
+          "fail": "气息彼此混淆，你暂缓放行，逐个问清来由。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "pass": "你守住变化后的出口，危险停里侧，仍留安全退路。",
+          "fail": "封路力量松动，你缩小放行范围，压住危险岔口。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          }
+        },
+        {
+          "text": "你查过出口，回祭坛让返程的人看见仍亮着的路牌。",
+          "effects": {}
+        }
+      ],
+      "success": "祭坛方向被认清，人类知道怎样返程，里面的危险仍被挡住。你继续守路口，猜谜之外，也有人记得你为什么在这里。",
+      "bittersweet": "几条路守稳，另几条还需亲自问话。祭坛仍少香火，你把清楚方向留给听懂的人，下一轮再查松动出口。",
+      "failure": "这一轮没守清通路，你收窄放行范围，先封危险岔口。路牌还在，等辨明来由，再把安全的归路打开。",
+      "eventOverrides": [
+        {
+          "id": "nareko:ev02",
+          "text": "你换一道谜，听过来客回答，再问他要往里面走，还是从这里返程。"
+        },
+        {
+          "id": "nareko:ev04",
+          "text": "你检查朝外通道，压好松石；里面的危险仍不许从这里走出去。"
+        },
+        {
+          "id": "nareko:ev14",
+          "text": "人类问返程，你核清来路后指向安全出口；跟在里侧的异物仍被挡下。"
+        },
+        {
+          "id": "nareko:ev25",
+          "text": "你为返程人类缩短绕路，却把扑来的危险另封在里侧；屏障方向分得更清楚。"
+        }
+      ],
+      "reviewedEventIds": [
+        "nareko:ev01",
+        "nareko:ev02",
+        "nareko:ev03",
+        "nareko:ev04",
+        "nareko:ev05",
+        "nareko:ev06",
+        "nareko:ev07",
+        "nareko:ev08",
+        "nareko:ev09",
+        "nareko:ev10",
+        "nareko:ev11",
+        "nareko:ev12",
+        "nareko:ev13",
+        "nareko:ev14",
+        "nareko:ev15",
+        "nareko:ev16",
+        "nareko:ev17",
+        "nareko:ev18",
+        "nareko:ev19",
+        "nareko:ev20",
+        "nareko:ev21",
+        "nareko:ev22",
+        "nareko:ev23",
+        "nareko:ev24",
+        "nareko:ev25",
+        "nareko:ev26",
+        "nareko:ev27",
+        "nareko:ev28",
+        "nareko:ev29",
+        "nareko:ev30",
+        "nareko:ev31",
+        "nareko:ev32",
+        "nareko:ev33",
+        "nareko:ev34",
+        "nareko:ev35",
+        "nareko:ev36"
+      ]
+    }
+  },
+  {
+    "id": "yuiman",
+    "continuity": "windows",
+    "anchor": {
+      "label": "记忆改写解除以后",
+      "text": "你是维缦国古神人公主，曾被月方囚禁、反复改写记忆。设施混乱使你摆脱控制，你能驱蛇吞噬生命信息；续篇从重新选择去路的你写起。",
+      "age": {
+        "kind": "unknown",
+        "label": "古神人公主，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "g20"
+        ],
+        "note": "古国与囚禁无明确年数，不用历史国名强算年龄。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g20",
+        "title": "锦上京正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方锦上京/Omake",
+        "type": "primary-transcript",
+        "locator": "六名新角色及丰姬设定全文"
+      },
+      {
+        "id": "r20",
+        "title": "锦上京红灵梦路线",
+        "url": "https://thbwiki.cc/游戏对话:东方锦上京/博丽灵梦（红）",
+        "type": "primary-transcript",
+        "locator": "Stage 1–3 全部，4–6 已读段落"
+      },
+      {
+        "id": "ex20",
+        "title": "锦上京红灵梦 Extra",
+        "url": "https://thbwiki.cc/游戏对话:东方锦上京/博丽灵梦（红）_ExStory",
+        "type": "primary-transcript",
+        "locator": "两种红石支援对话全文，按版本区分"
+      }
+    ],
+    "history": [
+      {
+        "id": "yuiman:h01",
+        "label": "故国与囚禁",
+        "work": "锦上京",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你原是维缦国公主，旧日有狩鹿生活；古神失势后拒绝月方，被囚进仿造故乡四季的空间。",
+        "sourceIds": [
+          "g20"
+        ],
+        "note": ""
+      },
+      {
+        "id": "yuiman:h02",
+        "label": "改写与蛇",
+        "work": "锦上京",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你的蛇被用于吞噬生命信息，月方又反复改写你的记忆；设施因信息过载重启，记忆控制随之失效。",
+        "sourceIds": [
+          "g20"
+        ],
+        "note": ""
+      },
+      {
+        "id": "yuiman:h03",
+        "label": "四季竖穴",
+        "work": "锦上京",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "红灵梦来时，你一度把人类当成幻觉，交手后放松，也邀请她看看仿造故乡的四季景色。",
+        "sourceIds": [
+          "r20"
+        ],
+        "note": ""
+      },
+      {
+        "id": "yuiman:h04",
+        "label": "深处的蜃",
+        "work": "锦上京 Extra",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你提醒再来的灵梦留意深处妖怪；自由后的行动不再只照旧囚室的命令，仍熟悉这里的通道。",
+        "sourceIds": [
+          "ex20"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "锦上京",
+        "title": "锦上京",
+        "participation": "participant",
+        "historyIds": [
+          "yuiman:h01",
+          "yuiman:h02",
+          "yuiman:h03"
+        ],
+        "sourceIds": [
+          "g20",
+          "r20"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "锦上京 Extra",
+        "title": "锦上京 Extra",
+        "participation": "participant",
+        "historyIds": [
+          "yuiman:h04"
+        ],
+        "sourceIds": [
+          "ex20"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "旧囚室的门不再替你决定方向，你带蛇走到新岔口，分辨哪些景色真的会变化。接下来的路，你想一段一段自己选。",
+      "years": 50,
+      "goal": {
+        "name": "画出自己选的归路",
+        "description": "亲自辨认现实里的去处，留下愿意重走的路线，不再等囚室替自己选路。"
+      },
+      "milestones": [
+        {
+          "text": "你离开旧室，沿真实地形画新路，将会变的草木也记进去。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你分清回忆布景与眼前道路，走过不再重复的岔口。",
+          "fail": "相似景色又将你引回旧路，你重画，让蛇也实地试过。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "同行者尊重你选的方向，走到岔口时等你自己开口。",
+          "fail": "同行者仍替你作主，你离开队伍，先走熟自己的一小段。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "你回看本卷路线，圈起愿意再走的地方，其他路仍留空白。",
+          "effects": {}
+        }
+      ],
+      "success": "你画下的路通向真实会变的地方，也有人等你亲自选择。旧室仍能回看，却不再是唯一的家，这卷留下了自己的去处。",
+      "bittersweet": "一段真实道路已分清，另几处仍让你迟疑。你沿可靠标记慢慢走，未明岔口留到以后，不再等命令来开门。",
+      "failure": "远行没走到想去的地方，你回到已辨明的实地休息。旧室没重新囚住你，你只是还需要时间，才能选出下一步。",
+      "eventOverrides": [
+        {
+          "id": "yuiman:ev01",
+          "text": "你沿已经变化的林路跑一段，停下听真实的风，旧日猎鹿的步法仍留身上。"
+        },
+        {
+          "id": "yuiman:ev03",
+          "text": "你认过新岔口的水声，画进路图；它与旧室反复出现的景色不同。"
+        },
+        {
+          "id": "yuiman:ev07",
+          "text": "你给同行的蛇换新绳结标记，试过它能否沿这条现实道路再绕回来。"
+        },
+        {
+          "id": "yuiman:ev17",
+          "text": "你回看已离开的旧囚室，在空屋边站一阵，再从敞开的门回到真实路上。"
+        },
+        {
+          "id": "yuiman:ev24",
+          "text": "你不再等谁替旧囚室开门，自己选了愿走的一段路；有人问起，也说得出方向。"
+        }
+      ],
+      "reviewedEventIds": [
+        "yuiman:ev01",
+        "yuiman:ev02",
+        "yuiman:ev03",
+        "yuiman:ev04",
+        "yuiman:ev05",
+        "yuiman:ev06",
+        "yuiman:ev07",
+        "yuiman:ev08",
+        "yuiman:ev09",
+        "yuiman:ev10",
+        "yuiman:ev11",
+        "yuiman:ev12",
+        "yuiman:ev13",
+        "yuiman:ev14",
+        "yuiman:ev15",
+        "yuiman:ev16",
+        "yuiman:ev17",
+        "yuiman:ev18",
+        "yuiman:ev19",
+        "yuiman:ev20",
+        "yuiman:ev21",
+        "yuiman:ev22",
+        "yuiman:ev23",
+        "yuiman:ev24",
+        "yuiman:ev25",
+        "yuiman:ev26",
+        "yuiman:ev27",
+        "yuiman:ev28",
+        "yuiman:ev29",
+        "yuiman:ev30",
+        "yuiman:ev31",
+        "yuiman:ev32",
+        "yuiman:ev33",
+        "yuiman:ev34",
+        "yuiman:ev35",
+        "yuiman:ev36"
+      ]
+    }
+  },
+  {
+    "id": "ariya",
+    "continuity": "windows",
+    "anchor": {
+      "label": "锦上京解封以后",
+      "text": "你是拥有不变之力的石之女神，旧神社被设施覆盖后曾遭月方封印，现已被丰姬解开。你曾为保存维缦记忆发动不变之力；续篇从封印之外的取舍开始。",
+      "age": {
+        "kind": "unknown",
+        "label": "古老石之女神，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "g20"
+        ],
+        "note": "封印与神代背景无明确年数，不把解封当出生。"
+      }
+    },
+    "sources": [
+      {
+        "id": "g20",
+        "title": "锦上京正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方锦上京/Omake",
+        "type": "primary-transcript",
+        "locator": "六名新角色及丰姬设定全文"
+      },
+      {
+        "id": "r20",
+        "title": "锦上京红灵梦路线",
+        "url": "https://thbwiki.cc/游戏对话:东方锦上京/博丽灵梦（红）",
+        "type": "primary-transcript",
+        "locator": "Stage 1–3 全部，4–6 已读段落"
+      }
+    ],
+    "history": [
+      {
+        "id": "ariya:h01",
+        "label": "旧神社与封印",
+        "work": "锦上京",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你曾受旧山神社祭祀，拒绝月方后被封在覆盖神社的设施深处；这次自由并不是神明初次诞生。",
+        "sourceIds": [
+          "g20"
+        ],
+        "note": ""
+      },
+      {
+        "id": "ariya:h02",
+        "label": "重获自由",
+        "work": "锦上京",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "月方设施挡不住新信息，丰姬解开封印，请你以不变之力阻止流入，外界变化也因此受到影响。",
+        "sourceIds": [
+          "g20",
+          "r20"
+        ],
+        "note": ""
+      },
+      {
+        "id": "ariya:h03",
+        "label": "不变与记忆",
+        "work": "锦上京",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你想替维缦保存故国记忆，面对红灵梦申明理由并交战；停止世界，与仅保留一件旧物的范围不同。",
+        "sourceIds": [
+          "r20"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "锦上京",
+        "title": "锦上京",
+        "participation": "participant",
+        "historyIds": [
+          "ariya:h01",
+          "ariya:h02",
+          "ariya:h03"
+        ],
+        "sourceIds": [
+          "g20",
+          "r20"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "解封以后，你把一件想留下的旧物放到石台，等持有人说明要保留什么。你想试着留下记忆，同时让眼前的人继续走路。",
+      "years": 50,
+      "goal": {
+        "name": "留住仍可相认的旧物",
+        "description": "保存一件持有人愿意留下的旧物，让记忆可辨认，而身旁的生活仍可改变。"
+      },
+      "milestones": [
+        {
+          "text": "你在石台留一件旧物的位置，先听持有人说想保存什么。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你辨清范围，不变之力停在旧物上，没有延到旁边生活。",
+          "fail": "力量沿相似纹路扩开，你收回它，将旧物重新分开察看。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "持有人愿再来相认，也能说明哪些该留、哪些可变。",
+          "fail": "对方沉默离开，你暂停封存，保管旧物等待答复。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "你将旧物与说明放好，石台旁仍留通往外面的路。",
+          "effects": {}
+        }
+      ],
+      "success": "旧物保存了持有人认得的纹路，身旁的人仍可自由变化。你在石台前坐下，这卷留下可回来相认的记忆，也留下去路。",
+      "bittersweet": "一件旧物已保存，另个问题还在等待回答。你让力量停在确认的部分，不急着替沉默的人决定，石台旁留着空位。",
+      "failure": "封存没分清界限，你收回延开的力量，普通地保管旧物。记忆尚未安稳留下，这卷末尾，外面的路仍然能走。",
+      "eventOverrides": [],
+      "reviewedEventIds": [
+        "ariya:ev01",
+        "ariya:ev02",
+        "ariya:ev03",
+        "ariya:ev04",
+        "ariya:ev05",
+        "ariya:ev06",
+        "ariya:ev07",
+        "ariya:ev08",
+        "ariya:ev09",
+        "ariya:ev10",
+        "ariya:ev11",
+        "ariya:ev12",
+        "ariya:ev13",
+        "ariya:ev14",
+        "ariya:ev15",
+        "ariya:ev16",
+        "ariya:ev17",
+        "ariya:ev18",
+        "ariya:ev19",
+        "ariya:ev20",
+        "ariya:ev21",
+        "ariya:ev22",
+        "ariya:ev23",
+        "ariya:ev24",
+        "ariya:ev25",
+        "ariya:ev26",
+        "ariya:ev27",
+        "ariya:ev28",
+        "ariya:ev29",
+        "ariya:ev30",
+        "ariya:ev31",
+        "ariya:ev32",
+        "ariya:ev33",
+        "ariya:ev34",
+        "ariya:ev35",
+        "ariya:ev36"
+      ]
+    }
+  },
+  {
+    "id": "nina",
+    "continuity": "windows",
+    "anchor": {
+      "label": "香霖堂外来韦编11以后",
+      "text": "你是信息之海中新生的蜃妖怪，已由魔理沙带上地面，在香霖堂见过堇子。你仍易把混来的信息信成事实，失控次数已变少；续篇从这段地面生活开始。",
+      "age": {
+        "kind": "unknown",
+        "label": "刚诞生不久的蜃妖怪",
+        "years": null,
+        "sourceIds": [
+          "g20"
+        ],
+        "note": "设定明确新生，小说11已到地面，只有相对时长，不虚构一岁。"
+      },
+      "location": "魔法森林与香霖堂"
+    },
+    "sources": [
+      {
+        "id": "g20",
+        "title": "锦上京正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方锦上京/Omake",
+        "type": "primary-transcript",
+        "locator": "六名新角色及丰姬设定全文"
+      },
+      {
+        "id": "ex20",
+        "title": "锦上京红灵梦 Extra",
+        "url": "https://thbwiki.cc/游戏对话:东方锦上京/博丽灵梦（红）_ExStory",
+        "type": "primary-transcript",
+        "locator": "两种红石支援对话全文，按版本区分"
+      },
+      {
+        "id": "cola11",
+        "title": "香霖堂外来韦编11《锦上的审美》",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第11话",
+        "type": "primary-transcript",
+        "locator": "正文全文"
+      }
+    ],
+    "history": [
+      {
+        "id": "nina:h01",
+        "label": "已知起点",
+        "work": "锦上京",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你从信息之海的贝壳化石生出妖怪之身，涌来的错误信息也被当成事实，还没学会怀疑它们。",
+        "sourceIds": [
+          "g20"
+        ],
+        "note": ""
+      },
+      {
+        "id": "nina:h02",
+        "label": "全知的争辩",
+        "work": "锦上京 Extra",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你自信见过的信息就是真实，以蜃景迎战灵梦；受到质疑后，闭眼所得的觉悟也不再能解释一切。",
+        "sourceIds": [
+          "ex20"
+        ],
+        "note": "帕秋莉与袿姬解释来自不同红石支援版本。"
+      },
+      {
+        "id": "nina:h03",
+        "label": "来到地面",
+        "work": "香霖堂外来韦编11",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "魔理沙带你看地面景物，在香霖堂介绍你认识堇子；听她谈灵异与阴谋论以后，失控次数慢慢少了。",
+        "sourceIds": [
+          "cola11"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "锦上京",
+        "title": "锦上京",
+        "participation": "participant",
+        "historyIds": [
+          "nina:h01"
+        ],
+        "sourceIds": [
+          "g20"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "锦上京 Extra",
+        "title": "锦上京 Extra",
+        "participation": "participant",
+        "historyIds": [
+          "nina:h02"
+        ],
+        "sourceIds": [
+          "ex20"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "香霖堂外来韦编11",
+        "title": "香霖堂外来韦编11",
+        "participation": "participant",
+        "historyIds": [
+          "nina:h03"
+        ],
+        "sourceIds": [
+          "cola11"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "地面景色还在变化，你带空纸走出熟悉的店门，去找昨日见过的树。你想让下一幅幻景有一处能让别人亲自走到的地方。",
+      "years": 30,
+      "goal": {
+        "name": "留下能核实的景色",
+        "description": "将亲见景物与传闻分开，画出一幅来客可以实地找到的景色。"
+      },
+      "milestones": [
+        {
+          "text": "你记下今日亲见的树与水声，将听来的说法另列一行。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你改掉与实地不符的幻景，陪来客走到真正路口。",
+          "fail": "你将传闻画进景色，来客走错路；你收回画，重新去实地看。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "同行者留下各自所见，你们能在同一处景物前谈下去。",
+          "fail": "来客仍不信幻景，你带他走一小段，让他亲自看。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "你摊开本卷核实的景色，未明处留白，明天还能出去看。",
+          "effects": {}
+        }
+      ],
+      "success": "幻景留下了一处来客能实地找到的景色，画旁也有人写下所见。你仍会听到混乱传闻，这卷却有了可回去核对的路。",
+      "bittersweet": "几处景色认清，还有几处会被传闻搅乱。你收好可靠的画，继续沿地面道路走，不明白的地方再问一次。",
+      "failure": "这一幅幻景没带来客找到实地，你收起它，重新拿空纸。地面仍在变化，你也仍住这里，下回先从亲眼看见的树开始。",
+      "eventOverrides": [
+        {
+          "id": "nina:ev26",
+          "text": "你先带走错的人回真实路口，再改画错的地方；道歉以后，又陪他核了一次方向。"
+        }
+      ],
+      "reviewedEventIds": [
+        "nina:ev01",
+        "nina:ev02",
+        "nina:ev03",
+        "nina:ev04",
+        "nina:ev05",
+        "nina:ev06",
+        "nina:ev07",
+        "nina:ev08",
+        "nina:ev09",
+        "nina:ev10",
+        "nina:ev11",
+        "nina:ev12",
+        "nina:ev13",
+        "nina:ev14",
+        "nina:ev15",
+        "nina:ev16",
+        "nina:ev17",
+        "nina:ev18",
+        "nina:ev19",
+        "nina:ev20",
+        "nina:ev21",
+        "nina:ev22",
+        "nina:ev23",
+        "nina:ev24",
+        "nina:ev25",
+        "nina:ev26",
+        "nina:ev27",
+        "nina:ev28",
+        "nina:ev29",
+        "nina:ev30",
+        "nina:ev31",
+        "nina:ev32",
+        "nina:ev33",
+        "nina:ev34",
+        "nina:ev35",
+        "nina:ev36"
+      ]
+    }
+  },
+  {
+    "id": "rinnosuke",
+    "continuity": "windows",
+    "anchor": {
+      "label": "香霖堂外来韦编11以后",
+      "text": "你仍经营香霖堂，能认出物品的名称与用途，却常需摸索用法。你刚确认堇子安好，又接待由魔理沙带来的贝子；续篇从已有旧货、熟客与修理经验的店主写起。",
+      "age": {
+        "kind": "unknown",
+        "label": "在魔理沙出生前已做学徒，岁数不详",
+        "years": null,
+        "sourceIds": [
+          "cola6"
+        ],
+        "note": "香霖堂6明确魔理沙出生前在雾雨家修行；无她年龄便不能换算你的具体岁数。"
+      }
+    },
+    "sources": [
+      {
+        "id": "cola1",
+        "title": "香霖堂第1话",
+        "url": "https://thbwiki.cc/东方香霖堂/第1话",
+        "type": "primary-transcript",
+        "locator": "正文全文"
+      },
+      {
+        "id": "cola2",
+        "title": "香霖堂第2话",
+        "url": "https://thbwiki.cc/东方香霖堂/第2话",
+        "type": "primary-transcript",
+        "locator": "正文全文"
+      },
+      {
+        "id": "cola6",
+        "title": "香霖堂第6话《雾雨的火炉》前篇",
+        "url": "https://thbwiki.cc/东方香霖堂/第6话",
+        "type": "primary-transcript",
+        "locator": "正文前部，THB 转录行21–110；学徒旧事与修炉委托"
+      },
+      {
+        "id": "cola7",
+        "title": "香霖堂第7话《雾雨的火炉》后篇",
+        "url": "https://thbwiki.cc/东方香霖堂/第7话",
+        "type": "primary-transcript",
+        "locator": "正文全文；THB 转录行27–125"
+      },
+      {
+        "id": "colaNew1",
+        "title": "香霖堂外来韦编第1话",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第1话",
+        "type": "primary-transcript",
+        "locator": "正文全文；THB 转录行33–202"
+      },
+      {
+        "id": "cola10",
+        "title": "香霖堂外来韦编10《失去价值的信息，与灵异的全能者》",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第10话",
+        "type": "primary-transcript",
+        "locator": "全文；电脑聊天、堇子安否与信息入侵"
+      },
+      {
+        "id": "cola11",
+        "title": "香霖堂外来韦编11《锦上的审美》",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第11话",
+        "type": "primary-transcript",
+        "locator": "正文全文"
+      },
+      {
+        "id": "colaNew6",
+        "title": "香霖堂外来韦编6《宇佐见堇子有三人！》",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第6话",
+        "type": "primary-transcript",
+        "locator": "正文全文；THB 转录行35–346"
+      },
+      {
+        "id": "colaNew7",
+        "title": "香霖堂外来韦编7《梦幻病的灵异》",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第7话",
+        "type": "primary-transcript",
+        "locator": "正文全文；THB 转录行35–283"
+      },
+      {
+        "id": "colaNew9",
+        "title": "香霖堂外来韦编9《价值观的熔炉》",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第9话",
+        "type": "primary-transcript",
+        "locator": "正文全文；THB 转录行35–336"
+      },
+      {
+        "id": "colaNew2",
+        "title": "香霖堂外来韦编第2话",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第2话",
+        "type": "primary-transcript",
+        "locator": "正文全文；杂志P60–63，THB转录行26–228"
+      },
+      {
+        "id": "colaNew3",
+        "title": "香霖堂外来韦编第3话",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第3话",
+        "type": "primary-transcript",
+        "locator": "正文全文；杂志P57–61，THB转录行26–285"
+      },
+      {
+        "id": "colaNew4",
+        "title": "香霖堂外来韦编第4话",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第4话",
+        "type": "primary-transcript",
+        "locator": "正文全文；杂志P56–59，THB转录行25–247"
+      },
+      {
+        "id": "colaNew5",
+        "title": "香霖堂外来韦编第5话",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第5话",
+        "type": "primary-transcript",
+        "locator": "正文全文；杂志P54–57，THB转录行26–289"
+      },
+      {
+        "id": "colaNew8",
+        "title": "香霖堂外来韦编第8话",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第8话",
+        "type": "primary-transcript",
+        "locator": "正文全文；杂志P42–47，THB转录行30–299"
+      }
+    ],
+    "history": [
+      {
+        "id": "rinnosuke:h01",
+        "label": "已知起点",
+        "work": "香霖堂1–2",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你是经营旧货店的半人半妖，能认物品的名与用途，未必会操作；常为灵梦修衣物、看外来书和器具。",
+        "sourceIds": [
+          "cola1",
+          "cola2"
+        ],
+        "note": ""
+      },
+      {
+        "id": "rinnosuke:h02",
+        "label": "雾雨家的旧事",
+        "work": "香霖堂6",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你在魔理沙出生前已在雾雨家修行，后来独立开店；她离家时所带的迷你八卦炉，正是你做的器具。",
+        "sourceIds": [
+          "cola6"
+        ],
+        "note": ""
+      },
+      {
+        "id": "rinnosuke:h03",
+        "label": "修炉与交换",
+        "work": "香霖堂6–7",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你修好魔理沙的八卦炉，收下她带来的废铁；从中认出草薙之剑，却没说明真正价值，将它留作店中非卖品。",
+        "sourceIds": [
+          "cola6",
+          "cola7"
+        ],
+        "note": "剑名由识物能力确认；没有把店主的保管写成此后使用神剑作战。"
+      },
+      {
+        "id": "rinnosuke:h04",
+        "label": "初识堇子",
+        "work": "香霖堂外来韦编1",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "堇子跟随带来外界器具的收集者进店，让你看见仍在使用的智能手机；你请她带不用的东西来，愿意付钱。",
+        "sourceIds": [
+          "colaNew1"
+        ],
+        "note": "本话尚未揭明收集者身份，不据后续或索引为她填姓名。"
+      },
+      {
+        "id": "rinnosuke:h10",
+        "label": "堇子与华扇",
+        "work": "香霖堂外来韦编2",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "华扇来店同堇子会面；你随后向她问起灵异珠，听了外界来客的处境。堇子又回来解释双方常互托差事，你也明白自己成了她们的碰头地点。",
+        "sourceIds": [
+          "colaNew2"
+        ],
+        "note": ""
+      },
+      {
+        "id": "rinnosuke:h11",
+        "label": "风雪搜救",
+        "work": "香霖堂外来韦编3",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "堇子在风雪中迟迟未到，你提醒灵梦与文留意她的处境；两人将她带回店后，你备下姜汤，让来客暖身，也劝她们别再争吵。",
+        "sourceIds": [
+          "colaNew3"
+        ],
+        "note": ""
+      },
+      {
+        "id": "rinnosuke:h12",
+        "label": "异季来客",
+        "work": "香霖堂外来韦编4",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "店里取暖的燃料不足，你为冻得发抖的堇子添了火，又问魔理沙异常季节的缘由；成美随后来店，你听她们谈起山中的遭遇。",
+        "sourceIds": [
+          "colaNew4"
+        ],
+        "note": ""
+      },
+      {
+        "id": "rinnosuke:h13",
+        "label": "烤肉与藏酒",
+        "work": "香霖堂外来韦编5",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你抽珍藏的卷烟，被堇子批评后仍不以为意；她邀请你去烤肉时，你带上店里的藏酒，没有察觉她当时正被女苑凭依。",
+        "sourceIds": [
+          "colaNew5"
+        ],
+        "note": ""
+      },
+      {
+        "id": "rinnosuke:h05",
+        "label": "二重身营救提议",
+        "work": "香霖堂外来韦编6",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你与灵梦、魔理沙设搜救总部，借出清醒梦眼罩；听哆来咪解释三人的处境后，提议让失去肉体的二重身在梦中对决。",
+        "sourceIds": [
+          "colaNew6"
+        ],
+        "note": "实际参会与提议可证；梦中胜负不是霖之助亲自交战的经历。"
+      },
+      {
+        "id": "rinnosuke:h06",
+        "label": "告知二重身",
+        "work": "香霖堂外来韦编7",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你留意弹幕烟花大会的风险，向堇子说明眼前的她是二重身、与外界本体共享记忆；她反而为此高兴，你继续观察。",
+        "sourceIds": [
+          "colaNew7"
+        ],
+        "note": "评委是堇子；霖之助没有在本话获任评委，二重身另有意识仍是他的推想。"
+      },
+      {
+        "id": "rinnosuke:h14",
+        "label": "收留莱卡",
+        "work": "香霖堂外来韦编8",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "得到会自行活动的旧机器狗后，你先向堇子和灵梦询问，又到命莲寺请教；听说幼犬灵魂寄居其中，你不愿舍弃，收养并起名莱卡。",
+        "sourceIds": [
+          "colaNew8"
+        ],
+        "note": ""
+      },
+      {
+        "id": "rinnosuke:h07",
+        "label": "以物支付薪水",
+        "work": "香霖堂外来韦编9",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你请堇子鉴定积压电脑，接受她正式打工的要求，以待处理物件作薪水；又承认卡牌并非普通纸片，早已察觉异样。",
+        "sourceIds": [
+          "colaNew9"
+        ],
+        "note": "未把察觉异常写成亲自解决虹龙洞异变。"
+      },
+      {
+        "id": "rinnosuke:h08",
+        "label": "电脑与安否",
+        "work": "香霖堂外来韦编10",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你在未接电源的电脑上看见堇子与另一人的对话，插话确认她安好；她回店后解释只是因训练AI少睡少梦。",
+        "sourceIds": [
+          "cola10"
+        ],
+        "note": ""
+      },
+      {
+        "id": "rinnosuke:h09",
+        "label": "锦上异变余波",
+        "work": "香霖堂外来韦编11",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你注意外来物停流，让灵梦向堇子询问AI；后来接待魔理沙带来的贝子，听她与堇子谈地面的灵异。",
+        "sourceIds": [
+          "cola11"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "香霖堂1–2",
+        "title": "香霖堂1–2",
+        "participation": "participant",
+        "historyIds": [
+          "rinnosuke:h01"
+        ],
+        "sourceIds": [
+          "cola1",
+          "cola2"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "香霖堂6",
+        "title": "香霖堂6",
+        "participation": "participant",
+        "historyIds": [
+          "rinnosuke:h02"
+        ],
+        "sourceIds": [
+          "cola6"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "香霖堂6–7",
+        "title": "香霖堂6–7",
+        "participation": "participant",
+        "historyIds": [
+          "rinnosuke:h03"
+        ],
+        "sourceIds": [
+          "cola6",
+          "cola7"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "香霖堂外来韦编1",
+        "title": "香霖堂外来韦编1",
+        "participation": "participant",
+        "historyIds": [
+          "rinnosuke:h04"
+        ],
+        "sourceIds": [
+          "colaNew1"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "香霖堂外来韦编6",
+        "title": "香霖堂外来韦编6",
+        "participation": "participant",
+        "historyIds": [
+          "rinnosuke:h05"
+        ],
+        "sourceIds": [
+          "colaNew6"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "香霖堂外来韦编7",
+        "title": "香霖堂外来韦编7",
+        "participation": "participant",
+        "historyIds": [
+          "rinnosuke:h06"
+        ],
+        "sourceIds": [
+          "colaNew7"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "香霖堂外来韦编9",
+        "title": "香霖堂外来韦编9",
+        "participation": "participant",
+        "historyIds": [
+          "rinnosuke:h07"
+        ],
+        "sourceIds": [
+          "colaNew9"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "香霖堂外来韦编10",
+        "title": "香霖堂外来韦编10",
+        "participation": "participant",
+        "historyIds": [
+          "rinnosuke:h08"
+        ],
+        "sourceIds": [
+          "cola10"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "香霖堂外来韦编11",
+        "title": "香霖堂外来韦编11",
+        "participation": "participant",
+        "historyIds": [
+          "rinnosuke:h09"
+        ],
+        "sourceIds": [
+          "cola11"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "香霖堂外来韦编2",
+        "title": "香霖堂外来韦编2",
+        "participation": "participant",
+        "historyIds": [
+          "rinnosuke:h10"
+        ],
+        "sourceIds": [
+          "colaNew2"
+        ],
+        "note": "该话正文全文已读；只记霖之助亲自参与的行动。原刊把堇子误植为莲子的地方按转录注释识别，不将秘封莲子移入该场景。"
+      },
+      {
+        "work": "香霖堂外来韦编3",
+        "title": "香霖堂外来韦编3",
+        "participation": "participant",
+        "historyIds": [
+          "rinnosuke:h11"
+        ],
+        "sourceIds": [
+          "colaNew3"
+        ],
+        "note": "该话正文全文已读；只记霖之助亲自参与的行动。"
+      },
+      {
+        "work": "香霖堂外来韦编4",
+        "title": "香霖堂外来韦编4",
+        "participation": "participant",
+        "historyIds": [
+          "rinnosuke:h12"
+        ],
+        "sourceIds": [
+          "colaNew4"
+        ],
+        "note": "该话正文全文已读；只记霖之助亲自参与的行动。"
+      },
+      {
+        "work": "香霖堂外来韦编5",
+        "title": "香霖堂外来韦编5",
+        "participation": "participant",
+        "historyIds": [
+          "rinnosuke:h13"
+        ],
+        "sourceIds": [
+          "colaNew5"
+        ],
+        "note": "该话正文全文已读；只记霖之助亲自参与的行动。"
+      },
+      {
+        "work": "香霖堂外来韦编8",
+        "title": "香霖堂外来韦编8",
+        "participation": "participant",
+        "historyIds": [
+          "rinnosuke:h14"
+        ],
+        "sourceIds": [
+          "colaNew8"
+        ],
+        "note": "该话正文全文已读；只记霖之助亲自参与的行动。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "店里新收来一箱旧货，你将认得名称的与还不会用的分开摆。接下来的日子，你想给它们留些真能照着做的说明，再等愿意买走的人。",
+      "years": 30,
+      "goal": {
+        "name": "给旧货留可用的说明",
+        "description": "为一批旧货写清可靠用法，靠修理与出售维持香霖堂的生意。"
+      },
+      "milestones": [
+        {
+          "text": "你从新货箱挑出一件常被问起的器具，先写下能确认的用途。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你照实试过用法，说明里每一步都能让来客亲手做成。",
+          "fail": "一条猜测在试用时落空，你划掉它，将未明之处留在纸边。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "fortune",
+            "min": 6
+          },
+          "pass": "修好的一批货有人买走，收入够补材料和店里这一季的开销。",
+          "fail": "修理花的钱多过售价，你留下能用的那几件，缩减下一次收货。",
+          "passEffects": {
+            "fortune": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          }
+        },
+        {
+          "text": "你给这批旧货贴完说明，坐回柜后，把新来的问题另记一页。",
+          "effects": {}
+        }
+      ],
+      "success": "旧货附着可用的说明离开柜台，修理收入也养得起这一季的店。你仍会作长篇推想，这卷却多了一批来客亲手用成的东西。",
+      "bittersweet": "几件器具已有可靠用法，另几件仍只认得名字。你收好卖货的钱，留下未明的纸页，店门照旧开着，下次再慢慢琢磨。",
+      "failure": "这一批旧货没卖到预想的钱，几份说明也还要重写。你缩减收货，把能修的留在柜边，先让香霖堂的灯继续亮过这一季。",
+      "eventOverrides": [
+        {
+          "id": "rinnosuke:ev06",
+          "text": "你算过这一季修货的材料钱，才把愿意出售的旧物搬上柜台；收藏与生意仍要分开。"
+        },
+        {
+          "id": "rinnosuke:ev10",
+          "text": "你认出了新器具的名称与用途，具体用法却还不明；找来说明册后，先试最简单的一步。"
+        },
+        {
+          "id": "rinnosuke:ev27",
+          "text": "你将那把损刀修好，确认刃口还能使用，再把价签与修过的地方一同告诉买家。"
+        },
+        {
+          "id": "rinnosuke:ev33",
+          "text": "你翻看阿求问过旧货的笔记，又补上一条新考证。",
+          "with": [],
+          "remember": []
+        }
+      ],
+      "reviewedEventIds": [
+        "rinnosuke:ev01",
+        "rinnosuke:ev02",
+        "rinnosuke:ev03",
+        "rinnosuke:ev04",
+        "rinnosuke:ev05",
+        "rinnosuke:ev06",
+        "rinnosuke:ev07",
+        "rinnosuke:ev08",
+        "rinnosuke:ev09",
+        "rinnosuke:ev10",
+        "rinnosuke:ev11",
+        "rinnosuke:ev12",
+        "rinnosuke:ev13",
+        "rinnosuke:ev14",
+        "rinnosuke:ev15",
+        "rinnosuke:ev16",
+        "rinnosuke:ev17",
+        "rinnosuke:ev18",
+        "rinnosuke:ev19",
+        "rinnosuke:ev20",
+        "rinnosuke:ev21",
+        "rinnosuke:ev22",
+        "rinnosuke:ev23",
+        "rinnosuke:ev24",
+        "rinnosuke:ev25",
+        "rinnosuke:ev26",
+        "rinnosuke:ev27",
+        "rinnosuke:ev28",
+        "rinnosuke:ev29",
+        "rinnosuke:ev30",
+        "rinnosuke:ev31",
+        "rinnosuke:ev32",
+        "rinnosuke:ev33",
+        "rinnosuke:ev34",
+        "rinnosuke:ev35",
+        "rinnosuke:ev36"
+      ]
+    }
+  },
+  {
+    "id": "akyuu",
+    "continuity": "windows",
+    "anchor": {
+      "label": "小铃获救与书店重开以后",
+      "text": "你是第九代御阿礼之子，也是《幻想乡缘起》与笔名小说的作者。你参加过小铃获救后的赏花欢迎会，随后书店恢复营业；你仍在稗田邸编书，实际年龄未能确定。",
+      "age": {
+        "kind": "unknown",
+        "label": "第九代编者，当前年龄不详",
+        "years": null,
+        "sourceIds": [
+          "aky"
+        ],
+        "note": "独白写御阿礼之子常活不过三十，是身份寿命陈述；未给本锚点年龄。八年是本作短卷跨度，不暗示长寿或转世已发生。"
+      }
+    },
+    "sources": [
+      {
+        "id": "aky",
+        "title": "求闻史纪·阿求独白",
+        "url": "https://thbwiki.cc/东方求闻史纪/独白",
+        "type": "primary-transcript",
+        "locator": "独白全文"
+      },
+      {
+        "id": "akySop",
+        "title": "求闻口授·稗田阿求的总结",
+        "url": "https://thbwiki.cc/东方求闻口授/稗田阿求的总结",
+        "type": "primary-transcript",
+        "locator": "P168–169 总结全文"
+      },
+      {
+        "id": "fs1",
+        "title": "铃奈庵第1话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第一话",
+        "type": "primary-transcript",
+        "locator": "P1–24；能力与书店实际工作"
+      },
+      {
+        "id": "fs25",
+        "title": "铃奈庵第25话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第二十五话",
+        "type": "primary-transcript",
+        "locator": "P6–23；占卜书与阿求说明"
+      },
+      {
+        "id": "fs46",
+        "title": "铃奈庵第46话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第四十六话",
+        "type": "primary-transcript",
+        "locator": "P1–14 全文；日文尚待补"
+      },
+      {
+        "id": "fs47",
+        "title": "铃奈庵第47话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第四十七话",
+        "type": "primary-transcript",
+        "locator": "P1–13 全文"
+      },
+      {
+        "id": "fs53",
+        "title": "铃奈庵第53话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第五十三话",
+        "type": "primary-transcript",
+        "locator": "P1–19中文逐页全文；P8–13欢迎会先于P14–19书店重开，含结尾仍为人类"
+      },
+      {
+        "id": "fs2",
+        "title": "铃奈庵第2话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第二话",
+        "type": "primary-transcript",
+        "locator": "P1–25日中文逐页全文；食字虫、阿求求助与小铃熏虫"
+      },
+      {
+        "id": "fs3",
+        "title": "铃奈庵第3话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第三话",
+        "type": "primary-transcript",
+        "locator": "P1–26日中文逐页全文；含P25–26旁白揭示小铃主动唤醒烟烟罗"
+      },
+      {
+        "id": "fs52",
+        "title": "铃奈庵第52话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第五十二话",
+        "type": "primary-transcript",
+        "locator": "P1–13中文逐页全文；日文待补，阿求与文交换意见及赴宴邀请"
+      }
+    ],
+    "history": [
+      {
+        "id": "akyuu:h01",
+        "label": "记忆与职责",
+        "work": "求闻史纪",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你是一见便不会忘记的御阿礼之子，承接编写缘起的职责；前世记忆并非全能保留，仍要翻旧资料核对。",
+        "sourceIds": [
+          "aky"
+        ],
+        "note": ""
+      },
+      {
+        "id": "akyuu:h02",
+        "label": "编写缘起",
+        "work": "求闻史纪",
+        "kind": "report",
+        "certainty": "reported",
+        "text": "你写下结界建立后的缘起，也坦言妖怪会要求夸大危险；短寿与转生准备让你思考怎样让这代记录留下。",
+        "sourceIds": [
+          "aky"
+        ],
+        "note": "寿命与转生由阿求独白叙述，不替当前年龄填数。"
+      },
+      {
+        "id": "akyuu:h03",
+        "label": "宗教座谈总结",
+        "work": "求闻口授",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你为新宗教势力的座谈作编录与总结，看到相互牵制也有冲突风险；会后又纳入灵梦带来的新闻和未写过的人物资料。",
+        "sourceIds": [
+          "akySop"
+        ],
+        "note": "仅据编者总结确认她自己的编录与判断，未把座谈各方讲述的故事当阿求亲历。"
+      },
+      {
+        "id": "akyuu:h04",
+        "label": "借还资料",
+        "work": "铃奈庵1",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你写完新书，把借来的资料送还铃奈庵；这些妖魔本你虽已全部背下，却大多读不懂，便同小铃谈起书中的内容。",
+        "sourceIds": [
+          "fs1"
+        ],
+        "note": "原先合并第1、25话的条目拆开，使新增第2话位于占卜书事件之前；不是新增未经核实的童年。"
+      },
+      {
+        "id": "akyuu:h07",
+        "label": "食字虫求助",
+        "work": "铃奈庵2",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "书里的字迹忽然消失，纸张却没有损坏，你请小铃来看；听她想起祖父说过的食字虫，你们讨论怎样保住村里的书籍。",
+        "sourceIds": [
+          "fs2"
+        ],
+        "note": ""
+      },
+      {
+        "id": "akyuu:h08",
+        "label": "占卜书说明",
+        "work": "铃奈庵25",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你赶到铃奈庵时，小铃已经昏倒；你向魔理沙说明卦书连接彼世的危险，以及把作者的好话当成自己本领会招来怨恨。",
+        "sourceIds": [
+          "fs25"
+        ],
+        "note": ""
+      },
+      {
+        "id": "akyuu:h05",
+        "label": "笔名与写作",
+        "work": "铃奈庵46–47",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你向猯藏承认自己就是阿加莎克里斯Q，听取作品感想；面对她供给的故事，也意识到文字能改变村中势力关系。",
+        "sourceIds": [
+          "fs46",
+          "fs47"
+        ],
+        "note": ""
+      },
+      {
+        "id": "akyuu:h09",
+        "label": "失踪调查与赴宴",
+        "work": "铃奈庵52",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "小铃失踪后，你同文交换情报，听她提出神隐的解释；接到神社赏花邀请，你请她护送，还决定让她一同赴宴。",
+        "sourceIds": [
+          "fs52"
+        ],
+        "note": "神隐是文在信息不足时的判断，后来对外也被用作解释，不确定为小铃真正失踪原因。"
+      },
+      {
+        "id": "akyuu:h06",
+        "label": "重开聚会",
+        "work": "铃奈庵53",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你参加为小铃举办的赏花欢迎会，坦言还不明白事情的来龙去脉；一段时间后，铃奈庵才恢复营业。",
+        "sourceIds": [
+          "fs53"
+        ],
+        "note": "第53话P8–13先欢迎会，P14–19随后书店重开；原文没有重开后再办聚会的顺序。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "求闻史纪",
+        "title": "求闻史纪",
+        "participation": "participant",
+        "historyIds": [
+          "akyuu:h01",
+          "akyuu:h02"
+        ],
+        "sourceIds": [
+          "aky"
+        ],
+        "note": "仅涵盖所列已读原文；具体阅读范围与缺口见研究记录。"
+      },
+      {
+        "work": "求闻口授",
+        "title": "求闻口授",
+        "participation": "participant",
+        "historyIds": [
+          "akyuu:h03"
+        ],
+        "sourceIds": [
+          "akySop"
+        ],
+        "note": "仅涵盖所列已读原文；具体阅读范围与缺口见研究记录。"
+      },
+      {
+        "work": "铃奈庵1",
+        "title": "铃奈庵1",
+        "participation": "participant",
+        "historyIds": [
+          "akyuu:h04"
+        ],
+        "sourceIds": [
+          "fs1"
+        ],
+        "note": "仅涵盖所列已读原文；具体阅读范围与缺口见研究记录。"
+      },
+      {
+        "work": "铃奈庵46–47",
+        "title": "铃奈庵46–47",
+        "participation": "participant",
+        "historyIds": [
+          "akyuu:h05"
+        ],
+        "sourceIds": [
+          "fs46",
+          "fs47"
+        ],
+        "note": "仅涵盖所列已读原文；具体阅读范围与缺口见研究记录。"
+      },
+      {
+        "work": "铃奈庵53",
+        "title": "铃奈庵53",
+        "participation": "cameo",
+        "historyIds": [
+          "akyuu:h06"
+        ],
+        "sourceIds": [
+          "fs53"
+        ],
+        "note": "仅涵盖所列已读原文；具体阅读范围与缺口见研究记录。"
+      },
+      {
+        "work": "铃奈庵2",
+        "title": "铃奈庵2",
+        "participation": "participant",
+        "historyIds": [
+          "akyuu:h07"
+        ],
+        "sourceIds": [
+          "fs2"
+        ],
+        "note": "P1–25全文已读；阿求实际请小铃查字迹消失，没有亲自追捕烟烟罗。"
+      },
+      {
+        "work": "铃奈庵25",
+        "title": "铃奈庵25",
+        "participation": "participant",
+        "historyIds": [
+          "akyuu:h08"
+        ],
+        "sourceIds": [
+          "fs25"
+        ],
+        "note": "原已核第25话从合并条目移出，保持剧情相对顺序；未新增原缺失P1–5事实。"
+      },
+      {
+        "work": "铃奈庵52",
+        "title": "铃奈庵52",
+        "participation": "participant",
+        "historyIds": [
+          "akyuu:h09"
+        ],
+        "sourceIds": [
+          "fs52"
+        ],
+        "note": "P1–13中文全文已读；文的神隐猜测与阿求自己的交换情报、赴宴安排分开。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "案头新卷只写了开头，你先把能查到的事实另抄一册，再留出给故事的空页。你想听见读者谈这一卷，也想把尚有的时间花在真正想写的句子上。",
+      "years": 8,
+      "goal": {
+        "name": "写完这一卷怪案",
+        "description": "在眼前的写作时间里完成一卷能交给读者的怪案，将事实与虚构分清。"
+      },
+      "milestones": [
+        {
+          "text": "你把新卷的案情分成资料与构思两叠，开始写第一个还不能揭开的谜。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你核清关键线索，故事的答案能从前面已经写下的细节找到。",
+          "fail": "线索互相冲突，你退回前几页重写，先不急着把原稿交出去。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "pass": "你留出休息与写作的次序，身体还能让这一卷按计划慢慢写完。",
+          "fail": "疲惫打乱写作，你缩短每次落笔的篇幅，把能写完的章节先整理好。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          }
+        },
+        {
+          "text": "你将这一卷已写定的页码合在一起，给结尾留一句自己愿意读的话。",
+          "effects": {}
+        }
+      ],
+      "success": "这一卷怪案终于交给读者，事实与虚构各有去处。你放下笔，等有人带着称赞或疑问来谈，眼前这一段写作已经有了自己的结尾。",
+      "bittersweet": "线索和篇幅只完成其中一部分，你把已写定的章节交出，未定的留在匣里。时间有限，你仍愿在下一次落笔时听一听自己的心愿。",
+      "failure": "这卷没有按原先构思写完，你收好可靠的资料，将无力补齐的谜留空。案头仍放着笔，眼前的休息也值得认真度过。",
+      "eventOverrides": [
+        {
+          "id": "akyuu:ev03",
+          "text": "你将新抄的书页放到掌心比对，手指留下淡淡墨印，再沿字缝核过一遍。"
+        },
+        {
+          "id": "akyuu:ev07",
+          "text": "你为新卷另取一本空册，把构思与缘起资料分开，先写上这一回的题目。"
+        },
+        {
+          "id": "akyuu:ev08",
+          "text": "你核对新谜面的答案，忽然盼着自己的推想有一处错了；若真如此，这一卷还能多走一条路。"
+        }
+      ],
+      "reviewedEventIds": [
+        "akyuu:ev01",
+        "akyuu:ev02",
+        "akyuu:ev03",
+        "akyuu:ev04",
+        "akyuu:ev05",
+        "akyuu:ev06",
+        "akyuu:ev07",
+        "akyuu:ev08",
+        "akyuu:ev09",
+        "akyuu:ev10",
+        "akyuu:ev11",
+        "akyuu:ev12",
+        "akyuu:ev13",
+        "akyuu:ev14",
+        "akyuu:ev15",
+        "akyuu:ev16",
+        "akyuu:ev17",
+        "akyuu:ev18",
+        "akyuu:ev19",
+        "akyuu:ev20",
+        "akyuu:ev21",
+        "akyuu:ev22",
+        "akyuu:ev23",
+        "akyuu:ev24",
+        "akyuu:ev25",
+        "akyuu:ev26",
+        "akyuu:ev27",
+        "akyuu:ev28",
+        "akyuu:ev29",
+        "akyuu:ev30",
+        "akyuu:ev31",
+        "akyuu:ev32",
+        "akyuu:ev33",
+        "akyuu:ev34",
+        "akyuu:ev35",
+        "akyuu:ev36"
+      ]
+    }
+  },
+  {
+    "id": "toyohime",
+    "continuity": "windows",
+    "anchor": {
+      "label": "锦上京设施危机以后",
+      "text": "你是连接山海的月之公主，与依姬共同守卫月方，曾受永琳教导。锦上京时你管理净秽山、解开石之女神封印；续篇从已介入设施危机的丰姬写起。",
+      "age": {
+        "kind": "minimum",
+        "label": "至少一千五百余年前已活动",
+        "years": 1500,
+        "sourceIds": [
+          "moon3"
+        ],
+        "note": "儚月抄小说3直接回忆一千五百余年前的浦岛子事件，给下限，不给出生年；月民长生并非蓬莱式不死。"
+      }
+    },
+    "sources": [
+      {
+        "id": "moon3",
+        "title": "儚月抄小说第3话《净土龙宫城》",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Cage_in_Lunatic_Runagate./第三话",
+        "type": "primary-transcript",
+        "locator": "全文；丰姬第一人称、浦岛子往事"
+      },
+      {
+        "id": "moon6",
+        "title": "儚月抄小说第6话《愚者的密信》",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Cage_in_Lunatic_Runagate./第六话",
+        "type": "primary-transcript",
+        "locator": "正文全文；THB 转录行20–354，逃月、巡卫、代笔与森林任务"
+      },
+      {
+        "id": "moonEnd",
+        "title": "儚月抄小说最终话《两个望乡》",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Cage_in_Lunatic_Runagate./最终话",
+        "type": "primary-transcript",
+        "locator": "正文全文；THB 转录行18–530，留月释疑与月酒结果"
+      },
+      {
+        "id": "g20",
+        "title": "锦上京正式版设定文档",
+        "url": "https://thbwiki.cc/附带文档:东方锦上京/Omake",
+        "type": "primary-transcript",
+        "locator": "六名新角色及丰姬设定全文"
+      },
+      {
+        "id": "r20",
+        "title": "锦上京红灵梦路线",
+        "url": "https://thbwiki.cc/游戏对话:东方锦上京/博丽灵梦（红）",
+        "type": "primary-transcript",
+        "locator": "Stage 1–3 全部，4–6 已读段落"
+      }
+    ],
+    "history": [
+      {
+        "id": "toyohime:h01",
+        "label": "月方与老师",
+        "work": "儚月抄小说3",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你和依姬受永琳教导，后来担任月之使者首领；你能连通山与海，也能借它来往月面与地上。",
+        "sourceIds": [
+          "moon3"
+        ],
+        "note": ""
+      },
+      {
+        "id": "toyohime:h02",
+        "label": "浦岛子往事",
+        "work": "儚月抄小说3",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "一千五百余年前，你接待误到月面的浦岛子；为了送回与寿命问题听取永琳安排，成为之后一直记着的旧事。",
+        "sourceIds": [
+          "moon3"
+        ],
+        "note": ""
+      },
+      {
+        "id": "toyohime:h03",
+        "label": "新来的月兔",
+        "work": "儚月抄小说3、6",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "逃月兔带永琳的信归来，你与依姬收留并给她铃仙之名；月面传出谋反流言，你查信与探察可疑来客。",
+        "sourceIds": [
+          "moon3",
+          "moon6"
+        ],
+        "note": ""
+      },
+      {
+        "id": "toyohime:h04",
+        "label": "第二次月面战争",
+        "work": "儚月抄小说最终话",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你与依姬款待留月的灵梦，追问召神背后的帮助者；明面的防卫胜利没有阻止幽幽子取走月酒。",
+        "sourceIds": [
+          "moonEnd"
+        ],
+        "note": ""
+      },
+      {
+        "id": "toyohime:h05",
+        "label": "净秽山危机",
+        "work": "锦上京",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你管理过滤生命信息的设施，过载后解除阿梨夜封印，请她阻止信息涌入；红灵梦来访时，你指向深处的女神。",
+        "sourceIds": [
+          "g20",
+          "r20"
+        ],
+        "note": "设施职责据文档，来访战斗仅红灵梦路线；不统一所有自机结局。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "儚月抄小说3",
+        "title": "儚月抄小说3",
+        "participation": "participant",
+        "historyIds": [
+          "toyohime:h01",
+          "toyohime:h02"
+        ],
+        "sourceIds": [
+          "moon3"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "儚月抄小说3、6",
+        "title": "儚月抄小说3、6",
+        "participation": "participant",
+        "historyIds": [
+          "toyohime:h03"
+        ],
+        "sourceIds": [
+          "moon3",
+          "moon6"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "儚月抄小说最终话",
+        "title": "儚月抄小说最终话",
+        "participation": "participant",
+        "historyIds": [
+          "toyohime:h04"
+        ],
+        "sourceIds": [
+          "moonEnd"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "锦上京",
+        "title": "锦上京",
+        "participation": "participant",
+        "historyIds": [
+          "toyohime:h05"
+        ],
+        "sourceIds": [
+          "g20",
+          "r20"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "你重看设施危机留下的记录，月海的风仍照旧吹过桃树。下一批使者出发前，你想把通路、许可与回程条件分别说清。",
+      "years": 50,
+      "goal": {
+        "name": "让月海通路有章可循",
+        "description": "理清设施与山海通路的许可，让必要来往不再因含混安排引起猜疑。"
+      },
+      "milestones": [
+        {
+          "text": "你将设施旧记录与山海通路分开，逐条标清谁能使用。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你找出许可之间的漏洞，补好回程条件，免得同一封信有两种解释。",
+          "fail": "旧记录互相抵触，你暂停一段通路，先查明当时是谁作的决定。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "使者能将条件带回各方，也敢向你问不明白的地方。",
+          "fail": "众人仍只听懂一半，你收回含混指示，换更短的说明重新交代。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "你将这轮通路说明交给使者，坐回月海边，再读一次仍未解的旧信。",
+          "effects": {}
+        }
+      ],
+      "success": "这轮山海通路有了明白许可，使者知道怎样出发与回来。旧疑问仍会存在，你将认下的约定留好，月海继续吹着安静的风。",
+      "bittersweet": "几段通路已能照约使用，另几段仍要查旧记录。你把可走的交给使者，未明的先留在案上，下一轮继续听他们问话。",
+      "failure": "含混安排没能理清，你暂时关闭有争议的一段通路。月海没有因此消失，这卷先留下可查的旧记录，等待下一次重新开门。",
+      "eventOverrides": [
+        {
+          "id": "toyohime:ev02",
+          "text": "你听过新通路尽头的海声，再与惯常月海比对，把变化记给使者看。"
+        },
+        {
+          "id": "toyohime:ev03",
+          "text": "你将山海相连的出口挪到新定的岸线，等使者实际走过，再收回多余的通道。"
+        },
+        {
+          "id": "toyohime:ev05",
+          "text": "你从这季桃树挑一枚新熟的果，尝过滋味，才让人分给刚巡完路的月兔。"
+        },
+        {
+          "id": "toyohime:ev13",
+          "text": "你拿新画的岸图对照熟悉海湾，贝壳标记留在掌中，只用来辨这一季的浅滩。"
+        },
+        {
+          "id": "toyohime:ev31",
+          "text": "你读过永琳托月兔捎来的短笺，将要问的旧事另列一行，回信也不急着替她作答。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "toyohime:ev32",
+          "text": "你收到辉夜经使者转来的消息，折好以后看一会儿月海，再将能答的话写给送信的兔子。",
+          "with": [],
+          "remember": []
+        }
+      ],
+      "reviewedEventIds": [
+        "toyohime:ev01",
+        "toyohime:ev02",
+        "toyohime:ev03",
+        "toyohime:ev04",
+        "toyohime:ev05",
+        "toyohime:ev06",
+        "toyohime:ev07",
+        "toyohime:ev08",
+        "toyohime:ev09",
+        "toyohime:ev10",
+        "toyohime:ev11",
+        "toyohime:ev12",
+        "toyohime:ev13",
+        "toyohime:ev14",
+        "toyohime:ev15",
+        "toyohime:ev16",
+        "toyohime:ev17",
+        "toyohime:ev18",
+        "toyohime:ev19",
+        "toyohime:ev20",
+        "toyohime:ev21",
+        "toyohime:ev22",
+        "toyohime:ev23",
+        "toyohime:ev24",
+        "toyohime:ev25",
+        "toyohime:ev26",
+        "toyohime:ev27",
+        "toyohime:ev28",
+        "toyohime:ev29",
+        "toyohime:ev30",
+        "toyohime:ev31",
+        "toyohime:ev32",
+        "toyohime:ev33",
+        "toyohime:ev34",
+        "toyohime:ev35",
+        "toyohime:ev36"
+      ]
+    }
+  },
+  {
+    "id": "yorihime",
+    "continuity": "windows",
+    "anchor": {
+      "label": "儚月抄留月释疑以后",
+      "text": "你是召神的月之公主，与丰姬一同担任月之使者首领，也训练新来的月兔。你迎战过登月者，借灵梦公开召神澄清疑虑；续篇接着写这位已有长期经验的守卫者。",
+      "age": {
+        "kind": "minimum",
+        "label": "至少一千五百余年前已活动",
+        "years": 1500,
+        "sourceIds": [
+          "moon3"
+        ],
+        "note": "小说3中丰姬谈一千五百余年前浦岛子，依姬也直接认出那位爱钓鱼的旧客；下限1500，无出生年。月民能因战争事故死亡。"
+      }
+    },
+    "sources": [
+      {
+        "id": "moon3",
+        "title": "儚月抄小说第3话《净土龙宫城》",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Cage_in_Lunatic_Runagate./第三话",
+        "type": "primary-transcript",
+        "locator": "全文；丰姬第一人称、浦岛子往事"
+      },
+      {
+        "id": "moon6",
+        "title": "儚月抄小说第6话《愚者的密信》",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Cage_in_Lunatic_Runagate./第六话",
+        "type": "primary-transcript",
+        "locator": "正文全文；THB 转录行20–354，逃月、巡卫、代笔与森林任务"
+      },
+      {
+        "id": "moonEnd",
+        "title": "儚月抄小说最终话《两个望乡》",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Cage_in_Lunatic_Runagate./最终话",
+        "type": "primary-transcript",
+        "locator": "正文全文；THB 转录行18–530，留月释疑与月酒结果"
+      }
+    ],
+    "history": [
+      {
+        "id": "yorihime:h01",
+        "label": "月方与老师",
+        "work": "儚月抄小说3",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你和丰姬曾受永琳教导，后来共同担任月之使者首领；能召神力，也负责训练受收留的新月兔。",
+        "sourceIds": [
+          "moon3"
+        ],
+        "note": ""
+      },
+      {
+        "id": "yorihime:h02",
+        "label": "浦岛子旧客",
+        "work": "儚月抄小说3",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "丰姬提起一千五百余年前的浦岛子时，你认出那位爱钓鱼的人；这是姐妹共同记忆中的旧来客。",
+        "sourceIds": [
+          "moon3"
+        ],
+        "note": ""
+      },
+      {
+        "id": "yorihime:h03",
+        "label": "迎击登月者",
+        "work": "儚月抄小说6、最终话",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "新铃仙巡卫时看见你与魔理沙交战；最终话确认登月者被压下，灵梦却仍留月，以公开召神澄清谋反疑虑。",
+        "sourceIds": [
+          "moon6",
+          "moonEnd"
+        ],
+        "note": ""
+      },
+      {
+        "id": "yorihime:h04",
+        "label": "追問召神",
+        "work": "儚月抄小说最终话",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你追问灵梦何以学会召住吉三神，与丰姬听出紫的安排；月面防卫并没有揭尽幕后偷取月酒的计划。",
+        "sourceIds": [
+          "moonEnd"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "儚月抄小说3",
+        "title": "儚月抄小说3",
+        "participation": "participant",
+        "historyIds": [
+          "yorihime:h01",
+          "yorihime:h02"
+        ],
+        "sourceIds": [
+          "moon3"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "儚月抄小说6、最终话",
+        "title": "儚月抄小说6、最终话",
+        "participation": "participant",
+        "historyIds": [
+          "yorihime:h03"
+        ],
+        "sourceIds": [
+          "moon6",
+          "moonEnd"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "儚月抄小说最终话",
+        "title": "儚月抄小说最终话",
+        "participation": "participant",
+        "historyIds": [
+          "yorihime:h04"
+        ],
+        "sourceIds": [
+          "moonEnd"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "训练场又来了新使者，你把木刀与巡卫图放在一处，先听他们说哪里不懂。接下来的训练，你想让人敢开口，也能自己判断。",
+      "years": 50,
+      "goal": {
+        "name": "让新使者独立守岗",
+        "description": "把可传授的召神与巡卫经验整理成训练，让新使者能自行判断守岗问题。"
+      },
+      "milestones": [
+        {
+          "text": "你让新使者走过一轮巡岗，记下他们尚不能独立处理的路口。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你将召神条件与巡卫判断讲清，使者能说出为何要用这一招。",
+          "fail": "解释仍太快，你拆短训练，只留他们已经理解的一段再练。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "使者敢回报判断，也愿在出错时请同伴帮忙，不再只等命令。",
+          "fail": "使者仍不敢开口，你与他们走一轮，逐个问过当时看见什么。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "你将这一轮已教清的动作记成短册，交给下次值岗的人继续练。",
+          "effects": {}
+        }
+      ],
+      "success": "新使者能独立守一段岗，也知道何时请同伴相助。你收好这轮训练册，月海仍在场外，下一队来时可以从懂得的地方接着练。",
+      "bittersweet": "一段巡岗已能独立处理，几项召神条件仍要你重复说明。你留下可用的短册，继续陪新使者走，把不敢问的问题再问一遍。",
+      "failure": "这轮训练没让使者独立守岗，你收回过快的安排，先陪他们练最简单的一段。经验仍在，这卷先留下几处需要重教的地方。",
+      "eventOverrides": [
+        {
+          "id": "yorihime:ev01",
+          "text": "你取一柄新木刀给来练的月兔，先示范这回要改的步法，让她看清落点。"
+        },
+        {
+          "id": "yorihime:ev03",
+          "text": "你在新划的训练线间走一遍，脚步仍准，只将路面变化的地方另画给月兔看。"
+        },
+        {
+          "id": "yorihime:ev04",
+          "text": "你点出这回训练所需的神名，说明请神前要分清的条件，再让月兔重述。"
+        },
+        {
+          "id": "yorihime:ev18",
+          "text": "你拿起这轮练习用的木刀，检查磨损，再交给已经练熟基本步法的月兔。"
+        },
+        {
+          "id": "yorihime:ev31",
+          "text": "你读过永琳经使者捎来的建议，按训练场眼下的情况添上追问，再托兔子送回。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "yorihime:ev32",
+          "text": "你收到辉夜转来的旧事说明，读完只把有助于辨清眼前问题的一段抄进私册。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "yorihime:ev33",
+          "text": "使者带回旧铃仙的近况，你核过信里这一回的托付，让回程月兔照约送去答复。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "yorihime:ev35",
+          "text": "你想到曾与灵梦交战的召神方式，把新训练心得写成短笺，经使者询问她是否愿意交换见解。",
+          "with": [],
+          "remember": []
+        }
+      ],
+      "reviewedEventIds": [
+        "yorihime:ev01",
+        "yorihime:ev02",
+        "yorihime:ev03",
+        "yorihime:ev04",
+        "yorihime:ev05",
+        "yorihime:ev06",
+        "yorihime:ev07",
+        "yorihime:ev08",
+        "yorihime:ev09",
+        "yorihime:ev10",
+        "yorihime:ev11",
+        "yorihime:ev12",
+        "yorihime:ev13",
+        "yorihime:ev14",
+        "yorihime:ev15",
+        "yorihime:ev16",
+        "yorihime:ev17",
+        "yorihime:ev18",
+        "yorihime:ev19",
+        "yorihime:ev20",
+        "yorihime:ev21",
+        "yorihime:ev22",
+        "yorihime:ev23",
+        "yorihime:ev24",
+        "yorihime:ev25",
+        "yorihime:ev26",
+        "yorihime:ev27",
+        "yorihime:ev28",
+        "yorihime:ev29",
+        "yorihime:ev30",
+        "yorihime:ev31",
+        "yorihime:ev32",
+        "yorihime:ev33",
+        "yorihime:ev34",
+        "yorihime:ev35",
+        "yorihime:ev36"
+      ]
+    }
+  },
+  {
+    "id": "reisen2",
+    "continuity": "windows",
+    "anchor": {
+      "label": "儚月抄信使任务以后",
+      "text": "你是被绵月姐妹收留、继承铃仙之名的月兔，和地上的优昙华院不是同一人。你曾逃月又带信返回，如今巡卫与送信；续篇从已经受训的月之使者写起。",
+      "age": {
+        "kind": "unknown",
+        "label": "已做信使，实际年龄不详",
+        "years": null,
+        "sourceIds": [
+          "moon3"
+        ],
+        "note": "三个月前逃月是事件间隔，不是出生时长；捣药集体历史不能当个人岁数，也不能继承前任狂眼能力。"
+      }
+    },
+    "sources": [
+      {
+        "id": "moon3",
+        "title": "儚月抄小说第3话《净土龙宫城》",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Cage_in_Lunatic_Runagate./第三话",
+        "type": "primary-transcript",
+        "locator": "全文；丰姬第一人称、浦岛子往事"
+      },
+      {
+        "id": "moon6",
+        "title": "儚月抄小说第6话《愚者的密信》",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Cage_in_Lunatic_Runagate./第六话",
+        "type": "primary-transcript",
+        "locator": "正文全文；THB 转录行20–354，逃月、巡卫、代笔与森林任务"
+      },
+      {
+        "id": "moonEnd",
+        "title": "儚月抄小说最终话《两个望乡》",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Cage_in_Lunatic_Runagate./最终话",
+        "type": "primary-transcript",
+        "locator": "正文全文；THB 转录行18–530，留月释疑与月酒结果"
+      }
+    ],
+    "history": [
+      {
+        "id": "reisen2:h01",
+        "label": "离开原差事",
+        "work": "儚月抄小说6",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你厌倦月兔反复捣药的差事，披羽衣逃向地面；落到神社受伤后由灵梦照料，随后见到永琳。",
+        "sourceIds": [
+          "moon6"
+        ],
+        "note": ""
+      },
+      {
+        "id": "reisen2:h02",
+        "label": "归月与姓名",
+        "work": "儚月抄小说3、6",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你带永琳的信返回，被绵月姐妹收留，沿用旧铃仙留下的名字，之后受依姬训练，成为新的月之使者。",
+        "sourceIds": [
+          "moon3",
+          "moon6"
+        ],
+        "note": ""
+      },
+      {
+        "id": "reisen2:h03",
+        "label": "巡卫与新信",
+        "work": "儚月抄小说6",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你巡卫时看见依姬迎战魔理沙，又承担给永琳送信的任务；信中要澄清召神的疑虑，你还想到感谢灵梦。",
+        "sourceIds": [
+          "moon6"
+        ],
+        "note": ""
+      },
+      {
+        "id": "reisen2:h04",
+        "label": "森林任务",
+        "work": "儚月抄小说6、最终话",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "丰姬在月海见到你的信后，带你到地面森林等待来者；最终话说明永琳借你的归月信传话，月面流言由此有了回应。",
+        "sourceIds": [
+          "moon6",
+          "moonEnd"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "儚月抄小说6",
+        "title": "儚月抄小说6",
+        "participation": "participant",
+        "historyIds": [
+          "reisen2:h01",
+          "reisen2:h03"
+        ],
+        "sourceIds": [
+          "moon6"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "儚月抄小说3、6",
+        "title": "儚月抄小说3、6",
+        "participation": "participant",
+        "historyIds": [
+          "reisen2:h02"
+        ],
+        "sourceIds": [
+          "moon3",
+          "moon6"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "儚月抄小说6、最终话",
+        "title": "儚月抄小说6、最终话",
+        "participation": "participant",
+        "historyIds": [
+          "reisen2:h04"
+        ],
+        "sourceIds": [
+          "moon6",
+          "moonEnd"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "绵月家交来一封新信，你先核对该去的地方与回程许可，再将它收进袋中。你不想每回都等别人替你解释，想试着把这一程自己走完。",
+      "years": 30,
+      "goal": {
+        "name": "把一封信平安送回",
+        "description": "独立完成一次有来回许可的送信，将托付与自己的回程都说清楚。"
+      },
+      "milestones": [
+        {
+          "text": "你核对新信收件人与回程约定，把要带回的答复另记一张。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "pass": "你有力气走完这一程，信袋没有遗失，回程也照着约定停步。",
+          "fail": "途中疲惫让脚步乱了，你在许可停留处休息，托同伴报一声迟到。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "收信人听懂这回托付，将答复交给你，你也敢问清未明的一句。",
+          "fail": "对方的话与你记的不合，你请他再说明，先不把含混答复带回去。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "你回到值岗处，将送达与回信都交清，另记下这一程的新问题。",
+          "effects": {}
+        }
+      ],
+      "success": "新信与答复都照约送达，你自己也认得这条来回道路。旧名字仍有前任的影子，这一卷却留下了你亲手完成的信使记录。",
+      "bittersweet": "一封信已经送到，答复仍有待问清。你按许可回到值岗处，把未明的那句话留在记录上，等下一回再去核对。",
+      "failure": "这一程没能按时交清，你在许可停留处退回重新整理。信袋仍保管着，回程也有去处，下次先把最含混的托付问明白。",
+      "eventOverrides": [
+        {
+          "id": "reisen2:ev01",
+          "text": "你巡过门口，顺路替药房搬了一支新杵；旧日捣药的日子已离开，眼前仍要回去值岗。"
+        },
+        {
+          "id": "reisen2:ev07",
+          "text": "你换一只新信袋，试过袋口够紧，再把这回要送的信放进去。"
+        },
+        {
+          "id": "reisen2:ev08",
+          "text": "你接过新一程的通行许可，虽已离过月宫，仍把这一回的出口与回程问清。"
+        },
+        {
+          "id": "reisen2:ev18",
+          "text": "你经过旧药房，听见里面的杵声，停了一下；如今轮到你的，是手里另一封要送的信。"
+        }
+      ],
+      "reviewedEventIds": [
+        "reisen2:ev01",
+        "reisen2:ev02",
+        "reisen2:ev03",
+        "reisen2:ev04",
+        "reisen2:ev05",
+        "reisen2:ev06",
+        "reisen2:ev07",
+        "reisen2:ev08",
+        "reisen2:ev09",
+        "reisen2:ev10",
+        "reisen2:ev11",
+        "reisen2:ev12",
+        "reisen2:ev13",
+        "reisen2:ev14",
+        "reisen2:ev15",
+        "reisen2:ev16",
+        "reisen2:ev17",
+        "reisen2:ev18",
+        "reisen2:ev19",
+        "reisen2:ev20",
+        "reisen2:ev21",
+        "reisen2:ev22",
+        "reisen2:ev23",
+        "reisen2:ev24",
+        "reisen2:ev25",
+        "reisen2:ev26",
+        "reisen2:ev27",
+        "reisen2:ev28",
+        "reisen2:ev29",
+        "reisen2:ev30",
+        "reisen2:ev31",
+        "reisen2:ev32",
+        "reisen2:ev33",
+        "reisen2:ev34",
+        "reisen2:ev35",
+        "reisen2:ev36"
+      ]
+    }
+  },
+  {
+    "id": "kasen",
+    "continuity": "windows",
+    "anchor": {
+      "label": "鬼臂再封印与后日谈以后",
+      "text": "你是以仙人身份生活的鬼，真正右臂的邪气已经再度封存，眼前仍使用方术之臂。你回到仙邸，也继续关照灵梦；续篇从这位已有动物与修行经验的华扇写起。",
+      "age": {
+        "kind": "unknown",
+        "label": "长期修行的鬼，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "wa1",
+          "waEnd"
+        ],
+        "note": "真身是鬼，非人类修仙童年；最终话揭示旧鬼臂，不能从传说人物生日硬换实际岁数。"
+      }
+    },
+    "sources": [
+      {
+        "id": "wa1",
+        "title": "茨歌仙第1话",
+        "url": "https://thbwiki.cc/东方茨歌仙/第一话",
+        "type": "primary-transcript",
+        "locator": "P1–26 全文"
+      },
+      {
+        "id": "wa10",
+        "title": "茨歌仙第10话《帚木的别天地》",
+        "url": "https://thbwiki.cc/东方茨歌仙/第十话",
+        "type": "primary-transcript",
+        "locator": "P1–25；仙界与救助魔理沙"
+      },
+      {
+        "id": "ulil",
+        "title": "深秘录华扇路线",
+        "url": "https://thbwiki.cc/游戏对话:东方深秘录/茨木华扇",
+        "type": "primary-transcript",
+        "locator": "Stage 1–5、Ending 全文"
+      },
+      {
+        "id": "aocf",
+        "title": "凭依华灵梦与华扇路线",
+        "url": "https://thbwiki.cc/游戏对话:东方凭依华/博丽灵梦&茨木华扇",
+        "type": "primary-transcript",
+        "locator": "Stage 1–4、Ending 全文"
+      },
+      {
+        "id": "waEnd",
+        "title": "茨歌仙最终话",
+        "url": "https://thbwiki.cc/东方茨歌仙/最终话",
+        "type": "primary-transcript",
+        "locator": "P3–5、19–23、31–47；鬼臂再封印与回家"
+      },
+      {
+        "id": "waAfter",
+        "title": "茨歌仙后日谈",
+        "url": "https://thbwiki.cc/东方茨歌仙/后日谈",
+        "type": "primary-transcript",
+        "locator": "P1–32 全文"
+      },
+      {
+        "id": "colaNew6",
+        "title": "香霖堂外来韦编6《宇佐见堇子有三人！》",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第6话",
+        "type": "primary-transcript",
+        "locator": "正文全文；THB 转录行35–346"
+      },
+      {
+        "id": "colaNew2",
+        "title": "香霖堂外来韦编第2话",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第2话",
+        "type": "primary-transcript",
+        "locator": "正文全文；杂志P60–63，THB转录行26–228"
+      }
+    ],
+    "history": [
+      {
+        "id": "kasen:h01",
+        "label": "独臂与仙邸",
+        "work": "茨歌仙1、10",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你借方术维持右臂，在隐藏的仙界居住并照料动物；神社附近的人将你视作一位仙人。",
+        "sourceIds": [
+          "wa1",
+          "wa10"
+        ],
+        "note": ""
+      },
+      {
+        "id": "kasen:h02",
+        "label": "神社劝诫",
+        "work": "茨歌仙1",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你查问所谓河童之臂，发现只是玩具，批评灵梦捏造神体招客；随后开始更常来神社，关心人类生活。",
+        "sourceIds": [
+          "wa1"
+        ],
+        "note": ""
+      },
+      {
+        "id": "kasen:road",
+        "label": "山中路标",
+        "work": "茨歌仙10",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你给竿打做的路标被误传为玉枝树；魔理沙在山中迷路后，你将她救起。",
+        "sourceIds": [
+          "wa10"
+        ],
+        "note": ""
+      },
+      {
+        "id": "kasen:h03",
+        "label": "深秘录调查",
+        "work": "深秘录",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你的路线里，你收集灵异珠又发现数量异常，借开放结界来到外界，遇见堇子；原本寻找的事却没有成功。",
+        "sourceIds": [
+          "ulil"
+        ],
+        "note": ""
+      },
+      {
+        "id": "kasen:h08",
+        "label": "香霖堂会面",
+        "work": "香霖堂外来韦编2",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你在香霖堂同堇子碰面；她离开后，你向店主解释灵异珠与入梦来访的缘由。堇子稍后也向他说明，你们常互托差事。",
+        "sourceIds": [
+          "colaNew2"
+        ],
+        "note": ""
+      },
+      {
+        "id": "kasen:h04",
+        "label": "完全凭依",
+        "work": "凭依华",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "你与灵梦组队调查，留意到凭依可以未获同意夺身；试探各方之后，紫指出这种调查也可能带来危险。",
+        "sourceIds": [
+          "aocf"
+        ],
+        "note": ""
+      },
+      {
+        "id": "kasen:h05",
+        "label": "堇子失踪调查",
+        "work": "香霖堂外来韦编6",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你来香霖堂询问堇子，告知她安好却不做梦；听过搜救疑点后促请哆来咪，又指出被夺肉体的二重身仍未得救。",
+        "sourceIds": [
+          "colaNew6"
+        ],
+        "note": "她拒绝明说在哪里见过堇子；不将霖之助关于出境的推断写成该话明确展示的行动。"
+      },
+      {
+        "id": "kasen:h06",
+        "label": "鬼臂再封印",
+        "work": "茨歌仙最终话",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你为处理带邪气的旧右臂让灵梦卷入最后一战，切回的鬼臂再次封存；你没有死去，仍回仙邸面对留下的旧物。",
+        "sourceIds": [
+          "waEnd"
+        ],
+        "note": ""
+      },
+      {
+        "id": "kasen:h07",
+        "label": "后日谈",
+        "work": "茨歌仙后日谈",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "灵梦想借鬼臂展览，你因危险拒绝，河童改造假货；听小町说过天子协助的来由后，你仍到神社继续劝诫。",
+        "sourceIds": [
+          "waAfter"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "茨歌仙1、10",
+        "title": "茨歌仙1、10",
+        "participation": "participant",
+        "historyIds": [
+          "kasen:h01",
+          "kasen:road"
+        ],
+        "sourceIds": [
+          "wa1",
+          "wa10"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "茨歌仙1",
+        "title": "茨歌仙1",
+        "participation": "participant",
+        "historyIds": [
+          "kasen:h02"
+        ],
+        "sourceIds": [
+          "wa1"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "深秘录",
+        "title": "深秘录",
+        "participation": "participant",
+        "historyIds": [
+          "kasen:h03"
+        ],
+        "sourceIds": [
+          "ulil"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "凭依华",
+        "title": "凭依华",
+        "participation": "participant",
+        "historyIds": [
+          "kasen:h04"
+        ],
+        "sourceIds": [
+          "aocf"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "香霖堂外来韦编6",
+        "title": "香霖堂外来韦编6",
+        "participation": "participant",
+        "historyIds": [
+          "kasen:h05"
+        ],
+        "sourceIds": [
+          "colaNew6"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "茨歌仙最终话",
+        "title": "茨歌仙最终话",
+        "participation": "participant",
+        "historyIds": [
+          "kasen:h06"
+        ],
+        "sourceIds": [
+          "waEnd"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "茨歌仙后日谈",
+        "title": "茨歌仙后日谈",
+        "participation": "participant",
+        "historyIds": [
+          "kasen:h07"
+        ],
+        "sourceIds": [
+          "waAfter"
+        ],
+        "note": "仅涵盖所列已读原文；具体范围与缺口见研究记录。"
+      },
+      {
+        "work": "香霖堂外来韦编2",
+        "title": "香霖堂外来韦编2",
+        "participation": "participant",
+        "historyIds": [
+          "kasen:h08"
+        ],
+        "sourceIds": [
+          "colaNew2"
+        ],
+        "note": "全文已读；华扇与堇子双向委托，不把霖之助的猜测当她所有行动。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "仙邸又收下一只受伤的动物，你将药碗放到健全左手旁，先让来帮忙的人看清怎样照料。接下来的日子，你想把可靠办法一点点教出去。",
+      "years": 40,
+      "goal": {
+        "name": "把照料留给会照料的人",
+        "description": "教会来帮忙的人分清动物所需，让仙邸照料不只依靠自己。"
+      },
+      "milestones": [
+        {
+          "text": "你列出这批动物各自的伤处与食物，让帮手先看过再伸手。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "帮手能辨清不同伤处，照料步骤也能按你解释的理由来做。",
+          "fail": "帮手把药与食物混错，你重排器皿，陪他从最容易的一项再学。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "动物愿意靠近帮手，你也能把一段日常照料交给他处理。",
+          "fail": "动物仍只认你的手，你带帮手慢慢靠近，先让他做熟固定的一件事。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "你看过这轮照料记录，将可交出的工作留给帮手，自己继续巡过仙邸。",
+          "effects": {}
+        }
+      ],
+      "success": "仙邸有人能可靠地照料动物，你腾出手去看那些仍需亲自问候的地方。封存的旧臂还在匣中，这一卷留下了愿意接过药碗的人。",
+      "bittersweet": "几只动物已接受帮手，另几只仍需你亲自照料。你将有效的方法留下，继续陪他们熟悉，仙邸的日常慢慢添了另一双手。",
+      "failure": "这一轮照料没能顺利交出，你收回过快的安排，陪帮手重新练最简单的一件事。动物仍在身边，可靠的方法也仍可以继续教。",
+      "eventOverrides": [
+        {
+          "id": "kasen:ev02",
+          "text": "你给这次收留的伤鸟换好绷带，把旧日用惯的药碗放到它够不着的地方。"
+        },
+        {
+          "id": "kasen:ev09",
+          "text": "你让新帮手先看懂眼前动物的动作，再解释哪一种靠近会让它害怕。"
+        },
+        {
+          "id": "kasen:ev19",
+          "text": "这只动物恢复以后，你打开院门看它自己选择去处，不急着让帮手替它决定。"
+        },
+        {
+          "id": "kasen:ev20",
+          "text": "你用健全的左手端稳药碗，方术维持的右臂轻轻挡在旁边，先让动物闻过气味。"
+        }
+      ],
+      "reviewedEventIds": [
+        "kasen:ev01",
+        "kasen:ev02",
+        "kasen:ev03",
+        "kasen:ev04",
+        "kasen:ev05",
+        "kasen:ev06",
+        "kasen:ev07",
+        "kasen:ev08",
+        "kasen:ev09",
+        "kasen:ev10",
+        "kasen:ev11",
+        "kasen:ev12",
+        "kasen:ev13",
+        "kasen:ev14",
+        "kasen:ev15",
+        "kasen:ev16",
+        "kasen:ev17",
+        "kasen:ev18",
+        "kasen:ev19",
+        "kasen:ev20",
+        "kasen:ev21",
+        "kasen:ev22",
+        "kasen:ev23",
+        "kasen:ev24",
+        "kasen:ev25",
+        "kasen:ev26",
+        "kasen:ev27",
+        "kasen:ev28",
+        "kasen:ev29",
+        "kasen:ev30",
+        "kasen:ev31",
+        "kasen:ev32",
+        "kasen:ev33",
+        "kasen:ev34",
+        "kasen:ev35",
+        "kasen:ev36"
+      ]
+    }
+  },
+  {
+    "id": "kosuzu",
+    "continuity": "windows",
+    "anchor": {
+      "label": "铃奈庵重开以后",
+      "text": "你仍在人类村落经营铃奈庵的借书与售书工作，能读懂各种文字。百鬼夜行绘卷附身的危机已过去，你开始自行挑选妖魔本借阅者；续篇接着写重新开门后的书店。",
+      "age": {
+        "kind": "unknown",
+        "label": "已任借书屋店员，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "fs1"
+        ],
+        "note": "原作起点已会工作并有能力，无出生年龄或父亲给襁褓书的资料。结尾未确认永久妖怪化。"
+      }
+    },
+    "sources": [
+      {
+        "id": "fs1",
+        "title": "铃奈庵第1话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第一话",
+        "type": "primary-transcript",
+        "locator": "P1–24；能力与书店实际工作"
+      },
+      {
+        "id": "fs25",
+        "title": "铃奈庵第25话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第二十五话",
+        "type": "primary-transcript",
+        "locator": "P6–23；占卜书与阿求说明"
+      },
+      {
+        "id": "fs46",
+        "title": "铃奈庵第46话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第四十六话",
+        "type": "primary-transcript",
+        "locator": "P1–14 全文；日文尚待补"
+      },
+      {
+        "id": "fs47",
+        "title": "铃奈庵第47话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第四十七话",
+        "type": "primary-transcript",
+        "locator": "P1–13 全文"
+      },
+      {
+        "id": "fs51",
+        "title": "铃奈庵第51话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第五十一话",
+        "type": "primary-transcript",
+        "locator": "P1–25 全文；日文尚待补"
+      },
+      {
+        "id": "fs53",
+        "title": "铃奈庵第53话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第五十三话",
+        "type": "primary-transcript",
+        "locator": "P1–19中文逐页全文；P8–13欢迎会先于P14–19书店重开，含结尾仍为人类"
+      },
+      {
+        "id": "fs2",
+        "title": "铃奈庵第2话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第二话",
+        "type": "primary-transcript",
+        "locator": "P1–25日中文逐页全文；食字虫、阿求求助与小铃熏虫"
+      },
+      {
+        "id": "fs3",
+        "title": "铃奈庵第3话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第三话",
+        "type": "primary-transcript",
+        "locator": "P1–26日中文逐页全文；含P25–26旁白揭示小铃主动唤醒烟烟罗"
+      },
+      {
+        "id": "fs52",
+        "title": "铃奈庵第52话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第五十二话",
+        "type": "primary-transcript",
+        "locator": "P1–13中文逐页全文；日文待补，阿求与文交换意见及赴宴邀请"
+      }
+    ],
+    "history": [
+      {
+        "id": "kosuzu:h01",
+        "label": "识文与书店",
+        "work": "铃奈庵1",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你在借书屋收售与出租书籍，近来觉醒了读懂文字的能力；私下收集妖魔本，也能解释古天狗文字。",
+        "sourceIds": [
+          "fs1"
+        ],
+        "note": ""
+      },
+      {
+        "id": "kosuzu:h06",
+        "label": "食字虫与烟烟罗",
+        "work": "铃奈庵2–3",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "为赶走食字虫，你主动唤醒烟烟罗，却没能重新封印；随后向灵梦与魔理沙解释捕捉的方法，等两人退治归来，再确认书页恢复。",
+        "sourceIds": [
+          "fs2",
+          "fs3"
+        ],
+        "note": ""
+      },
+      {
+        "id": "kosuzu:h02",
+        "label": "占卜书风波",
+        "work": "铃奈庵25",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你读陌生作者的占卜书，书中怨念带来危险，阿求前来说明；易者的结局不是你亲自见证的退治。",
+        "sourceIds": [
+          "fs25"
+        ],
+        "note": ""
+      },
+      {
+        "id": "kosuzu:h03",
+        "label": "村落与妖怪",
+        "work": "铃奈庵46–47",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "阿求带来历史原稿，提醒你理解村落与妖怪的关系；猯藏的身份逐渐明白，也让你重新看待身边往来。",
+        "sourceIds": [
+          "fs46",
+          "fs47"
+        ],
+        "note": ""
+      },
+      {
+        "id": "kosuzu:h04",
+        "label": "绘卷附身",
+        "work": "铃奈庵51",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你受百鬼夜行绘卷影响而行动，魔理沙的调查被打断；猯藏受托处理你身上的绘卷，灵梦另去面对幕后的紫。",
+        "sourceIds": [
+          "fs51"
+        ],
+        "note": "这一话对小铃自主意志仍有争论，不宣称她自愿成为永久妖怪。"
+      },
+      {
+        "id": "kosuzu:h05",
+        "label": "店门重开",
+        "work": "铃奈庵53",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你在赏花欢迎会上理解朋友隐藏妖怪身份的来由，随后重新开店，决定由自己挑选妖魔本的借阅者。",
+        "sourceIds": [
+          "fs53"
+        ],
+        "note": "第53话P8–13欢迎会先于P14–19恢复营业；结尾仍称接近灵梦她们的人类。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "铃奈庵1",
+        "title": "铃奈庵1",
+        "participation": "participant",
+        "historyIds": [
+          "kosuzu:h01"
+        ],
+        "sourceIds": [
+          "fs1"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "铃奈庵25",
+        "title": "铃奈庵25",
+        "participation": "participant",
+        "historyIds": [
+          "kosuzu:h02"
+        ],
+        "sourceIds": [
+          "fs25"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "铃奈庵46–47",
+        "title": "铃奈庵46–47",
+        "participation": "participant",
+        "historyIds": [
+          "kosuzu:h03"
+        ],
+        "sourceIds": [
+          "fs46",
+          "fs47"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "铃奈庵51",
+        "title": "铃奈庵51",
+        "participation": "participant",
+        "historyIds": [
+          "kosuzu:h04"
+        ],
+        "sourceIds": [
+          "fs51"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "铃奈庵53",
+        "title": "铃奈庵53",
+        "participation": "participant",
+        "historyIds": [
+          "kosuzu:h05"
+        ],
+        "sourceIds": [
+          "fs53"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "铃奈庵2–3",
+        "title": "铃奈庵2–3",
+        "participation": "participant",
+        "historyIds": [
+          "kosuzu:h06"
+        ],
+        "sourceIds": [
+          "fs2",
+          "fs3"
+        ],
+        "note": "两话全文已读；第3话P25–26说明主动唤醒，不采用她早先把责任推给虫蛀的说法。"
+      },
+      {
+        "work": "铃奈庵52",
+        "title": "铃奈庵52",
+        "participation": "cameo",
+        "historyIds": [],
+        "sourceIds": [
+          "fs52"
+        ],
+        "note": "P1–13全文已读；小铃仅在猯藏回忆的救出场景出现，本话不另立主动调查事件。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "铃奈庵又收到几本难读的旧书，你把借阅名册放到灯下，先读完自己要推荐的一页。你想让喜欢珍本的人找得到书，也认得该避开的危险。",
+      "years": 15,
+      "goal": {
+        "name": "让珍本有可靠借阅",
+        "description": "为妖魔本建成能照约归还的借阅办法，分清客人所需与书里潜藏的危险。"
+      },
+      "milestones": [
+        {
+          "text": "你为新书登记页码、内容与借阅注意，把能借的先摆到柜边。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你读出一处危险含义，另加清楚说明，让借阅者知道该在哪页停下。",
+          "fail": "有一段意思仍不能确定，你暂不出租那本书，留在店里继续核对。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "借阅者肯照约来还书，也愿告诉你哪些说明实际派上用场。",
+          "fail": "书借出后迟迟未还，你按名册去问，把下一次借阅约定写得更清楚。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "你合上这一卷借阅名册，把归还的珍本重新排好，明日仍会开门。",
+          "effects": {}
+        }
+      ],
+      "success": "珍本有了能照约归还的来路，借阅者也懂得书里的危险。你将收回的书排上柜台，这一卷的铃声之后，总有人愿意再来认真读一页。",
+      "bittersweet": "几本书已可靠借还，另几本仍要你留店核对。你不急着全摆出来，先把有效的说明写好，店门照旧为下一位读者打开。",
+      "failure": "这一轮借阅没能照约维持，你暂收有争议的珍本，逐本核名册。书店仍能做普通生意，危险的那几页，下次先问得更清楚。",
+      "eventOverrides": [
+        {
+          "id": "kosuzu:ev01",
+          "text": "你把新收的书摊在柜台，抄下这一回的题名与来历；读过几页，再决定怎样介绍给客人。"
+        },
+        {
+          "id": "kosuzu:ev02",
+          "text": "你给新卷换一张书签，夹在要再核对的段落旁，免得借出时忘了提醒。"
+        },
+        {
+          "id": "kosuzu:ev10",
+          "text": "你将这一笔售书零钱放进柜里，留出修补书页的钱，想买的珍本另记在私册。"
+        }
+      ],
+      "reviewedEventIds": [
+        "kosuzu:ev01",
+        "kosuzu:ev02",
+        "kosuzu:ev03",
+        "kosuzu:ev04",
+        "kosuzu:ev05",
+        "kosuzu:ev06",
+        "kosuzu:ev07",
+        "kosuzu:ev08",
+        "kosuzu:ev09",
+        "kosuzu:ev10",
+        "kosuzu:ev11",
+        "kosuzu:ev12",
+        "kosuzu:ev13",
+        "kosuzu:ev14",
+        "kosuzu:ev15",
+        "kosuzu:ev16",
+        "kosuzu:ev17",
+        "kosuzu:ev18",
+        "kosuzu:ev19",
+        "kosuzu:ev20",
+        "kosuzu:ev21",
+        "kosuzu:ev22",
+        "kosuzu:ev23",
+        "kosuzu:ev24",
+        "kosuzu:ev25",
+        "kosuzu:ev26",
+        "kosuzu:ev27",
+        "kosuzu:ev28",
+        "kosuzu:ev29",
+        "kosuzu:ev30",
+        "kosuzu:ev31",
+        "kosuzu:ev32",
+        "kosuzu:ev33",
+        "kosuzu:ev34",
+        "kosuzu:ev35",
+        "kosuzu:ev36"
+      ]
+    }
+  },
+  {
+    "id": "miyoi",
+    "continuity": "windows",
+    "anchor": {
+      "label": "醉蝶华第78话已核对话片段",
+      "text": "你仍是鲵吞亭附在酒器中的座敷童子，替店主招待客人。炼酒、怪响与红池传闻都传到柜台前，你听过来客的解释；接下来的日子，仍从店里的酒菜与来往开始。",
+      "age": {
+        "kind": "unknown",
+        "label": "已有店务与附瓢生活，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "le3"
+        ],
+        "note": "原作无出生年，童子种族不意味着本篇从人类儿童长大；店主未认清她的身份。"
+      }
+    },
+    "sources": [
+      {
+        "id": "le3",
+        "title": "醉蝶华第3话",
+        "url": "https://thbwiki.cc/东方醉蝶华/第三话",
+        "type": "primary-transcript",
+        "locator": "P1–24 全文"
+      },
+      {
+        "id": "le40",
+        "title": "醉蝶华第40话",
+        "url": "https://thbwiki.cc/东方醉蝶华/第四十话",
+        "type": "primary-transcript",
+        "locator": "P1–26 全文"
+      },
+      {
+        "id": "le72",
+        "title": "醉蝶华第72话",
+        "url": "https://thbwiki.cc/东方醉蝶华/第七十二话",
+        "type": "primary-transcript",
+        "locator": "P1–31 全文，日文尚待补"
+      },
+      {
+        "id": "le74",
+        "title": "醉蝶华第74话",
+        "url": "https://thbwiki.cc/东方醉蝶华/第七十四话",
+        "type": "primary-transcript",
+        "locator": "P1–20中文逐页全文；日文待补"
+      },
+      {
+        "id": "le75",
+        "title": "醉蝶华第75话",
+        "url": "https://thbwiki.cc/东方醉蝶华/第七十五话",
+        "type": "primary-transcript",
+        "locator": "P1–16中文逐页全文；日文待补"
+      },
+      {
+        "id": "le77part",
+        "title": "醉蝶华第77话已公开转录片段",
+        "url": "https://thbwiki.cc/东方醉蝶华/第七十七话",
+        "type": "primary-transcript",
+        "locator": "仅P1–3中文转录；后续页无正文，非整话"
+      },
+      {
+        "id": "le78part",
+        "title": "醉蝶华第78话已公开转录片段",
+        "url": "https://thbwiki.cc/东方醉蝶华/第七十八话",
+        "type": "primary-transcript",
+        "locator": "仅P1–4、19中文转录；P5–18及20无正文，非整话"
+      }
+    ],
+    "history": [
+      {
+        "id": "miyoi:h01",
+        "label": "店与葫芦",
+        "work": "醉蝶华3",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你向灵梦说明自己是店中的座敷童子，为离开房屋附到萃香葫芦上，也想保护店主与客人而非伤害他们。",
+        "sourceIds": [
+          "le3"
+        ],
+        "note": ""
+      },
+      {
+        "id": "miyoi:h02",
+        "label": "被记住的愿望",
+        "work": "醉蝶华3",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你招待知道真相的灵梦，请她别做只喝水的客人；离店时又问她能否记住谈话，不愿总被当作忘却的存在。",
+        "sourceIds": [
+          "le3"
+        ],
+        "note": ""
+      },
+      {
+        "id": "miyoi:h03",
+        "label": "葫芦误会",
+        "work": "醉蝶华40",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你托魔理沙查葫芦不出酒的缘由，破裂后却没有自由，才知那只是普通葫芦；你亲自向萃香追问并表达不满。",
+        "sourceIds": [
+          "le40"
+        ],
+        "note": ""
+      },
+      {
+        "id": "miyoi:h04",
+        "label": "圣域与炼酒",
+        "work": "醉蝶华72",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你看文的照片、听猯藏谈圣域调查，追问已经付钱却未收到的炼酒；调查记忆异常不是你亲入设施的经历。",
+        "sourceIds": [
+          "le72"
+        ],
+        "note": ""
+      },
+      {
+        "id": "miyoi:h05",
+        "label": "第74话·店中怪响",
+        "work": "醉蝶华74",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "怪响穿过店里的墙壁，你向灵梦求助，店内也贴上了符纸；紫苑来时，你又问起声音，听她解释旧历年末的穷鬼。",
+        "sourceIds": [
+          "le74"
+        ],
+        "note": ""
+      },
+      {
+        "id": "miyoi:h06",
+        "label": "第75话·红池传闻",
+        "work": "醉蝶华75",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "山如在鲵吞亭主持赌场分场，你照常给客人上酒菜；听她与客人说起红色池塘、牡丹和女子幽灵，你也追问这些传闻。",
+        "sourceIds": [
+          "le75"
+        ],
+        "note": ""
+      },
+      {
+        "id": "miyoi:h07",
+        "label": "第78话·听文解释",
+        "work": "醉蝶华78",
+        "kind": "event",
+        "certainty": "reported",
+        "text": "文到店里谈河中的花，认为样子像蟒蛇脱下的妖鳞；你听着她的说明，追问那些花是不是脱下来的皮。",
+        "sourceIds": [
+          "le78part"
+        ],
+        "note": "仅据P19对话，妖鳞是文的解释；缺失的页不用于确认蛇的来历。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "醉蝶华3",
+        "title": "醉蝶华3",
+        "participation": "participant",
+        "historyIds": [
+          "miyoi:h01",
+          "miyoi:h02"
+        ],
+        "sourceIds": [
+          "le3"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "醉蝶华40",
+        "title": "醉蝶华40",
+        "participation": "participant",
+        "historyIds": [
+          "miyoi:h03"
+        ],
+        "sourceIds": [
+          "le40"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "醉蝶华72",
+        "title": "醉蝶华72",
+        "participation": "participant",
+        "historyIds": [
+          "miyoi:h04"
+        ],
+        "sourceIds": [
+          "le72"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "醉蝶华74",
+        "title": "醉蝶华74",
+        "participation": "participant",
+        "historyIds": [
+          "miyoi:h05"
+        ],
+        "sourceIds": [
+          "le74"
+        ],
+        "note": "P1–20中文转录全文已读；美宵听紫苑解释，未把紫苑捕食穷鬼写成美宵行动。"
+      },
+      {
+        "work": "醉蝶华75",
+        "title": "醉蝶华75",
+        "participation": "participant",
+        "historyIds": [
+          "miyoi:h06"
+        ],
+        "sourceIds": [
+          "le75"
+        ],
+        "note": "P1–16中文转录全文已读；美宵在店里听闻牡丹，没有亲自查访牡丹池。"
+      },
+      {
+        "work": "醉蝶华77片段",
+        "title": "醉蝶华77片段",
+        "participation": "participant",
+        "historyIds": [],
+        "sourceIds": [
+          "le77part"
+        ],
+        "note": "只读P1–3，实际端酒行动是店内日常，未另立前史；后续未知。"
+      },
+      {
+        "work": "醉蝶华78片段",
+        "title": "醉蝶华78片段",
+        "participation": "participant",
+        "historyIds": [
+          "miyoi:h07"
+        ],
+        "sourceIds": [
+          "le78part"
+        ],
+        "note": "只读P1–4及P19；美宵行动仅据P19，未称整话或最新篇完整覆盖。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "鲵吞亭新写了一页菜单，你把自己的名字也留在预订簿旁。接下来的日子，你想让客人记住一道喜欢的菜，也记住替他们端上菜的人。",
+      "years": 30,
+      "goal": {
+        "name": "让店花被清楚记住",
+        "description": "让常客记住美宵与她做过的事，使鲵吞亭能靠稳定的店务与来往继续营业。"
+      },
+      "milestones": [
+        {
+          "text": "你将本季菜单与预订单放好，自己负责的事也写在簿边。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "fortune",
+            "min": 6
+          },
+          "pass": "新菜单赚得回材料钱，预订的饭菜都能按时端到桌上。",
+          "fail": "客人点得热闹，材料却耗得更快，你缩减几样菜，先稳住开销。",
+          "passEffects": {
+            "fortune": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "pass": "常客能认出你与做过的事，来时会主动问你今天有什么好菜。",
+          "fail": "客人仍记不清你的名字，你先留一张手写菜单，陪他们再说一遍。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          }
+        },
+        {
+          "text": "你在散席后合上预订簿，洗净最后一只碗，把明日的饭菜备好。",
+          "effects": {}
+        }
+      ],
+      "success": "常客记住菜，也记住你的名字，店里这一季的账能够付清。你放好预订簿，这一卷留下了有人会主动说给你的感谢。",
+      "bittersweet": "账与来往只稳住其中一边，你仍在柜旁添好菜单。有人记得一句话，有人还要你再说一次，鲵吞亭明日依旧有饭菜可等。",
+      "failure": "这一季没留下预想的收入与记忆，你缩短菜单，先接能做好的预订。名字仍写在簿旁，明天端菜时，还可以再向客人介绍自己。",
+      "eventOverrides": [
+        {
+          "id": "miyoi:ev03",
+          "text": "你试新酒时先停在够分辨滋味的分量，把这季想推荐的那一款另记下来。"
+        },
+        {
+          "id": "miyoi:ev07",
+          "text": "你拿着新配的钥匙到备菜小间，核对这次添的器具；店里的日常早已熟悉，仍有新事要管。"
+        }
+      ],
+      "reviewedEventIds": [
+        "miyoi:ev01",
+        "miyoi:ev02",
+        "miyoi:ev03",
+        "miyoi:ev04",
+        "miyoi:ev05",
+        "miyoi:ev06",
+        "miyoi:ev07",
+        "miyoi:ev08",
+        "miyoi:ev09",
+        "miyoi:ev10",
+        "miyoi:ev11",
+        "miyoi:ev12",
+        "miyoi:ev13",
+        "miyoi:ev14",
+        "miyoi:ev15",
+        "miyoi:ev16",
+        "miyoi:ev17",
+        "miyoi:ev18",
+        "miyoi:ev19",
+        "miyoi:ev20",
+        "miyoi:ev21",
+        "miyoi:ev22",
+        "miyoi:ev23",
+        "miyoi:ev24",
+        "miyoi:ev25",
+        "miyoi:ev26",
+        "miyoi:ev27",
+        "miyoi:ev28",
+        "miyoi:ev29",
+        "miyoi:ev30",
+        "miyoi:ev31",
+        "miyoi:ev32",
+        "miyoi:ev33",
+        "miyoi:ev34",
+        "miyoi:ev35",
+        "miyoi:ev36"
+      ]
+    }
+  },
+  {
+    "id": "mizuchi",
+    "continuity": "windows",
+    "anchor": {
+      "label": "轮回篇第4话·神灵庙受审",
+      "text": "你仍是保留夺身能力的怨灵，曾向灵梦认输并在神社接受监管。新的昏迷事件后，你躲进温泉街，又被村纱带至神灵庙；眼下正面对神子的询问，审判结果尚未明确。",
+      "age": {
+        "kind": "unknown",
+        "label": "生前在大结界形成前后活动，岁数不详",
+        "years": null,
+        "sourceIds": [
+          "cd614",
+          "cd71"
+        ],
+        "note": "轮回1回顾宫出口一族与死亡封印，6.14妹红对结界初立时的场景提供有差异的证言；没有出生年或当前精确年龄。"
+      },
+      "identity": "被带至神灵庙接受审问的怨灵",
+      "location": "神灵庙",
+      "realm": "gensokyo"
+    },
+    "sources": [
+      {
+        "id": "cd613",
+        "title": "智灵奇传第6章第13话",
+        "url": "https://thbwiki.cc/东方智灵奇传/第六章第十三话",
+        "type": "primary-transcript",
+        "locator": "P1–54 全文"
+      },
+      {
+        "id": "cd614",
+        "title": "智灵奇传第6章第14话",
+        "url": "https://thbwiki.cc/东方智灵奇传/第六章第十四话",
+        "type": "primary-transcript",
+        "locator": "P1–28 全文"
+      },
+      {
+        "id": "cd71",
+        "title": "智灵奇传第7章第1话·轮回篇开端",
+        "url": "https://thbwiki.cc/东方智灵奇传/第七章第一话",
+        "type": "primary-transcript",
+        "locator": "P1–32 全文；前篇回顾与当前监管"
+      },
+      {
+        "id": "cd72",
+        "title": "智灵奇传第7章第2话·轮回篇2",
+        "url": "https://thbwiki.cc/东方智灵奇传/第七章第二话",
+        "type": "primary-transcript",
+        "locator": "P1–28中文逐页全文；日文待补"
+      },
+      {
+        "id": "cd73",
+        "title": "智灵奇传第7章第3话·轮回篇3",
+        "url": "https://thbwiki.cc/东方智灵奇传/第七章第三话",
+        "type": "primary-transcript",
+        "locator": "P1–26中文逐页全文；日文待补"
+      },
+      {
+        "id": "cd74",
+        "title": "智灵奇传第7章第4话·轮回篇4",
+        "url": "https://thbwiki.cc/东方智灵奇传/第七章第四话",
+        "type": "primary-transcript",
+        "locator": "P1–24中文逐页全文；日文待补，未出现最终裁决"
+      }
+    ],
+    "history": [
+      {
+        "id": "mizuchi:h01",
+        "label": "生前与封印",
+        "work": "智灵奇传轮回篇开端",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "开篇回顾说明宫出口一族曾为神社退妖，你反对人妖共存，卷入冲突，被妖怪杀死后遭前代巫女封印。",
+        "sourceIds": [
+          "cd71"
+        ],
+        "note": "依据原作回顾P1–6，非声称亲读早期每一事件原页。"
+      },
+      {
+        "id": "mizuchi:h02",
+        "label": "逃离与袭击",
+        "work": "智灵奇传轮回篇开端",
+        "kind": "report",
+        "certainty": "canon",
+        "text": "回顾中，你逃离封印后附身红魔馆、白玉楼等处来往者，并深入地底挑战各方，把怨恨指向博丽神社。",
+        "sourceIds": [
+          "cd71"
+        ],
+        "note": "这是漫画作者的前篇回顾，不补每次附身细节。"
+      },
+      {
+        "id": "mizuchi:h03",
+        "label": "最后一战",
+        "work": "智灵奇传6.13",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "觉读出旧封印的记忆，灵梦应战后停止厮杀，提出共存；你不愿被强制成佛，最终向她认输。",
+        "sourceIds": [
+          "cd613"
+        ],
+        "note": ""
+      },
+      {
+        "id": "mizuchi:h04",
+        "label": "监管与旧证言",
+        "work": "智灵奇传6.14",
+        "kind": "report",
+        "certainty": "reported",
+        "text": "灵梦带你去见受害者，决定让你留在地面监管；妹红又回忆你生前被追的场景，和你自己的说法有所不同。",
+        "sourceIds": [
+          "cd614"
+        ],
+        "note": "监管行动确定；对旧追逐的解释是妹红证言，不抹平矛盾。"
+      },
+      {
+        "id": "mizuchi:h05",
+        "label": "轮回新局",
+        "work": "智灵奇传7.1",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你在神社与屠自古谈地面上幽灵的处境；响子再次昏迷，你否认自己动手，各方开始打算怎样处置或利用你。",
+        "sourceIds": [
+          "cd71"
+        ],
+        "note": ""
+      },
+      {
+        "id": "mizuchi:h06",
+        "label": "轮回3·温泉街避嫌",
+        "work": "智灵奇传7.3",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "担心再被怀疑，你躲到旧地狱温泉街；村纱找来时，你抱怨留在地面也会受猜疑，勇仪替你说明近两日的去向，村纱仍要带你回去。",
+        "sourceIds": [
+          "cd73"
+        ],
+        "note": "勇仪的不在场说法只覆盖近两日；响子三日前昏迷另由猯藏谈监视，不能合成所有案件均获排除。"
+      },
+      {
+        "id": "mizuchi:h07",
+        "label": "轮回4·神灵庙受审",
+        "work": "智灵奇传7.4",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "村纱牵着铐链带你到神灵庙，你拉不动她的锚，只得跟随；面对神子的询问和在场众人，你抗议先定罪再审问的做法。",
+        "sourceIds": [
+          "cd74"
+        ],
+        "note": "已核阶段停在受审；未读后续裁决。续篇开头回神社接受监管是本作原创衔接，不是原作已作出释放或送返结论。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "智灵奇传轮回篇开端",
+        "title": "智灵奇传轮回篇开端",
+        "participation": "participant",
+        "historyIds": [
+          "mizuchi:h01",
+          "mizuchi:h02"
+        ],
+        "sourceIds": [
+          "cd71"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "智灵奇传6.13",
+        "title": "智灵奇传6.13",
+        "participation": "participant",
+        "historyIds": [
+          "mizuchi:h03"
+        ],
+        "sourceIds": [
+          "cd613"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "智灵奇传6.14",
+        "title": "智灵奇传6.14",
+        "participation": "participant",
+        "historyIds": [
+          "mizuchi:h04"
+        ],
+        "sourceIds": [
+          "cd614"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "智灵奇传7.1",
+        "title": "智灵奇传7.1",
+        "participation": "participant",
+        "historyIds": [
+          "mizuchi:h05"
+        ],
+        "sourceIds": [
+          "cd71"
+        ],
+        "note": "仅涵盖所列已读原文；路线分歧见 certainty 与研究记录。"
+      },
+      {
+        "work": "智灵奇传7.2",
+        "title": "智灵奇传7.2",
+        "participation": "mentioned",
+        "historyIds": [],
+        "sourceIds": [
+          "cd72"
+        ],
+        "note": "P1–28中文转录全文已读；瑞灵未在场，只被各方怀疑，不能据此确认芳香遇袭是她所为。"
+      },
+      {
+        "work": "智灵奇传7.3",
+        "title": "智灵奇传7.3",
+        "participation": "participant",
+        "historyIds": [
+          "mizuchi:h06"
+        ],
+        "sourceIds": [
+          "cd73"
+        ],
+        "note": "P1–26中文转录全文已读；去温泉街、被村纱找回是已展示行动，勇仪说法保留时间范围。"
+      },
+      {
+        "work": "智灵奇传7.4",
+        "title": "智灵奇传7.4",
+        "participation": "participant",
+        "historyIds": [
+          "mizuchi:h07"
+        ],
+        "sourceIds": [
+          "cd74"
+        ],
+        "note": "P1–24中文转录全文已读；神灵庙审问尚未给出最终裁决。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "审问之后，你回到神社继续接受监管，向来访者说明自己做过什么。以后的来往，你想不用借谁的身体，也能说出自己的名字。",
+      "years": 40,
+      "goal": {
+        "name": "用自己的名字留下来",
+        "description": "在不夺取他人身体的生活里建立可信来往，让地面的人愿意按瑞灵的名字相认。"
+      },
+      "milestones": [
+        {
+          "text": "你在神社留一页自己的行动记录，来访者问起时就当面说明。",
+          "effects": {}
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "pass": "你分清怀疑与真线索，说明能被旁人核对，不再靠夺身压过问话。",
+          "fail": "旧怒气让你答得太急，话里露了矛盾；你留在神社重新对记录。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "insight": -1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "pass": "你守住不用他人身体的生活，疲惫时也有自己能停留休息的位置。",
+          "fail": "独自维持行动让你疲惫，你回到监管处休息，请旁人代送这一封说明。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          }
+        },
+        {
+          "text": "你将本卷往来记录署上自己的名字，留在神社门边，等愿意当面说话的人。",
+          "effects": {}
+        }
+      ],
+      "success": "来访者愿按瑞灵的名字听你说明，你也有不用他人身体的停留之处。旧怨不会一下消失，这一卷却留下了可以亲自承担的来往。",
+      "bittersweet": "说明与生活只稳住一边，你仍回神社留下自己的行踪。有人肯听，有人还在怀疑，你先把这一回能说清的事按自己的名字写好。",
+      "failure": "这一卷没让怀疑散开，你留在神社重理记录，收住夺身的冲动。名字仍署在纸上，下一次问话来时，先把真正做过的事说清。",
+      "eventOverrides": [
+        {
+          "id": "mizuchi:ev01",
+          "text": "旧怒气又聚上来，你想起与灵梦认下的监管约定，停在神社门边，先等这一阵过去。"
+        },
+        {
+          "id": "mizuchi:ev03",
+          "text": "你在神社邻近的一处空地练习退身，避开来往的人，不把任何人的身体当作练习用具。"
+        },
+        {
+          "id": "mizuchi:ev04",
+          "text": "你想把自己的名字写端正，落下的笔却歪成一团。"
+        },
+        {
+          "id": "mizuchi:ev05",
+          "text": "你急着收拢形貌，魂气反而散了半夜。"
+        },
+        {
+          "id": "mizuchi:ev09",
+          "text": "你借来一只木偶试动作，手指僵硬，也只自己重新摆过；来访者仍能看见你没有夺身。"
+        },
+        {
+          "id": "mizuchi:ev14",
+          "text": "你先问清对方愿不愿帮忙，没得到同意便退开一步，把想说的话用自己的声音讲完。"
+        },
+        {
+          "id": "mizuchi:ev17",
+          "text": "你核对受害者恢复的消息，昏睡的人仍让照料者看护；这一回你只托人问候，没有借他们的身。"
+        },
+        {
+          "id": "mizuchi:ev18",
+          "text": "你用自己的声音哼了一小段，断下的地方再唱一次，不去借旁人的喉咙接上。"
+        },
+        {
+          "id": "mizuchi:ev24",
+          "text": "你将代管的器具交还原主，问清数目，空着手回到神社，把这次归还也记在自己的页上。"
+        },
+        {
+          "id": "mizuchi:ev25",
+          "text": "你走过神社参道，遇见怀疑的目光仍停下来说明；夺身的冲动起过，却没有让它变成动作。"
+        },
+        {
+          "id": "mizuchi:ev29",
+          "text": "阿燐问起你这阵子有没有再惹事，你把空着的手摊开，说清这回住在神社做过什么。"
+        },
+        {
+          "id": "mizuchi:ev35",
+          "text": "你想到阿燐说过的旧地狱路，写信问起那边的近况；这夜仍回神社，不擅自离开认下的监管。",
+          "with": [],
+          "remember": [
+            "rin"
+          ]
+        }
+      ],
+      "reviewedEventIds": [
+        "mizuchi:ev01",
+        "mizuchi:ev02",
+        "mizuchi:ev03",
+        "mizuchi:ev04",
+        "mizuchi:ev05",
+        "mizuchi:ev06",
+        "mizuchi:ev07",
+        "mizuchi:ev08",
+        "mizuchi:ev09",
+        "mizuchi:ev10",
+        "mizuchi:ev11",
+        "mizuchi:ev12",
+        "mizuchi:ev13",
+        "mizuchi:ev14",
+        "mizuchi:ev15",
+        "mizuchi:ev16",
+        "mizuchi:ev17",
+        "mizuchi:ev18",
+        "mizuchi:ev19",
+        "mizuchi:ev20",
+        "mizuchi:ev21",
+        "mizuchi:ev22",
+        "mizuchi:ev23",
+        "mizuchi:ev24",
+        "mizuchi:ev25",
+        "mizuchi:ev26",
+        "mizuchi:ev27",
+        "mizuchi:ev28",
+        "mizuchi:ev29",
+        "mizuchi:ev30",
+        "mizuchi:ev31",
+        "mizuchi:ev32",
+        "mizuchi:ev33",
+        "mizuchi:ev34",
+        "mizuchi:ev35",
+        "mizuchi:ev36"
+      ]
+    }
+  }
+]

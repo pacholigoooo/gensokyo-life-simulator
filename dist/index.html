@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>幻想乡 · 一生纪</title>
+<meta name="description" content="抽取天赋，分配属性，看一段幻想乡人生缓缓展开。东方Project同人自动人生模拟器。">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="stylesheet" href="style.css">
+<script src="talents.js" defer></script><script src="config.js" defer></script><script src="content-data.js" defer></script><script src="relationship-data.js" defer></script><script src="events.js" defer></script><script src="health.js" defer></script><script src="opportunities.js" defer></script><script src="encounters.js" defer></script><script src="spiritual.js" defer></script><script src="afterlife.js" defer></script><script src="careers.js" defer></script><script src="contacts.js" defer></script><script src="memoir.js" defer></script><script src="relationships.js" defer></script><script src="talent-stories.js" defer></script><script src="partner-learning.js" defer></script><script src="companionship.js" defer></script><script src="guidance.js" defer></script><script src="akyuu.js" defer></script><script src="engine.js" defer></script><script src="companion-summary.js" defer></script><script src="memoir-image.js" defer></script><script src="app.js" defer></script>
+<script src="music.js" defer></script>
+</head>
+<body>
+<header><div class="masthead"><span class="seal" aria-hidden="true">一<br>生</span><div><p class="eyebrow">东方 PROJECT 同人</p><h1 aria-label="幻想乡 · 一生纪">幻想乡<span>一生纪</span></h1></div></div><p class="header-note">春去秋来，故事留在纸上。</p>
+<div class="music-control">
+<button id="music-toggle" type="button" aria-label="播放背景音乐" aria-pressed="false" title="背景音乐"><span aria-hidden="true">♫</span></button>
+<button id="music-settings" class="music-settings" type="button" aria-label="音乐设置" aria-expanded="false" aria-controls="music-menu">音乐</button>
+<div id="music-menu" class="music-menu" hidden>
+<p id="music-track">碎月 · 八音盒与钢琴</p><p class="music-credit">歳月-雲流れ-<br>Foxtail-Grass Studio / ハム</p><p id="music-status" role="status">正在连接网易云</p>
+<div class="music-actions"><button id="music-online" type="button">重新播放</button><button id="music-use-embed" type="button">网易云播放器</button></div>
+<iframe id="music-embed" title="网易云：歳月-雲流れ-" width="266" height="86" allow="autoplay" hidden></iframe>
+<p><a href="https://music.163.com/song?id=730631" target="_blank" rel="noopener noreferrer">在网易云打开曲目 ↗</a></p>
+<label for="music-volume" id="music-volume-label">音量<input id="music-volume" type="range" min="0" max="100" value="18"></label>
+<label for="music-file" class="music-file-label">选取本机音频<input id="music-file" type="file" accept="audio/*,.mp3,.ogg,.wav,.m4a,.flac"></label>
+<button id="music-close" type="button">收起</button>
+</div></div><audio id="background-music" preload="metadata" loop></audio></header>
+<main>
+<section id="talent-setup" aria-labelledby="talent-title">
+<div class="section-top"><h2 id="talent-title" tabindex="-1">命数初抽</h2><span class="count">已选 <strong id="talent-count">0</strong> / 3</span></div>
+<p class="lead">十份天赋，选三份随身。再分配属性，写下这一生。</p>
+<div id="talent-list" class="talent-list"></div>
+<div class="talent-actions"><button id="redraw-talents" type="button">重抽一组</button><button id="confirm-talents" class="primary" type="button" disabled>选好，分配属性</button></div>
+</section>
+<section id="setup" hidden aria-labelledby="setup-title">
+<div class="section-top"><h2 id="setup-title">落笔之前</h2><span class="count">剩余点数 <strong id="remaining">0</strong></span></div>
+<p class="lead">分配20点。天赋另有加成，开始后人生会自行展开。</p>
+<div class="setup-grid"><div>
+<div id="allocation" class="allocation"></div>
+<button id="random-points" class="text-button" type="button">重新掷点</button>
+</div><div class="intent">
+<h3 class="chosen-title">随身天赋</h3><div id="chosen-talents"></div><button id="change-talents" class="text-button" type="button">重新选择</button>
+<p id="probability-note" class="note"></p>
+<details class="development-rules"><summary>营生与身后</summary><p class="note">成年后自动择业，练习与年资推动晋升。机遇可引向尸解仙、幽灵、怨灵或受祭成神；途中会经历准备、转折和新的生活。各条机遇随天赋、经历与年岁出现。</p></details>
+<p id="romance-scope" class="note romance-scope"></p>
+<details class="romance-rules"><summary>情缘条件</summary><p class="note">从相识、在意到主动关心，心意随多年共同经历展开。表白须满20岁、相识至少6年、往来至少4次并积累信任；各人另有自己的前史。亲吻出现在相恋后的约会与日常里。远境先有引路，梦中情缘留在各自的梦篇。</p><a href="sources.html#romance">查看逐人情缘与范围</a></details>
+<label for="life-goal">这一生的心愿</label><select id="life-goal"></select><p id="goal-description" class="note"></p><p class="note">抽到具名身份后，先回顾原作经历，再以所分属性续写人物自己的心愿。</p>
+<div id="romance-wish-controls" hidden><label for="romance-wish">念想的人</label><select id="romance-wish"><option value="">随缘相识</option></select><p class="note">这份念想增加相关旅途与相识的机会，往后的心意仍随各自经历展开。</p></div>
+</div></div>
+<p id="setup-error" role="alert" class="error" hidden></p>
+<button id="start" class="primary wide" type="button">开始这一生</button>
+</section>
+<section id="life" hidden aria-labelledby="life-title">
+<div class="life-heading"><div><p id="identity" class="eyebrow"></p><h2 id="life-title"></h2></div></div>
+<div id="life-hud" class="life-hud" role="region" tabindex="0" aria-label="当前人生与属性，可滚动">
+<div class="life-context"><p class="life-time"><span id="time-kind" class="hud-label">行年</span> <strong id="live-time"></strong></p><span id="running-status" role="status"></span></div>
+<div class="stat-caption">当前属性 <span>小字为本步净变化</span></div>
+<dl id="live-stats" class="live-stats" aria-label="四属性当前值与本步净变化"></dl>
+<p class="life-condition"><span><span class="hud-label">身份</span> <span id="live-species"></span></span><span><span id="life-status-label" class="hud-label">身体</span> <span id="live-body-status"></span></span></p>
+<p id="where" class="life-place"></p>
+<div class="live-talents-line"><p id="live-talents"></p><details id="live-talent-details" class="live-talent-details"><summary>作用</summary><div id="live-talent-descriptions"></div></details></div>
+<div class="controls"><button id="pause" class="primary" type="button">暂停</button><label for="speed">速度</label><select id="speed"><option value="1600">慢 · 1.6秒/条</option><option value="700" selected>常 · 0.7秒/条</option><option value="160">快 · 0.16秒/条</option></select><button id="restart" type="button">重开</button></div>
+</div>
+<p id="partner-status" class="partner-status" hidden></p>
+<p id="goal-status" class="goal-status" role="status"></p>
+<section id="relationships" class="relationships" hidden aria-labelledby="relationships-title"><h3 id="relationships-title">来往</h3><ul id="relationship-list"></ul></section>
+<div class="timeline-heading"><h3>行年录</h3><label class="follow-label"><input id="follow" type="checkbox" checked> 跟随新事件</label></div>
+<ol id="timeline" tabindex="0" aria-label="人生事件时间线"></ol>
+<section id="settlement" tabindex="-1" hidden><p class="eyebrow">此卷已毕</p><h3 id="ending-title"></h3><p id="ending-text"></p><p id="ending-summary"></p><section id="companion-memoir" aria-label="此生伴侣回顾"></section><div class="memoir-heading"><h4>一生总结</h4><button id="export-memoir" type="button" aria-controls="memoir-images">导出图片</button></div><div id="memoir"></div><p id="export-status" role="status" aria-live="polite"></p><div id="memoir-images" class="memoir-images" role="group" aria-label="一生总结图片，按页预览或保存" hidden></div><button id="again" class="primary" type="button">再写一生</button></section>
+<p id="runtime-error" role="alert" class="error" hidden></p>
+</section>
+<details class="ledger"><summary>人物与规则 <span id="coverage-count"></span></summary><div class="ledger-body"><p>开局抽取10份天赋，选择其中3份；互斥天赋不能同选。<span id="talent-grade-note"></span>每组不重复，抽空的等级退出本组候选。天赋会改变属性、成长或事件机会。</p><p>每次开始先随机抽取出身类别，再抽取该类别内的人物。多数人生从幻想乡的寻常生活开始；寻常出身者日后的修行与机遇，也可能改变种族和身体。</p><p>普通人从出生开始，寿数随身体、天赋、伤病与机遇变化。具名人物先回顾有出处的原作经历，再从当前阶段进入自己的续篇；年龄不明时保留未知。人物续篇采用各自的年数，在个人心愿的结局处收卷。</p><p>体魄影响身体与寿数，悟性影响学习与本领，缘分影响来往，家底影响起居用度。四属性上限30。常驻栏显示当前值，小字显示最近一步的净变化；暂停时保留，方便回看。</p><p>人物续篇各有四个节点与随机日常，两处转折都完成时达成个人心愿。所分属性与天赋影响之后的际遇；原作回顾保持已知经历。历史人物采用遗物余响或注明的假设分支，留下各自的收束。</p><p>寻常出身的人可能与具名人物相识。「来往」记下当前关系与已经历的事，多位朋友、对手或仇敌可以共存。远境先有引路，梦中来往标明场景；此卷结束后，仍保留彼此的余韵。</p><p>行年录可以上下滚动；取消「跟随新事件」后，可停在旧事上细看。结算后仍可回看整卷，也可将由实际经历写成的一生总结导出为图片，预览或保存。此页不保存未完的人生；重开回到天赋选择。人物前史附有来源，后续随机事件与结局为本作原创。旧作使用自己的舞台，秘封从外界展开；跨作同名人物只计一次。</p><p id="scope-note"></p><label for="search">查找人物</label><input id="search" type="search" placeholder="姓名或地点"><div id="roster-list"></div><a href="sources.html">查看作品清单与来源</a></div></details>
+</main><footer>幻想乡 · 一生纪 <span>角色原作：上海爱丽丝幻乐团 / ZUN</span></footer>
+</body></html>

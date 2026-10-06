@@ -1,0 +1,1065 @@
+[
+  {
+    "id": "kanako",
+    "title": "风雨之间的工序",
+    "source": "https://thbwiki.cc/附带文档:东方风神录/角色设定#八坂神奈子",
+    "canon": "神奈子创造乾，原设说明她实际掌管风雨，曾受农业信仰；她也参与能源事业的筹划。",
+    "fiction": "她以风雨知识陪伴玩家调整当前职业的安排。本路线教授观察与排程，未将神力、注连绳的再生象征解释为可传授的不老之术。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "kanako_weather_notes",
+        "delay": 3,
+        "text": "神奈子在神社廊下展开你的工作记录，问哪次因风雨误了安排。你指出一页，她在旁添出云势变化，要你把来得及收妥的那道工序先找出来。",
+        "when": {
+          "min": {
+            "insight": 7
+          },
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "kanako_two_schedules",
+        "delay": 2,
+        "text": "你带来几次新工作的经过，与神奈子各排一份晴雨次序。她故意抽走其中一个空当，你重新安排衔接；讲到容易耽误处，她让你先留出歇息。",
+        "when": {
+          "min": {
+            "insight": 8
+          },
+          "xp": 7,
+          "trust": 4,
+          "work": 2
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "kanako_work_plan",
+        "delay": 4,
+        "text": "神奈子核过你后来几次实际工作的次序，收起自己那份范例。你已经能按天气与体力调整安排，她笑着让你讲下一回怎样做，边听边补好容易漏的细节。",
+        "when": {
+          "min": {
+            "insight": 9
+          },
+          "xp": 10,
+          "trust": 4,
+          "work": 5
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 2,
+      "xp": 5,
+      "practice": 2
+    },
+    "followup": {
+      "key": "kanako_plan_revisit",
+      "delay": 8,
+      "text": "你把已经用熟的工序图带到廊下，神奈子认出当年改过的雨天一栏。如今你会自己留好回旋的空当，她听完近况，将茶杯放到那块空白旁边。"
+    }
+  },
+  {
+    "id": "suwako",
+    "title": "土层里的水路",
+    "source": "https://thbwiki.cc/东方求闻口授/洩矢诹访子/中日对照",
+    "canon": "诹访子创造坤、统领土著祟神，可以改变地形及土地的丰瘠。书中所述赐福包括旅行安全，未确认普遍授予永生。",
+    "fiction": "她用小土盘演示土地与水路，让玩家把观察、预留空处和检查基础的方法用于既有职业。玩家学会实际判断，不获得操土神力或支配祟神的资格。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "suwako_soil_layers",
+        "delay": 2,
+        "text": "诹访子把两种土放进浅盘，请你摸过再猜水会停在哪层。你猜完，她从盘边慢慢倒水，与你看湿痕走向，指尖停在那处被你漏看的低洼。",
+        "when": {
+          "min": {
+            "health": 4,
+            "insight": 6
+          },
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "suwako_small_drain",
+        "delay": 2,
+        "text": "你在土盘里留一道浅沟，诹访子要你先说出口通向哪里。第一回水停在弯处，两人重摆细石；她看你肯从堵点查起，便让你自己试第二回。",
+        "when": {
+          "min": {
+            "insight": 7
+          },
+          "xp": 5,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "suwako_work_foundation",
+        "delay": 3,
+        "text": "你说起新工作中一处反复拖延的地方，诹访子用土盘里的堵点来问你。你逐项查所需条件，把欠缺的一项先补妥；她坐在旁边，等你讲出改过的顺序。",
+        "when": {
+          "min": {
+            "insight": 8
+          },
+          "xp": 8,
+          "trust": 4,
+          "work": 3
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "suwako_dry_base",
+        "delay": 3,
+        "text": "诹访子听过你几次工作的实况，将浅盘交回你面前。你从最底下那层条件说起，连停下来检查的时机也排好；她笑着点点头，让你照自己的办法继续。",
+        "when": {
+          "min": {
+            "insight": 9
+          },
+          "xp": 11,
+          "trust": 4,
+          "work": 6
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 2,
+      "xp": 5,
+      "practice": 2
+    },
+    "followup": {
+      "key": "suwako_base_recheck",
+      "delay": 7,
+      "text": "你与诹访子又摆起浅土盘，这回先查出口再倒水。水沿着你留下的空处流走，她听你讲如今做事也会先查基础，笑着把那枚细石推到盘边。"
+    }
+  },
+  {
+    "id": "tenshi",
+    "title": "要石旁的歇处",
+    "source": "https://thbwiki.cc/比那名居天子#设定文档",
+    "canon": "天子能操纵大地、使用要石镇压或引发地震；原设限制要石的插拔属于比那名居一族。天人身份不构成伴侣自动成仙的依据。",
+    "fiction": "天子与玩家约定体力危急时的联络和稳固歇处，届时由她运用自己的能力托护并及时安置。效果只保住一次耗尽危机，不移植天人肉身、不变更种族，也不处理寿终。",
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "tenshi_rest_ground",
+        "delay": 2,
+        "text": "天子在许可廊边给你看两处地面的差别，要你选坐下歇息的位置。你查过平整与遮阴，她先笑你太仔细，又挪来一块稳石，让你试着靠住。",
+        "when": {
+          "min": {
+            "health": 5,
+            "insight": 6
+          },
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "tenshi_call_and_wait",
+        "delay": 3,
+        "text": "你与天子练习力气不足时怎样发出约好的信号。她让你停在廊内，自己从外侧赶来，查过稳石再扶你落座；这次连她也记住要先问你还能怎样动。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 8
+          },
+          "xp": 7,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "tenshi_shelter_promise",
+        "delay": 3,
+        "text": "天子将联络方法与歇处又核了一遍，试过要石托护的位置。你答应危急时及早找她，她握住你的手，说这回会先把你安顿稳当，再听你慢慢讲话。",
+        "when": {
+          "min": {
+            "bond": 8,
+            "insight": 8
+          },
+          "xp": 10,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "health",
+      "health": 8,
+      "selfMade": false,
+      "text": "力气将尽时，天子循约定及时赶到，用要石稳住你的歇处，再扶你靠到阴凉廊内。你终于可以停下喘息，她守在身旁，等你恢复到能说清下一步。"
+    },
+    "followup": {
+      "key": "tenshi_shelter_revisit",
+      "delay": 8,
+      "text": "你与天子回看当年选好的歇处，检查信号仍能传到哪里。她试过稳石，你把自己的近况讲完；两人重新记下现在走得舒服的路，坐在廊边多留一会儿。"
+    }
+  },
+  {
+    "id": "utsuho",
+    "title": "炉外的停火信号",
+    "source": "https://thbwiki.cc/附带文档:东方地灵殿/角色设定#灵乌路空",
+    "canon": "空因八咫乌取得操纵核聚变的能力，原职务是观察并调整灼热地狱遗址火力。这是能量管理能力，原设未给出治病或授人永生之术。",
+    "fiction": "在隔开炉火的许可会面处，空教授观察变化、复诵操作与及时停手。玩家以已有职业中的实际工作验证这些方法，熟练度由自身练习增加，未进入炉心或获得核聚变力量。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "utsuho_heat_changes",
+        "delay": 2,
+        "text": "在隔开炉火的许可会面处，空拿来几张火力记录，问你哪处先变了。你找到升高的一栏，她指给你看先前的小变化，再让你把两段连着读一遍。",
+        "when": {
+          "min": {
+            "insight": 8
+          },
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "utsuho_repeat_signal",
+        "delay": 2,
+        "text": "空用桌上的标牌练停手信号，你听到一句便复述再动牌。她忽然换了次序，你先停下来核清；两人从头重试，这回每个动作都等到彼此答应。",
+        "when": {
+          "min": {
+            "insight": 9
+          },
+          "xp": 6,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "utsuho_work_pause",
+        "delay": 3,
+        "text": "你带来几次新工作的记录，把及时停手检查的地方讲给空听。她认真找出漏掉的一步，请你在纸上补好信号；你照着重排，直到能逐项讲清。",
+        "when": {
+          "min": {
+            "insight": 9
+          },
+          "xp": 9,
+          "trust": 4,
+          "work": 3
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "utsuho_checked_sequence",
+        "delay": 3,
+        "text": "空听你讲完后来工作的实际变化，将标牌排成新次序让你复核。你发现一处该先停手，讲出原因，她笑着与你重新排好，说这次也愿意先听你的判断。",
+        "when": {
+          "min": {
+            "insight": 10
+          },
+          "xp": 12,
+          "trust": 4,
+          "work": 6
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 2,
+      "xp": 6,
+      "practice": 3
+    },
+    "followup": {
+      "key": "utsuho_signal_again",
+      "delay": 6,
+      "text": "你与空在会面桌边再试一次标牌，熟练地复述停手信号。她听到你如今工作前也会核清次序，高兴地留出一页，想把你实际用过的改法添进记录。"
+    }
+  },
+  {
+    "id": "keiki",
+    "title": "一起做出的托护偶像",
+    "source": "https://thbwiki.cc/附带文档:东方鬼形兽/Omake#埴安神袿姬",
+    "canon": "袿姬可以制作精巧偶像，原设明示可作替身、陪伴玩耍、收集信仰，她以偶像保护人类灵。偶像本身的性质不等同于活人获得不老身体。",
+    "fiction": "袿姬依玩家身体需要制作托护偶像，并共同验证承托和联络。玩家危急时由袿姬及时扶助与安置，只保住一次体魄耗尽危机；不把灵魂装入偶像，不替换肉身或复活亡者。",
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "keiki_support_model",
+        "delay": 3,
+        "text": "袿姬在许可工坊问你怎样坐着最舒服，再用泥做出托护的小模型。你指出肩旁需要留空，她马上调整支点，两人慢慢试到能稳当地靠住。",
+        "when": {
+          "min": {
+            "insight": 8,
+            "bond": 7
+          },
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 2
+      },
+      {
+        "key": "keiki_support_ready",
+        "delay": 4,
+        "text": "你购齐托架材料，与袿姬逐处检查偶像的承托。她扶你试过起身与落座，听你报出哪里难用，再把联络方法写在旁边，约好危急时由她及时来帮你。",
+        "when": {
+          "min": {
+            "insight": 9
+          },
+          "xp": 9,
+          "trust": 4
+        },
+        "effects": {
+          "fortune": -1
+        },
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "health",
+      "health": 6,
+      "selfMade": false,
+      "text": "你将要支撑不住，袿姬及时扶你靠上准备好的托护偶像，替你卸下负担。身体得以安稳歇息，她在旁确认你的回应，等你缓过这阵再安排后面的照料。"
+    },
+    "followup": {
+      "key": "keiki_support_adjust",
+      "delay": 7,
+      "text": "袿姬请你再试托护偶像，发现旧支点如今要稍微挪开。你讲过身体的近况，两人按新的姿势调整；她磨平边缘，让你靠稳后再看这一回做好的形状。"
+    }
+  },
+  {
+    "id": "zanmu",
+    "title": "地狱来客的退路",
+    "source": "https://thbwiki.cc/附带文档:东方兽王园/Omake#日白残无",
+    "canon": "残无操纵虚无，原为人类僧侣，吸收灵体后舍弃人命而鬼化。慧之子曾吞食她的血肉而得到近乎永恒的寿命，后又受其宝珠净化；这一特定诅咒与净化经历没有确立通用的伴侣永生法，也没有确认可普遍免除仙人追索。",
+    "fiction": "她帮助玩家理解地狱交涉与联络，约定仙人追索发生时出面争取一次离开的空当。该脱身是本作推演，既有追索仍会继续，不授鬼身、不吞灵修命，不豁免地狱规则。",
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "zanmu_claim_and_debt",
+        "delay": 3,
+        "text": "残无在许可会面处摆下几张写着来意的纸，要你分清请求与欠账。你把混在一起的两张拆开，她听完理由，叫你再想想对方究竟想拿走什么。",
+        "when": {
+          "min": {
+            "insight": 9,
+            "bond": 7
+          },
+          "xp": 8,
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "zanmu_short_reply",
+        "delay": 3,
+        "text": "你与残无练一段来客催促时的答话，她接连追问，你把能应下的范围说清。话说得太满时，她抬手让你重来，直到你敢停住，先请对方讲明来意。",
+        "when": {
+          "min": {
+            "insight": 10
+          },
+          "xp": 10,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "zanmu_contact_route",
+        "delay": 4,
+        "text": "残无与你核对遇到地狱来客时的联络次序。你在纸上先记自己能走到的会面处，她删去多余绕路，要你照着复述，连何时该止步等她也说清。",
+        "when": {
+          "min": {
+            "insight": 11,
+            "bond": 8
+          },
+          "xp": 12,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "zanmu_one_departure",
+        "delay": 4,
+        "text": "你把退路与答话重新讲给残无听，她收好约定的联络纸。若今后遇上仙人追索，她会赶来争取一次离开的空当；你握住她的手，将该走的路再记一遍。",
+        "when": {
+          "min": {
+            "insight": 12
+          },
+          "xp": 15,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "pursuit",
+      "health": 6,
+      "selfMade": false,
+      "text": "仙人追索逼近，残无依约赶来与来客交涉，争出一段退路。你照着练过的次序及时离开，她陪你回到可歇息的会面处，等你缓过力气再核下一回的安排。"
+    },
+    "followup": {
+      "key": "zanmu_route_review",
+      "delay": 8,
+      "text": "你与残无回看联络纸，按如今的相见通路重新标好停步处。她问你还记得哪句答话，你慢慢说完；这回两人只修整安排，把纸收妥后留时间谈近况。"
+    }
+  },
+  {
+    "id": "yuma",
+    "title": "先留下一条退路",
+    "source": "https://thbwiki.cc/饕餮尤魔#设定文档",
+    "canon": "尤魔能吸收有机物、无机物与灵体，吸收的事物会影响她的力量和性格。原设还说明她冷静、避免无谓争端，难以合作时会撤退。",
+    "fiction": "她与玩家练习识别体外障碍、及时撤离和发出联络信号，危急时吸去挡路之物并亲自扶送。效果限一次体力危机的及时援助；不进入玩家体内吞食病灶，不复制她的吸收能力或复苏经历。",
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "yuma_open_exit",
+        "delay": 2,
+        "text": "尤魔在许可会面处摆下几块碎石，叫你先找能绕过去的空处。你选好退路，她才吸走最碍事的那一块，笑着问你，如今还剩哪处容易绊住脚步。",
+        "when": {
+          "min": {
+            "insight": 6
+          },
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "yuma_stop_before_tired",
+        "delay": 3,
+        "text": "你与尤魔从屋里走到遮阴门廊，试着在开始吃力时发出信号。她原想替你直接拿完，听你说还得留力走回，便停下来与你分清先放下哪些东西。",
+        "when": {
+          "min": {
+            "health": 5,
+            "bond": 7
+          },
+          "xp": 6,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "yuma_help_agreement",
+        "delay": 3,
+        "text": "尤魔听你讲清危急时怎样找她，和你核过门廊的空路。她答应先清开挡路之物，再亲自扶你歇下；你把信号又试一遍，两人记住这份实际的约定。",
+        "when": {
+          "min": {
+            "insight": 8
+          },
+          "xp": 9,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "health",
+      "health": 7,
+      "selfMade": false,
+      "text": "力气快要用尽，尤魔循信号赶到，吸去歇处前挡路的碎石，再扶你进入遮阴门廊。你卸下身上的负担慢慢恢复，她守着空路，让后来的照料能及时接上。"
+    },
+    "followup": {
+      "key": "yuma_exit_check",
+      "delay": 7,
+      "text": "你与尤魔检查门廊如今堆放的东西，给往来的脚步留好空处。她问你的信号有没有改，你示范给她看；两人把碍路的小物移开，歇下来讲各自的新近事。"
+    }
+  },
+  {
+    "id": "yuuka",
+    "title": "随花期学会等待",
+    "source": "https://thbwiki.cc/东方求闻史纪/风见幽香",
+    "canon": "幽香操纵花，可以让花盛开、向日葵转向以及枯花再开；她自身有高等妖力与优越身体能力。这些事实没有证明她可以令活人不老。",
+    "fiction": "幽香让玩家长期观察花的变化与自己的实际工作，练习辨别条件、选择时机与及时调整。熟练度来自玩家对既有职业的运用，不借花复开推导肉身回春，不要求改做花匠。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "yuuka_unopened_bud",
+        "delay": 3,
+        "text": "幽香在许可花径阴处指着一枚未开的花苞，要你先说已经看见什么。你记下叶色与花瓣边缘，她听完让你留一行空白，等下一回再添真正发生的变化。",
+        "when": {
+          "min": {
+            "insight": 7,
+            "bond": 7
+          },
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "yuuka_work_timing",
+        "delay": 4,
+        "text": "你与幽香对着后来记下的花期，再谈几次新工作的经过。她问哪次等到条件齐了才动手，你找出那一回，讲清等待期间怎样补好该做的准备。",
+        "when": {
+          "min": {
+            "insight": 8
+          },
+          "xp": 7,
+          "trust": 4,
+          "work": 3
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "yuuka_choose_actual_time",
+        "delay": 5,
+        "text": "幽香听你讲过后来工作的取舍，将花期记录翻到最早那行空白。你已会凭实际变化挑时机，她笑着让你自己添下一行，再与你看今日刚开的那一朵。",
+        "when": {
+          "min": {
+            "insight": 9
+          },
+          "xp": 12,
+          "trust": 4,
+          "work": 6
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 2,
+      "xp": 5,
+      "practice": 2
+    },
+    "followup": {
+      "key": "yuuka_new_bloom_note",
+      "delay": 9,
+      "text": "你与幽香在花径阴处翻旧记录，认出当年急着写下的猜测。如今你会先观察再添字，工作时也多了一份熟练；她听你讲完，指给你看这季新开的花。"
+    }
+  },
+  {
+    "id": "suika",
+    "title": "鬼的背送约定",
+    "source": "https://thbwiki.cc/东方求闻史纪/伊吹萃香",
+    "canon": "萃香操纵密度，具有鬼族的强大力量。求闻史纪还记有她协助力气活和聚拢灰尘的目击；密度能力不是原设所确认的通用延寿法。",
+    "fiction": "她以无酒的搬运练习了解玩家能承受的负担，约定危急时亲自背送到歇处。只提供一次及时援助，不由饮酒触发关系，不将玩家压缩成鬼体或把密度改变用来治病。",
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "suika_light_load",
+        "delay": 3,
+        "text": "萃香在无酒的歇息空当与你试搬软布包，你先挑自己拿得稳的一份。她一手提起剩下的，听你说到该歇时便放好，两人记下哪里最方便卸下负担。",
+        "when": {
+          "min": {
+            "health": 5,
+            "bond": 7
+          },
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 2
+      },
+      {
+        "key": "suika_carry_signal",
+        "delay": 4,
+        "text": "你与萃香核过求助信号，再试她扶你起身的姿势。她问过哪里要留空，把到阴棚歇处的路走稳；你握着她的手答应及早开口，她也认真记住怎样背送。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 7
+          },
+          "xp": 8,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "health",
+      "health": 8,
+      "selfMade": false,
+      "text": "你将要耗尽力气，萃香及时接到约好的信号，卸下你的负担，稳稳背你到阴棚歇处。你靠好后终于能慢慢喘息，她留在身旁，等你缓过这阵再扶你动。"
+    },
+    "followup": {
+      "key": "suika_load_recheck",
+      "delay": 8,
+      "text": "你与萃香再理软布包，按如今拿得稳的分量重新分好。她听你讲身体的近况，将歇处空出来；两人试过信号后坐下，说起这些年的小事，她听得笑眯了眼。"
+    }
+  },
+  {
+    "id": "narumi",
+    "title": "林间的生命调息",
+    "source": "https://thbwiki.cc/附带文档:东方天空璋/Omake#矢田寺成美",
+    "canon": "成美是地藏石像因魔法森林的魔力得到生命的魔法使，原设能力为生命操作。她并非地藏菩萨本体，原设没有给出活人永久不老的配方。",
+    "fiction": "她与玩家用材料、短步和调息逐次试验，最后有限稳固仍会老化的身体。具体方法、材料费和数值均为本作推演；保留人类或魔法使原种族，不将肉身换成石像。",
+    "resultKind": "longevity",
+    "species": [
+      "human",
+      "magician"
+    ],
+    "stages": [
+      {
+        "key": "narumi_breath_material",
+        "delay": 3,
+        "text": "你与成美在林边备好调息用的小器具，按约定付清材料用度。她先听你说身体近况，再陪你逐口练习，让每一次停歇都有自己的回应。",
+        "when": {
+          "min": {
+            "health": 5,
+            "insight": 8,
+            "fortune": 1
+          },
+          "xp": 6,
+          "trust": 4
+        },
+        "effects": {
+          "fortune": -1
+        },
+        "xp": 1
+      },
+      {
+        "key": "narumi_short_walk",
+        "delay": 3,
+        "text": "你沿林边走过约好的短路，在成美身旁记下气息变化。这一回练习确实让你疲倦，她等你坐稳，再陪你分清哪一步该缩短，留待日后慢慢调整。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 9
+          },
+          "xp": 8,
+          "trust": 4
+        },
+        "effects": {
+          "health": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "narumi_life_settled",
+        "delay": 4,
+        "text": "你带来几年来实际练过的记录，成美按你的呼吸施术，再让你亲自试过停步与起身。身体终于多了一份余力，她陪你收妥器具，商量下一季的休息。",
+        "when": {
+          "min": {
+            "health": 5,
+            "insight": 11
+          },
+          "xp": 11,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "longevity",
+      "vitality": 12,
+      "years": 8,
+      "wear": -3
+    },
+    "followup": {
+      "key": "narumi_breath_revisit",
+      "delay": 8,
+      "text": "你与成美回到林边，沿如今走得舒服的短路缓行。她听你讲这些年的身体变化，你们重新安排停歇，把用旧的器具收好，在树阴下多坐了一会。"
+    }
+  },
+  {
+    "id": "mai_teireida",
+    "title": "短拍里的生命余力",
+    "source": "https://thbwiki.cc/附带文档:东方天空璋/Omake#尔子田里乃_丁礼田舞",
+    "canon": "舞能通过在背后起舞诱导生命力，能力源自隐岐奈。二童子原为人类孩子，受魔力影响后不再算人类，几乎失去旧记忆，并服从隐岐奈。",
+    "fiction": "双方约定短拍、停手信号与多年身体复查，舞只在约定的短段中引出生命余力。有限调养的可行方法是本作二创，玩家保留旧记忆、职业与人类或魔法使身份，不加入二童子侍役。",
+    "resultKind": "longevity",
+    "species": [
+      "human",
+      "magician"
+    ],
+    "stages": [
+      {
+        "key": "mai_short_beat_promise",
+        "delay": 3,
+        "text": "你与舞商量好短拍的长短，把停手的动作示范给她看。她虽想马上起舞，仍等你说清身体近况，答应每回都在你能回应的时候才开始。",
+        "when": {
+          "min": {
+            "health": 5,
+            "insight": 8,
+            "bond": 7
+          },
+          "xp": 6,
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "mai_first_short_practice",
+        "delay": 3,
+        "text": "舞在你背后依约踏出短拍，你亲自跟住呼吸，在疲倦时举手示意。她收住脚步扶你坐好，这次练习耗了力气，你们把应当少跳的拍子记下来。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 9
+          },
+          "xp": 8,
+          "trust": 4
+        },
+        "effects": {
+          "health": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "mai_second_body_check",
+        "delay": 3,
+        "text": "你与舞按这几年的身体记录再试短拍，走完后慢慢说出哪里吃力。她及时停下，等你恢复后一起缩短次序；这一回的疲倦也如实留在记录里。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 10
+          },
+          "xp": 10,
+          "trust": 4
+        },
+        "effects": {
+          "health": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "mai_life_reserve",
+        "delay": 4,
+        "text": "舞照你们反复练过的次序引出生命余力，你听着自己的呼吸，及时喊出停拍。收步后你能从容起身，两人坐到一旁，继续商量往后的日常。",
+        "when": {
+          "min": {
+            "health": 5,
+            "insight": 12
+          },
+          "xp": 13,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "longevity",
+      "vitality": 16,
+      "years": 10,
+      "wear": -4
+    },
+    "followup": {
+      "key": "mai_short_beat_revisit",
+      "delay": 8,
+      "text": "你与舞再看短拍记录，用现在的步幅走过那几步。她听完身体近况，陪你试准停手信号；练习结束，两人坐下歇脚，她想听听你近来常走的那条路。"
+    }
+  },
+  {
+    "id": "aunn",
+    "title": "狛犬看守的归路",
+    "source": "https://thbwiki.cc/附带文档:东方天空璋/Omake#高丽野阿吽",
+    "canon": "阿吽能发现神佛，寻找聚集人类信仰的场所并主动守护。原设说明她遇到敌意时出力，也会战败；发现神佛不等于拥有赐予不死的能力。",
+    "fiction": "阿吽与玩家查明既有通路、联络信号和附近可歇息处，危急时亲自引路安置。效果为一次体魄耗尽前的援助，不借信仰改变种族，也不撤销既成死亡或寿终。",
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "aunn_shelter_path",
+        "delay": 2,
+        "text": "你与阿吽沿相见时走过的路找歇处，她逐个看过门槛与屋檐。你指出走累时能停下的位置，两人慢慢走回，把离门最近的路记得清楚。",
+        "when": {
+          "min": {
+            "health": 4,
+            "insight": 6
+          },
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "aunn_call_signal",
+        "delay": 3,
+        "text": "你在阿吽面前试出能喊得清的联络短句，她循着声音过来，再陪你走到廊下。遇到岔口你先停步，等她回应，才一起核对这次走来的方向。",
+        "when": {
+          "min": {
+            "insight": 7,
+            "bond": 7
+          },
+          "xp": 6,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "aunn_guard_agreement",
+        "delay": 3,
+        "text": "阿吽陪你再查归路和歇处，答应收到信号便来接应。你也说清身体撑不住时会及时停下，两人试过扶行的步幅，把求助安排放在随身处。",
+        "when": {
+          "min": {
+            "health": 5,
+            "insight": 8
+          },
+          "xp": 9,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "health",
+      "health": 6,
+      "selfMade": false,
+      "text": "力气将尽时，阿吽听到约好的信号及时赶来，沿查过的路扶你进屋檐下。你终于能安稳靠坐，她留在门边回应呼唤，让后续照料及时接上。"
+    },
+    "followup": {
+      "key": "aunn_path_revisit",
+      "delay": 7,
+      "text": "你与阿吽再次慢走归路，发现廊前已经换了门槛。两人重新试过扶行与联络，按你的近况选好歇处；她听完这些年的小事，陪你在门边坐到风停。"
+    }
+  },
+  {
+    "id": "satono",
+    "title": "短拍之后的答话",
+    "source": "https://thbwiki.cc/附带文档:东方天空璋/Omake#尔子田里乃_丁礼田舞",
+    "canon": "里乃能通过在背后起舞诱导精神力，能力源自隐岐奈。原设二童子失去多数人类时期记忆，其身份与服役经历不能当成安全永生方法。",
+    "fiction": "双方约定短拍后复述实际步骤，并以玩家当前职业的新工作核验专注方法。精神力只辅助学习，职业熟练度由真实练习增加；保留种族与旧记忆，不加入二童子侍役。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "satono_repeat_step",
+        "delay": 3,
+        "text": "你与里乃先商量好停拍的信号，她在背后跳过短段后，等你把手头的步骤复述清楚。你们逐句核过实际做法，漏掉的地方留到下次亲自再练。",
+        "when": {
+          "min": {
+            "insight": 8,
+            "bond": 7
+          },
+          "xp": 6,
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 2
+      },
+      {
+        "key": "satono_work_verification",
+        "delay": 4,
+        "text": "你带来这几年新做过的职业记录，里乃陪你核对短拍后记住的步骤。你能说清实际用过哪一条，也找出了仍要练的部分，她收住舞步，让你自己完成最后核验。",
+        "when": {
+          "min": {
+            "insight": 10
+          },
+          "xp": 10,
+          "trust": 4,
+          "work": 3
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 2,
+      "xp": 6,
+      "practice": 3
+    },
+    "followup": {
+      "key": "satono_steps_revisit",
+      "delay": 7,
+      "text": "你把如今用熟的步骤讲给里乃听，她仍按旧约等你答完再起拍。两人发现有几处早已改过，便照真实工作重新写好，收起纸后留时间谈各自的近况。"
+    }
+  },
+  {
+    "id": "kutaka",
+    "title": "护嗓与交接的短句",
+    "source": "https://thbwiki.cc/附带文档:东方鬼形兽/Omake#庭渡久侘歌",
+    "canon": "久侘歌是能治愈喉疾的神明，在异界口岸区分鬼与人并检查来者能否安全通行。治喉疾有明确对象范围，原设没有普遍不老或豁免地狱追索的承诺。",
+    "fiction": "她陪玩家练习护嗓、短句传意与当前职业的交接核验。具体训练与熟练度是本作二创；不以治喉能力治一切疾病，不给予跨界通行特权，不处理寿终。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "kutaka_voice_rest",
+        "delay": 2,
+        "text": "你与久侘歌在会面处试说最短的求助句，嗓子吃力便停下饮水。她等你舒服后再听一次，你们把说得清楚的长度记住，留给日常慢慢练习。",
+        "when": {
+          "min": {
+            "health": 4,
+            "insight": 6
+          },
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "kutaka_clear_message",
+        "delay": 3,
+        "text": "久侘歌请你用短句说清手头的去处与需求，再把她听到的意思答回来。你们核过遗漏的细处，改掉含混的说法；这回你能在费嗓之前把事情交代完整。",
+        "when": {
+          "min": {
+            "insight": 7
+          },
+          "xp": 6,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "kutaka_work_handover",
+        "delay": 4,
+        "text": "你带来这几年实际工作中的交接记录，久侘歌陪你逐项复述，让接手者的回应也有位置。你按用过的方法完成核验，两人收起纸，去窗边歇一歇嗓子。",
+        "when": {
+          "min": {
+            "insight": 9
+          },
+          "xp": 9,
+          "trust": 4,
+          "work": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 2,
+      "xp": 5,
+      "practice": 2
+    },
+    "followup": {
+      "key": "kutaka_voice_revisit",
+      "delay": 7,
+      "text": "你与久侘歌又试了一回求助短句，按如今说话舒服的长短作了调整。她听你讲工作中的交接，等你休息后才答近况；两人把已经用熟的办法收进旧纸夹。"
+    }
+  },
+  {
+    "id": "ariya",
+    "title": "静止片刻后的接应",
+    "source": "https://thbwiki.cc/附带文档:东方锦上京/Omake#磐永阿梨夜",
+    "canon": "阿梨夜是石之女神，能力为阻止变化，原设称其力量为不变与永恒之力。TH20中她同意停止整个幻想乡，涉及其中者无法行动；Music Room描述她自身无法死去也无法生还。原设没有给出保持活人日常活动的安全永生方法。",
+    "fiction": "双方多年试验经本人同意的短暂局部停滞，标记返程与接应安排。控制范围、解除步骤及单次及时救援均为本作推演；停滞只争取一次安全安置的空当，恢复来自预先约好的现实接应和调养，不治疗、复活或停止日常老化。",
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "ariya_short_stillness",
+        "delay": 3,
+        "text": "你与阿梨夜约好短暂静止的范围，在她面前试出停止与解除的信号。她等你答应才施力，片刻后按约收手；你说清刚才的感受，两人再谈下一次。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 9,
+            "bond": 8
+          },
+          "xp": 8,
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "ariya_marked_return",
+        "delay": 3,
+        "text": "你与阿梨夜把随身的小石摆到返程路旁，标清解除后去往的歇处。两人实际走过接应的路，试着相互回应；你确认自己认得这些标记，才将物件收妥。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 10,
+            "fortune": 1
+          },
+          "xp": 10,
+          "trust": 4
+        },
+        "effects": {
+          "fortune": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "ariya_body_trial",
+        "delay": 4,
+        "text": "阿梨夜依约让近旁短暂停滞，你亲自经历这一回身体试行，解除后慢慢坐到歇处。试验确实让你疲倦，两人如实记下耗损，等你恢复再核对接应的安排。",
+        "when": {
+          "min": {
+            "health": 7,
+            "insight": 11
+          },
+          "xp": 12,
+          "trust": 4
+        },
+        "effects": {
+          "health": -1
+        },
+        "wear": 2,
+        "xp": 2
+      },
+      {
+        "key": "ariya_one_rescue",
+        "delay": 4,
+        "text": "你与阿梨夜再走一遍接应的路，说好危急时只动用这一次安排。她核过停滞和解除的信号，你确认歇处已备好；收起标路的小石后，两人才坐下喝水。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 12,
+            "bond": 9
+          },
+          "xp": 15,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "health",
+      "health": 5,
+      "selfMade": false,
+      "text": "你力气将尽仍能回应，阿梨夜循信号及时赶来，短暂停住近旁的险境。她按约将你安置到歇处，再解除力量；备好的现实照料接上，你靠稳后慢慢缓回力气。"
+    },
+    "followup": {
+      "key": "ariya_return_revisit",
+      "delay": 8,
+      "text": "你与阿梨夜回看那几块小石，按如今的归路重新摆好。两人谈过身体的近况，检查歇处和接应能否照旧；她将石子放回你掌心，陪你慢慢走到屋檐下。"
+    }
+  }
+]

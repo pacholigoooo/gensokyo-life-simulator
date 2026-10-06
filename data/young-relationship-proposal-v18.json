@@ -1,0 +1,419 @@
+{
+  "version": "v18-proposal-2",
+  "status": "proposal-only",
+  "reviewedAt": "2026-10-06",
+  "baselineCommit": "2f608f2bda52a2c289f9ea553a36793b2aeabb52",
+  "runtimeImport": false,
+  "buildPolicy": "独立研究及新编适龄短句，不位于 relationships/ 或 romances/ 自动读取目录，未经主线程明确整合不参与运行。",
+  "report": "docs/age-route-audit-v18.md",
+  "verification": {
+    "method": "静态只读与网络来源核实；JSON语法读取",
+    "samplingRun": false,
+    "testsRun": false,
+    "buildRun": false,
+    "publicationRun": false,
+    "sourceModified": false
+  },
+  "principles": {
+    "routeAllowlistRequired": true,
+    "minimumPlayerRomanceAge": 16,
+    "minimumMarriageAgeForBoth": 18,
+    "retainHigherRouteAgeAndStoryGates": true,
+    "retainRealAcquaintanceYearsVisitsAndTrust": true,
+    "adultScenesRequireBothAdult": true,
+    "youngModeWhenEitherUnder18": true,
+    "youngScenesAreNonsexual": true,
+    "canonAgeUnknownStaysUnknown": true,
+    "fanworkAgeMustBeLabelledSeparately": true,
+    "maturitySpeciesAgelessnessAndReincarnationAreNotAgeOverrides": true,
+    "doNotRedrawKnownPersonOrResetMetAt": true,
+    "childhoodMemoryDoesNotGrantAdultAccessOrTrust": true,
+    "waitingForAgeMustNotConsumeAnIrreversibleFriendOnlyEnding": true,
+    "romanceUsesMainlinePartnerEligibility": true,
+    "friendEntryDoesNotClaimPartner": true
+  },
+  "sourceRegistry": [
+    {
+      "id": "fs-bookwalker-1",
+      "kind": "authorized-publisher-description",
+      "title": "BOOK☆WALKER／KADOKAWA《东方铃奈庵》第一卷",
+      "url": "https://bookwalker.jp/de4742077e-7882-4e74-8287-7b772a54e3d8/",
+      "supports": "小铃为人里借书屋店主女儿与爱书生活。",
+      "doesNotSupport": "精确年龄、16岁或与玩家同龄。"
+    },
+    {
+      "id": "fs-yenpress-1",
+      "kind": "official-publisher-description",
+      "title": "Yen Press Forbidden Scrollery, Vol. 1",
+      "url": "https://yenpress.com/titles/9780316511896-forbidden-scrollery-vol-1",
+      "supports": "爱书女孩的小铃与ZUN原作漫画身份。",
+      "doesNotSupport": "T (Teen)为读者分级，不是角色年龄。"
+    },
+    {
+      "id": "fs1-transcript",
+      "kind": "primary-text-third-party-transcript",
+      "title": "铃奈庵第一话",
+      "url": "https://thbwiki.cc/东方铃奈庵/第一话",
+      "locator": "P1–7借还书；P14书店；P17家人叫吃饭",
+      "supports": "小铃、阿求的普通书籍来往与家店环境。",
+      "doesNotSupport": "两人确切16岁或原作恋爱对象。"
+    },
+    {
+      "id": "akyuu-birth-transcript",
+      "kind": "primary-text-third-party-transcript",
+      "title": "求闻史纪P159出生新闻中日对照",
+      "url": "https://thbwiki.cc/东方求闻史纪/文文新闻/中日对照",
+      "supports": "阿求出生新闻标第109季文月；旁注否认完整保留历代记忆。",
+      "doesNotSupport": "未指定故事当前历法锚点时的确切当前年龄。"
+    },
+    {
+      "id": "akyuu-monologue-transcript",
+      "kind": "primary-text-third-party-transcript",
+      "title": "求闻史纪P151–155独白",
+      "url": "https://thbwiki.cc/东方求闻史纪/独白",
+      "supports": "编书、转生准备与御阿礼之子通常短寿。",
+      "doesNotSupport": "第九代当前18岁；本作26–30随机区间为原作精确数据。"
+    },
+    {
+      "id": "oracle-official-book",
+      "kind": "official-publisher-bibliography",
+      "title": "KADOKAWA 东方幻存神签",
+      "url": "https://www.kadokawa.co.jp/product/322412000126/",
+      "supports": "2025年ZUN官方书籍的出版身份。",
+      "doesNotSupport": "具体角色年龄。"
+    },
+    {
+      "id": "oracle-akyuu-transcript",
+      "kind": "primary-text-third-party-transcript",
+      "title": "幻存神签第126号／P146阿求",
+      "url": "https://thbwiki.cc/东方幻存神签/稗田阿求",
+      "supports": "读写、体弱人类身份及一般恋爱运势。",
+      "doesNotSupport": "确切当前年龄或16岁恋爱经历。"
+    },
+    {
+      "id": "oracle-kosuzu-transcript",
+      "kind": "primary-text-third-party-transcript",
+      "title": "幻存神签第122号／P142小铃",
+      "url": "https://thbwiki.cc/东方幻存神签/本居小铃",
+      "supports": "借书屋店员与普通书籍生活。",
+      "doesNotSupport": "确切当前年龄、生日或同龄设定。"
+    }
+  ],
+  "routes": [
+    {
+      "id": "local:spouse",
+      "label": "原创人里同岁读友／local:spouse 少年初见变体",
+      "recommendation": "approve-v18-youth-first-meeting-variant-only",
+      "canonicalAge": {
+        "kind": "not-applicable",
+        "years": null,
+        "note": "本作自创人物，无原作生日。"
+      },
+      "proposedSimulationAge": {
+        "kind": "fanwork-peer-cohort",
+        "ageDifferenceFromPlayer": 0,
+        "recordAgeAtMeet": true,
+        "firstMeetingPlayerAges": [
+          13,
+          14
+        ],
+        "partnerAgeAtMeetEqualsPlayerAgeAtMeet": true,
+        "sampleFirstMeetingPlayerAge": 14,
+        "sampleFirstMeetingPartnerAge": 14,
+        "sampleRealYearsElapsed": 2,
+        "sampleEarliestConfessionPlayerAge": 16,
+        "sampleEarliestConfessionPartnerAge": 16,
+        "ageSamplesAreNotCanon": true
+      },
+      "proposedYouthGates": {
+        "playerMinAge": 16,
+        "playerMaxAgeForYouthConfession": 17,
+        "partnerMinAge": 16,
+        "realAcquaintanceYears": 2,
+        "familiarAfterAtLeastYears": 1,
+        "bondMin": 6,
+        "retainLocalFamiliarAndAfterLocal": true,
+        "retainMainlinePartnerEligibilityAliveAndFriendly": true,
+        "marriagePolicyFloorBoth": 18,
+        "retainExistingLocalMarriagePlayerFloor": 22,
+        "retainExistingMarriageBondMin": 7,
+        "noAdultIntimacyAsRequiredYouthProgression": true,
+        "adultScenesRequireBothAtLeast18": true
+      },
+      "continuityNotes": [
+        "13–14岁在寺子屋整理书册时认识明确同岁的原创读友；登记ageAtMeet与metAt，初始只是普通朋友。",
+        "隔年熟悉，真实相识至少两年且双方至少16岁后，16–17岁才可相许；原村民线并无具名图的六年全局条件。",
+        "同一local:spouse沿用人物、姓名、寿程和关系；少年与成人初见变体不创建两个人或覆盖已有人物。",
+        "local:childhood仍为不同人物；不迁移、替换或合并它的人物ID与旧回忆。",
+        "少年未相许者可20岁后按原成人熟悉、缘分和主线伴侣条件继续，已真实发生的相识可续用，未发生的剧情仍须经历。",
+        "普通朋友不预绑定伴侣；具名朋友发展由主线解除访行排他后按其原年龄与故事条件提供。",
+        "少年内容不要求先发生成人拥吻；成人互动须等双方已满18，婚姻仍至少22岁。"
+      ],
+      "youngTextProposals": [
+        {
+          "key": "ordinary-first-meeting",
+          "stage": "friend-only",
+          "text": "寺子屋整理书册时，你认识了一位同岁的村民，核清册数后约好下回还来帮忙。"
+        },
+        {
+          "key": "shared-book-order",
+          "stage": "friend-only",
+          "text": "你们将散开的普通书册按类放回，碰到不懂的字便记在纸上，留待下回请教。"
+        },
+        {
+          "key": "plans-before-liking",
+          "stage": "friend-only",
+          "text": "帮街坊挂好灯，你们坐在门槛上讲各自想学的本领，约好下回再聊。"
+        },
+        {
+          "key": "peer-confession",
+          "stage": "young-confession",
+          "text": "你们说起这几年的来往，各自说出喜欢，约好做恋人，也继续忙自己的功课。"
+        },
+        {
+          "key": "public-festival-walk",
+          "stage": "young-companionship",
+          "text": "祭日人多，你们并肩看完街坊挂的灯，走到各自回家的路口，约好明日再见。"
+        },
+        {
+          "key": "listen-to-daily-life",
+          "stage": "young-companionship",
+          "text": "你说起今天没学会的一招，对方也讲自己的难处；两人商量下回怎样再试。"
+        }
+      ],
+      "remainingBlockers": [
+        "主线程实施少年初见、双方模拟年龄、隔年熟悉及两年相识；本提案未接入运行。",
+        "成年约会和local-date事件须分流，少年友谊成年接续保留同一人物，成人初见变体仍20岁恋爱。"
+      ],
+      "implementedEligibility": false,
+      "existingAdultVariant": {
+        "firstMeetingPlayerMinAge": 18,
+        "romancePlayerMinAge": 20,
+        "marriagePlayerMinAge": 22,
+        "retainFamiliarBondAndEventOrder": true,
+        "teenFriendMayContinueAt20WithoutResettingIdentityOrMetAt": true,
+        "teenConfessionMustNotLowerAdultFirstMeetingVariantAge": true
+      }
+    },
+    {
+      "id": "akyuu",
+      "label": "稗田阿求",
+      "recommendation": "future-research-only-retain-v18-player-20",
+      "implementedEligibility": false,
+      "canonicalAge": {
+        "kind": "unknown-at-current-chronicle-anchor",
+        "years": null,
+        "knownBirthCalendar": "第109季文月",
+        "sourceIds": [
+          "akyuu-birth-transcript",
+          "akyuu-monologue-transcript",
+          "oracle-akyuu-transcript"
+        ],
+        "note": "不从发行年、现实当前年或第一代阿一的18岁推第九代当前年龄。"
+      },
+      "existingSimulationAge": {
+        "ageAtMeet": [
+          12,
+          14
+        ],
+        "naturalLimit": [
+          26,
+          30
+        ],
+        "ownAgeFormula": "ageAtMeet + currentStoryAge - metAt - suspendedYears",
+        "partnerRomanceMinAge": 18,
+        "note": "保留现配置；它是本作模拟，不是原作宣布的精确随机区间。"
+      },
+      "theoreticalEarlyAgeExample": {
+        "firstMeetingPlayerAge": 10,
+        "firstMeetingPartnerAge": 12,
+        "realYearsElapsed": 6,
+        "confessionPlayerAge": 16,
+        "confessionPartnerAge": 18,
+        "maximumPeerAgeDifferenceProposal": 2,
+        "ageDifferenceRuleIsFanworkChoice": true,
+        "doNotRedrawAgeToGetThisCombination": true,
+        "requiresAllOriginalNodesAndGates": true,
+        "notAnObservedOrGuaranteedRoute": true,
+        "outsideApprovedV18YouthAllowlist": true
+      },
+      "retainedGates": {
+        "partnerOwnMinAge": 18,
+        "realAcquaintanceYears": 6,
+        "minVisits": 4,
+        "minTrust": 4,
+        "retainInsightAccessStoryAndFreeFirstPartner": true,
+        "existingOrdinaryEntryPlayerMinAge": 18,
+        "existingOldFriendEntryPlayerMinAge": 24,
+        "existingNamedMarriageGlobalPlayerFloor": 20,
+        "doNotDeleteTheseEntryGuardsWithoutAuthoredYouthAlternative": true,
+        "doNotExtendLifespanForEligibility": true,
+        "v18PlayerRomanceMinAge": 20
+      },
+      "continuityNotes": [
+        "本轮不启用阿求16岁路线；玩家20、自身18、原六年四访信任四与故事均保留。",
+        "少年入口须是有真实记录的读友新支路；ageAtMeet、metAt、寿程与后续关系沿用同一对象。",
+        "不把御阿礼先代知识当成年，不把归返故事当入场保证。",
+        "既有普通图的已发生选择、未完节点、改字后果、休息尊重均保留。",
+        "早年只写普通书籍；不能声称阿求12岁已写出后来原作的畅销推理系列。",
+        "若先完整普通图再独立恋爱图，最早年份会更晚，须据实现如实报告。"
+      ],
+      "youngTextProposals": [
+        {
+          "key": "plain-book-reading",
+          "stage": "friend-only",
+          "text": "你把普通书的摘抄递给阿求，她指出漏下的一个字，请你回原页再看一遍。"
+        },
+        {
+          "key": "separate-reading-and-witness",
+          "stage": "friend-only",
+          "text": "你说起书里的一件事，阿求先问你是否亲见；两人把书名留在摘抄旁。"
+        },
+        {
+          "key": "quiet-garden-rest",
+          "stage": "young-companionship",
+          "text": "阿求合起今天的书，你们在庭边听了一阵风声；她先讲近来遇到的趣事。"
+        },
+        {
+          "key": "ordinary-reading-note",
+          "stage": "young-companionship",
+          "text": "你们各写一件今天觉得好笑的小事，交换读完，再各自收好自己的纸页。"
+        }
+      ],
+      "remainingBlockers": [
+        "当前没有阿求少年朋友入口；旧入口18与旧友入口24仍会限制路径。",
+        "需要明确新增支路与独立恋爱图的节点衔接，不能以回填trust或跳图完成。",
+        "16/18只是合规年龄算式；没有运行模拟，也没有证明原故事可在该年全部完成。",
+        "任何少年恋爱提案仍需完整新增少年关系状态与原节点接续，不能因年龄算式成立而在本轮强改。"
+      ],
+      "v18PlayerRomanceMinAge": 20
+    },
+    {
+      "id": "kosuzu",
+      "label": "本居小铃",
+      "recommendation": "friend-background-supported-hold-current-romance-threshold",
+      "implementedEligibility": false,
+      "canonicalAge": {
+        "kind": "unknown",
+        "years": null,
+        "sourceIds": [
+          "fs-bookwalker-1",
+          "fs-yenpress-1",
+          "fs1-transcript",
+          "oracle-kosuzu-transcript"
+        ],
+        "note": "店主女儿、爱书女孩和工作身份均不能换算为16岁；Teen分级不能作角色年龄。"
+      },
+      "proposedSimulationAge": null,
+      "potentialYouthRouteRequires": [
+        "明确另设二创同龄模型，同时保留canonAge未知。",
+        "真实六年、四访与信任四；不把一次少时见过换算成满足条件。",
+        "保留普通图未完成节点、安全边界与传言后果。"
+      ],
+      "retainedGates": {
+        "ordinaryEntryPlayerMinAge": 20,
+        "ordinaryEntryPlayerMaxAge": 45,
+        "ordinaryEntryInsightMin": 4,
+        "oldFriendEntryPlayerMinAge": 24,
+        "realAcquaintanceYears": 6,
+        "minVisits": 4,
+        "minTrust": 4,
+        "shortestOrdinaryGraphDelayYears": 12,
+        "retainSpeciesHabitatAccessAndOriginalStory": true,
+        "noFreeYoumaBookAccess": true,
+        "noPrefilledStoryFlags": true
+      },
+      "youngTextProposals": [
+        {
+          "key": "ordinary-book-return",
+          "stage": "friend-only",
+          "text": "你把普通故事册按约送回，小铃核清页数，问你最喜欢书里哪一段。"
+        },
+        {
+          "key": "plain-character-practice",
+          "stage": "friend-only",
+          "text": "你摹一个普通字，小铃指给你漏下的那笔；你照原页补好，再请她核一次。"
+        },
+        {
+          "key": "paper-bookmark",
+          "stage": "friend-only",
+          "text": "你们在余纸上画书签，小铃画窗，你画村路，画完各自选一本普通书夹好。"
+        },
+        {
+          "key": "public-reading-seat",
+          "stage": "future-young-companionship-only-if-age-model-approved",
+          "text": "小铃在阅读席留好普通游记，你读到熟悉的村路，两人各说一处想再看看的地方。"
+        }
+      ],
+      "remainingBlockers": [
+        "原作确切年龄未知，现同伴模型也未保存自身年龄。",
+        "新增二创年龄与普通长图、旧友入口的衔接尚未确定。",
+        "本报告不将小铃计入已可实现的16路线数量。"
+      ],
+      "v18PlayerRomanceMinAge": 20
+    }
+  ],
+  "keepExistingThresholdScope": {
+    "namedHumanAppearanceOnly": [
+      "reimu",
+      "marisa",
+      "sanae",
+      "sakuya",
+      "youmu"
+    ],
+    "nativeHigherPrerequisiteRoutes": [
+      "keine",
+      "yuuka"
+    ],
+    "longLivedExamples": [
+      "mokou",
+      "yukari",
+      "eirin",
+      "kaguya",
+      "remilia",
+      "flandre",
+      "toyohime",
+      "yorihime"
+    ],
+    "otherCategories": [
+      "年龄未知或幼态角色",
+      "妖精",
+      "旧作梦路",
+      "秘封大学身份",
+      "其余未纳入少量明确名单的路线"
+    ],
+    "reason": "本次没有足够证据与保全原故事的双方面龄方案支持16，不按外表、大学身份、长寿或成熟印象扩名单。"
+  },
+  "adultSceneEntryPointsToReviewDuringImplementation": [
+    "dist/events.js: local-date-talk / local-date-walk / marry / spouse-*",
+    "dist/relationships.js: canLove / nodeDueAt / echoEvent / canEcho / marriageStage / marriageDailyEvent",
+    "dist/companionship.js: text / courtship / localMarriage / candidate",
+    "dist/partner-learning.js: pair",
+    "dist/contacts.js: childhood / entryReady / prospect / gateAvailable",
+    "scripts/build-relationships.mjs: adult entry and lover branch assertions",
+    "scripts/build-romances.mjs: adult romance echo merge"
+  ],
+  "textBoundary": "所有短句为本次二创新编，非原作引用；仅local:spouse少年初见变体属于本轮年龄方案，具名少年文稿仅作后续研究，不写成人亲密、婚后或生育场景，不由构建自动采用。",
+  "approvedV18Scope": {
+    "soleYouthRomanceRoute": "local:spouse youth-first-meeting variant",
+    "samePersonId": "local:spouse",
+    "youthFirstMeetingPlayerAges": [
+      13,
+      14
+    ],
+    "sameAgePartnerAtFirstMeeting": true,
+    "firstMeetingSetting": "寺子屋整理书册",
+    "familiarAfterAtLeastYears": 1,
+    "realAcquaintanceYearsBeforeYouthConfession": 2,
+    "youthConfessionPlayerAges": [
+      16,
+      17
+    ],
+    "retainLocalMarriagePlayerFloor": 22,
+    "retainAdultVariantRomancePlayerFloor": 20,
+    "retainNamedRomancePlayerFloor": 20,
+    "childhoodIdentityMigration": false,
+    "namedYouthRoutesAreFutureResearchOnly": true,
+    "implementationAndRuntimeVerificationAreOutsideThisAudit": true
+  }
+}

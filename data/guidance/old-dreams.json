@@ -1,0 +1,690 @@
+[
+  {
+    "id": "shinki",
+    "title": "从造形走向舍食",
+    "source": "https://thbwiki.cc/游戏对话:东方怪绮谈/博丽灵梦#Final_Stage",
+    "canon": "神绮在《怪绮谈》灵梦路线自称神，并说魔界由她创造。创世与造物是原作事实，原文没有给出供人类照抄的舍食转化课程。",
+    "fiction": "梦中拆解造形让玩家理解如何靠自身修习建立术式，醒来自愿进入魔法职业，新增真实魔法工作后完成自己的舍食转化。教学步骤与转化路线为本作二创；神绮不进入现实或把力量灌入玩家，舍虫须另行修习，舍食不停止老化。",
+    "resultKind": "transformation",
+    "species": [
+      "human"
+    ],
+    "stages": [
+      {
+        "key": "shinki_shape_in_parts",
+        "delay": 3,
+        "text": "神绮在梦里的造物厅拆开一枚纸鸟，让你看清折纹怎样撑起翅膀。你醒后逐步画下结构，试着用自己的力量维持小小形状，失败的部分也留在旁边。",
+        "when": {
+          "min": {
+            "health": 5,
+            "insight": 8
+          },
+          "xp": 4,
+          "trust": 3
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "shinki_choose_magic_work",
+        "delay": 3,
+        "text": "你在梦里告诉神绮，自己愿意把魔法当作此后的职业。醒来后，你购齐基础材料，重新安排工作，从亲手维持一枚微光开始，将每次消耗都记进册里。",
+        "when": {
+          "min": {
+            "health": 5,
+            "insight": 10
+          },
+          "xp": 6,
+          "trust": 4
+        },
+        "operation": "human-magic",
+        "effects": {
+          "fortune": -2
+        },
+        "xp": 1
+      },
+      {
+        "key": "shinki_sustain_without_shape",
+        "delay": 4,
+        "text": "你带着新做魔法工作的记录进入造物厅之梦，神绮请你逐处说明力量从何而来。醒后你撤去多余支点，耗力练到术式能独立维持，再停下来慢慢歇息。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 11
+          },
+          "xp": 8,
+          "trust": 4,
+          "work": 1
+        },
+        "effects": {
+          "health": -1,
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "shinki_self_fasting_rite",
+        "delay": 5,
+        "text": "你在梦中把成熟的术式讲给神绮听，她陪你逐步核过。醒后你添齐材料，以自己修成的魔法完成舍食，身体开始由魔力供养；余下的舍虫修习仍留待以后。",
+        "when": {
+          "min": {
+            "health": 5,
+            "insight": 13
+          },
+          "xp": 10,
+          "trust": 4,
+          "work": 2
+        },
+        "effects": {
+          "fortune": -1
+        },
+        "xp": 0
+      }
+    ],
+    "grant": {
+      "kind": "transformation",
+      "species": "magician"
+    },
+    "followup": {
+      "key": "shinki_magic_body_diary",
+      "delay": 8,
+      "text": "你在造物厅之梦与神绮翻看如今的魔法工作记录，身体已靠自己的魔力维持。她听你谈起仍会疲倦的日子，你把舍虫的后续课题写好，再陪她看一枚新纸鸟。"
+    }
+  },
+  {
+    "id": "sariel",
+    "title": "换形之间辨阶光",
+    "source": "https://thbwiki.cc/萨丽爱尔#一设资料",
+    "canon": "萨丽爱尔是《灵异传》魔界路线最终敌方角色，称号为死亡天使，游戏呈现双翼与第二形态。没有相关文字能力设定，死亡称号不能证明她能赐命或免除死亡。",
+    "fiction": "玩家从梦中换形与明暗变化练习分辨环境，醒后将停步、重新确认的次序用于已有职业。收益为自己的观察熟练度，换形后的阶光练习是本作二创，不获得天使身体或生命支配力。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "sariel_recheck_step_light",
+        "delay": 3,
+        "text": "梦里的萨丽爱尔换了形态，翼影把石阶照成另一种明暗。你先停步重认阶沿，醒后在工作处试着换位置看同一件东西，来回练到腿脚疲倦才歇下。",
+        "when": {
+          "min": {
+            "health": 5,
+            "insight": 7
+          },
+          "trust": 3
+        },
+        "effects": {
+          "health": -1,
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "sariel_pause_before_next_step",
+        "delay": 4,
+        "text": "你把新一次工作中重认位置的经过讲给梦里的萨丽爱尔，沿石阶示范该在哪里停住。醒后你已会在条件改变时先核清落脚处，再继续手边熟悉的工作。",
+        "when": {
+          "min": {
+            "health": 4,
+            "insight": 8
+          },
+          "xp": 6,
+          "trust": 4,
+          "work": 1
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 1,
+      "xp": 4,
+      "practice": 1
+    },
+    "followup": {
+      "key": "sariel_light_and_work_note",
+      "delay": 7,
+      "text": "你在神殿之梦里再认石阶的光，把近来工作时少走的弯路讲给萨丽爱尔。她收稳双翼，与你停在同一阶沿；醒后你将这段相伴也添到练习记录旁。"
+    }
+  },
+  {
+    "id": "mima",
+    "title": "沿反射拆开术式",
+    "source": "https://thbwiki.cc/附带文档:东方梦时空/梦的人们#魅魔",
+    "canon": "《梦时空》性能文档记载魅魔的贯通宽波和反幽幻弹，后者最多反射三次；Manual 将她列为博丽神社的恶灵。性能演出不等于玩家能继承恶灵寿命或无限反射。",
+    "fiction": "魅魔在旧神社之梦里用有终点的反射说明起手、转折与收束，玩家醒后把分段复核用于自己的职业。具体讲解与练习为本作二创，只增熟练度，不强改职业、变成恶灵或赐予贯通攻击。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "mima_three_reflection_marks",
+        "delay": 2,
+        "text": "魅魔在旧神社之梦把一枚小光弹的三次反射分别点给你看，笑你只顾着追亮处。醒后你购来练习纸，将自己的工作拆成起手、转折和收束，逐段标清。",
+        "when": {
+          "min": {
+            "insight": 8
+          },
+          "xp": 4,
+          "trust": 3
+        },
+        "effects": {
+          "fortune": -1,
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "mima_find_the_bad_turn",
+        "delay": 3,
+        "text": "你带着后来一次工作的分段记录入梦，魅魔遮住末尾，要你找出更早的偏差。醒后你按她问过的次序逐处复查，终于明白哪一步让后面的动作全都赶了起来。",
+        "when": {
+          "min": {
+            "insight": 9
+          },
+          "xp": 7,
+          "trust": 4,
+          "work": 1
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "mima_end_before_another_bounce",
+        "delay": 4,
+        "text": "梦里的魅魔收住第三次反射，等你说完几次新工作的改法。醒后你已会在收束处停稳，省下重做的力气；那张最初画乱的练习纸，也终于能读出完整次序。",
+        "when": {
+          "min": {
+            "insight": 10
+          },
+          "xp": 10,
+          "trust": 4,
+          "work": 3
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 2,
+      "xp": 6,
+      "practice": 2
+    },
+    "followup": {
+      "key": "mima_margin_for_a_pause",
+      "delay": 8,
+      "text": "你在旧神社之梦向魅魔讲起如今的工作，她翻到最早那张反射图，问你何处最该停。你熟练地指出收束的一笔，她把纸递回来，陪你把旁边的小灯拨亮。"
+    }
+  },
+  {
+    "id": "yumemi",
+    "title": "把猜测放回对照里",
+    "source": "https://thbwiki.cc/附带文档:东方梦时空/Omake#冈崎梦美",
+    "canon": "梦美在大学教授比较物理学，认为魔力不适用既有统一理论；她的学会发表遭嘲笑，因而来到这个世界。附带文档也记有收集数据，不支持由教授身份推出延寿技术。",
+    "fiction": "玩家与梦中的梦美建立一套可复核的对照观察，将它用于现实已有职业的三次新增工作。对照流程是本作二创，熟练度来自本人操作；梦美与研究舱不来到现实，不移植她所在世界的技术或学制。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "yumemi_observed_or_expected",
+        "delay": 3,
+        "text": "梦美在研究舱之梦把你的记录分成已观察和待验证两栏，请你指出哪行只是猜测。醒后你为自己的职业另备一册，先记真实发生的步骤，再留空写预想结果。",
+        "when": {
+          "min": {
+            "insight": 8,
+            "bond": 6
+          },
+          "xp": 5,
+          "trust": 3
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "yumemi_one_changed_condition",
+        "delay": 3,
+        "text": "你带着新一次工作的记录入梦，与梦美定下只改一处条件的对照。醒后你添齐材料重做，耗去的材料和没有出现的结果都写进册里，留待下回入梦时核对。",
+        "when": {
+          "min": {
+            "insight": 9
+          },
+          "xp": 7,
+          "trust": 4,
+          "work": 1
+        },
+        "effects": {
+          "fortune": -2
+        },
+        "xp": 1
+      },
+      {
+        "key": "yumemi_compare_two_actual_trials",
+        "delay": 4,
+        "text": "梦美与你并排看两次新工作的记录，追问光线和用时有没有一并改变。你醒后补上当时遗漏的条件，重新核对结论，把还无法确定的那一项留待下回。",
+        "when": {
+          "min": {
+            "insight": 10
+          },
+          "xp": 9,
+          "trust": 4,
+          "work": 2
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "yumemi_repeatable_work_note",
+        "delay": 4,
+        "text": "你把第三次新工作的过程带进研究舱之梦，按记录向梦美复述怎样重做。醒后你已能照着核实过的条件安排工作，连结果不合预想时该查哪里，也写得清楚。",
+        "when": {
+          "min": {
+            "insight": 11
+          },
+          "xp": 12,
+          "trust": 4,
+          "work": 3
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 3,
+      "xp": 7,
+      "practice": 3
+    },
+    "followup": {
+      "key": "yumemi_another_checked_result",
+      "delay": 9,
+      "text": "你在研究舱之梦给梦美看如今用得熟练的工作记录，翻出一项后来修正的结论。她陪你把新证据放到原来的猜测旁，听完经过，才在那一页写下核过的日期。"
+    }
+  },
+  {
+    "id": "gengetsu",
+    "title": "亲手留住护体一拍",
+    "source": "https://thbwiki.cc/附带文档:东方幻想乡/Omake",
+    "canon": "《幻想乡》Omake 列出幻月的高速弹和短激光，并明确姐妹在玩家使用炸弹时会张开防护罩。这是战斗防护演出，没有说明她能授予不老或替现实病人抵销身体耗损。",
+    "fiction": "玩家在梦中观察展开防护的时机，醒后用自己的材料和力量练成一次护体准备。护符、练习与其承托撤离效果为本作二创，限一次体魄耗尽前及时自救；selfMade 为真，幻月不进入现实，不撤销死亡或医治寿终。",
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "gengetsu_notice_guard_opening",
+        "delay": 3,
+        "text": "幻月在空地之梦先收净急弹，给你看防护展开的那一拍。你醒后慢慢比过呼吸与抬手的次序，找出开始吃力前仍能稳住动作的时机，把它画在纸边。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 8
+          },
+          "xp": 5,
+          "trust": 3
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "gengetsu_build_personal_guard",
+        "delay": 3,
+        "text": "你购齐符纸与承托材料，醒时用自己的力量试做一枚护符，再在梦里向幻月说明散开的地方。她等你自己找出松动的一角，你回去重新练过相接的次序。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 10
+          },
+          "xp": 7,
+          "trust": 4
+        },
+        "effects": {
+          "fortune": -2
+        },
+        "xp": 1
+      },
+      {
+        "key": "gengetsu_practice_guard_and_retreat",
+        "delay": 4,
+        "text": "你醒时练着展开护符，再卸下负担走到歇处，几遍下来确实耗了力气。入梦后幻月听你说清哪一步最吃力，与你按慢些的节拍重排，让退步接在护体之后。",
+        "when": {
+          "min": {
+            "health": 7,
+            "insight": 11
+          },
+          "xp": 9,
+          "trust": 4
+        },
+        "effects": {
+          "health": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "gengetsu_one_guard_ready",
+        "delay": 4,
+        "text": "你在梦里向幻月完整示范护体与退步，醒后将自己练成的护符安放在随手能取之处。开始撑不住时，你会用它护住身形，及时卸下负担，给歇息留出空当。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 12
+          },
+          "xp": 12,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "health",
+      "health": 6,
+      "selfMade": true,
+      "text": "力气将尽时，你及时展开自己练成的护符，借那一拍支撑卸下负担，稳住身形退到歇处。护符随即耗尽，你照练过的节奏歇息，终于缓过这一阵耗力。"
+    },
+    "followup": {
+      "key": "gengetsu_review_the_guard_beat",
+      "delay": 8,
+      "text": "你与幻月在空地之梦重看当年的护体次序，讲起自己如今能承受的分量。她收稳双翼，陪你比过放下负担的那一拍；醒后你按身体近况调整日常节奏。"
+    }
+  },
+  {
+    "id": "mugetsu",
+    "title": "在直角处先停稳",
+    "source": "https://thbwiki.cc/附带文档:东方幻想乡/Omake",
+    "canon": "《幻想乡》Omake 将梦月列为额外关卡的妹妹，并明确列出直角转弯弹等攻击。女仆装与姐妹身份没有证明她受雇于他人，也没有给出普遍赐能或延寿能力。",
+    "fiction": "梦中直角转向提供停稳再换方向的观察起点，玩家醒后用两次真实职业工作练习转序和收纳。练习流程为本作二创，适用当前职业，不复制弹幕、不改变职业或种族。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "mugetsu_corner_before_turn",
+        "delay": 2,
+        "text": "梦月在空地之梦让一枚小光绕过直角，你试着沿纸路跟到转角，先把脚步停稳。醒后你为工作添置分隔材料，将待做与已做的东西放在转序的两边。",
+        "when": {
+          "min": {
+            "insight": 7
+          },
+          "xp": 4,
+          "trust": 3
+        },
+        "effects": {
+          "fortune": -1
+        },
+        "xp": 1
+      },
+      {
+        "key": "mugetsu_reorder_after_stopping",
+        "delay": 3,
+        "text": "你将新一次工作里的转序带进梦中，梦月看你在角边停住，再换成下一段动作。醒后你发现先放稳手里的东西，回身时便能准确拿到该接上的那一件。",
+        "when": {
+          "min": {
+            "insight": 8
+          },
+          "xp": 6,
+          "trust": 4,
+          "work": 1
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "mugetsu_complete_the_second_corner",
+        "delay": 4,
+        "text": "梦月听你讲完第二次新工作的转角，与你把纸路换成另一种方向。你醒后已能先看清后段要接什么，再停稳转序；以前容易混放的物件，如今各有去处。",
+        "when": {
+          "min": {
+            "insight": 9
+          },
+          "xp": 9,
+          "trust": 4,
+          "work": 2
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 2,
+      "xp": 5,
+      "practice": 1
+    },
+    "followup": {
+      "key": "mugetsu_new_corner_in_old_work",
+      "delay": 7,
+      "text": "你在空地之梦向梦月讲起工作里新添的转序，熟练地把前后两段排在纸路旁。她挪出一个转角让你试，你看过再落步，随后与她收好散在角边的纸条。"
+    }
+  },
+  {
+    "id": "konngara",
+    "title": "收剑以后学落步",
+    "source": "https://thbwiki.cc/矜羯罗#一设资料",
+    "canon": "矜羯罗是《灵异传》地狱路线最终敌方角色，称号为星幽剑士，游戏呈现剑与杯。该作没有相关文字身世与能力设定；剑士称号及角状外形不证明鬼族身份或授命能力。",
+    "fiction": "梦中收剑后的落步演示让玩家练习搬移重心、落稳再伸手，并在醒后两次真实职业工作中运用。步法课程为本作二创，只增强已有职业熟练度，不把玩家改成武士或传授未知剑术。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "konngara_weight_after_sheathed_sword",
+        "delay": 3,
+        "text": "矜羯罗在神殿之梦先收好剑，沿细枝摆的短线给你看落步。你醒后空手练习搬移重心，试到转身后仍能稳住，腿脚耗力时便停在平处歇一会儿。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 6
+          },
+          "trust": 3
+        },
+        "effects": {
+          "health": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "konngara_stand_then_reach",
+        "delay": 3,
+        "text": "你把新一次工作里站稳再伸手的经过带进梦中，矜羯罗以杯旁的小枝标出脚尖位置。醒后你照自己的身量缩短步幅，将原本匆忙的一段做得安稳。",
+        "when": {
+          "min": {
+            "health": 5,
+            "insight": 7
+          },
+          "xp": 6,
+          "trust": 4,
+          "work": 1
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "konngara_stable_return_step",
+        "delay": 4,
+        "text": "梦里的矜羯罗收剑听你讲第二次新工作的改法，与你走过转身后回来的短线。醒后你已有稳当的落步习惯，拿放东西时也能留下转回去的位置。",
+        "when": {
+          "min": {
+            "health": 5,
+            "insight": 8
+          },
+          "xp": 9,
+          "trust": 4,
+          "work": 2
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 1,
+      "xp": 6,
+      "practice": 3
+    },
+    "followup": {
+      "key": "konngara_shorter_steps_today",
+      "delay": 8,
+      "text": "你在神殿之梦与收剑的矜羯罗再走短线，按如今的身量调好步幅。你讲起工作时已经熟练的拿放，对方将杯安在旁边，陪你稳稳走回最初落脚的位置。"
+    }
+  },
+  {
+    "id": "kikuri",
+    "title": "移开斜光再辨细处",
+    "source": "https://thbwiki.cc/菊理#一设资料",
+    "canon": "菊理是《灵异传》地狱路线十五面敌方角色，称号为地狱之月，造型为有面孔的月轮。没有相关文字能力设定，月轮与称号不证明月之都身份、长生术或肉身回春。",
+    "fiction": "玩家从梦中月轮与水面反光练习改换视角，醒后用遮光材料复核职业工作中的细处。调光与复核流程为本作二创，菊理只以月轮转向回应，不添人类手脚；结果限玩家自己的工作熟练度。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "kikuri_tilt_the_lamp_shade",
+        "delay": 2,
+        "text": "菊理在水边之梦转过月轮，让倒影的亮处慢慢移开。你醒后购来遮光纸，在自己的工作处挪动灯罩，才看见原先被斜光盖住的一道细小接缝。",
+        "when": {
+          "min": {
+            "insight": 7
+          },
+          "xp": 3,
+          "trust": 3
+        },
+        "effects": {
+          "fortune": -1
+        },
+        "xp": 1
+      },
+      {
+        "key": "kikuri_same_detail_two_angles",
+        "delay": 4,
+        "text": "你把新一次工作中从两边核过的细处讲给梦里的菊理，随着月轮转向重看水面。醒后你已会先挪开反光再判断，把确实看见的差别用在原来的工作里。",
+        "when": {
+          "min": {
+            "insight": 8
+          },
+          "xp": 6,
+          "trust": 4,
+          "work": 1
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 1,
+      "xp": 5,
+      "practice": 2
+    },
+    "followup": {
+      "key": "kikuri_clear_detail_again",
+      "delay": 7,
+      "text": "你在水边之梦向菊理讲起工作里熟练的调光办法，认出倒影旁一圈细小波纹。月轮慢慢转向与你同看，醒后你把这一夜的光色夹在旧遮光纸旁。"
+    }
+  },
+  {
+    "id": "yuugenmagan",
+    "title": "五处视点合成复核",
+    "source": "https://thbwiki.cc/幽幻魔眼#一设资料",
+    "canon": "幽幻魔眼是《灵异传》魔界路线十面敌方角色，称号为邪恶之眼，游戏造型为五眼。没有相关文字能力设定，五眼造型不等于全知、读心或可转交给人类的超常视觉。",
+    "fiction": "玩家借梦中五眼位置逐点观察，醒后把分视点核对用于两次真实职业工作。观察练习与眼光回应是本作二创，只培养本人有次序的复核，不获得额外眼睛或远距感知。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "yuugenmagan_five_viewpoints_in_order",
+        "delay": 3,
+        "text": "幽幻魔眼在大门之梦依次亮起五处眼光，你按位置记下每处看见的不同。醒后你添置记录纸，将工作里要复核的细节分开写，免得只盯着最显眼的一处。",
+        "when": {
+          "min": {
+            "insight": 8
+          },
+          "xp": 4,
+          "trust": 3
+        },
+        "effects": {
+          "fortune": -1,
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "yuugenmagan_join_checked_details",
+        "delay": 5,
+        "text": "你带着两次新工作的逐点记录进入大门之梦，依五眼位置复述哪些细处已核过。醒后你已能把分开的观察合成判断，补查遗漏后再完成手边的工作。",
+        "when": {
+          "min": {
+            "insight": 9
+          },
+          "xp": 8,
+          "trust": 4,
+          "work": 2
+        },
+        "effects": {},
+        "xp": 2
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 2,
+      "xp": 4,
+      "practice": 2
+    },
+    "followup": {
+      "key": "yuugenmagan_checked_points_remembered",
+      "delay": 8,
+      "text": "你在大门之梦重新依次看过五处眼光，讲起如今工作里已熟练的复核。幽幻魔眼的光停在你曾漏看的位置，你认出那一处，醒后在记录旁添了一枚小记号。"
+    }
+  },
+  {
+    "id": "singyoku",
+    "title": "换形后仍认同一件事",
+    "source": "https://thbwiki.cc/神玉#一设资料",
+    "canon": "神玉是《灵异传》五面敌方角色，称号为守门人，游戏有球体及两个人形等多个形态。没有相关文字身世或能力设定，各形态属于同一角色，不支持人类继承其变形或寿命。",
+    "fiction": "梦中认清同一位守门人的换形启发交接复核，玩家醒后核清工作物件在不同阶段的标记。流程为本作二创，以一次真实职业工作完成练习；不复制变形、不拆出数位伴侣，只增加现有职业熟练度。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "singyoku_same_gate_three_forms",
+        "delay": 2,
+        "text": "神玉在旧神社大门之梦换过形态，你仍认出守在同一处的伙伴。醒后你购来标记纸，为工作物件逐一记清原名与所在步骤，换过包装也能接上之前的记录。",
+        "when": {
+          "min": {
+            "insight": 6,
+            "bond": 6
+          },
+          "xp": 3,
+          "trust": 3
+        },
+        "effects": {
+          "fortune": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "singyoku_trace_the_handover",
+        "delay": 4,
+        "text": "你在新一次工作里按标记核完交接，再把经过讲给梦里的神玉。守门人的形态变换时，你已会循同一条记录重认来处；醒后这份习惯让后段工作接得顺畅。",
+        "when": {
+          "min": {
+            "insight": 7,
+            "bond": 7
+          },
+          "xp": 6,
+          "trust": 4,
+          "work": 1
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 1,
+      "xp": 4,
+      "practice": 3
+    },
+    "followup": {
+      "key": "singyoku_name_through_each_change",
+      "delay": 6,
+      "text": "你在旧神社大门之梦向神玉讲起熟练的交接记录，仍用最初的名字招呼换形后的伙伴。醒后你整理旧标记，认出每次变化怎样接续成如今做完的那件事。"
+    }
+  }
+]

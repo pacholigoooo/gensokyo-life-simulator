@@ -1,0 +1,4294 @@
+[
+  {
+    "id": "youki",
+    "continuity": "windows",
+    "anchor": {
+      "label": "庭务交接后，去向不明",
+      "text": "你曾为白玉楼担任约三百年庭师，也把剑术传给妖梦。将庭务交到她手中后，你忽然隐居，留下旧主与继任者继续照看庭院，往后的踪迹无人知晓。",
+      "age": {
+        "kind": "unknown",
+        "label": "长期任职的前任庭师",
+        "years": null,
+        "sourceIds": [
+          "pcb",
+          "youki-mail"
+        ],
+        "note": "文档的约三百年是任职时间，不是出生年龄；不能据此给精确年岁。"
+      },
+      "location": "隐居地点不明（假设续篇）"
+    },
+    "sources": [
+      {
+        "id": "pcb",
+        "title": "东方妖妖梦·角色设定",
+        "url": "https://thbwiki.cc/附带文档:东方妖妖梦/角色设定",
+        "type": "primary-transcript",
+        "locator": "骚灵三姐妹的旧宅前史；魂魄妖梦条目的前任庭师妖忌"
+      },
+      {
+        "id": "youki-mail",
+        "title": "ZUN·妖忌相关的答复",
+        "url": "https://thbwiki.cc/ZUN/妖忌相关的答复",
+        "type": "official-interview",
+        "locator": "经许可转载的邮件全文；原发布页已失效"
+      },
+      {
+        "id": "youki-index",
+        "title": "魂魄妖忌·角色索引",
+        "url": "https://thbwiki.cc/魂魄妖忌",
+        "type": "secondary-index",
+        "locator": "妖妖梦文档与ZUN答复来源索引"
+      }
+    ],
+    "history": [
+      {
+        "id": "service",
+        "label": "旧日庭务",
+        "work": "th07",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你在西行寺家做了约三百年庭师，照料庭园并用剑守护主人。你与白玉楼的已知往事，始于这份延续已久的职责。",
+        "sourceIds": [
+          "pcb"
+        ],
+        "note": ""
+      },
+      {
+        "id": "sword",
+        "label": "传剑于妖梦",
+        "work": "zun-mail",
+        "kind": "report",
+        "certainty": "canon",
+        "text": "你是妖梦的祖父与剑术老师。你教剑少言而严厉，她靠反复观看你的动作领会剑术，追问时却往往只得到喝斥。",
+        "sourceIds": [
+          "youki-mail"
+        ],
+        "note": ""
+      },
+      {
+        "id": "bloom",
+        "label": "旧时的西行妖",
+        "work": "th07",
+        "kind": "report",
+        "certainty": "canon",
+        "text": "你曾见过西行妖盛开的景象，后来感叹那是惊人的樱花，却恐怕不会再次开放。那句话留在白玉楼的旧事中，具体日期不明。",
+        "sourceIds": [
+          "pcb"
+        ],
+        "note": "妖忌谈的是西行妖恐怕不会再次开放；此段原文未指明听话者。"
+      },
+      {
+        "id": "departure",
+        "label": "忽然隐居",
+        "work": "th07",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你将庭师之职交给尚年轻的妖梦，随后突然隐居。妖梦留守白玉楼，而你的行踪从此没有明确记录。",
+        "sourceIds": [
+          "pcb"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "th07",
+        "title": "东方妖妖梦·妖梦角色文档",
+        "participation": "mentioned",
+        "historyIds": [
+          "service",
+          "bloom",
+          "departure"
+        ],
+        "sourceIds": [
+          "pcb"
+        ],
+        "note": ""
+      },
+      {
+        "work": "zun-mail",
+        "title": "ZUN·妖忌邮件答复",
+        "participation": "mentioned",
+        "historyIds": [
+          "sword"
+        ],
+        "sourceIds": [
+          "youki-mail"
+        ],
+        "note": "人物补充说明，并非一场新异变。"
+      }
+    ],
+    "future": {
+      "mode": "hypothetical",
+      "intro": "无名住处的庭院渐渐有了新枝，你将旧练习刀放到树下。长久少言的剑术还留在手中，你想把它整理成可反复练习的步法，让来学的人自己看懂出剑。",
+      "years": 40,
+      "goal": {
+        "name": "留下可学的剑法",
+        "description": "将剑术化成能反复练习的步法，并让后来者找到自己的出剑方式。"
+      },
+      "milestones": [
+        {
+          "text": "你翻出旧练习刀，决定将修枝时的轻重也写进剑谱。",
+          "effects": {
+            "insight": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "fail": "腕力时好时坏，你把示范分成短段，仍难留下连贯的动作。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "你能稳住每次挥刀，剪枝与出剑的差别终于有了清楚示范。"
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "fail": "你急着纠正每一步，练习者只能照抄，难从旧剑术中学会判断。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          },
+          "pass": "你等练习者先走完一遍，再改剑谱；书中的空处容得下新步法。"
+        },
+        {
+          "text": "你收好这一卷剑谱，庭中还留着供人试步的空地。",
+          "effects": {}
+        }
+      ],
+      "success": "剑谱与练习场都已留下，来人能够先试再问。你坐在树下看新步法穿过落花，终于不必用喝斥守住每一次出剑。",
+      "bittersweet": "剑谱保住了一部分经验，却仍有几处只能亲眼领会。你放下催促，愿意让来人多练一季，小庭院也因此慢慢热闹起来。",
+      "failure": "整理好的纸页仍难教会别人，旧剑术多半留在你身上。你没有再追着练习者纠错，转去修枝，给自己留下一段安静的日子。",
+      "eventOverrides": [
+        {
+          "id": "youki_01",
+          "text": "半灵停在木桩旁，你试着把旧剑势拆成更慢的动作。"
+        },
+        {
+          "id": "youki_03",
+          "text": "旧刀柄磨破手掌，你包好伤处，今日只演半套剑。"
+        },
+        {
+          "id": "youki_04",
+          "text": "你看懂落叶的旋向，换个角度演示如何避开迎面风。"
+        },
+        {
+          "id": "youki_14",
+          "text": "你将新修齐的一片草地留作试步与午睡的地方。"
+        },
+        {
+          "id": "youki_29",
+          "text": "旧练习刀上还留着妖梦惯用的握痕，你没有磨去。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "youki_30",
+          "text": "茶摆到树下，你想起幽幽子总催人停手赏花。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "youki_31",
+          "text": "你想起妖梦守住自己的步法，将剑谱空出半页。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "youki_32",
+          "text": "旧主曾嫌庭中太齐整，你照那句话留下一丛野花。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "youki_33",
+          "text": "你在远路上想起妖梦第一次握刀的姿势。",
+          "remember": []
+        }
+      ],
+      "reviewedEventIds": [
+        "youki_01",
+        "youki_02",
+        "youki_03",
+        "youki_04",
+        "youki_05",
+        "youki_06",
+        "youki_07",
+        "youki_08",
+        "youki_09",
+        "youki_10",
+        "youki_11",
+        "youki_12",
+        "youki_13",
+        "youki_14",
+        "youki_15",
+        "youki_16",
+        "youki_17",
+        "youki_18",
+        "youki_19",
+        "youki_20",
+        "youki_21",
+        "youki_22",
+        "youki_23",
+        "youki_24",
+        "youki_25",
+        "youki_26",
+        "youki_27",
+        "youki_28",
+        "youki_29",
+        "youki_30",
+        "youki_31",
+        "youki_32",
+        "youki_33",
+        "youki_34",
+        "youki_35",
+        "youki_36"
+      ]
+    }
+  },
+  {
+    "id": "layla",
+    "continuity": "historical",
+    "anchor": {
+      "label": "人类蕾拉已故，旧宅与骚灵仍在",
+      "text": "你是普莉兹姆利巴家的小女儿，创造出形似姐姐的三名骚灵，与她们在旧宅中生活。人类四姐妹早已故去，幻想乡的宅邸却仍留着骚灵三姐妹的琴声。",
+      "age": {
+        "kind": "unknown",
+        "label": "生前曾是幼小少女；已故",
+        "years": null,
+        "sourceIds": [
+          "pcb",
+          "layla-mail"
+        ],
+        "note": "邮件只明确幼小少女与寿尽，没有死亡年龄；不拿骚灵年龄替代你的年龄。"
+      },
+      "identity": "已故的人类少女与骚灵创造者",
+      "location": "骚灵旧宅的遗留物",
+      "realm": "past"
+    },
+    "sources": [
+      {
+        "id": "pcb",
+        "title": "东方妖妖梦·角色设定",
+        "url": "https://thbwiki.cc/附带文档:东方妖妖梦/角色设定",
+        "type": "primary-transcript",
+        "locator": "骚灵三姐妹的旧宅前史；魂魄妖梦条目的前任庭师妖忌"
+      },
+      {
+        "id": "layla-mail",
+        "title": "ZUN·邮件答复备份",
+        "url": "https://thbwiki.cc/ZUN/邮件答复的备份",
+        "type": "official-interview",
+        "locator": "「レイラ・プリズムリバーの詳細設定」问答，中日对照"
+      },
+      {
+        "id": "layla-index",
+        "title": "蕾拉·普莉兹姆利巴·角色索引",
+        "url": "https://thbwiki.cc/蕾拉·普莉兹姆利巴",
+        "type": "secondary-index",
+        "locator": "人类四姐妹与骚灵三姐妹的区分、妖妖梦文档和邮件链接"
+      }
+    ],
+    "history": [
+      {
+        "id": "family",
+        "label": "家人尚在时",
+        "work": "th07",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你是富裕的普莉兹姆利巴家的小女儿，与三个姐姐一起生活。那时的你年幼，也容易感到寂寞。",
+        "sourceIds": [
+          "pcb",
+          "layla-mail"
+        ],
+        "note": "核对说明：你曾与三个姐姐生活在富裕的普莉兹姆利巴家。已知你容易寂寞，但原文没有给出出生日期或成长年表。"
+      },
+      {
+        "id": "loss",
+        "label": "事故与离散",
+        "work": "th07",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "伯爵得到东之国的魔法道具后，家中发生事故。姐姐们离去，而你不愿离开充满回忆的宅邸。",
+        "sourceIds": [
+          "pcb",
+          "layla-mail"
+        ],
+        "note": "事故细节和三位人类姐姐的后续生活未详。"
+      },
+      {
+        "id": "spirits",
+        "label": "创造三名骚灵",
+        "work": "th07",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你创造出形似姐姐的三名骚灵，随宅邸进入幻想乡。幻声渐能与你交谈，并帮助你度过那里的日常。",
+        "sourceIds": [
+          "pcb",
+          "layla-mail"
+        ],
+        "note": ""
+      },
+      {
+        "id": "legacy",
+        "label": "人类寿尽之后",
+        "work": "th07",
+        "kind": "report",
+        "certainty": "canon",
+        "text": "你最终普通地寿尽，三名骚灵却没有消失。人类四姐妹早已逝去，旧宅与后来学会演奏的骚灵仍留在幻想乡。",
+        "sourceIds": [
+          "pcb",
+          "layla-mail"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "th07",
+        "title": "东方妖妖梦·骚灵三姐妹角色文档",
+        "participation": "mentioned",
+        "historyIds": [
+          "family",
+          "loss",
+          "spirits",
+          "legacy"
+        ],
+        "sourceIds": [
+          "pcb"
+        ],
+        "note": "当代自机遇见的是骚灵；没有蕾拉现世出场。"
+      },
+      {
+        "work": "zun-mail",
+        "title": "ZUN·蕾拉详细设定问答",
+        "participation": "mentioned",
+        "historyIds": [
+          "family",
+          "loss",
+          "spirits",
+          "legacy"
+        ],
+        "sourceIds": [
+          "layla-mail"
+        ],
+        "note": ""
+      }
+    ],
+    "future": {
+      "mode": "legacy",
+      "intro": "旧宅的谱箱又一次打开，纸上的曲调还缺着几处。三名骚灵想保存与你有关的物件，也把新旋律奏给今日的来客，让空椅旁的声音继续向前生长。",
+      "years": 16,
+      "goal": {
+        "name": "让旧宅容下新曲",
+        "description": "保存与你有关的曲调和物件，同时给骚灵与来客留下演奏新曲的地方。"
+      },
+      "milestones": [
+        {
+          "text": "旧宅打开积灰的谱箱，你留下的片段重新摆到窗边。",
+          "effects": {
+            "insight": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "fail": "旧谱受潮太久，只能抄出零散的几句，缺失的旋律依旧无从补回。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "insight": -1
+          },
+          "pass": "散乱的曲调被仔细抄好，缺失处留白，后来的演奏者能读懂旧谱。"
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "fail": "来客执意听从前的曲目，新作几次被打断，空椅旁的琴声渐少。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          },
+          "pass": "三名骚灵配合渐熟，新曲在你的空椅旁完整奏完，来客静静听到最后。"
+        },
+        {
+          "text": "谱箱重新收好，一张空白谱页留在今日的琴架上。",
+          "effects": {}
+        }
+      ],
+      "success": "旧曲有了可读的留本，三名骚灵的新曲也响过大厅。属于你的故事被珍惜地收起，窗边的空椅旁仍不断有人带来新声音。",
+      "bittersweet": "一部分旧曲与新声留下了，另一部分仍在空白处等待。三名骚灵照旧打开厅门，来人既能听故事，也能把自己的旋律奏给旧宅。",
+      "failure": "谱箱未能整理成册，新曲也迟迟没有演完。旧宅仍保存着空椅与旧纸；在这卷未竟的余响之后，骚灵们仍可继续自己的日常。",
+      "eventOverrides": [
+        {
+          "id": "layla_01",
+          "text": "你留下的旧谱被摊在窗边，纸角还压着一片干花。"
+        },
+        {
+          "id": "layla_02",
+          "text": "旧宅的地板修平后，骚灵的琴箱终于能稳稳放下。"
+        },
+        {
+          "id": "layla_03",
+          "text": "潮气侵入旧书柜，几页字迹淡得只剩纸上的凹痕。"
+        },
+        {
+          "id": "layla_04",
+          "text": "一段曾被漏掉的旋律重新响起，空房也有了回声。"
+        },
+        {
+          "id": "layla_05",
+          "text": "你用过的茶杯留在窗台，杯中添的是今日的花枝。"
+        },
+        {
+          "id": "layla_06",
+          "text": "石阶上的旧印渐淡，门前却仍有人仔细扫去落叶。"
+        },
+        {
+          "id": "layla_07",
+          "text": "旧花盆换了土，曾遮住窗边的枝叶又慢慢长开。"
+        },
+        {
+          "id": "layla_08",
+          "text": "三名骚灵在你的空椅旁商量曲目，窗边传来试奏的琴声。"
+        },
+        {
+          "id": "layla_09",
+          "text": "一只谱夹从箱底取出，夹住了容易散落的旧纸。"
+        },
+        {
+          "id": "layla_10",
+          "text": "短短的曲调被分成几行，后来演奏的人能接着读。"
+        },
+        {
+          "id": "layla_11",
+          "text": "两张抄谱的断句不同，桌边留下各自修改的痕迹。"
+        },
+        {
+          "id": "layla_12",
+          "text": "旧宅搬开一张沉柜，压在下面的谱纸重新见光。"
+        },
+        {
+          "id": "layla_13",
+          "text": "雨漏到谱夹边，未干的字迹让抄写暂时停了一夜。"
+        },
+        {
+          "id": "layla_14",
+          "text": "午后的点心摆给今日的客人，你的空椅仍在一旁。"
+        },
+        {
+          "id": "layla_15",
+          "text": "一首旧曲换了收尾，熟悉的旋律接上新写的几小节。"
+        },
+        {
+          "id": "layla_16",
+          "text": "琴声停顿时，三名骚灵听完彼此的想法再合奏。"
+        },
+        {
+          "id": "layla_17",
+          "text": "谱夹里散乱的纸排好，末尾留着几页空白，等候新曲。"
+        },
+        {
+          "id": "layla_18",
+          "text": "雨声穿过窗缝，一段短曲试了几次便接上节拍。"
+        },
+        {
+          "id": "layla_19",
+          "text": "旧箱搬到高处，箱里最后一页薄纸也避开了雨。"
+        },
+        {
+          "id": "layla_20",
+          "text": "一名来客听完旧宅的故事，在空椅旁留下一枝花。"
+        },
+        {
+          "id": "layla_21",
+          "text": "开窗后，曲声飘过空院，阶前的来客停下脚步。"
+        },
+        {
+          "id": "layla_22",
+          "text": "午后的新曲声很轻，厅里的旧钟却照旧慢了半拍。"
+        },
+        {
+          "id": "layla_23",
+          "text": "积灰的琴凳擦净，今日的演奏者坐上去试了试。"
+        },
+        {
+          "id": "layla_24",
+          "text": "留存的曲调有了另一种奏法，旧谱仍放在近处。"
+        },
+        {
+          "id": "layla_25",
+          "text": "旧谱夹裂开一角，能用的纸页换进了新的封套。"
+        },
+        {
+          "id": "layla_26",
+          "text": "没人记得一处原先的节拍，那里留白供来人再试。"
+        },
+        {
+          "id": "layla_27",
+          "text": "大厅的窗帘换过了，空椅仍有一小片熟悉的阳光。"
+        },
+        {
+          "id": "layla_28",
+          "text": "一场雨过去，旧衣箱关好，屋里只留下干净木香。"
+        },
+        {
+          "id": "layla_29",
+          "text": "露娜萨奏完慢曲，在你留下的空椅旁停了一会。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "layla_30",
+          "text": "梅露兰的声音穿过走廊，今日的旧宅又喧闹起来。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "layla_31",
+          "text": "莉莉卡找出散落的谱纸，把缺失的空页夹在后面。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "layla_32",
+          "text": "三名骚灵说起今日的演奏，谈到兴处又各自拿起乐器。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "layla_33",
+          "text": "梅露兰曾经的怪腔留在回忆里，新曲却用了别的开头。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "layla_34",
+          "text": "热茶端给来客，属于你的杯子依旧盛着窗边的花。"
+        },
+        {
+          "id": "layla_35",
+          "text": "旧衣箱被重新整理，叠好的衣物旁留着一张写有你名字的纸。"
+        },
+        {
+          "id": "layla_36",
+          "text": "空白谱页添了今晨的鸟鸣，旧宅仍能容下新声音。"
+        }
+      ],
+      "reviewedEventIds": [
+        "layla_01",
+        "layla_02",
+        "layla_03",
+        "layla_04",
+        "layla_05",
+        "layla_06",
+        "layla_07",
+        "layla_08",
+        "layla_09",
+        "layla_10",
+        "layla_11",
+        "layla_12",
+        "layla_13",
+        "layla_14",
+        "layla_15",
+        "layla_16",
+        "layla_17",
+        "layla_18",
+        "layla_19",
+        "layla_20",
+        "layla_21",
+        "layla_22",
+        "layla_23",
+        "layla_24",
+        "layla_25",
+        "layla_26",
+        "layla_27",
+        "layla_28",
+        "layla_29",
+        "layla_30",
+        "layla_31",
+        "layla_32",
+        "layla_33",
+        "layla_34",
+        "layla_35",
+        "layla_36"
+      ]
+    }
+  },
+  {
+    "id": "change",
+    "continuity": "windows",
+    "anchor": {
+      "label": "绀珠传所提及的幽禁女神",
+      "text": "你因使用蓬莱之药而被幽禁于月之都，月兔服从你，也替你捣药受罚。纯狐的袭击以你为目标，你却始终没有现身，门内的你究竟知道多少仍无人明了。",
+      "age": {
+        "kind": "unknown",
+        "label": "服药后长期幽禁，年岁不详",
+        "years": null,
+        "sourceIds": [
+          "ssib2",
+          "lolk"
+        ],
+        "note": "不能把中国传说年代直接换成东方嫦娥年龄；本次可读文档也没有给出确切幽禁年数。"
+      }
+    },
+    "sources": [
+      {
+        "id": "ssib2",
+        "title": "东方儚月抄漫画·第二话",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Silent_Sinner_in_Blue./第二话",
+        "type": "primary-transcript",
+        "locator": "P1–20全文；P9–11永琳说明嫦娥服药、幽禁与月兔代罚，P14逃亡月兔说明捣药之苦"
+      },
+      {
+        "id": "lolk",
+        "title": "东方绀珠传·Omake",
+        "url": "https://thbwiki.cc/附带文档:东方绀珠传/Omake",
+        "type": "primary-transcript",
+        "locator": "纯狐与赫卡提亚角色设定：嫦娥地位、服药与袭月目标"
+      },
+      {
+        "id": "lolk-marisa",
+        "title": "东方绀珠传·魔理沙路线中日对照",
+        "url": "https://thbwiki.cc/游戏对话:东方绀珠传/雾雨魔理沙/中日对照",
+        "type": "primary-transcript",
+        "locator": "Stage 1–6及Ending No.03/04全文；第六关Legacy已Miss分支中纯狐呼问嫦娥是否在看，无嫦娥回应"
+      },
+      {
+        "id": "lolk-reisen",
+        "title": "东方绀珠传·铃仙路线中日对照",
+        "url": "https://thbwiki.cc/游戏对话:东方绀珠传/铃仙·优昙华院·因幡/中日对照",
+        "type": "primary-transcript",
+        "locator": "Stage 1–6及Ending No.07/08全文；07永琳解释共同丈夫、复仇与禁言理由，08叙述嫦娥幽禁和月兔支配者身份"
+      },
+      {
+        "id": "change-index",
+        "title": "嫦娥·角色索引",
+        "url": "https://thbwiki.cc/嫦娥",
+        "type": "secondary-index",
+        "locator": "身份与作品索引；蟾蜍外形只有此处概述，未找到本次可读的原文定位"
+      }
+    ],
+    "history": [
+      {
+        "id": "drug",
+        "label": "服用禁药",
+        "work": "bougetsushou",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你曾使用永琳制成的蓬莱之药，因而被幽禁于月之都。月兔替你长期捣药，承受与此相关的处罚。",
+        "sourceIds": [
+          "ssib2"
+        ],
+        "note": ""
+      },
+      {
+        "id": "old-grudge",
+        "label": "铃仙结局·永琳所述的旧怨",
+        "work": "th15",
+        "kind": "report",
+        "certainty": "reported",
+        "text": "铃仙路线的结局中，永琳说你与纯狐曾有同一位丈夫。那人杀死纯狐的儿子，后被纯狐复仇杀死；她对你的怨恨也延及拥戴你的月之民。",
+        "sourceIds": [
+          "lolk-reisen"
+        ],
+        "note": "所述来自Ending No.07的永琳对白；本段未给丈夫姓名，也未交代婚姻与服药幽禁的先后，不套入神话补年月。"
+      },
+      {
+        "id": "target",
+        "label": "绀珠传·袭月目标",
+        "work": "th15",
+        "kind": "report",
+        "certainty": "canon",
+        "text": "纯狐与赫卡提亚令月球和梦境充满生命，意在逼出月之民并讨伐你。你没有在本作现身，也未给出自己的回应。",
+        "sourceIds": [
+          "lolk"
+        ],
+        "note": ""
+      },
+      {
+        "id": "knowledge",
+        "label": "所知仍不明",
+        "work": "th15",
+        "kind": "report",
+        "certainty": "unknown",
+        "text": "你是支配月兔的强大女神，却仍被幽禁于门内。纯狐的存在是否已经为你所知没有定论，外界也未听见你对这场袭击的回应。",
+        "sourceIds": [
+          "lolk",
+          "lolk-marisa",
+          "lolk-reisen"
+        ],
+        "note": "核对说明：文档没有确认你是否知道纯狐的存在。强大的月兔支配者与被幽禁者这两种身份并存，不能据此补写脱困经过。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "bougetsushou",
+        "title": "东方儚月抄漫画·第二话",
+        "participation": "mentioned",
+        "historyIds": [
+          "drug"
+        ],
+        "sourceIds": [
+          "ssib2"
+        ],
+        "note": ""
+      },
+      {
+        "work": "th15",
+        "title": "东方绀珠传·设定与魔理沙、铃仙路线",
+        "participation": "mentioned",
+        "historyIds": [
+          "old-grudge",
+          "target",
+          "knowledge"
+        ],
+        "sourceIds": [
+          "lolk",
+          "lolk-marisa",
+          "lolk-reisen"
+        ],
+        "note": "原有纯狐与赫卡提亚设定外，补读魔理沙、铃仙Stage 1–6和四个结局。嫦娥仍仅被提及，旧怨为永琳记述，未将问话或袭击计划写成本人回应。"
+      }
+    ],
+    "future": {
+      "mode": "hypothetical",
+      "intro": "门外的杵声又换了停顿，窗影缓缓越过三颗圆石。你仍伏在月都幽闭之所，想认清属于自己的时日，也让来送水的人知道，门内还有愿意回应的心绪。",
+      "years": 80,
+      "goal": {
+        "name": "留下门内的回应",
+        "description": "辨出幽闭生活的节律，并以自己的回应与门外照料者建立有限的联系。"
+      },
+      "milestones": [
+        {
+          "text": "你将三颗旧圆石移到窗影下，开始留下自己的时日记号。",
+          "effects": {
+            "insight": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 7
+          },
+          "fail": "杵声常被杂响盖住，石子数过又数错，日子仍彼此混淆。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          },
+          "pass": "你听清杵声的停顿，石子的记号与窗影渐能对应上。"
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "fail": "你缩回门内不愿应声，来客只能照旧放水，猜不透你的心绪。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          },
+          "pass": "你会回应门外的问候，也让来客知道何时想独自安静一会。"
+        },
+        {
+          "text": "门仍关着，石边却有你自己认得的记号与停顿。",
+          "effects": {}
+        }
+      ],
+      "success": "幽禁没有解除，你却认得自己的时日，也能让照料者明白一次回应。漫长的杵声之外，门内终于有了不必由旁人代说的节律。",
+      "bittersweet": "你保住了记号或短暂的联系，另一件事仍反复中断。门没有打开，清水却照旧送来；你愿意把未完成的回应留待下一段时日。",
+      "failure": "石子的记号乱了，门边的问候也渐难回应。你仍伏在熟悉的温石上，听声音来去；这一卷在沉默中停下，温石旁还散着未排好的小石。",
+      "eventOverrides": [
+        {
+          "id": "change_01",
+          "text": "药味早已无法分辨，你伏在温石上听完一阵熟悉杵声。"
+        },
+        {
+          "id": "change_02",
+          "text": "你撑开久伏的四足，沿熟悉的矮石慢慢挪到窗影下。"
+        },
+        {
+          "id": "change_29",
+          "text": "今日送水的是另一位月兔，你轻推水盆示意已经看见。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "change_32",
+          "text": "门外的照料者等着，你轻推水盆示意可以留下说话。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "change_33",
+          "text": "旧日送水的脚步仍留在记忆里，你抬眼看向门边。",
+          "remember": []
+        }
+      ],
+      "reviewedEventIds": [
+        "change_01",
+        "change_02",
+        "change_03",
+        "change_04",
+        "change_05",
+        "change_06",
+        "change_07",
+        "change_08",
+        "change_09",
+        "change_10",
+        "change_11",
+        "change_12",
+        "change_13",
+        "change_14",
+        "change_15",
+        "change_16",
+        "change_17",
+        "change_18",
+        "change_19",
+        "change_20",
+        "change_21",
+        "change_22",
+        "change_23",
+        "change_24",
+        "change_25",
+        "change_26",
+        "change_27",
+        "change_28",
+        "change_29",
+        "change_30",
+        "change_31",
+        "change_32",
+        "change_33",
+        "change_34",
+        "change_35",
+        "change_36"
+      ]
+    }
+  },
+  {
+    "id": "maruchi",
+    "continuity": "pc98",
+    "anchor": {
+      "label": "梦时空灵梦结局·最初唤出的机器人",
+      "text": "梦美在灵梦结局中最初唤出你，千百合立即反对。随后留在神社做家务的是另一台名为留琴的机器人；你的身影只停在那次短暂唤出，往后的去向不明。",
+      "age": {
+        "kind": "unknown",
+        "label": "被唤出的机体，制造年岁不明",
+        "years": null,
+        "sourceIds": [
+          "podd"
+        ],
+        "note": "不能把另一机体留琴的能源说明、使用经历或年岁转给玛○奇。"
+      },
+      "identity": "梦时空结局中最初被唤出的机器人",
+      "location": "概率空间移动船（假设续篇）",
+      "realm": "pc98"
+    },
+    "sources": [
+      {
+        "id": "podd",
+        "title": "东方梦时空·博丽灵梦结局",
+        "url": "https://thbwiki.cc/游戏对话:东方梦时空/博丽灵梦",
+        "type": "primary-transcript",
+        "locator": "ENDING：最初唤出玛○奇、千百合反对、随后换成留琴的连续对话"
+      },
+      {
+        "id": "maruchi-index",
+        "title": "玛○奇·角色索引",
+        "url": "https://thbwiki.cc/玛○奇",
+        "type": "secondary-index",
+        "locator": "梦时空灵梦结局索引；须连读后面的留琴替换对话"
+      }
+    ],
+    "history": [
+      {
+        "id": "offer",
+        "label": "灵梦要求帮手",
+        "work": "th03",
+        "kind": "background",
+        "certainty": "route-dependent",
+        "text": "在灵梦获胜的结局里，她要能替自己处理神社杂务的帮手。梦美先唤出名为玛○奇的你，准备满足这个要求。",
+        "sourceIds": [
+          "podd"
+        ],
+        "note": "属于博丽灵梦结局分支。"
+      },
+      {
+        "id": "replace",
+        "label": "礼物被替换",
+        "work": "th03",
+        "kind": "event",
+        "certainty": "route-dependent",
+        "text": "千百合反对后，梦美换出另一台留琴。灵梦将留琴带回神社，尝试让它做家务；那次短暂唤出之后，你的去向再没有被讲明。",
+        "sourceIds": [
+          "podd"
+        ],
+        "note": "两台机器人不能合并；玛○奇后续未知。 核对说明：千百合反对后，梦美换出另一台留琴。灵梦带走并尝试使唤的是留琴，原文没有让你留在神社做家务。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "th03",
+        "title": "东方梦时空·博丽灵梦结局",
+        "participation": "cameo",
+        "historyIds": [
+          "offer",
+          "replace"
+        ],
+        "sourceIds": [
+          "podd"
+        ],
+        "note": "仅这条结局中的短暂出场；不跨接Windows博丽神社。"
+      }
+    ],
+    "future": {
+      "mode": "hypothetical",
+      "intro": "船内的维修簿旁又堆起几张杂务单，梦美的茶搁到凉了。你开始记下每次临时中断的工作，想把清扫与检修安排妥当，让忙碌的两人坐下来喝完热茶。",
+      "years": 10,
+      "goal": {
+        "name": "替忙人留一杯热茶",
+        "description": "整理船内易积压的杂务，并听懂两位研究者何时需要停下休息。"
+      },
+      "milestones": [
+        {
+          "text": "你把旧维修簿与杂务簿放在一起，开始记录临时中断的差事。",
+          "effects": {
+            "insight": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "fail": "你坚持照旧顺序忙碌，一处检修就让清扫与茶水都积压下来。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          },
+          "pass": "你分出杂务的轻重，检修时未做完的工作也能接着完成。"
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "fail": "你只认完整命令，把暂歇当成误工，刚倒的茶又被提前收走。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          },
+          "pass": "你听懂未说完的请求，也会等她们休息完再处理桌边的杂物。"
+        },
+        {
+          "text": "你将今日的清扫提示贴好，把两只茶杯留在能够伸手取到的位置。",
+          "effects": {}
+        }
+      ],
+      "success": "船内的杂务能继续运转，梦美与千百合也终于坐着喝完热茶。你停在桌边等新的请求，维修簿上多了一页照料人的办法。",
+      "bittersweet": "清扫与休息只协调好了一部分，桌边偶尔还会忙成一团。你保留好用的记录，再添一条新的提醒，两只茶杯仍留在托盘上。",
+      "failure": "杂务簿的顺序仍不合用，热茶也总在忙乱中凉掉。你暂时放下最复杂的安排，先清出一小块桌面，让下一次尝试有地方开始。",
+      "eventOverrides": [
+        {
+          "id": "maruchi_02",
+          "text": "你搬起常用的水桶，先检查底座能否压稳木板。"
+        },
+        {
+          "id": "maruchi_06",
+          "text": "你把檐外鸟鸣与检修杂声分开，留下一段安静录音。"
+        },
+        {
+          "id": "maruchi_16",
+          "text": "千百合说今天晚些打扫，你暂停了桌边的扫帚。",
+          "with": [
+            "chiyuri"
+          ]
+        },
+        {
+          "id": "maruchi_20",
+          "text": "梦美还没说完，你已端来托盘，等她决定茶杯要留还是收。",
+          "with": [
+            "yumemi"
+          ]
+        },
+        {
+          "id": "maruchi_25",
+          "text": "船舱添了新门帘，你重新试过进出的高度。"
+        },
+        {
+          "id": "maruchi_27",
+          "text": "千百合把一片红叶放在托盘上，没有下任何命令。",
+          "with": [
+            "chiyuri"
+          ]
+        },
+        {
+          "id": "maruchi_31",
+          "text": "千百合把轻扫帚靠在你身边，等你慢慢握住。",
+          "with": [
+            "chiyuri"
+          ]
+        },
+        {
+          "id": "maruchi_35",
+          "text": "你停下来检查松动的接缝，听见檐外又一阵鸟鸣。"
+        }
+      ],
+      "reviewedEventIds": [
+        "maruchi_01",
+        "maruchi_02",
+        "maruchi_03",
+        "maruchi_04",
+        "maruchi_05",
+        "maruchi_06",
+        "maruchi_07",
+        "maruchi_08",
+        "maruchi_09",
+        "maruchi_10",
+        "maruchi_11",
+        "maruchi_12",
+        "maruchi_13",
+        "maruchi_14",
+        "maruchi_15",
+        "maruchi_16",
+        "maruchi_17",
+        "maruchi_18",
+        "maruchi_19",
+        "maruchi_20",
+        "maruchi_21",
+        "maruchi_22",
+        "maruchi_23",
+        "maruchi_24",
+        "maruchi_25",
+        "maruchi_26",
+        "maruchi_27",
+        "maruchi_28",
+        "maruchi_29",
+        "maruchi_30",
+        "maruchi_31",
+        "maruchi_32",
+        "maruchi_33",
+        "maruchi_34",
+        "maruchi_35",
+        "maruchi_36"
+      ]
+    }
+  },
+  {
+    "id": "laika",
+    "continuity": "windows",
+    "anchor": {
+      "label": "香霖堂收养并命名之后",
+      "text": "你是香霖堂留下的机器犬。白莲说明一只未能出生的幼犬魂魄转生进了机体，霖之助便将你收养；他借外界名犬的故事取名莱卡，愿你在这里安心生活。",
+      "age": {
+        "kind": "unknown",
+        "label": "未出生幼犬魂魄所寄的机体",
+        "years": null,
+        "sourceIds": [
+          "cola8"
+        ],
+        "note": "白莲说明的是魂魄起点；机体制造日期不明，不能据外界莱卡经历算年龄。"
+      }
+    },
+    "sources": [
+      {
+        "id": "cola8",
+        "title": "东方香霖堂·外来韦编第8话",
+        "url": "https://thbwiki.cc/东方香霖堂/东方外来韦编第8话",
+        "type": "primary-transcript",
+        "locator": "杂志042–047页全文：机器犬、白莲说明、霖之助留养与命名"
+      },
+      {
+        "id": "fragment-index",
+        "title": "碎片角色列表",
+        "url": "https://thbwiki.cc/碎片角色列表",
+        "type": "secondary-index",
+        "locator": "支持人物各条目及作品、话数索引；不把条目推测改写为确认史实"
+      }
+    ],
+    "history": [
+      {
+        "id": "discovery",
+        "label": "香霖堂的机器犬",
+        "work": "cola8",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "霖之助发现一台没有电池却仍会活动的机器犬。它曾扑向堇子，将她撞昏；仅凭外形无法解释它为何会动。",
+        "sourceIds": [
+          "cola8"
+        ],
+        "note": ""
+      },
+      {
+        "id": "soul",
+        "label": "白莲的说明",
+        "work": "cola8",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "白莲说明这是未能出生的幼犬魂魄转生到机体中，并非应当驱除的恶灵。霖之助于是决定留养这台机器犬。",
+        "sourceIds": [
+          "cola8"
+        ],
+        "note": ""
+      },
+      {
+        "id": "name",
+        "label": "留养与命名",
+        "work": "cola8",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你逐渐听从霖之助的呼唤，他也为你准备留养的日常。取名时，他借来一只著名外界犬的故事，愿这只幼犬魂魄能安心生活。",
+        "sourceIds": [
+          "cola8"
+        ],
+        "note": "核对说明：你逐渐听从霖之助的呼唤。他借一只著名外界犬的故事取名莱卡，想让你安心生活，没有把你认成那只历史上的犬。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "cola8",
+        "title": "东方香霖堂·外来韦编第8话",
+        "participation": "participant",
+        "historyIds": [
+          "discovery",
+          "soul",
+          "name"
+        ],
+        "sourceIds": [
+          "cola8"
+        ],
+        "note": "驱动能量的解释含灵梦猜测，不把猜测写为已证机理。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "霖之助开门时，你已经会循着呼唤抬起头，布球却滚到店外去了。你想认清门外的一小段路，也分辨陌生的脚步，玩够之后再回到熟悉的毯子旁。",
+      "years": 10,
+      "goal": {
+        "name": "玩够也能回家",
+        "description": "适应店门外的路与门槛，并在陌生脚步之间认出可信的回家呼唤。"
+      },
+      "milestones": [
+        {
+          "text": "你将布球拖到店门旁，等霖之助开门才探出机器鼻尖。",
+          "effects": {
+            "health": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "fail": "门外的高低总让四足打绊，你只能把布球留在平地慢慢推。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "你能跨过门槛与浅沟，在门外追一段小球再稳稳回来。"
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "fail": "新脚步总令你紧张，你仍要等霖之助走近，才敢离开柜台阴影。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          },
+          "pass": "你认得回家的呼唤，也能分清想摸你的手与需要绕开的脚步。"
+        },
+        {
+          "text": "你把玩旧的布球带回毯子旁，门外还有新的声音。",
+          "effects": {}
+        }
+      ],
+      "success": "门外的小路不再令四足发慌，熟悉的呼唤总能让你回到毯子上。你在香霖堂门边停下，既有想去闻的远处，也有安心回来的地方。",
+      "bittersweet": "你熟悉了一段路或一种呼唤，别的声响仍让你迟疑。霖之助把毯子留在旧位置，你可以玩一会再回来，慢慢试探下一道门槛。",
+      "failure": "门外的路与来客仍太陌生，你把布球拖回柜台旁。霖之助没有催你远走；这一卷停在熟悉的店里，下一次开门仍可只探出鼻尖。",
+      "eventOverrides": [
+        {
+          "id": "laika_02",
+          "text": "你绕过刚摆下的木箱，四足稳稳踩过熟悉的地板。"
+        },
+        {
+          "id": "laika_03",
+          "text": "新箱子的回音忽然变响，你转过两圈才认出自己的咔哒声。"
+        },
+        {
+          "id": "laika_10",
+          "text": "你在店门外听见熟悉的短哨，便回头看店门。"
+        }
+      ],
+      "reviewedEventIds": [
+        "laika_01",
+        "laika_02",
+        "laika_03",
+        "laika_04",
+        "laika_05",
+        "laika_06",
+        "laika_07",
+        "laika_08",
+        "laika_09",
+        "laika_10",
+        "laika_11",
+        "laika_12",
+        "laika_13",
+        "laika_14",
+        "laika_15",
+        "laika_16",
+        "laika_17",
+        "laika_18",
+        "laika_19",
+        "laika_20",
+        "laika_21",
+        "laika_22",
+        "laika_23",
+        "laika_24",
+        "laika_25",
+        "laika_26",
+        "laika_27",
+        "laika_28",
+        "laika_29",
+        "laika_30",
+        "laika_31",
+        "laika_32",
+        "laika_33",
+        "laika_34",
+        "laika_35",
+        "laika_36"
+      ]
+    }
+  },
+  {
+    "id": "zenki",
+    "continuity": "windows",
+    "anchor": {
+      "label": "月面侦察记录之后，个体结局不明",
+      "text": "你是八云紫的乌鸦式神前鬼，与后鬼分头替她行动。一只侦察鸦曾飞向月之都，并被丰姬送往无空气的月表；那只鸦死去时，身份仍未明确指向你或后鬼。",
+      "age": {
+        "kind": "unknown",
+        "label": "已执行侦察任务，年岁不详",
+        "years": null,
+        "sourceIds": [
+          "ssib1",
+          "ssib6",
+          "clr3"
+        ],
+        "note": "派遣和死亡记录均未给年龄，也未给可区分个体的姓名。"
+      }
+    },
+    "sources": [
+      {
+        "id": "ssib1",
+        "title": "东方儚月抄漫画·第一话",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Silent_Sinner_in_Blue./第一话",
+        "type": "primary-transcript",
+        "locator": "P1–3：紫派两只乌鸦式神携神酒寻找贤者"
+      },
+      {
+        "id": "ssib6",
+        "title": "东方儚月抄漫画·第六话",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Silent_Sinner_in_Blue./第六话",
+        "type": "primary-transcript",
+        "locator": "P20–26：乌鸦从图书馆飞向月之都、在月表窒息坠落"
+      },
+      {
+        "id": "clr3",
+        "title": "东方儚月抄小说·第三话",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Cage_in_Lunatic_Runagate./第三话",
+        "type": "primary-transcript",
+        "locator": "全文，末段：丰姬将来鸦送至无空气的月表；未具名前鬼或后鬼"
+      },
+      {
+        "id": "fragment-index",
+        "title": "碎片角色列表",
+        "url": "https://thbwiki.cc/碎片角色列表",
+        "type": "secondary-index",
+        "locator": "支持人物各条目及作品、话数索引；不把条目推测改写为确认史实"
+      }
+    ],
+    "history": [
+      {
+        "id": "dispatch",
+        "label": "两鸦分头出使",
+        "work": "bougetsushou",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "紫让前鬼与后鬼两只乌鸦式神携神酒寻找贤者，它们向相反方向飞去；此后各自的行动未能逐一辨明。",
+        "sourceIds": [
+          "ssib1",
+          "fragment-index"
+        ],
+        "note": "核对说明：紫让两只乌鸦式神携神酒寻找贤者，它们向相反方向飞去。名字见角色索引，漫画此处未将每只个体分别具名。"
+      },
+      {
+        "id": "flight",
+        "label": "月面侦察",
+        "work": "bougetsushou",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "一只乌鸦飞过红魔馆与神社，沿倒映的月亮来到月海，并继续向月之都靠近。画面没有标明它属于哪只式神。",
+        "sourceIds": [
+          "ssib6"
+        ],
+        "note": ""
+      },
+      {
+        "id": "death",
+        "label": "一只侦察鸦陨落",
+        "work": "bougetsushou",
+        "kind": "report",
+        "certainty": "unknown",
+        "text": "丰姬将来鸦送往没有空气的月表，乌鸦随即窒息坠落。这场死亡确定发生，但不能判定死者是前鬼或后鬼。",
+        "sourceIds": [
+          "ssib6",
+          "clr3"
+        ],
+        "note": "共有记录；不为任一个体确认存活或死亡。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "bougetsushou-manga",
+        "title": "东方儚月抄漫画·第一、六话",
+        "participation": "participant",
+        "historyIds": [
+          "dispatch",
+          "flight",
+          "death"
+        ],
+        "sourceIds": [
+          "ssib1",
+          "ssib6"
+        ],
+        "note": "两只同属组合的乌鸦，六话行动者未具名。"
+      },
+      {
+        "work": "bougetsushou-novel",
+        "title": "东方儚月抄小说·第三话",
+        "participation": "mentioned",
+        "historyIds": [
+          "death"
+        ],
+        "sourceIds": [
+          "clr3"
+        ],
+        "note": "丰姬叙述同一侦察鸦死亡，个体姓名仍不明。"
+      }
+    ],
+    "future": {
+      "mode": "hypothetical",
+      "intro": "地上的林路吹来新的风，你沿紫的召回暗号落到旧枝。今日仍有消息要带回，你想辨清相近的出口，也记住逆风时的换路办法，让归巢的翅膀留足余力。",
+      "years": 35,
+      "goal": {
+        "name": "把消息平安带回",
+        "description": "辨清地上侦察路的风险，并把观察到的消息清楚、稳妥地带回栖处。"
+      },
+      "milestones": [
+        {
+          "text": "你将常用返程分成几段，起飞前先听完紫的召回暗号。",
+          "effects": {
+            "insight": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "fail": "相近出口仍常混淆，你只能报出笼统方向，回去再补看一次。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          },
+          "pass": "你辨清相近出口的差别，带回的消息能对应到实际林路。"
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "fail": "逆风总耗去太多力气，你要靠短程接力，消息也常在途中耽搁。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "你掌握逆风时的换路办法，带着消息仍能留力飞回栖处。"
+        },
+        {
+          "text": "你将新认出的风口留给同行者，自己收翅停回旧枝。",
+          "effects": {}
+        }
+      ],
+      "success": "你带回的消息清楚，返程也留下了避险的路线。旧枝上有可以安心收拢双翼的地方，下一次侦察不必再以抢先飞出作为本领的证明。",
+      "bittersweet": "消息与返程只掌握好了一半，有些远路仍需同行者帮忙。你留在旧枝多听一阵风，愿意把未完成的路线分成几段慢慢弄清。",
+      "failure": "误判的声响与风向让侦察几次折返，你暂时留在近林。栖枝仍在，紫也还有新的任务；你先收拢双翼歇息，等林口的风平缓后再听一遍召回。",
+      "eventOverrides": [
+        {
+          "id": "zenki_01",
+          "text": "你沿熟悉的召回暗号飞到栖枝，先听清今日任务。"
+        },
+        {
+          "id": "zenki_02",
+          "text": "你在已走过的林口练习换向，落枝前多看一遍风势。"
+        }
+      ],
+      "reviewedEventIds": [
+        "zenki_01",
+        "zenki_02",
+        "zenki_03",
+        "zenki_04",
+        "zenki_05",
+        "zenki_06",
+        "zenki_07",
+        "zenki_08",
+        "zenki_09",
+        "zenki_10",
+        "zenki_11",
+        "zenki_12",
+        "zenki_13",
+        "zenki_14",
+        "zenki_15",
+        "zenki_16",
+        "zenki_17",
+        "zenki_18",
+        "zenki_19",
+        "zenki_20",
+        "zenki_21",
+        "zenki_22",
+        "zenki_23",
+        "zenki_24",
+        "zenki_25",
+        "zenki_26",
+        "zenki_27",
+        "zenki_28",
+        "zenki_29",
+        "zenki_30",
+        "zenki_31",
+        "zenki_32",
+        "zenki_33",
+        "zenki_34",
+        "zenki_35",
+        "zenki_36"
+      ]
+    }
+  },
+  {
+    "id": "goki",
+    "continuity": "windows",
+    "anchor": {
+      "label": "月面侦察记录之后，个体结局不明",
+      "text": "你是八云紫的乌鸦式神后鬼，与前鬼分头替她行动。一只侦察鸦曾飞向月之都，并被丰姬送往无空气的月表；那只鸦死去时，身份仍未明确指向你或前鬼。",
+      "age": {
+        "kind": "unknown",
+        "label": "已执行侦察任务，年岁不详",
+        "years": null,
+        "sourceIds": [
+          "ssib1",
+          "ssib6",
+          "clr3"
+        ],
+        "note": "派遣和死亡记录均未给年龄，也未给可区分个体的姓名。"
+      }
+    },
+    "sources": [
+      {
+        "id": "ssib1",
+        "title": "东方儚月抄漫画·第一话",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Silent_Sinner_in_Blue./第一话",
+        "type": "primary-transcript",
+        "locator": "P1–3：紫派两只乌鸦式神携神酒寻找贤者"
+      },
+      {
+        "id": "ssib6",
+        "title": "东方儚月抄漫画·第六话",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Silent_Sinner_in_Blue./第六话",
+        "type": "primary-transcript",
+        "locator": "P20–26：乌鸦从图书馆飞向月之都、在月表窒息坠落"
+      },
+      {
+        "id": "clr3",
+        "title": "东方儚月抄小说·第三话",
+        "url": "https://thbwiki.cc/东方儚月抄_～_Cage_in_Lunatic_Runagate./第三话",
+        "type": "primary-transcript",
+        "locator": "全文，末段：丰姬将来鸦送至无空气的月表；未具名前鬼或后鬼"
+      },
+      {
+        "id": "fragment-index",
+        "title": "碎片角色列表",
+        "url": "https://thbwiki.cc/碎片角色列表",
+        "type": "secondary-index",
+        "locator": "支持人物各条目及作品、话数索引；不把条目推测改写为确认史实"
+      }
+    ],
+    "history": [
+      {
+        "id": "dispatch",
+        "label": "两鸦分头出使",
+        "work": "bougetsushou",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "紫让前鬼与后鬼两只乌鸦式神携神酒寻找贤者，它们向相反方向飞去；此后各自的行动未能逐一辨明。",
+        "sourceIds": [
+          "ssib1",
+          "fragment-index"
+        ],
+        "note": "核对说明：紫让两只乌鸦式神携神酒寻找贤者，它们向相反方向飞去。名字见角色索引，漫画此处未将每只个体分别具名。"
+      },
+      {
+        "id": "flight",
+        "label": "月面侦察",
+        "work": "bougetsushou",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "一只乌鸦飞过红魔馆与神社，沿倒映的月亮来到月海，并继续向月之都靠近。画面没有标明它属于哪只式神。",
+        "sourceIds": [
+          "ssib6"
+        ],
+        "note": ""
+      },
+      {
+        "id": "death",
+        "label": "一只侦察鸦陨落",
+        "work": "bougetsushou",
+        "kind": "report",
+        "certainty": "unknown",
+        "text": "丰姬将来鸦送往没有空气的月表，乌鸦随即窒息坠落。这场死亡确定发生，但不能判定死者是前鬼或后鬼。",
+        "sourceIds": [
+          "ssib6",
+          "clr3"
+        ],
+        "note": "共有记录；不为任一个体确认存活或死亡。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "bougetsushou-manga",
+        "title": "东方儚月抄漫画·第一、六话",
+        "participation": "participant",
+        "historyIds": [
+          "dispatch",
+          "flight",
+          "death"
+        ],
+        "sourceIds": [
+          "ssib1",
+          "ssib6"
+        ],
+        "note": "两只同属组合的乌鸦，六话行动者未具名。"
+      },
+      {
+        "work": "bougetsushou-novel",
+        "title": "东方儚月抄小说·第三话",
+        "participation": "mentioned",
+        "historyIds": [
+          "death"
+        ],
+        "sourceIds": [
+          "clr3"
+        ],
+        "note": "丰姬叙述同一侦察鸦死亡，个体姓名仍不明。"
+      }
+    ],
+    "future": {
+      "mode": "hypothetical",
+      "intro": "栖枝之外的声音又多了几种，你收翅听过一阵，才沿林口出发。你想留稳窄路里的返程，也听清哪些动静值得带回，让消息越过风声抵达旧枝。",
+      "years": 35,
+      "goal": {
+        "name": "分清值得带回的声响",
+        "description": "辨清地上侦察路的风险，并把观察到的消息清楚、稳妥地带回栖处。"
+      },
+      "milestones": [
+        {
+          "text": "你在林口停稳，决定把听见的动静与回家的风向一并记住。",
+          "effects": {
+            "health": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "fail": "你转得太急便耗尽力气，只能在宽阔林口等待声音靠近。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "你能急转收翅，窄路里也留得下避开突风的返程。"
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "fail": "你仍追着最响的声叫，真正需要带回的动静几次从身后溜走。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          },
+          "pass": "你辨出消息中的轻重，带回的是可追查的动静而非最吵的一声。"
+        },
+        {
+          "text": "你把一阵清楚的叫声留在栖枝旁，等下一次召回。",
+          "effects": {}
+        }
+      ],
+      "success": "你带回的消息清楚，返程也留下了避险的路线。旧枝上有可以安心收拢双翼的地方，下一次侦察不必再以抢先飞出作为本领的证明。",
+      "bittersweet": "消息与返程只掌握好了一半，有些远路仍需同行者帮忙。你留在旧枝多听一阵风，愿意把未完成的路线分成几段慢慢弄清。",
+      "failure": "误判的声响与风向让侦察几次折返，你暂时留在近林。栖枝仍在，紫也还有新的任务；你先收拢双翼歇息，等林口的风平缓后再听一遍召回。",
+      "eventOverrides": [
+        {
+          "id": "goki_01",
+          "text": "你沿熟悉的召回暗号飞到栖枝，先听清今日任务。"
+        },
+        {
+          "id": "goki_02",
+          "text": "你在已走过的林口练习换向，落枝前多看一遍风势。"
+        }
+      ],
+      "reviewedEventIds": [
+        "goki_01",
+        "goki_02",
+        "goki_03",
+        "goki_04",
+        "goki_05",
+        "goki_06",
+        "goki_07",
+        "goki_08",
+        "goki_09",
+        "goki_10",
+        "goki_11",
+        "goki_12",
+        "goki_13",
+        "goki_14",
+        "goki_15",
+        "goki_16",
+        "goki_17",
+        "goki_18",
+        "goki_19",
+        "goki_20",
+        "goki_21",
+        "goki_22",
+        "goki_23",
+        "goki_24",
+        "goki_25",
+        "goki_26",
+        "goki_27",
+        "goki_28",
+        "goki_29",
+        "goki_30",
+        "goki_31",
+        "goki_32",
+        "goki_33",
+        "goki_34",
+        "goki_35",
+        "goki_36"
+      ]
+    }
+  },
+  {
+    "id": "koutei",
+    "continuity": "windows",
+    "anchor": {
+      "label": "茨歌仙幼龙出场与协同技能之后",
+      "text": "你是华扇役使的幼龙黄帝，曾呼来风雨，将灵梦带到她面前。山间的泉水与低云已经熟悉，深秘录、凭依华里的具名协同技能也留下了你的身影。",
+      "age": {
+        "kind": "unknown",
+        "label": "原作称为龙的幼子",
+        "years": null,
+        "sourceIds": [
+          "wahh5"
+        ],
+        "note": "有幼龙阶段依据，但没有孵化日期或数值年龄；龙石孵化仅索引概述，本次没有取得对应原文。"
+      },
+      "identity": "华扇役使的幼龙"
+    },
+    "sources": [
+      {
+        "id": "wahh5",
+        "title": "东方茨歌仙·第五话",
+        "url": "https://thbwiki.cc/东方茨歌仙/第五话",
+        "type": "primary-transcript",
+        "locator": "P1–27全文；P14–16华扇的幼龙带来风雨并带走灵梦，没有孵化过程"
+      },
+      {
+        "id": "wahh24",
+        "title": "东方茨歌仙·第二十四话",
+        "url": "https://thbwiki.cc/东方茨歌仙/第二十四话",
+        "type": "primary-transcript",
+        "locator": "P1–31单行本可读转录；P4、14宠物龙同行，P27喂食后咳嗽；页面所缺连载版特有原文未读"
+      },
+      {
+        "id": "kasen-skills",
+        "title": "深秘录、凭依华·华扇技能名转录",
+        "url": "https://thbwiki.cc/茨木华扇",
+        "type": "primary-transcript",
+        "locator": "「东方深秘录」「东方凭依华」技能表：务光、黄帝、竿打、彭祖、万岁乐的具名技能"
+      },
+      {
+        "id": "fragment-index",
+        "title": "碎片角色列表",
+        "url": "https://thbwiki.cc/碎片角色列表",
+        "type": "secondary-index",
+        "locator": "支持人物各条目及作品、话数索引；不把条目推测改写为确认史实"
+      }
+    ],
+    "history": [
+      {
+        "id": "dragon",
+        "label": "华扇的幼龙",
+        "work": "wahh5",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "华扇养着被称为龙幼子的你，能够使唤你带来风雨。故事中的你已经听从她的召唤，在泉水与云间显出尚未成熟的力量。",
+        "sourceIds": [
+          "wahh5"
+        ],
+        "note": "核对说明：华扇养着被称为龙幼子的你，能够使唤你带来风雨。原作从你已经受使唤的阶段开始，没有叙述出生过程。"
+      },
+      {
+        "id": "visit",
+        "label": "第五话·风雨迎客",
+        "work": "wahh5",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "灵梦为积累功德四处奔走时，你依华扇指示带来风雨，将她带到华扇面前，使她亲眼见到仙人的使役能力。",
+        "sourceIds": [
+          "wahh5"
+        ],
+        "note": ""
+      },
+      {
+        "id": "feeding",
+        "label": "第二十四话·雷夜后的喂食",
+        "work": "wahh24",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "华扇在雷雨夜乘着你行动，事后给你喂下另一只雷蜥蜴的内脏。你吃后咳嗽，她仍盼你的力量能再强些。",
+        "sourceIds": [
+          "wahh24"
+        ],
+        "note": "本话的被杀者是另只雷蜥蜴；宠物龙吃下内脏，未有死亡或孵化情节。黄帝之名另据原有具名技能，漫画本话称华扇的宠物龙。"
+      },
+      {
+        "id": "assist",
+        "label": "格斗作协同技能",
+        "work": "th145-th155",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "深秘录与凭依华的华扇技能以黄帝之名唤出龙的协助。你伴随她的战斗动作出现，让风雨的本领也留在这些具名技能中。",
+        "sourceIds": [
+          "kasen-skills"
+        ],
+        "note": "核对说明：深秘录与凭依华的华扇技能使用黄帝之名表现龙的协助。技能出场说明你参与战斗，未交代年龄变化。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "wahh5",
+        "title": "东方茨歌仙·第五话",
+        "participation": "participant",
+        "historyIds": [
+          "dragon",
+          "visit"
+        ],
+        "sourceIds": [
+          "wahh5"
+        ],
+        "note": ""
+      },
+      {
+        "work": "wahh24",
+        "title": "东方茨歌仙·第二十四话",
+        "participation": "participant",
+        "historyIds": [
+          "feeding"
+        ],
+        "sourceIds": [
+          "wahh24"
+        ],
+        "note": "读取可访问单行本转录；本条记录同行与喂食，未把华扇捕杀的另一只蜥蜴认成黄帝。"
+      },
+      {
+        "work": "th145",
+        "title": "东方深秘录·华扇技能",
+        "participation": "cameo",
+        "historyIds": [
+          "assist"
+        ],
+        "sourceIds": [
+          "kasen-skills"
+        ],
+        "note": "具名协同技能，未提供新的个人身世或年龄。"
+      },
+      {
+        "work": "th155",
+        "title": "东方凭依华·华扇技能",
+        "participation": "cameo",
+        "historyIds": [
+          "assist"
+        ],
+        "sourceIds": [
+          "kasen-skills"
+        ],
+        "note": "再次出现于同名协同技能，不据此编造两作间的成长年表。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "泉水在鳞间聚成细珠，你将薄雾慢慢托到低云旁。华扇还在山路上等着看，你想把风雨收放得更稳，让缺水的林地有雨，也给过路的人留下晴空。",
+      "years": 40,
+      "goal": {
+        "name": "让山雨落在合适的地方",
+        "description": "托稳云中水气，再分清山风的方向，让需要雨水的地方得到适量的雨。"
+      },
+      "milestones": [
+        {
+          "text": "你将熟悉泉边的水气聚成薄云，试着沿山道慢慢铺开。",
+          "effects": {
+            "insight": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "fail": "水气总在半途散去，你只好沿湿石缓行，难将雨送到远处。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "你托得住云中的水，飞过低岭也能保持轻细的雨丝。"
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "fail": "你把水气团得太紧，云雾常遮住路口，仍须华扇提醒才能散开。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          },
+          "pass": "你辨出山风的转向，浓雾能绕开路口，雨落在需要它的林间。"
+        },
+        {
+          "text": "你停在宽阔的云边，回看山路与雨后的泉水。",
+          "effects": {}
+        }
+      ],
+      "success": "山雨有了合适的去处，路口也留下晴光。你沿低云绕过山顶，听见雨落林叶的细响，终于能在吐息之间给行路人留出可见的远山。",
+      "bittersweet": "你稳住了一部分水气或风向，另一部分仍难把握。华扇替你指出被雾遮住的路，你散开云团再试一次，泉边还有可以慢慢聚起的水。",
+      "failure": "这卷里的云雨几次散错方向，山路暂时只剩熟悉的薄雾。你伏回泉边休息，等风势平缓后再试；未成熟的本领仍有下一次练习。",
+      "eventOverrides": [
+        {
+          "id": "koutei_01",
+          "text": "华扇递来常用的水碗，你沿碗口聚起一圈细雾。"
+        },
+        {
+          "id": "koutei_02",
+          "text": "你贴着湿石盘过一段泉水，鳞间挂住细小水珠。"
+        }
+      ],
+      "reviewedEventIds": [
+        "koutei_01",
+        "koutei_02",
+        "koutei_03",
+        "koutei_04",
+        "koutei_05",
+        "koutei_06",
+        "koutei_07",
+        "koutei_08",
+        "koutei_09",
+        "koutei_10",
+        "koutei_11",
+        "koutei_12",
+        "koutei_13",
+        "koutei_14",
+        "koutei_15",
+        "koutei_16",
+        "koutei_17",
+        "koutei_18",
+        "koutei_19",
+        "koutei_20",
+        "koutei_21",
+        "koutei_22",
+        "koutei_23",
+        "koutei_24",
+        "koutei_25",
+        "koutei_26",
+        "koutei_27",
+        "koutei_28",
+        "koutei_29",
+        "koutei_30",
+        "koutei_31",
+        "koutei_32",
+        "koutei_33",
+        "koutei_34",
+        "koutei_35",
+        "koutei_36"
+      ]
+    }
+  },
+  {
+    "id": "mukou",
+    "continuity": "windows",
+    "anchor": {
+      "label": "茨歌仙雷兽事件与协同技能之后",
+      "text": "你是华扇养的雷兽务光，以玉米为食。她曾在神社将你捕获，又因疏于照料让你闹起脾气；那场雷毒风波过后，你重回她身边，深秘录与凭依华也有你的协助。",
+      "age": {
+        "kind": "unknown",
+        "label": "已有饲养与出逃经历的雷兽",
+        "years": null,
+        "sourceIds": [
+          "wahh6"
+        ],
+        "note": "原文没有确切年龄；雷兽在东方的表现不能由民间传说补齐。"
+      }
+    },
+    "sources": [
+      {
+        "id": "wahh6",
+        "title": "东方茨歌仙·第六话",
+        "url": "https://thbwiki.cc/东方茨歌仙/第六话",
+        "type": "primary-transcript",
+        "locator": "P1–27全文：雷兽出逃、食物与雷毒的说明、末页务光之名"
+      },
+      {
+        "id": "kasen-skills",
+        "title": "深秘录、凭依华·华扇技能名转录",
+        "url": "https://thbwiki.cc/茨木华扇",
+        "type": "primary-transcript",
+        "locator": "「东方深秘录」「东方凭依华」技能表：务光、黄帝、竿打、彭祖、万岁乐的具名技能"
+      },
+      {
+        "id": "fragment-index",
+        "title": "碎片角色列表",
+        "url": "https://thbwiki.cc/碎片角色列表",
+        "type": "secondary-index",
+        "locator": "支持人物各条目及作品、话数索引；不把条目推测改写为确认史实"
+      }
+    ],
+    "history": [
+      {
+        "id": "pet",
+        "label": "华扇的雷兽",
+        "work": "wahh6",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你是华扇养的雷兽，以玉米为食。故事中的雷毒会令受影响的人懒怠，处理方法也由这场雷兽事件说明。",
+        "sourceIds": [
+          "wahh6"
+        ],
+        "note": ""
+      },
+      {
+        "id": "capture",
+        "label": "此前被捕获",
+        "work": "wahh6",
+        "kind": "report",
+        "certainty": "reported",
+        "text": "华扇说自己曾在一场雷雨中发现你在神社兴风作浪，随后将你捕获。那次雷击坏了神社后方的大树，具体日期没有交代。",
+        "sourceIds": [
+          "wahh6"
+        ],
+        "note": ""
+      },
+      {
+        "id": "escape",
+        "label": "第六话·出逃",
+        "work": "wahh6",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "老实度过一个冬天后，照料的疏忽让你闹起脾气，引出神社的雷兽风波。华扇了解你的食物与习性，最后唤出务光之名。",
+        "sourceIds": [
+          "wahh6"
+        ],
+        "note": ""
+      },
+      {
+        "id": "assist",
+        "label": "格斗作协同技能",
+        "work": "th145-th155",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "务光之名出现在深秘录与凭依华的雷兽协同技能中。你作为华扇使唤的动物参与战斗，让唤雷的本领随着她的动作一同出现。",
+        "sourceIds": [
+          "kasen-skills"
+        ],
+        "note": "核对说明：务光之名出现在深秘录与凭依华的雷兽协同技能中。你作为华扇使唤的动物参与战斗，资料没有补出新的个人前史。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "wahh6",
+        "title": "东方茨歌仙·第六话",
+        "participation": "participant",
+        "historyIds": [
+          "pet",
+          "capture",
+          "escape"
+        ],
+        "sourceIds": [
+          "wahh6"
+        ],
+        "note": ""
+      },
+      {
+        "work": "th145",
+        "title": "东方深秘录·华扇技能",
+        "participation": "cameo",
+        "historyIds": [
+          "assist"
+        ],
+        "sourceIds": [
+          "kasen-skills"
+        ],
+        "note": "具名协同技能，未提供新的个人身世或年龄。"
+      },
+      {
+        "work": "th155",
+        "title": "东方凭依华·华扇技能",
+        "participation": "cameo",
+        "historyIds": [
+          "assist"
+        ],
+        "sourceIds": [
+          "kasen-skills"
+        ],
+        "note": "再次出现于同名协同技能，不据此编造两作间的成长年表。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "玉米又添进熟悉的食盆，远处山雨先响起一阵雷。你想稳住自己的吐息，也用轻些的声音让华扇知道何时该添食，好在干草窝里安心等风雨过去。",
+      "years": 35,
+      "goal": {
+        "name": "安稳等过一场雷雨",
+        "description": "稳住雷雨时的吐息，并与照料者形成添食与休息的默契。"
+      },
+      "milestones": [
+        {
+          "text": "你把食盆推到干草窝旁，先等华扇看见今日留下的空穗。",
+          "effects": {
+            "insight": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "fail": "雷雨让四足发颤，你只敢在干燥处试雷，仍难安心等风雨过去。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "你在雷雨中撑稳四足，吐雷之后还有力气回到干草窝。"
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "fail": "你仍把伸来的手当成夺食，玉米虽送到了，窝边却总有紧张的雷响。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          },
+          "pass": "你会用轻吼示意添食，也肯等照料者放好玉米再靠近。"
+        },
+        {
+          "text": "你将剩下的玉米放在食盆旁，听山雨替自己响完远雷。",
+          "effects": {}
+        }
+      ],
+      "success": "雷雨中的吐息稳了，添食也不必再引出吼声。你在干草窝里等过整场山雨，醒来时盆边还有玉米，熟悉的脚步可以放心靠近。",
+      "bittersweet": "雷雨或添食的默契只稳住了一半，忙乱时仍会响起闷雷。华扇继续把玉米放到旧位置，你听着脚步慢慢放松，将下一次轻吼留到醒来。",
+      "failure": "雷响与护食让窝边仍难安静，你暂时躲到干燥高石后。照料者留好玉米再退开，这卷在等待中收束，熟悉的食盆仍可以慢慢靠近。",
+      "eventOverrides": [
+        {
+          "id": "mukou_01",
+          "text": "华扇掰开新添的玉米，你闻过后抱住熟悉的空穗。"
+        }
+      ],
+      "reviewedEventIds": [
+        "mukou_01",
+        "mukou_02",
+        "mukou_03",
+        "mukou_04",
+        "mukou_05",
+        "mukou_06",
+        "mukou_07",
+        "mukou_08",
+        "mukou_09",
+        "mukou_10",
+        "mukou_11",
+        "mukou_12",
+        "mukou_13",
+        "mukou_14",
+        "mukou_15",
+        "mukou_16",
+        "mukou_17",
+        "mukou_18",
+        "mukou_19",
+        "mukou_20",
+        "mukou_21",
+        "mukou_22",
+        "mukou_23",
+        "mukou_24",
+        "mukou_25",
+        "mukou_26",
+        "mukou_27",
+        "mukou_28",
+        "mukou_29",
+        "mukou_30",
+        "mukou_31",
+        "mukou_32",
+        "mukou_33",
+        "mukou_34",
+        "mukou_35",
+        "mukou_36"
+      ]
+    }
+  },
+  {
+    "id": "kume",
+    "continuity": "windows",
+    "anchor": {
+      "label": "茨歌仙第十话·已经需要接替者",
+      "text": "你是华扇长期使唤的运载大鹫久米，如今一次送货也会喘息。她已经准备让年轻的竿打接替，旧载具渐可减轻，熟悉山路的长翼也到了该多歇一会的时候。",
+      "age": {
+        "kind": "unknown",
+        "label": "已年老的运载大鹫",
+        "years": null,
+        "sourceIds": [
+          "wahh10"
+        ],
+        "note": "第十话明确衰老与更替需要，未给年龄；久米仙人传说不是这只鸟的年龄依据。"
+      },
+      "identity": "需要年轻大鹫接替的年老运载鸟"
+    },
+    "sources": [
+      {
+        "id": "wahh10",
+        "title": "东方茨歌仙·第十话",
+        "url": "https://thbwiki.cc/东方茨歌仙/第十话",
+        "type": "primary-transcript",
+        "locator": "P1–27全文：久米衰老、竿打接替、仙界宅邸路线与发光榆树"
+      },
+      {
+        "id": "fragment-index",
+        "title": "碎片角色列表",
+        "url": "https://thbwiki.cc/碎片角色列表",
+        "type": "secondary-index",
+        "locator": "支持人物各条目及作品、话数索引；不把条目推测改写为确认史实"
+      }
+    ],
+    "history": [
+      {
+        "id": "carrier",
+        "label": "旧日的运载差事",
+        "work": "wahh10",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你一直替华扇搬运货物与来客，是她信赖的大鹫。一次次往返山路的差事延续至今，熟悉的载具仍在，长翼却已经容易疲倦。",
+        "sourceIds": [
+          "wahh10"
+        ],
+        "note": "核对说明：你一直替华扇搬运货物与来客，是她信赖的大鹫。已知资料开始于你长期任职之后，并未记述孵化与幼鸟阶段。"
+      },
+      {
+        "id": "replacement",
+        "label": "第十话·准备接替",
+        "work": "wahh10",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "送货后的喘息使华扇察觉你已年老，她开始准备年轻大鹫竿打来接替。长久负担随这次交接渐可减轻，你也有了停下来歇息的机会。",
+        "sourceIds": [
+          "wahh10"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "wahh10",
+        "title": "东方茨歌仙·第十话",
+        "participation": "participant",
+        "historyIds": [
+          "carrier",
+          "replacement"
+        ],
+        "sourceIds": [
+          "wahh10"
+        ],
+        "note": "格斗技能的具名大鹫是竿打；未将外形相似的鹰一律算作久米客串。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "沉载具从背上卸下，竿打已在旁枝等今日的试飞。你想把熟悉的顺风路线留给它，自己只走能够从容返回的短程，落回铺好干草的旧巢听山风。",
+      "years": 4,
+      "goal": {
+        "name": "把顺风路线留给竿打",
+        "description": "找出自己仍能轻松往返的短程，并把旧运载路线的避险经验传给年轻大鹫。"
+      },
+      "milestones": [
+        {
+          "text": "华扇卸下沉载具，你沿旧枝试飞，先定下今日能够轻松返回的路。",
+          "effects": {
+            "health": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "fail": "近林也让双翼酸沉，你只能留在栖枝，看年轻大鹫替自己探路。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "你飞完近林仍有余力，找到了能歇脚的短程顺风路线。"
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "fail": "你仍想硬撑过去的差事，竿打只能学到急飞，几处避风路线没能传清。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "你不再抢着运重物，用落枝与收翅的示意让竿打看懂旧路的危险。"
+        },
+        {
+          "text": "你落回铺好新草的巢，远处载具的轻响渐渐交给别的翅膀。",
+          "effects": {}
+        }
+      ],
+      "success": "短程仍能从容飞完，旧路的危险也让竿打看懂了。你在暖枝上收翅，看年轻大鹫循着顺风返回，漫长差事终于留出可以安心歇息的余地。",
+      "bittersweet": "你留下了短程或一部分经验，另一部分还要华扇帮忙。远行的载具已减轻，旧巢仍铺着干草，你愿意用更慢的起落继续示意那阵熟悉的风。",
+      "failure": "这卷里的试飞与传路都没有顺利完成，你先留在旧巢休息。华扇将食物放到近处，竿打另去练习；未竟的交接没有让你重新背起沉货。",
+      "eventOverrides": [
+        {
+          "id": "kume_01",
+          "text": "华扇把食物放到近枝，你不用再扑飞便能慢慢吃完。"
+        },
+        {
+          "id": "kume_03",
+          "text": "你试过一阵迎风便收翅，落回巢沿留足喘息的时间。"
+        },
+        {
+          "id": "kume_06",
+          "text": "华扇检查你的旧翼，你偏头看她替长羽理开结。"
+        },
+        {
+          "id": "kume_08",
+          "text": "华扇留在近枝下，你沿熟悉短路轻轻落到她臂上。"
+        },
+        {
+          "id": "kume_12",
+          "text": "你空着背飞过短坡，落枝后慢慢理好双翼。"
+        },
+        {
+          "id": "kume_16",
+          "text": "华扇扶住你的颈羽，等你缓过气才带年轻大鹫近前。"
+        },
+        {
+          "id": "kume_17",
+          "text": "你沿记熟的顺风口轻飞一段，旧载具留在栖枝旁。"
+        },
+        {
+          "id": "kume_19",
+          "text": "你越过近处坡顶，落地后先张嘴缓气，不再带着重物。"
+        },
+        {
+          "id": "kume_32",
+          "text": "华扇检查已经卸下的载具，你在旁边将背羽慢慢理平。"
+        }
+      ],
+      "reviewedEventIds": [
+        "kume_01",
+        "kume_02",
+        "kume_03",
+        "kume_04",
+        "kume_05",
+        "kume_06",
+        "kume_07",
+        "kume_08",
+        "kume_09",
+        "kume_10",
+        "kume_11",
+        "kume_12",
+        "kume_13",
+        "kume_14",
+        "kume_15",
+        "kume_16",
+        "kume_17",
+        "kume_18",
+        "kume_19",
+        "kume_20",
+        "kume_21",
+        "kume_22",
+        "kume_23",
+        "kume_24",
+        "kume_25",
+        "kume_26",
+        "kume_27",
+        "kume_28",
+        "kume_29",
+        "kume_30",
+        "kume_31",
+        "kume_32",
+        "kume_33",
+        "kume_34",
+        "kume_35",
+        "kume_36"
+      ]
+    }
+  },
+  {
+    "id": "kanda",
+    "continuity": "windows",
+    "anchor": {
+      "label": "茨歌仙接替训练与协同技能之后",
+      "text": "你是华扇选来接替久米的年轻大鹫竿打，已经会飞，却仍会送错物品、花太久赶路。发光榆树为你指着回家的方向，深秘录与凭依华里也能见到你的协助。",
+      "age": {
+        "kind": "unknown",
+        "label": "年轻、已开始送货的接替者",
+        "years": null,
+        "sourceIds": [
+          "wahh10"
+        ],
+        "note": "原文明确年轻，与年老久米形成对照，没有数值年龄；名称不带来人类竿打的故事。"
+      }
+    },
+    "sources": [
+      {
+        "id": "wahh10",
+        "title": "东方茨歌仙·第十话",
+        "url": "https://thbwiki.cc/东方茨歌仙/第十话",
+        "type": "primary-transcript",
+        "locator": "P1–27全文：久米衰老、竿打接替、仙界宅邸路线与发光榆树"
+      },
+      {
+        "id": "kasen-skills",
+        "title": "深秘录、凭依华·华扇技能名转录",
+        "url": "https://thbwiki.cc/茨木华扇",
+        "type": "primary-transcript",
+        "locator": "「东方深秘录」「东方凭依华」技能表：务光、黄帝、竿打、彭祖、万岁乐的具名技能"
+      },
+      {
+        "id": "fragment-index",
+        "title": "碎片角色列表",
+        "url": "https://thbwiki.cc/碎片角色列表",
+        "type": "secondary-index",
+        "locator": "支持人物各条目及作品、话数索引；不把条目推测改写为确认史实"
+      }
+    ],
+    "history": [
+      {
+        "id": "successor",
+        "label": "年轻的接替者",
+        "work": "wahh10",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "华扇选年轻的你接替久米，最初送货既慢又会买错东西。你已经具备飞行本领，问题在耐力与送货路线的熟悉程度。",
+        "sourceIds": [
+          "wahh10"
+        ],
+        "note": ""
+      },
+      {
+        "id": "route",
+        "label": "第十话·仙界宅邸的路",
+        "work": "wahh10",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "华扇为你设置发光大榆树作返程标记。雪天里魔理沙跟随你曲折的路线，误入宅邸附近，并由华扇救助。",
+        "sourceIds": [
+          "wahh10"
+        ],
+        "note": ""
+      },
+      {
+        "id": "assist",
+        "label": "格斗作协同技能",
+        "work": "th145-th155",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "深秘录与凭依华的华扇技能以竿打之名唤出大鹫的协助。你伴随她的战斗动作飞出，运载之外的本领也在这些具名技能中出现。",
+        "sourceIds": [
+          "kasen-skills"
+        ],
+        "note": "核对说明：深秘录与凭依华的华扇技能使用竿打之名表现大鹫协助。它们补充你的战斗出场，没有公布一份成长年表。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "wahh10",
+        "title": "东方茨歌仙·第十话",
+        "participation": "participant",
+        "historyIds": [
+          "successor",
+          "route"
+        ],
+        "sourceIds": [
+          "wahh10"
+        ],
+        "note": ""
+      },
+      {
+        "work": "th145",
+        "title": "东方深秘录·华扇技能",
+        "participation": "cameo",
+        "historyIds": [
+          "assist"
+        ],
+        "sourceIds": [
+          "kasen-skills"
+        ],
+        "note": "具名协同技能，未提供新的个人身世或年龄。"
+      },
+      {
+        "work": "th155",
+        "title": "东方凭依华·华扇技能",
+        "participation": "cameo",
+        "historyIds": [
+          "assist"
+        ],
+        "sourceIds": [
+          "kasen-skills"
+        ],
+        "note": "再次出现于同名协同技能，不据此编造两作间的成长年表。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "华扇设下的路标已经认得，货袋在背上却还有些晃。你想把载重、风向和回程一起记住，让送货有可靠的往返，也让久米在暖枝上安稳少飞几趟。",
+      "years": 4,
+      "goal": {
+        "name": "接好久米的送货差事",
+        "description": "承住合适的货物，并辨清风向与返程路线，让旧运载差事可以可靠地交接。"
+      },
+      "milestones": [
+        {
+          "text": "你站到常用载具旁，先看货袋的重量，再听今日山口的风。",
+          "effects": {
+            "health": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "fail": "载重仍压低双翼，你只能把差事分成几段，几次送货都赶不上时候。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "你能承住合适的载重，短程送货结束后仍有余力踏稳栖枝。"
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "fail": "你仍抢着迎风起飞，远路常靠临时落枝，回程也几次错过路标。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "你将载重与风向一并考虑，去路和回路都留出了歇脚的余地。"
+        },
+        {
+          "text": "你将货袋放回旧位置，收翅望一眼久米晒太阳的枝头。",
+          "effects": {}
+        }
+      ],
+      "success": "送货能承得稳，返程也有清楚的路。久米得以在暖枝上歇息，你放下货袋再收翅，急飞的冲劲终于变成可以放心交给你的差事。",
+      "bittersweet": "载重与认路只掌握好了一半，远程仍需要华扇提醒。你保留已经走稳的一段往返，逐渐接过更多轻货，久米也不必次次陪你出发。",
+      "failure": "这卷的送货仍不可靠，载具暂时留在旧枝旁。华扇让你先飞短程，你把货袋分轻再试；交接还没完成，却也不必靠急飞证明自己。",
+      "eventOverrides": [
+        {
+          "id": "kanda_01",
+          "text": "华扇在载具旁招手，你先看一遍货袋再准备起飞。"
+        },
+        {
+          "id": "kanda_02",
+          "text": "你绕过熟悉路标练一次返程，落枝时没有压歪货袋。"
+        },
+        {
+          "id": "kanda_03",
+          "text": "你急着越过高树，货绳擦到树皮，只好落低重新整理。"
+        },
+        {
+          "id": "kanda_04",
+          "text": "你盯住上升的雾线，借熟悉气流越过前面的坡。"
+        }
+      ],
+      "reviewedEventIds": [
+        "kanda_01",
+        "kanda_02",
+        "kanda_03",
+        "kanda_04",
+        "kanda_05",
+        "kanda_06",
+        "kanda_07",
+        "kanda_08",
+        "kanda_09",
+        "kanda_10",
+        "kanda_11",
+        "kanda_12",
+        "kanda_13",
+        "kanda_14",
+        "kanda_15",
+        "kanda_16",
+        "kanda_17",
+        "kanda_18",
+        "kanda_19",
+        "kanda_20",
+        "kanda_21",
+        "kanda_22",
+        "kanda_23",
+        "kanda_24",
+        "kanda_25",
+        "kanda_26",
+        "kanda_27",
+        "kanda_28",
+        "kanda_29",
+        "kanda_30",
+        "kanda_31",
+        "kanda_32",
+        "kanda_33",
+        "kanda_34",
+        "kanda_35",
+        "kanda_36"
+      ]
+    }
+  },
+  {
+    "id": "houso",
+    "continuity": "windows",
+    "anchor": {
+      "label": "茨歌仙守门事件与协同技能之后",
+      "text": "你是华扇养的虎彭祖，守着她的住处，已经受过不主动袭击来人的训练。魔理沙觊觎虎皮时曾被你弄伤；深秘录、凭依华也以彭祖之名唤出你的协助。",
+      "age": {
+        "kind": "unknown",
+        "label": "受训守门的虎，年龄未载",
+        "years": null,
+        "sourceIds": [
+          "wahh11"
+        ],
+        "note": "没有出生、年岁或延寿说明；不能根据彭祖之名写八百岁。"
+      }
+    },
+    "sources": [
+      {
+        "id": "wahh11",
+        "title": "东方茨歌仙·第十一话",
+        "url": "https://thbwiki.cc/东方茨歌仙/第十一话",
+        "type": "primary-transcript",
+        "locator": "P1–28全文：彭祖守门、魔理沙受伤、运松治伤与秘药来源"
+      },
+      {
+        "id": "kasen-skills",
+        "title": "深秘录、凭依华·华扇技能名转录",
+        "url": "https://thbwiki.cc/茨木华扇",
+        "type": "primary-transcript",
+        "locator": "「东方深秘录」「东方凭依华」技能表：务光、黄帝、竿打、彭祖、万岁乐的具名技能"
+      },
+      {
+        "id": "fragment-index",
+        "title": "碎片角色列表",
+        "url": "https://thbwiki.cc/碎片角色列表",
+        "type": "secondary-index",
+        "locator": "支持人物各条目及作品、话数索引；不把条目推测改写为确认史实"
+      }
+    ],
+    "history": [
+      {
+        "id": "guard",
+        "label": "华扇的守门虎",
+        "work": "wahh11",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你在华扇住处守门，已经被训练成不会主动攻击来客的虎。陌生的脚步会让你警觉，华扇的召唤却能让你收住扑咬，留在门前等候。",
+        "sourceIds": [
+          "wahh11"
+        ],
+        "note": "核对说明：你在华扇住处守门，已经被训练成不会主动攻击来客的虎。故事没有叙述幼年训练，也未以名字给出数值年龄。"
+      },
+      {
+        "id": "scratch",
+        "label": "第十一话·魔理沙受伤",
+        "work": "wahh11",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "魔理沙打起虎皮的主意后被你弄伤手臂，随后向运松求药。她的冒险不说明你会无缘无故扑咬过路人。",
+        "sourceIds": [
+          "wahh11"
+        ],
+        "note": ""
+      },
+      {
+        "id": "assist",
+        "label": "格斗作协同技能",
+        "work": "th145-th155",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "彭祖之名出现在深秘录与凭依华的虎协同技能中。华扇使唤你应对战斗的对手，守门时熟悉的扑击也随着她的动作一同出现。",
+        "sourceIds": [
+          "kasen-skills"
+        ],
+        "note": "核对说明：彭祖之名出现在深秘录与凭依华的虎协同技能中。华扇借你的动作应对对手，未因此补出古代人类彭祖的经历。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "wahh11",
+        "title": "东方茨歌仙·第十一话",
+        "participation": "participant",
+        "historyIds": [
+          "guard",
+          "scratch"
+        ],
+        "sourceIds": [
+          "wahh11"
+        ],
+        "note": ""
+      },
+      {
+        "work": "th145",
+        "title": "东方深秘录·华扇技能",
+        "participation": "cameo",
+        "historyIds": [
+          "assist"
+        ],
+        "sourceIds": [
+          "kasen-skills"
+        ],
+        "note": "具名协同技能，未提供新的个人身世或年龄。"
+      },
+      {
+        "work": "th155",
+        "title": "东方凭依华·华扇技能",
+        "participation": "cameo",
+        "historyIds": [
+          "assist"
+        ],
+        "sourceIds": [
+          "kasen-skills"
+        ],
+        "note": "再次出现于同名协同技能，不据此编造两作间的成长年表。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "雨后的山门换了几处气味，你沿旧路慢慢嗅过一圈。来客的脚步还在，你想把巡视与来意辨得更清楚：该拦时稳稳挡住，误闯的人也能平安退开。",
+      "years": 4,
+      "goal": {
+        "name": "守住山门而不误伤",
+        "description": "保有巡视山门的体力，并分辨威胁与误闯，使守门不必依赖扑咬。"
+      },
+      "milestones": [
+        {
+          "text": "你沿山门绕过一圈，把雨后变化的气味重新记住。",
+          "effects": {
+            "insight": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "fail": "坡路令你气喘，只能缩短巡视，门外远处的动静来不及查看。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "你巡过坡路仍有余力，门前有动静时能稳稳站到路中。"
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "fail": "急步令你难辨来意，虽忍住扑咬，门前的紧张却迟迟没有散开。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          },
+          "pass": "你分清误闯与威胁，先挡住道路，等来人停步再作回应。"
+        },
+        {
+          "text": "你伏回熟悉门边，仍听着脚步，却不必每一声都起身。",
+          "effects": {}
+        }
+      ],
+      "success": "山门的巡视稳了，误闯的人也能平安退开。你在门前伏下，耳尖随着脚步轻动，既守得住住处，也不必用新伤口证明自己的警觉。",
+      "bittersweet": "巡视与分辨来意只稳住了一半，华扇仍会在门边提醒。你留好一段熟悉的守路，等陌生脚步停稳再回应，山门并没有因此失去安静。",
+      "failure": "这卷里你几次难辨来意，巡视也未能走完。华扇将水盆挪到近处，让你先守熟悉的一段路；门仍有人照看，你可以伏下慢慢听清。",
+      "eventOverrides": [],
+      "reviewedEventIds": [
+        "houso_01",
+        "houso_02",
+        "houso_03",
+        "houso_04",
+        "houso_05",
+        "houso_06",
+        "houso_07",
+        "houso_08",
+        "houso_09",
+        "houso_10",
+        "houso_11",
+        "houso_12",
+        "houso_13",
+        "houso_14",
+        "houso_15",
+        "houso_16",
+        "houso_17",
+        "houso_18",
+        "houso_19",
+        "houso_20",
+        "houso_21",
+        "houso_22",
+        "houso_23",
+        "houso_24",
+        "houso_25",
+        "houso_26",
+        "houso_27",
+        "houso_28",
+        "houso_29",
+        "houso_30",
+        "houso_31",
+        "houso_32",
+        "houso_33",
+        "houso_34",
+        "houso_35",
+        "houso_36"
+      ]
+    }
+  },
+  {
+    "id": "manzairaku",
+    "continuity": "windows",
+    "anchor": {
+      "label": "茨歌仙第二十二话·饲养方式待调整",
+      "text": "你是从外界进入幻想乡的海豹万岁乐，习惯过人群的关注，也受河童照料。华扇发现淡水不适合你，荷取答应准备人工海水，让表演之外的日子也能安稳些。",
+      "age": {
+        "kind": "unknown",
+        "label": "已有外界经历的海豹，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "wahh22"
+        ],
+        "note": "同名怪鱼的三百年传说不属于这只海豹；外界荣誉居民与真实海豹影射也不能化成确切年龄。"
+      },
+      "location": "河童准备的人工海水池（续篇假定）"
+    },
+    "sources": [
+      {
+        "id": "wahh22",
+        "title": "东方茨歌仙·第二十二话",
+        "url": "https://thbwiki.cc/东方茨歌仙/第二十二话",
+        "type": "primary-transcript",
+        "locator": "P1–27全文：万岁乐经历、水边表演及人工海水饲养的约定"
+      },
+      {
+        "id": "kasen-skills",
+        "title": "深秘录、凭依华·华扇技能名转录",
+        "url": "https://thbwiki.cc/茨木华扇",
+        "type": "primary-transcript",
+        "locator": "「东方深秘录」「东方凭依华」技能表：务光、黄帝、竿打、彭祖、万岁乐的具名技能"
+      },
+      {
+        "id": "fragment-index",
+        "title": "碎片角色列表",
+        "url": "https://thbwiki.cc/碎片角色列表",
+        "type": "secondary-index",
+        "locator": "支持人物各条目及作品、话数索引；不把条目推测改写为确认史实"
+      }
+    ],
+    "history": [
+      {
+        "id": "outside",
+        "label": "外界水边的经历",
+        "work": "wahh22",
+        "kind": "background",
+        "certainty": "reported",
+        "text": "据你向华扇说的经历，你曾在外界河流得到人群关注与万岁乐之名，后来回到水边却遭遗忘，才来到幻想乡。",
+        "sourceIds": [
+          "wahh22"
+        ],
+        "note": "动物经历经华扇转述，不写真实海豹的姓名日期。"
+      },
+      {
+        "id": "show",
+        "label": "第二十二话·河童表演",
+        "work": "wahh22",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "河童把你带到雾之湖一带展示，荷取说你愿意表演。热闹之后你显出疲倦，华扇也留意到饲养条件不合适。",
+        "sourceIds": [
+          "wahh22"
+        ],
+        "note": ""
+      },
+      {
+        "id": "seawater",
+        "label": "饲养方式的约定",
+        "work": "wahh22",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "华扇说明海豹需要海水与鱼食，淡水里难以长久养好。荷取答应准备人工海水池，也让照料的安排从热闹表演转向合适的生活。",
+        "sourceIds": [
+          "wahh22"
+        ],
+        "note": "核对说明：华扇说明海豹需要海水与鱼食，不能长期养在淡水里。荷取答应准备人工海水池，原文没有用怪鱼传说解释你的身世。"
+      },
+      {
+        "id": "assist",
+        "label": "格斗作协同技能",
+        "work": "th145-th155",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "深秘录与凭依华的华扇技能以万岁乐之名唤出海豹的协助。你随着她的战斗动作出现，名字和圆身都留在这些具名技能中。",
+        "sourceIds": [
+          "kasen-skills"
+        ],
+        "note": "核对说明：深秘录与凭依华的华扇技能以万岁乐之名表现海豹的协助。它们提供协同出场，没有说明饲养池建成的日期。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "wahh22",
+        "title": "东方茨歌仙·第二十二话",
+        "participation": "participant",
+        "historyIds": [
+          "outside",
+          "show",
+          "seawater"
+        ],
+        "sourceIds": [
+          "wahh22"
+        ],
+        "note": ""
+      },
+      {
+        "work": "th145",
+        "title": "东方深秘录·华扇技能",
+        "participation": "cameo",
+        "historyIds": [
+          "assist"
+        ],
+        "sourceIds": [
+          "kasen-skills"
+        ],
+        "note": "具名协同技能，未提供新的个人身世或年龄。"
+      },
+      {
+        "work": "th155",
+        "title": "东方凭依华·华扇技能",
+        "participation": "cameo",
+        "historyIds": [
+          "assist"
+        ],
+        "sourceIds": [
+          "kasen-skills"
+        ],
+        "note": "再次出现于同名协同技能，不据此编造两作间的成长年表。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "准备好的盐水池映着树影，池边有一块能晒太阳的干台。你想在合适的水里自在游动，也让照料者看懂何时愿意拍鳍、何时只想安静歇一会。",
+      "years": 4,
+      "goal": {
+        "name": "在盐水池里安心生活",
+        "description": "适应合适的盐水池，并让照料者明白你的休息与玩耍，减少疲倦的表演。"
+      },
+      "milestones": [
+        {
+          "text": "你沿新准备的盐水池游了一圈，试着认出上岸的干台。",
+          "effects": {
+            "bond": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "fail": "池水虽合适，陌生的边沿仍令你疲倦，你先靠着干台慢慢休息。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "你能在盐水池中从容潜游，游回干台时还有精神抖掉水珠。"
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "fail": "你躲开靠近的手，照料者只好隔着距离添鱼，还没看懂你的停顿。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          },
+          "pass": "你用拍鳍和停顿说明愿不愿再玩，照料者也肯等你歇够再递鱼。"
+        },
+        {
+          "text": "你将最后一阵掌声留在池外，慢慢滑到熟悉的晒太阳处。",
+          "effects": {}
+        }
+      ],
+      "success": "盐水里可以自在潜游，池边的人也懂得等待。你晒暖圆身再去追一段小鱼，不必为了每次掌声翻身，熟悉的干台成了安心歇息的地方。",
+      "bittersweet": "水中的自在与池边的默契只稳住了一半，荷取仍在调整照料。你保留熟悉的干台与一段轻松泳路，先晒够太阳，再看今日愿不愿拍鳍。",
+      "failure": "这卷里你仍对池边的声音紧张，潜游也常半途停下。照料者减少表演，让盐水与干台保持合适；你可以暂时只歇着，不必重新吸引人群。",
+      "eventOverrides": [
+        {
+          "id": "manzairaku_02",
+          "text": "你沿盐水池边追一段小鱼，鳍掌稳稳拨开水面。"
+        },
+        {
+          "id": "manzairaku_03",
+          "text": "水池换水时声响太急，你退回干台等水面平稳。"
+        },
+        {
+          "id": "manzairaku_06",
+          "text": "你用鳍掌拨开池边掉落的叶子，水面留下一圈波纹。"
+        },
+        {
+          "id": "manzairaku_12",
+          "text": "你跃过浮在池面的软圈，落回去时没有拍起太大水花。"
+        },
+        {
+          "id": "manzairaku_15",
+          "text": "你认出换水口旁的平水，潜过去避开强些的水流。"
+        },
+        {
+          "id": "manzairaku_16",
+          "text": "池边递来的鱼换了口味，你嗅过后还是吃下。"
+        },
+        {
+          "id": "manzairaku_19",
+          "text": "你潜过池边树影，浮起后长长换气。"
+        },
+        {
+          "id": "manzairaku_24",
+          "text": "池水补满后，你沿熟悉的边沿找到原来的歇脚台。"
+        },
+        {
+          "id": "manzairaku_25",
+          "text": "小球漂到换水口旁，你追近看了一眼便游回干台。"
+        },
+        {
+          "id": "manzairaku_28",
+          "text": "一片落叶停在鼻尖旁，你偏头把它拨向池边。"
+        },
+        {
+          "id": "manzairaku_29",
+          "text": "荷取蹲在盐水池旁检查水位，你慢慢游到她身边。"
+        },
+        {
+          "id": "manzairaku_36",
+          "text": "你分清池水传来的冷意，伏在干台等夜风过去。"
+        }
+      ],
+      "reviewedEventIds": [
+        "manzairaku_01",
+        "manzairaku_02",
+        "manzairaku_03",
+        "manzairaku_04",
+        "manzairaku_05",
+        "manzairaku_06",
+        "manzairaku_07",
+        "manzairaku_08",
+        "manzairaku_09",
+        "manzairaku_10",
+        "manzairaku_11",
+        "manzairaku_12",
+        "manzairaku_13",
+        "manzairaku_14",
+        "manzairaku_15",
+        "manzairaku_16",
+        "manzairaku_17",
+        "manzairaku_18",
+        "manzairaku_19",
+        "manzairaku_20",
+        "manzairaku_21",
+        "manzairaku_22",
+        "manzairaku_23",
+        "manzairaku_24",
+        "manzairaku_25",
+        "manzairaku_26",
+        "manzairaku_27",
+        "manzairaku_28",
+        "manzairaku_29",
+        "manzairaku_30",
+        "manzairaku_31",
+        "manzairaku_32",
+        "manzairaku_33",
+        "manzairaku_34",
+        "manzairaku_35",
+        "manzairaku_36"
+      ]
+    }
+  },
+  {
+    "id": "unshou",
+    "continuity": "windows",
+    "anchor": {
+      "label": "茨歌仙第十一话·年老渔夫施药",
+      "text": "你是年老的渔夫运松，只取够用的鱼，也拿得来的河童秘药免费治伤。魔理沙的伤曾在你家治好，华扇也来问过可疑手臂的事；药瓶如今已经所剩不多。",
+      "age": {
+        "kind": "unknown",
+        "label": "年老的渔夫",
+        "years": null,
+        "sourceIds": [
+          "wahh11"
+        ],
+        "note": "原文只有年老和长期打鱼经验，未给数值年龄；求闻史纪中的太公望与他同一人只是索引推测。"
+      },
+      "identity": "年老的渔夫与免费施药者"
+    },
+    "sources": [
+      {
+        "id": "wahh11",
+        "title": "东方茨歌仙·第十一话",
+        "url": "https://thbwiki.cc/东方茨歌仙/第十一话",
+        "type": "primary-transcript",
+        "locator": "P1–28全文：彭祖守门、魔理沙受伤、运松治伤与秘药来源"
+      },
+      {
+        "id": "fragment-index",
+        "title": "碎片角色列表",
+        "url": "https://thbwiki.cc/碎片角色列表",
+        "type": "secondary-index",
+        "locator": "支持人物各条目及作品、话数索引；不把条目推测改写为确认史实"
+      }
+    ],
+    "history": [
+      {
+        "id": "fisher",
+        "label": "年老的渔夫",
+        "work": "wahh11",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你在水边打鱼，年纪虽大仍很敏锐，只取生活所需的鱼。有经验的手留得住一份渔获，也肯为上门求助的人暂时放下鱼竿。",
+        "sourceIds": [
+          "wahh11"
+        ],
+        "note": "核对说明：你在水边打鱼，年纪虽大仍很敏锐，只取生活所需的鱼。被记录时你已是有经验的渔夫，并非刚出门谋生的少年。"
+      },
+      {
+        "id": "medicine",
+        "label": "秘药的谢礼",
+        "work": "wahh11",
+        "kind": "report",
+        "certainty": "reported",
+        "text": "你说自己归还装着两条可疑手臂的箱子，因而得到河童秘药。赠药者的姓名没有明说，你对那份发现也未完全了解。",
+        "sourceIds": [
+          "wahh11"
+        ],
+        "note": ""
+      },
+      {
+        "id": "care",
+        "label": "第十一话·免费治伤",
+        "work": "wahh11",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "魔理沙手臂受伤后，你替她施药而不收诊钱。华扇因此找到你并询问手臂的发现，药的存量则已经所剩不多。",
+        "sourceIds": [
+          "wahh11"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "wahh11",
+        "title": "东方茨歌仙·第十一话",
+        "participation": "participant",
+        "historyIds": [
+          "fisher",
+          "medicine",
+          "care"
+        ],
+        "sourceIds": [
+          "wahh11"
+        ],
+        "note": "不把未具名赠药者写成荷取，也不确认与另一个垂钓人物同一身份。"
+      }
+    ],
+    "future": {
+      "mode": "continuation",
+      "intro": "秘药瓶旁叠着干净布条，门口的小网也补好了。你想继续靠适量的渔获过日子，把包扎与照料教给愿意搭手的乡邻，自己少背几篓沉鱼，多留一张凳子。",
+      "years": 12,
+      "goal": {
+        "name": "药用完后也有人照料",
+        "description": "维持适量渔获与生活，并让乡邻互相学会照料，使帮助不必全靠秘药。"
+      },
+      "milestones": [
+        {
+          "text": "你补好常用的小网，把有限的药与干净布条分开放妥。",
+          "effects": {
+            "insight": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "fail": "鱼群几次没有等到，你要补些零工，照料伤者的时间也被挤掉。",
+          "passEffects": {
+            "fortune": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          },
+          "pass": "你看清水色与鱼群，只取够用的一份，也留得下歇腰的时间。"
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "fail": "愿意搭手的人仍少，你常独自忙到很晚，有限的药也无法替下所有劳累。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "乡邻愿意学包扎与换布，你可以停下打鱼帮忙，不必独自撑住每次照料。"
+        },
+        {
+          "text": "你将重网交给年轻人，门旁仍留着能坐下慢慢换布的凳子。",
+          "effects": {}
+        }
+      ],
+      "success": "渔获够用，乡邻也能彼此换布照料。秘药是否还有一滴已经不决定每次帮助，你放下重网坐到门旁，晚饭与来客都能从容照看。",
+      "bittersweet": "渔获或照料只安排好了一部分，有时仍要你多忙一阵。你留下小网与干净布条，请来人坐下说清难处，有限的药不再成为唯一依靠。",
+      "failure": "这卷里渔获与搭手的人都没能稳定下来，你只好收短每天的差事。门旁的凳子还在，来人仍可以歇息；你也终于肯先照顾疲倦的自己。",
+      "eventOverrides": [
+        {
+          "id": "unshou_09",
+          "text": "你补好常用的小网，叠齐收在能够轻松够到的位置。"
+        },
+        {
+          "id": "unshou_12",
+          "text": "你拎着一小篓鱼走完村道，最后一段仍留着气力。"
+        },
+        {
+          "id": "unshou_19",
+          "text": "急水卷住旧网，你沿木桩慢慢收绳，必要时便松手等水缓。"
+        },
+        {
+          "id": "unshou_29",
+          "text": "荷取看过你留下的药瓶，你将干净布条摆在旁边，没索求新药。",
+          "with": [
+            "nitori"
+          ]
+        },
+        {
+          "id": "unshou_31",
+          "text": "你取出收好的干净布条替来人包伤，一文钱也没取。"
+        },
+        {
+          "id": "unshou_34",
+          "text": "你想起荷取来查看药瓶的神色，给她留了一封短信。",
+          "remember": [
+            "nitori"
+          ]
+        }
+      ],
+      "reviewedEventIds": [
+        "unshou_01",
+        "unshou_02",
+        "unshou_03",
+        "unshou_04",
+        "unshou_05",
+        "unshou_06",
+        "unshou_07",
+        "unshou_08",
+        "unshou_09",
+        "unshou_10",
+        "unshou_11",
+        "unshou_12",
+        "unshou_13",
+        "unshou_14",
+        "unshou_15",
+        "unshou_16",
+        "unshou_17",
+        "unshou_18",
+        "unshou_19",
+        "unshou_20",
+        "unshou_21",
+        "unshou_22",
+        "unshou_23",
+        "unshou_24",
+        "unshou_25",
+        "unshou_26",
+        "unshou_27",
+        "unshou_28",
+        "unshou_29",
+        "unshou_30",
+        "unshou_31",
+        "unshou_32",
+        "unshou_33",
+        "unshou_34",
+        "unshou_35",
+        "unshou_36"
+      ]
+    }
+  },
+  {
+    "id": "suiki",
+    "continuity": "windows",
+    "anchor": {
+      "label": "茨歌仙第十二话·追捕青娥失手",
+      "text": "你是小町所说的地狱水鬼长，擅长使水。玄武泽曾出现围困青娥的多层水柱，华扇将异象与你联系起来，她却从地下逃走；世人对你的了解仍来自这些谈话。",
+      "age": {
+        "kind": "unknown",
+        "label": "已任水鬼长，年岁不详",
+        "years": null,
+        "sourceIds": [
+          "wahh12"
+        ],
+        "note": "职称不能推成确切年岁；没有幼年、升职年表或数值年龄。"
+      },
+      "identity": "他人记述的地狱水鬼长"
+    },
+    "sources": [
+      {
+        "id": "wahh12",
+        "title": "东方茨歌仙·第十二话",
+        "url": "https://thbwiki.cc/东方茨歌仙/第十二话",
+        "type": "primary-transcript",
+        "locator": "P6–32：小町谈水鬼长，玄武泽水柱围困与青娥从地下逃离"
+      },
+      {
+        "id": "fragment-index",
+        "title": "碎片角色列表",
+        "url": "https://thbwiki.cc/碎片角色列表",
+        "type": "secondary-index",
+        "locator": "支持人物各条目及作品、话数索引；不把条目推测改写为确认史实"
+      }
+    ],
+    "history": [
+      {
+        "id": "chief",
+        "label": "地狱的水鬼长",
+        "work": "wahh12",
+        "kind": "background",
+        "certainty": "reported",
+        "text": "小町谈到地狱派往长寿仙人处的鬼神，其中水鬼长尤其善于使水。你的身份与可怕之处由她说明，名字随这段谈话进入世人的耳中。",
+        "sourceIds": [
+          "wahh12"
+        ],
+        "note": "核对说明：小町谈到地狱派往长寿仙人处的鬼神，其中水鬼长尤其善于使水。你的身份与可怕之处由他人说明，并未本人出面自述。"
+      },
+      {
+        "id": "pursuit",
+        "label": "第十二话·水柱围困",
+        "work": "wahh12",
+        "kind": "report",
+        "certainty": "reported",
+        "text": "玄武泽出现包覆河童基地的多重水柱，青娥被困其中。华扇把异象与水鬼长联系起来，青娥却在数日后从地下绕路逃出。",
+        "sourceIds": [
+          "wahh12"
+        ],
+        "note": "围困与逃脱实际发生；具体意图含观察者推断，不补一场当面战斗。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "wahh12",
+        "title": "东方茨歌仙·第十二话",
+        "participation": "mentioned",
+        "historyIds": [
+          "chief",
+          "pursuit"
+        ],
+        "sourceIds": [
+          "wahh12"
+        ],
+        "note": "未出现可确认的水鬼长立绘或第一人称台词。"
+      }
+    ],
+    "future": {
+      "mode": "hypothetical",
+      "intro": "水柱围过的旧入口已经安静，地底却还留着没有查清的干缝。你沿水路重新勘察，想看懂湿迹之外的逃路，把能让同伴少走错路的经验记在旧图里。",
+      "years": 35,
+      "goal": {
+        "name": "看清水柱之外的路",
+        "description": "稳住追索时的水路，并分清真实踪迹与诱引，记录逃路中的漏洞。"
+      },
+      "milestones": [
+        {
+          "text": "你重走围困处的水路，把地底干缝也列入要查看的方向。",
+          "effects": {
+            "insight": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "fail": "急流耗去太多力气，木片的标记几次冲散，你只能先查缓水处。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "你撑稳急流水路，来回勘查后仍能留住清楚的水位标记。"
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "fail": "你仍只追最鲜明的湿迹，几次走到尽头才发现干路已经绕开了水柱。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          },
+          "pass": "你辨出真迹与诱饵，肯绕到干壁背面，把地底逃路也记进旧图。"
+        },
+        {
+          "text": "你把这一卷追索记录放好，给同伴指出最后一处尚待查看的岔路。",
+          "effects": {}
+        }
+      ],
+      "success": "水路与地底的漏洞都记清了，同伴可以沿记录少走一次错路。你站在旧入口听完暗流，追索终于留下一份可用的经验，而不只留下怒气。",
+      "bittersweet": "水位或踪迹只弄清了一部分，干缝里仍有未知的方向。你把确定的路线先交给同伴，自己在岔口多停一息，给下一次勘查留下余地。",
+      "failure": "这卷里急流冲乱了记录，诱引也几次让你折返。你暂时收起追索，留在缓水边重新核对旧痕，将尚未查清的干缝记到下一页，给同伴留下提醒。",
+      "eventOverrides": [
+        {
+          "id": "suiki_02",
+          "text": "你举杖挡住熟悉水道的落石，查看背面有没有新的干缝。"
+        },
+        {
+          "id": "suiki_08",
+          "text": "同行的鬼等你检查杖带，你也把新查到的岔路指给他。"
+        }
+      ],
+      "reviewedEventIds": [
+        "suiki_01",
+        "suiki_02",
+        "suiki_03",
+        "suiki_04",
+        "suiki_05",
+        "suiki_06",
+        "suiki_07",
+        "suiki_08",
+        "suiki_09",
+        "suiki_10",
+        "suiki_11",
+        "suiki_12",
+        "suiki_13",
+        "suiki_14",
+        "suiki_15",
+        "suiki_16",
+        "suiki_17",
+        "suiki_18",
+        "suiki_19",
+        "suiki_20",
+        "suiki_21",
+        "suiki_22",
+        "suiki_23",
+        "suiki_24",
+        "suiki_25",
+        "suiki_26",
+        "suiki_27",
+        "suiki_28",
+        "suiki_29",
+        "suiki_30",
+        "suiki_31",
+        "suiki_32",
+        "suiki_33",
+        "suiki_34",
+        "suiki_35",
+        "suiki_36"
+      ]
+    }
+  },
+  {
+    "id": "hakusen",
+    "continuity": "historical",
+    "anchor": {
+      "label": "铃奈庵所引古籍中的画猫僧人",
+      "text": "古籍里记着近六十岁的画猫僧人白仙，画纸据说能驱鼠。阿求读后推测你是来自大陆的鼠仙，猫画只作免灾标记；人间之里流传着你的故事，却没有人亲见你。",
+      "age": {
+        "kind": "estimated",
+        "label": "古籍传闻约六十岁；当前不明",
+        "years": 60,
+        "sourceIds": [
+          "fs20"
+        ],
+        "note": "60仅是“近六十”的传闻估数，不是生年或当前年龄；与现代幻想乡时钟不接合。"
+      },
+      "identity": "古籍记载的画猫僧人；鼠仙说未定",
+      "location": "古籍之外的远处住居（假设）",
+      "realm": "past"
+    },
+    "sources": [
+      {
+        "id": "fs20",
+        "title": "东方铃奈庵·第二十话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第二十话",
+        "type": "primary-transcript",
+        "locator": "P1–19全文：阿求引《一宵话》白仙记载，并提出鼠仙与标记说"
+      },
+      {
+        "id": "fs21",
+        "title": "东方铃奈庵·第二十一话",
+        "url": "https://thbwiki.cc/东方铃奈庵/第二十一话",
+        "type": "primary-transcript",
+        "locator": "P6–24：旧猫画被提及，实际售卖的是铃仙的超声波机械招财猫"
+      },
+      {
+        "id": "fragment-index",
+        "title": "碎片角色列表",
+        "url": "https://thbwiki.cc/碎片角色列表",
+        "type": "secondary-index",
+        "locator": "支持人物各条目及作品、话数索引；不把条目推测改写为确认史实"
+      }
+    ],
+    "history": [
+      {
+        "id": "old-story",
+        "label": "古籍所载白仙",
+        "work": "fs20",
+        "kind": "background",
+        "certainty": "reported",
+        "text": "阿求引述江户时代的古籍，记下一名近六十岁的僧人白仙，擅画猫与虎，画作被说成能让鼠患停止。",
+        "sourceIds": [
+          "fs20"
+        ],
+        "note": "只纳入东方文本实际引用的部分，不外查民间故事补其生平。"
+      },
+      {
+        "id": "reading",
+        "label": "第二十话·鼠仙推测",
+        "work": "fs20",
+        "kind": "report",
+        "certainty": "reported",
+        "text": "人间之里的鼠患让阿求想到这段旧记。她推测画纸其实是免受鼠害的标记，白仙可能是来自大陆、能够操鼠的仙人。",
+        "sourceIds": [
+          "fs20"
+        ],
+        "note": "原话具有推测语气；未确认白仙操纵本次鼠灾。"
+      },
+      {
+        "id": "different-cat",
+        "label": "第二十一话·另一种猫",
+        "work": "fs21",
+        "kind": "report",
+        "certainty": "canon",
+        "text": "旧猫画仍被提及，当下出售驱鼠物件的却是铃仙。她的机械招财猫利用超声波，村里的新商品与古籍画猫人的旧故事各有来处。",
+        "sourceIds": [
+          "fs21"
+        ],
+        "note": "核对说明：旧猫画仍被提及，但当下出售驱鼠物件的是铃仙。机械招财猫利用超声波，不能算成白仙本人的新作或出场。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "fs20",
+        "title": "东方铃奈庵·第二十话",
+        "participation": "mentioned",
+        "historyIds": [
+          "old-story",
+          "reading"
+        ],
+        "sourceIds": [
+          "fs20"
+        ],
+        "note": ""
+      },
+      {
+        "work": "fs21",
+        "title": "东方铃奈庵·第二十一话",
+        "participation": "mentioned",
+        "historyIds": [
+          "different-cat"
+        ],
+        "sourceIds": [
+          "fs21"
+        ],
+        "note": "白仙没有亲自现身；只用此篇区分当下机械商品。"
+      }
+    ],
+    "future": {
+      "mode": "hypothetical",
+      "intro": "远处住居的画案又积起几张猫纸，墙边的鼠声时急时缓。你想把标记与鼠群的路线分清，向买画的人说好实际用途，让画钱不再依靠添灾与误解。",
+      "years": 30,
+      "goal": {
+        "name": "把猫画的用途说清",
+        "description": "理清画纸标记与鼠群路线，并向买画的人说明实际用途，让鼠患不再成为暗中要价的办法。"
+      },
+      "milestones": [
+        {
+          "text": "你把旧猫画按住处分别排开，试着记下鼠群绕行的路线。",
+          "effects": {
+            "insight": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "fail": "路线记录几次对不上鼠声，画纸越积越多，你仍没弄清哪里需要留空。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          },
+          "pass": "你分清标记与御鼠的作用，记下哪些路该留空，不再靠重画掩饰混乱。"
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "fail": "你总急着收画钱又催鼠群回应，买画的人仍把纸当成无所不能的符咒。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "你向买画的人说清用途，也肯让鼠群自行离开，不以添灾换取新钱。"
+        },
+        {
+          "text": "你收起远行画案，将一张说明用途的纸留在猫画旁。",
+          "effects": {}
+        }
+      ],
+      "success": "画纸与鼠群的路线终于分清，买画的人也知道自己付钱买了什么。你把多余的旧画收好，墙边留出空隙，鼠患不再成为含混的要价借口。",
+      "bittersweet": "路线或解释只整理好了一部分，旧误解仍在买画的人之间流传。你留下能说明的一页纸，暂且少画几张，让鼠群也有不受催促的去路。",
+      "failure": "这卷里画纸越积越多，鼠群与买画的人却都没能安定。你停下远行，收起未说清用途的纸，先听完墙内的声响，再决定下一笔该画什么。",
+      "eventOverrides": [
+        {
+          "id": "hakusen_15",
+          "text": "你暂停低声驱使，鼠群沿墙边空隙慢慢分散开来。"
+        },
+        {
+          "id": "hakusen_24",
+          "text": "你发现旧标记不能说明一切，另留一页写清画纸的用途。"
+        },
+        {
+          "id": "hakusen_29",
+          "text": "买画的人问猫眼为何不同，你先说明墙边鼠迹意味着什么。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "hakusen_30",
+          "text": "一位旧客看过画纸，你展开尚未画完的一张说清用途。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "hakusen_31",
+          "text": "买画的人想摸新纸，你等墨干后连同说明递到他面前。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "hakusen_32",
+          "text": "邻人借来旧砚，你磨开墨后将底纹洗净再归还。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "hakusen_33",
+          "text": "你想起旧客看纸时的疑惑，将旁边的说明再写清楚些。",
+          "remember": []
+        }
+      ],
+      "reviewedEventIds": [
+        "hakusen_01",
+        "hakusen_02",
+        "hakusen_03",
+        "hakusen_04",
+        "hakusen_05",
+        "hakusen_06",
+        "hakusen_07",
+        "hakusen_08",
+        "hakusen_09",
+        "hakusen_10",
+        "hakusen_11",
+        "hakusen_12",
+        "hakusen_13",
+        "hakusen_14",
+        "hakusen_15",
+        "hakusen_16",
+        "hakusen_17",
+        "hakusen_18",
+        "hakusen_19",
+        "hakusen_20",
+        "hakusen_21",
+        "hakusen_22",
+        "hakusen_23",
+        "hakusen_24",
+        "hakusen_25",
+        "hakusen_26",
+        "hakusen_27",
+        "hakusen_28",
+        "hakusen_29",
+        "hakusen_30",
+        "hakusen_31",
+        "hakusen_32",
+        "hakusen_33",
+        "hakusen_34",
+        "hakusen_35",
+        "hakusen_36"
+      ]
+    }
+  },
+  {
+    "id": "namazu",
+    "continuity": "windows",
+    "anchor": {
+      "label": "非想天则美铃梦境的最终对手",
+      "text": "你是美铃梦中太岁星君的大鲶鱼化身，宣称要以地震毁坏地上世界。她与梦中的你交战，又在胜负未尽时被叫醒；凭依华也有同名梦境对手，个体联系仍未明。",
+      "age": {
+        "kind": "not-applicable",
+        "label": "梦中化身，不适用生理年龄",
+        "years": null,
+        "sourceIds": [
+          "soku",
+          "aocf-namazu"
+        ],
+        "note": "梦境战斗没有出生或生长年表；不能用现实鲶鱼寿命或地底震源传说给年龄。"
+      },
+      "identity": "美铃梦中太岁星君的鲶鱼化身",
+      "location": "美铃梦境的假设续卷",
+      "realm": "dream"
+    },
+    "sources": [
+      {
+        "id": "soku",
+        "title": "东方非想天则·红美铃故事与结局",
+        "url": "https://thbwiki.cc/游戏对话:东方非想天则/红美铃",
+        "type": "primary-transcript",
+        "locator": "最终战与ENDING：太岁星君化身大鲶鱼；美铃被叫醒时仍未打倒梦中对手"
+      },
+      {
+        "id": "aocf-namazu",
+        "title": "东方凭依华·女苑与紫苑故事",
+        "url": "https://thbwiki.cc/游戏对话:东方凭依华/依神女苑&依神紫苑",
+        "type": "primary-transcript",
+        "locator": "Stage6梦境战斗：梦天子召出大鲶鱼；不据同名判定个体相同"
+      },
+      {
+        "id": "namazu-index",
+        "title": "大鲶鱼·角色索引",
+        "url": "https://thbwiki.cc/大鲶鱼",
+        "type": "secondary-index",
+        "locator": "非想天则、凭依华出场；注释区分绯想天所说的地底鲶鱼"
+      }
+    ],
+    "history": [
+      {
+        "id": "dream",
+        "label": "美铃梦里的威胁",
+        "work": "th123",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "美铃在梦中遇到太岁星君化作的大鲶鱼，对方宣称要以震动破坏地上的世界。醒来之前，威胁与战斗都留在她所见的梦景里。",
+        "sourceIds": [
+          "soku"
+        ],
+        "note": ""
+      },
+      {
+        "id": "awakening",
+        "label": "非想天则·被叫醒",
+        "work": "th123",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "美铃与大鲶鱼交战，结局中她在尚未打倒梦中对手时就被叫醒。梦景的胜负留在中途，现实的她则仍在红魔馆门前过着日常。",
+        "sourceIds": [
+          "soku"
+        ],
+        "note": "核对说明：美铃与大鲶鱼交战，结局却写她在梦中尚未打倒对手就被叫醒。不能据战斗通关替现实补上一场灾难或复活。"
+      },
+      {
+        "id": "other-dream",
+        "label": "凭依华·梦天子召出",
+        "work": "th155",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "女苑与紫苑闯入梦境后的战斗中，梦天子又召出大鲶鱼。它与美铃梦中的化身有同样称名，跨作的个体联系却仍未讲明。",
+        "sourceIds": [
+          "aocf-namazu"
+        ],
+        "note": "保留跨作同名个体边界。"
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "th123",
+        "title": "东方非想天则·美铃最终战与结局",
+        "participation": "participant",
+        "historyIds": [
+          "dream",
+          "awakening"
+        ],
+        "sourceIds": [
+          "soku"
+        ],
+        "note": ""
+      },
+      {
+        "work": "th155",
+        "title": "东方凭依华·依神姐妹第六关",
+        "participation": "cameo",
+        "historyIds": [
+          "other-dream"
+        ],
+        "sourceIds": [
+          "aocf-namazu"
+        ],
+        "note": "技能召唤客串，不接成一条现实生涯。"
+      }
+    ],
+    "future": {
+      "mode": "hypothetical",
+      "intro": "美铃那场梦的岸影又在水中摇晃，你绕过裂开的倒影，慢慢收低尾拍。你想撑住一段完整的楼影，也看清惊惶从何处来，让震动有一次停下来的机会。",
+      "years": 30,
+      "goal": {
+        "name": "让梦岸安稳一回",
+        "description": "撑住完整的梦景，并辨清惊惶的来路，使震动能停在梦岸之外。"
+      },
+      "milestones": [
+        {
+          "text": "你绕过旧梦的倒影，将翻起的水纹慢慢拨回梦水。",
+          "effects": {
+            "insight": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "health",
+            "min": 6
+          },
+          "fail": "每次跃动都撕散岸影，你只能沉到浅梦，把身形重新聚齐。",
+          "passEffects": {
+            "health": 1
+          },
+          "failEffects": {
+            "health": -1
+          },
+          "pass": "你的跃动仍撑得住梦景，落水时也能让岸边楼影留在原处。"
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "fail": "你仍把惊惶当作力量，水声越响越难停下，岸影也迟迟不肯安稳。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          },
+          "pass": "你看清惊惶来自何处，不再把每次低语都变成更大的震动。"
+        },
+        {
+          "text": "你收低尾拍，等岸影自己淡去，把醒来的声音留在水面之外。",
+          "effects": {}
+        }
+      ],
+      "success": "这一回梦岸没有倒下，惊惶也没有被你放大。你缓缓潜回水影之中，留给梦中来人的只是一段可平静经过的岸，醒来的世界仍按自己的日常前进。",
+      "bittersweet": "梦景或震动只稳住了一半，楼影依旧会随声响摇晃。你放慢尾拍，愿意让岸上的声音先经过，这一卷在尚未散尽的梦水中暂时停下。",
+      "failure": "梦岸又一次散成薄雾，响声也没能被你收回。你沉入浅梦重新聚形，让断开的楼影顺着水纹缓缓漂远，暂时把尾须收在身旁，等下一阵声音经过。",
+      "eventOverrides": [],
+      "reviewedEventIds": [
+        "namazu_01",
+        "namazu_02",
+        "namazu_03",
+        "namazu_04",
+        "namazu_05",
+        "namazu_06",
+        "namazu_07",
+        "namazu_08",
+        "namazu_09",
+        "namazu_10",
+        "namazu_11",
+        "namazu_12",
+        "namazu_13",
+        "namazu_14",
+        "namazu_15",
+        "namazu_16",
+        "namazu_17",
+        "namazu_18",
+        "namazu_19",
+        "namazu_20",
+        "namazu_21",
+        "namazu_22",
+        "namazu_23",
+        "namazu_24",
+        "namazu_25",
+        "namazu_26",
+        "namazu_27",
+        "namazu_28",
+        "namazu_29",
+        "namazu_30",
+        "namazu_31",
+        "namazu_32",
+        "namazu_33",
+        "namazu_34",
+        "namazu_35",
+        "namazu_36"
+      ]
+    }
+  },
+  {
+    "id": "myouren",
+    "continuity": "historical",
+    "anchor": {
+      "label": "命莲已故，飞仓力量留下",
+      "text": "你是白莲的弟弟，留下飞钵与远处救人的传说，早已故去。后来妖怪们为解救白莲，仍需要飞仓中留下的你的力量；名字与旧事延续至今。",
+      "age": {
+        "kind": "unknown",
+        "label": "已经故去的僧人，年龄不详",
+        "years": null,
+        "sourceIds": [
+          "ufo"
+        ],
+        "note": "文档说白莲学魔法时已经年老，不能移给命莲；历史僧人命莲的出生死亡年份未作为东方年龄。"
+      },
+      "identity": "已故僧人，白莲的弟弟",
+      "location": "飞仓传说与寺中旧器的余响",
+      "realm": "past"
+    },
+    "sources": [
+      {
+        "id": "ufo",
+        "title": "东方星莲船·角色设定与EX故事",
+        "url": "https://thbwiki.cc/附带文档:东方星莲船/角色设定&ExStory",
+        "type": "primary-transcript",
+        "locator": "寅丸星与圣白莲条目：命莲的飞仓力量、生前传说、先于白莲死亡"
+      },
+      {
+        "id": "fragment-index",
+        "title": "碎片角色列表",
+        "url": "https://thbwiki.cc/碎片角色列表",
+        "type": "secondary-index",
+        "locator": "支持人物各条目及作品、话数索引；不把条目推测改写为确认史实"
+      }
+    ],
+    "history": [
+      {
+        "id": "monk",
+        "label": "白莲的弟弟",
+        "work": "th12",
+        "kind": "background",
+        "certainty": "canon",
+        "text": "你是白莲的弟弟，也是流传于故事中的僧人。姐姐从你学得魔法，飞钵与远处救人的奇迹使你的名字留了下来。",
+        "sourceIds": [
+          "ufo"
+        ],
+        "note": "核对说明：你是白莲的弟弟，是文档所述的传说僧人。她从你学得魔法，而原作没有交代你的出生、父母或幼年修行年表。"
+      },
+      {
+        "id": "legends",
+        "label": "飞钵与救人传说",
+        "work": "th12",
+        "kind": "report",
+        "certainty": "reported",
+        "text": "白莲文档记述你让钵飞出，带走吝啬富人的仓库，也记述远处救治病人的事。飞钵的神异与救急的法术，一同留在你的传说里。",
+        "sourceIds": [
+          "ufo"
+        ],
+        "note": ""
+      },
+      {
+        "id": "death",
+        "label": "命莲离世",
+        "work": "th12",
+        "kind": "event",
+        "certainty": "canon",
+        "text": "你的离世让白莲开始恐惧死亡，转而追求不老之术。姐姐此后的修行延续下去，你的生涯已经结束。",
+        "sourceIds": [
+          "ufo"
+        ],
+        "note": "你的离世使白莲恐惧死亡，转而追求不老之术；文档没有给出你的死因与确切年岁。"
+      },
+      {
+        "id": "tobikura",
+        "label": "星莲船·留下的力量",
+        "work": "th12",
+        "kind": "report",
+        "certainty": "canon",
+        "text": "为了从封印中救出白莲，妖怪们仍需要飞仓中留下的你的力量。旧力量与仓库的传说一起延续，成为后来这场行动不可缺少的依靠。",
+        "sourceIds": [
+          "ufo"
+        ],
+        "note": ""
+      }
+    ],
+    "reviewedWorks": [
+      {
+        "work": "th12",
+        "title": "东方星莲船·白莲与星角色文档",
+        "participation": "mentioned",
+        "historyIds": [
+          "monk",
+          "legends",
+          "death",
+          "tobikura"
+        ],
+        "sourceIds": [
+          "ufo"
+        ],
+        "note": "从两条设定文档核对传说、死亡及力量遗留；没有当代立绘或本人台词。"
+      }
+    ],
+    "future": {
+      "mode": "legacy",
+      "intro": "旧器旁摊开飞钵的记述，寺门外也有人等着一份热粥。后来的人想把奇迹的传闻讲明白，将送食与救急的心意用在今日的照料里，让你的故事有可以接住的去处。",
+      "years": 16,
+      "goal": {
+        "name": "让飞钵故事化成照料",
+        "description": "分清旧传说与眼前可做的事，让留下的故事帮助今日的人送食、救急。"
+      },
+      "milestones": [
+        {
+          "text": "寺中整理飞钵的旧记，将讲奇迹的纸页与今日的送食簿放在一起。",
+          "effects": {
+            "insight": 1
+          }
+        },
+        {
+          "check": {
+            "stat": "insight",
+            "min": 6
+          },
+          "fail": "旧记只剩夸大的奇迹，讲述者几次想解释，却仍说不清它与今日有何关联。",
+          "passEffects": {
+            "insight": 1
+          },
+          "failEffects": {
+            "fortune": -1
+          },
+          "pass": "旧记分清传说与可做的照料，来客读得懂飞钵故事为何被留下。"
+        },
+        {
+          "check": {
+            "stat": "bond",
+            "min": 6
+          },
+          "fail": "来人更想看奇迹显现，热粥虽备好了，愿意送到门外的手却仍不够。",
+          "passEffects": {
+            "bond": 1
+          },
+          "failEffects": {
+            "bond": -1
+          },
+          "pass": "来人听完故事愿意搭手，送食与照看不再只由一个人勉强撑住。"
+        },
+        {
+          "text": "旧器收回安稳处，今日的送食簿仍摊在旁边等下一笔。",
+          "effects": {}
+        }
+      ],
+      "success": "飞钵的故事讲清了，听故事的人也开始为今日搭手。旧器留在安稳处，门外有人接过热粥；你的名字在照料中被记起，送食簿又添了一行。",
+      "bittersweet": "旧记或送食只做成了一部分，另一部分仍等待愿意接手的人。寺门继续给来客留粥，未讲清的纸页夹好，余响也能陪着今日的照料缓缓延续。",
+      "failure": "奇迹的旧记没有讲明白，今日的搭手也未能聚齐。旧器仍被收好，一碗热粥留给迟来的人；门口的灯亮了一晚，未讲完的故事夹回经页之间。",
+      "eventOverrides": [
+        {
+          "id": "myouren_01",
+          "text": "你留下的钵被摆到稳处，旁边添了一页讲述旧事的纸。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "myouren_02",
+          "text": "寺中年轻人端着空钵走过石阶，慢慢试着不洒一滴水。"
+        },
+        {
+          "id": "myouren_03",
+          "text": "旧经页的边角卷起，抄写的人暂时停下揉了揉手。"
+        },
+        {
+          "id": "myouren_04",
+          "text": "同一句经文有两种抄法，桌边留下各自的解释。"
+        },
+        {
+          "id": "myouren_05",
+          "text": "一块软饼分给迟来的人，旧钵旁仍留着半碗热粥。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "myouren_06",
+          "text": "钵底落入松针，照看的人逐根拣出再擦净尘土。"
+        },
+        {
+          "id": "myouren_07",
+          "text": "雨落寺檐，讲旧飞钵故事的人放轻了最后一句。"
+        },
+        {
+          "id": "myouren_08",
+          "text": "有人愿意听完旧事，茶凉之后仍坐在钵旁等结尾。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "myouren_09",
+          "text": "练习用的木钵补好裂角，旧器的名字记在旁边。"
+        },
+        {
+          "id": "myouren_10",
+          "text": "一段经文被抄在短纸上，留给今日静坐的人。"
+        },
+        {
+          "id": "myouren_11",
+          "text": "飞钵传说的奇迹与可做的照料，分列在两张纸上。"
+        },
+        {
+          "id": "myouren_12",
+          "text": "山下送来的米到了寺门，搬运的人先替后来者留出路。"
+        },
+        {
+          "id": "myouren_13",
+          "text": "山风吹散了纸页，寺中人沿湿路逐张收回旧记。"
+        },
+        {
+          "id": "myouren_14",
+          "text": "剩粥添水再热过，来得晚的人也有一碗可以端走。"
+        },
+        {
+          "id": "myouren_15",
+          "text": "讲述者不再只说飞钵有多高，也说当时为何需要送食。"
+        },
+        {
+          "id": "myouren_16",
+          "text": "寺中人聊完今日山路，又问同行者是否需要先歇脚。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "myouren_17",
+          "text": "补好的木钵留在门边，年轻人试着托稳自己的手。"
+        },
+        {
+          "id": "myouren_18",
+          "text": "一段熟悉经文轻声念完，讲旧事的人也不再抢话。"
+        },
+        {
+          "id": "myouren_19",
+          "text": "被风吹偏的钵稳稳接住，托钵的人停下来缓过气。"
+        },
+        {
+          "id": "myouren_20",
+          "text": "来客听完法术的故事，接到的仍是一碗眼前的热粥。"
+        },
+        {
+          "id": "myouren_21",
+          "text": "白莲看过飞钵的旧记，把自己的注解留在空白处。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "myouren_22",
+          "text": "湿鞋在檐下晒暖，旧钵旁有人坐着听了一阵松涛。"
+        },
+        {
+          "id": "myouren_23",
+          "text": "寺中有人咳嗽，搬米的差事分给另一双愿意帮忙的手。"
+        },
+        {
+          "id": "myouren_24",
+          "text": "旧记删去夸大的几句，留下当时送食与救急的缘由。"
+        },
+        {
+          "id": "myouren_25",
+          "text": "练习木钵的残片收好，旁边的旧故事没有因此中断。"
+        },
+        {
+          "id": "myouren_26",
+          "text": "经文的注解添了新意，讲述者先问他人是否听得明白。"
+        },
+        {
+          "id": "myouren_27",
+          "text": "白莲与寺中人煮好淡粥，把迟来的一份盖在锅边。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "myouren_28",
+          "text": "晨光照到旧器旁，垫布换到更暖、更干燥的位置。"
+        },
+        {
+          "id": "myouren_29",
+          "text": "白莲指着飞仓的旧记，讲到弟弟留下的力量时停了一会。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "myouren_30",
+          "text": "白莲擦净钵沿，将它安稳放回旧物之间。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "myouren_31",
+          "text": "白莲谈起法术能做与不能做的事，来客听完再问。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "myouren_32",
+          "text": "寺中人在旧钵旁留好一碗热粥，递给今日迟来的客人。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "myouren_33",
+          "text": "白莲讲过的旧山路留在纸上，窗边的人慢慢合起书页。",
+          "with": [],
+          "remember": []
+        },
+        {
+          "id": "myouren_34",
+          "text": "年轻人端着食物先走上坡，路口有人等下一份送来。"
+        },
+        {
+          "id": "myouren_35",
+          "text": "晚钟响完，旧器旁仍留着一盏灯，照见屋外细雨。"
+        },
+        {
+          "id": "myouren_36",
+          "text": "难懂的经句暂时夹回书中，眼前的一只空钵先被放稳。"
+        }
+      ],
+      "reviewedEventIds": [
+        "myouren_01",
+        "myouren_02",
+        "myouren_03",
+        "myouren_04",
+        "myouren_05",
+        "myouren_06",
+        "myouren_07",
+        "myouren_08",
+        "myouren_09",
+        "myouren_10",
+        "myouren_11",
+        "myouren_12",
+        "myouren_13",
+        "myouren_14",
+        "myouren_15",
+        "myouren_16",
+        "myouren_17",
+        "myouren_18",
+        "myouren_19",
+        "myouren_20",
+        "myouren_21",
+        "myouren_22",
+        "myouren_23",
+        "myouren_24",
+        "myouren_25",
+        "myouren_26",
+        "myouren_27",
+        "myouren_28",
+        "myouren_29",
+        "myouren_30",
+        "myouren_31",
+        "myouren_32",
+        "myouren_33",
+        "myouren_34",
+        "myouren_35",
+        "myouren_36"
+      ]
+    }
+  }
+]

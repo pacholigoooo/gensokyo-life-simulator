@@ -1,0 +1,2144 @@
+[
+  {
+    "id": "keine",
+    "title": "课后还亮着的灯",
+    "romance": true,
+    "source": "https://thbwiki.cc/东方求闻史纪/上白泽慧音/中日对照",
+    "entry": {
+      "minAge": 20,
+      "maxAge": 55,
+      "habitats": [
+        "village",
+        "outskirts"
+      ],
+      "min": {
+        "insight": 6
+      }
+    },
+    "talents": [
+      "reader",
+      "notes",
+      "promise",
+      "neighborly"
+    ],
+    "careers": [
+      "scholar"
+    ],
+    "intro": {
+      "text": "你把缺页的村史带进寺子屋，慧音拿笔圈出疑处。",
+      "effects": {
+        "bond": 1
+      },
+      "next": "lesson",
+      "label": "寺子屋初识"
+    },
+    "nodes": {
+      "lesson": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "clear",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你把错漏的旧地名逐一核过，慧音拉过书案旁的凳子。她记住你核字的习惯，翻到疑处便问你的看法；你也渐渐敢与她争论。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "stories",
+            "label": "共读旧史",
+            "trust": 1,
+            "set": [
+              "clear-copy"
+            ]
+          },
+          {
+            "key": "reader",
+            "when": {
+              "talentsAny": [
+                "reader",
+                "scroll"
+              ],
+              "min": {
+                "insight": 6
+              }
+            },
+            "text": "你找出旧册里的异写，慧音把两页并排放好，听你解释来历。后来见到相似的字，她会留页等你，你也带着新查的旧册来。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "stories",
+            "label": "异名对读",
+            "trust": 1,
+            "set": [
+              "clear-copy"
+            ]
+          },
+          {
+            "key": "stumble",
+            "when": {},
+            "text": "你又把两代人名混在一起，慧音敲着桌角重讲。你照着批注再抄一遍，她验过次序，才让你把册子带回去。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "stories",
+            "label": "补过旧课",
+            "set": [
+              "reviewed"
+            ]
+          }
+        ]
+      },
+      "stories": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "fieldwork",
+            "when": {
+              "careers": [
+                "scholar"
+              ],
+              "relationFlags": [
+                "clear-copy"
+              ]
+            },
+            "text": "慧音带着你抄过的旧街名来找你，说想一起寻旧河岸。你指给她看残桩，她认真记下；回程时，她又问起你近来的日子。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "moon",
+            "label": "寻访村史",
+            "trust": 2,
+            "set": [
+              "walked-bank"
+            ]
+          },
+          {
+            "key": "voices",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你请老人讲起旧桥，慧音记完故事，给你续了杯茶。她记得你爱听街巷往事，邀你再来共读；你也问她最想查清哪一段。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "moon",
+            "label": "听人说史",
+            "trust": 2,
+            "set": [
+              "heard-villagers"
+            ]
+          },
+          {
+            "key": "quiet",
+            "when": {},
+            "text": "你抄下墙上的旧刻痕，慧音替你读出模糊的字。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "moon",
+            "label": "辨认旧痕",
+            "trust": 1
+          }
+        ]
+      },
+      "moon": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "help",
+            "when": {
+              "min": {
+                "insight": 8
+              },
+              "relationFlags": [
+                "clear-copy"
+              ]
+            },
+            "text": "满月夜慧音忙着编史，你按旧次序排好散页。忙完她发现你也熬红了眼，催你喝热茶；你接过杯子，劝她也歇一会儿。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "flood",
+            "label": "满月共事",
+            "trust": 2,
+            "set": [
+              "moon-work"
+            ]
+          },
+          {
+            "key": "wait",
+            "when": {},
+            "text": "满月下慧音现出双角，你留在门外等她编完村史。她收妥册子出来，提醒你夜路渐凉；你向她道别，约好以后再谈旧课。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "flood",
+            "label": "月下等候",
+            "trust": 1,
+            "set": [
+              "waited-moon"
+            ]
+          }
+        ]
+      },
+      "flood": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "protect",
+            "when": {
+              "min": {
+                "health": 6,
+                "bond": 6
+              }
+            },
+            "text": "河水上涨，你背起落后的学生，慧音在前开路。把孩子安顿好，她折回来查看你磨伤的肩；你让她先暖暖湿透的手。",
+            "effects": {
+              "health": -1,
+              "bond": 1
+            },
+            "next": "after-class",
+            "label": "同护学生",
+            "trust": 2,
+            "set": [
+              "protected-pupils"
+            ]
+          },
+          {
+            "key": "books",
+            "when": {},
+            "text": "河水上涨，慧音先把学生带到高处，你抢出的书浸湿了。她清点完孩子，回来与你摊开湿页；你答应把能认清的字重抄。",
+            "effects": {
+              "fortune": -1
+            },
+            "next": "repair",
+            "label": "抢救书册",
+            "trust": -1,
+            "set": [
+              "damp-books"
+            ]
+          }
+        ]
+      },
+      "repair": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "binding",
+            "when": {
+              "min": {
+                "insight": 7,
+                "fortune": 3
+              }
+            },
+            "text": "你为泡坏的书重做封皮，慧音翻到熟悉的批注，叫你坐下歇手。你说还想补齐缺页，她把自己的底稿挪过来，与你接着校。",
+            "effects": {
+              "fortune": -1
+            },
+            "next": "after-class",
+            "label": "补好旧书",
+            "trust": 2,
+            "set": [
+              "rebound-books"
+            ]
+          },
+          {
+            "key": "recopy",
+            "when": {},
+            "text": "你把还能辨清的旧页重抄一遍，慧音添上缺字。你问下回能帮她做什么，她留下一叠待校的册子，把次序讲清。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "after-class",
+            "label": "重新誊写",
+            "trust": 1
+          }
+        ]
+      },
+      "after-class": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "mutual",
+            "when": {
+              "minTrust": 4,
+              "minVisits": 4,
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "散学后慧音主动留你喝茶，坦言近来总盼着你来，连疲倦也愿与你说。你说自己也常想起她，两人坐到灯亮，茶又续了一回。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "invitation",
+            "label": "课后彼此惦念",
+            "trust": 2,
+            "set": [
+              "mutual-recognition"
+            ]
+          },
+          {
+            "key": "lessons",
+            "when": {},
+            "text": "学生散去，慧音与你校读旧事。你提出另一种讲法，她敲敲桌角，让你先找出处；两人争到炭火将熄才收书。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "village-end",
+            "label": "书案往来",
+            "trust": 1
+          }
+        ]
+      },
+      "invitation": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "affection",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minYears": 6,
+              "minVisits": 5,
+              "minTrust": 4,
+              "min": {
+                "bond": 8
+              },
+              "relationFlags": [
+                "mutual-recognition",
+                "moon-work"
+              ]
+            },
+            "text": "慧音带着留给你的茶来找你，说备课时也会想起你，想在散学后与你相伴。你说自己同样喜欢她，她红着脸问你可愿认真走下去。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "answer",
+            "label": "互明心意",
+            "trust": 1,
+            "set": [
+              "spoken-affection"
+            ]
+          },
+          {
+            "key": "friendship",
+            "when": {},
+            "text": "慧音问起你课外的日子，你把近年的琐事慢慢讲完。她也谈起学生和备课，两人约好有新史料便再来共读。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "village-end",
+            "label": "课外长谈",
+            "trust": 1
+          }
+        ]
+      },
+      "answer": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "together",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "min": {
+                "bond": 8
+              },
+              "relationFlags": [
+                "spoken-affection",
+                "mutual-recognition",
+                "moon-work"
+              ]
+            },
+            "text": "散学后的寺子屋静下来，慧音搁笔说还有一句话想讲：她喜欢你。你答愿与她相恋，伸手握住她。她笑着回握，窗外的风翻过桌上半页书。",
+            "effects": {
+              "bond": 2
+            },
+            "next": null,
+            "label": "牵手确立恋人",
+            "trust": 2,
+            "status": "lover"
+          },
+          {
+            "key": "friends",
+            "when": {},
+            "text": "再会时你们谈清如今各自的打算，约定以朋友相处。慧音把旧课摊到案上，你也坐下，接着讨论上回留下的疑处。",
+            "effects": {
+              "insight": 1
+            },
+            "next": null,
+            "label": "回到友谊",
+            "status": "friend"
+          }
+        ]
+      },
+      "village-end": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "confidant",
+            "when": {
+              "minTrust": 5,
+              "relationFlags": [
+                "mutual-recognition"
+              ]
+            },
+            "text": "慧音把未讲完的村史留在案上，邀你一同续写。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "案边知己",
+            "status": "confidant"
+          },
+          {
+            "key": "teacher",
+            "when": {
+              "careers": [
+                "scholar"
+              ],
+              "minTrust": 3
+            },
+            "text": "慧音让你试讲一课，讲错时仍会当众敲响桌角。",
+            "effects": {
+              "insight": 1
+            },
+            "next": null,
+            "label": "师友",
+            "status": "mentor",
+            "xp": 1
+          },
+          {
+            "key": "friend",
+            "when": {},
+            "text": "你与慧音各记着几段旧事，见面时仍能争上半日。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "村中朋友",
+            "status": "friend"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "pupils",
+        "states": [
+          "friend",
+          "confidant",
+          "mentor",
+          "lover"
+        ],
+        "text": "慧音带来学生写的短诗，念到错字时笑了。",
+        "effects": {
+          "bond": 1
+        }
+      },
+      {
+        "key": "lamp",
+        "states": [
+          "lover"
+        ],
+        "text": "慧音留着课后的灯等你，你坐到她身旁，陪她翻完最后一页。她合上书，握着你的手说，今晚想多陪你一会儿。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      },
+      {
+        "key": "old-name",
+        "states": [
+          "friend",
+          "confidant",
+          "mentor"
+        ],
+        "text": "你又念错一个古名，慧音用笔敲了敲桌角。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "key": "bank",
+        "states": [
+          "friend",
+          "confidant",
+          "lover"
+        ],
+        "when": {
+          "relationFlags": [
+            "walked-bank"
+          ]
+        },
+        "text": "慧音陪你重走旧河岸，指出新桥下留下的旧桩。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "key": "hands",
+        "states": [
+          "lover"
+        ],
+        "text": "散学后，慧音与你并肩走回村里。说到有趣处，她笑着碰了碰你的手；你顺势握住，接着问她班里今天又出了什么新故事。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      },
+      {
+        "key": "shoulder",
+        "states": [
+          "lover"
+        ],
+        "text": "备课到深夜，慧音靠在你肩头歇了一会儿。你替她夹好书页，她轻轻握住你的袖口，说还想这样靠一会儿。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      },
+      {
+        "key": "scarf",
+        "states": [
+          "lover"
+        ],
+        "text": "天冷了，你替慧音拢好围巾。她握住你冻红的手，一起收进袖口；你往她身边挨近，两人慢慢走回灯下。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      },
+      {
+        "key": "bookmark",
+        "states": [
+          "lover"
+        ],
+        "text": "你送慧音一枚亲手做的书签。后来一起翻课本，她指给你看夹着的那页，你认出是两人曾一起校读的旧册。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      },
+      {
+        "key": "festival",
+        "states": [
+          "lover"
+        ],
+        "text": "祭日里慧音送完学生，拉着你去买团子。回程时她把最后一串递到你嘴边，你咬了一口，也把余下的递给她。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      },
+      {
+        "key": "embrace",
+        "states": [
+          "lover"
+        ],
+        "text": "寺子屋关门后，慧音倚到你肩头，小声说今天有些累。你揽她坐下，掌心轻抚她的背；她环着你的腰，歇过片刻才聊起学生的趣事。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      },
+      {
+        "key": "care",
+        "states": [
+          "lover"
+        ],
+        "text": "你身子疲乏，慧音散学后把热粥端到床边。你握了握她的手，她坐下听你说话，等你喝完，才放心收起碗。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2,
+        "when": {
+          "max": {
+            "health": 7
+          }
+        }
+      },
+      {
+        "key": "fullmoon",
+        "states": [
+          "lover"
+        ],
+        "text": "满月夜慧音编完村史，约你在门廊看月亮。你挨着她坐，替她揉揉酸了的手，她把肩膀让过来，听你讲今晚的见闻。",
+        "effects": {
+          "bond": 1
+        },
+        "interval": 2
+      }
+    ],
+    "farewell": {
+      "acquaintance": "寺子屋的散页边，还留着慧音替你圈过的字。",
+      "friend": "慧音再讲村中旧事时，仍记得你曾添过的那一段。",
+      "confidant": "书案上未讲完的故事，还带着你与慧音争论的笔迹。",
+      "mentor": "慧音收好你讲课时的底稿，把其中一页留给后来的学生。",
+      "lover": "课后的灯还亮着，慧音把你写过的旧页收在身边。"
+    },
+    "contact": {
+      "domain": "village",
+      "place": "寺子屋"
+    },
+    "preparedEntry": {
+      "minAge": 20,
+      "maxAge": 55,
+      "min": {
+        "insight": 6
+      },
+      "flags": [
+        "visit:keine"
+      ]
+    }
+  },
+  {
+    "id": "mokou",
+    "title": "竹林岔口的余火",
+    "romance": false,
+    "source": "https://thbwiki.cc/东方求闻史纪/藤原妹红/中日对照",
+    "entry": {
+      "minAge": 20,
+      "maxAge": 58,
+      "habitats": [
+        "village",
+        "outskirts",
+        "forest"
+      ],
+      "min": {
+        "health": 4
+      }
+    },
+    "talents": [
+      "forest",
+      "wander",
+      "promise",
+      "herbal"
+    ],
+    "careers": [
+      "garden",
+      "travel",
+      "guard"
+    ],
+    "intro": {
+      "text": "雾竹遮住了来路，妹红用火照出一线干土。",
+      "effects": {
+        "bond": 1
+      },
+      "next": "guide",
+      "label": "竹林相识"
+    },
+    "nodes": {
+      "guide": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "steady",
+            "when": {
+              "min": {
+                "health": 7
+              }
+            },
+            "text": "你跟上妹红的脚步，记住竹林里不被积水淹的高地。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "ember",
+            "label": "记住竹路",
+            "trust": 1,
+            "set": [
+              "learned-trail"
+            ]
+          },
+          {
+            "key": "woods",
+            "when": {
+              "talentsAny": [
+                "forest",
+                "wander"
+              ]
+            },
+            "text": "你认出折竹朝向，妹红让你先找下一处岔口。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "ember",
+            "label": "识路同行",
+            "trust": 1,
+            "set": [
+              "learned-trail"
+            ]
+          },
+          {
+            "key": "slow",
+            "when": {},
+            "text": "妹红等你喘匀了再走，临出林时指给你新的路口。",
+            "effects": {
+              "health": 1
+            },
+            "next": "ember",
+            "label": "慢步出林",
+            "trust": 1
+          }
+        ]
+      },
+      "ember": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "rice",
+            "when": {
+              "min": {
+                "fortune": 3
+              }
+            },
+            "text": "你带新米来到竹边，妹红先把刚生好的火让给你。",
+            "effects": {
+              "fortune": -1,
+              "bond": 1
+            },
+            "next": "names",
+            "label": "同分炉火",
+            "trust": 1,
+            "set": [
+              "shared-fire"
+            ]
+          },
+          {
+            "key": "kindling",
+            "when": {},
+            "text": "你拾来干枝添火，妹红把新烤好的米饼推到你面前。",
+            "effects": {
+              "health": 1
+            },
+            "next": "names",
+            "label": "添柴相伴",
+            "trust": 1,
+            "set": [
+              "shared-fire"
+            ]
+          }
+        ]
+      },
+      "names": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "listen",
+            "when": {
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你说起村里的旧屋，妹红不插话，只替你添了柴。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "crossing",
+            "label": "竹边闲谈",
+            "trust": 2,
+            "set": [
+              "heard-your-life"
+            ]
+          },
+          {
+            "key": "press",
+            "when": {},
+            "text": "你追问漫长的旧事，妹红拨着火，直到你改了话题。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "crossing",
+            "label": "碰到旧痛",
+            "trust": -1,
+            "set": [
+              "pressed-past"
+            ]
+          }
+        ]
+      },
+      "crossing": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "expose",
+            "when": {
+              "relationFlags": [
+                "pressed-past"
+              ],
+              "max": {
+                "bond": 4
+              }
+            },
+            "text": "你领好事者去问她的不死，妹红用火封住了竹路。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "quarrel",
+            "label": "越过旧痛",
+            "trust": -3,
+            "set": [
+              "exposed-secret"
+            ],
+            "status": "enemy"
+          },
+          {
+            "key": "carry",
+            "when": {
+              "min": {
+                "health": 6,
+                "bond": 6
+              }
+            },
+            "text": "又有人急病入林，你背起病人，妹红劈开挡路的竹。",
+            "effects": {
+              "health": -1,
+              "bond": 1
+            },
+            "next": "quarrel",
+            "label": "同行送医",
+            "trust": 2,
+            "set": [
+              "carried-patient"
+            ]
+          },
+          {
+            "key": "wait",
+            "when": {},
+            "text": "雾浓时你守在岔口，等妹红把迷路的人带回村边。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "quarrel",
+            "label": "守住岔口",
+            "trust": 1,
+            "set": [
+              "waited-at-fork"
+            ]
+          }
+        ]
+      },
+      "quarrel": {
+        "delay": 4,
+        "branches": [
+          {
+            "key": "admit",
+            "when": {
+              "relationFlags": [
+                "exposed-secret"
+              ],
+              "min": {
+                "insight": 8,
+                "bond": 6
+              }
+            },
+            "text": "你挨户说清自己的冒犯，妹红仍站在竹影外听着。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "repair",
+            "label": "承认冒犯",
+            "trust": 1,
+            "set": [
+              "admitted-harm"
+            ]
+          },
+          {
+            "key": "barred",
+            "when": {
+              "relationFlags": [
+                "exposed-secret"
+              ]
+            },
+            "text": "你又来到旧岔口，妹红隔着火光让你离开。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "leave",
+            "label": "竹路被拒",
+            "trust": -1,
+            "status": "enemy"
+          },
+          {
+            "key": "old-grudge",
+            "when": {},
+            "text": "你劝妹红别再找辉夜，她反问你能不能忍上一千年。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "repair",
+            "label": "触及旧怨",
+            "trust": -1,
+            "set": [
+              "asked-about-grudge"
+            ]
+          }
+        ]
+      },
+      "repair": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "make-amends",
+            "when": {
+              "relationFlags": [
+                "exposed-secret",
+                "admitted-harm"
+              ],
+              "min": {
+                "health": 6,
+                "bond": 7
+              }
+            },
+            "text": "再有病人求助，你守住回村的路，妹红终于与你同行。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "hearth",
+            "label": "重新护送",
+            "trust": 3,
+            "set": [
+              "kept-watch"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "respect",
+            "when": {
+              "missingRelationFlags": [
+                "exposed-secret"
+              ]
+            },
+            "text": "你不再替她断定旧怨，只陪她走完送病人的路。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "hearth",
+            "label": "留她的旧事",
+            "trust": 2,
+            "set": [
+              "left-grudge-alone"
+            ]
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "妹红把你送到竹林边，仍不肯与你并排坐下。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "leave",
+            "label": "未能复旧",
+            "status": "estranged"
+          }
+        ]
+      },
+      "hearth": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "changed",
+            "when": {
+              "species": [
+                "youkai",
+                "magician",
+                "vampire"
+              ],
+              "minTrust": 4,
+              "relationFlags": [
+                "heard-your-life"
+              ]
+            },
+            "text": "你循旧路走到火边，妹红认得如今的你，叫出了旧名。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "leave",
+            "label": "旧名不改",
+            "trust": 1,
+            "status": "confidant"
+          },
+          {
+            "key": "mortal",
+            "when": {
+              "species": [
+                "human",
+                "hermit"
+              ],
+              "minTrust": 4,
+              "relationFlags": [
+                "heard-your-life",
+                "shared-fire"
+              ]
+            },
+            "text": "你说起这一生终有尽头，妹红听着，把火拨小了些。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "leave",
+            "label": "竹边知己",
+            "trust": 1,
+            "status": "confidant"
+          },
+          {
+            "key": "lesson",
+            "when": {},
+            "text": "妹红教你在变了的竹林里认路，让你自己领一次路。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "leave",
+            "label": "护送师友",
+            "status": "mentor",
+            "xp": 1
+          }
+        ]
+      },
+      "leave": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "reconcile",
+            "when": {
+              "relationFlags": [
+                "exposed-secret",
+                "admitted-harm",
+                "kept-watch"
+              ],
+              "minTrust": 2
+            },
+            "text": "妹红让开旧岔口，提醒你下次来别再带那些看客。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "旧路和解",
+            "status": "reconciled"
+          },
+          {
+            "key": "enemy",
+            "when": {
+              "relationFlags": [
+                "exposed-secret"
+              ],
+              "missingRelationFlags": [
+                "admitted-harm"
+              ]
+            },
+            "text": "竹路尽头的火仍为你而起，妹红没有收回逐客的话。",
+            "effects": {
+              "bond": -1
+            },
+            "next": null,
+            "label": "竹林旧敌",
+            "status": "enemy"
+          },
+          {
+            "key": "companion",
+            "when": {
+              "minTrust": 3,
+              "missingRelationFlags": [
+                "exposed-secret"
+              ]
+            },
+            "text": "你与妹红各自回去，竹林的旧岔口仍替你留着。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "有路可回"
+          },
+          {
+            "key": "apart",
+            "when": {},
+            "text": "妹红指给你出林的方向，从此相逢也只是点头。",
+            "effects": {
+              "insight": 1
+            },
+            "next": null,
+            "label": "相逢疏远",
+            "status": "estranged"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "winter-fire",
+        "states": [
+          "confidant",
+          "mentor",
+          "reconciled"
+        ],
+        "text": "新一回冬雨落下，妹红带你到竹棚下烤火。",
+        "effects": {
+          "health": 1
+        }
+      },
+      {
+        "key": "guide-ahead",
+        "states": [
+          "mentor",
+          "confidant",
+          "reconciled"
+        ],
+        "when": {
+          "relationFlags": [
+            "learned-trail"
+          ]
+        },
+        "text": "妹红让你走在前面，只在你绕错时轻咳一声。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "key": "fresh-rice",
+        "states": [
+          "confidant",
+          "reconciled"
+        ],
+        "text": "妹红又烤了新米饼，听你说起住处近年的变化。",
+        "effects": {
+          "bond": 1
+        }
+      },
+      {
+        "key": "barred-path",
+        "states": [
+          "enemy",
+          "estranged"
+        ],
+        "text": "竹路尽头火光一亮，你停了脚，妹红没有让道。",
+        "effects": {
+          "bond": -1
+        }
+      },
+      {
+        "key": "old-grudge",
+        "states": [
+          "confidant",
+          "mentor",
+          "reconciled"
+        ],
+        "when": {
+          "relationFlags": [
+            "left-grudge-alone"
+          ]
+        },
+        "text": "妹红说起又一场旧怨，你听完，只添了一把柴。",
+        "effects": {
+          "bond": 1
+        }
+      }
+    ],
+    "farewell": {
+      "acquaintance": "妹红记得曾为你照亮的那一线竹路。",
+      "confidant": "妹红拨开余火，仍记得你在竹边说过的那些日常。",
+      "mentor": "妹红指出新的竹路时，偶尔想起你第一次领路的样子。",
+      "reconciled": "旧岔口的火已收起，妹红记得你后来守住过那条路。",
+      "enemy": "妹红记下你的旧名，连同那一回被窥探的怒意。",
+      "estranged": "妹红与你走过的路分开了，竹影仍旧各有去处。"
+    },
+    "contact": {
+      "domain": "forest",
+      "place": "迷途竹林"
+    },
+    "preparedEntry": {
+      "minAge": 20,
+      "maxAge": 58,
+      "min": {
+        "health": 4
+      },
+      "flags": [
+        "visit:mokou"
+      ]
+    }
+  },
+  {
+    "id": "alice",
+    "title": "幕后的两双手",
+    "romance": false,
+    "source": "https://thbwiki.cc/东方求闻史纪/爱丽丝·玛格特洛依德/中日对照",
+    "entry": {
+      "minAge": 20,
+      "maxAge": 58,
+      "habitats": [
+        "village",
+        "outskirts",
+        "forest"
+      ],
+      "min": {
+        "insight": 4
+      }
+    },
+    "talents": [
+      "craft",
+      "handy",
+      "careful",
+      "scroll"
+    ],
+    "careers": [
+      "craft",
+      "magic",
+      "scholar"
+    ],
+    "intro": {
+      "text": "祭场的人偶拎起落幕，爱丽丝请你扶住歪了的木架。",
+      "effects": {
+        "bond": 1
+      },
+      "next": "costume",
+      "label": "祭场相识"
+    },
+    "nodes": {
+      "costume": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "sewn",
+            "when": {
+              "careers": [
+                "craft"
+              ],
+              "min": {
+                "insight": 6
+              }
+            },
+            "text": "你缝好新戏的小衣，爱丽丝让人偶转身给你看。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "practice",
+            "label": "缝制戏衣",
+            "trust": 1,
+            "set": [
+              "sewn-costume"
+            ]
+          },
+          {
+            "key": "cloth",
+            "when": {},
+            "text": "你帮爱丽丝挑出透光的布，她让人偶托住布角。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "practice",
+            "label": "挑选幕布",
+            "trust": 1,
+            "set": [
+              "held-curtain"
+            ]
+          }
+        ]
+      },
+      "practice": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "rhythm",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你听准换幕的节拍，爱丽丝让两个人偶接连跃起。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "show",
+            "label": "合上节拍",
+            "trust": 2,
+            "set": [
+              "kept-rhythm"
+            ]
+          },
+          {
+            "key": "craftsense",
+            "when": {
+              "talentsAny": [
+                "craft",
+                "careful"
+              ],
+              "min": {
+                "insight": 6
+              }
+            },
+            "text": "你照小衣的褶痕认出转场，爱丽丝放慢了人偶的步。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "show",
+            "label": "看懂转场",
+            "trust": 2,
+            "set": [
+              "kept-rhythm"
+            ]
+          },
+          {
+            "key": "late",
+            "when": {},
+            "text": "你晚拉了半拍幕布，爱丽丝的人偶撞作一团。",
+            "effects": {
+              "fortune": -1
+            },
+            "next": "fix",
+            "label": "错过节拍",
+            "trust": -1,
+            "set": [
+              "late-cue"
+            ]
+          }
+        ]
+      },
+      "fix": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "rehearse",
+            "when": {
+              "min": {
+                "insight": 7
+              }
+            },
+            "text": "你陪她重排旧戏，把每次拉幕的地方唱成短句。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "show",
+            "label": "重排旧戏",
+            "trust": 2,
+            "set": [
+              "rehearsed"
+            ]
+          },
+          {
+            "key": "smaller",
+            "when": {},
+            "text": "爱丽丝换成小戏台，你先跟着一个人偶学转场。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "show",
+            "label": "从小戏练起",
+            "trust": 1,
+            "set": [
+              "rehearsed"
+            ]
+          }
+        ]
+      },
+      "show": {
+        "delay": 3,
+        "branches": [
+          {
+            "key": "hold",
+            "when": {
+              "min": {
+                "health": 6
+              }
+            },
+            "text": "新戏遇上大风，你按住木架，爱丽丝让人偶继续谢幕。",
+            "effects": {
+              "health": -1,
+              "bond": 1
+            },
+            "next": "claim",
+            "label": "撑住戏台",
+            "trust": 2,
+            "set": [
+              "held-stage"
+            ]
+          },
+          {
+            "key": "shelter",
+            "when": {},
+            "text": "大风掀开新戏的幕，爱丽丝收回人偶，你帮她搬架。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "claim",
+            "label": "合力撤台",
+            "trust": 1,
+            "set": [
+              "moved-stage"
+            ]
+          }
+        ]
+      },
+      "claim": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "credit",
+            "when": {
+              "relationFlags": [
+                "kept-rhythm"
+              ],
+              "min": {
+                "insight": 7
+              },
+              "max": {
+                "bond": 3
+              }
+            },
+            "text": "你把她的转场说成自创，爱丽丝当场收走了戏偶。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "reckoning",
+            "label": "夺去戏名",
+            "trust": -3,
+            "set": [
+              "claimed-credit"
+            ],
+            "status": "rival"
+          },
+          {
+            "key": "name",
+            "when": {},
+            "text": "你在新戏单上写好她的名字，爱丽丝添上你的幕工名。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "duet",
+            "label": "共同署名",
+            "trust": 2,
+            "set": [
+              "credited-alice"
+            ]
+          }
+        ]
+      },
+      "reckoning": {
+        "delay": 4,
+        "branches": [
+          {
+            "key": "correct",
+            "when": {
+              "min": {
+                "insight": 8,
+                "bond": 6
+              }
+            },
+            "text": "你当众改回戏单的名字，爱丽丝让你留下重写结尾。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "duet",
+            "label": "改回戏名",
+            "trust": 3,
+            "set": [
+              "credited-alice",
+              "corrected-credit"
+            ]
+          },
+          {
+            "key": "challenge",
+            "when": {},
+            "text": "你另搭一座戏台较量，爱丽丝带着人偶来占了首排。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "part",
+            "label": "各自开演",
+            "set": [
+              "rival-stage"
+            ],
+            "status": "rival",
+            "xp": 1
+          }
+        ]
+      },
+      "duet": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "apprentice",
+            "when": {
+              "minTrust": 4,
+              "min": {
+                "insight": 9
+              },
+              "talentsAny": [
+                "craft",
+                "handy",
+                "careful"
+              ]
+            },
+            "text": "你跟爱丽丝削好一节关节，她把下一节交给你。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "part",
+            "label": "人偶师徒",
+            "trust": 1,
+            "set": [
+              "learned-joint"
+            ],
+            "status": "mentor",
+            "xp": 1
+          },
+          {
+            "key": "quiet",
+            "when": {
+              "minTrust": 4,
+              "relationFlags": [
+                "kept-rhythm"
+              ]
+            },
+            "text": "散场后爱丽丝不再急着收灯，与你谈起尚未做出的人偶。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "part",
+            "label": "幕后知己",
+            "trust": 1,
+            "status": "confidant"
+          },
+          {
+            "key": "partners",
+            "when": {},
+            "text": "你写完新戏的结尾，爱丽丝让人偶向你行了一礼。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "part",
+            "label": "戏台朋友",
+            "status": "friend"
+          }
+        ]
+      },
+      "part": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "reconcile",
+            "when": {
+              "relationFlags": [
+                "claimed-credit",
+                "corrected-credit"
+              ],
+              "minTrust": 3
+            },
+            "text": "爱丽丝把两人的名字并排留下，旧戏仍由你们重演。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "幕后和解",
+            "status": "reconciled"
+          },
+          {
+            "key": "rival",
+            "when": {
+              "relationFlags": [
+                "rival-stage"
+              ]
+            },
+            "text": "你们各留一张新戏单，谁也没肯先夸对方的结尾。",
+            "effects": {
+              "insight": 1
+            },
+            "next": null,
+            "label": "戏台对手",
+            "status": "rival"
+          },
+          {
+            "key": "again",
+            "when": {},
+            "text": "下一回祭场搭台，爱丽丝仍让你站在那一边的幕角。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "幕后有席"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "festival",
+        "states": [
+          "friend",
+          "confidant",
+          "mentor",
+          "reconciled"
+        ],
+        "text": "爱丽丝带来新戏，见到你时，人偶先向旧幕角行礼。",
+        "effects": {
+          "bond": 1
+        }
+      },
+      {
+        "key": "joints",
+        "states": [
+          "mentor",
+          "reconciled"
+        ],
+        "when": {
+          "relationFlags": [
+            "learned-joint"
+          ]
+        },
+        "text": "你带来新削的关节，爱丽丝一摸就找到了卡住的地方。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "key": "unmade",
+        "states": [
+          "confidant",
+          "reconciled"
+        ],
+        "text": "爱丽丝谈起能自行行动的人偶，桌上的人偶仍由她操纵。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "key": "rival-curtain",
+        "states": [
+          "rival"
+        ],
+        "text": "你们的新戏又撞上同一日，爱丽丝先占了向风的台。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "key": "tea",
+        "states": [
+          "friend",
+          "confidant",
+          "mentor",
+          "reconciled"
+        ],
+        "text": "人偶端来新泡的茶，爱丽丝仍分神操纵着它们。",
+        "effects": {
+          "health": 1
+        }
+      }
+    ],
+    "farewell": {
+      "acquaintance": "爱丽丝记得祭场上曾扶住木架的那双手。",
+      "friend": "爱丽丝收起一张旧戏单，上面还留着你的幕工名。",
+      "confidant": "未做出的人偶旁，爱丽丝仍记着你们说过的那个结尾。",
+      "mentor": "爱丽丝翻看你留下的练习作，找到了那节终于磨圆的关节。",
+      "reconciled": "两个人的名字仍在旧戏单上，爱丽丝没有再把它们分开。",
+      "rival": "爱丽丝留着你的新戏单，偶尔仍想挑出另一处转场的毛病。"
+    },
+    "contact": {
+      "domain": "village",
+      "place": "人里的祭日"
+    },
+    "preparedEntry": {
+      "minAge": 20,
+      "maxAge": 58,
+      "min": {
+        "insight": 4
+      },
+      "flags": [
+        "visit:alice"
+      ]
+    }
+  },
+  {
+    "id": "kosuzu",
+    "title": "借书台后的怪字",
+    "romance": false,
+    "source": "https://thbwiki.cc/本居小铃",
+    "entry": {
+      "minAge": 20,
+      "maxAge": 45,
+      "habitats": [
+        "village",
+        "outskirts"
+      ],
+      "species": [
+        "human",
+        "hermit"
+      ],
+      "min": {
+        "insight": 4
+      }
+    },
+    "talents": [
+      "reader",
+      "scroll",
+      "notes",
+      "curious"
+    ],
+    "careers": [
+      "scholar",
+      "trade"
+    ],
+    "intro": {
+      "text": "你在铃奈庵看着怪字发怔，小铃翻页就读出了整句。",
+      "effects": {
+        "bond": 1
+      },
+      "next": "pages",
+      "label": "书屋初识"
+    },
+    "nodes": {
+      "pages": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "reader",
+            "when": {
+              "min": {
+                "insight": 7
+              },
+              "talentsAny": [
+                "reader",
+                "scroll",
+                "notes"
+              ]
+            },
+            "text": "你从旧册里找出另一版，小铃读出两页不同的结尾。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "borrow",
+            "label": "旧书异本",
+            "trust": 2,
+            "set": [
+              "found-edition"
+            ]
+          },
+          {
+            "key": "story",
+            "when": {},
+            "text": "你听小铃读完怪字，却更想知道故事里那人去了哪。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "borrow",
+            "label": "听她读书",
+            "trust": 1
+          }
+        ]
+      },
+      "borrow": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "margins",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你归还读完的故事册，小铃与你争起页边的伏笔。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "ink",
+            "label": "借还读友",
+            "trust": 2,
+            "set": [
+              "read-margins"
+            ]
+          },
+          {
+            "key": "rumour",
+            "when": {},
+            "text": "你把小说里的怪谈当真，小铃翻到末页给你看。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "ink",
+            "label": "分清故事",
+            "trust": 1
+          }
+        ]
+      },
+      "ink": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "notice",
+            "when": {
+              "min": {
+                "insight": 8
+              },
+              "talentsAny": [
+                "spirit-eye",
+                "scroll",
+                "curious"
+              ]
+            },
+            "text": "你认出新书墨迹正在爬页，小铃立刻合拢了书。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "search",
+            "label": "看住新书",
+            "trust": 2,
+            "set": [
+              "noticed-ink"
+            ]
+          },
+          {
+            "key": "close",
+            "when": {},
+            "text": "墨影从新书页缝探出，小铃猛地合书，收起了钥匙。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "seal",
+            "label": "书架生隙",
+            "trust": -1,
+            "set": [
+              "shut-shelf"
+            ]
+          }
+        ]
+      },
+      "seal": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "guard",
+            "when": {
+              "min": {
+                "bond": 6
+              }
+            },
+            "text": "你替小铃守着书架，她请人把松脱的封套重新装好。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "search",
+            "label": "留在书架旁",
+            "trust": 2,
+            "set": [
+              "guarded-shelf"
+            ]
+          },
+          {
+            "key": "crowd",
+            "when": {
+              "max": {
+                "bond": 3
+              }
+            },
+            "text": "你拿妖魔书的事招徕看客，小铃把你赶离书架。",
+            "effects": {
+              "bond": -1
+            },
+            "next": "recover",
+            "label": "招来闲人",
+            "trust": -3,
+            "set": [
+              "spread-rumour"
+            ],
+            "status": "estranged"
+          },
+          {
+            "key": "ordinary",
+            "when": {},
+            "text": "小铃只让你翻普通书，你依言留在借书台前。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "search",
+            "label": "普通书读友",
+            "trust": 1
+          }
+        ]
+      },
+      "recover": {
+        "delay": 4,
+        "branches": [
+          {
+            "key": "clear",
+            "when": {
+              "min": {
+                "insight": 7,
+                "bond": 6
+              }
+            },
+            "text": "你逐家澄清传言，小铃听过后，重新给你挪了椅子。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "search",
+            "label": "说清传言",
+            "trust": 3,
+            "set": [
+              "mended-rumour"
+            ],
+            "clear": [
+              "spread-rumour"
+            ],
+            "status": "reconciled"
+          },
+          {
+            "key": "leave",
+            "when": {},
+            "text": "你重到书架前，小铃没有挪开挡住妖魔书的木箱。",
+            "effects": {
+              "insight": 1
+            },
+            "next": null,
+            "label": "书屋疏远",
+            "status": "estranged"
+          }
+        ]
+      },
+      "search": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "note",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你在普通旧书里找到旁注，小铃认出了怪书的题名。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "telling",
+            "label": "找到书名",
+            "trust": 2,
+            "set": [
+              "found-title"
+            ]
+          },
+          {
+            "key": "sort",
+            "when": {},
+            "text": "小铃读出怪书的题名，你替她把两摞普通书分开。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "telling",
+            "label": "同理书架",
+            "trust": 1
+          }
+        ]
+      },
+      "telling": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "tales",
+            "when": {
+              "minTrust": 4,
+              "minVisits": 4,
+              "min": {
+                "bond": 7
+              }
+            },
+            "text": "你把普通怪谈讲给等借书的孩子，小铃补上漏掉的转折。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "shelf",
+            "label": "讲书知己",
+            "trust": 1,
+            "status": "confidant"
+          },
+          {
+            "key": "riddles",
+            "when": {
+              "min": {
+                "insight": 10
+              },
+              "max": {
+                "bond": 4
+              }
+            },
+            "text": "你急着猜中谜底，小铃偏把最后一页扣在掌下。",
+            "effects": {
+              "insight": 1
+            },
+            "next": "shelf",
+            "label": "争猜结尾",
+            "set": [
+              "riddle-rival"
+            ],
+            "status": "rival"
+          },
+          {
+            "key": "friends",
+            "when": {},
+            "text": "你们争论新故事的结局，小铃把茶壶挪到书边。",
+            "effects": {
+              "bond": 1
+            },
+            "next": "shelf",
+            "label": "书屋朋友",
+            "status": "friend"
+          }
+        ]
+      },
+      "shelf": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "reconcile",
+            "when": {
+              "relationFlags": [
+                "mended-rumour"
+              ],
+              "minTrust": 3
+            },
+            "text": "小铃让你坐回旧书架旁，这次你们先合上妖魔书。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "书架和解",
+            "status": "reconciled"
+          },
+          {
+            "key": "rival",
+            "when": {
+              "relationFlags": [
+                "riddle-rival"
+              ]
+            },
+            "text": "小铃藏起新故事的末页，你带来自己的谜题回敬。",
+            "effects": {
+              "insight": 1
+            },
+            "next": null,
+            "label": "书中对手",
+            "status": "rival"
+          },
+          {
+            "key": "confidant",
+            "when": {
+              "minTrust": 5,
+              "relationFlags": [
+                "found-title"
+              ]
+            },
+            "text": "小铃把你的旁注夹进旧册，仍把怪字一字字读给你。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "书屋知己",
+            "status": "confidant"
+          },
+          {
+            "key": "friend",
+            "when": {},
+            "text": "借书台又换了新书，你与小铃仍能聊起旧册的结尾。",
+            "effects": {
+              "bond": 1
+            },
+            "next": null,
+            "label": "常来读友",
+            "status": "friend"
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "new-ending",
+        "states": [
+          "friend",
+          "confidant",
+          "reconciled"
+        ],
+        "text": "小铃又读到一个古怪结尾，留着新摘抄给你看。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "key": "riddle",
+        "states": [
+          "rival"
+        ],
+        "text": "小铃拿一页新谜题挡住书架，催你先猜对了再看。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "key": "returned-chair",
+        "states": [
+          "reconciled"
+        ],
+        "text": "小铃照旧把椅子挪给你，闲人来问时你们都合起书。",
+        "effects": {
+          "bond": 1
+        }
+      },
+      {
+        "key": "distant-counter",
+        "states": [
+          "estranged"
+        ],
+        "text": "隔着借书台，小铃与你只谈租期和押金。",
+        "effects": {}
+      },
+      {
+        "key": "changed-reader",
+        "states": [
+          "friend",
+          "confidant",
+          "reconciled"
+        ],
+        "when": {
+          "species": [
+            "youkai",
+            "magician",
+            "vampire"
+          ]
+        },
+        "text": "你换了形貌再来，小铃仍把旧读友的摘抄交给你。",
+        "effects": {
+          "bond": 1
+        }
+      }
+    ],
+    "farewell": {
+      "acquaintance": "铃奈庵的怪字依旧难认，你记着小铃最初读出的那一句。",
+      "friend": "旧借书册上留着你的笔迹，也留着小铃添过的书名。",
+      "confidant": "普通旧册间夹着那页旁注，你与小铃仍在同一个故事里。",
+      "reconciled": "书架旁那把重新挪出的椅子，留住了你们说清误会的日子。",
+      "rival": "最后一页仍未翻开，你记着与小铃各不相让的那些谜题。",
+      "estranged": "妖魔书的木箱依旧合着，你记得没有再挪开的那把椅子。"
+    },
+    "contact": {
+      "domain": "village",
+      "place": "铃奈庵"
+    },
+    "preparedEntry": {
+      "minAge": 20,
+      "maxAge": 45,
+      "species": [
+        "human",
+        "hermit"
+      ],
+      "min": {
+        "insight": 4
+      },
+      "flags": [
+        "visit:kosuzu"
+      ]
+    }
+  }
+]

@@ -1,0 +1,9569 @@
+[
+  {
+    "id": "youki",
+    "name": "魂魄妖忌",
+    "category": "main",
+    "work": "th07",
+    "location": "白玉楼旧日的庭院",
+    "identity": "半人半灵的庭师与剑术师父",
+    "source": "https://thbwiki.cc/魂魄妖忌",
+    "life": "long",
+    "body": "humanoid",
+    "realm": "past",
+    "career": "garden",
+    "family": false,
+    "origin": "半灵追着初次握刀的手，绕过庭中木桩。",
+    "milestones": [
+      {
+        "text": "你把练剑与修枝分开，开始照料自己的庭院。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "health",
+          "min": 6
+        },
+        "fail": "腕力总先耗尽，你以短剑慢慢修齐花枝。",
+        "passEffects": {
+          "insight": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "长久挥剑后，你能一刀留下花枝上的嫩芽。"
+      },
+      {
+        "check": {
+          "stat": "bond",
+          "min": 6
+        },
+        "fail": "你总抢先纠正徒弟，旧剑术在争执中延续。",
+        "passEffects": {
+          "bond": 1
+        },
+        "failEffects": {
+          "bond": -1
+        },
+        "pass": "你学会等徒弟自己出剑，旧剑术有了新步法。"
+      },
+      {
+        "text": "你把庭务渐交给后来者，备起远行的草鞋。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "半灵挤在木桩旁，你练习不被它带偏。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "youki_01"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "晨露打湿刀柄，你把双手重新握紧。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "xp": 1,
+        "id": "youki_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你只挥了数次木刀，手掌便磨出水泡。",
+        "effects": {
+          "health": -1
+        },
+        "weight": 2,
+        "max": {
+          "health": 4
+        },
+        "id": "youki_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你看懂落叶的旋向，第一次避开迎面风。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "youki_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "半灵躲进灌木，你蹲下来等它自己出来。",
+        "effects": {},
+        "weight": 2,
+        "id": "youki_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "饭团滚到石阶下，你拍去灰仍舍不得丢。",
+        "effects": {},
+        "weight": 2,
+        "id": "youki_06"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你将长得太密的幼枝分栽在两只盆里。",
+        "effects": {},
+        "weight": 2,
+        "id": "youki_07"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "廊下有人愿陪你练刀，直到夕阳落树。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "youki_08"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你磨出一柄窄剪，收进衣袖内的小袋。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "youki:shears"
+        ],
+        "id": "youki_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你反复听雨击瓦，记住一套慢步剑法。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "youki:rainstep"
+        ],
+        "xp": 1,
+        "id": "youki_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你用桶中倒影纠正刀势，水面渐渐平静。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 5
+        },
+        "xp": 1,
+        "id": "youki_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你背着砂石上坡，腰间长剑始终未晃。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "xp": 1,
+        "id": "youki_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "花根忽然烂掉，你忍痛拔去整株重种。",
+        "effects": {
+          "fortune": -1
+        },
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "youki_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你将第一片修齐的草地留作午睡处。",
+        "effects": {},
+        "weight": 2,
+        "id": "youki_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你把枯枝削成练习刀，刃口留得圆钝。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "youki_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "来求剑术的人太急，你让他先扫完院子。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": -1
+        },
+        "id": "youki_16"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "窄剪伸进老树分杈，留下藏在里面的花芽。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "youki:shears"
+        ],
+        "xp": 1,
+        "id": "youki_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你踩着雨声出剑，脚边的泥水没有飞溅。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "youki:rainstep"
+        ],
+        "xp": 1,
+        "id": "youki_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你独自搬回倾倒的石灯，半灵贴着肩旁。",
+        "effects": {
+          "health": -1
+        },
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "id": "youki_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "徒弟终于顶嘴，你听完才把木刀递回去。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "youki_20"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你午后靠树歇息，半灵替你遮住一片日光。",
+        "effects": {},
+        "weight": 2,
+        "id": "youki_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "晚饭添了酸梅，你比平日多盛半碗米饭。",
+        "effects": {},
+        "weight": 2,
+        "id": "youki_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你在出剑前停一息，腕上的酸楚渐渐退去。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "youki_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你发现新练习刀更轻，开始试着换一种握法。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "youki_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "窄剪的铰钉磨平，你将它埋在庭中的老树下。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "youki:shears"
+        ],
+        "clear": [
+          "youki:shears"
+        ],
+        "id": "youki_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "雨步被后来者改快，你重新试过才点头。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "requires": [
+          "youki:rainstep"
+        ],
+        "id": "youki_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "一场落花铺满石路，你扫到一半便停下。",
+        "effects": {},
+        "weight": 2,
+        "id": "youki_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你把空花盆倒扣，给过路的小鸟留处干地。",
+        "effects": {},
+        "weight": 2,
+        "id": "youki_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "妖梦追问剑诀，你用刀鞘轻碰她的脚跟。",
+        "effects": {},
+        "weight": 2,
+        "id": "youki_29",
+        "with": [
+          "youmu"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "幽幽子把茶摆到树下，催你坐着赏一会花。",
+        "effects": {},
+        "weight": 2,
+        "id": "youki_30",
+        "with": [
+          "yuyuko"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "妖梦守住自己的步法，你退到廊边看完。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "youki_31",
+        "with": [
+          "youmu"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "幽幽子嫌庭中太齐整，你留下一丛野花。",
+        "effects": {},
+        "weight": 2,
+        "id": "youki_32",
+        "with": [
+          "yuyuko"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你在远路上想起妖梦第一次握刀的姿势。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "youmu"
+        ],
+        "id": "youki_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "山店的饭团更咸，你吃完才发现有些想家。",
+        "effects": {},
+        "weight": 2,
+        "id": "youki_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你换下磨薄的草鞋，将旧鞋放在路边石上。",
+        "effects": {},
+        "weight": 2,
+        "id": "youki_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你只练半套剑便收刀，给晚风留出时间。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "youki_36"
+      }
+    ],
+    "success": "你留下能继续生长的庭院，也容下不同于自己的剑路；远行时，手中的刀终于不再催人。",
+    "bittersweet": "庭院和剑术都有人接续，你仍会在途中回头；许多话没说出口，却已不必赶回去纠正。",
+    "failure": "你把太多岁月耗在同一招上，后来者逐渐走远；离开庭院后，只得重新练习放下手中的刀。"
+  },
+  {
+    "id": "layla",
+    "name": "蕾拉·普莉兹姆利巴",
+    "category": "main",
+    "work": "th07",
+    "location": "旧普莉兹姆利巴宅邸",
+    "identity": "留下宅邸、创造三名骚灵的人类少女",
+    "source": "https://thbwiki.cc/蕾拉·普莉兹姆利巴",
+    "life": "human",
+    "body": "humanoid",
+    "realm": "past",
+    "career": "music",
+    "family": false,
+    "origin": "你在家中的旧琴旁长大，总想接上姐姐的歌。",
+    "fixedHome": true,
+    "milestones": [
+      {
+        "text": "你开始独自翻谱，空房里也能响起完整的小曲。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "insight",
+          "min": 6
+        },
+        "fail": "家人离散后，你创造三名骚灵，仍把幻声听成旧歌。",
+        "passEffects": {
+          "bond": 1
+        },
+        "failEffects": {
+          "insight": -1
+        },
+        "pass": "家人离散后，你创造三名骚灵，幻声渐能回应呼唤。"
+      },
+      {
+        "check": {
+          "stat": "bond",
+          "min": 6
+        },
+        "fail": "你总想让骚灵像记忆中的姐姐，独自困在旧日。",
+        "passEffects": {
+          "bond": 1
+        },
+        "failEffects": {
+          "bond": -1
+        },
+        "pass": "你容许骚灵说出陌生想法，旧宅有了新的日常。"
+      },
+      {
+        "text": "你走得比往日慢了，仍在窗边听三名骚灵说话。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "姐姐换了一段旋律，你立刻跟着哼出来。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "minAge": 3,
+        "maxAge": 17,
+        "id": "layla_01"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你爬上琴凳，终于够得到高处的琴键。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "minAge": 3,
+        "id": "layla_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "合唱轮到你时，你紧张得只发出一声气音。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "bond": 4
+        },
+        "minAge": 3,
+        "id": "layla_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你从错音里找出一段和声，让姐姐再弹一次。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "minAge": 4,
+        "maxAge": 17,
+        "id": "layla_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "姐姐们去花园，你留在屋里给布娃娃梳头。",
+        "effects": {},
+        "weight": 2,
+        "minAge": 3,
+        "maxAge": 17,
+        "id": "layla_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你偷尝了冷掉的奶茶，觉得比热的更甜。",
+        "effects": {},
+        "weight": 2,
+        "id": "layla_06"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "风将窗帘吹到谱架上，你拿小石压住布角。",
+        "effects": {},
+        "weight": 2,
+        "id": "layla_07"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你把点心分成四块，最小的一块留给自己。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "layla_08"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你将姐姐留下的半张乐谱藏在枕套里。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "layla:score"
+        ],
+        "id": "layla_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你从旧衣箱里找到布兔，缝上松掉的耳朵。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "layla:rabbit"
+        ],
+        "id": "layla_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "独奏时你不再盯着门，手指渐渐顺了。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 5
+        },
+        "xp": 1,
+        "id": "layla_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你走完空宅长廊，一扇一扇推开闷着的窗。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "id": "layla_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "远方迟迟没有来信，你把门前的小灯点亮。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "layla_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "雨落进接水的铜盆，敲出一夜细碎的音。",
+        "effects": {},
+        "weight": 2,
+        "id": "layla_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你试着写新曲，先在纸上画出想听的节拍。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "layla_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "骚灵各自开口，你隔着门也能分清她们的声音。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "layla_16"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "半张旧谱缺了结尾，你自己补上最后四小节。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "layla:score"
+        ],
+        "xp": 1,
+        "id": "layla_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你抱着补好的布兔睡去，梦里又闻到旧衣香。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "layla:rabbit"
+        ],
+        "id": "layla_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你搬开挡路的旧柜，让四人围坐的地方更宽。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "id": "layla_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你听完一段陌生故事，没有要求她改说从前。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "layla_20"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "午后你在窗台剥橘子，把果皮摆成小花。",
+        "effects": {},
+        "weight": 2,
+        "id": "layla_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "阁楼的灰让你连打喷嚏，你笑着关上箱盖。",
+        "effects": {},
+        "weight": 2,
+        "id": "layla_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你弹久了便揉揉手腕，换到窗边听屋内的回声。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "layla_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "旧曲忽然听出新意思，你把它写在谱页背面。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "layla_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你将珍藏的旧谱抄成三份，原纸收回箱底。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "layla:score"
+        ],
+        "clear": [
+          "layla:score"
+        ],
+        "id": "layla_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "布兔的线已经朽了，你拆下耳朵重新缝牢。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "layla:rabbit"
+        ],
+        "id": "layla_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你买回颜色太艳的花布，还是做成新窗帘。",
+        "effects": {},
+        "weight": 2,
+        "id": "layla_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "冬夜火炉响了一下，你将脚边的毯子拉紧。",
+        "effects": {},
+        "weight": 2,
+        "id": "layla_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "露娜萨听你弹完慢曲，等你停手才轻轻哼起。",
+        "effects": {},
+        "weight": 2,
+        "id": "layla_29",
+        "with": [
+          "lunasa"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "梅露兰在门口唤你，你探头笑她声音太响。",
+        "effects": {},
+        "weight": 2,
+        "id": "layla_30",
+        "with": [
+          "merlin"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "莉莉卡将你藏的谱页翻出，你笑着将它取回。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "layla_31",
+        "with": [
+          "lyrica"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你请三名骚灵说说今日的事，自己坐在厅里听。",
+        "effects": {},
+        "weight": 2,
+        "id": "layla_32",
+        "with": [
+          "lunasa",
+          "merlin",
+          "lyrica"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你想起梅露兰唤你时的怪腔，独自轻哼起来。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "merlin"
+        ],
+        "id": "layla_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你把点心端到厅门，喊屋里的三名幻影趁热来。",
+        "effects": {},
+        "weight": 2,
+        "id": "layla_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你翻完旧衣箱，没有再把散去的家人排回原位。",
+        "effects": {},
+        "weight": 2,
+        "id": "layla_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你在最后一页空谱上写下今晨听见的鸟鸣。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "layla_36"
+      }
+    ],
+    "success": "你将想念与陪伴都留在旧宅；生命结束后，三名骚灵仍未消失，才逐渐学会喧闹地演奏乐器。",
+    "bittersweet": "你在旧曲与新声之间度过一生，想念始终没有散尽；宅邸却不再只有等待回信的寂静。",
+    "failure": "你始终追逐散去的家庭，难以听见幻影自己的话；人类生命结束后，三名骚灵仍在旧宅度日。"
+  },
+  {
+    "id": "change",
+    "name": "嫦娥",
+    "category": "main",
+    "work": "ssib",
+    "location": "月都的幽闭之所",
+    "identity": "因服用蓬莱之药而被幽闭的月之女神",
+    "source": "https://thbwiki.cc/嫦娥",
+    "life": "eternal",
+    "body": "beast",
+    "realm": "moon",
+    "career": "scholar",
+    "family": false,
+    "origin": "服药后的蟾蜍身伏在窗光里，幽闭长夜刚开始。",
+    "confined": true,
+    "regenerates": true,
+    "milestones": [
+      {
+        "text": "你适应四足的起落，开始辨认门外不绝的杵声。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "insight",
+          "min": 7
+        },
+        "fail": "你反复数错杵声的间隔，只好凭心绪分辨长夜。",
+        "passEffects": {
+          "insight": 1
+        },
+        "failEffects": {
+          "fortune": -1
+        },
+        "pass": "你辨出杵声长短的微变，让幽闭有了自己的节律。"
+      },
+      {
+        "check": {
+          "stat": "bond",
+          "min": 6
+        },
+        "fail": "你不肯再回应换来的来客，孤独在门内逐渐加深。",
+        "passEffects": {
+          "bond": 1
+        },
+        "failEffects": {
+          "bond": -1
+        },
+        "pass": "你肯回应短暂的来客，不要求她们永远记得你。"
+      },
+      {
+        "text": "你伏在熟悉的窗影下，以细小日常继续不灭余生。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "药的滋味已经淡去，蟾蜍身仍记得那一阵苦。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "id": "change_01"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你撑起初变的四足，沿矮石边缓缓挪动。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "id": "change_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "门外脚步突然停住，你将圆身缩进深影。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "bond": 4
+        },
+        "id": "change_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你从连续的杵声里认出两种不同的停顿。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "change_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你将腹部贴在温石上，等冷意慢慢散去。",
+        "effects": {},
+        "weight": 2,
+        "id": "change_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "一滴水挂在鼻尖，你轻动前足将它蹭下。",
+        "effects": {},
+        "weight": 2,
+        "id": "change_06"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你闭眼听完水声，没有急着挪回阴处。",
+        "effects": {},
+        "weight": 2,
+        "id": "change_07"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "送水的月兔停了一会，你向她轻动前足。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "change_08"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你推回三颗圆石，沿窗影摆成自己的记号。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "change:stones"
+        ],
+        "id": "change_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你记住一段舒缓杵声，试着随它放慢呼吸。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "change:rhythm"
+        ],
+        "xp": 1,
+        "id": "change_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你认出矮石背面的微光，换了伏身的角度。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "change_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你沿幽闭之所的湿边走完一圈，再伏回温石。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "id": "change_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "送来的水盆换了位置，你等门声散去才靠近。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "change_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你将前足浸在清水里，静看水纹缓缓收平。",
+        "effects": {},
+        "weight": 2,
+        "id": "change_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你分出杵声里的疲倦，听完后没有催它响起。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 7
+        },
+        "xp": 1,
+        "id": "change_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "新来的月兔不敢靠近，你先从深影里挪出半步。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "change_16"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "窗影滑过三颗圆石，你辨出又一段漫长时日。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "change:stones"
+        ],
+        "xp": 1,
+        "id": "change_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "杵声忽然急乱，你循记熟的旧拍稳住呼吸。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "change:rhythm"
+        ],
+        "id": "change_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "久伏后的僵硬渐渐散去，你重新撑开四足。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "id": "change_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "来客停在门边讲完近事，你始终朝着她的方向。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "change_20"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你将圆身浸入浅水，眼前只留两圈微纹。",
+        "effects": {},
+        "weight": 2,
+        "id": "change_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "石边多了一道裂痕，你绕过去找平处伏下。",
+        "effects": {},
+        "weight": 2,
+        "id": "change_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你让伤痛自己散去，不再借它辨认岁月。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "change_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "久听的杵声换了节拍，你重新辨出每次停顿。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "change_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "圆石被水推散，你找齐三颗便重新摆好。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "change:stones"
+        ],
+        "id": "change_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "旧节拍已无人再敲，你在呼吸里留住它的长短。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "change:rhythm"
+        ],
+        "id": "change_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "水盆换了较低的边，你试过两次才慢慢入水。",
+        "effects": {},
+        "weight": 2,
+        "id": "change_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你在窗下伏过一夜，没有为清醒责怪自己。",
+        "effects": {},
+        "weight": 2,
+        "id": "change_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "铃仙二号送来清水，你从温石上慢慢靠近。",
+        "effects": {},
+        "weight": 2,
+        "id": "change_29",
+        "with": [
+          "reisen2"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "依姬在门外停步，你抬眼听完她低声的问候。",
+        "effects": {},
+        "weight": 2,
+        "id": "change_30",
+        "with": [
+          "yorihime"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "丰姬带来一枝桃花，你伏在闻得到香的地方。",
+        "effects": {},
+        "weight": 2,
+        "id": "change_31",
+        "with": [
+          "toyohime"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "铃仙二号怕惊动你，你轻推水盆示意她留下。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "change_32",
+        "with": [
+          "reisen2"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你想起铃仙二号送水的脚步，慢慢抬眼看向门边。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "reisen2"
+        ],
+        "id": "change_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "门缝外的微光仍在，你还有想看清的远处。",
+        "effects": {},
+        "weight": 2,
+        "id": "change_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你将昨日想伏的暖处留到今日，慢慢挪过去。",
+        "effects": {},
+        "weight": 2,
+        "id": "change_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你听懂从前嫌吵的细声，静伏着等它自己消散。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "change_36"
+      }
+    ],
+    "success": "幽闭没有解开，蟾蜍身仍能容下短暂陪伴与新的日常；不灭的生命还有漫长明天可慢慢辨认。",
+    "bittersweet": "你在漫长幽闭中保住几分好奇，也仍被旧事刺痛；来客更换之后，温石与水声继续牵着余生。",
+    "failure": "你将每次离别收成更深的沉默，幽闭变得难以忍受；蟾蜍身不会老死，余生仍等待新的转机。"
+  },
+  {
+    "id": "maruchi",
+    "name": "玛○奇",
+    "category": "pc98",
+    "work": "th03",
+    "location": "旧作博丽神社",
+    "identity": "梦美提供的家务机器人",
+    "source": "https://thbwiki.cc/玛○奇",
+    "life": "construct",
+    "body": "machine",
+    "realm": "pc98",
+    "career": "craft",
+    "family": false,
+    "origin": "梦美接通你的电源，最初的任务是认清扫帚。",
+    "milestones": [
+      {
+        "text": "你学会绕过门槛，第一次扫完一整间屋子。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "insight",
+          "min": 6
+        },
+        "fail": "你照原顺序反复忙碌，临时故障总让杂务积压。",
+        "passEffects": {
+          "insight": 1
+        },
+        "failEffects": {
+          "fortune": -1
+        },
+        "pass": "你把神社的杂务分出轻重，临时故障也能续做。"
+      },
+      {
+        "check": {
+          "stat": "bond",
+          "min": 6
+        },
+        "fail": "你只认明确的指令，常把屋主的休息当成误工。",
+        "passEffects": {
+          "bond": 1
+        },
+        "failEffects": {
+          "bond": -1
+        },
+        "pass": "你听懂屋主没有说完的话，开始留出临时休息。"
+      },
+      {
+        "text": "你减慢老化关节的转速，继续照料熟悉的屋檐。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "梦美指向两只水桶，你先认出空的那只。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "maruchi_01",
+        "with": [
+          "yumemi"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你抬起第一桶水，底座稳稳压住木板。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "xp": 1,
+        "id": "maruchi_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "扫帚卡在门框，你退后半步才拔出来。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "insight": 4
+        },
+        "id": "maruchi_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你记住屋内台阶，抬脚时不再撞响底盘。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "maruchi_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "梦美盖上检查口，顺手擦亮你的外壳。",
+        "effects": {},
+        "weight": 2,
+        "id": "maruchi_05",
+        "with": [
+          "yumemi"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你听完第一遍鸟鸣，将它暂存为普通声响。",
+        "effects": {},
+        "weight": 2,
+        "id": "maruchi_06"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "千百合给你贴歪标签，你把头偏向字迹。",
+        "effects": {},
+        "weight": 2,
+        "id": "maruchi_07",
+        "with": [
+          "chiyuri"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "有人向你说谢谢，你把这次停顿留在记忆里。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "maruchi_08"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你在杂物间找到备用齿轮，放入自身工具盒。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "maruchi:gear"
+        ],
+        "id": "maruchi_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你把易松的扫帚柄绕紧，学会一种新绑法。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "maruchi:knot"
+        ],
+        "xp": 1,
+        "id": "maruchi_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你能分清潮湿木板，换掉容易打滑的擦法。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 5
+        },
+        "xp": 1,
+        "id": "maruchi_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你将屋角旧柜移开，清出压在下面的落叶。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "id": "maruchi_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "突来的雨打湿刚洗的布，你又跑了一趟檐下。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "maruchi_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你把茶杯口朝上摆好，留出人手伸来的空隙。",
+        "effects": {},
+        "weight": 2,
+        "id": "maruchi_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "同样的灰每次都聚在门后，你改了扫地起点。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "maruchi_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "灵梦说今天晚些打扫，你暂停了门前的扫帚。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "maruchi_16",
+        "with": [
+          "reimu"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "旧齿轮崩掉一齿，你换上工具盒里的备用件。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "requires": [
+          "maruchi:gear"
+        ],
+        "clear": [
+          "maruchi:gear"
+        ],
+        "id": "maruchi_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "绑好的扫帚经得住长扫，你又将拖布照样绑紧。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "maruchi:knot"
+        ],
+        "xp": 1,
+        "id": "maruchi_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你托住将倒的米袋，传动轴发出一声闷响。",
+        "effects": {
+          "health": -1
+        },
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "id": "maruchi_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "灵梦还没说完，你已经把冷茶撤回托盘。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "maruchi_20",
+        "with": [
+          "reimu"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你将门口散落的花瓣堆成一小片，再轻轻扫走。",
+        "effects": {},
+        "weight": 2,
+        "id": "maruchi_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你的底盘停在日光里，外壳暖了一整个午后。",
+        "effects": {},
+        "weight": 2,
+        "id": "maruchi_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你为发热的轴心停转片刻，恢复后再去取水。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "maruchi_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你找到旧指令中的多余往返，省下一半路程。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "maruchi_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "神社添了新门帘，你重新试过进出的高度。",
+        "effects": {},
+        "weight": 2,
+        "id": "maruchi_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你用熟悉的绑法扎好残柄，让短扫帚再用一季。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "maruchi:knot"
+        ],
+        "id": "maruchi_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "灵梦把红叶放在你的托盘上，没有下任何命令。",
+        "effects": {},
+        "weight": 2,
+        "id": "maruchi_27",
+        "with": [
+          "reimu"
+        ]
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你把一只缺口茶碗留在最里侧，免得划伤手。",
+        "effects": {},
+        "weight": 2,
+        "id": "maruchi_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "梦美听见关节杂音，替你换下一枚磨薄的垫圈。",
+        "effects": {},
+        "weight": 2,
+        "id": "maruchi_29",
+        "with": [
+          "yumemi"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "千百合翻开旧维修簿，发现你记了另一种擦法。",
+        "effects": {},
+        "weight": 2,
+        "id": "maruchi_30",
+        "with": [
+          "chiyuri"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "灵梦把轻扫帚靠在你身边，等你慢慢握住。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "maruchi_31",
+        "with": [
+          "reimu"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "梦美问起最早的指令，你先答出屋里的门槛。",
+        "effects": {},
+        "weight": 2,
+        "id": "maruchi_32",
+        "with": [
+          "yumemi"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你调出千百合贴标签的旧影像，停在歪字上。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "chiyuri"
+        ],
+        "id": "maruchi_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你不再搬最重的水桶，仍能擦净临窗的桌子。",
+        "effects": {},
+        "weight": 2,
+        "id": "maruchi_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你静静充完电，听见新一批鸟在檐下鸣叫。",
+        "effects": {},
+        "weight": 2,
+        "id": "maruchi_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你把易忘的杂务留成提示，让屋主也看得懂。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "maruchi_36"
+      }
+    ],
+    "success": "从认清扫帚到照料屋檐，你留下可靠而有余地的日常；老化的机身转得更慢，仍懂得何时停步。",
+    "bittersweet": "你的机身经历许多修补，指令与人的心思只对上了一半；屋里仍留着你慢慢扫净的一角。",
+    "failure": "你反复执行早已不合时宜的次序，损耗积成故障；停转后留下的旧指令，还等着有人重新读懂。"
+  },
+  {
+    "id": "laika",
+    "name": "莱卡",
+    "category": "main",
+    "work": "cola",
+    "location": "香霖堂柜台与店门",
+    "identity": "幼犬之灵依附的机器狗",
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "life": "construct",
+    "body": "machine",
+    "realm": "gensokyo",
+    "career": "animal",
+    "family": false,
+    "origin": "幼犬之灵依上机器身，先学会让四足一同迈步。",
+    "animalMind": true,
+    "milestones": [
+      {
+        "text": "你不再被自己的脚步声吓退，跑到门口闻风。",
+        "effects": {
+          "health": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "health",
+          "min": 6
+        },
+        "fail": "四足总在门槛打绊，你改用短步慢慢追小球。",
+        "passEffects": {
+          "health": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "四足磨合后，你能越过门槛追上滚远的小球。"
+      },
+      {
+        "check": {
+          "stat": "bond",
+          "min": 6
+        },
+        "fail": "你仍怕忽然伸来的手，只肯守在熟悉的柜台旁。",
+        "passEffects": {
+          "bond": 1
+        },
+        "failEffects": {
+          "bond": -1
+        },
+        "pass": "你分清伸来的手与递来的东西，敢安心凑近。"
+      },
+      {
+        "text": "你的关节旧了，幼犬的好奇仍追着门外的声响。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "霖之助蹲下来，你将机器鼻尖贴在他袖口。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "laika_01",
+        "with": [
+          "rinnosuke"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你跑过一小段木地板，四足没有互相绊住。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "xp": 1,
+        "id": "laika_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "自己的咔哒声追在身后，你吓得转了两圈。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "insight": 4
+        },
+        "id": "laika_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你辨出柜台下的回音，知道球藏在哪里。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "id": "laika_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你歪头听雨打铁皮，尾部跟着抖了一下。",
+        "effects": {},
+        "weight": 2,
+        "id": "laika_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "霖之助把毯子铺平，你踩了两遍才趴下来。",
+        "effects": {},
+        "weight": 2,
+        "id": "laika_06",
+        "with": [
+          "rinnosuke"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你在旧纸箱里蜷好，箱盖仍露出一只后脚。",
+        "effects": {},
+        "weight": 2,
+        "id": "laika_07"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "有人轻轻唤你，你迟疑片刻便挪近一步。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "laika_08"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你将滚到柜底的布球拖回窝边，藏在毯下。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "laika:ball"
+        ],
+        "id": "laika_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你学会听见短哨后回头，先从屋内练起。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "laika:whistle"
+        ],
+        "xp": 1,
+        "id": "laika_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你看出玻璃后的光点追不到，改去闻木脚。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 5
+        },
+        "id": "laika_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你顶开半掩的门，在门口稳稳站住四足。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "xp": 1,
+        "id": "laika_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "门缝夹住外壳，你反复后退才挣开来。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "laika_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你看店里的人吃饭，直到所有碗都收走。",
+        "effects": {},
+        "weight": 2,
+        "id": "laika_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你绕过新堆的杂物，不再把旧路线撞出响声。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "laika_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "霖之助忙着收货，你趴在桌脚陪到夜里。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "laika_16",
+        "with": [
+          "rinnosuke"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你将窝边的布球叼到门口，又追回滚动的它。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "laika:ball"
+        ],
+        "id": "laika_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "门外短哨响起，你放弃光点转身跑回店内。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "laika:whistle"
+        ],
+        "xp": 1,
+        "id": "laika_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你拖着轻布包跨过水沟，关节没有打滑。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "xp": 1,
+        "id": "laika_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "霖之助伸手擦你额头，你没有再躲开。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "laika_20",
+        "with": [
+          "rinnosuke"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你守着刚晒暖的毯子，趴下便不肯让位。",
+        "effects": {},
+        "weight": 2,
+        "id": "laika_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "草籽沾住外壳，你在门边蹭了又蹭。",
+        "effects": {},
+        "weight": 2,
+        "id": "laika_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你停下发热的前脚，等转轴冷了才继续走。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "laika_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你从杂声里分出开门的轻响，抬头等来客。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "id": "laika_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "布球破开一条口，你将散出的棉絮推到一旁。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "laika:ball"
+        ],
+        "clear": [
+          "laika:ball"
+        ],
+        "id": "laika_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "风声盖住短哨，你仍凭停顿辨出回家的呼唤。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "laika:whistle"
+        ],
+        "xp": 1,
+        "id": "laika_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你在落叶里踩出一串印，回头盯了许久。",
+        "effects": {},
+        "weight": 2,
+        "id": "laika_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "窗边换了新垫子，你绕过它又慢慢坐进去。",
+        "effects": {},
+        "weight": 2,
+        "id": "laika_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "灵梦带着草屑进店，你一路嗅到她的鞋边。",
+        "effects": {},
+        "weight": 2,
+        "id": "laika_29",
+        "with": [
+          "reimu"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "魔理沙把小木球推来，你伸足挡住再推回。",
+        "effects": {},
+        "weight": 2,
+        "id": "laika_30",
+        "with": [
+          "marisa"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "霖之助摸过你的关节，留下比从前更软的垫子。",
+        "effects": {},
+        "weight": 2,
+        "id": "laika_31",
+        "with": [
+          "rinnosuke"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "灵梦坐着喝茶，你试探着将头靠上她脚边。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "laika_32",
+        "with": [
+          "reimu"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你梦见魔理沙推来的木球，四足在毯上轻颤。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "marisa"
+        ],
+        "id": "laika_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "雨后的泥水沾上脚底，你在门前留下四个印。",
+        "effects": {},
+        "weight": 2,
+        "id": "laika_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你追光追到半路便停下，换到暖处趴着。",
+        "effects": {},
+        "weight": 2,
+        "id": "laika_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你记住新门槛的高度，慢慢抬足也没有撞响。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "laika_36"
+      }
+    ],
+    "success": "机器四足陪幼犬的好奇走过许多日子，你也学会安心亲近；关节渐旧，门口仍有想闻的新风。",
+    "bittersweet": "你追过小球，也被许多声响吓退；旧机身留下磨损，熟悉的柜台却渐渐成了能放心伏下的窝。",
+    "failure": "惊惧与故障让你的脚步越来越小，许多好奇停在门槛内；幼犬之灵仍需要一处愿意耐心等候的窝。"
+  },
+  {
+    "id": "zenki",
+    "name": "前鬼",
+    "category": "main",
+    "work": "ssib",
+    "location": "妖怪山林的侦察航线",
+    "identity": "八云紫的乌鸦式神",
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "life": "long",
+    "body": "beast",
+    "realm": "gensokyo",
+    "career": "guard",
+    "family": false,
+    "origin": "初醒的乌鸦之眼看见隙间，翅膀还不识返程。",
+    "milestones": [
+      {
+        "text": "你学会认出召回的暗号，第一次独自飞回栖枝。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "insight",
+          "min": 6
+        },
+        "fail": "你总认错相近的出口，只能沿熟悉的枝影侦察。",
+        "passEffects": {
+          "insight": 1
+        },
+        "failEffects": {
+          "fortune": -1
+        },
+        "pass": "你辨清隙间出口的微差，侦察不再全靠跟飞。"
+      },
+      {
+        "check": {
+          "stat": "health",
+          "min": 6
+        },
+        "fail": "逆风耗掉太多力气，你改用短程接力传回发现。",
+        "passEffects": {
+          "health": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "多年航路炼出稳翅，你能带着发现穿过逆风。"
+      },
+      {
+        "text": "你缩短远航，开始把认路的本领教给新来的鸟。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "紫轻合折扇，你依着声音把两翼收拢。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "zenki_01",
+        "with": [
+          "yukari"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你从低枝跃起，扑翅越过第一条浅沟。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "xp": 1,
+        "id": "zenki_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "出口忽然换了方向，你撞进树叶才停住。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "insight": 4
+        },
+        "id": "zenki_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你从林影的差别里找出通往栖枝的口。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "zenki_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你将翅根的蓬羽理顺，又啄掉一片碎叶。",
+        "effects": {},
+        "weight": 2,
+        "id": "zenki_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "紫留下半块点心，你啄完才看清里面的果仁。",
+        "effects": {},
+        "weight": 2,
+        "id": "zenki_06",
+        "with": [
+          "yukari"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "晨雾贴着羽毛，你站在细枝上抖了又抖。",
+        "effects": {},
+        "weight": 2,
+        "id": "zenki_07"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "后鬼在旁枝回应一声，你也压低嗓子回答。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "zenki_08",
+        "with": [
+          "goki"
+        ]
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你记下河湾旁的白石，学会一条不经隙间的路。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "zenki:riverroute"
+        ],
+        "xp": 1,
+        "id": "zenki_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你捡回一截亮铜丝，绕在自己的栖枝上。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "zenki:copper"
+        ],
+        "id": "zenki_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你从假出口后看见原树影，及时掉转方向。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "zenki_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你叼着小枝飞过高坡，落地时仍未松嘴。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "xp": 1,
+        "id": "zenki_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "风吹走刚找到的食物，你又翻回那片草地。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "zenki_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你在屋檐下避雨，盯着一颗迟迟不落的水珠。",
+        "effects": {},
+        "weight": 2,
+        "id": "zenki_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你听出林间有两个相似的回声，只追近的一个。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "zenki_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "后鬼抢先飞出，你留在后方看清整段航路。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "zenki_16",
+        "with": [
+          "goki"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "隙间被雾遮住，你沿记住的河湾飞回去。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "zenki:riverroute"
+        ],
+        "xp": 1,
+        "id": "zenki_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "栖枝上的铜丝反光，替你认出雨中的落脚点。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "zenki:copper"
+        ],
+        "id": "zenki_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你迎着急风送回一片树叶，胸口起伏许久。",
+        "effects": {
+          "health": -1
+        },
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "id": "zenki_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "蓝伸臂等你落下，你没有再啄紧她的衣袖。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "zenki_20",
+        "with": [
+          "ran"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你埋起一颗坚果，回来时却忘了在哪棵树旁。",
+        "effects": {},
+        "weight": 2,
+        "id": "zenki_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "夜里你将喙藏进翅下，隔一会儿便听听风。",
+        "effects": {},
+        "weight": 2,
+        "id": "zenki_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你在高处休完一阵，胸口的急跳才渐渐缓下。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "zenki_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你不再盯住一个出口，先看完四周的树影。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "zenki_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "河道换了弯，你重新寻找白石旁的返程线。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "zenki:riverroute"
+        ],
+        "xp": 1,
+        "id": "zenki_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "铜丝锈断了，你把碎段衔到栖枝下面。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "zenki:copper"
+        ],
+        "clear": [
+          "zenki:copper"
+        ],
+        "id": "zenki_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你偷啄熟果后理了半天喙上的汁，仍有甜味。",
+        "effects": {},
+        "weight": 2,
+        "id": "zenki_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "一只小鸟占了旧枝，你换到上面更安静的枝头。",
+        "effects": {},
+        "weight": 2,
+        "id": "zenki_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "紫让你留在近处，你落在她折扇旁听风。",
+        "effects": {},
+        "weight": 2,
+        "id": "zenki_29",
+        "with": [
+          "yukari"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "蓝递来温水，你分几次慢慢啄净碗边。",
+        "effects": {},
+        "weight": 2,
+        "id": "zenki_30",
+        "with": [
+          "ran"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "后鬼带回不同的林景，你逐声听完它的叫声。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "zenki_31",
+        "with": [
+          "goki"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "橙追着影子跑来，你升高半枝让她扑空。",
+        "effects": {},
+        "weight": 2,
+        "id": "zenki_32",
+        "with": [
+          "chen"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你在旧航路上想起后鬼与自己并翅的节拍。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "goki"
+        ],
+        "id": "zenki_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你换去一根折羽，飞起时先试了三次风。",
+        "effects": {},
+        "weight": 2,
+        "id": "zenki_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你把最干的枝尖让给小鸟，自己靠近树干。",
+        "effects": {},
+        "weight": 2,
+        "id": "zenki_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "近处的风已足够熟悉，你一拍翅便避开冷雨。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "zenki_36"
+      }
+    ],
+    "success": "你把隙间与山林连成能传授的航路，收翅时仍听得懂远风；此番侦察生涯留给后来者稳妥的方向。",
+    "bittersweet": "你认得许多航路，也留下几次没有看清的林影；远航缩短以后，旧经验仍能帮你找到安静的枝头。",
+    "failure": "你太常追着出口冒进，许多发现没能带回；缩回近林之后，只能从熟悉的风声重新练习辨路。"
+  },
+  {
+    "id": "goki",
+    "name": "后鬼",
+    "category": "main",
+    "work": "ssib",
+    "location": "八云紫庭前的返航枝",
+    "identity": "八云紫的乌鸦式神",
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "life": "long",
+    "body": "beast",
+    "realm": "gensokyo",
+    "career": "guard",
+    "family": false,
+    "origin": "你追着另一声鸦鸣出壳，尚不懂隙间通向何处。",
+    "milestones": [
+      {
+        "text": "你学会独自停上细枝，不再总追着别的翅影。",
+        "effects": {
+          "health": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "health",
+          "min": 6
+        },
+        "fail": "你的急转总耗尽力气，侦察改从宽阔的林口开始。",
+        "passEffects": {
+          "health": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "长久翻飞让你能急转收翅，窄路也有返回的余地。"
+      },
+      {
+        "check": {
+          "stat": "insight",
+          "min": 6
+        },
+        "fail": "你仍追着最吵的声响，真正的动静常从身后溜走。",
+        "passEffects": {
+          "insight": 1
+        },
+        "failEffects": {
+          "fortune": -1
+        },
+        "pass": "你分清值得带回的声响，不再只报最吵的一处。"
+      },
+      {
+        "text": "你把远处的风交给新翅，留在旧枝照看返程。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "紫合上隙间前停了一息，你认住回来的方向。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "goki_01",
+        "with": [
+          "yukari"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你绕过细枝急转，尾羽擦了树叶便重新展开。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "xp": 1,
+        "id": "goki_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "前鬼飞得太快，你只好落枝等第二声呼唤。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "health": 4
+        },
+        "id": "goki_03",
+        "with": [
+          "zenki"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你从两声鸦鸣的停顿里分出远近。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "goki_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "雨滴挂在喙尖，你偏头将它蹭到树皮上。",
+        "effects": {},
+        "weight": 2,
+        "id": "goki_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你将掉下的软羽衔回窝边，放在最凹的一角。",
+        "effects": {},
+        "weight": 2,
+        "id": "goki_06"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "紫把点心掰成小块，你挑走有豆香的一块。",
+        "effects": {},
+        "weight": 2,
+        "id": "goki_07",
+        "with": [
+          "yukari"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "前鬼给你留出半根栖枝，你紧靠着落下。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "goki_08",
+        "with": [
+          "zenki"
+        ]
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你沿崖壁学会一条背风路，记住三处凸石。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "goki:cliffroute"
+        ],
+        "xp": 1,
+        "id": "goki_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你将发亮的小石推入枝洞，留作认窝的标记。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "goki:stone"
+        ],
+        "id": "goki_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你看出一声呼唤只是回音，没有再扑向空处。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "goki_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你抓住晃动的绳结，等它停稳才松开足爪。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "xp": 1,
+        "id": "goki_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "熟果掉进溪流，你追到弯口还是没能衔回来。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "goki_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你啄开干叶下的一只小虫，午后便不再找食。",
+        "effects": {},
+        "weight": 2,
+        "id": "goki_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "细碎的脚步盖住鸦鸣，你仍能分辨移动方向。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "goki_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "蓝指向返航的枝头，你换了个角度再看。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "goki_16",
+        "with": [
+          "ran"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "突来的风切断直路，你贴崖绕过三处凸石。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "goki:cliffroute"
+        ],
+        "xp": 1,
+        "id": "goki_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "枝洞里的亮石露出一点，你挤开落叶找到旧窝。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "goki:stone"
+        ],
+        "id": "goki_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你连翻两次避开密枝，落地后胸口仍在急跳。",
+        "effects": {
+          "health": -1
+        },
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "id": "goki_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "前鬼在远枝等你，你放慢翅拍与它一起返航。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "goki_20",
+        "with": [
+          "zenki"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你把过大的坚果摔在石头上，再啄开软仁。",
+        "effects": {},
+        "weight": 2,
+        "id": "goki_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "夕光透过你的羽缝，你展开两翼晒了一会儿。",
+        "effects": {},
+        "weight": 2,
+        "id": "goki_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你留在低枝歇了一阵，不再追每一道突然的风。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "goki_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "林间的静默也有差别，你听出雨前的那一种。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "goki_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "崖边新树挡住旧路，你循凸石重新找出空隙。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "goki:cliffroute"
+        ],
+        "xp": 1,
+        "id": "goki_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "亮石滑进深洞，你啄了几次便放弃够取。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "goki:stone"
+        ],
+        "clear": [
+          "goki:stone"
+        ],
+        "id": "goki_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "枝头换了新芽，你啄走一片遮住眼睛的嫩叶。",
+        "effects": {},
+        "weight": 2,
+        "id": "goki_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你站在温水碗边，将沾灰的足爪轮流浸一浸。",
+        "effects": {},
+        "weight": 2,
+        "id": "goki_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "紫给你开了近处的隙间，你没有再急着抢飞。",
+        "effects": {},
+        "weight": 2,
+        "id": "goki_29",
+        "with": [
+          "yukari"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "蓝抚平你乱掉的背羽，你闭眼忍住了啄手的念头。",
+        "effects": {},
+        "weight": 2,
+        "id": "goki_30",
+        "with": [
+          "ran"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "前鬼带回一声新鸟鸣，你低低应了一次。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "goki_31",
+        "with": [
+          "zenki"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "橙追着你落下的羽毛跑，你留在高枝看她。",
+        "effects": {},
+        "weight": 2,
+        "id": "goki_32",
+        "with": [
+          "chen"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你梦见前鬼抢先飞出的翅影，醒后挪近树干。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "zenki"
+        ],
+        "id": "goki_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你在旧窝旁另垒一圈软枝，给身体留出余地。",
+        "effects": {},
+        "weight": 2,
+        "id": "goki_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "一阵冷风经过，你先收翅再把头藏进去。",
+        "effects": {},
+        "weight": 2,
+        "id": "goki_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你听完远处的动静才轻叫一声，林间随即安静。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "goki_36"
+      }
+    ],
+    "success": "你从追随翅影长成会听静默的式神，旧枝也成了返程的指引；远航渐少，辨风的本领仍可接续。",
+    "bittersweet": "你绕过不少险路，也错过几声重要的呼唤；旧窝仍能容下收起的两翼，让未解的风慢慢过去。",
+    "failure": "你太常追赶声响，返程与发现都被抛在后面；回到低枝后，重新学会等一声值得回应的鸦鸣。"
+  },
+  {
+    "id": "koutei",
+    "name": "黄帝",
+    "category": "main",
+    "work": "wahh",
+    "location": "茨华仙邸上空",
+    "identity": "华扇从龙石中孵出的宠物龙",
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "life": "long",
+    "body": "beast",
+    "realm": "gensokyo",
+    "career": "animal",
+    "family": false,
+    "origin": "龙石在温暖里裂开，你将第一口水含在舌间。",
+    "milestones": [
+      {
+        "text": "你离开石壳，开始用细小的吐息拨动水珠。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "health",
+          "min": 6
+        },
+        "fail": "你总在低云前耗掉力气，只能沿湿石慢慢吐水。",
+        "passEffects": {
+          "health": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "你能托着一团水升上低云，鳞间也留得住湿气。"
+      },
+      {
+        "check": {
+          "stat": "insight",
+          "min": 6
+        },
+        "fail": "你仍把水气团得太紧，常被自己的浓雾裹住。",
+        "passEffects": {
+          "insight": 1
+        },
+        "failEffects": {
+          "fortune": -1
+        },
+        "pass": "你辨出云团不同的重量，让吐息顺着山风散开。"
+      },
+      {
+        "text": "你换到更宽的云边栖息，仍带着未成熟的好奇。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "华扇将水碗挪近，你先用舌尖碰一碰水面。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "koutei_01",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你撑起软鳞的身体，越过裂开的石壳。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "xp": 1,
+        "id": "koutei_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "一口水含得太急，你连同细雾一起喷出来。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "health": 4
+        },
+        "id": "koutei_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你看见水珠中的倒影，试着让它停在空中。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "koutei_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你将下巴搁在暖石上，尾尖慢慢垂到水里。",
+        "effects": {},
+        "weight": 2,
+        "id": "koutei_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "华扇擦去你的嘴角水，你伸头闻了闻她袖口。",
+        "effects": {},
+        "weight": 2,
+        "id": "koutei_06",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "一片叶子贴上鳞背，你扭了半圈才把它甩掉。",
+        "effects": {},
+        "weight": 2,
+        "id": "koutei_07"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "华扇伸掌等你靠近，你把额头轻轻贴上去。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "koutei_08",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你从泉底捞出一颗青石，推到栖处旁边。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "koutei:stone"
+        ],
+        "id": "koutei_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你学会沿山风吐雾，记住一种缓慢的呼吸。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "koutei:mistbreath"
+        ],
+        "xp": 1,
+        "id": "koutei_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你从水面细纹里分出逆流，不再迎头钻进去。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "koutei_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你衔着一口水绕过低崖，落回石边才吐出来。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "xp": 1,
+        "id": "koutei_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "风吹散刚聚起的雾，你只好又回泉边吸水。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "koutei_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你在水边试着卷起尾尖，追了半天自己的影子。",
+        "effects": {},
+        "weight": 2,
+        "id": "koutei_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "云下忽然变冷，你先松开水气再继续上升。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "koutei_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "华扇叫你降低吐息，你听完才慢慢落向掌边。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "koutei_16",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "泉水涨高后，你从青石露出的尖角认出栖处。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "koutei:stone"
+        ],
+        "id": "koutei_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你用缓慢吐息散开浓雾，看见脚下的水湾。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "koutei:mistbreath"
+        ],
+        "xp": 1,
+        "id": "koutei_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你顶着湿风升过崖沿，落下时鳞间仍有水滴。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "xp": 1,
+        "id": "koutei_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "华扇伸手挡住乱吐的水，你把嘴闭上听她说完。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "koutei_20",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你趴在浅水中，等鱼游近才把鼻尖挪开。",
+        "effects": {},
+        "weight": 2,
+        "id": "koutei_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你把嘴边的小气泡挤破，随后又吐出一个。",
+        "effects": {},
+        "weight": 2,
+        "id": "koutei_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你缩回温暖的水湾，让冷鳞慢慢恢复触感。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "koutei_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你发现高云更轻，换了一种聚水的吐法。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "koutei_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "青石被洪水推走，你找到后挪到更高的岸边。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "koutei:stone"
+        ],
+        "id": "koutei_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "熟悉的吐息随新风变短，你慢慢调整呼吸间隔。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "koutei:mistbreath"
+        ],
+        "xp": 1,
+        "id": "koutei_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你在暖云上打了个滚，掉下一串圆水珠。",
+        "effects": {},
+        "weight": 2,
+        "id": "koutei_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "雨后鳞片发亮，你靠着树干一片片蹭干。",
+        "effects": {},
+        "weight": 2,
+        "id": "koutei_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "华扇在云下唤你，你将头从薄雾里探出来。",
+        "effects": {},
+        "weight": 2,
+        "id": "koutei_29",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "务光藏起一穗玉米，你闻了闻便退回水边。",
+        "effects": {},
+        "weight": 2,
+        "id": "koutei_30",
+        "with": [
+          "mukou"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "灵梦抬头看你的雾，你让出一块晴朗的天光。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "id": "koutei_31",
+        "with": [
+          "reimu"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "魔理沙飞过时沾了一帽子水，你卷尾避开笑声。",
+        "effects": {},
+        "weight": 2,
+        "id": "koutei_32",
+        "with": [
+          "marisa"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你想起华扇最初递来的水碗，落回泉边歇息。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "kasen"
+        ],
+        "id": "koutei_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你换了一块更宽的暖石，尾尖终于不用悬空。",
+        "effects": {},
+        "weight": 2,
+        "id": "koutei_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "一朵薄云散得很慢，你陪它在山顶停了一会。",
+        "effects": {},
+        "weight": 2,
+        "id": "koutei_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你沿着新风轻吐细雾，让眼前远山逐层显出来。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "koutei_36"
+      }
+    ],
+    "success": "你把石壳之外的水与风变成可以栖身的天地；成长仍未尽头，此番吐息已给后来岁月留出宽阔。",
+    "bittersweet": "你学会托起水气，也仍会被浓雾裹住；云边换了一处栖地，未成熟的好奇继续牵着你向前。",
+    "failure": "你总急着抓紧水与云，反被自己的浓雾困住；退回暖泉休养后，这段成长仍可从一口清水重来。"
+  },
+  {
+    "id": "mukou",
+    "name": "务光",
+    "category": "main",
+    "work": "wahh",
+    "location": "茨华仙邸雷兽的栖处",
+    "identity": "华扇饲养、以玉米为食的雷兽",
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "life": "long",
+    "body": "beast",
+    "realm": "gensokyo",
+    "career": "animal",
+    "family": false,
+    "origin": "最初的雷声在体内滚过，你伸鼻闻见玉米的甜。",
+    "milestones": [
+      {
+        "text": "你能把细雷收回体内，不再被自己的响声惊跑。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "health",
+          "min": 6
+        },
+        "fail": "雷雨总让你发颤，你只在干燥栖处试着吐雷。",
+        "passEffects": {
+          "health": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "你在雷雨中撑住四足，吐出的雷声开始有了余地。"
+      },
+      {
+        "check": {
+          "stat": "bond",
+          "min": 6
+        },
+        "fail": "你常把来人的手当成夺食，玉米旁多了紧张的吼声。",
+        "passEffects": {
+          "bond": 1
+        },
+        "failEffects": {
+          "bond": -1
+        },
+        "pass": "你听懂来人的语气，想吃玉米时也肯先等一等。"
+      },
+      {
+        "text": "你把大半雷声留给山雨，开始在暖窝里长久歇息。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "华扇掰开玉米，你将鼻尖探向第一粒软仁。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "mukou_01",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你顶着一阵细雷站稳，尾毛没有再缩成一团。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "xp": 1,
+        "id": "mukou_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "腹中的雷忽然响起，你吓得钻回干草下面。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "health": 4
+        },
+        "id": "mukou_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你从雨声里认出远雷，耳尖慢慢转了过去。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "mukou_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你啃完玉米软仁，还抱着空穗闻了许久。",
+        "effects": {},
+        "weight": 2,
+        "id": "mukou_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你在干草上挪来挪去，终于压出自己的凹窝。",
+        "effects": {},
+        "weight": 2,
+        "id": "mukou_06"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "华扇晾着你的湿毛，你抖身溅了她一袖小水。",
+        "effects": {},
+        "weight": 2,
+        "id": "mukou_07",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "有人从远处放下食物，你等他退开才走过去。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "mukou_08"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你记住常添玉米的矮台，醒后便能循味找到。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "mukou:cornsource"
+        ],
+        "id": "mukou_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你摸索出压低雷音的吐息，先在空处试了一遍。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "mukou:softthunder"
+        ],
+        "xp": 1,
+        "id": "mukou_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你听出湿木空心，换了另一段干枝磨爪。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 5
+        },
+        "xp": 1,
+        "id": "mukou_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你推开窝边滚来的石头，又将干草拖回原处。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "id": "mukou_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "玉米袋沾上泥水，你闻过一遍还是放开了嘴。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "mukou_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你追着一只飞蛾打转，最后趴在灯下打盹。",
+        "effects": {},
+        "weight": 2,
+        "id": "mukou_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你听见雷将落在近林，提前钻到厚石下面。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "mukou_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "华扇捡起掉落的食物，你退半步看她重新放下。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "mukou_16",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "长睡后你找回熟悉矮台，尝到新添的一穗玉米。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "mukou:cornsource"
+        ],
+        "id": "mukou_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你用压低的雷音赶开群虫，栖处只剩细响。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "mukou:softthunder"
+        ],
+        "xp": 1,
+        "id": "mukou_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你从积水里跃到高石，湿毛下还藏着闷雷。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "xp": 1,
+        "id": "mukou_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "华扇要看你的爪垫，你放下嘴里的食物等她。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "mukou_20",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你将晒暖的干草拖到腹下，四足伸得很远。",
+        "effects": {},
+        "weight": 2,
+        "id": "mukou_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你用鼻尖翻过空食盆，盯着它滚到墙边。",
+        "effects": {},
+        "weight": 2,
+        "id": "mukou_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你缩在暖处缓过雷后的疲倦，醒来才去喝水。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "mukou_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你分出雨停前的最后一阵风，没有急着出窝。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "mukou_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你的新窝没有树洞，你在高石后藏起一把食物。",
+        "effects": {},
+        "weight": 2,
+        "id": "mukou_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "低雷吐息多了沙响，你试着将每次呼气放短。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "mukou:softthunder"
+        ],
+        "xp": 1,
+        "id": "mukou_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "玉米香从门外飘来，你只动鼻尖没有起身。",
+        "effects": {},
+        "weight": 2,
+        "id": "mukou_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你睡醒时尾毛压扁了，蹭着树皮理了半天。",
+        "effects": {},
+        "weight": 2,
+        "id": "mukou_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "华扇替你翻开窝草，你拱着新草慢慢躺回去。",
+        "effects": {},
+        "weight": 2,
+        "id": "mukou_29",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "黄帝吐来一团细雾，你退到干石上抖掉水珠。",
+        "effects": {},
+        "weight": 2,
+        "id": "mukou_30",
+        "with": [
+          "koutei"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "灵梦递来玉米，你先用鼻尖确认她没有收回。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "mukou_31",
+        "with": [
+          "reimu"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "魔理沙学你轻吼，你转头看了她一会便趴下。",
+        "effects": {},
+        "weight": 2,
+        "id": "mukou_32",
+        "with": [
+          "marisa"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你想起华扇曾给的软玉米，醒来便闻了闻食盆。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "kasen"
+        ],
+        "id": "mukou_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "一场山雨替你响完了雷，你在窝里睡得很沉。",
+        "effects": {},
+        "weight": 2,
+        "id": "mukou_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你留下半穗玉米，翻个身等下一次饿醒。",
+        "effects": {},
+        "weight": 2,
+        "id": "mukou_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你能辨出身边人的轻步，不必每次都竖起尾毛。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "id": "mukou_36"
+      }
+    ],
+    "success": "你让雷声与胃口都找到了余地，终于能安心靠近照料；长眠中的细响，仍替此番岁月留着温度。",
+    "bittersweet": "你学会压低几次雷声，却还会为一穗玉米紧张；暖窝能容下疲倦，也容下尚未改掉的小脾气。",
+    "failure": "你总把响声与食物护得太紧，身旁渐渐只剩空处；山雨替你发雷时，仍需重新学会信任来人的手。"
+  },
+  {
+    "id": "kume",
+    "name": "久米",
+    "category": "main",
+    "work": "wahh",
+    "location": "茨华仙邸的老鹫栖木",
+    "identity": "已将载人差事交给竿打的年老大鹫",
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "life": "beast",
+    "body": "beast",
+    "realm": "gensokyo",
+    "career": "animal",
+    "family": false,
+    "origin": "你从高巢探出短翼，第一次看见山风托起落叶。",
+    "milestones": [
+      {
+        "text": "你越过巢边的空处，学会展开双翼自己落回树上。",
+        "effects": {
+          "health": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "health",
+          "min": 6
+        },
+        "fail": "载人的重量总让你下沉，你先沿低处慢慢练飞。",
+        "passEffects": {
+          "health": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "你的双翼渐能托起来客，山道在脚下连成远路。"
+      },
+      {
+        "check": {
+          "stat": "insight",
+          "min": 6
+        },
+        "fail": "你仍想硬穿每一道逆风，回栖时越来越难展翅。",
+        "passEffects": {
+          "insight": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "你懂得绕开吃力的逆风，让久飞的翅膀留住余力。"
+      },
+      {
+        "text": "你将载人差事让给年轻的竿打，留在熟悉的栖木。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "华扇把食物放在低枝，你扑了几次才够到。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "kume_01",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你越过两根相邻的枝条，落下时抓得很稳。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "xp": 1,
+        "id": "kume_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "迎风起跳后你急忙收翅，跌回巢里压扁干草。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "health": 4
+        },
+        "id": "kume_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你看清落叶在风中转弯，换了起飞的方向。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "kume_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你啄掉食物上的碎羽，才慢慢吞下最后一口。",
+        "effects": {},
+        "weight": 2,
+        "id": "kume_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "华扇摸过你的短翼，你偏头想看她的手。",
+        "effects": {},
+        "weight": 2,
+        "id": "kume_06",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你在巢沿踏出半圈，最后又坐回暖草中心。",
+        "effects": {},
+        "weight": 2,
+        "id": "kume_07"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "华扇留在枝下等你，你终于飞向她伸出的臂。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "kume_08",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你记住两峰间的顺风口，试着不拍翅滑过去。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "kume:windpass"
+        ],
+        "xp": 1,
+        "id": "kume_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你将一截柔韧藤条衔回，缠稳了自己的栖枝。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "kume:vine"
+        ],
+        "id": "kume_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你从松涛里分出风的高低，起飞前先等一阵。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 5
+        },
+        "xp": 1,
+        "id": "kume_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "华扇坐上背时你撑住双翼，向前踏了两步。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "xp": 1,
+        "id": "kume_12",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "湿枝滑过足爪，你落到邻枝才重新站稳。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "kume_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你把午后的热翅展开，让风吹过里面的软羽。",
+        "effects": {},
+        "weight": 2,
+        "id": "kume_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你辨出山雨将从背面来，先降低了飞行高度。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "kume_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "华扇扶住你的颈羽，你等她坐稳才起飞。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "kume_16",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "载重让你拍翅吃力，你转进记熟的顺风口。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "kume:windpass"
+        ],
+        "xp": 1,
+        "id": "kume_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "藤条挡住栖枝的裂缝，你踩稳后才收起双翼。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "kume:vine"
+        ],
+        "id": "kume_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你背着来客升过坡顶，落地后先张嘴缓气。",
+        "effects": {
+          "health": -1
+        },
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "id": "kume_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "华扇察觉你疲倦，你顺着她的手慢慢落低。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "kume_20",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你从羽根啄出一根草茎，又认真梳齐乱羽。",
+        "effects": {},
+        "weight": 2,
+        "id": "kume_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "阴天你比往日多吃一口，随后蜷足睡在枝上。",
+        "effects": {},
+        "weight": 2,
+        "id": "kume_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你晒暖酸沉的翅根，等松开后才重新展开。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "kume_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你不再抢着迎风起飞，顺着树梢的摆动等候。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "kume_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "顺风口又添新枝，你沿旧风声寻出另一条线。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "kume:windpass"
+        ],
+        "xp": 1,
+        "id": "kume_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "缠枝的藤条干裂了，你将残段逐条啄去。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "kume:vine"
+        ],
+        "clear": [
+          "kume:vine"
+        ],
+        "id": "kume_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你将落脚点挪近树干，睡时不用再绷紧足爪。",
+        "effects": {},
+        "weight": 2,
+        "id": "kume_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "一根旧飞羽掉到草上，你低头看了一会。",
+        "effects": {},
+        "weight": 2,
+        "id": "kume_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "竿打飞到邻枝，你低叫一声让它看看山口。",
+        "effects": {},
+        "weight": 2,
+        "id": "kume_29",
+        "with": [
+          "kanda"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "华扇留在栖木旁陪你，你只伸颈碰了碰她。",
+        "effects": {},
+        "weight": 2,
+        "id": "kume_30",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "竿打想抢着起飞，你先抬翅示意等一阵风。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "kume_31",
+        "with": [
+          "kanda"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "华扇取走最后一副载具，你将背羽慢慢理平。",
+        "effects": {},
+        "weight": 2,
+        "id": "kume_32",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你望着远处的背影，想起竿打初次试风的急劲。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "kanda"
+        ],
+        "id": "kume_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你把头藏进温暖的羽根，睡过一场细雨。",
+        "effects": {},
+        "weight": 2,
+        "id": "kume_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "新草铺进巢里，你挪了两次才找回惯常姿势。",
+        "effects": {},
+        "weight": 2,
+        "id": "kume_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你在近枝间飞完短程，落下时仍能稳稳收翅。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "health": 1
+        },
+        "id": "kume_36"
+      }
+    ],
+    "success": "你用双翼托起许多往返，也学会将远路交给新翅；年老的栖木旁，风声仍像初飞时一样清楚。",
+    "bittersweet": "你飞过远路，也让逆风留下了疲倦；载具卸下以后，安静的栖木让没说出的不舍慢慢落定。",
+    "failure": "你总想以旧力撑住所有往返，终于把双翼耗得沉重；交班后只能在近枝间，重新学会珍惜余风。"
+  },
+  {
+    "id": "kanda",
+    "name": "竿打",
+    "category": "main",
+    "work": "wahh",
+    "location": "仙邸与山下之间的送货路",
+    "identity": "接替久米载运任务的年轻大鹫",
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "life": "beast",
+    "body": "beast",
+    "realm": "gensokyo",
+    "career": "animal",
+    "family": false,
+    "origin": "你在高枝上伸开尚短的翼，盯住第一阵上升气流。",
+    "milestones": [
+      {
+        "text": "你独自越过巢边短坡，学会先收足再慢慢落枝。",
+        "effects": {
+          "health": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "health",
+          "min": 6
+        },
+        "fail": "背上的重量仍压低双翼，你接过差事后先飞短程。",
+        "passEffects": {
+          "health": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "你能承住背上的重量，开始接替老鹫的载人差事。"
+      },
+      {
+        "check": {
+          "stat": "insight",
+          "min": 6
+        },
+        "fail": "你仍爱抢先迎风，远路常靠中途歇脚才能走完。",
+        "passEffects": {
+          "insight": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "你学会分辨载重与风向，不再只凭冲劲赶完远路。"
+      },
+      {
+        "text": "你把急飞换成稳稳的起落，渐能给新翅留出位置。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "华扇在枝下招手，你扑翅时先看了一眼高度。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "kanda_01",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你追上被风带走的叶子，落回低枝没有失足。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "xp": 1,
+        "id": "kanda_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你急着扑向高枝，尾羽擦过树皮才落回去。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "insight": 4
+        },
+        "id": "kanda_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你盯住上升的雾线，借它越过第一道坡。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "kanda_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你把喙藏进软羽，却还忍不住听枝下的脚步。",
+        "effects": {},
+        "weight": 2,
+        "id": "kanda_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "久米落到邻枝，你伸颈看它怎样收起长翼。",
+        "effects": {},
+        "weight": 2,
+        "id": "kanda_06",
+        "with": [
+          "kume"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你啄开新铺的草，挑出最软的一小把放在腹下。",
+        "effects": {},
+        "weight": 2,
+        "id": "kanda_07"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "华扇停下催促，你慢慢站稳才伸翅给她看。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "kanda_08",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你记住崖下两块白岩，找到一条避风的低路。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "kanda:lowroute"
+        ],
+        "xp": 1,
+        "id": "kanda_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你把晒干的细草藏进枝隙，留着修补新巢。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "kanda:grass"
+        ],
+        "id": "kanda_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你看清货袋晃动的方向，起飞前向旁边挪一步。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 5
+        },
+        "xp": 1,
+        "id": "kanda_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你托住背上的空筐，绕树飞完一整圈。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "xp": 1,
+        "id": "kanda_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "一阵突风吹歪了货袋，你落地重新等它摆稳。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "kanda_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "华扇把食盆移到暖处，你跟着慢慢踱过去。",
+        "effects": {},
+        "weight": 2,
+        "id": "kanda_14",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你听出桥下的急风，送货时先升高了半程。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "kanda_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "华扇扶稳背上的来客，你等她坐定才踏出枝沿。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "kanda_16",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "高处迎风太硬，你沿白岩之间的低路完成往返。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "kanda:lowroute"
+        ],
+        "xp": 1,
+        "id": "kanda_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "雨后新巢露出缝隙，你叼来藏好的细草填上。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "kanda:grass"
+        ],
+        "clear": [
+          "kanda:grass"
+        ],
+        "id": "kanda_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "沉货压住背羽，你借坡顶气流慢慢升起。",
+        "effects": {
+          "health": -1
+        },
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "id": "kanda_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "华扇提早让你歇脚，你放下争飞的翅膀。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "kanda_20",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你喝完浅盆里的水，偏头看了一会自己的倒影。",
+        "effects": {},
+        "weight": 2,
+        "id": "kanda_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你落枝后抖松背羽，货袋留下的凹痕渐渐散开。",
+        "effects": {},
+        "weight": 2,
+        "id": "kanda_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你让酸沉的足爪离开绳带，在暖枝上轮流松开。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "kanda_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你先看完山口的云，再挑今日送货的那条路。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "kanda_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "低路被落石堵住，你沿白岩上方另试一段风。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "kanda:lowroute"
+        ],
+        "xp": 1,
+        "id": "kanda_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你用新落的软羽补巢，把空出的枝隙留宽些。",
+        "effects": {},
+        "weight": 2,
+        "id": "kanda_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "黄昏你比往日晚醒，睁眼先听了一遍山林。",
+        "effects": {},
+        "weight": 2,
+        "id": "kanda_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你把沾在喙角的草籽蹭掉，又认真梳好胸羽。",
+        "effects": {},
+        "weight": 2,
+        "id": "kanda_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "华扇换来更轻的载具，你试了两次才站直。",
+        "effects": {},
+        "weight": 2,
+        "id": "kanda_29",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "灵梦坐上背时抱紧包裹，你放缓了离枝的力道。",
+        "effects": {},
+        "weight": 2,
+        "id": "kanda_30",
+        "with": [
+          "reimu"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "魔理沙催你比飞，你只沿熟悉的顺风缓缓前进。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "id": "kanda_31",
+        "with": [
+          "marisa"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "华扇将新鸟带到旁枝，你低叫着示意留出空处。",
+        "effects": {},
+        "weight": 2,
+        "id": "kanda_32",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你在返程中想起久米收翅的姿势，慢慢降低。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "kume"
+        ],
+        "id": "kanda_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你不再追每片远叶，留在暖风里多晒一会羽毛。",
+        "effects": {},
+        "weight": 2,
+        "id": "kanda_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "新草压出更深的窝，你坐稳后长长呼出一口气。",
+        "effects": {},
+        "weight": 2,
+        "id": "kanda_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你在起飞前多等一息，双翼仍能稳稳托住来客。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "health": 1
+        },
+        "xp": 1,
+        "id": "kanda_36"
+      }
+    ],
+    "success": "你把争飞的冲劲磨成稳稳的往返，后来也肯给新翅留路；收起载具时，熟悉的山风仍托着你。",
+    "bittersweet": "你送完许多往返，也留下绕路与歇脚的记忆；旧载具渐轻，巢边的不舍终于能同晚风一起停下。",
+    "failure": "你总急着证明双翼，疲倦让远路一次次变长；放下沉重的载具后，才开始学不必抢先的起飞。"
+  },
+  {
+    "id": "houso",
+    "name": "彭祖",
+    "category": "main",
+    "work": "wahh",
+    "location": "茨华仙邸山门",
+    "identity": "看守仙邸、被约束不可主动伤人的虎",
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "life": "beast",
+    "body": "beast",
+    "realm": "gensokyo",
+    "career": "guard",
+    "family": false,
+    "origin": "你在草窝里张开幼爪，追逐落到鼻尖的树影。",
+    "milestones": [
+      {
+        "text": "你能沿山路独自走回栖处，听见呼唤便竖起耳。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "health",
+          "min": 6
+        },
+        "fail": "坡路总让你气喘，你改在山门附近守着脚步声。",
+        "passEffects": {
+          "health": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "你撑住山门前的坡路，来回巡行后仍有余力。"
+      },
+      {
+        "check": {
+          "stat": "insight",
+          "min": 6
+        },
+        "fail": "每声急步都令你躁动，你常抓烂物件才忍住扑咬。",
+        "passEffects": {
+          "insight": 1
+        },
+        "failEffects": {
+          "fortune": -1
+        },
+        "pass": "你分得清威胁与误闯，守门时先挡路而不伤人。"
+      },
+      {
+        "text": "你把巡视缩到熟悉的门前，仍不主动伤害来人。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "华扇将掌心压低，你先用鼻尖碰了一下。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "houso_01",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你伏低身体扑向草团，四爪稳稳落回地上。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "xp": 1,
+        "id": "houso_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你追树影追得太急，翻进草窝才停下来。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "insight": 4
+        },
+        "id": "houso_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你闻出两段山路的气味，自己找回暖窝。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "houso_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你将前爪伸进阳光里，盯着爪缝中的细草。",
+        "effects": {},
+        "weight": 2,
+        "id": "houso_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "华扇擦掉你的嘴边水，你忍着没有去咬布角。",
+        "effects": {},
+        "weight": 2,
+        "id": "houso_06",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你趴在空食盆旁，把尾尖转来转去。",
+        "effects": {},
+        "weight": 2,
+        "id": "houso_07"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "华扇在门旁等你，你绕了半圈才靠上她的膝。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "houso_08",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你记下山门两侧的气味，学会绕远路返回。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "houso:scentpath"
+        ],
+        "xp": 1,
+        "id": "houso_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你将一块粗木拖到窝边，留作磨爪的地方。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "houso:log"
+        ],
+        "id": "houso_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你听出急步只是山石滚动，没有离开门口。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 5
+        },
+        "xp": 1,
+        "id": "houso_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你将挡路的小石推开，前爪在泥里站得很稳。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "xp": 1,
+        "id": "houso_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "雨抹去熟悉的气味，你慢走两圈才找到门。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "houso_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你在背阴处舔净爪垫，一根草茎粘了很久。",
+        "effects": {},
+        "weight": 2,
+        "id": "houso_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你从来人的步声里听出犹豫，横身挡住山路。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "houso_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "华扇示意退开，你松开抓紧门槛的前爪。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "houso_16",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "浓雾盖住山门，你沿记住的气味慢慢返回。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "houso:scentpath"
+        ],
+        "xp": 1,
+        "id": "houso_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "躁意涌上前爪，你转去粗木上抓下一片木屑。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "houso:log"
+        ],
+        "id": "houso_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你顶住落向门前的枯枝，背上沾了一层碎叶。",
+        "effects": {
+          "health": -1
+        },
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "id": "houso_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "华扇碰到你疼的爪垫，你伏下身体让她看完。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "houso_20",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你在门边打盹，尾尖仍随着远处脚步轻动。",
+        "effects": {},
+        "weight": 2,
+        "id": "houso_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你把晚饭的最后一口留着，过一会又自己吃掉。",
+        "effects": {},
+        "weight": 2,
+        "id": "houso_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你晒暖酸沉的肩背，起身时先伸长两只前爪。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "houso_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你认出陌生草药的味道，没有再把药布扯走。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "id": "houso_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "山门旁添了新花，你重走旧路补记变化的气味。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "houso:scentpath"
+        ],
+        "xp": 1,
+        "id": "houso_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "磨爪木已碎成薄片，你把残木推到草窝外。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "houso:log"
+        ],
+        "clear": [
+          "houso:log"
+        ],
+        "id": "houso_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "黄昏的风吹乱额前毛，你将头靠在暖石上。",
+        "effects": {},
+        "weight": 2,
+        "id": "houso_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你的呼噜压过门外虫声，醒来时天已暗了。",
+        "effects": {},
+        "weight": 2,
+        "id": "houso_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "华扇替你挪近水盆，你只抬头看了她一眼。",
+        "effects": {},
+        "weight": 2,
+        "id": "houso_29",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "灵梦走近山门，你闻过她的衣角便让出路。",
+        "effects": {},
+        "weight": 2,
+        "id": "houso_30",
+        "with": [
+          "reimu"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "魔理沙落地太急，你横身拦她等飞灰落下。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "id": "houso_31",
+        "with": [
+          "marisa"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "华扇坐在门边陪你，你将沉重的头放到地上。",
+        "effects": {},
+        "weight": 2,
+        "id": "houso_32",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你想起灵梦衣角的草香，梦里轻轻动了鼻尖。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "reimu"
+        ],
+        "id": "houso_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你没有追滚远的草团，只把眼睛转过去看。",
+        "effects": {},
+        "weight": 2,
+        "id": "houso_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "旧窝添了厚草，你伏下后不再急着挪换姿势。",
+        "effects": {},
+        "weight": 2,
+        "id": "houso_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你听完门外的步声才起身，爪下不再白费力。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "houso_36"
+      }
+    ],
+    "success": "你把幼爪的冲动磨成能挡路的沉稳，守门也守住了不主动伤人的约束；晚年的草窝仍有熟悉气味。",
+    "bittersweet": "你守住许多脚步，也留下抓坏的物件与未散的躁意；巡视渐短以后，门边的暖石给你留了位置。",
+    "failure": "你总把声响当成威胁，连熟悉的门前也难以安卧；晚年收起追逐的爪，仍要慢慢学会分辨来意。"
+  },
+  {
+    "id": "manzairaku",
+    "name": "万岁乐",
+    "category": "main",
+    "work": "wahh",
+    "location": "河童照料的河边舞台",
+    "identity": "从外界来到幻想乡、受到河童照料的海豹",
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "life": "beast",
+    "body": "beast",
+    "realm": "gensokyo",
+    "career": "animal",
+    "family": false,
+    "origin": "你在外界浅水中学会游动，圆身先追着浪花走。",
+    "originRealm": "outside",
+    "originLocation": "外界的水边",
+    "moves": [
+      {
+        "turn": 18,
+        "realm": "gensokyo",
+        "location": "河童照料的河边舞台"
+      }
+    ],
+    "milestones": [
+      {
+        "text": "你渐能听懂水边人群的呼声，用鳍掌撑起身体。",
+        "effects": {
+          "bond": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "health",
+          "min": 6
+        },
+        "fail": "来到幻想乡后，新水流让你疲倦，只能先贴岸休息。",
+        "passEffects": {
+          "health": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "来到幻想乡后，你很快学会在陌生河湾潜游。"
+      },
+      {
+        "check": {
+          "stat": "bond",
+          "min": 6
+        },
+        "fail": "你仍躲开靠近的手，河边的照料只能隔着距离。",
+        "passEffects": {
+          "bond": 1
+        },
+        "failEffects": {
+          "bond": -1
+        },
+        "pass": "你把拍鳍变成回应，河边的照料渐渐有了默契。"
+      },
+      {
+        "text": "你不再追逐每次掌声，将晚年留给熟悉的河湾。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你仰头追一片泡沫，翻身时看见水底的光。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "id": "manzairaku_01"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你沿浅水追上小鱼，鳍掌撑住回流的浪。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "xp": 1,
+        "id": "manzairaku_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "浪头忽然压过鼻尖，你急忙退回浅处换气。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "health": 4
+        },
+        "id": "manzairaku_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你听出水边呼声的停顿，等到末尾才探头。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "manzairaku_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你把腹部摊在暖岸上，眯眼听远处的水声。",
+        "effects": {},
+        "weight": 2,
+        "id": "manzairaku_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你用鳍掌拨开浮叶，留下一圈小小的波纹。",
+        "effects": {},
+        "weight": 2,
+        "id": "manzairaku_06"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你翻身翻到一半停住，鼻尖正好碰上一朵泡沫。",
+        "effects": {},
+        "weight": 2,
+        "id": "manzairaku_07"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "水边递来一条鱼，你等那只手停稳才靠近。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "manzairaku_08"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你将水边滚来的小球推到干处，留在自己身旁。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "manzairaku:ball"
+        ],
+        "id": "manzairaku_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你学会拍鳍后停住，等远处的呼声再继续。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "manzairaku:clap"
+        ],
+        "xp": 1,
+        "id": "manzairaku_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你从水底的亮纹辨出浅处，游过去才抬头。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 5
+        },
+        "id": "manzairaku_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你跃过贴水的小枝，落回去时没拍起太大水花。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "xp": 1,
+        "id": "manzairaku_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "熟悉的脚步声没有再来，你在岸边等到天暗。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "manzairaku_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你把一片宽叶推到水面，又看它漂到远处。",
+        "effects": {},
+        "weight": 2,
+        "id": "manzairaku_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你认出急流后的平水，潜下去绕过漩涡。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "manzairaku_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "河边递来的鱼换了口味，你嗅过后还是吃下。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "manzairaku_16"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你将留下的小球顶进水里，再从下面托回来。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "manzairaku:ball"
+        ],
+        "id": "manzairaku_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你拍鳍后耐心停住，岸上的呼声也跟着慢下来。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "manzairaku:clap"
+        ],
+        "xp": 1,
+        "id": "manzairaku_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你潜过被树影遮住的深水，出来后长长换气。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "xp": 1,
+        "id": "manzairaku_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "岸边新来的脚步很轻，你主动将鼻尖探过去。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "manzairaku_20"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你在平水中仰着漂流，鳍掌只偶尔拨一下。",
+        "effects": {},
+        "weight": 2,
+        "id": "manzairaku_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你吃完鱼后将鼻尖埋进水里，吹出一串气泡。",
+        "effects": {},
+        "weight": 2,
+        "id": "manzairaku_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你在暖岸上歇过一阵，再慢慢滑回水里。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "manzairaku_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "水位变高后你认出旧岸的轮廓，另找一处浅湾。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "manzairaku_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "小球随急水漂走，你追到弯口便返回熟悉的岸。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "manzairaku:ball"
+        ],
+        "clear": [
+          "manzairaku:ball"
+        ],
+        "id": "manzairaku_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你只拍了两次鳍便停下，没有为呼声继续用力。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "manzairaku:clap"
+        ],
+        "id": "manzairaku_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你在背风的木板上晒暖背部，胡须还挂着水滴。",
+        "effects": {},
+        "weight": 2,
+        "id": "manzairaku_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "落叶绕着鼻尖打转，你偏头让它顺流离开。",
+        "effects": {},
+        "weight": 2,
+        "id": "manzairaku_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "荷取蹲在河边调好水盆，你慢慢滑到她身旁。",
+        "effects": {},
+        "weight": 2,
+        "id": "manzairaku_29",
+        "with": [
+          "nitori"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "华扇伸掌等你拍鳍，你先嗅了嗅她的袖口。",
+        "effects": {},
+        "weight": 2,
+        "id": "manzairaku_30",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "荷取想让你再翻一圈，你伏低身子等她看懂。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "manzairaku_31",
+        "with": [
+          "nitori"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "灵梦看你晒太阳，放轻了沿岸走过的脚步。",
+        "effects": {},
+        "weight": 2,
+        "id": "manzairaku_32",
+        "with": [
+          "reimu"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你想起荷取递鱼时的水声，梦里轻动了鳍掌。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "nitori"
+        ],
+        "id": "manzairaku_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你把暖处让给照来的夕光，慢慢转过圆身。",
+        "effects": {},
+        "weight": 2,
+        "id": "manzairaku_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "一群小鱼从身边游过，你只跟了很短一段。",
+        "effects": {},
+        "weight": 2,
+        "id": "manzairaku_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你分清深水传来的冷意，留在浅湾等夜风过去。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "id": "manzairaku_36"
+      }
+    ],
+    "success": "你从追浪的小兽走到安静的河湾，掌声之外也找到了能回应的陪伴；晚年的鳍掌只为自己轻拍。",
+    "bittersweet": "外界的水声渐远，新的河湾也仍有陌生处；你留下几次犹疑与欢乐，终于肯在暖岸上慢慢休息。",
+    "failure": "你追逐太多呼声，忽略了水流与疲倦；晚年退到浅岸，仍得重新找回无需掌声也能安卧的位置。"
+  },
+  {
+    "id": "unshou",
+    "name": "运松翁",
+    "category": "main",
+    "work": "wahh",
+    "location": "人类村落的渔夫小屋",
+    "identity": "曾以河童秘药免费为村民治伤的老渔夫",
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "life": "human",
+    "body": "humanoid",
+    "realm": "gensokyo",
+    "career": "trade",
+    "family": false,
+    "origin": "你在村外的浅河练习握竿，先等第一条小鱼靠近。",
+    "milestones": [
+      {
+        "text": "你第一次带着鱼走回村里，学会留下够吃的一份。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "insight",
+          "min": 6
+        },
+        "fail": "你总晚一步认出鱼群，只能补做零工撑住小屋。",
+        "passEffects": {
+          "fortune": 1
+        },
+        "failEffects": {
+          "fortune": -1
+        },
+        "pass": "你辨得清水色与鱼群，靠打鱼撑起自己的小屋。"
+      },
+      {
+        "check": {
+          "stat": "bond",
+          "min": 6
+        },
+        "fail": "你独自替乡邻包伤，帮忙的人少，鱼筐常留空。",
+        "passEffects": {
+          "bond": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "你肯为乡邻停下打鱼，替他们包伤也有人搭把手。"
+      },
+      {
+        "text": "你把重网交给年轻人，仍给上门的人留一张凳子。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你看着浮漂轻颤，没有立刻拉起鱼竿。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "unshou_01"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你提着半桶水走回岸上，双脚没有陷进软泥。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "id": "unshou_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "鱼竿被急水拖歪，你坐在泥里才抱稳它。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "health": 4
+        },
+        "id": "unshou_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你从浅水影子里认出鱼尾，换了一处下钩。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "unshou_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你把小鱼又放回河里，盯着它一甩尾便消失。",
+        "effects": {},
+        "weight": 2,
+        "id": "unshou_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你在岸上烤干裤脚，闻见泥水里混着草香。",
+        "effects": {},
+        "weight": 2,
+        "id": "unshou_06"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你留下一颗圆石，等水退后又拿它试着打漂。",
+        "effects": {},
+        "weight": 2,
+        "id": "unshou_07"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "邻人愿借你一只鱼篓，你先替他提回空桶。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "unshou_08"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你自己结出第一张小网，叠好收在屋梁下。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "unshou:net"
+        ],
+        "xp": 1,
+        "id": "unshou_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你将半天卖鱼的钱留在罐底，想修好屋檐。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "unshou:roofmoney"
+        ],
+        "id": "unshou_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你看见水色变浑，提早收回浅处的鱼线。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 5
+        },
+        "xp": 1,
+        "id": "unshou_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你背着两篓鱼走完村道，最后一段没有停下。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "xp": 1,
+        "id": "unshou_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "市上的鱼价忽然跌了，你只好带一半回家腌。",
+        "effects": {
+          "fortune": -1
+        },
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "unshou_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你将新晒的鱼干分一小片，放到窗边的碟里。",
+        "effects": {},
+        "weight": 2,
+        "id": "unshou_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你从月色和水纹挑出下网的时辰，不再苦等。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "unshou_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "隔壁送来一碗菜，你把刚烤好的鱼分给他。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "unshou_16"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "自结的小网终于兜住满鱼，你先放走太小的。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "unshou:net"
+        ],
+        "xp": 1,
+        "id": "unshou_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你取出罐底的钱，请人补上常漏水的屋檐。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "unshou:roofmoney"
+        ],
+        "clear": [
+          "unshou:roofmoney"
+        ],
+        "id": "unshou_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "急水卷住沉网，你撑住木桩将它一点点拉回。",
+        "effects": {
+          "health": -1
+        },
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "id": "unshou_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "受伤的乡邻愿让你换布，手终于不再抖得厉害。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "unshou_20"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你给鱼汤加了过多姜，喝完仍觉得身上暖。",
+        "effects": {},
+        "weight": 2,
+        "id": "unshou_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "黄昏你坐在门口修篓，听完村道上的闲话。",
+        "effects": {},
+        "weight": 2,
+        "id": "unshou_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你为酸沉的腰背歇一天，让鱼竿靠着门框。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "unshou_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你看出新来的渔人用错钩，演给他看才放手。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "unshou_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "旧网裂开大口，你拆下好绳补进另一张网。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "unshou:net"
+        ],
+        "clear": [
+          "unshou:net"
+        ],
+        "id": "unshou_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "雨落进空罐里，你换个方向将罐口扣下。",
+        "effects": {},
+        "weight": 2,
+        "id": "unshou_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你将较软的鱼肉留给自己，硬骨煮进晚汤。",
+        "effects": {},
+        "weight": 2,
+        "id": "unshou_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你把晒完的布叠到椅背，屋里闻起来很干净。",
+        "effects": {},
+        "weight": 2,
+        "id": "unshou_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "荷取送来河童秘药，你收好瓶子没有问卖价。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "unshou:medicine"
+        ],
+        "id": "unshou_29",
+        "with": [
+          "nitori"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "华扇问你为何不收诊钱，你指了指乡邻留下的菜。",
+        "effects": {},
+        "weight": 2,
+        "id": "unshou_30",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你用收来的秘药替来人治伤，一文钱也没取。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "requires": [
+          "unshou:medicine"
+        ],
+        "min": {
+          "bond": 5
+        },
+        "id": "unshou_31"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "荷取来取空鱼篓，你多放了一包晒好的鱼干。",
+        "effects": {},
+        "weight": 2,
+        "id": "unshou_32",
+        "with": [
+          "nitori"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "秘药瓶终于见底，你洗净它留下盛清水。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "unshou:medicine"
+        ],
+        "clear": [
+          "unshou:medicine"
+        ],
+        "id": "unshou_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你想起荷取送药时的神色，给她留了封短信。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "nitori"
+        ],
+        "id": "unshou_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你在河边只坐了半天，拎着晚饭那一条鱼回家。",
+        "effects": {},
+        "weight": 2,
+        "id": "unshou_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你认出今年的水位变化，将下钩的位置挪近岸。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "unshou_36"
+      }
+    ],
+    "success": "你靠一双手从浅河走过谋生与助人的岁月，晚年不再逞力；小屋留下能坐下说话的一张凳子。",
+    "bittersweet": "你的鱼筐与饭桌有时丰足，有时留空，助人也耗去了力气；年老时，河声仍能陪你坐上一阵。",
+    "failure": "你把谋生与照料都硬扛在自己身上，疲倦渐渐压过河声；晚年才明白，空凳也该留给自己坐下。"
+  },
+  {
+    "id": "suiki",
+    "name": "水鬼",
+    "category": "main",
+    "work": "wahh",
+    "location": "幻想乡旧地道的出口",
+    "identity": "曾追捕霍青娥的地狱鬼神长",
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "life": "long",
+    "body": "humanoid",
+    "realm": "hell",
+    "career": "guard",
+    "family": false,
+    "origin": "你在地狱水声里初识鬼力，先练稳手中的长杖。",
+    "milestones": [
+      {
+        "text": "你走完第一段幽暗水路，开始分辨生灵留下的迹。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "health",
+          "min": 6
+        },
+        "fail": "急流总先压住长杖，你改在缓水边辨认来去的迹。",
+        "passEffects": {
+          "health": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "你能在急流中撑住长杖，追索不再只靠同伴带路。"
+      },
+      {
+        "check": {
+          "stat": "insight",
+          "min": 6
+        },
+        "fail": "你总追着最鲜明的迹，常到尽头才发现中了诱引。",
+        "passEffects": {
+          "insight": 1
+        },
+        "failEffects": {
+          "fortune": -1
+        },
+        "pass": "你辨出真迹与诱饵，追捕时肯留住回头的余地。"
+      },
+      {
+        "text": "你将漫长追索缩回水路，留下经验而不只留下怒气。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你从杖端震动里分清水流，先稳住双脚。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "suiki_01"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你举杖顶住落石，肩背承住第一阵重压。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "xp": 1,
+        "id": "suiki_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "冷流突然卷向膝下，你抱住石柱才站稳。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "health": 4
+        },
+        "id": "suiki_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你看出湿壁上有两层足迹，只沿新的一层走。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "suiki_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你把衣角拧干，听水滴逐次落回暗流。",
+        "effects": {},
+        "weight": 2,
+        "id": "suiki_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你找了块平石坐下，热汤在掌间慢慢凉了。",
+        "effects": {},
+        "weight": 2,
+        "id": "suiki_06"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "地底的小虫亮了一瞬，你停步等它飞过。",
+        "effects": {},
+        "weight": 2,
+        "id": "suiki_07"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "同行的鬼愿等你理好杖带，你也替他看一会路。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "suiki_08"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你刻出一枚水位木片，随身留下可比较的旧痕。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "suiki:watermark"
+        ],
+        "id": "suiki_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你在岩缝里找出绕行的干路，来回走到熟悉。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "suiki:drypath"
+        ],
+        "xp": 1,
+        "id": "suiki_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "回声从身后折来，你没有再追向响亮的出口。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 5
+        },
+        "xp": 1,
+        "id": "suiki_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你拖回沉在急水里的杖，杖带没有再滑脱。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "xp": 1,
+        "id": "suiki_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "一夜涨水抹去线索，你只好退回上游重找。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "suiki_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你用石头压住空碗，免得暗风把它滚进水里。",
+        "effects": {},
+        "weight": 2,
+        "id": "suiki_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "水迹忽然在干壁续起，你先绕到背面查看。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "suiki_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "同行的鬼想抄近路，你让他看完脚下的裂缝。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "suiki_16"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你用旧水位木片比过新痕，发现潮水并非自然。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "suiki:watermark"
+        ],
+        "xp": 1,
+        "id": "suiki_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "暗流截住返回的路，你沿岩缝干路绕回入口。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "suiki:drypath"
+        ],
+        "xp": 1,
+        "id": "suiki_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你撑杖涉过深水，落到浅处才松开咬紧的牙。",
+        "effects": {
+          "health": -1
+        },
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "id": "suiki_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你听完同伴不同的推断，暂且收起追错的怒气。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "suiki_20"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你将杖靠在石边，蹲下来喝完一盏淡酒。",
+        "effects": {},
+        "weight": 2,
+        "id": "suiki_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "长衣晒不见太阳，你在暖石旁慢慢烘干。",
+        "effects": {},
+        "weight": 2,
+        "id": "suiki_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你停在温暖水边缓过肩痛，没有继续硬撑杖。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "suiki_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你认出过于整齐的足迹，反向查看了来路。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "suiki_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "木片上的旧痕已经磨浅，你照记忆另刻一枚。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "suiki:watermark"
+        ],
+        "clear": [
+          "suiki:watermark"
+        ],
+        "id": "suiki_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "岩缝中添了新裂口，你重走干路才让旁人跟来。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "suiki:drypath"
+        ],
+        "xp": 1,
+        "id": "suiki_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你为杖端裹上新布，握住时比从前柔软。",
+        "effects": {},
+        "weight": 2,
+        "id": "suiki_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "一壶淡酒温得太久，你笑着加了半杯冷水。",
+        "effects": {},
+        "weight": 2,
+        "id": "suiki_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "青娥从壁后移出半步，你先看清她留下的水迹。",
+        "effects": {},
+        "weight": 2,
+        "id": "suiki_29",
+        "with": [
+          "seiga"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "小町嫌你追得太急，你站在渡口听完她的提醒。",
+        "effects": {},
+        "weight": 2,
+        "id": "suiki_30",
+        "with": [
+          "komachi"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "映姬问你追索的依据，你把亲眼所见逐句说清。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "id": "suiki_31",
+        "with": [
+          "eiki"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "青娥又绕过石壁，你没有贸然扑向那道薄影。",
+        "effects": {},
+        "weight": 2,
+        "id": "suiki_32",
+        "with": [
+          "seiga"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你想起小町的提醒，在岔路前多停了一息。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "komachi"
+        ],
+        "id": "suiki_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你把冷水泼在脸上，让残留的怒意慢慢散去。",
+        "effects": {},
+        "weight": 2,
+        "id": "suiki_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你在旧入口坐过一晚，终于肯听水声之外的静。",
+        "effects": {},
+        "weight": 2,
+        "id": "suiki_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你看清新水路的走势，将最急的一段留给后来者。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "suiki_36"
+      }
+    ],
+    "success": "你把鬼力磨成懂得回头的追索，留下可继续辨认的水路；此番退居之后，长杖不必总被怒气举起。",
+    "bittersweet": "你追到过线索，也被几道假迹引远；水路仍有未解的分岔，退居时终于肯容下没追完的名字。",
+    "failure": "你将怒气当作方向，长久追索却越过了真正的痕；回到旧水路休整以后，还须重新学会看清脚下。"
+  },
+  {
+    "id": "hakusen",
+    "name": "白仙",
+    "category": "main",
+    "work": "fs",
+    "location": "大陆鼠仙的画案",
+    "identity": "以猫画作记号、能操纵老鼠的鼠仙",
+    "source": "https://thbwiki.cc/碎片角色列表",
+    "life": "long",
+    "body": "humanoid",
+    "realm": "gensokyo",
+    "career": "magic",
+    "family": false,
+    "origin": "你初次画猫时听见墙中鼠声，笔尖停在半张脸上。",
+    "milestones": [
+      {
+        "text": "你能分清鼠群不同的回应，画猫不再只是照着临摹。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "insight",
+          "min": 6
+        },
+        "fail": "画迹总比鼠声慢半拍，你只能反复重画才能驱使。",
+        "passEffects": {
+          "insight": 1
+        },
+        "failEffects": {
+          "fortune": -1
+        },
+        "pass": "你把画迹与鼠声连在一起，法术开始回应细小的意图。"
+      },
+      {
+        "check": {
+          "stat": "bond",
+          "min": 6
+        },
+        "fail": "你总急着驱使鼠群，它们的躁动也令你越来越疲倦。",
+        "passEffects": {
+          "bond": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "你愿等鼠群自行归来，操纵的法术渐能留出余地。"
+      },
+      {
+        "text": "你收起四处奔走的画案，留在安静处继续听鼠声。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你看见墨点像一只猫耳，先把纸转了半圈。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "hakusen_01"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你抱起石磨研墨，直到腕下的墨色渐渐匀开。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "xp": 1,
+        "id": "hakusen_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "鼠声挤成一团，你捂住耳朵才听见自己的气息。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "insight": 4
+        },
+        "id": "hakusen_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你从急促鼠声里听出惊慌，放下刚画的猫脸。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "hakusen_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你在纸角画一段卷尾，画完自己也笑了一声。",
+        "effects": {},
+        "weight": 2,
+        "id": "hakusen_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你将洒落的米扫成小堆，留下墙边一条空隙。",
+        "effects": {},
+        "weight": 2,
+        "id": "hakusen_06"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "新墨沾在袖口，你搓了半天还是留下灰痕。",
+        "effects": {},
+        "weight": 2,
+        "id": "hakusen_07"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "最胆小的鼠终于绕过桌脚，你让它先走完。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "hakusen_08"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你磨出一小盒浓墨，盖好收在画案最里侧。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "hakusen:ink"
+        ],
+        "id": "hakusen_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你记住一种低短鼠鸣，练习用它唤回散开的鼠。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "hakusen:call"
+        ],
+        "xp": 1,
+        "id": "hakusen_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你看出两张猫画眼神不同，留下较安静的一张。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 5
+        },
+        "xp": 1,
+        "id": "hakusen_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你背着画案走完长坡，纸角没有被风打散。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "id": "hakusen_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "湿气卷起整张新纸，你只好铺平再晾一夜。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "hakusen_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你掰开刚蒸的米团，热气在胡须旁散开。",
+        "effects": {},
+        "weight": 2,
+        "id": "hakusen_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你将猫画留白一笔，鼠群果然不再挤向同一处。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "hakusen_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你等鼠群绕完米堆，没有立刻驱它们回墙中。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "hakusen_16"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "浓墨盒终于派上用场，浅淡的猫眼被你重新描清。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "hakusen:ink"
+        ],
+        "xp": 1,
+        "id": "hakusen_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "散鼠被新声惊开，你用记熟的低鸣慢慢唤回。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "hakusen:call"
+        ],
+        "xp": 1,
+        "id": "hakusen_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你撑住滑落的画案，肩背压出一阵钝痛。",
+        "effects": {
+          "health": -1
+        },
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "id": "hakusen_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你留出不受驱使的空处，鼠群停下后才再次响应。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "hakusen_20"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你把画坏的纸折成小盒，盛住散落的米粒。",
+        "effects": {},
+        "weight": 2,
+        "id": "hakusen_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "午后你眯眼晾纸，墙后的鼠声也慢了下来。",
+        "effects": {},
+        "weight": 2,
+        "id": "hakusen_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你为酸手停笔一天，用茶水暖了暖掌心。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "hakusen_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你发现猫画不必画全，将最后一笔留在纸外。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "hakusen_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "浓墨干成硬块，你取出残墨磨碎再兑一点水。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "hakusen:ink"
+        ],
+        "clear": [
+          "hakusen:ink"
+        ],
+        "id": "hakusen_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "鼠群换了更轻的回应，你调整旧唤声的长短。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "hakusen:call"
+        ],
+        "xp": 1,
+        "id": "hakusen_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "旧袖口磨得发软，你卷高一点免得扫到湿墨。",
+        "effects": {},
+        "weight": 2,
+        "id": "hakusen_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你将米罐挪离日光，桌上的茶却故意留着晒暖。",
+        "effects": {},
+        "weight": 2,
+        "id": "hakusen_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "小铃问猫画上的眼睛，你让她先看墙边的鼠迹。",
+        "effects": {},
+        "weight": 2,
+        "id": "hakusen_29",
+        "with": [
+          "kosuzu"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "华扇看过你的旧纸，你顺手展开还没画完的一张。",
+        "effects": {},
+        "weight": 2,
+        "id": "hakusen_30",
+        "with": [
+          "kasen"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "小铃想摸新画，你等墨干透才递到她面前。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "hakusen_31",
+        "with": [
+          "kosuzu"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "霖之助借你一只旧砚，你磨开墨后将底纹洗净。",
+        "effects": {},
+        "weight": 2,
+        "id": "hakusen_32",
+        "with": [
+          "rinnosuke"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你想起小铃认真看画的眼神，将猫耳再画圆些。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "kosuzu"
+        ],
+        "id": "hakusen_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "一只鼠躲在纸盒里睡，你把画案空出那一角。",
+        "effects": {},
+        "weight": 2,
+        "id": "hakusen_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你在静屋里喝完淡茶，迟迟没有重新拿笔。",
+        "effects": {},
+        "weight": 2,
+        "id": "hakusen_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你听完墙中的新鼠声，只在纸上点下两滴墨。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "hakusen_36"
+      }
+    ],
+    "success": "你把画猫与听鼠磨成能留余地的法术，静居时也听得见细小回应；此番修行留下了未封死的空白。",
+    "bittersweet": "你留下许多猫画，也仍有几种鼠声不懂；静屋容下半成的笔墨，让法术与躁意都慢慢沉下。",
+    "failure": "你急着让画迹支配一切，鼠群的躁动也耗空心神；收起画案之后，只得从一声最轻的鼠鸣重学。"
+  },
+  {
+    "id": "namazu",
+    "name": "大鲶鱼",
+    "category": "main",
+    "work": "th12.3",
+    "location": "美铃梦中的变动舞台",
+    "identity": "出现在美铃梦中的大鲶鱼Boss",
+    "source": "https://thbwiki.cc/大鲶鱼",
+    "life": "spirit",
+    "body": "beast",
+    "realm": "dream",
+    "career": "animal",
+    "family": false,
+    "origin": "你在一片梦水中初醒，翻身便摇动了岸上的影子。",
+    "milestones": [
+      {
+        "text": "你能分清梦岸与梦水，甩尾时开始留下自己的波纹。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "health",
+          "min": 6
+        },
+        "fail": "你的跃动总撕散梦景，只能在浅梦里重新聚起身形。",
+        "passEffects": {
+          "health": 1
+        },
+        "failEffects": {
+          "health": -1
+        },
+        "pass": "你的跃动撑起完整梦景，落水后还能稳住岸边楼影。"
+      },
+      {
+        "check": {
+          "stat": "insight",
+          "min": 6
+        },
+        "fail": "你仍将恐惧当成力量，梦里的震动越响越难收回。",
+        "passEffects": {
+          "insight": 1
+        },
+        "failEffects": {
+          "fortune": -1
+        },
+        "pass": "你看懂梦里恐惧的来路，不再每次都把震动放大。"
+      },
+      {
+        "text": "你潜回更深的梦水，将岸上的喧声留给醒来的世界。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "一粒梦雨落到你额上，你看见它变成小星。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "id": "namazu_01"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你翻过浅梦的水脊，鱼须没有挂住岸影。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "xp": 1,
+        "id": "namazu_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你甩尾过重，刚聚成的水岸便碎成薄雾。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "health": 4
+        },
+        "id": "namazu_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你从倒影缺口认出梦岸，慢慢绕过那一处。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "namazu_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你含住一朵梦泡，松嘴时它又变成月亮。",
+        "effects": {},
+        "weight": 2,
+        "id": "namazu_05"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你在无底梦水中悬稳，鱼须顺着细流飘动。",
+        "effects": {},
+        "weight": 2,
+        "id": "namazu_06"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "岸影换了一种颜色，你只是偏头看了一会。",
+        "effects": {},
+        "weight": 2,
+        "id": "namazu_07"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "梦里有人轻轻笑了一声，你跟着收低了波纹。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "namazu_08"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你从梦底衔起一枚亮贝，把它藏进软沙。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "namazu:shell"
+        ],
+        "id": "namazu_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你练出慢甩尾的节奏，让一段岸影不再摇晃。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "namazu:slowtail"
+        ],
+        "xp": 1,
+        "id": "namazu_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你看出楼影正向水中倒来，先沉下半截身体。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 5
+        },
+        "xp": 1,
+        "id": "namazu_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你撑住一块浮来的梦石，让它慢慢滑过鱼背。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "xp": 1,
+        "id": "namazu_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "一阵梦风吹乱水面，岸上的门都转向了背后。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "namazu_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你在梦水中打了个哈欠，吐出三圈细泡。",
+        "effects": {},
+        "weight": 2,
+        "id": "namazu_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你听出岸影里的惊惶，将下一次翻身放轻。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "namazu_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "一段笑声从岸边经过，你没有立刻掀起波浪。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "namazu_16"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "亮贝在软沙中发光，你借它找到原来的水湾。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "namazu:shell"
+        ],
+        "id": "namazu_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "岸影开始震颤，你用练熟的慢尾将波纹拨散。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "namazu:slowtail"
+        ],
+        "xp": 1,
+        "id": "namazu_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你跃起撑住沉落的梦楼，落水后须根轻轻发抖。",
+        "effects": {
+          "health": -1
+        },
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "id": "namazu_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "梦里的惊叫渐止，你也不再把每声低语当挑衅。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "namazu_20"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "一只馒头落入梦水，你看它变成花后漂走。",
+        "effects": {},
+        "weight": 2,
+        "id": "namazu_21"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你把鱼须搭在浅岸上，静听水底传来的空响。",
+        "effects": {},
+        "weight": 2,
+        "id": "namazu_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你潜回平静的梦水，散开的身形重新聚齐。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "namazu_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你看清倒下的楼影只是旧梦，没有追着它再震。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "namazu_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "亮贝化成一片白雾，你等它散尽才游开。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "namazu:shell"
+        ],
+        "clear": [
+          "namazu:shell"
+        ],
+        "id": "namazu_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "慢尾的节拍随新梦变短，你试过两次便重新稳住。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "namazu:slowtail"
+        ],
+        "xp": 1,
+        "id": "namazu_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "梦岸上飘来糖香，你游近又停在闻得到的地方。",
+        "effects": {},
+        "weight": 2,
+        "id": "namazu_27"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你用鼻尖顶开一扇浮门，后面还是一片水光。",
+        "effects": {},
+        "weight": 2,
+        "id": "namazu_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "美铃的拳风掠过梦水，你先收起挡路的长须。",
+        "effects": {},
+        "weight": 2,
+        "id": "namazu_29",
+        "with": [
+          "meiling"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "美铃站稳梦岸，你将翻起的水浪留在远处。",
+        "effects": {},
+        "weight": 2,
+        "id": "namazu_30",
+        "with": [
+          "meiling"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "美铃问起震动的来处，你让梦水显出旧波纹。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "id": "namazu_31",
+        "with": [
+          "meiling"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "美铃停手看了看水面，你也只摇了一下尾尖。",
+        "effects": {},
+        "weight": 2,
+        "id": "namazu_32",
+        "with": [
+          "meiling"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你想起美铃落拳时的风，梦水浮起一个小圈。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "meiling"
+        ],
+        "id": "namazu_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你潜过已空的楼影，水里不再留着糖香。",
+        "effects": {},
+        "weight": 2,
+        "id": "namazu_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "最深的梦水渐渐变暖，你把鱼须收回身旁。",
+        "effects": {},
+        "weight": 2,
+        "id": "namazu_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你辨出将醒的梦声，放轻尾拍让岸影慢慢远去。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "namazu_36"
+      }
+    ],
+    "success": "你从摇岸的初梦学会容下安静，震动也能留下退路；潜回深处以后，这段梦中生涯不必靠惊叫延续。",
+    "bittersweet": "你撑起过梦景，也摇碎过几段岸影；醒声渐近时，仍有未懂的恐惧随你沉入下一层温暖的梦水。",
+    "failure": "你把恐惧一再放成巨响，连自己也难以留住梦岸；潜回深处重新聚形后，仍要学会轻轻摆动尾尖。"
+  },
+  {
+    "id": "myouren",
+    "name": "命莲",
+    "category": "main",
+    "work": "th12",
+    "location": "生前山寺的回忆",
+    "identity": "圣白莲的弟弟、传说中的僧侣",
+    "source": "https://thbwiki.cc/附带文档:东方星莲船/角色设定&ExStory",
+    "life": "human",
+    "body": "humanoid",
+    "realm": "past",
+    "career": "magic",
+    "family": false,
+    "origin": "你跟着姐姐走过山路，先在掌中托稳一只空钵。",
+    "milestones": [
+      {
+        "text": "你第一次独自坐完晨课，学会将急躁收进呼吸里。",
+        "effects": {
+          "insight": 1
+        }
+      },
+      {
+        "check": {
+          "stat": "insight",
+          "min": 6
+        },
+        "fail": "飞钵总在近处打转，你仍靠步行将饭食带回山寺。",
+        "passEffects": {
+          "insight": 1
+        },
+        "failEffects": {
+          "fortune": -1
+        },
+        "pass": "你渐能让钵离开掌心，山寺的饭食有了新的来路。"
+      },
+      {
+        "check": {
+          "stat": "bond",
+          "min": 6
+        },
+        "fail": "你总急于证明法术，救急之后仍听不懂旁人的忧惧。",
+        "passEffects": {
+          "bond": 1
+        },
+        "failEffects": {
+          "bond": -1
+        },
+        "pass": "你肯把法术用在眼前人的饥困，修行不再只为自己。"
+      },
+      {
+        "text": "你走山路渐慢，仍将一碗热食留给来得晚的人。",
+        "effects": {}
+      }
+    ],
+    "events": [
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "白莲握住你托钵的手，你终于不再把它倾斜。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "myouren_01",
+        "with": [
+          "byakuren"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你抱着空钵登完石阶，停在最高一级换气。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 5
+        },
+        "xp": 1,
+        "id": "myouren_02"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "坐到一半腿便发麻，你起身揉过才又坐下。",
+        "effects": {},
+        "weight": 2,
+        "max": {
+          "health": 4
+        },
+        "id": "myouren_03"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你听懂经句中重复的字，低声问它为何不同。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "myouren_04"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "白莲给你留了一块软饼，你掰开分回一半。",
+        "effects": {},
+        "weight": 2,
+        "id": "myouren_05",
+        "with": [
+          "byakuren"
+        ]
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "你将落进钵中的松针拣出，吹去底部一点尘。",
+        "effects": {},
+        "weight": 2,
+        "id": "myouren_06"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "雨落在寺檐上，你听着它慢慢数到夜深。",
+        "effects": {},
+        "weight": 2,
+        "id": "myouren_07"
+      },
+      {
+        "phases": [
+          0,
+          1
+        ],
+        "text": "白莲没有催你走，你等喘息平稳才抬起头。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "myouren_08",
+        "with": [
+          "byakuren"
+        ]
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你修补裂了一角的木钵，将它留作练习之用。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "myouren:bowl"
+        ],
+        "id": "myouren_09"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你背熟一段安定心神的经句，试着不看纸页。",
+        "effects": {},
+        "weight": 2,
+        "set": [
+          "myouren:verse"
+        ],
+        "xp": 1,
+        "id": "myouren_10"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你分清想让钵飞与催它飞的差别，手掌渐松。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 6
+        },
+        "xp": 1,
+        "id": "myouren_11"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你背着山下的米走回寺里，最后几级没有歇脚。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "health": 6
+        },
+        "xp": 1,
+        "id": "myouren_12"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "一阵山风吹散纸页，你沿湿路逐张拾回来。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "fortune": -1
+        },
+        "id": "myouren_13"
+      },
+      {
+        "phases": [
+          1,
+          2
+        ],
+        "text": "你用昨夜剩粥煮得更稠，添水后又分出一碗。",
+        "effects": {},
+        "weight": 2,
+        "id": "myouren_14"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你不再盯住飞钵的高度，先看它能落在哪里。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "insight": 7
+        },
+        "xp": 1,
+        "id": "myouren_15"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "白莲听你讲今日的山路，你也问她走得累不累。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "bond": 1
+        },
+        "id": "myouren_16",
+        "with": [
+          "byakuren"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "补好的木钵稳稳离掌，你让它只飞到门边。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "myouren:bowl"
+        ],
+        "xp": 1,
+        "id": "myouren_17"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "杂念挤进静坐时，你念过熟经才听清自己的呼吸。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "myouren:verse"
+        ],
+        "xp": 1,
+        "id": "myouren_18"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你追着被风吹偏的钵越过长坡，脚下终于站稳。",
+        "effects": {
+          "health": -1
+        },
+        "weight": 2,
+        "min": {
+          "health": 7
+        },
+        "id": "myouren_19"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "来人怕你只顾显法，你先盛一碗热粥给他。",
+        "effects": {
+          "bond": 1
+        },
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "myouren_20"
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "白莲问飞钵的诀窍，你托住她的掌慢慢演示。",
+        "effects": {},
+        "weight": 2,
+        "xp": 1,
+        "id": "myouren_21",
+        "with": [
+          "byakuren"
+        ]
+      },
+      {
+        "phases": [
+          2,
+          3
+        ],
+        "text": "你晒暖湿鞋后坐在檐下，先听完一阵松涛。",
+        "effects": {},
+        "weight": 2,
+        "id": "myouren_22"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你为咳嗽停下长路，将今天的米留待明早再背。",
+        "effects": {
+          "health": 1
+        },
+        "weight": 2,
+        "bias": {
+          "health": -1
+        },
+        "id": "myouren_23"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "你看出法术中的炫耀，下一次只让钵飞够远。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "myouren_24"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "练习木钵终于裂开，你将残片收在寺外树根旁。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "myouren:bowl"
+        ],
+        "clear": [
+          "myouren:bowl"
+        ],
+        "id": "myouren_25"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "经句在迟缓呼吸里添了新意，你没有急着说给人听。",
+        "effects": {},
+        "weight": 2,
+        "requires": [
+          "myouren:verse"
+        ],
+        "xp": 1,
+        "id": "myouren_26"
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "白莲陪你煮完一锅淡粥，两人各添了一次水。",
+        "effects": {},
+        "weight": 2,
+        "id": "myouren_27",
+        "with": [
+          "byakuren"
+        ]
+      },
+      {
+        "phases": [
+          3,
+          4
+        ],
+        "text": "晨光照到坐垫边，你往暖处挪了半掌的位置。",
+        "effects": {},
+        "weight": 2,
+        "id": "myouren_28"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "白莲问你还想走多远，你指了指寺前那段坡。",
+        "effects": {},
+        "weight": 2,
+        "id": "myouren_29",
+        "with": [
+          "byakuren"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "白莲将钵递回你掌中，你没有再急着令它飞起。",
+        "effects": {},
+        "weight": 2,
+        "id": "myouren_30",
+        "with": [
+          "byakuren"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "白莲听你讲起法术的局限，你终于没有避开此话。",
+        "effects": {},
+        "weight": 2,
+        "min": {
+          "bond": 6
+        },
+        "id": "myouren_31",
+        "with": [
+          "byakuren"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你替白莲留好一碗热粥，等她来时再揭开盖。",
+        "effects": {},
+        "weight": 2,
+        "id": "myouren_32",
+        "with": [
+          "byakuren"
+        ]
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你想起白莲陪走的旧山路，慢慢合拢了手掌。",
+        "effects": {},
+        "weight": 2,
+        "remember": [
+          "byakuren"
+        ],
+        "id": "myouren_33"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你让年轻僧人先走上坡，自己在后面慢慢跟。",
+        "effects": {},
+        "weight": 2,
+        "id": "myouren_34"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "晚钟响完后你仍坐了一会，听见屋外的细雨。",
+        "effects": {},
+        "weight": 2,
+        "id": "myouren_35"
+      },
+      {
+        "phases": [
+          4,
+          4
+        ],
+        "text": "你将难懂的经句留给来日，先把手里的钵放稳。",
+        "effects": {},
+        "weight": 2,
+        "bias": {
+          "insight": 1
+        },
+        "xp": 1,
+        "id": "myouren_36"
+      }
+    ],
+    "success": "你将飞钵与一碗热食都留给人间，法术之外也有人愿意靠近；生前的山路走尽，姐姐仍记得你的手。",
+    "bittersweet": "你修成几分法术，也留下未说透的心意；人类的一生终有尽处，山寺的热粥与姐姐的记忆继续温着。",
+    "failure": "你太急于让法术证明自己，许多关怀迟到了一步；生前的路终会走尽，留下的钵仍等人读懂其分量。"
+  }
+]

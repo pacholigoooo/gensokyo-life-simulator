@@ -1,0 +1,6773 @@
+[
+  {
+    "id": "wakasagihime",
+    "title": "给岸边留的低音",
+    "source": "https://thbwiki.cc/若鹭姬",
+    "start": "stone_pitch",
+    "nodes": {
+      "stone_pitch": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "hear_vein",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你把花纹石放到水边听回声，若鹭姬唱低半个音，见你听得入神，尾鳍轻轻拍出一圈波纹。",
+            "effects": {},
+            "label": "听石边低音",
+            "trust": 1,
+            "set": [
+              "cove_pitch"
+            ],
+            "next": "shallows_invite"
+          },
+          {
+            "key": "watch_ripple",
+            "when": {},
+            "text": "你等花纹石上的水珠落尽，若鹭姬把小石朝你推近，唱到与你对视时漏了一拍。",
+            "effects": {},
+            "label": "等水珠落尽",
+            "trust": 1,
+            "next": "shallows_invite"
+          }
+        ]
+      },
+      "shallows_invite": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "answer_softly",
+            "when": {
+              "min": {
+                "bond": 8
+              }
+            },
+            "text": "若鹭姬主动游到浅水，问你愿不愿意接她的尾音；你轻声应和，她把岸边的位置指给你。",
+            "effects": {},
+            "label": "接一段尾音",
+            "trust": 1,
+            "set": [
+              "shore_answer"
+            ],
+            "next": "stone_shelter"
+          },
+          {
+            "key": "keep_listening",
+            "when": {},
+            "text": "若鹭姬招你在岸石坐下，亲自把新歌唱慢；你听完才鼓掌，她笑着约好下次的低音。",
+            "effects": {},
+            "label": "坐到听歌石",
+            "trust": 1,
+            "next": "stone_shelter"
+          }
+        ]
+      },
+      "stone_shelter": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "match_pitch",
+            "when": {
+              "relationFlags": [
+                "cove_pitch"
+              ]
+            },
+            "text": "凭记下的回声，你替她挑出挡浪也能传歌的两块石头；她潜下摆稳，浮起时先问你冷不冷。",
+            "effects": {},
+            "label": "按回声挑石",
+            "trust": 1,
+            "next": "private_refrain"
+          },
+          {
+            "key": "wait_out_wave",
+            "when": {},
+            "text": "湖风吹乱石堆，你递下细绳，由她在水中系牢；她让你退到干处，自己听着你的脚步收工。",
+            "effects": {},
+            "label": "协助系石绳",
+            "trust": 1,
+            "next": "private_refrain"
+          }
+        ]
+      },
+      "private_refrain": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "sing_for_shore",
+            "when": {
+              "relationFlags": [
+                "shore_answer"
+              ]
+            },
+            "text": "听过你接的尾音，她把那半句编进新曲，唱完低头问：这样一听便知道是留给你的，好吗？",
+            "effects": {},
+            "label": "收下专属半句",
+            "trust": 1,
+            "next": "water_vow"
+          },
+          {
+            "key": "name_the_song",
+            "when": {},
+            "text": "若鹭姬给新曲取了你坐的岸石之名，还把歌里的停顿指给你，说她每次都想等你在那里。",
+            "effects": {},
+            "label": "记住岸石曲名",
+            "trust": 1,
+            "next": "water_vow"
+          }
+        ]
+      },
+      "water_vow": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "return_her_song",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "shore_answer"
+              ]
+            },
+            "text": "若鹭姬把你接出的尾音唱了一遍，游近浅湾握住你的手，说今后最想唱给你听。你认真回应喜欢，两人约定相恋，让岸上的声音与水下的歌继续相接。",
+            "effects": {},
+            "label": "浅湾两情相悦",
+            "trust": 0,
+            "status": "lover",
+            "next": "paired_stones"
+          },
+          {
+            "key": "keep_cove_friend",
+            "when": {},
+            "text": "你们把心意留在朋友的位置，若鹭姬照样邀你听新曲，浅湾那块干燥的岸石也供你歇脚。",
+            "effects": {},
+            "label": "相约继续听歌",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "paired_stones": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "rest_by_song",
+            "when": {},
+            "text": "相恋后你们挑出两颗纹路相接的小石，放在水边；她倚着浅湾唱，你一边描纹一边等她唱完。",
+            "effects": {},
+            "label": "水边并排描纹",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "cove_cheek",
+        "text": "若鹭姬游近岸石，握着你的手唱新调，尾音未落便亲你的脸颊。你俯身回吻，她笑得漏了半拍。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "若鹭姬挑出水纹石，你们各说像什么。她在浅水托着你的手，陪你等石面重新清亮。"
+      },
+      {
+        "key": "stone_duet",
+        "text": "你敲着两颗小石约她即兴应和，若鹭姬唱出跳跃的高音，忽然将你的名字放进曲里；你笑着接下这一句。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们沿浅湾辨岸石回声，她逐处唱短音，你用脚步记远近，回程凭音色找到彼此。"
+      },
+      {
+        "key": "lake_weather",
+        "text": "湖雾薄下来，若鹭姬邀你沿岸找一处新的听歌点。你伸手牵住她，她笑着握紧；水里的尾影陪着岸上的脚步。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "雨后你们拨开挡路的浮叶。若鹭姬提醒湿石，你看清她停的浅水，收好小事再聊今天。"
+      }
+    ],
+    "farewell": "浅湾收下这一生的低音与回应，属于你们的那半句歌，停在岸石边每次愿意相见的水纹之间。",
+    "interrupted": "你们约好以朋友身份到浅湾听歌，若鹭姬让岸上的回应留在合唱里，一曲唱完便慢慢聊聊新石纹。"
+  },
+  {
+    "id": "sekibanki",
+    "title": "巷灯照着松针脚",
+    "source": "https://thbwiki.cc/赤蛮奇",
+    "start": "collar_glance",
+    "nodes": {
+      "collar_glance": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "notice_turn",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你看出她领巾转头时绷住一角，替她松开针脚；赤蛮奇试戴着与你对视，耳边泛起一点红。",
+            "effects": {},
+            "label": "松开转头针脚",
+            "trust": 1,
+            "set": [
+              "collar_room"
+            ],
+            "next": "alley_lantern"
+          },
+          {
+            "key": "return_cloth",
+            "when": {},
+            "text": "你将领巾平展递回，赤蛮奇抚平布角，伸手给你看松开的一针。你抬头听她说明，她将针线放到你掌边，笑着等你接下一句。",
+            "effects": {},
+            "label": "把布角展平",
+            "trust": 1,
+            "next": "alley_lantern"
+          }
+        ]
+      },
+      "alley_lantern": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "recognize_hum",
+            "when": {
+              "min": {
+                "bond": 8
+              }
+            },
+            "text": "她主动提来一盏小灯，邀你沿窄巷认屋檐；你认出头顶的轻哼，她飞低些，陪你对齐脚步。",
+            "effects": {},
+            "label": "听轻哼认路",
+            "trust": 1,
+            "set": [
+              "eaves_hum"
+            ],
+            "next": "seam_weather"
+          },
+          {
+            "key": "walk_under_light",
+            "when": {},
+            "text": "赤蛮奇将巷灯递给你，自己的头先看过前方屋檐。头回到肩上，在拐角招你走近，指着地面的两道灯影，问你更喜欢哪边。",
+            "effects": {},
+            "label": "提灯走窄巷",
+            "trust": 1,
+            "next": "seam_weather"
+          }
+        ]
+      },
+      "seam_weather": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "stitch_inner_edge",
+            "when": {
+              "relationFlags": [
+                "collar_room"
+              ]
+            },
+            "text": "你按留过的余量补上领巾内沿，赤蛮奇试着升起头确认松紧，然后替你掸净肩头的线屑。",
+            "effects": {},
+            "label": "补好内沿",
+            "trust": 1,
+            "next": "eaves_signal"
+          },
+          {
+            "key": "ask_fitting",
+            "when": {},
+            "text": "你先问她转头需要多宽，再裁一段衬布；她耐心给你试，收针时将灯移近你发酸的眼睛。",
+            "effects": {},
+            "label": "按转头裁衬",
+            "trust": 1,
+            "next": "eaves_signal"
+          }
+        ]
+      },
+      "eaves_signal": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "share_hum",
+            "when": {
+              "relationFlags": [
+                "eaves_hum"
+              ]
+            },
+            "text": "赤蛮奇把认檐的轻哼教给你，说巷口听见这个调子便会来找你；示范到半途，她忽然别过脸。",
+            "effects": {},
+            "label": "约好轻哼暗号",
+            "trust": 1,
+            "next": "lamplit_answer"
+          },
+          {
+            "key": "fold_red_corner",
+            "when": {},
+            "text": "她把一角新红布折成记路的标记，让你别绕错门；你问为何特意留给你，她低声说想等你来。",
+            "effects": {},
+            "label": "收下巷口标记",
+            "trust": 1,
+            "next": "lamplit_answer"
+          }
+        ]
+      },
+      "lamplit_answer": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "hold_her_hand",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "eaves_hum"
+              ]
+            },
+            "text": "赤蛮奇的头绕过巷灯，回到肩上专心看你。她拉住你的袖角，说想让你成为最亲近的恋人；你把手交给她，答应这份喜欢。",
+            "effects": {},
+            "label": "巷灯下定心意",
+            "trust": 0,
+            "status": "lover",
+            "next": "collar_care"
+          },
+          {
+            "key": "part_at_corner",
+            "when": {},
+            "text": "赤蛮奇听完你的犹豫，把灯交到你手里送你出巷；你们以后以朋友身份，照样能谈针脚和屋檐。",
+            "effects": {},
+            "label": "巷角朋友相送",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "collar_care": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "warm_lamp",
+            "when": {},
+            "text": "相恋后的凉夜，赤蛮奇先把灯挂好才与你并肩坐；你给领巾添一枚扣，她挑好位置供你缝。",
+            "effects": {},
+            "label": "并肩缝一枚扣",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "cheek_below_eaves",
+        "text": "赤蛮奇的头绕过巷灯，回到肩上便拉住你，笑着吻过来。你抱紧她回吻，她藏起发红的脸，却把你的手握得更牢。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "檐下松线缝好，赤蛮奇听完你的烦心事，靠到身旁。你抱住她，她拍着你的背，等针线收齐。"
+      },
+      {
+        "key": "two_shadows",
+        "text": "她的头看清转角灯影，回肩后邀你猜哪条巷子最亮。你向她伸手，她笑着握上；两人走去看灯下相叠的身影。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们沿窄巷辨门边木纹，她从高处补看缺角，再回肩头听你描述，用各自的说法记住回路。"
+      },
+      {
+        "key": "cloth_choice",
+        "text": "赤蛮奇把两种鲜亮衬布举到颊边，请你替她挑约会配色。你选好，她伸手邀你也试一块，认真夸你眼光合她心意。",
+        "effects": {},
+        "interval": 6,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们摸过新布厚薄，她自己试领口，你帮着量松紧。她说清舒适的尺寸，两人在纸边各记一笔。"
+      }
+    ],
+    "farewell": "巷灯照过两个人并排的影子，领巾内沿细密的针脚，留着这一生每次愿意靠近的余量。",
+    "interrupted": "赤蛮奇与你约好朋友的窄巷闲谈，领巾的针脚和屋檐的转角，都可以面对面慢慢商量。"
+  },
+  {
+    "id": "kagerou",
+    "title": "竹叶香里的回程",
+    "source": "https://thbwiki.cc/今泉影狼",
+    "start": "bamboo_scent",
+    "nodes": {
+      "bamboo_scent": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "track_bend",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你沿竹叶气味认出小径的弯口，影狼忽然凑近确认，发觉你望着她便轻轻收回耳朵。",
+            "effects": {},
+            "label": "辨竹叶弯口",
+            "trust": 1,
+            "set": [
+              "bamboo_bend"
+            ],
+            "next": "moon_path"
+          },
+          {
+            "key": "wait_for_ears",
+            "when": {},
+            "text": "你停在藤边等她选路，影狼拨开竹叶让你看清落脚，转身时耳尖擦过你的衣袖，步子慢了。",
+            "effects": {},
+            "label": "等她选一条路",
+            "trust": 1,
+            "next": "moon_path"
+          }
+        ]
+      },
+      "moon_path": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "accept_full_moon",
+            "when": {
+              "min": {
+                "health": 8
+              }
+            },
+            "text": "影狼主动约你看满月，领你走过粗枝间的空地；你跟得稳，她放心展开狼形，先绕你跑一圈。",
+            "effects": {},
+            "label": "应邀看狼形",
+            "trust": 1,
+            "set": [
+              "moon_seen"
+            ],
+            "next": "dry_crossing"
+          },
+          {
+            "key": "sit_with_moon",
+            "when": {},
+            "text": "她约你在竹林边看满月，先替你找干燥的坐处；你听她说变身后的厚毛，她把披衣挪开一点。",
+            "effects": {},
+            "label": "听满月的烦恼",
+            "trust": 1,
+            "next": "dry_crossing"
+          }
+        ]
+      },
+      "dry_crossing": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "recall_bend",
+            "when": {
+              "relationFlags": [
+                "bamboo_bend"
+              ]
+            },
+            "text": "你认出记过的弯口被雨水淹了，陪她沿高处试路；她用嗅觉确认回程，把最稳的一块石让给你。",
+            "effects": {},
+            "label": "沿气味换高路",
+            "trust": 1,
+            "next": "fur_ribbon"
+          },
+          {
+            "key": "mark_safe_stones",
+            "when": {},
+            "text": "你给湿滑的石头作上浅记号，影狼逐块试过后招你跟上；到干地，她帮你挑出袖口的藤刺。",
+            "effects": {},
+            "label": "给落脚石作记号",
+            "trust": 1,
+            "next": "fur_ribbon"
+          }
+        ]
+      },
+      "fur_ribbon": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "fit_loose_ribbon",
+            "when": {
+              "relationFlags": [
+                "moon_seen"
+              ]
+            },
+            "text": "你见过狼形，给她剪一条宽松束带避开粗毛；影狼收下时说，满月也很想与你待在一起。",
+            "effects": {},
+            "label": "裁宽松束带",
+            "trust": 1,
+            "next": "bamboo_promise"
+          },
+          {
+            "key": "keep_evening_space",
+            "when": {},
+            "text": "影狼清出一小片竹叶地，特意给你留出并肩坐的位置；她问你愿不愿意把以后的月夜也分给她。",
+            "effects": {},
+            "label": "分一个月夜位置",
+            "trust": 1,
+            "next": "bamboo_promise"
+          }
+        ]
+      },
+      "bamboo_promise": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "choose_each_other",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "moon_seen"
+              ]
+            },
+            "text": "你沿留下的竹枝空隙走近，影狼迎来，说愿把月夜留给喜欢的你。你回应喜欢，向她伸手，她握住答应相恋，两人并肩看月。",
+            "effects": {},
+            "label": "竹林中约定相恋",
+            "trust": 0,
+            "status": "lover",
+            "next": "comb_at_rest"
+          },
+          {
+            "key": "walk_as_friends",
+            "when": {},
+            "text": "影狼与你把话讲明，约好以后做朋友相伴看路；她带你走到竹林出口，把回程的气味慢慢指清。",
+            "effects": {},
+            "label": "以朋友相伴看路",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "comb_at_rest": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "ask_to_comb",
+            "when": {},
+            "text": "相恋后她在竹林边拿出木梳，请你替她理顺肩边的毛；你先让她挑舒服的位置，她慢慢教你梳法。",
+            "effects": {},
+            "label": "理顺肩边狼毛",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "bamboo_cheek",
+        "text": "竹影里，影狼绕到身后环住你的腰。你转身拥住她，低头相吻，她笑着回吻，贴在肩旁歇一会；新叶香飘来，两人再一起去找。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们将竹叶按气味分开，影狼听你猜林边那片，再说自己的答案，替你拂去袖上的细刺。"
+      },
+      {
+        "key": "moon_route",
+        "text": "满月将近，影狼邀你去找宽阔的竹间路，摊手等你。你握住同行，她加快两步又笑着停下；到了开阔处，两人约好今夜来看月。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "林边找坐处，影狼辨风向，你挑平整地面。她问你累不累，两人照着各自的步速回去。"
+      },
+      {
+        "key": "rain_scent",
+        "text": "雨后猜竹林的气味，你说中一处，影狼笑着邀你去看。你跟她走到干地，两人碰一下额头，再一起闻过叶香。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "雨后沿竹沟听水，影狼辨远处动静，你看脚下湿痕。回程各说一件想留到下回再看的小事。"
+      }
+    ],
+    "farewell": "竹叶香陪你们走过此生的许多弯口，满月照下时，那片并肩坐过的干地收着安静的心意。",
+    "interrupted": "你们以朋友身份相约竹林看路，影狼沿途辨竹叶的气味，你提醒新藤刺，走到出口便各自挥手。"
+  },
+  {
+    "id": "benben",
+    "title": "琵琶尾声中的座位",
+    "source": "https://thbwiki.cc/九十九弁弁",
+    "start": "low_string",
+    "nodes": {
+      "low_string": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "hear_wood",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你听出琵琶木声里藏着的低音，弁弁顺着你的节拍拨弦；抬头见你专注，她把尾声弹得很轻。",
+            "effects": {},
+            "label": "听木声里的低音",
+            "trust": 1,
+            "set": [
+              "wood_tone"
+            ],
+            "next": "score_invitation"
+          },
+          {
+            "key": "let_note_finish",
+            "when": {},
+            "text": "你等她的涩音散尽才开口，弁弁抱着琴微笑，问你何时还愿来；指尖在弦上轻轻停了一下。",
+            "effects": {},
+            "label": "听完一段涩音",
+            "trust": 1,
+            "next": "score_invitation"
+          }
+        ]
+      },
+      "score_invitation": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "read_pause",
+            "when": {
+              "min": {
+                "bond": 8
+              }
+            },
+            "text": "弁弁主动带来亲手记的曲谱，邀你找适合两人接唱的停顿；你标出一处，她在纸边写下你的声部。",
+            "effects": {},
+            "label": "在曲谱添声部",
+            "trust": 1,
+            "set": [
+              "shared_pause"
+            ],
+            "next": "string_weather"
+          },
+          {
+            "key": "tap_slowly",
+            "when": {},
+            "text": "她把一只小木板放到你面前，邀你替新曲敲慢拍；你敲到尾声，她笑着说这个速度让她舍不得停。",
+            "effects": {},
+            "label": "应邀敲慢拍",
+            "trust": 1,
+            "next": "string_weather"
+          }
+        ]
+      },
+      "string_weather": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "loosen_by_sound",
+            "when": {
+              "relationFlags": [
+                "wood_tone"
+              ]
+            },
+            "text": "你按木声提醒她放松受潮的弦，弁弁亲自调好；收琴后她揉了揉手腕，也请你把发僵的手歇下。",
+            "effects": {},
+            "label": "按木声调弦",
+            "trust": 1,
+            "next": "reserved_cadenza"
+          },
+          {
+            "key": "dry_cloth",
+            "when": {},
+            "text": "你在琴袋垫上干布，弁弁自己检查弦轴；她把你撑琴袋的手移到软垫上，慢慢说完收琴的方法。",
+            "effects": {},
+            "label": "给琴袋垫干布",
+            "trust": 1,
+            "next": "reserved_cadenza"
+          }
+        ]
+      },
+      "reserved_cadenza": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "reprise_pause",
+            "when": {
+              "relationFlags": [
+                "shared_pause"
+              ]
+            },
+            "text": "她把合唱的停顿写进完整新曲，在那一处先望向你；曲终才说，每次弹到这里都会想你来接。",
+            "effects": {},
+            "label": "听留给你的停顿",
+            "trust": 1,
+            "next": "named_duet"
+          },
+          {
+            "key": "choose_front_seat",
+            "when": {},
+            "text": "弁弁将台前一张凳子移到听得清木声的位置，请你替她坐着；她说新曲的第一个听众很想选你。",
+            "effects": {},
+            "label": "坐她留的听曲位",
+            "trust": 1,
+            "next": "named_duet"
+          }
+        ]
+      },
+      "named_duet": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "sign_duet",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "shared_pause"
+              ]
+            },
+            "text": "弁弁弹到你们共同续写的那一行，特意停弦等你唱完。她在谱边写下两人的名字，说想与你相恋；你认真应下，合奏的尾声便有了心意。",
+            "effects": {},
+            "label": "在合谱上定心意",
+            "trust": 0,
+            "status": "lover",
+            "next": "after_recital"
+          },
+          {
+            "key": "keep_listener",
+            "when": {},
+            "text": "弁弁把新曲交你试听，你们将相处留作朋友的往来；她依你的感受调整尾声，曲名由她自己写下。",
+            "effects": {},
+            "label": "做新曲的朋友听众",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "after_recital": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "pack_together",
+            "when": {},
+            "text": "排练结束后，你替恋人卷起曲谱，弁弁收好琵琶才在你身边坐下；你们一同哼完今天试出的尾声。",
+            "effects": {},
+            "label": "收琴后并坐哼曲",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "quiet_cadenza_kiss",
+        "text": "弁弁将你的名字拨进曲子，末音一落便放稳琵琶，向你伸手。你握住坐近，低头吻她；她含笑回吻，指尖还在你掌心打拍。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们并坐辨弦的松紧，弁弁拨短音，你说哪处轻柔。调到相合的位置，她笑着请你再听一遍，指尖放轻，慢慢试奏。"
+      },
+      {
+        "key": "handwritten_bar",
+        "text": "你替新曲编一句情话，弁弁拨出旋律等你接唱。唱完她笑着夸好，又将下一句唱给你，指尖还拨着余音。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们写下今天想听的三种声音，她挑适合琵琶的一种，你补节拍，试奏后各说喜欢的变化。"
+      },
+      {
+        "key": "case_cushion",
+        "text": "弁弁邀你挑不同木片的敲声，将最亮的一声留给你。你用它应和，她笑着指向旁边的一片，两人一起找下一处音色。",
+        "effects": {},
+        "interval": 6,
+        "states": [
+          "lover"
+        ],
+        "settledText": "演奏场外下着小雨，你们坐在避雨处听滴水的长短。弁弁记慢拍，你记急拍，雨轻下来便交换读给彼此听。"
+      }
+    ],
+    "farewell": "合谱收好此生相接的几段尾声，琵琶木音散去时，两人并写的名字留着曾经相恋的温柔。",
+    "interrupted": "弁弁与你约好以朋友身份讨论新曲，琵琶的木声由她试，你认真讲听感，曲谱边照样能留下有用的记号。"
+  },
+  {
+    "id": "yatsuhashi",
+    "title": "抢拍之后等你一拍",
+    "source": "https://thbwiki.cc/九十九八桥",
+    "start": "racing_strings",
+    "nodes": {
+      "racing_strings": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "catch_syncopation",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你敲准琴声突然提前的拍子，八桥笑着加快一小段；见你目光追着她，结尾的指尖倒迟了一瞬。",
+            "effects": {},
+            "label": "追住抢前一拍",
+            "trust": 1,
+            "set": [
+              "quick_beat"
+            ],
+            "next": "walking_score"
+          },
+          {
+            "key": "laugh_at_miss",
+            "when": {},
+            "text": "你漏了怪曲的一拍，八桥边弹边教你补上；你笑着跟进，她也笑到把琴声拖长，脸颊微热。",
+            "effects": {},
+            "label": "笑着补上漏拍",
+            "trust": 1,
+            "next": "walking_score"
+          }
+        ]
+      },
+      "walking_score": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "carry_frame",
+            "when": {
+              "min": {
+                "health": 8
+              }
+            },
+            "text": "八桥主动叫你陪她搬琴台找回声，见你抬得稳，她边走边奏，把最快的那一段留到与你并排时。",
+            "effects": {},
+            "label": "搬琴台找回声",
+            "trust": 1,
+            "set": [
+              "frame_balanced"
+            ],
+            "next": "tempo_rest"
+          },
+          {
+            "key": "choose_corner",
+            "when": {},
+            "text": "她邀你挑能听清快曲的台角，你指好位置。八桥试奏完拍拍身边，你笑着坐近，听她把第二遍奏得更清楚。",
+            "effects": {},
+            "label": "替她挑试奏角",
+            "trust": 1,
+            "next": "tempo_rest"
+          }
+        ]
+      },
+      "tempo_rest": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "notice_tired_hand",
+            "when": {
+              "relationFlags": [
+                "quick_beat"
+              ]
+            },
+            "text": "你熟悉她抢拍的节奏，听见指尖有些迟，便陪她拆成短句试；八桥给你示范时也记得让你歇手。",
+            "effects": {},
+            "label": "把快曲拆短句",
+            "trust": 1,
+            "next": "matching_bridge"
+          },
+          {
+            "key": "count_in_pairs",
+            "when": {},
+            "text": "你把难曲分成两拍一组，八桥边教边收住急劲；休息时她替你翻到最易打拍的那页。",
+            "effects": {},
+            "label": "两拍一组练习",
+            "trust": 1,
+            "next": "matching_bridge"
+          }
+        ]
+      },
+      "matching_bridge": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "paint_two_marks",
+            "when": {
+              "relationFlags": [
+                "frame_balanced"
+              ]
+            },
+            "text": "你在搬稳的琴台边画两个站位，八桥踩着它与你合一段；她望着并排的记号，说很喜欢这样配在一起。",
+            "effects": {},
+            "label": "画并排的站位",
+            "trust": 1,
+            "next": "courageous_duet"
+          },
+          {
+            "key": "offer_last_beat",
+            "when": {},
+            "text": "八桥把终曲最后的一拍交给你，弹到那里便专心等你；她说这次等拍子，连自己都觉得心口发亮。",
+            "effects": {},
+            "label": "接她留的最后一拍",
+            "trust": 1,
+            "next": "courageous_duet"
+          }
+        ]
+      },
+      "courageous_duet": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "declare_over_koto",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "frame_balanced"
+              ]
+            },
+            "text": "八桥将抢快的琴声收在你跟得上的末拍，向你伸手，说喜欢你、想相恋。你握住回应，她开心地重弹这一拍，与你一起接稳。",
+            "effects": {},
+            "label": "琴台前互说喜欢",
+            "trust": 0,
+            "status": "lover",
+            "next": "unhurried_tail"
+          },
+          {
+            "key": "friendly_rhythm",
+            "when": {},
+            "text": "你们说好做朋友合奏，八桥将快曲谱摊到你面前，要你挑一段敢试的节拍，准备一场新的较量。",
+            "effects": {},
+            "label": "约一场朋友合奏",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "unhurried_tail": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "finish_side_by_side",
+            "when": {},
+            "text": "相恋后八桥教你慢慢敲完一段尾拍，自己也坐在琴台边等余音；你们把最急的曲子哼出了从容。",
+            "effects": {},
+            "label": "并排听尾拍散去",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "koto_cheek",
+        "text": "八桥弹完快段，见你追上末拍便扑来搂肩。你吻她脸颊，她回亲一下，笑声比琴的尾音还长。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们画出琴弦走向，她给每条线配轻响，你替音色起名字。听到有趣的，她便停下来再弹一遍。"
+      },
+      {
+        "key": "tempo_challenge",
+        "text": "八桥把起拍藏进短音，等你猜入口。你接对，她放稳琴，伸手邀你转圈，你握上同走两步，再回琴前试新的节奏。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们轮流找最容易听清的停顿，八桥收住琴声等你说感受。你敲两下，她接一声，反复试到两个人都觉得舒服。"
+      },
+      {
+        "key": "two_seat_frame",
+        "text": "八桥挪好两块坐垫，邀你听新写的恋人短曲。你坐稳，她弹到末句抬眼问哪段想再听，你拍出起头，她笑着重奏那句。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "琴台边，你们折小纸山，她压住翘角，你摆好高低，再照着弦旁的纸影弹一段起伏。"
+      }
+    ],
+    "farewell": "抢前的琴声与等待的尾拍铺过这一生，琴台上的两个站位，留着你们相恋时总愿意合上的节奏。",
+    "interrupted": "八桥与你约好朋友的合奏，快曲里留一拍供你追上；敲到尾声，两人便笑着比较今天谁抢得更准。"
+  },
+  {
+    "id": "seija",
+    "title": "倒旗边的一句实话",
+    "source": "https://thbwiki.cc/鬼人正邪",
+    "start": "crooked_flag",
+    "nodes": {
+      "crooked_flag": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "knot_from_side",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你从侧面给倒旗打好结，正邪挑你系得太端正，伸手扭歪一个角。指尖碰到你手背，她笑着等你把另一端接好，再翻旗给你看。",
+            "effects": {},
+            "label": "给倒旗打侧结",
+            "trust": 1,
+            "set": [
+              "flag_slant"
+            ],
+            "next": "backwards_map"
+          },
+          {
+            "key": "hold_low_edge",
+            "when": {},
+            "text": "你托住倒旗最下边的角，正邪挑你站得太认真，自己绕到旁边学你的样子，肩膀碰上便笑着跑开。",
+            "effects": {},
+            "label": "托住倒旗边角",
+            "trust": 1,
+            "next": "backwards_map"
+          }
+        ]
+      },
+      "backwards_map": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "read_inverse",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "正邪主动递你一张反画的废塔路线，邀你比谁先找到侧梯；你读出转折，她把仅有的近路让你先试。",
+            "effects": {},
+            "label": "读反画的侧梯",
+            "trust": 1,
+            "set": [
+              "inverse_route"
+            ],
+            "next": "tower_steps"
+          },
+          {
+            "key": "trace_her_route",
+            "when": {},
+            "text": "她拿反画地图来找你，见你看不懂，便踩着碎砖亲自领一遍；回到塔底，她说这次讲解要你记好。",
+            "effects": {},
+            "label": "跟她走侧梯",
+            "trust": 1,
+            "next": "tower_steps"
+          }
+        ]
+      },
+      "tower_steps": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "test_flag_rope",
+            "when": {
+              "relationFlags": [
+                "flag_slant"
+              ]
+            },
+            "text": "你沿倒旗的侧结检查风中受力，正邪翻转视野替你看塔缝；危险砖头被她挑出，你替她稳住落脚板。",
+            "effects": {},
+            "label": "检查侧结受力",
+            "trust": 1,
+            "next": "reverse_note"
+          },
+          {
+            "key": "move_loose_brick",
+            "when": {},
+            "text": "你们各挑一段松砖清理，正邪将能用的砖排成歪箭头，催你猜侧梯在哪。你扶稳木板，她沿稳处试走，回头问你这一段怎样。",
+            "effects": {},
+            "label": "两人清松砖",
+            "trust": 1,
+            "next": "reverse_note"
+          }
+        ]
+      },
+      "reverse_note": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "read_sideways_note",
+            "when": {
+              "relationFlags": [
+                "inverse_route"
+              ]
+            },
+            "text": "凭你读懂过的反路，正邪把一张倒写的便条放进侧梯缝；你翻过来看到：下次来，我会等你。",
+            "effects": {},
+            "label": "读她倒写的便条",
+            "trust": 1,
+            "next": "plain_answer"
+          },
+          {
+            "key": "set_second_stool",
+            "when": {},
+            "text": "正邪把木凳斜挪到塔脚，催你试这个怪角度。你坐稳后给她留出身旁的位置，她搬来自己的凳子慢慢靠近，伸手转过你手中的地图。",
+            "effects": {},
+            "label": "坐到塔下空凳",
+            "trust": 1,
+            "next": "plain_answer"
+          }
+        ]
+      },
+      "plain_answer": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "speak_plain_once",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "inverse_route"
+              ]
+            },
+            "text": "正邪把倒旗压在脚边，挑了个最直白的词说喜欢你。你认真回应，问她是否愿意相恋；她握住你的手答应，又把旗翻过去，笑着邀你看两人的新约定。",
+            "effects": {},
+            "label": "听一句心意",
+            "trust": 0,
+            "status": "lover",
+            "next": "quiet_flag_corner"
+          },
+          {
+            "key": "argue_as_friends",
+            "when": {},
+            "text": "你们把来往定为朋友，正邪拿反地图与你争哪条侧梯更有趣；倒旗在风里转，话题也随你们拐弯。",
+            "effects": {},
+            "label": "在侧梯争朋友的路",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "quiet_flag_corner": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "sit_below_flag",
+            "when": {},
+            "text": "相恋后正邪坐在倒旗底下与你拆一张古怪地图，挑中路线便把指尖搭在你指尖上，催你陪她试试。",
+            "effects": {},
+            "label": "倒旗下拆地图",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "flag_cheek",
+        "text": "正邪倒画约会路线，邀你猜转角。你答过，她在废塔下张臂，你抱住她亲吻；她笑着绕半步又贴回来，指你刚才猜反的那处。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们给碎砖排新顺序，正邪从末尾开始，你从另一端接上。争到相接那块，两人笑着歇手。"
+      },
+      {
+        "key": "wrong_way_note",
+        "text": "正邪把情话倒着塞给你，等你转纸读完便指向侧梯。你伸手邀她同行，她笑着握上，说下一句要让你当面猜。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们拿废绳试侧结。正邪挑刁钻绕法，你指出松处，比完各留一个顺手的结，再聊今天。"
+      },
+      {
+        "key": "side_stair_walk",
+        "text": "侧梯上找砖纹，正邪抢先指一处，邀你来看。你走近却偏说像另一种，她用指尖沿纹描一圈，笑着要你再仔细猜。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "正邪拿出一页新画的反向图，你们从塔脚各辨一段影子。看法相异就画两笔，回来将这张图慢慢补完整。"
+      }
+    ],
+    "farewell": "倒旗与反地图陪你们拐过此生的许多弯，塔下那一句认真说出的喜欢，收在侧梯缝的纸角里。",
+    "interrupted": "正邪与你约好以朋友身份争倒旗的摆法，你挑侧结，她翻旗角，废塔下一场古怪的讨论便慢慢展开。"
+  },
+  {
+    "id": "shinmyoumaru",
+    "title": "碗沿相接的小桥",
+    "source": "https://thbwiki.cc/少名针妙丸",
+    "start": "thread_measure",
+    "nodes": {
+      "thread_measure": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "lower_thread",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你用细线伏低量地板沟，针妙丸沿针尖标好长度；抬头见你认真看她，她抱着针柄笑得很亮。",
+            "effects": {},
+            "label": "伏低量木纹沟",
+            "trust": 1,
+            "set": [
+              "thread_span"
+            ],
+            "next": "bowl_invitation"
+          },
+          {
+            "key": "listen_from_floor",
+            "when": {},
+            "text": "你蹲到木料旁听她解释深沟，针妙丸将小碗挪到你身边，讲得比划不停，帽沿碰你手指才停住。",
+            "effects": {},
+            "label": "在木料旁听小人说路",
+            "trust": 1,
+            "next": "bowl_invitation"
+          }
+        ]
+      },
+      "bowl_invitation": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "steady_low_bridge",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "针妙丸主动举着细图来邀你造碗沿桥；你稳住薄木，她跨过试验，跑回针柄边兴奋地向你挥手。",
+            "effects": {},
+            "label": "应邀稳薄木桥",
+            "trust": 1,
+            "set": [
+              "bowl_bridge"
+            ],
+            "next": "handmade_crossing"
+          },
+          {
+            "key": "sort_small_planks",
+            "when": {},
+            "text": "她招你把薄木按宽窄分开，准备一座碗沿小桥；你递下合适的木片，她用针在上面点出两人的方向。",
+            "effects": {},
+            "label": "替她分小桥木片",
+            "trust": 1,
+            "next": "handmade_crossing"
+          }
+        ]
+      },
+      "handmade_crossing": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "use_thread_span",
+            "when": {
+              "relationFlags": [
+                "thread_span"
+              ]
+            },
+            "text": "你按细线量过的尺寸修好桥头，针妙丸亲自钉牢，说这份手工让她想起万宝槌之外也能做成的愿望。",
+            "effects": {},
+            "label": "按细线修桥头",
+            "trust": 1,
+            "next": "needle_ribbon"
+          },
+          {
+            "key": "test_with_rice",
+            "when": {},
+            "text": "你递下米粒供她试桥的轻重，针妙丸挑出最稳的桥板；你们一起扶好木片，她再给你的手指擦去木屑。",
+            "effects": {},
+            "label": "用米粒试桥",
+            "trust": 1,
+            "next": "needle_ribbon"
+          }
+        ]
+      },
+      "needle_ribbon": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "tie_bridge_ribbon",
+            "when": {
+              "relationFlags": [
+                "bowl_bridge"
+              ]
+            },
+            "text": "她在与你搭成的碗沿桥系上两条细带，说看见它们便会想起你；你把颜色选好，她开心地打结。",
+            "effects": {},
+            "label": "给小桥系两条带",
+            "trust": 1,
+            "next": "bowl_hearted"
+          },
+          {
+            "key": "show_two_squares",
+            "when": {},
+            "text": "针妙丸画了两个并排的小方格，告诉你一格想留给喜欢的人；你指指自己，她笑着拿针尖点头。",
+            "effects": {},
+            "label": "认小图上的并排格",
+            "trust": 1,
+            "next": "bowl_hearted"
+          }
+        ]
+      },
+      "bowl_hearted": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "promise_at_rim",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "bowl_bridge"
+              ]
+            },
+            "text": "你在碗沿扶稳一段小桥，针妙丸走到桥心，举起小旗招你伏低。她拉住你的指尖，说想与你成为恋人；你认真答应互相喜欢，她开心地把旗插在两道相接的影子旁。",
+            "effects": {},
+            "label": "碗沿约好互相喜欢",
+            "trust": 0,
+            "status": "lover",
+            "next": "tiny_flag_day"
+          },
+          {
+            "key": "keep_tiny_builder",
+            "when": {},
+            "text": "你们商量好继续做朋友，针妙丸展开新的小桥图；你替她裁薄木，她照着自己的尺寸把桥端画完整。",
+            "effects": {},
+            "label": "与小桥匠继续做朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "tiny_flag_day": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "pick_flag_color",
+            "when": {},
+            "text": "相恋后你替针妙丸裁一面小旗，她在碗沿挑好颜色。举旗时，她招你伏低看旗影；你点头靠近，陪她报过一遍颜色。",
+            "effects": {},
+            "label": "一起挑小旗颜色",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "tiny_forehead",
+        "text": "针妙丸跑到碗沿讲新画的小路。你伏低亲她额头，她抱着你的指尖笑，指给你看最得意的弯。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们用木片排弯路，她拿针指转角，你理平桌边。你伸来指尖，她轻握着试走，到尽头挥挥小旗，开心地邀你看新路。"
+      },
+      {
+        "key": "bowl_bridge_view",
+        "text": "小桥摆到亮处，针妙丸跑到桥心让你猜旗影。你答对，她举旗指着弯口，你伏低细看，替小桥起一个她听得清的小名。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们折小纸屏，她选够得到的高度，你压平底边。摆好看光穿过缝隙，轮流说新花纹像什么。"
+      },
+      {
+        "key": "rice_scale",
+        "text": "针妙丸挑几粒米排成小星星，请你猜中间那粒像什么。你伏低回答，她高兴地拍拍你的指尖，邀你再排一只小船。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们沿碗边数细细的木纹，针妙丸用针标容易走的一段，你画出弯处；两人给今天的小发现取个短短的名字。"
+      }
+    ],
+    "farewell": "碗沿的小桥跨过此生许多次相见，两条细带和指尖的心意，留在你们一起量过的细小木纹中。",
+    "interrupted": "针妙丸点头与你约好朋友来往，一起量木纹的小沟；你递薄木，她用针定尺寸，小桥可以慢慢造。"
+  },
+  {
+    "id": "raiko",
+    "title": "反拍里留一段安静",
+    "source": "https://thbwiki.cc/堀川雷鼓",
+    "start": "pedal_pulse",
+    "nodes": {
+      "pedal_pulse": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "hold_backbeat",
+            "when": {
+              "min": {
+                "health": 8
+              }
+            },
+            "text": "你把脚踏压在重音后面，雷鼓接着敲出完整反拍；她望着你稳住的脚步，笑容比收槌慢了一拍。",
+            "effects": {},
+            "label": "踩准反拍脚踏",
+            "trust": 1,
+            "set": [
+              "pedal_pulse"
+            ],
+            "next": "new_drums_invite"
+          },
+          {
+            "key": "find_small_pulse",
+            "when": {},
+            "text": "你在台边试出一段能站稳的小拍，雷鼓照着它调整鼓声；你抬头时，正好碰见她带笑的目光。",
+            "effects": {},
+            "label": "先找能站稳的小拍",
+            "trust": 1,
+            "next": "new_drums_invite"
+          }
+        ]
+      },
+      "new_drums_invite": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "name_resonance",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "雷鼓主动请你听新鼓的音色，讲起换掉鬼魔力的经历；你分出回震差别，她在鼓架上记下你的听感。",
+            "effects": {},
+            "label": "分辨新鼓回震",
+            "trust": 1,
+            "set": [
+              "resonance_note"
+            ],
+            "next": "footrest_care"
+          },
+          {
+            "key": "try_her_rhythm",
+            "when": {},
+            "text": "她把一根鼓棒递到你手里，邀你敲敲新鼓；你说这一声很有精神，她索性写成下回排练的起头。",
+            "effects": {},
+            "label": "试敲新鼓起头",
+            "trust": 1,
+            "next": "footrest_care"
+          }
+        ]
+      },
+      "footrest_care": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "adjust_known_pedal",
+            "when": {
+              "relationFlags": [
+                "pedal_pulse"
+              ]
+            },
+            "text": "你按踩过的反拍挪低脚踏，雷鼓试过才请你上台；她留意你膝头的力道，把排练分成几小段。",
+            "effects": {},
+            "label": "按反拍挪脚踏",
+            "trust": 1,
+            "next": "dedicated_fill"
+          },
+          {
+            "key": "hold_frame_low",
+            "when": {},
+            "text": "你们先把鼓架扶稳再试音，雷鼓收起过响的重拍，教你用轻一点的脚步找到能舒服踩完的节奏。",
+            "effects": {},
+            "label": "稳鼓架练轻拍",
+            "trust": 1,
+            "next": "dedicated_fill"
+          }
+        ]
+      },
+      "dedicated_fill": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "write_heard_tone",
+            "when": {
+              "relationFlags": [
+                "resonance_note"
+              ]
+            },
+            "text": "她照你的回震笔记写一段过门，敲完说想让你一听就认出她；鼓槌落回架边，她等你的回答。",
+            "effects": {},
+            "label": "听给你的过门",
+            "trust": 1,
+            "next": "paired_sticks"
+          },
+          {
+            "key": "save_empty_bar",
+            "when": {},
+            "text": "雷鼓在曲子里留出一个空小节，请你填自己喜欢的拍子；你敲好后，她轻声说很想和你一直这样合。",
+            "effects": {},
+            "label": "填她留的空小节",
+            "trust": 1,
+            "next": "paired_sticks"
+          }
+        ]
+      },
+      "paired_sticks": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "speak_after_fill",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "resonance_note"
+              ]
+            },
+            "text": "雷鼓敲出一段过门，邀你当场加两下反拍。你拍稳后，她收槌伸手，问愿不愿意相恋；你握住答应，也说出喜欢，她笑着让尾声停在两人都喜欢的休止。",
+            "effects": {},
+            "label": "收槌后相恋",
+            "trust": 0,
+            "status": "lover",
+            "next": "soft_morning_roll"
+          },
+          {
+            "key": "keep_bandmate",
+            "when": {},
+            "text": "你们把心意说开，继续当一起试鼓的朋友；雷鼓将你的节拍记进练习谱，下次见面便从那里起拍。",
+            "effects": {},
+            "label": "以朋友一起试鼓",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "soft_morning_roll": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "brush_small_roll",
+            "when": {},
+            "text": "相恋后雷鼓教你刷出一段轻鼓滚，练完便在台沿与你靠近坐下；你们把今天的杂事慢慢聊成拍子。",
+            "effects": {},
+            "label": "台沿坐着聊拍子",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "rest_bar_kiss",
+        "text": "雷鼓把你的脚步敲成过门，放好鼓槌后张臂。你走近拥抱，她笑着仰脸，你吻过去；她回吻时环住你的背，分开才把下一段起拍交给你。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们并坐辨鼓架轻响，她换落点，你说听到的远近。选好舒服的音色，再聊各自的一天。"
+      },
+      {
+        "key": "tap_shared_steps",
+        "text": "去试音台的短路上，雷鼓邀你用步子编拍子。你加一段反拍，她立即接住，向你伸手；你握上，她轻捏一下，两人的脚步跟着同一拍往前。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们将声音画成疏密的点，她照图试奏，你数空拍。试完各改一笔，留给下回练习。"
+      },
+      {
+        "key": "two_stick_wrappings",
+        "text": "你给鼓棒挑鲜亮布带，系好开头。雷鼓拍拍身旁，你坐近绕完，她试奏几下，将鼓棒递来，让你也试试新手感。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们按轻重排好几根练习鼓棒，雷鼓让你逐根敲短音，你描述哪种握得稳；收回鼓架边，再慢慢聊今日的小发现。"
+      }
+    ],
+    "farewell": "鼓声和过门陪你们走过这一生，鼓槌放下后的台沿，收着两个恋人愿意听完彼此的话。",
+    "interrupted": "雷鼓请你以朋友身份一起试鼓，脚踏和鼓架的摆法都能商量；你踩一段小拍，她便接好下一声。"
+  },
+  {
+    "id": "sumireko",
+    "title": "课桌梦上的纸星",
+    "source": "https://thbwiki.cc/宇佐见堇子",
+    "start": "floating_diagram",
+    "nodes": {
+      "floating_diagram": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "trace_pencil",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "梦中你沿铅笔线看出实验纸的错接，堇子用念力转过纸张；与你凑近读同一行时，她忽然忘了下一句。",
+            "effects": {},
+            "label": "沿铅笔线验算",
+            "trust": 1,
+            "set": [
+              "pencil_path"
+            ],
+            "next": "photo_invite"
+          },
+          {
+            "key": "catch_paper_star",
+            "when": {},
+            "text": "一颗纸星从课桌边落下，你伸手接住；堇子用念力托住星角，发现你也笑了，便把星停在两人之间。",
+            "effects": {},
+            "label": "接住梦中纸星",
+            "trust": 1,
+            "next": "photo_invite"
+          }
+        ]
+      },
+      "photo_invite": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "spot_blur",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "堇子主动在梦中邀你看超能力照片，你指出浮物的模糊边；她笑着把失败也记进笔记，邀你再试一张。",
+            "effects": {},
+            "label": "辨照片模糊边",
+            "trust": 1,
+            "set": [
+              "blur_record"
+            ],
+            "next": "desk_anchor"
+          },
+          {
+            "key": "pose_with_star",
+            "when": {},
+            "text": "梦中的堇子举着照片来找你，邀你托纸星作新的构图；纸星在她的念力里转，你负责数到她满意的角度。",
+            "effects": {},
+            "label": "陪她试纸星构图",
+            "trust": 1,
+            "next": "desk_anchor"
+          }
+        ]
+      },
+      "desk_anchor": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "follow_pencil_path",
+            "when": {
+              "relationFlags": [
+                "pencil_path"
+              ]
+            },
+            "text": "你循改过的铅笔线摆好实验纸，堇子自己托起小物试验；铃声传进梦里，你提醒她把课本放回桌心。",
+            "effects": {},
+            "label": "沿铅笔线摆实验",
+            "trust": 1,
+            "next": "star_caption"
+          },
+          {
+            "key": "pause_for_bell",
+            "when": {},
+            "text": "梦里的铃声渐近，你们把实验停在能接续的位置；堇子将书页夹好，认真感谢你帮她记住醒来的事。",
+            "effects": {},
+            "label": "听铃声收实验",
+            "trust": 1,
+            "next": "star_caption"
+          }
+        ]
+      },
+      "star_caption": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "caption_both_trials",
+            "when": {
+              "relationFlags": [
+                "blur_record"
+              ]
+            },
+            "text": "堇子给记过模糊边的照片写说明，将你的观察也列在旁边；她说每次入梦都想找你一起看这一页。",
+            "effects": {},
+            "label": "给试拍并写说明",
+            "trust": 1,
+            "next": "dream_note_answer"
+          },
+          {
+            "key": "leave_paper_orbit",
+            "when": {},
+            "text": "她在梦中课桌摆出两颗绕圈的纸星，让你挑一颗；选好后她轻声说，另一颗想和它一直成一对。",
+            "effects": {},
+            "label": "选梦中的纸星",
+            "trust": 1,
+            "next": "dream_note_answer"
+          }
+        ]
+      },
+      "dream_note_answer": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "say_it_in_dream",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "blur_record"
+              ]
+            },
+            "text": "堇子在课桌梦里将写过的纸条推到你面前，主动说想与你相恋。你认真回应，她高兴得将两张心意并排托起，又亲手收好，约定下场梦继续见面。",
+            "effects": {},
+            "label": "梦里互相说喜欢",
+            "trust": 0,
+            "status": "lover",
+            "next": "two_star_desk"
+          },
+          {
+            "key": "share_friendly_notes",
+            "when": {},
+            "text": "你们在梦中说好继续当朋友，堇子给实验纸添好页码；醒门亮起时，她把下次要看的题目指给你。",
+            "effects": {},
+            "label": "梦里约朋友实验",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "two_star_desk": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "count_small_orbits",
+            "when": {},
+            "text": "相恋后的课桌梦里，堇子让两颗纸星慢慢绕圈，你们一同数完这一轮；铃声响起，她与你挥手道别。",
+            "effects": {},
+            "label": "数完梦中纸星轨道",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "dream_forehead_star",
+        "text": "课桌梦里，堇子托起一圈纸星，招你站进中央。你亲她额头，她笑着抱住你，指那颗歪星给你看；你猜过，她才重新摆正。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "梦里堇子写下有趣的想法，你画简图。两人轮流挑难题，讲到醒铃将响，认真收好讨论。"
+      },
+      {
+        "key": "dream_margin",
+        "text": "梦中怪谈册写上约会谜题，堇子把页展开，让你沿线猜路线。你认出转角，她托起纸页，你笑着帮她把结尾画完。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "课桌梦里，你们将怪事按来源分栏。堇子问细节，你指出疑问，看完一页，她把确认的那行圈好，再与你翻下一页。"
+      },
+      {
+        "key": "dream_bell",
+        "text": "梦中铃声还远，堇子折纸飞机邀你比赛。两架飞到同一桌角，她笑着向你摊手，你握住庆祝，约好下一回合作造一只。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "课桌梦里你们对好今天想停留的时段，堇子将散页理齐，你写完最后一行；醒铃响起便认真挥手，各循自己的醒路。"
+      }
+    ],
+    "farewell": "这段课桌旧梦合起时，纸条与记着观察的实验页收着相恋的心意，梦里的两人曾认真说过喜欢。",
+    "interrupted": "堇子在课桌梦里与你约好朋友来往，实验纸和怪谈册放到桌心，醒铃响起便各沿自己的梦路道别。"
+  },
+  {
+    "id": "seiran",
+    "title": "蒸笼旁留的一串",
+    "source": "https://thbwiki.cc/清兰",
+    "start": "mortar_smile",
+    "nodes": {
+      "mortar_smile": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "brace_mortar",
+            "when": {
+              "min": {
+                "health": 8
+              }
+            },
+            "text": "你压稳米臼配合清兰落杵，她从蒸气里抬头笑，见你一直望着她，手上的节奏便轻了一点。",
+            "effects": {},
+            "label": "扶稳捣米臼",
+            "trust": 1,
+            "set": [
+              "mortar_center"
+            ],
+            "next": "new_flour_batch"
+          },
+          {
+            "key": "sweep_rice",
+            "when": {},
+            "text": "你替她将脚边散米扫净，清兰先护好蒸笼再来帮忙；两人肩头碰到，她小声说今天一起做活很顺。",
+            "effects": {},
+            "label": "扫净蒸笼旁散米",
+            "trust": 1,
+            "next": "new_flour_batch"
+          }
+        ]
+      },
+      "new_flour_batch": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "judge_moisture",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "清兰主动请你试一锅米粉的干湿，你捻开小团说明手感；她记进自己的配方，专门留一串给你尝。",
+            "effects": {},
+            "label": "捻米粉试干湿",
+            "trust": 1,
+            "set": [
+              "flour_moisture"
+            ],
+            "next": "slow_mallet"
+          },
+          {
+            "key": "wrap_first_batch",
+            "when": {},
+            "text": "她把第一锅团子递来请你试味，包纸上亲手盖好摊号；你认真吃完，她便说下回开锅也想请你来。",
+            "effects": {},
+            "label": "收她的新锅试味",
+            "trust": 1,
+            "next": "slow_mallet"
+          }
+        ]
+      },
+      "slow_mallet": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "change_center_shift",
+            "when": {
+              "relationFlags": [
+                "mortar_center"
+              ]
+            },
+            "text": "按扶过的米臼中心，你们改出方便轮换的站位；清兰见你肩累便接过活，讲起从前做潜伏兵的辛苦。",
+            "effects": {},
+            "label": "改捣米轮换站位",
+            "trust": 1,
+            "next": "reserved_skewer"
+          },
+          {
+            "key": "split_rice_work",
+            "when": {},
+            "text": "你先搬米粉，她再捣米，重活分开做得从容；清兰给你端来新蒸的一串，慢慢说地上的摊子生活。",
+            "effects": {},
+            "label": "把捣米活分开",
+            "trust": 1,
+            "next": "reserved_skewer"
+          }
+        ]
+      },
+      "reserved_skewer": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "mix_named_recipe",
+            "when": {
+              "relationFlags": [
+                "flour_moisture"
+              ]
+            },
+            "text": "她照你记过的干湿拌一盆米粉，蒸好便把头一串塞给你，说这个口感连同你的手感一起记住了。",
+            "effects": {},
+            "label": "尝按手感蒸的团子",
+            "trust": 1,
+            "next": "stall_hearted"
+          },
+          {
+            "key": "add_two_wrappers",
+            "when": {},
+            "text": "清兰把收摊用的包纸裁成两份，与你坐在蒸笼边慢吃；她说今天留着最后一串，是想等你来。",
+            "effects": {},
+            "label": "在收摊时分包纸",
+            "trust": 1,
+            "next": "stall_hearted"
+          }
+        ]
+      },
+      "stall_hearted": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "answer_by_steamer",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "flour_moisture"
+              ]
+            },
+            "text": "清兰将刚蒸好的团子分成两份，问你愿不愿意成为恋人。你说自己也喜欢她；她开心地拉住你的手，认真约好收摊后一起试下一锅的味道。",
+            "effects": {},
+            "label": "蒸笼旁相恋",
+            "trust": 0,
+            "status": "lover",
+            "next": "two_stamps"
+          },
+          {
+            "key": "friendly_stall_visit",
+            "when": {},
+            "text": "你们说好以朋友身份来往，清兰给你包一串试味团子，下一次做新配方便请你写清真实的口感。",
+            "effects": {},
+            "label": "继续做试味朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "two_stamps": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "dry_wrapping_paper",
+            "when": {},
+            "text": "相恋后你们在收摊时晾好包纸，清兰擦净自己的木印才坐到你旁边；最后一串团子由两人慢慢分。",
+            "effects": {},
+            "label": "一同晾纸分团子",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "steamer_cheek",
+        "text": "清兰收摊便把新蒸的团子塞进你手里，听你夸米香，笑着凑来亲你。你揽住她回吻，她红着脸又把最香的一串留给你。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们取米粉辨粗细，清兰说手感，你说尝到的香。比完一起洗好碗，在摊旁慢慢歇脚。"
+      },
+      {
+        "key": "flour_fingers",
+        "text": "试新团子时，清兰改了水量，让你猜哪份软。你答对，她把另一碗推来，说下回让你定题，她来猜，再笑着记好这回的用量。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "摊边练折包纸，她指出易被蒸气沾湿的角，你换个折法。折完轮流说今天的小烦恼。"
+      },
+      {
+        "key": "stall_sign_light",
+        "text": "清兰转亮摊灯，请你尝两份团子的配方变化。你说完，她笑着指最满意的那锅，把米粉怎样调到这个口感慢慢讲清。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "收摊后你们辨一辨石臼的声音，清兰试不同落杵，你说哪一下更稳；把工具放妥便坐近，聊完各自今天的忙事。"
+      }
+    ],
+    "farewell": "米香与收摊的灯影伴过这一生，蒸笼旁留出的一串团子，收着你们相恋时愿意等待彼此的心意。",
+    "interrupted": "清兰与你约好朋友的试味来往，新锅团子端到摊前，你认真讲米粉的手感，她按自己的配方慢慢试。"
+  },
+  {
+    "id": "ringo",
+    "title": "竹签筒里的二人菜单",
+    "source": "https://thbwiki.cc/铃瑚",
+    "start": "taste_between_words",
+    "nodes": {
+      "taste_between_words": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "separate_salt",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你说清团子哪一口偏咸，铃瑚亲自重尝后笑着点头；问你想吃哪串时，她把最香的那串放到你面前。",
+            "effects": {},
+            "label": "说清咸淡米香",
+            "trust": 1,
+            "set": [
+              "rice_aroma"
+            ],
+            "next": "market_news"
+          },
+          {
+            "key": "save_plain_bite",
+            "when": {},
+            "text": "你把原味的半串留到最后，铃瑚看得好奇，与你聊起米香；你说喜欢，她的目光也跟着亮起来。",
+            "effects": {},
+            "label": "尝完原味团子",
+            "trust": 1,
+            "next": "market_news"
+          }
+        ]
+      },
+      "market_news": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "name_source",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "铃瑚主动邀你边收摊边聊地上见闻，你分清亲见和听来的事；她写好消息来源，把自己喜欢的街景讲给你。",
+            "effects": {},
+            "label": "分清见闻来源",
+            "trust": 1,
+            "set": [
+              "source_marked"
+            ],
+            "next": "basket_sorting"
+          },
+          {
+            "key": "tell_small_sight",
+            "when": {},
+            "text": "她端出团子邀你说今天见过的有趣东西，你讲一段小路上的景色；铃瑚听得津津有味，约你再来说。",
+            "effects": {},
+            "label": "聊一段地上见闻",
+            "trust": 1,
+            "next": "basket_sorting"
+          }
+        ]
+      },
+      "basket_sorting": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "sort_by_aroma",
+            "when": {
+              "relationFlags": [
+                "rice_aroma"
+              ]
+            },
+            "text": "你按分清的米香把新团子装好，铃瑚吃过一串便抬稳重篮；她看你手指勒红，先把长签换成好握的。",
+            "effects": {},
+            "label": "按米香分团子篮",
+            "trust": 1,
+            "next": "private_menu"
+          },
+          {
+            "key": "wrap_long_skewers",
+            "when": {},
+            "text": "你将长短竹签分筒，铃瑚端好热篮请你慢慢包；碰到烫手的一串，她先接过去晾好才让你拿。",
+            "effects": {},
+            "label": "把竹签按长短分筒",
+            "trust": 1,
+            "next": "private_menu"
+          }
+        ]
+      },
+      "private_menu": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "write_shared_sights",
+            "when": {
+              "relationFlags": [
+                "source_marked"
+              ]
+            },
+            "text": "铃瑚照着记明来源的见闻写一页二人菜单，团子旁配了你讲的街景；她笑说这页专门想与你吃。",
+            "effects": {},
+            "label": "看二人街景菜单",
+            "trust": 1,
+            "next": "clear_taste_answer"
+          },
+          {
+            "key": "ask_favorite_pair",
+            "when": {},
+            "text": "她将两种新口味摆成一对，请你选相配的吃法；你挑好后铃瑚说，自己也很想和你这样坐成一对。",
+            "effects": {},
+            "label": "选一对新口味",
+            "trust": 1,
+            "next": "clear_taste_answer"
+          }
+        ]
+      },
+      "clear_taste_answer": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "exchange_hearts",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "source_marked"
+              ]
+            },
+            "text": "铃瑚摆好两种团子，说最想与你分享，也希望相恋。你放下竹签回应喜欢，向她摊开手，她笑着握住答应，再与你选下一口。",
+            "effects": {},
+            "label": "团子旁相恋的心意",
+            "trust": 0,
+            "status": "lover",
+            "next": "menu_after_hours"
+          },
+          {
+            "key": "friends_trade_sights",
+            "when": {},
+            "text": "你们约定做朋友交换见闻，铃瑚把新菜单留给你挑；你说口味，她说地上的热闹，慢慢聊到收摊。",
+            "effects": {},
+            "label": "朋友交换见闻",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "menu_after_hours": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "choose_together",
+            "when": {},
+            "text": "相恋后你们一起写收摊的小菜单，铃瑚选米香，你选酱味；两份团子摆到篮边，够你们慢慢聊完街景。",
+            "effects": {},
+            "label": "收摊共同写菜单",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "menu_cheek",
+        "text": "铃瑚举两串新口味让你选。你尝完，她亲你的脸颊；你回吻时，她还得意地晃着另一串团子。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "摊边比较竹签长短，她挑顺手的，你理清弯处。整好她坐近，听你讲今天最值得高兴的事。"
+      },
+      {
+        "key": "clear_news",
+        "text": "铃瑚出消息来源的谜题，你追问细节，她得意地揭晓。收好写完的那页，她把空纸递给你，托着下巴等你讲今天的事。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们将消息写成短句，她圈出待确认处，你补亲见的细节。收好纸页，各讲一个小烦恼。"
+      },
+      {
+        "key": "skewer_pair",
+        "text": "你们用新口味穿团子花样，铃瑚排好两色，举到你眼前问怎样。你添另一串，她逐口尝过，比较哪种配得更有趣。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们折几种宽窄不同的包纸，铃瑚试哪种好拿，你看团子是否放得稳；挑妥以后，在摊边分一小串慢慢品味。"
+      }
+    ],
+    "farewell": "二人菜单记下了这一生分享的米香和街景，收摊的小篮收着你们彼此说过的喜欢。",
+    "interrupted": "铃瑚与你约好朋友的试味来往，团子口味和地上见闻都值得认真聊，竹签筒边便留一处写小记的空隙。"
+  },
+  {
+    "id": "doremy",
+    "title": "醒门旁的一朵软云",
+    "source": "https://thbwiki.cc/哆来咪·苏伊特",
+    "start": "door_color",
+    "nodes": {
+      "door_color": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "hear_home_sound",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你在梦岔路听出醒门后的熟悉声响，哆来咪替门沿染上浅色；你望着她道谢，她的笑意停得很柔。",
+            "effects": {},
+            "label": "辨醒门后的声响",
+            "trust": 1,
+            "set": [
+              "waking_sound"
+            ],
+            "next": "cloud_invitation"
+          },
+          {
+            "key": "choose_own_door",
+            "when": {},
+            "text": "你认真指给她看自己想醒来的门，哆来咪替你推开门边的雾；告别前，她把手掌多留在你面前一会。",
+            "effects": {},
+            "label": "告诉她自己的醒门",
+            "trust": 1,
+            "next": "cloud_invitation"
+          }
+        ]
+      },
+      "cloud_invitation": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "shape_small_cloud",
+            "when": {
+              "min": {
+                "bond": 8
+              }
+            },
+            "text": "哆来咪主动在梦里邀你选一朵歇脚云，你说想要稳稳的小块；她照着捏好，陪你坐下听梦里的风。",
+            "effects": {},
+            "label": "选择小块歇脚云",
+            "trust": 1,
+            "set": [
+              "cloud_chosen"
+            ],
+            "next": "dream_wall_care"
+          },
+          {
+            "key": "sit_at_crossroads",
+            "when": {},
+            "text": "她在梦岔路招你坐一会，自己把散梦魂收进袋；你说今天想安静些，她便将周围梦声调得很轻。",
+            "effects": {},
+            "label": "应邀在岔路歇脚",
+            "trust": 1,
+            "next": "dream_wall_care"
+          }
+        ]
+      },
+      "dream_wall_care": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "mend_by_sound",
+            "when": {
+              "relationFlags": [
+                "waking_sound"
+              ]
+            },
+            "text": "你凭醒门后的声响辨清梦墙接缝，哆来咪亲自补好墙面；忙完她问你睡得累不累，请你歇在门旁。",
+            "effects": {},
+            "label": "辨声指梦墙接缝",
+            "trust": 1,
+            "next": "cloud_for_two"
+          },
+          {
+            "key": "describe_unease",
+            "when": {},
+            "text": "你把梦墙那一处不安说清，哆来咪吃掉乱梦，再造出安静的门廊；她陪你等醒门的声音渐近。",
+            "effects": {},
+            "label": "说清梦中的不安",
+            "trust": 1,
+            "next": "cloud_for_two"
+          }
+        ]
+      },
+      "cloud_for_two": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "widen_chosen_cloud",
+            "when": {
+              "relationFlags": [
+                "cloud_chosen"
+              ]
+            },
+            "text": "哆来咪将你选的歇脚云捏宽一边，留两人并坐的位置；她说守着梦路时，也开始盼你来坐这里。",
+            "effects": {},
+            "label": "看扩成两座的软云",
+            "trust": 1,
+            "next": "lucid_hearts"
+          },
+          {
+            "key": "leave_soft_step",
+            "when": {},
+            "text": "她在醒门边造出一块软台阶，邀你每次梦游后多坐片刻；你问缘由，她说很喜欢和你慢慢说话。",
+            "effects": {},
+            "label": "在软台阶多坐片刻",
+            "trust": 1,
+            "next": "lucid_hearts"
+          }
+        ]
+      },
+      "lucid_hearts": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "answer_in_clear_dream",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "cloud_chosen"
+              ]
+            },
+            "text": "梦里的醒门仍清楚可见，哆来咪在软云上为你留出近处，说想与你相恋。你认真回应自己的喜欢，她握住你的手，笑着将下一次梦中相见约好。",
+            "effects": {},
+            "label": "说梦中心意",
+            "trust": 0,
+            "status": "lover",
+            "next": "cloud_after_work"
+          },
+          {
+            "key": "keep_waking_guide",
+            "when": {},
+            "text": "你们在梦岔路说好继续做朋友，哆来咪照样为你认清醒门；下次入梦，她愿听你说沿途见过什么。",
+            "effects": {},
+            "label": "梦里做引路朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "cloud_after_work": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "rest_until_door",
+            "when": {},
+            "text": "相恋后的梦里，哆来咪收好梦魂袋，邀你坐上软云。两人把心事说完，醒门亮起，你伸手道别，她微笑着握住片刻再放开。",
+            "effects": {},
+            "label": "守梦忙完并坐",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "cloud_dream_kiss",
+        "text": "哆来咪在梦里铺好软云，张开双臂等你。你靠近抱住她，她仰脸吻来，你笑着回应；云团晃了晃，两人扶住彼此才坐稳。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "梦岔路里，你们听醒门轻响，她辨近处，你说回音。心事说到难处，你伸手，她轻握着陪你坐稳，听你慢慢讲完。"
+      },
+      {
+        "key": "dream_bag_color",
+        "text": "梦里选梦魂袋的配色，你说出喜欢的理由。哆来咪坐近，把另一种也摊给你看，两人约下回再换个光线比较。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "梦里看散梦魂的形状，她收好待照看的那团，你记像什么。工作做完并坐，互相读记录。"
+      },
+      {
+        "key": "waking_door_parting",
+        "text": "梦中醒门还未亮，哆来咪邀你在云沿编谜语。你抢先猜中，她笑着把云边补成答案的模样，约好下一道留到新的梦里揭晓。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们在梦里挑一个容易认出的道别手势，哆来咪演给你看，你也认真回应；醒门渐亮便照约定结束相见，余话留待下次。"
+      }
+    ],
+    "farewell": "旧梦里的软云收好此生的来往，醒门边两人明白约定的心意，留着恋人安心相见的温柔。",
+    "interrupted": "哆来咪与你约好在梦里做朋友，愿意听你讲近况，也帮你认清醒门；梦声渐近，两人便慢慢道别。"
+  },
+  {
+    "id": "sagume",
+    "title": "桥廊纸页上的双笔",
+    "source": "https://thbwiki.cc/稀神探女",
+    "start": "gesture_glance",
+    "nodes": {
+      "gesture_glance": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "read_wing_pause",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "你看懂探女扶模型前的停顿手势，等她点头才接住桥端；她望向你稳稳的手，笔尖轻轻悬了一会。",
+            "effects": {},
+            "label": "看懂扶桥手势",
+            "trust": 1,
+            "set": [
+              "bridge_gesture"
+            ],
+            "next": "paper_invite"
+          },
+          {
+            "key": "wait_for_nod",
+            "when": {},
+            "text": "你在梦中桥廊等她点头再扶桥，探女在纸上写下谢谢；递纸时与你目光相接，她将纸页托得很近。",
+            "effects": {},
+            "label": "等她点头再扶桥",
+            "trust": 1,
+            "next": "paper_invite"
+          }
+        ]
+      },
+      "paper_invite": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "write_margin",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "探女主动把桥图移到你面前，请你在边栏画想走的小路；你添好一段，她给两人的笔各留一格。",
+            "effects": {},
+            "label": "在边栏添一段路",
+            "trust": 1,
+            "set": [
+              "two_pen_slots"
+            ],
+            "next": "silent_bridge_test"
+          },
+          {
+            "key": "choose_bridge_curve",
+            "when": {},
+            "text": "她带来两张弧桥图，邀你用指尖挑一种；你选完，她便亲自展好纸，与你并坐看桥廊的影子。",
+            "effects": {},
+            "label": "应邀挑弧桥图",
+            "trust": 1,
+            "next": "silent_bridge_test"
+          }
+        ]
+      },
+      "silent_bridge_test": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "pause_on_signal",
+            "when": {
+              "relationFlags": [
+                "bridge_gesture"
+              ]
+            },
+            "text": "你依照学过的手势停在桥脚松动前，探女亲自补齐支架；她确认稳固才示意你换手，照看你酸紧的腕。",
+            "effects": {},
+            "label": "依手势停桥试验",
+            "trust": 1,
+            "next": "paired_ink"
+          },
+          {
+            "key": "draw_loose_joint",
+            "when": {},
+            "text": "你画出桥脚的松缝供她看，探女慢慢加好支架；两人试完，她将折好的垫纸递来供你歇手。",
+            "effects": {},
+            "label": "画松缝帮她补架",
+            "trust": 1,
+            "next": "paired_ink"
+          }
+        ]
+      },
+      "paired_ink": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "put_pens_together",
+            "when": {
+              "relationFlags": [
+                "two_pen_slots"
+              ]
+            },
+            "text": "探女在你们的两格笔位旁画一小颗心，将自己的笔放到你笔旁；你望着她，她点头把纸留给你读。",
+            "effects": {},
+            "label": "读笔位旁的小心",
+            "trust": 1,
+            "next": "written_yes"
+          },
+          {
+            "key": "offer_heart_page",
+            "when": {},
+            "text": "她把桥图翻到空页，认真写下很喜欢与你在这里相处；末尾留着一行，等你也写清自己的心意。",
+            "effects": {},
+            "label": "收桥图上的心意页",
+            "trust": 1,
+            "next": "written_yes"
+          }
+        ]
+      },
+      "written_yes": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "write_both_yes",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "two_pen_slots"
+              ]
+            },
+            "text": "梦中你把愿意相恋写进桥图边栏，探女读完，在自己的那页郑重写下她也喜欢你。她将两页对齐递来，点头牵住你的手，让双方的心意明白相接。",
+            "effects": {},
+            "label": "并写恋人的心意",
+            "trust": 0,
+            "status": "lover",
+            "next": "bridge_evening_page"
+          },
+          {
+            "key": "draw_friendly_path",
+            "when": {},
+            "text": "你们在桥图写明朋友的约定，探女将空页翻到下一座桥；她示意你选路，梦中的试造照样慢慢展开。",
+            "effects": {},
+            "label": "桥图写朋友约定",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "bridge_evening_page": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "share_dream_drawing",
+            "when": {},
+            "text": "相恋后的桥廊梦里，你们把两支笔并排收好，再合画今日看到的月影；探女将画纸压稳，请你坐近看。",
+            "effects": {},
+            "label": "梦中合画桥廊月影",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "dream_ink_cheek",
+        "text": "桥廊梦里，探女画了吻印，举纸看着你。你笑着挪近吻她，她含笑回吻，指尖握住你的手；随后给纸上小人添相握的手，等你再看。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "梦里各画心情，你们用短线说明难处。你读完握她的手，探女点头靠近，继续安静交流。"
+      },
+      {
+        "key": "bridge_dream_margin",
+        "text": "梦里你写约会谜题，探女在桥图标出答案，指向廊边的光影。你点头跟去看，两人轮流改题，纸页翻得又轻又快。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "桥廊梦里记好小事，探女读清逐条回写。你们各挑一段细讲，直到醒路变亮。"
+      },
+      {
+        "key": "two_pen_shadows",
+        "text": "月影照进梦中桥廊，探女递来两支笔，让你给影子添花样。你画相牵的手，她补上小月亮，举纸比着眼前的光。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "梦中桥柱影长短记清，你们各画舒适的坐处。探女指向身旁，你点头挪近，两人拿起纸笔，慢慢写今日的见闻。"
+      }
+    ],
+    "farewell": "桥廊旧梦合起此生的纸页，两支笔明白写下的心意，停在月影旁每一道愿意并列的细线之间。",
+    "interrupted": "探女在桥廊梦里回笔约定朋友往来，你们挑好下一座桥的图，扶稳纸页，再用手势讲清各自看见的线。"
+  },
+  {
+    "id": "clownpiece",
+    "title": "地板下的一排亮石",
+    "source": "https://thbwiki.cc/克劳恩皮丝",
+    "start": "sparkle_stones",
+    "nodes": {
+      "sparkle_stones": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "choose_cool_stone",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你把适合拿在手里的凉亮石挑给皮丝，她捧起来贴近看；发现你也爱这点光，她笑得肩头晃个不停。",
+            "effects": {},
+            "label": "挑一颗凉亮石",
+            "trust": 1,
+            "set": [
+              "cool_stone"
+            ],
+            "next": "underfloor_invite"
+          },
+          {
+            "key": "watch_small_show",
+            "when": {},
+            "text": "皮丝拿亮石演一场小影戏，你坐在地板边认真看完；她凑到洞口问你最好看哪段，小脸满是期待。",
+            "effects": {},
+            "label": "看完亮石小影戏",
+            "trust": 1,
+            "next": "underfloor_invite"
+          }
+        ]
+      },
+      "underfloor_invite": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "lift_exit_board",
+            "when": {
+              "min": {
+                "health": 8
+              }
+            },
+            "text": "皮丝邀你在地板下排跳路，你托稳出口板。她试完第一跳站稳招手，你笑着挑好一格，她开心地讲下一步该怎么跳。",
+            "effects": {},
+            "label": "托稳跳路出口板",
+            "trust": 1,
+            "set": [
+              "exit_board"
+            ],
+            "next": "torch_set_aside"
+          },
+          {
+            "key": "pick_jump_tiles",
+            "when": {},
+            "text": "她从地板下递出几片小木板，邀你选跳路的格子；你选一块平的，她便把它放到离洞口最近的地方。",
+            "effects": {},
+            "label": "替她选跳路木片",
+            "trust": 1,
+            "next": "torch_set_aside"
+          }
+        ]
+      },
+      "torch_set_aside": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "arrange_cool_corners",
+            "when": {
+              "relationFlags": [
+                "cool_stone"
+              ]
+            },
+            "text": "你把挑好的凉亮石排在跳路拐角，皮丝将火把放进远处的石座；你们沿着小石光慢慢试每一格。",
+            "effects": {},
+            "label": "用凉石照跳路",
+            "trust": 1,
+            "next": "two_end_marks"
+          },
+          {
+            "key": "clean_play_space",
+            "when": {},
+            "text": "你与皮丝扫净跳路碎屑，她先将火把安放到远处；试跳时她记得等你踏稳，脚下光只来自亮石。",
+            "effects": {},
+            "label": "扫净亮石跳路",
+            "trust": 1,
+            "next": "two_end_marks"
+          }
+        ]
+      },
+      "two_end_marks": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "mark_near_exit",
+            "when": {
+              "relationFlags": [
+                "exit_board"
+              ]
+            },
+            "text": "她在你托稳的出口板画两个并排终点，招你选一格。你站过去，皮丝笑着说最喜欢等你跳到身旁，再与你试过路口。",
+            "effects": {},
+            "label": "画并排的跳路终点",
+            "trust": 1,
+            "next": "brighthearted_pair"
+          },
+          {
+            "key": "share_favorite_stone",
+            "when": {},
+            "text": "皮丝把最喜欢的亮石借你捧着，看你用手护好便开心地靠过来；她说很想把好多这样的游戏分给你。",
+            "effects": {},
+            "label": "捧她喜欢的亮石",
+            "trust": 1,
+            "next": "brighthearted_pair"
+          }
+        ]
+      },
+      "brighthearted_pair": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "promise_small_hearts",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "exit_board"
+              ]
+            },
+            "text": "皮丝画好并排的小手，说喜欢你、想做恋人。你答应这份小心意，向她伸手，她开心握住，再邀你各站一端，看约好的终点。",
+            "effects": {},
+            "label": "约好纯真的心意",
+            "trust": 0,
+            "status": "lover",
+            "next": "pebble_shadow_play"
+          },
+          {
+            "key": "keep_play_friend",
+            "when": {},
+            "text": "你们说好当一起玩亮石的朋友，皮丝把跳路的空格留给你；下次见面，她打算换一个更有趣的走法。",
+            "effects": {},
+            "label": "继续做游戏朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "pebble_shadow_play": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "make_little_scene",
+            "when": {},
+            "text": "相恋后你们用亮石摆一场小影戏，皮丝挑好自己的位置才招你坐近；两个手影在木板上轻轻碰头。",
+            "effects": {},
+            "label": "一起摆小影戏",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "cool_pebble_forehead",
+        "text": "皮丝放远火把，抱亮石跑来出跳路谜题。你猜中，她放稳石头欢呼着张臂；你抱她亲额头，她笑着站回起点，邀你再跳一格。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们用手影讲故事，皮丝伸出两只弯手，你添台词。影子碰在一起，她笑着碰碰你的手心，又摆出一只新的小兔子。"
+      },
+      {
+        "key": "two_jump_marks",
+        "text": "皮丝画好笑脸终点，让你选绕石路。你伸出手，她握住与你慢慢试走；到终点才松手，各自选好下回比赛的起点。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们按大小排凉石，她试转角那颗，你检查地面。摆好各走一回，认真选最开心的一格。"
+      },
+      {
+        "key": "underfloor_window",
+        "text": "你举透光叶，皮丝跑来猜里面的小动物。她选一只，在叶下摆出手影，你替它编故事，两人一起找能让它绕过的小转角。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们在地板边用细枝拼小屋轮廓，皮丝挑弯枝当门，你排平屋角；搭好便坐着看光，轮流给窗边的影子取名字。"
+      }
+    ],
+    "farewell": "此生的亮石与牵手收在木板间，两个并排的跳路终点，留着你们纯真相恋时开心回应的光。",
+    "interrupted": "皮丝与你约好当游戏朋友，下一回一起挑凉亮石，摆出一条有趣的跳路，她愿意慢慢教你选格子。"
+  },
+  {
+    "id": "junko",
+    "title": "静海边保留的花纹",
+    "source": "https://thbwiki.cc/纯狐",
+    "start": "white_grain",
+    "nodes": {
+      "white_grain": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "see_fine_trace",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你在梦中认出白木片边缘的一缕细纹，纯狐沿着你的目光低头；抬起时，她把木片轻放在你掌中。",
+            "effects": {},
+            "label": "认白木边缘细纹",
+            "trust": 1,
+            "set": [
+              "white_trace"
+            ],
+            "next": "shore_walk_invite"
+          },
+          {
+            "key": "hold_quiet_piece",
+            "when": {},
+            "text": "你在静海梦里静静托着白木片，纯狐坐近问你看见了什么；听你说月光，她的神情缓缓柔和下来。",
+            "effects": {},
+            "label": "静海梦中托白木",
+            "trust": 1,
+            "next": "shore_walk_invite"
+          }
+        ]
+      },
+      "shore_walk_invite": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "listen_to_grief",
+            "when": {
+              "min": {
+                "bond": 9
+              }
+            },
+            "text": "纯狐主动请你沿梦中静海走一段，谈起失子与怨恨；你认真听完，她在回身时说下次也想见你。",
+            "effects": {},
+            "label": "听她讲怨恨来处",
+            "trust": 1,
+            "set": [
+              "grief_heard"
+            ],
+            "next": "flower_shading"
+          },
+          {
+            "key": "count_shore_marks",
+            "when": {},
+            "text": "她在静海梦里邀你数岸上的浅纹，与你慢慢走过白沙；你说这段路很安静，她便把脚步放得更慢。",
+            "effects": {},
+            "label": "应邀数静海浅纹",
+            "trust": 1,
+            "next": "flower_shading"
+          }
+        ]
+      },
+      "flower_shading": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "keep_vein_color",
+            "when": {
+              "relationFlags": [
+                "white_trace"
+              ]
+            },
+            "text": "你沿白木的细纹画下一瓣有浓淡的花，纯狐将光收在一边，让纸上的颜色自在显出深浅。",
+            "effects": {},
+            "label": "照细纹画花瓣",
+            "trust": 1,
+            "next": "named_in_present"
+          },
+          {
+            "key": "choose_one_flower",
+            "when": {},
+            "text": "你在梦中挑一朵小花，问她愿看哪一瓣；纯狐把花放到光里，与你细看它自己的颜色和形状。",
+            "effects": {},
+            "label": "挑梦中一朵小花",
+            "trust": 1,
+            "next": "named_in_present"
+          }
+        ]
+      },
+      "named_in_present": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "say_own_name",
+            "when": {
+              "relationFlags": [
+                "grief_heard"
+              ]
+            },
+            "text": "听过她的旧事后，你在梦中说自己的名字和此刻心意；纯狐重复你的名字，告诉你她开始盼你的来往。",
+            "effects": {},
+            "label": "把当下的名字说清",
+            "trust": 1,
+            "next": "quiet_sea_answer"
+          },
+          {
+            "key": "leave_one_vase_place",
+            "when": {},
+            "text": "纯狐在梦中给小花摆好一只浅瓶，将瓶旁的位置留给你；她说每次坐到这里，很想见你带笑的眼睛。",
+            "effects": {},
+            "label": "坐她留的瓶旁位置",
+            "trust": 1,
+            "next": "quiet_sea_answer"
+          }
+        ]
+      },
+      "quiet_sea_answer": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "meet_as_lovers",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "grief_heard"
+              ]
+            },
+            "text": "静海梦里，纯狐读过相见的小名，叫你的名字说愿相恋。你回应喜欢，伸出手，她温柔握住，将花影移近，认真听你把心意讲完。",
+            "effects": {},
+            "label": "梦中互相喜欢",
+            "trust": 0,
+            "status": "lover",
+            "next": "flower_at_dusk"
+          },
+          {
+            "key": "friend_by_sea",
+            "when": {},
+            "text": "你们在静海梦里把来往定为朋友，纯狐将白木片放回沙边；你陪她谈这次看到的花纹，再沿醒路告别。",
+            "effects": {},
+            "label": "静海梦里继续做朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "flower_at_dusk": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "share_flower_light",
+            "when": {},
+            "text": "相恋后的静海梦里，你们选一朵小花来画夕光，纯狐为你扶纸；落笔后两人并坐，听海面安静地泛起微波。",
+            "effects": {},
+            "label": "梦中共同画夕光",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "quiet_sea_kiss",
+        "text": "静海梦里，纯狐邀你看新花影，在安静处停下张臂。你拥住她，两人轻轻相吻；她温柔回抱，挨着你听微波，不急着给花起名。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "梦里各画静海细波，纯狐说所见的光，你添笔。纸页放妥，你将手掌摊开，她握住，慢慢讲完今日愿意说的心事。"
+      },
+      {
+        "key": "flower_name_dream",
+        "text": "梦里你挑新花，纯狐给它起个奇怪名字，等你再取一个。比过两个说法，她将纸页挪到你们中间，与你慢慢描出花纹。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "静海梦里比花影深浅，她挑一瓣说感受，你再说看法。收好纸页，两人一起看月光变换。"
+      },
+      {
+        "key": "white_wood_dream",
+        "text": "梦里纯狐递来白木影，邀你猜细纹像哪条小路。你说出答案，她兴致渐浓，指一处新的转弯，两人一笔笔给线条添走向。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "静海梦里你们把当天的小画按光色排好，纯狐指明想留到下次的话题，你也添一句；醒路亮起就认真互道下次见。"
+      }
+    ],
+    "farewell": "静海的旧梦收下此生的花纹与相见，彼此叫过的名字，留在你们愿意并坐的月光里。",
+    "interrupted": "纯狐与你约好朋友的梦中来往，静海边的花纹和月光供两人慢慢看，醒路亮起时便认真挥手道别。"
+  },
+  {
+    "id": "hecatia",
+    "title": "三处落点的同一笑声",
+    "source": "https://thbwiki.cc/赫卡提亚·拉碧斯拉祖利",
+    "start": "orbit_glance",
+    "nodes": {
+      "orbit_glance": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "follow_one_rhythm",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "你循同一段轻哼认出三处落点，赫卡提亚换到近处身体与你对视；笑声落下时，她把脚步多留了一拍。",
+            "effects": {},
+            "label": "认同一段轻哼",
+            "trust": 1,
+            "set": [
+              "one_rhythm"
+            ],
+            "next": "stage_invite"
+          },
+          {
+            "key": "watch_changing_ball",
+            "when": {},
+            "text": "你看她头顶的坠球随身体切换，认真夸那道配色；赫卡提亚靠近给你看清，笑着问你更喜欢哪一处。",
+            "effects": {},
+            "label": "看她变换的坠球",
+            "trust": 1,
+            "next": "stage_invite"
+          }
+        ]
+      },
+      "stage_invite": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "paint_three_landings",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "她主动邀你给交界台画三处落点，你顺着轨迹描好边；赫卡提亚逐一试踏，每次落到你面前都笑着停留。",
+            "effects": {},
+            "label": "画好三处落点",
+            "trust": 1,
+            "set": [
+              "landing_marks"
+            ],
+            "next": "orbit_shelter"
+          },
+          {
+            "key": "pick_color_banner",
+            "when": {},
+            "text": "赫卡提亚抱来几块布邀你挑舞台配色，自己轮流换身试看；她把你选的颜色拿在近处，问愿不愿来陪她摆。",
+            "effects": {},
+            "label": "替交界台挑布色",
+            "trust": 1,
+            "next": "orbit_shelter"
+          }
+        ]
+      },
+      "orbit_shelter": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "move_on_same_hum",
+            "when": {
+              "relationFlags": [
+                "one_rhythm"
+              ]
+            },
+            "text": "你听着记过的轻哼挪好屏风，赫卡提亚调整坠球的路径；最后她选近处的身影坐下，先问你做活累不累。",
+            "effects": {},
+            "label": "循轻哼摆屏风",
+            "trust": 1,
+            "next": "nearby_landing"
+          },
+          {
+            "key": "open_stage_space",
+            "when": {},
+            "text": "你们给屏风留一道宽口，她试过三处落点确认顺畅；忙完赫卡提亚把椅子推到你旁边，听你讲一天的事。",
+            "effects": {},
+            "label": "给屏风留宽口",
+            "trust": 1,
+            "next": "nearby_landing"
+          }
+        ]
+      },
+      "nearby_landing": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "choose_your_mark",
+            "when": {
+              "relationFlags": [
+                "landing_marks"
+              ]
+            },
+            "text": "她照你画的落点走完一小段，最后特意停在你身旁；赫卡提亚说，三处身体都能来，最想靠近的是你。",
+            "effects": {},
+            "label": "看她选身旁落点",
+            "trust": 1,
+            "next": "same_heart_answer"
+          },
+          {
+            "key": "save_one_chair",
+            "when": {},
+            "text": "赫卡提亚把台边两张椅子摆近，让你替她选舒服的角度；她笑着说每次来这里，已开始先想你会坐哪边。",
+            "effects": {},
+            "label": "把两张椅子摆近",
+            "trust": 1,
+            "next": "same_heart_answer"
+          }
+        ]
+      },
+      "same_heart_answer": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "choose_one_love",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "landing_marks"
+              ]
+            },
+            "text": "赫卡提亚挑好三种配色，用身旁身体说喜欢你、愿相恋。你认真回应，向她伸手，她笑着握住，同一个笑声在交界台边陪你选好布色。",
+            "effects": {},
+            "label": "交界台相恋",
+            "trust": 0,
+            "status": "lover",
+            "next": "shared_stage_break"
+          },
+          {
+            "key": "stage_friendship",
+            "when": {},
+            "text": "你们把来往留给朋友的舞台试摆，赫卡提亚请你挑下一回的落点；你画路线，她试步子，交界台照样热闹。",
+            "effects": {},
+            "label": "继续做试台朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "shared_stage_break": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "choose_cozy_view",
+            "when": {},
+            "text": "相恋后赫卡提亚选近处身体陪你看交界台的布色，两人并坐挑出最柔和的一块，作为下一次排练的背景。",
+            "effects": {},
+            "label": "台边并坐挑布色",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "chosen_body_kiss",
+        "text": "赫卡提亚用身旁身体向你伸手邀舞，你握上，随她转过半圈。她贴近吻你，你回吻，她笑着漏掉一拍，仍牵着手，邀你编个新节奏。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "交界台上，她用身旁身体敲拍，你接哼唱。末音落下，她伸手等你，你握上并坐，轮流讲今日想做的事，慢慢听完整。"
+      },
+      {
+        "key": "three_color_sketch",
+        "text": "你画两种边色，她换身比较，又请你挑第三种。赫卡提亚用近旁身体坐稳，将喜欢的那角转到光下，等你也慢慢看清。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们按深浅排布样，她用身旁身体试色，你说哪种舒服。理好并坐，聊各自喜欢的图案。"
+      },
+      {
+        "key": "stage_hum",
+        "text": "赫卡提亚哼着快调邀你追她的小步，你绕过交界台一角，她便停在落点伸手。你握住，两人笑着编出自己的转圈暗号。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们在交界台辨落脚声，赫卡提亚亲自试两段，你说哪边更稳。回程你伸手，她用身旁身体握住同行，再慢慢讲今日见闻。"
+      }
+    ],
+    "farewell": "三处落点陪你们走过此生的台边时光，同一笑声里的心意，留在交界台上每次愿意靠近的目光之间。",
+    "interrupted": "赫卡提亚与你约好朋友的交界台排练，她亲自换身试落点，你画清路线，两个人各讲喜欢哪一种布色。"
+  },
+  {
+    "id": "joon",
+    "title": "金扣旁各自的名字",
+    "source": "https://thbwiki.cc/依神女苑",
+    "start": "glittering_clasp",
+    "nodes": {
+      "glittering_clasp": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "see_copper_edge",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你看出金扣边缘的镀层磨损，女苑凑近与你比较颜色；听你夸她挑的式样好看，她抿笑把扣子转了一圈。",
+            "effects": {},
+            "label": "辨金扣镀层边",
+            "trust": 1,
+            "set": [
+              "clasp_edge"
+            ],
+            "next": "price_card_invite"
+          },
+          {
+            "key": "choose_bold_shape",
+            "when": {},
+            "text": "你替女苑挑一枚形状张扬的衣扣，她举到领边试戴；发现你看得认真，她得意地问这次是不是很配她。",
+            "effects": {},
+            "label": "挑一枚醒目的衣扣",
+            "trust": 1,
+            "next": "price_card_invite"
+          }
+        ]
+      },
+      "price_card_invite": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "list_own_costs",
+            "when": {
+              "min": {
+                "fortune": 8
+              }
+            },
+            "text": "女苑主动邀你比货价，你把各自想买的东西分列清楚；她拿出自己的钱挑好一项，约你同去看式样。",
+            "effects": {},
+            "label": "把各自货价列清",
+            "trust": 1,
+            "set": [
+              "separate_prices"
+            ],
+            "next": "lining_repair"
+          },
+          {
+            "key": "browse_sample_board",
+            "when": {},
+            "text": "她带来一块衣扣样板邀你看花纹，你挑中细边的那枚；女苑说先看看也很好，将样板挪到两人中间。",
+            "effects": {},
+            "label": "应邀看衣扣样板",
+            "trust": 1,
+            "next": "lining_repair"
+          }
+        ]
+      },
+      "lining_repair": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "pad_known_edge",
+            "when": {
+              "relationFlags": [
+                "clasp_edge"
+              ]
+            },
+            "text": "你按磨出的铜边给扣子加衬，女苑自己挑好衬色；她看你针线勒手，拿一块软布垫在你掌下。",
+            "effects": {},
+            "label": "给金扣铜边加衬",
+            "trust": 1,
+            "next": "signed_ribbon"
+          },
+          {
+            "key": "sort_clasp_tools",
+            "when": {},
+            "text": "你们把衣扣与衬布摆好再开工，女苑挑材料，你帮她收针；闲下来她与你聊起寺中修行的经历。",
+            "effects": {},
+            "label": "共同整理衣扣工具",
+            "trust": 1,
+            "next": "signed_ribbon"
+          }
+        ]
+      },
+      "signed_ribbon": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "sign_price_card",
+            "when": {
+              "relationFlags": [
+                "separate_prices"
+              ]
+            },
+            "text": "女苑在各自列好的货价旁签名，将两张卡夹在同一根彩带上；她说很想和你并排选完以后喜欢的东西。",
+            "effects": {},
+            "label": "把各自货卡系一处",
+            "trust": 1,
+            "next": "golden_plain_words"
+          },
+          {
+            "key": "pick_two_colors",
+            "when": {},
+            "text": "她拿着两段艳色布带请你搭配，选好便各系一条在样板边；女苑望着配色说，你们在一起还挺好看。",
+            "effects": {},
+            "label": "选两段相配布带",
+            "trust": 1,
+            "next": "golden_plain_words"
+          }
+        ]
+      },
+      "golden_plain_words": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "name_own_affection",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "separate_prices"
+              ]
+            },
+            "text": "女苑挑好衣扣，放下金包，说最想和你约会。你回应喜欢，伸手问愿不愿相恋，她开心握住答应，邀你再选下一回的配色。",
+            "effects": {},
+            "label": "相恋的心意",
+            "trust": 0,
+            "status": "lover",
+            "next": "clasp_evening"
+          },
+          {
+            "key": "keep_design_friend",
+            "when": {},
+            "text": "你们将心意留作朋友来往，女苑把样板递给你看新花纹；货价各自挑好，下一回便约在外廊比较式样。",
+            "effects": {},
+            "label": "继续做选花纹朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "clasp_evening": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "wear_chosen_clasp",
+            "when": {},
+            "text": "相恋后女苑戴着亲自挑好的扣子来外廊，让你看新衬色；你们并坐将余布折好，商量哪一块更配衣领。",
+            "effects": {},
+            "label": "外廊并坐折余布",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "clasp_cheek",
+        "text": "女苑选好衣扣，邀你到外廊的光里，笑着张臂。你拥住她，她亲过来，你回应，她得意地抚平你的领边，说两人的搭配正合适。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们用纸样比衣扣，她选显眼的边，你量合手的位置。选好并坐缝几针，各讲今天的小事。"
+      },
+      {
+        "key": "bold_ribbon",
+        "text": "女苑用彩带摆花样，催你挑最神气的一角。你选好，她邀你去看侧光，你走近扶住带尾，她等你添完想改的那一笔。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们按色排衣饰，她选今日喜欢的，你说搭配理由。理好在外廊慢走，看布面映光。"
+      },
+      {
+        "key": "two_signatures",
+        "text": "女苑算好约会预算，挑能付的纸饰与你折。你折出俏皮的边，她挪近细看，笑着指那一角，说下回也想试这种折法。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们翻两页布料价单，女苑记自己想买的份额，你说明自己的选择；各算清需要，再一起折一枚合眼缘的小纸结。"
+      }
+    ],
+    "farewell": "金扣、衬色和并排的签名陪过这一生，外廊的彩带收着两个恋人各自认真说出的喜欢。",
+    "interrupted": "女苑与你约好朋友来往，想看衣扣新花纹时便在外廊摊好样板；你挑形状，她谈配色，各自选喜欢的一项。"
+  },
+  {
+    "id": "shion",
+    "title": "漏檐下分好的干角",
+    "source": "https://thbwiki.cc/依神紫苑",
+    "start": "dry_eaves",
+    "nodes": {
+      "dry_eaves": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "move_dry_board",
+            "when": {
+              "min": {
+                "bond": 8
+              }
+            },
+            "text": "你把旧檐下最干的一块木板挪给紫苑，她试着坐稳，望见你也笑了，便把饭包朝你这边移近一点。",
+            "effects": {},
+            "label": "挪出一块干木板",
+            "trust": 1,
+            "set": [
+              "dry_board"
+            ],
+            "next": "small_pan_invite"
+          },
+          {
+            "key": "sit_in_rain_gap",
+            "when": {},
+            "text": "你在檐下挑出一段避雨的空隙，请她坐近；紫苑慢慢展开饭包，目光在你脸上停了许久才问吃过没有。",
+            "effects": {},
+            "label": "坐在避雨的空隙",
+            "trust": 1,
+            "next": "small_pan_invite"
+          }
+        ]
+      },
+      "small_pan_invite": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "hear_pan_ready",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "紫苑主动捧来小锅，请你陪她等饭熟；你听出锅声变化提醒收火，她高兴地把第一口盛到你面前。",
+            "effects": {},
+            "label": "听锅声提醒收火",
+            "trust": 1,
+            "set": [
+              "pot_sound"
+            ],
+            "next": "leak_patch"
+          },
+          {
+            "key": "share_plain_rice",
+            "when": {},
+            "text": "她邀你在旧檐吃一碗素饭，怕份量少便慢慢添水；你愿意和她分着吃，紫苑低头把两只碗摆得很齐。",
+            "effects": {},
+            "label": "陪她分一碗素饭",
+            "trust": 1,
+            "next": "leak_patch"
+          }
+        ]
+      },
+      "leak_patch": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "protect_dry_board",
+            "when": {
+              "relationFlags": [
+                "dry_board"
+              ]
+            },
+            "text": "你们沿干木板的位置补上漏檐，紫苑帮你递碎瓦；接雨的碗滑倒了，她收好碎片，你托稳剩下的那只。",
+            "effects": {},
+            "label": "沿干角补一片瓦",
+            "trust": 1,
+            "next": "warm_rice_choice"
+          },
+          {
+            "key": "clear_drain",
+            "when": {},
+            "text": "雨水沿阶流来，你与紫苑一起拨开堵住的落叶；她把饭包先护到干处，腾出的布角替你擦去袖口水珠。",
+            "effects": {},
+            "label": "一起清阶边落叶",
+            "trust": 1,
+            "next": "warm_rice_choice"
+          }
+        ]
+      },
+      "warm_rice_choice": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "wait_with_pan",
+            "when": {
+              "relationFlags": [
+                "pot_sound"
+              ]
+            },
+            "text": "听着你认过的锅声，紫苑把饭煮到两人喜欢的软度；分饭时她小声说，开始很盼有人与你这样一起等。",
+            "effects": {},
+            "label": "等两人喜欢的锅声",
+            "trust": 1,
+            "next": "eaves_affection"
+          },
+          {
+            "key": "share_best_corner",
+            "when": {},
+            "text": "紫苑指着旧檐最干的一角，主动请你与她并肩坐；她说这一点好地方，自己最想分给你。",
+            "effects": {},
+            "label": "并坐她留的干角",
+            "trust": 1,
+            "next": "eaves_affection"
+          }
+        ]
+      },
+      "eaves_affection": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "choose_her_company",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "pot_sound"
+              ]
+            },
+            "text": "紫苑把饭碗放到稳处，抬头说最盼着你来陪她。你认真说出喜欢、希望相恋，她点头握住你的手，开心地约好以后在旧檐下听彼此讲一天。",
+            "effects": {},
+            "label": "旧檐下互说喜欢",
+            "trust": 0,
+            "status": "lover",
+            "next": "patched_bowl_day"
+          },
+          {
+            "key": "rice_as_friends",
+            "when": {},
+            "text": "你们把心意讲好，继续以朋友身份在旧檐分饭；紫苑留一只接雨碗给你帮忙看着，锅声响起便一起等。",
+            "effects": {},
+            "label": "朋友相伴等饭",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "patched_bowl_day": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "set_two_bowls",
+            "when": {},
+            "text": "相恋后你们把缺口的小碗磨平，紫苑在檐下摆好两份饭；就着缓缓的锅声，两人并坐聊今天的小麻烦。",
+            "effects": {},
+            "label": "檐下并坐分两碗饭",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "eaves_forehead",
+        "text": "旧檐下，紫苑留好干角，握你的手靠近。你抱她吻额角，她笑着亲你的脸颊，将坐垫往你身旁挪。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们拍净坐垫，她选背风处，你扶稳边角。坐好以后，紫苑认真听完你今天的小烦恼。"
+      },
+      {
+        "key": "rain_two_hands",
+        "text": "你带点心到旧檐，紫苑先尝一口，让你猜她最喜欢的味。猜中她握握你的手，将剩下的分好，约下回换她出题。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们用小碗比饭的软硬，她选吃着舒服的，你记水量。尝完放好碗，慢慢聊日常。"
+      },
+      {
+        "key": "rice_crust",
+        "text": "旧檐下拼干叶，你排星星，紫苑添月亮。纸页举到侧光前，她指两处重叠的细角，你挪一挪星星，她便笑着把月亮也移近。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "雨声落在旧檐，你们按滴水快慢猜哪一段先停。紫苑把碗摆稳，你清好手边小物；猜完便并坐，听各自讲今天。"
+      }
+    ],
+    "farewell": "旧檐下这一生的雨声与饭香渐渐合拢，留出的干角，收着两个人愿意并坐时说心意。",
+    "interrupted": "紫苑点头与你做朋友，在旧檐下一起分饭、帮忙接雨；锅声响起，两人便慢慢等这一碗煮好。"
+  },
+  {
+    "id": "eternity",
+    "title": "叶背光里的一对影子",
+    "source": "https://thbwiki.cc/爱塔妮缇拉尔瓦",
+    "start": "leaf_back_glimmer",
+    "nodes": {
+      "leaf_back_glimmer": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "see_scale_light",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你看出叶背鳞粉在光里变色，拉尔瓦轻轻转翅给你看；见你看得开心，她也笑着把脸凑到叶影旁。",
+            "effects": {},
+            "label": "看叶背鳞粉的光",
+            "trust": 1,
+            "set": [
+              "scale_glimmer"
+            ],
+            "next": "leaf_house_invite"
+          },
+          {
+            "key": "watch_open_bud",
+            "when": {},
+            "text": "你陪她趴在将开的花苞旁，等一片花瓣伸出来；拉尔瓦发现你和她一起屏气，笑得触角也轻轻晃。",
+            "effects": {},
+            "label": "陪她等花苞开",
+            "trust": 1,
+            "next": "leaf_house_invite"
+          }
+        ]
+      },
+      "leaf_house_invite": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "leave_air_space",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "拉尔瓦主动邀你在洞口排落叶，你为小茧留出通气缝；她挑一片圆叶放你手里，招你看选好的叶层。",
+            "effects": {},
+            "label": "在叶层留通气缝",
+            "trust": 1,
+            "set": [
+              "leaf_air"
+            ],
+            "next": "powder_observation"
+          },
+          {
+            "key": "sort_round_leaves",
+            "when": {},
+            "text": "她邀你收拢洞口的圆叶，自己逐片挑干净；你把好看的纹路留给她，她兴奋地将两片并排放好。",
+            "effects": {},
+            "label": "替她收拢圆叶",
+            "trust": 1,
+            "next": "powder_observation"
+          }
+        ]
+      },
+      "powder_observation": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "follow_scale_glimmer",
+            "when": {
+              "relationFlags": [
+                "scale_glimmer"
+              ]
+            },
+            "text": "你沿鳞粉的变色记录光照，拉尔瓦带你看幼虫与蛹；一阵风起，她先替你按住叶页，再慢慢指清变化。",
+            "effects": {},
+            "label": "沿鳞粉光看成长",
+            "trust": 1,
+            "next": "paired_leaf_choice"
+          },
+          {
+            "key": "watch_cocoon_space",
+            "when": {},
+            "text": "你们守在小茧旁看外壳的细纹，拉尔瓦请你把手放在远一点的叶子上；你等着，她陪你观察到风小。",
+            "effects": {},
+            "label": "静静看茧边细纹",
+            "trust": 1,
+            "next": "paired_leaf_choice"
+          }
+        ]
+      },
+      "paired_leaf_choice": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "keep_two_clearings",
+            "when": {
+              "relationFlags": [
+                "leaf_air"
+              ]
+            },
+            "text": "拉尔瓦在通气的叶层边留出两个小空地，说想和你各坐一片叶影；你坐好，她开心地轻碰你的手指。",
+            "effects": {},
+            "label": "坐叶层旁双空地",
+            "trust": 1,
+            "next": "little_leaf_hearts"
+          },
+          {
+            "key": "choose_twin_leaves",
+            "when": {},
+            "text": "她挑两片纹路相像的圆叶请你拿一片，自己抱另一片；拉尔瓦说每次看见叶子，都很想找你一起玩。",
+            "effects": {},
+            "label": "收一片相配圆叶",
+            "trust": 1,
+            "next": "little_leaf_hearts"
+          }
+        ]
+      },
+      "little_leaf_hearts": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "promise_in_leaf_light",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "leaf_air"
+              ]
+            },
+            "text": "拉尔瓦把你举的叶影接到自己的圆叶旁，开心地说最想和你一起玩，也想与你做恋人。你认真答应互相喜欢，她拉住你的手，邀你给这对小影子起名字。",
+            "effects": {},
+            "label": "叶影里约好心意",
+            "trust": 0,
+            "status": "lover",
+            "next": "cave_goodnight"
+          },
+          {
+            "key": "friends_watch_growth",
+            "when": {},
+            "text": "你们说好继续当看花苞的朋友，拉尔瓦给你指新长的叶芽；下一回来洞口，便一起看它伸出多少。",
+            "effects": {},
+            "label": "继续做观察朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "cave_goodnight": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "leave_leaf_sign",
+            "when": {},
+            "text": "相恋后拉尔瓦在冬眠洞口选好叶层，与你各按一个小叶印；睡前她向你挥手，将这回相见的笑容收好。",
+            "effects": {},
+            "label": "洞口按两枚叶印",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "butterfly_cheek",
+        "text": "拉尔瓦收翅跑来让你猜花苞颜色，你猜中，她开心地环住你的手臂。你亲她脸颊，她放开手笑着招呼，邀你看新落的花影。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们看小虫的细路，她指转角，你画到纸上。纸页收好，拉尔瓦在身旁坐稳，兴致勃勃地听你讲今天的小发现。"
+      },
+      {
+        "key": "leaf_shadow_pair",
+        "text": "拉尔瓦选鲜亮叶子，邀你玩影子追逐。你笑着接另一角，她转叶影；两道影碰上，她拍手笑，捧着叶片等你再追一次。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们用叶柄比洞口的光向，她调整叶片，你记最亮的一边。忙完一起听风穿过叶背。"
+      },
+      {
+        "key": "cocoon_patience",
+        "text": "小茧旁猜细纹，拉尔瓦挪圆叶让你坐。你认出变化，她用叶尖沿纹指到尽头，约好下回再找一种，让你也慢慢画清。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们在洞口分辨干叶的脆响，拉尔瓦轻轻弯一片，你试另一片；选好不易碎的几张，轮流折一只小船看看。"
+      }
+    ],
+    "farewell": "叶背的光和洞口叶层留着此生的相见，你们纯真相恋的心意，安静收在那两个小小的叶影空地里。",
+    "interrupted": "拉尔瓦与你约好当看花苞的朋友，洞口的叶层留出通气缝；你指新芽，她看小茧，一起等细小的变化。"
+  },
+  {
+    "id": "nemuno",
+    "title": "树根绕过的双人小路",
+    "source": "https://thbwiki.cc/坂田合欢",
+    "start": "root_curve",
+    "nodes": {
+      "root_curve": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "spare_root",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你沿树根弯出一条窄路，合欢站在柴刀旁看你做完；你抬头问这一弯可好，她的目光比回答先柔下来。",
+            "effects": {},
+            "label": "给树根留曲路",
+            "trust": 1,
+            "set": [
+              "root_curve"
+            ],
+            "next": "basket_invite"
+          },
+          {
+            "key": "lift_branch_tip",
+            "when": {},
+            "text": "你按她指的地方抬起倒枝末端，合欢将重的一头拖开；两人把小径露出来，她递给你一篮刚摘的山菜。",
+            "effects": {},
+            "label": "抬倒枝露出小径",
+            "trust": 1,
+            "next": "basket_invite"
+          }
+        ]
+      },
+      "basket_invite": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "fit_basket_strap",
+            "when": {
+              "min": {
+                "health": 8
+              }
+            },
+            "text": "合欢主动叫你来背山菜，见你调好篓带便教你选嫩叶；她把适合你走的坡指清，自己陪在另一侧。",
+            "effects": {},
+            "label": "调篓带陪摘山菜",
+            "trust": 1,
+            "set": [
+              "basket_strap"
+            ],
+            "next": "rainwood_care"
+          },
+          {
+            "key": "learn_leaf_cut",
+            "when": {},
+            "text": "她招你到圣域边看山菜，逐片教你从哪儿剪；你剪好一把，她将篓子挪近，说今天可以慢慢做。",
+            "effects": {},
+            "label": "应邀学剪嫩叶",
+            "trust": 1,
+            "next": "rainwood_care"
+          }
+        ]
+      },
+      "rainwood_care": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "follow_root_curve",
+            "when": {
+              "relationFlags": [
+                "root_curve"
+              ]
+            },
+            "text": "雨后你沿留给树根的曲路找干柴，合欢摸树皮认好湿色；她把最稳的一段让给你，两人背柴回木墩。",
+            "effects": {},
+            "label": "沿曲路找干柴",
+            "trust": 1,
+            "next": "second_log"
+          },
+          {
+            "key": "keep_lower_load",
+            "when": {},
+            "text": "你们先挑容易搬的干枝，合欢背重的一篓，给你留轻的；你在木墩把柴摆开，她教你看树皮的湿色。",
+            "effects": {},
+            "label": "分轻重背干柴",
+            "trust": 1,
+            "next": "second_log"
+          }
+        ]
+      },
+      "second_log": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "set_basket_side",
+            "when": {
+              "relationFlags": [
+                "basket_strap"
+              ]
+            },
+            "text": "她照你调过的篓带编一条新带，放在第二个木墩上；合欢说这边想留给你，有你在，山菜也收得开心。",
+            "effects": {},
+            "label": "收木墩上的新篓带",
+            "trust": 1,
+            "next": "mountain_answer"
+          },
+          {
+            "key": "choose_second_log",
+            "when": {},
+            "text": "合欢把第二个木墩搬到自己旁边，请你选平整的一面；她说很愿意以后做完山活，都与你坐一会。",
+            "effects": {},
+            "label": "选旁边木墩的一面",
+            "trust": 1,
+            "next": "mountain_answer"
+          }
+        ]
+      },
+      "mountain_answer": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "share_mountain_heart",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "basket_strap"
+              ]
+            },
+            "text": "合欢将编好的篓边递来，听你说喜欢她，便主动握住你的手。她说愿意让恋人走进这段曲路的闲时；你认真答应，两人坐到木墩旁商量下一次相见。",
+            "effects": {},
+            "label": "山中约定相恋",
+            "trust": 0,
+            "status": "lover",
+            "next": "baskets_at_dusk"
+          },
+          {
+            "key": "keep_woodwork_friend",
+            "when": {},
+            "text": "你们将来往定为朋友，合欢请你看下一篓山菜；木墩供你歇脚，做完山活便沿熟悉的小路相送。",
+            "effects": {},
+            "label": "继续做山活朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "baskets_at_dusk": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "sort_near_logs",
+            "when": {},
+            "text": "相恋后你与合欢在两个木墩旁分山菜，她把嫩叶挑给你看；你帮她理顺篓带，两人等晚风从树根间走过。",
+            "effects": {},
+            "label": "木墩旁并坐分山菜",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "root_path_cheek",
+        "text": "合欢挑好山菜，放下篓张臂，你走近拥住她。你们相吻，她笑着拂去袖上的碎叶，手仍留在你背上，说歇好再陪你看下一棵叶尖。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们用细枝比树根高低，她指稳妥落脚处，你记适合慢走的那段。回到木墩，聊完小发现。"
+      },
+      {
+        "key": "bark_after_rain",
+        "text": "雨后比赛找干柴，你挑一段，合欢摸过木纹。选对了，她笑着指另一处，问你要不要再辨一种；你点头，她把新柴递到手中。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们按干湿排柴，她辨纹理，你留透风的缝。做完一起歇手，慢慢讲各自今天的忙事。"
+      },
+      {
+        "key": "basket_weave",
+        "text": "合欢编篓，让你接一段竹条。你试过弯度，她夸一句，与你拉齐细带；手上的结编好，又递来一截让你练。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们在竹条上练两种编法，合欢示范转角，你用另一条慢慢接；练完各说哪里顺手，再将当天的余料收好。"
+      }
+    ],
+    "farewell": "绕过树根的小路走完此生的山中来往，两个木墩和编成的篓带，收着你们安静相恋的时光。",
+    "interrupted": "合欢与你约好朋友的山中来往，山菜和干柴可以一起挑，做完山活便在木墩歇脚，再沿曲路相送。"
+  },
+  {
+    "id": "aunn",
+    "title": "参道上给你的一声铃",
+    "source": "https://thbwiki.cc/高丽野阿吽",
+    "start": "steps_smile",
+    "nodes": {
+      "steps_smile": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "sort_sacred_scent",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你说清参道上两种香气的差别，阿吽兴奋地靠近听；与你一起望向阶顶时，她的尾巴轻轻扫到你衣边。",
+            "effects": {},
+            "label": "分清参道的香气",
+            "trust": 1,
+            "set": [
+              "scent_named"
+            ],
+            "next": "bell_invite"
+          },
+          {
+            "key": "clear_leaf_corner",
+            "when": {},
+            "text": "你帮她搬走石阶角的落叶，阿吽先确认台阶露出来；听你夸她守得细心，她笑着坐到你旁边歇一会。",
+            "effects": {},
+            "label": "清一处落叶阶角",
+            "trust": 1,
+            "next": "bell_invite"
+          }
+        ]
+      },
+      "bell_invite": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "hear_same_bell",
+            "when": {
+              "min": {
+                "bond": 8
+              }
+            },
+            "text": "阿吽主动请你听门边小铃，两道身影同时侧耳；你认出动作的同拍，她高兴地邀你再试一个轻铃声。",
+            "effects": {},
+            "label": "看两身同拍听铃",
+            "trust": 1,
+            "set": [
+              "same_bell"
+            ],
+            "next": "mist_route"
+          },
+          {
+            "key": "pick_bell_height",
+            "when": {},
+            "text": "她带小铃请你挑悬挂高度，你选够得着的一处。阿吽试响后开心地指向参道，你答应陪她走一遍，她才笑着收好铃绳。",
+            "effects": {},
+            "label": "替她挑挂铃高度",
+            "trust": 1,
+            "next": "mist_route"
+          }
+        ]
+      },
+      "mist_route": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "follow_named_scent",
+            "when": {
+              "relationFlags": [
+                "scent_named"
+              ]
+            },
+            "text": "浓雾遮阶，你按分清的香气与阿吽认路；她把脚步放慢给你看落差，到平处才请你伸展发酸的手。",
+            "effects": {},
+            "label": "按香气认雾中石阶",
+            "trust": 1,
+            "next": "equal_height_stools"
+          },
+          {
+            "key": "sweep_visible_steps",
+            "when": {},
+            "text": "你们扫出近处能看清的石阶，阿吽沿阶边提醒你落脚；雾散些，她便坐下听你说今天要做的事。",
+            "effects": {},
+            "label": "扫清近处石阶",
+            "trust": 1,
+            "next": "equal_height_stools"
+          }
+        ]
+      },
+      "equal_height_stools": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "make_same_height",
+            "when": {
+              "relationFlags": [
+                "same_bell"
+              ]
+            },
+            "text": "见过双身同拍，你做两张同高矮凳供她试；阿吽笑着请你坐到身边，说守完门最想听你说话。",
+            "effects": {},
+            "label": "试同高的矮凳",
+            "trust": 1,
+            "next": "bell_hearted"
+          },
+          {
+            "key": "choose_flower_seat",
+            "when": {},
+            "text": "阿吽在参道边挑了一处看花的位置，主动把落叶扫净；你坐近时，她说最近每次看花都想找你来。",
+            "effects": {},
+            "label": "坐到她选的看花处",
+            "trust": 1,
+            "next": "bell_hearted"
+          }
+        ]
+      },
+      "bell_hearted": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "promise_with_bell",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "same_bell"
+              ]
+            },
+            "text": "守门结束，阿吽到平阶说最开心的是等你来。你说喜欢她，伸出手，她握住答应相恋，笑着邀你一起听门边的小铃。",
+            "effects": {},
+            "label": "参道上互说心意",
+            "trust": 0,
+            "status": "lover",
+            "next": "flower_after_guard"
+          },
+          {
+            "key": "keep_shrine_friend",
+            "when": {},
+            "text": "你们约好以朋友身份相处，阿吽将扫帚放到阶边；下次参道落叶多，她愿与你一起清出好走的路。",
+            "effects": {},
+            "label": "继续做参道朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "flower_after_guard": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "rest_after_patrol",
+            "when": {},
+            "text": "相恋后阿吽走完守门的一圈，便来参道边与你坐着看花；你将小铃拨得很轻，她靠近听完这一声。",
+            "effects": {},
+            "label": "守门后并坐看花",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "bell_forehead",
+        "text": "守门结束，阿吽摇铃跑来，你张臂迎她，她开心地抱住你。你亲亲她额头，等小铃收好，再伸手邀她同去看参道的新花。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "平阶上辨脚步回声，她听高低，你说远近。阿吽合成身旁一道身影坐稳，开心地问你今天遇见了什么，听你慢慢讲完。"
+      },
+      {
+        "key": "scent_walk",
+        "text": "阿吽让你猜参道花香，认出一处就开心地招手。你跟去看花，再出一道题，她听清便指向来风的那侧，与你一起慢慢找。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们沿参道找平稳落脚处，她指落差，你理枝叶。慢慢走完，各说一朵今天喜欢的花。"
+      },
+      {
+        "key": "flower_view",
+        "text": "你画花让阿吽猜位置，她闻过风，招你走到花旁。听你夸猜得准，她蹲下比画里的花瓣，你也坐近，准备一起画下一题。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们在门边数小铃的几种轻响，阿吽说明哪一声容易听清，你记录风向；数完坐到平阶，轮流讲今天开心的事。"
+      }
+    ],
+    "farewell": "门边的铃声陪过此生的参道来往，同高矮凳收好两人的心意，每一阶清出的路都曾让你们愿意靠近。",
+    "interrupted": "阿吽与你约好朋友来往，一起扫参道、辨香气，清出石阶后便能在平处坐一会，慢慢讲今天的事。"
+  },
+  {
+    "id": "narumi",
+    "title": "供桌边长出的两片叶",
+    "source": "https://thbwiki.cc/矢田寺成美",
+    "start": "seed_in_stone",
+    "nodes": {
+      "seed_in_stone": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "spot_seed_light",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你认出石缝里一粒能发芽的种子，成美用生命魔法让它伸出小叶；听你惊喜的声音，她把叶光移到你面前。",
+            "effects": {},
+            "label": "认石缝里的种子",
+            "trust": 1,
+            "set": [
+              "seed_found"
+            ],
+            "next": "soil_invitation"
+          },
+          {
+            "key": "cup_small_seed",
+            "when": {},
+            "text": "你伸手接她取出的种子，成美轻轻托住你掌边；你说它很漂亮，她看着你的笑，石指停得十分柔和。",
+            "effects": {},
+            "label": "接住她取出的种子",
+            "trust": 1,
+            "next": "soil_invitation"
+          }
+        ]
+      },
+      "soil_invitation": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "pick_loose_soil",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "成美主动请你挑盆土，你指明松软和细砂的分量；她装好小盆，邀你一起守着看种子慢慢伸叶。",
+            "effects": {},
+            "label": "为种子挑松软土",
+            "trust": 1,
+            "set": [
+              "loose_soil"
+            ],
+            "next": "growth_care"
+          },
+          {
+            "key": "choose_bowl_edge",
+            "when": {},
+            "text": "她拿两只浅盆来邀你选，想试一种新叶的形状；你挑好盆沿，她将自己的围衣放稳，坐近与你看。",
+            "effects": {},
+            "label": "挑一只浅盆沿",
+            "trust": 1,
+            "next": "growth_care"
+          }
+        ]
+      },
+      "growth_care": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "mark_leaf_direction",
+            "when": {
+              "relationFlags": [
+                "seed_found"
+              ]
+            },
+            "text": "你按找到的种子标好朝光的一侧，成美亲自调整生命魔法；她先问你手冷不冷，才慢慢展示叶脉的微光。",
+            "effects": {},
+            "label": "按种子朝光摆盆",
+            "trust": 1,
+            "next": "two_leaf_mark"
+          },
+          {
+            "key": "sweep_supply_table",
+            "when": {},
+            "text": "你们将供桌边的湿叶扫净，成美把小盆移到平处；她伸手替你拨开衣角的种壳，邀请你歇下看新芽。",
+            "effects": {},
+            "label": "扫供桌边湿叶",
+            "trust": 1,
+            "next": "two_leaf_mark"
+          }
+        ]
+      },
+      "two_leaf_mark": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "pair_soil_bowls",
+            "when": {
+              "relationFlags": [
+                "loose_soil"
+              ]
+            },
+            "text": "成美将你挑过的松土分进两只浅盆，让叶脉微光在盆沿相接；她说很喜欢和你坐着等生长的时光。",
+            "effects": {},
+            "label": "看两盆叶光相接",
+            "trust": 1,
+            "next": "growing_affection"
+          },
+          {
+            "key": "write_supply_note",
+            "when": {},
+            "text": "她把供桌旁新立的小牌递给你，让你给两片叶子取名；写完她把名字读得很轻，说很想与你一起留在记忆里。",
+            "effects": {},
+            "label": "为两片叶子取名",
+            "trust": 1,
+            "next": "growing_affection"
+          }
+        ]
+      },
+      "growing_affection": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "choose_her_garden",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "loose_soil"
+              ]
+            },
+            "text": "成美将你们描过的叶脉照亮，指着两道相接的线，说想与你成为恋人。你认真回应喜欢，她握住你的手，邀请你在供桌边一同照看下一片新叶。",
+            "effects": {},
+            "label": "供桌边定下心意",
+            "trust": 0,
+            "status": "lover",
+            "next": "supply_table_evening"
+          },
+          {
+            "key": "keep_seed_friend",
+            "when": {},
+            "text": "你们说好继续做照看新芽的朋友，成美将盆土摆给你看；叶脉的微光由她点起，你为长势记一小页。",
+            "effects": {},
+            "label": "继续做新芽朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "supply_table_evening": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "draw_leaf_veins",
+            "when": {},
+            "text": "相恋后成美点亮叶脉，你在供桌边描下细线；画完她伸手稳住纸页，两人并坐听林间的雨打叶子。",
+            "effects": {},
+            "label": "并坐描叶脉微光",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "stone_cheek",
+        "text": "成美将叶盆转进你喜欢的光，邀你坐近。你吻她石质脸颊，她笑着环住你的手臂，随后放开，指新长的叶脉给你看。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "供桌边挑落叶，她指纹清的一片，你逐段描。画纸收好，成美坐到身旁，轻声讲今天新发现的芽，你听完也说一件。"
+      },
+      {
+        "key": "leaf_pot_turn",
+        "text": "成美转好叶盆，招你看新画的叶光路线。两道影接在一处，她用石指轻点那个角，你按光看清，她才笑问你觉得像什么。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "盆边理土屑，她指待照看的地方，你清供桌。做好各选一片新叶，讲讲喜欢的理由。"
+      },
+      {
+        "key": "rain_supply_roof",
+        "text": "林雨落下，你将纸移到干处，成美照亮叶子让你猜雨点花样。你答过，她笑着指下一滴，你慢慢等，看它落到哪道叶脉。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们在供桌旁比较干湿两种叶色，成美将看不清的一角照亮，你把差别写清；雨缓下来便并坐，聊完各自的一天。"
+      }
+    ],
+    "farewell": "供桌旁的新叶收好此生的相见，盆沿相接的叶光，留着两人明白约定的喜欢与温柔牵手。",
+    "interrupted": "成美与你约好以朋友身份照看浅盆，你记录新叶的长势，她点亮叶脉，供桌旁能慢慢比较每一次生长。"
+  },
+  {
+    "id": "satono",
+    "title": "竹叶拍里停留的目光",
+    "source": "https://thbwiki.cc/尔子田里乃",
+    "start": "measured_pause",
+    "nodes": {
+      "measured_pause": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "count_missing_half",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "你听出竹叶拍间留空的半拍，里乃收步让你接上；你的敲声稳稳落下，她看你的目光多停了一瞬。",
+            "effects": {},
+            "label": "听出竹叶拍间留空",
+            "trust": 1,
+            "set": [
+              "halfbeat_counted"
+            ],
+            "next": "leaf_pattern_invite"
+          },
+          {
+            "key": "wait_until_turn",
+            "when": {},
+            "text": "你等里乃转身停稳才招手，她将竹叶轻轻放下；听你说很喜欢这一段舞，她抬着下巴笑，脸颊也亮起来。",
+            "effects": {},
+            "label": "等她停步再说话",
+            "trust": 1,
+            "next": "leaf_pattern_invite"
+          }
+        ]
+      },
+      "leaf_pattern_invite": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "draw_gentle_turn",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "里乃主动邀你画一段竹叶舞位，你把转身的间隔排宽些；她引出的精神力顺势放缓，笑着请你来听。",
+            "effects": {},
+            "label": "排宽转身间隔",
+            "trust": 1,
+            "set": [
+              "leaf_spacing"
+            ],
+            "next": "memory_of_now"
+          },
+          {
+            "key": "tap_her_start",
+            "when": {},
+            "text": "她将小木片递来邀你敲起拍，你选稳稳的一声；里乃亲自调好舞步，转身时先让你看清竹叶的方向。",
+            "effects": {},
+            "label": "应邀敲稳起拍",
+            "trust": 1,
+            "next": "memory_of_now"
+          }
+        ]
+      },
+      "memory_of_now": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "record_present_pause",
+            "when": {
+              "relationFlags": [
+                "halfbeat_counted"
+              ]
+            },
+            "text": "你按数清的半拍记下这次练舞，里乃在纸边画出自己的手位；你们讲当下的发现，她认真把页码写好。",
+            "effects": {},
+            "label": "记这次真实练舞",
+            "trust": 1,
+            "next": "green_knot"
+          },
+          {
+            "key": "choose_present_mark",
+            "when": {},
+            "text": "你请她选一个记这次练舞的叶印，里乃亲手按在纸上；停步后她问你头晕不晕，陪你坐到精神放松。",
+            "effects": {},
+            "label": "按这次练舞的叶印",
+            "trust": 1,
+            "next": "green_knot"
+          }
+        ]
+      },
+      "green_knot": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "tie_leaf_interval",
+            "when": {
+              "relationFlags": [
+                "leaf_spacing"
+              ]
+            },
+            "text": "里乃把舞位排好的间隔缠成一个绿绳结，递给你看；她说这个空隙想留着，等你站到她身边。",
+            "effects": {},
+            "label": "看间隔系成的绿结",
+            "trust": 1,
+            "next": "clear_leaf_heart"
+          },
+          {
+            "key": "invite_same_step",
+            "when": {},
+            "text": "她停在练舞地的一小圈竹叶里，请你站到旁边敲拍；练完里乃认真说，很喜欢与你把这一段做成共同记忆。",
+            "effects": {},
+            "label": "敲一段并肩竹叶拍",
+            "trust": 1,
+            "next": "clear_leaf_heart"
+          }
+        ]
+      },
+      "clear_leaf_heart": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "promise_at_rest",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "leaf_spacing"
+              ]
+            },
+            "text": "里乃把半拍敲给你，听你接稳便说想相恋。你认真答应，向她伸手，她开心握住，收好竹叶，再给今日的纸页按上小叶印。",
+            "effects": {},
+            "label": "停舞后互说心意",
+            "trust": 0,
+            "status": "lover",
+            "next": "resting_leaf_notes"
+          },
+          {
+            "key": "keep_dance_friend",
+            "when": {},
+            "text": "你们约定继续做练舞朋友，里乃把这次新画的舞位收好；下回相见，她愿请你听另一种竹叶的起拍。",
+            "effects": {},
+            "label": "继续做竹叶拍朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "resting_leaf_notes": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "read_shared_page",
+            "when": {},
+            "text": "相恋后里乃忙完练舞才与你读一页共同记录，你敲半拍，她画手位；两人靠近坐着，为这次相见添上叶印。",
+            "effects": {},
+            "label": "停舞后并看记录",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "green_knot_forehead",
+        "text": "里乃用竹叶敲起拍，你猜中，她开心地张臂，你轻抱她亲额头。叶片放回手边，她指一指刚才的停顿，邀你把这段再敲一遍。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们给练拍画记号，她指想再试的一拍，你补手位。纸页收好，里乃坐到身旁，讲清今日安排，两人约好下回的起拍。"
+      },
+      {
+        "key": "halfbeat_note",
+        "text": "里乃将半拍藏在竹叶轻响里，你敲稳，她伸手邀你试小步。你握上同走半圈，站稳才放手，她再递叶，轮你领下一段。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们将半拍分短段，她示范，你说听到的停顿。选合意的一段练完，再坐下慢慢说话。"
+      },
+      {
+        "key": "leaf_prints",
+        "text": "两片叶子印在约会纸页上，里乃按好一角，你接另一角。等印纹干透，她指两片叶脉的走向，你添一笔，慢慢记清差别。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "纸边描过竹叶尖角，里乃挑便于认的一种，你写明今日玩法。纸页夹好，两人收齐散叶，再慢慢商量下回想怎样玩。"
+      }
+    ],
+    "farewell": "此生的竹叶拍与共同叶印留在纸页上，每一页当下的发现，都收着两人纯真相恋的心意。",
+    "interrupted": "里乃与你约好做练舞朋友，她画手位，你记竹叶拍，停步以后再选一个能记住这次发现的小叶印。"
+  },
+  {
+    "id": "mai_teireida",
+    "title": "笹叶响时并排落脚",
+    "source": "https://thbwiki.cc/丁礼田舞",
+    "start": "quick_heel",
+    "nodes": {
+      "quick_heel": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "land_evenly",
+            "when": {
+              "min": {
+                "health": 9
+              }
+            },
+            "text": "你稳稳落在笹叶拍的空隙里，舞高兴地转过来比你的脚位；凑近时看见你笑，她也笑得红发带轻轻晃。",
+            "effects": {},
+            "label": "稳落笹叶拍间隙",
+            "trust": 1,
+            "set": [
+              "heel_even"
+            ],
+            "next": "breathing_invite"
+          },
+          {
+            "key": "catch_flying_leaf",
+            "when": {},
+            "text": "舞起跳带飞一片笹叶，你接住递还；她把叶子举在你们中间，兴奋地讲刚才的跳法，鞋尖慢慢靠近。",
+            "effects": {},
+            "label": "接还飞出的笹叶",
+            "trust": 1,
+            "next": "breathing_invite"
+          }
+        ]
+      },
+      "breathing_invite": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "match_breath",
+            "when": {
+              "min": {
+                "health": 8
+              }
+            },
+            "text": "舞主动邀你陪试一段踏拍，你听着自己的呼吸换脚；她亲自调小引出的生命力，让你稳稳跳到最后。",
+            "effects": {},
+            "label": "按呼吸换脚踏拍",
+            "trust": 1,
+            "set": [
+              "breath_step"
+            ],
+            "next": "shoelace_care"
+          },
+          {
+            "key": "tap_short_round",
+            "when": {},
+            "text": "她把短短一圈笹叶摆好，请你敲拍陪她跳；你选能敲稳的速度，舞踩着它回到你身边，开心地蹲下。",
+            "effects": {},
+            "label": "陪她敲一小圈拍",
+            "trust": 1,
+            "next": "shoelace_care"
+          }
+        ]
+      },
+      "shoelace_care": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "leave_even_footing",
+            "when": {
+              "relationFlags": [
+                "heel_even"
+              ]
+            },
+            "text": "你按稳过的脚位清好练舞地，舞绑紧松鞋带后才继续；她看你落地发沉，便停在旁边陪你伸伸腿。",
+            "effects": {},
+            "label": "清好并排落脚处",
+            "trust": 1,
+            "next": "two_leaf_rings"
+          },
+          {
+            "key": "pick_low_leap",
+            "when": {},
+            "text": "你们挑出不高的小步练习，舞自己收住急劲，一步步给你看；歇下来她将鞋带检查好，也请你慢慢坐。",
+            "effects": {},
+            "label": "试低一点的小跳",
+            "trust": 1,
+            "next": "two_leaf_rings"
+          }
+        ]
+      },
+      "two_leaf_rings": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "pair_breath_round",
+            "when": {
+              "relationFlags": [
+                "breath_step"
+              ]
+            },
+            "text": "舞记得你按呼吸换脚的拍子，将笹叶排成两个相接的圈；跳回你旁边时，她说最喜欢与你一起落稳。",
+            "effects": {},
+            "label": "跳一段相接叶圈",
+            "trust": 1,
+            "next": "leaf_circle_affection"
+          },
+          {
+            "key": "offer_red_mark",
+            "when": {},
+            "text": "她用红线在地上系出两处小记号，请你选一处站好；舞说每次看见你来，心里都想赶快跳到旁边。",
+            "effects": {},
+            "label": "选红线的小站位",
+            "trust": 1,
+            "next": "leaf_circle_affection"
+          }
+        ]
+      },
+      "leaf_circle_affection": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "promise_after_leap",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "breath_step"
+              ]
+            },
+            "text": "舞将新排的小步跳到你跟得上的位置，停下便说想与你相恋。你说也喜欢她，她开心地牵手，让两个笹叶圈相接，约好以后轮流给彼此领拍。",
+            "effects": {},
+            "label": "收步后相恋",
+            "trust": 0,
+            "status": "lover",
+            "next": "rest_on_leaf_edge"
+          },
+          {
+            "key": "keep_stepping_friend",
+            "when": {},
+            "text": "你们商量好继续当踏拍朋友，舞抱起笹叶给你挑下一圈；你指一段短路，她便准备新的落脚记号。",
+            "effects": {},
+            "label": "继续做踏拍朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "rest_on_leaf_edge": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "sit_after_short_steps",
+            "when": {},
+            "text": "相恋后舞跳完短圈，来笹叶边与你坐着。你帮她收拢散叶，她笑着把刚才最开心的落脚画在纸上，等你看清再补下一步。",
+            "effects": {},
+            "label": "踏舞后并坐收笹叶",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "red_ribbon_cheek",
+        "text": "舞跳完小步，邀你追拍。你跟上，她笑着张臂，你抱她亲过脸颊；两人站稳后，她才敲响下一段叶拍，等你一起开始。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们用短枝比叶圈宽窄，她试落脚点，你记选的那段。收齐散叶，慢慢讲开心的事。"
+      },
+      {
+        "key": "short_step_game",
+        "text": "舞演新小步，请你改最后两拍。你添转向，她立即跳给你看，收步后指向圈边，你走去听她讲刚才的落脚，约好下回再编。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "纸上画三种脚印，她选好跳的，你敲慢拍配。试到约好的长度便停，一起歇脚。"
+      },
+      {
+        "key": "tie_loose_lace",
+        "text": "舞跑来给你看新鞋带，让你猜哪段步子最轻。你答完，她开心地邀你也试起拍，你点头走到圈边，等她收稳新结再起步。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们坐在叶圈旁折小纸叶，舞挑尖角，你压平底边；折完摆成弯弯的路，轮流说哪一段想留到下回再看。"
+      }
+    ],
+    "farewell": "笹叶圈收下此生并排落稳的脚步，相接叶圈旁的笑容，留着你们纯真相恋时说出的心意。",
+    "interrupted": "舞与你约好当练短步的朋友，你敲起拍，她排笹叶圈，踏稳一小段便坐到旁边，慢慢讲哪里最有趣。"
+  },
+  {
+    "id": "okina",
+    "title": "秘神舞台旁的空椅",
+    "source": "https://thbwiki.cc/摩多罗隐岐奈",
+    "start": "backstage_light",
+    "nodes": {
+      "backstage_light": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "read_back_shadow",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "你看出舞台背光里藏着的门沿，隐岐奈亲自推开给你看；你专注望着她的手，她笑着将空椅移近一寸。",
+            "effects": {},
+            "label": "辨舞台背光门沿",
+            "trust": 1,
+            "set": [
+              "back_light"
+            ],
+            "next": "season_stage_invite"
+          },
+          {
+            "key": "ask_chair_view",
+            "when": {},
+            "text": "你请她挑一个能看清舞台的角度，隐岐奈推来空椅让你坐；见你认真看她展示，声音里添了一点愉快。",
+            "effects": {},
+            "label": "请她挑观台角度",
+            "trust": 1,
+            "next": "season_stage_invite"
+          }
+        ]
+      },
+      "season_stage_invite": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "describe_two_seasons",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "隐岐奈主动邀你看两扇门的季节差别，你说清风与光的感受；她把椅子停在合适的地方，请你留一份记录。",
+            "effects": {},
+            "label": "分辨两扇门的季节",
+            "trust": 1,
+            "set": [
+              "season_record"
+            ],
+            "next": "side_door_care"
+          },
+          {
+            "key": "choose_warm_view",
+            "when": {},
+            "text": "她打开舞台旁一扇暖门，请你挑喜欢的光；你选浅浅一缕，隐岐奈亲手移好屏风，与你看光落在哪里。",
+            "effects": {},
+            "label": "应邀挑一缕门光",
+            "trust": 1,
+            "next": "side_door_care"
+          }
+        ]
+      },
+      "side_door_care": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "use_known_backlight",
+            "when": {
+              "relationFlags": [
+                "back_light"
+              ]
+            },
+            "text": "你循背光的门沿摆好屏风，隐岐奈亲自调稳两种力量；她先将吹冷风的一角合上，让你安稳坐着再看。",
+            "effects": {},
+            "label": "按背光摆屏风",
+            "trust": 1,
+            "next": "chair_turned_near"
+          },
+          {
+            "key": "arrange_clearaisle",
+            "when": {},
+            "text": "你把空椅之间的路摆开，隐岐奈从舞台后门查看；她请你歇下酸手，将展示换到你能看得从容的那边。",
+            "effects": {},
+            "label": "摆开舞台旁的椅路",
+            "trust": 1,
+            "next": "chair_turned_near"
+          }
+        ]
+      },
+      "chair_turned_near": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "choose_shared_season",
+            "when": {
+              "relationFlags": [
+                "season_record"
+              ]
+            },
+            "text": "她照你的季节记录选一处柔和门光，把自己的椅子挪到你旁边；隐岐奈说，近来很想把这段闲时分给你。",
+            "effects": {},
+            "label": "坐进记录的门光",
+            "trust": 1,
+            "next": "stage_plain_heart"
+          },
+          {
+            "key": "ask_personal_view",
+            "when": {},
+            "text": "隐岐奈合起展示的门，专门问你愿不愿陪她在台旁坐一会；她说今天最想看的是你听完后怎样笑。",
+            "effects": {},
+            "label": "陪她在台旁闲坐",
+            "trust": 1,
+            "next": "stage_plain_heart"
+          }
+        ]
+      },
+      "stage_plain_heart": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "choose_her_company",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "season_record"
+              ]
+            },
+            "text": "隐岐奈将两把椅子转到能看清彼此的方向，请你把喜欢当面说完。她主动握手回应，愿意相恋，又邀你替下一次舞台展示挑一个自己喜欢的看法。",
+            "effects": {},
+            "label": "舞台旁相恋",
+            "trust": 0,
+            "status": "lover",
+            "next": "quiet_season_view"
+          },
+          {
+            "key": "keep_stage_friend",
+            "when": {},
+            "text": "你们把心意定在朋友的位置，隐岐奈展开下一回展示的台图；你挑观看的角度，她负责亲自开好门。",
+            "effects": {},
+            "label": "继续做看台朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "quiet_season_view": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "sit_in_chosen_light",
+            "when": {},
+            "text": "相恋后隐岐奈挑一缕柔和门光，陪你坐在舞台旁；你们一同翻看今天的记录，慢慢聊哪一处风最舒服。",
+            "effects": {},
+            "label": "台旁并看季节记录",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "secret_stage_kiss",
+        "text": "隐岐奈转椅到近处，抬手邀你，你握住俯身。她抬脸吻来，你相拥回应；她含笑轻抚你的肩，留下邻椅的位置，等你坐稳再看新的门光。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们给门光分深浅，她选今日想展示的那段，你记感受。看完坐近，慢慢讲各自的事。"
+      },
+      {
+        "key": "two_chairs_view",
+        "text": "你选看台角度，隐岐奈调好门沿，让你猜落光。她听完答案便转椅示意下一段，你挪近坐稳，等光落到你指的那一角。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们从不同角度看门光，她试方向，你写舒服的坐处。合好纸，各选一件今日愿分享的事。"
+      },
+      {
+        "key": "season_record_page",
+        "text": "你写下门光的名字，隐岐奈配来一阵风。纸角轻动，她让出近旁的位置，你坐好，慢慢讲这个名字的来由，她含笑听完。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们翻开当天的记录，将光色与风向逐项对清。隐岐奈选一处细说，你补自己坐在台边的感受，慢慢把这页写完整。"
+      }
+    ],
+    "farewell": "舞台旁的两把椅子收下此生的观看与闲谈，柔和的门光里，留着两个恋人认真回应彼此的时刻。",
+    "interrupted": "隐岐奈与你约好朋友的看台往来，你挑观台角度，她亲自开门，展示完便一起比较这一回的风与光。"
+  },
+  {
+    "id": "eika",
+    "title": "河原上并排的两座小塔",
+    "source": "https://thbwiki.cc/戎璎花",
+    "start": "flat_stone_smile",
+    "nodes": {
+      "flat_stone_smile": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "find_flat_base",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你替小塔选好平底石，璎花自己试着放稳。见你也笑，她开心地拍手，指向塔顶的细影，你蹲低，与她慢慢看清。",
+            "effects": {},
+            "label": "挑一块平平底石",
+            "trust": 1,
+            "set": [
+              "flat_base"
+            ],
+            "next": "two_towers_invite"
+          },
+          {
+            "key": "watch_tower_tip",
+            "when": {},
+            "text": "你蹲在河原边看璎花把塔顶摆稳，等最后一块落定才鼓掌；她抱着小石转向你，笑得格外明亮。",
+            "effects": {},
+            "label": "认真看完她垒石",
+            "trust": 1,
+            "next": "two_towers_invite"
+          }
+        ]
+      },
+      "two_towers_invite": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "balance_pair",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "璎花主动请你陪她摆两座小塔，你挑好互相映着的石面；她把两块小顶石递给你，让你选自己的那一块。",
+            "effects": {},
+            "label": "应邀摆映光的双塔",
+            "trust": 1,
+            "set": [
+              "paired_tops"
+            ],
+            "next": "river_pebble_care"
+          },
+          {
+            "key": "draw_two_spaces",
+            "when": {},
+            "text": "她在河原画两处小圆请你选，准备各垒一座塔；你指好位置，璎花开心地把相邻的小圆留给自己。",
+            "effects": {},
+            "label": "选双塔的两个圆",
+            "trust": 1,
+            "next": "river_pebble_care"
+          }
+        ]
+      },
+      "river_pebble_care": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "guard_flat_foundation",
+            "when": {
+              "relationFlags": [
+                "flat_base"
+              ]
+            },
+            "text": "河风吹歪小塔，你托住平底石，璎花找齐落下的小石。她拨净手边细砂，邀你一起摆，你点头扶住底面，等她放好下一颗。",
+            "effects": {},
+            "label": "托稳平石找散石",
+            "trust": 1,
+            "next": "little_tower_hearts"
+          },
+          {
+            "key": "move_above_water",
+            "when": {},
+            "text": "你们把小塔挪到水迹上方，璎花一点点把石头摆回；她留出容易够到的位置，请你慢慢递小石。",
+            "effects": {},
+            "label": "把小塔挪离水迹",
+            "trust": 1,
+            "next": "little_tower_hearts"
+          }
+        ]
+      },
+      "little_tower_hearts": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "place_paired_tops",
+            "when": {
+              "relationFlags": [
+                "paired_tops"
+              ]
+            },
+            "text": "璎花把你们选过的两个顶石放近，让影子碰在一起；她笑着说最喜欢与你垒塔，想把这一份喜欢讲给你听。",
+            "effects": {},
+            "label": "让双顶石影子相接",
+            "trust": 1,
+            "next": "pure_pebble_promise"
+          },
+          {
+            "key": "draw_smiling_pebble",
+            "when": {},
+            "text": "她给圆石画小笑脸，递来时说每次见你都很开心。你接稳石头笑着回答，璎花高兴地拍拍手，认真问你下回还愿不愿一起垒。",
+            "effects": {},
+            "label": "收她画的小笑脸石",
+            "trust": 1,
+            "next": "pure_pebble_promise"
+          }
+        ]
+      },
+      "pure_pebble_promise": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "promise_little_hearts",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "paired_tops"
+              ]
+            },
+            "text": "璎花扶好共同选的塔顶，说喜欢你、想做恋人。你答应这份小心意，伸出手，她开心握住，两人一起蹲下，给今天的小塔取名。",
+            "effects": {},
+            "label": "约好纯真的互相喜欢",
+            "trust": 0,
+            "status": "lover",
+            "next": "two_tiny_shadows"
+          },
+          {
+            "key": "tower_playmates",
+            "when": {},
+            "text": "你们说好继续当一起垒塔的朋友，璎花把小石排成新花样；你替她递底石，她开心地讲这一回想怎么摆。",
+            "effects": {},
+            "label": "继续做垒塔朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "two_tiny_shadows": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "name_tower_shadows",
+            "when": {},
+            "text": "相恋后你们给两座小塔各取一个小名，璎花摆好顶石，在身旁蹲下。你指两道影子，她开心地看着，等它们慢慢碰到一起。",
+            "effects": {},
+            "label": "一起给小塔取名",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "pebble_forehead",
+        "text": "璎花举亮石让你猜，听到答案便放稳石头张臂。你轻抱她吻额头，她开心回抱，松手后才把石放到新塔顶，让你陪着看。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "河原画石路，她挑圆石，你排平转角。两段接好，璎花在身旁蹲稳，兴致勃勃地讲小发现，你边听边补上新记号。"
+      },
+      {
+        "key": "river_two_circles",
+        "text": "璎花画两个圈，邀你垒新花样。你选稳石，她扶塔顶；两道影碰上，她蹲下再看，拍拍你的手，让你看塔上的小缝。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们用石排风向，她看细砂，你画短线。各给眼前的形状取名字，再一起收好石子。"
+      },
+      {
+        "key": "tiny_tower_theme",
+        "text": "你们给双塔出新题，璎花挑细纹石，你添相配的一颗。垒好后两人一起蹲下，她点着轮廓，你也指一处，猜哪座更像小船。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们把河原小石按底面分开，璎花轻轻试转角，你留出平处；挑好今天想玩的几颗，再一同看水边的细影子。"
+      }
+    ],
+    "farewell": "两座小塔收下此生河原上的相见，塔边的小心与拉手约定，留在你们一起摆过的两道影子中。",
+    "interrupted": "璎花与你约好继续当垒石头的朋友，你选平底石，她摆小塔顶，影子碰到时便一起开心地数一数。"
+  },
+  {
+    "id": "urumi",
+    "title": "鱼篓岸的两端绳结",
+    "source": "https://thbwiki.cc/牛崎润美",
+    "start": "weight_in_hand",
+    "nodes": {
+      "weight_in_hand": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "test_stone_weight",
+            "when": {
+              "min": {
+                "health": 9
+              }
+            },
+            "text": "你按润美提醒试托婴儿石像，摸清她调好的分量；抬眼道谢时，她抱回石像，笑着把目光留在你脸上。",
+            "effects": {},
+            "label": "试托她抱的石像",
+            "trust": 1,
+            "set": [
+              "stone_weight"
+            ],
+            "next": "net_weave_invite"
+          },
+          {
+            "key": "hold_empty_rope",
+            "when": {},
+            "text": "你替润美托好空网绳，等她抱稳婴儿石像才请她指路；她见你做得仔细，收网时便站近与你说话。",
+            "effects": {},
+            "label": "等她抱稳石像",
+            "trust": 1,
+            "next": "net_weave_invite"
+          }
+        ]
+      },
+      "net_weave_invite": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "spot_torn_mesh",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "润美主动邀你看养巨鱼的网，你辨清破洞受力的方向；她将网边移到方便缝的岸台，请你下次也来帮忙。",
+            "effects": {},
+            "label": "辨巨鱼网的裂向",
+            "trust": 1,
+            "set": [
+              "mesh_direction"
+            ],
+            "next": "steady_river_load"
+          },
+          {
+            "key": "sort_mesh_twines",
+            "when": {},
+            "text": "她搬来一捆网线邀你挑粗细，你选能握稳的一种；润美自己试好力度，把鱼篓旁的坐处留给你。",
+            "effects": {},
+            "label": "陪她挑网线粗细",
+            "trust": 1,
+            "next": "steady_river_load"
+          }
+        ]
+      },
+      "steady_river_load": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "use_weight_sign",
+            "when": {
+              "relationFlags": [
+                "stone_weight"
+              ]
+            },
+            "text": "你记得石像调过的分量，照她手势托住网边；润美亲自改重量拉好巨鱼篓，收紧绳时先让你歇手。",
+            "effects": {},
+            "label": "按分量稳住网边",
+            "trust": 1,
+            "next": "two_rope_ends"
+          },
+          {
+            "key": "take_short_turns",
+            "when": {},
+            "text": "你们把网的牵拉分成短段，润美每次收绳便请你放松指头；她讲卖鱼时的得意事，笑着给你看这一篓。",
+            "effects": {},
+            "label": "分段牵巨鱼网",
+            "trust": 1,
+            "next": "two_rope_ends"
+          }
+        ]
+      },
+      "two_rope_ends": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "join_known_mesh",
+            "when": {
+              "relationFlags": [
+                "mesh_direction"
+              ]
+            },
+            "text": "你按裂网的方向缝好加固线，润美给两端各打一个绳结；她说做完这一篓，很想与你并坐看河风。",
+            "effects": {},
+            "label": "给补网两端打结",
+            "trust": 1,
+            "next": "riverbank_answer"
+          },
+          {
+            "key": "leave_stool_by_net",
+            "when": {},
+            "text": "润美在鱼篓旁添一只矮凳，请你选朝向；你坐好后她靠近说，忙完渔活最喜欢听你讲这一天。",
+            "effects": {},
+            "label": "坐鱼篓旁新矮凳",
+            "trust": 1,
+            "next": "riverbank_answer"
+          }
+        ]
+      },
+      "riverbank_answer": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "speak_by_net",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "mesh_direction"
+              ]
+            },
+            "text": "润美将补好的网线拉直，抱稳婴儿石像，向你伸出空着的那只手。她说愿意与你相恋，你回应喜欢；两人握手坐到鱼篓岸，认真约好下一次来往。",
+            "effects": {},
+            "label": "网边两情相悦",
+            "trust": 0,
+            "status": "lover",
+            "next": "rest_after_net"
+          },
+          {
+            "key": "fishery_friend",
+            "when": {},
+            "text": "你们把来往定成朋友，润美请你看一张新网；你挑粗细，她试重量，忙完渔活便在许可的岸路相送。",
+            "effects": {},
+            "label": "继续做渔活朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "rest_after_net": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "sit_by_tied_rope",
+            "when": {},
+            "text": "相恋后润美把鱼篓绳结收齐，才与你坐到岸台；你帮她理最后一段网线，她慢慢讲今天巨鱼怎样摆尾。",
+            "effects": {},
+            "label": "收网后并坐听河风",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "riverbank_cheek",
+        "text": "润美放稳鱼篓，抱好婴儿石像，伸出空手等你。你握着走近，她仰脸与你相吻，笑着轻捏你的手；两人坐稳才讲今日最漂亮的鱼纹。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "鱼篓岸辨网结，她用空手试牢度，你记转向。选好顺手的，坐下听润美讲渔活趣事。"
+      },
+      {
+        "key": "mesh_pattern",
+        "text": "润美抱稳石像，用空手与你接网线。她让你换个菱格花样，等你拉平另端，指两道网影相交的地方给你看。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们理网边松结，她抱稳石像，用空手指待补处，你扶边线。忙完并坐，轮流说感受。"
+      },
+      {
+        "key": "proud_fishery",
+        "text": "润美讲今日的巨鱼，让你猜最显眼的纹。你说完，她抱稳石像，指向岸边邀你看；你点头同行，到鱼篓另一侧再慢慢辨纹。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们将渔活的小账分成份量与价钱两栏，润美说清自己的判断，你认真记下；账页合上便一起听鱼篓旁的水声。"
+      }
+    ],
+    "farewell": "两端绳结牵过这一生的渔活与相见，岸台上的并坐时光，收着河风里彼此回应的喜欢。",
+    "interrupted": "润美与你约好朋友的鱼篓岸来往，网线粗细和巨鱼的摆尾都能慢慢谈，收好绳结便沿许可岸路相送。"
+  },
+  {
+    "id": "kutaka",
+    "title": "栏边登记外的一行字",
+    "source": "https://thbwiki.cc/庭渡久侘歌",
+    "start": "clear_voice",
+    "nodes": {
+      "clear_voice": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "state_return_path",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你把来意与回程讲得清楚，久侘歌核完许可抬头微笑；你也向她道谢，栏边那句回答便柔和了些。",
+            "effects": {},
+            "label": "讲清许可回程",
+            "trust": 1,
+            "set": [
+              "return_stated"
+            ],
+            "next": "voice_test_invite"
+          },
+          {
+            "key": "wait_for_check",
+            "when": {},
+            "text": "你把许可放平，等久侘歌看完才开口；她发现你认真听每一句提示，便多问了声走到这里累不累。",
+            "effects": {},
+            "label": "安静等她验许可",
+            "trust": 1,
+            "next": "voice_test_invite"
+          }
+        ]
+      },
+      "voice_test_invite": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "tell_throat_condition",
+            "when": {
+              "min": {
+                "bond": 8
+              }
+            },
+            "text": "久侘歌主动请你试一段清楚的问路声，你如实说喉咙干涩；她用自己的能力照看，再邀你下次来说近况。",
+            "effects": {},
+            "label": "如实说喉咙干涩",
+            "trust": 1,
+            "set": [
+              "throat_shared"
+            ],
+            "next": "fair_gateway"
+          },
+          {
+            "key": "practice_soft_words",
+            "when": {},
+            "text": "她招你在栏边练一句听得清的询问，你放慢语速试好；久侘歌认真点头，问你愿不愿以后也来聊一小会。",
+            "effects": {},
+            "label": "练清楚的一句询问",
+            "trust": 1,
+            "next": "fair_gateway"
+          }
+        ]
+      },
+      "fair_gateway": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "follow_return_note",
+            "when": {
+              "relationFlags": [
+                "return_stated"
+              ]
+            },
+            "text": "你按说清的回程核对入口，久侘歌把该看的栏线逐一指好；见你一路认真听，她在检查后请你歇脚。",
+            "effects": {},
+            "label": "按回程核对栏线",
+            "trust": 1,
+            "next": "personal_margin"
+          },
+          {
+            "key": "clarify_same_rules",
+            "when": {},
+            "text": "你们将口岸的提示写得简明，久侘歌按同样步骤核完许可；公事结束，她才来栏外听你说自己的近况。",
+            "effects": {},
+            "label": "写清口岸提示",
+            "trust": 1,
+            "next": "personal_margin"
+          }
+        ]
+      },
+      "personal_margin": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "ask_her_wishes",
+            "when": {
+              "relationFlags": [
+                "throat_shared"
+              ]
+            },
+            "text": "记得她照看过你的喉咙，你问鸡神自己有什么心愿；久侘歌谈起鸡的处境，随后轻声说很喜欢你愿意听。",
+            "effects": {},
+            "label": "听鸡神自己的心愿",
+            "trust": 1,
+            "next": "off_duty_heart"
+          },
+          {
+            "key": "add_private_line",
+            "when": {},
+            "text": "久侘歌在登记之外另写一行，问你忙完可否陪她说话；你应下后，她说最近总很盼你的回程问候。",
+            "effects": {},
+            "label": "读公事之外的一行",
+            "trust": 1,
+            "next": "off_duty_heart"
+          }
+        ]
+      },
+      "off_duty_heart": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "answer_after_check",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "throat_shared"
+              ]
+            },
+            "text": "久侘歌核完许可，合好登记簿，到栏外说愿与你相恋。你认真回应喜欢，向她伸手，她微笑握住，约好公事结束后再听彼此讲日常。",
+            "effects": {},
+            "label": "公事后相恋",
+            "trust": 0,
+            "status": "lover",
+            "next": "voice_after_work"
+          },
+          {
+            "key": "gateway_friendship",
+            "when": {},
+            "text": "你们说好继续当朋友，久侘歌核完许可才来听你谈近况；口岸的小休息里，也可以慢慢说想问的问题。",
+            "effects": {},
+            "label": "继续做口岸朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "voice_after_work": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "share_clear_song",
+            "when": {},
+            "text": "相恋后久侘歌收好登记簿，与你在栏外试一段轻轻的歌；你唱慢句，她接清声，唱完两人笑着歇脚。",
+            "effects": {},
+            "label": "公事后合一段清声",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "gateway_cheek",
+        "text": "久侘歌核完许可，在栏外邀你唱新歌。末句合上，她亲你脸颊，你微笑着回应；手中歌页晃了晃，两人坐稳才接下一句。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "栏外试轻声发音，她听舒服的段落，你说感受。练完并坐歇嗓子，再慢慢聊。"
+      },
+      {
+        "key": "throat_check",
+        "text": "公事结束，久侘歌在栏外哼新旋律，等你添尾句。你接上，她笑着重唱开头，把你的慢句也留进歌里，等你再合一次声。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "栏外写三件小事，她看顺序，你补细节。各讲清一段就歇会儿，声音轻轻的。"
+      },
+      {
+        "key": "wild_hen_sketch",
+        "text": "栏外画鸡影，久侘歌改成舒展的姿态，让你再添一笔。她指山光下的一段小路，与你猜它若走过去，影子会怎样变。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "核验结束，你们在栏外描鸡羽弧线，久侘歌说哪种自然，你记好她的看法。画纸收好，她与你约下回的时刻，再各自安排回程。"
+      }
+    ],
+    "farewell": "口岸登记之外的一行字记着此生的喜欢，公事后唱过的清声，留在两个恋人愿意听完彼此的小休息里。",
+    "interrupted": "久侘歌与你约好朋友的口岸问候，核完许可后再听近况；公事的登记收好，两人便慢慢聊清想问的话。"
+  },
+  {
+    "id": "yachie",
+    "title": "带出棋室的那封纸信",
+    "source": "https://thbwiki.cc/吉吊八千慧",
+    "start": "open_chess_route",
+    "nodes": {
+      "open_chess_route": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "draw_exit_line",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "你先在棋纸画清来去路线，再听八千慧摆棋；她看你认真留下出口，轻轻推来空子，目光停在你的笔尖。",
+            "effects": {},
+            "label": "先画清棋室出口",
+            "trust": 1,
+            "set": [
+              "exit_line"
+            ],
+            "next": "own_rules_invite"
+          },
+          {
+            "key": "keep_blank_piece",
+            "when": {},
+            "text": "你将空棋子留在自己面前，说先听明白再决定；八千慧转着另一个棋子与你对视，笑着请你慢慢看。",
+            "effects": {},
+            "label": "空棋子留在手边",
+            "trust": 1,
+            "next": "own_rules_invite"
+          }
+        ]
+      },
+      "own_rules_invite": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "write_own_rules",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "八千慧主动邀你试小局，你写清可随时停局的规则再开棋；她按纸面摆子，末了问你愿不愿带棋谱回去看。",
+            "effects": {},
+            "label": "写停局规则试棋",
+            "trust": 1,
+            "set": [
+              "stop_rule"
+            ],
+            "next": "bank_path_care"
+          },
+          {
+            "key": "take_paper_home",
+            "when": {},
+            "text": "她将小局棋谱递来邀你考虑下一次，空棋子照样留在原处；你带走纸页，准备离开棋室以后自己再想。",
+            "effects": {},
+            "label": "先带棋谱离开想",
+            "trust": 1,
+            "next": "bank_path_care"
+          }
+        ]
+      },
+      "bank_path_care": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "follow_exit_line",
+            "when": {
+              "relationFlags": [
+                "exit_line"
+              ]
+            },
+            "text": "你沿画明的来去路线提出停局，八千慧让开岸边小路；出门后你慢慢记下自己的感受，决定哪天愿意再来。",
+            "effects": {},
+            "label": "沿明路停局后记感受",
+            "trust": 1,
+            "next": "letter_without_debt"
+          },
+          {
+            "key": "leave_before_reply",
+            "when": {},
+            "text": "这次棋局你提前说停，八千慧将余谱递给你，留出回程；你离开棋室才写下感受，自己选好下次的来意。",
+            "effects": {},
+            "label": "停局离开后自己决定",
+            "trust": 1,
+            "next": "letter_without_debt"
+          }
+        ]
+      },
+      "letter_without_debt": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "offer_personal_letter",
+            "when": {
+              "relationFlags": [
+                "stop_rule"
+              ]
+            },
+            "text": "照着停局规则，你们收好棋子才谈心意；八千慧写一封喜欢与你相处的纸信，让你带走，改天愿意再答。",
+            "effects": {},
+            "label": "带走她写的心意信",
+            "trust": 1,
+            "set": [
+              "letter_carried"
+            ],
+            "next": "independent_reply"
+          },
+          {
+            "key": "accept_letter_to_read",
+            "when": {},
+            "text": "八千慧在棋谱之外递你一封纸信，写着想与你更亲近；你先带离棋室，准备按自己的心意在下次回答。",
+            "effects": {},
+            "label": "带离棋室读心意信",
+            "trust": 1,
+            "set": [
+              "letter_carried"
+            ],
+            "next": "independent_reply"
+          }
+        ]
+      },
+      "independent_reply": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "bring_own_written_reply",
+            "when": {
+              "relationFlags": [
+                "letter_carried"
+              ],
+              "min": {
+                "bond": 9
+              }
+            },
+            "text": "你带来离开棋室后亲手写的答复，说愿意继续了解她的心意；八千慧接过纸页，认真请你留着自己的决定。",
+            "effects": {},
+            "label": "带回自己写的答复",
+            "trust": 1,
+            "set": [
+              "own_reply"
+            ],
+            "next": "chosen_chess_heart"
+          },
+          {
+            "key": "delay_personal_reply",
+            "when": {},
+            "text": "你说明这次只想看棋谱，八千慧收好心意信，将纸面空白留给你；以后是否亲近，由你离开后再慢慢想。",
+            "effects": {},
+            "label": "这次先只看棋谱",
+            "trust": 1,
+            "next": "chosen_chess_heart"
+          }
+        ]
+      },
+      "chosen_chess_heart": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "confirm_own_choice",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "own_reply"
+              ]
+            },
+            "text": "你在棋室外写定喜欢，回来主动读出答复。八千慧收棋回应自己的心意，再问此刻是否愿意相恋；你点头，两人牵手，出门时由你自己选好回程。",
+            "effects": {},
+            "label": "分次主动确认相恋",
+            "trust": 0,
+            "status": "lover",
+            "next": "letters_after_chess"
+          },
+          {
+            "key": "keep_chess_friend",
+            "when": {},
+            "text": "你把来往定为普通朋友，八千慧收好心意信，改与你谈小局的走法；你仍自己选好回程和下次愿来的时候。",
+            "effects": {},
+            "label": "继续做自选来往的棋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "letters_after_chess": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "share_written_day",
+            "when": {},
+            "text": "相恋后你先把想聊的小事写在纸上，八千慧也带来自己的信；收好棋子，两人并坐读完，来去时间由你自己选。",
+            "effects": {},
+            "label": "棋局后交换生活纸信",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "chosen_spirit_cheek",
+        "text": "你在棋室外写定心意，收好棋谱，挨近八千慧的灵形。她抬眼看你，你主动吻过去，她笑着回吻、握紧你的手；你回抱她，暂搁棋题。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你自行选棋谱带来，她依你选的起点摆棋。比过两种走法，你想停时便收好，两人并坐，慢慢聊今日各自遇见的事。"
+      },
+      {
+        "key": "own_arrival_time",
+        "text": "你在棋室外选定话题，入内看八千慧画棋局谜题。你走出下一手，她接上自己的解法；到了你定的时刻，便收纸离开。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你带来愿分享的见闻，她读过才回写。只谈各自选的那段，合好纸页，你自行定回程。"
+      },
+      {
+        "key": "chess_stop_together",
+        "text": "你在棋室外选定今日先停棋，八千慧收谱，给水纹出题。你按自己的想法画转角，她接另一段；比完两线，你自行定回程。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们将两种棋子的摆法画在纸边，各自说明喜欢的理由。你说这回想早些走，八千慧按你选的时刻收棋，认真听完道别。"
+      }
+    ],
+    "farewell": "带出棋室又带回的纸信收着此生的自主回应，两人明白写下的喜欢，留在来去路线旁的空白里。",
+    "interrupted": "八千慧与你约好普通棋友的来往，每次的来意和回程由你自己选；棋谱带出门，下一局想好再来。"
+  },
+  {
+    "id": "mayumi",
+    "title": "陶甲边的两枚细纹",
+    "source": "https://thbwiki.cc/杖刀偶磨弓",
+    "start": "ceramic_join_glance",
+    "nodes": {
+      "ceramic_join_glance": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "find_join",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "你找齐陶甲断面的接点供磨弓修复，她让你扶住边缘；合好时你微笑抬头，她的手也在你手旁停了一瞬。",
+            "effects": {},
+            "label": "找陶甲断面接点",
+            "trust": 1,
+            "set": [
+              "ceramic_join"
+            ],
+            "next": "target_invitation"
+          },
+          {
+            "key": "sort_ceramic_parts",
+            "when": {},
+            "text": "你将陶甲碎块按大小摆齐，磨弓亲手检查哪一块能接；见你等得认真，她先向你道谢，目光停得柔和。",
+            "effects": {},
+            "label": "把陶甲碎块摆齐",
+            "trust": 1,
+            "next": "target_invitation"
+          }
+        ]
+      },
+      "target_invitation": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "mark_arrow_angle",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "磨弓主动邀你看试甲靶，你按箭痕画明受力角度；她将纸移到修整台近处，说下次也愿与你一起比较。",
+            "effects": {},
+            "label": "画箭痕受力角度",
+            "trust": 1,
+            "set": [
+              "arrow_angle"
+            ],
+            "next": "repair_cradle"
+          },
+          {
+            "key": "steady_target_base",
+            "when": {},
+            "text": "她请你陪试陶甲，先把靶底能扶的部分指给你；你稳住底架，她试完一轮，收兵器后来台边与你说话。",
+            "effects": {},
+            "label": "应邀扶试甲靶底",
+            "trust": 1,
+            "next": "repair_cradle"
+          }
+        ]
+      },
+      "repair_cradle": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "support_known_joint",
+            "when": {
+              "relationFlags": [
+                "ceramic_join"
+              ]
+            },
+            "text": "你沿接点稳住修整支架，磨弓亲自修复陶甲；她看你手臂发酸，便调低支点让你扶得从容，自己再接下一块。",
+            "effects": {},
+            "label": "按接点调支架",
+            "trust": 1,
+            "next": "two_clay_marks"
+          },
+          {
+            "key": "line_repair_parts",
+            "when": {},
+            "text": "你们先把待修陶甲排好，磨弓接合，你递零件；忙到一段她请你放松手腕，愿听你说自己的日常。",
+            "effects": {},
+            "label": "一起排待修陶甲",
+            "trust": 1,
+            "next": "two_clay_marks"
+          }
+        ]
+      },
+      "two_clay_marks": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "engrave_angle_mark",
+            "when": {
+              "relationFlags": [
+                "arrow_angle"
+              ]
+            },
+            "text": "磨弓将你画的箭角刻成一枚小陶记号，再添她的试甲细纹；她说看见两道纹在一起，很想与你多待片刻。",
+            "effects": {},
+            "label": "看两道试甲细纹",
+            "trust": 1,
+            "next": "ceramic_hearted"
+          },
+          {
+            "key": "leave_personal_tile",
+            "when": {},
+            "text": "她在公用陶牌之外给你做一小块素牌，请你留自己的纹；磨弓认真说，这一块想记的是你们相处时的开心。",
+            "effects": {},
+            "label": "为个人素牌留纹",
+            "trust": 1,
+            "next": "ceramic_hearted"
+          }
+        ]
+      },
+      "ceramic_hearted": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "answer_beside_armor",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "arrow_angle"
+              ]
+            },
+            "text": "磨弓把你们刻过的两道陶线并起来，主动问是否愿意与她相恋。你说喜欢，她也认真回应，将兵器放妥后牵住你的手，邀请你为下一笔挑新的走向。",
+            "effects": {},
+            "label": "修整台边定心意",
+            "trust": 0,
+            "status": "lover",
+            "next": "tiles_after_duty"
+          },
+          {
+            "key": "repair_friendship",
+            "when": {},
+            "text": "你们将相处理好，继续做修整台的朋友；磨弓负责修陶甲，你递好零件，试甲后便各自收好这一回的记录。",
+            "effects": {},
+            "label": "继续做修整朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "tiles_after_duty": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "choose_personal_pattern",
+            "when": {},
+            "text": "相恋后磨弓忙完守卫，与你挑一块素牌来刻纹；她刻陶线，你画草图，两人并坐将今天的小发现记到牌边。",
+            "effects": {},
+            "label": "忙完守卫并刻素牌",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "ceramic_forehead_kiss",
+        "text": "磨弓放稳兵器，邀你看新陶纹。你亲她陶质额头，她笑着张臂，你轻轻抱住；图纸放回台边后，她才指给你看新刻的线。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "台边描陶甲接点，她说明哪处便于活动，你记好。图页收起，磨弓坐来认真听你讲小事，再把今日的守卫见闻说给你听。"
+      },
+      {
+        "key": "two_tile_lines",
+        "text": "你在素牌画转角，磨弓接上陶质细纹。她将素牌转过一点，邀你换到台侧；你走近，两人慢慢比较那两道线的新影子。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们描素牌边缘，她试平滑的弧，你补另段。照图慢慢比过，记好今天喜欢的线。"
+      },
+      {
+        "key": "duty_finished_notes",
+        "text": "守卫结束，磨弓带试甲图请你猜箭纹。你讲完，她用陶线比出走向，将图翻到另一面，再坐到身旁，等你出下一题。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们将日常记录按图案分好，磨弓选一页自己的工作线，你说今天想分享的事；收齐纸页，一起在修整台边坐会。"
+      }
+    ],
+    "farewell": "素牌上相接的细纹记过此生的并坐与牵手，陶甲收好后的闲时，留着两个恋人回应的喜欢。",
+    "interrupted": "磨弓与你约好修整台的朋友来往，陶甲接点与试甲记录可以一起看；她负责修复，你稳好能扶的支架。"
+  },
+  {
+    "id": "keiki",
+    "title": "掌纹相遇的小泥台",
+    "source": "https://thbwiki.cc/埴安神袿姬",
+    "start": "thumbprint_gaze",
+    "nodes": {
+      "thumbprint_gaze": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "keep_thumbprint",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "你在湿泥留下一道掌纹，袿姬顺着细线塑出手指；看见你望着成形的小手，她笑着把泥台转到两人之间。",
+            "effects": {},
+            "label": "保留湿泥上的掌纹",
+            "trust": 1,
+            "set": [
+              "thumbprint_kept"
+            ],
+            "next": "kiln_color_invite"
+          },
+          {
+            "key": "show_grip_shape",
+            "when": {},
+            "text": "你照自己的握法捏一小团泥，袿姬托起它仔细看；她说这姿态很有趣，与你目光相遇时手指轻轻停住。",
+            "effects": {},
+            "label": "给她看真实的握法",
+            "trust": 1,
+            "next": "kiln_color_invite"
+          }
+        ]
+      },
+      "kiln_color_invite": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "read_fire_color",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "袿姬主动邀你看窑火的颜色，你指出泥将变硬的那一刻；她亲自取出试片，邀你下次也来比较新火色。",
+            "effects": {},
+            "label": "辨试片成熟的火色",
+            "trust": 1,
+            "set": [
+              "kiln_color"
+            ],
+            "next": "workshop_cradle"
+          },
+          {
+            "key": "choose_trial_shape",
+            "when": {},
+            "text": "她给你几块泥邀你选试片形状，你捏好容易拿的边角；袿姬试着托起，笑说很想和你看它烧成什么样。",
+            "effects": {},
+            "label": "挑试片容易握的边",
+            "trust": 1,
+            "next": "workshop_cradle"
+          }
+        ]
+      },
+      "workshop_cradle": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "use_printed_grip",
+            "when": {
+              "relationFlags": [
+                "thumbprint_kept"
+              ]
+            },
+            "text": "你按掌纹的握法给工具柄留好支撑，袿姬亲自细塑；她发现你握得久，便递来宽一点的柄，让手歇得舒服。",
+            "effects": {},
+            "label": "按掌纹塑工具柄",
+            "trust": 1,
+            "next": "paired_glaze"
+          },
+          {
+            "key": "sort_soft_clay",
+            "when": {},
+            "text": "你们把湿泥按粗细分好，袿姬教你挑出混进的砂；她将泥台移低，给你示范怎样少费力地揉一小块。",
+            "effects": {},
+            "label": "挑砂分湿泥",
+            "trust": 1,
+            "next": "paired_glaze"
+          }
+        ]
+      },
+      "paired_glaze": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "compare_kiln_shades",
+            "when": {
+              "relationFlags": [
+                "kiln_color"
+              ]
+            },
+            "text": "你们对照窑火记录挑两种釉色，袿姬让它们在试片边缘相遇；她说最近开始盼你来，连配色也想与你商量。",
+            "effects": {},
+            "label": "按火色挑相遇的釉",
+            "trust": 1,
+            "next": "makers_answer"
+          },
+          {
+            "key": "leave_second_hand",
+            "when": {},
+            "text": "袿姬把一只小泥手伸向第二只待塑的手，请你选相接的姿态；她认真说，画它时想到的是与你相处。",
+            "effects": {},
+            "label": "为相接小手选姿态",
+            "trust": 1,
+            "next": "makers_answer"
+          }
+        ]
+      },
+      "makers_answer": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "say_our_affection",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "kiln_color"
+              ]
+            },
+            "text": "袿姬将你按下的掌纹留在新泥片上，再把自己的印放到旁边。她洗净手，说想与你相恋；你认真回应喜欢，牵住她的手，两人一同挑好泥片的边角。",
+            "effects": {},
+            "label": "泥台边相恋",
+            "trust": 0,
+            "status": "lover",
+            "next": "two_cups_clay"
+          },
+          {
+            "key": "workshop_friend",
+            "when": {},
+            "text": "你们把来往留作朋友试造，袿姬将泥台转给你挑下一件；你选握法，她赋形，烧成后一起看细纹。",
+            "effects": {},
+            "label": "继续做试造朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "two_cups_clay": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "shape_small_cups",
+            "when": {},
+            "text": "相恋后你们各捏一只小陶杯，袿姬给杯沿收圆，你把掌纹留好；并排摆到泥台时，两人慢慢挑釉色。",
+            "effects": {},
+            "label": "一起捏两只小杯",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "clean_hands_kiss",
+        "text": "袿姬邀你比新釉色，洗净手、放稳试片，才走近吻你。你拥住她回应，她笑着靠了一会，指尖留在你背上，等松手再挑新的边色。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "泥台边看釉面细纹，她说哪处想再看，你记色差。试片放齐，袿姬洗净手坐来，听你讲今天的事，再慢慢说自己的新想法。"
+      },
+      {
+        "key": "matched_glaze",
+        "text": "小陶杯各选图案，袿姬调好你挑的色，看你下笔。两种杯纹接好，她把杯转到光下，让你看接线处的细纹。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们按干湿排试釉杯，她选好观察的，你说看清光的角度。理好并坐，描今天的变化。"
+      },
+      {
+        "key": "thumbprint_story",
+        "text": "你在泥片按小手印，袿姬兴致很浓地接来自己的印，邀你编今天的掌纹故事。你说出开头，她笑着接下一句，再添新的转弯。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们沿湿泥片压平细边，袿姬选自己喜欢的弧，你补另一端；两人各讲一件小事，慢慢把当天的纹样修完整。"
+      }
+    ],
+    "farewell": "小泥台留过此生的掌纹与釉色，相遇的颜色收着两人说出的喜欢，泥边的细光安静连在一起。",
+    "interrupted": "袿姬与你约好朋友的工坊试造，你选握法，她赋形，烧好试片后便在泥台旁慢慢比较新的釉色。"
+  },
+  {
+    "id": "saki",
+    "title": "疾行场弯口的一次等候",
+    "source": "https://thbwiki.cc/骊驹早鬼",
+    "start": "own_pace",
+    "nodes": {
+      "own_pace": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "show_true_stride",
+            "when": {
+              "min": {
+                "health": 9
+              }
+            },
+            "text": "你在疾行场展示自己练稳的短步，早鬼飞快折回看终点；听你说自己能走多快，她点头的目光带了一点亮笑。",
+            "effects": {},
+            "label": "展示练稳的短步",
+            "trust": 1,
+            "set": [
+              "true_stride"
+            ],
+            "next": "curve_invitation"
+          },
+          {
+            "key": "finish_short_road",
+            "when": {},
+            "text": "你选自己能跑完的一段直路，早鬼的灵形先到尽头看你；你认真走完最后几步，她笑着把手伸向你。",
+            "effects": {},
+            "label": "走完自己选的短路",
+            "trust": 1,
+            "next": "curve_invitation"
+          }
+        ]
+      },
+      "curve_invitation": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "mark_turnback",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "早鬼主动邀你给疾行场标急弯，你将回程的转角画明；她试跑后折回你的记号旁，邀你下次再选一段。",
+            "effects": {},
+            "label": "画好急弯回程记号",
+            "trust": 1,
+            "set": [
+              "return_curve"
+            ],
+            "next": "honest_rest"
+          },
+          {
+            "key": "choose_short_turn",
+            "when": {},
+            "text": "她请你挑一段想试的弯路，你指近处的转折；早鬼试好才给你看落脚的位置，回到身旁聊这圈的风。",
+            "effects": {},
+            "label": "应邀选一段弯路",
+            "trust": 1,
+            "next": "honest_rest"
+          }
+        ]
+      },
+      "honest_rest": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "rest_at_own_limit",
+            "when": {
+              "relationFlags": [
+                "true_stride"
+              ]
+            },
+            "text": "你照自己的短步速度说该歇一会，早鬼收住疾行在路标旁等你；她认可你讲清本事，你也问她今天想跑哪边。",
+            "effects": {},
+            "label": "按实际步速休息",
+            "trust": 1,
+            "next": "waiting_curve"
+          },
+          {
+            "key": "walk_last_section",
+            "when": {},
+            "text": "你们将最后一段改为慢走，早鬼的灵形沿路标收步；她听你讲跑到这里的感受，也把自己的急劲讲给你。",
+            "effects": {},
+            "label": "路标旁慢走末段",
+            "trust": 1,
+            "next": "waiting_curve"
+          }
+        ]
+      },
+      "waiting_curve": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "stop_at_your_mark",
+            "when": {
+              "relationFlags": [
+                "return_curve"
+              ]
+            },
+            "text": "她在你画明的回程弯口停下来，伸手等你走近；早鬼说最近总想在这儿见你，哪怕只能一起慢走一段。",
+            "effects": {},
+            "label": "看她在回程弯口等你",
+            "trust": 1,
+            "next": "stride_hearted"
+          },
+          {
+            "key": "choose_two_marks",
+            "when": {},
+            "text": "早鬼把两枚路标放到你面前，让你挑并排的位置；摆好后她说，自己很喜欢每回看见你认真走到终点。",
+            "effects": {},
+            "label": "把两枚路标摆并排",
+            "trust": 1,
+            "next": "stride_hearted"
+          }
+        ]
+      },
+      "stride_hearted": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "answer_at_turn",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "return_curve"
+              ]
+            },
+            "text": "早鬼跑完你们选的短路，灵形停在弯口，主动牵手问是否愿意相恋。你回应喜欢，她开心地将黑翼收稳，陪你按自己的步速走完最后一段。",
+            "effects": {},
+            "label": "弯口两情相悦",
+            "trust": 0,
+            "status": "lover",
+            "next": "wing_shadow_rest"
+          },
+          {
+            "key": "training_friend",
+            "when": {},
+            "text": "你们说好做疾行场的朋友，各选想试的一段路；早鬼示范她的脚力，你记好自己的步速，回程聊这次的感受。",
+            "effects": {},
+            "label": "继续做疾行朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "wing_shadow_rest": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "sit_near_markers",
+            "when": {},
+            "text": "相恋后你们在弯口并放两枚路标，早鬼收住灵形黑翼陪你坐下；你画刚才的风，她讲这次疾行最畅快的一段。",
+            "effects": {},
+            "label": "疾行后并坐看路标",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "spirit_cheek_at_turn",
+        "text": "早鬼的灵形邀你在弯口跑完两步，停稳收翼后张臂。你拥住她吻过去，她笑着回吻，双臂环得更紧；松手才指下一段，问你愿不愿再走。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "场边描转弯线，她说哪条顺脚，你选能稳走的。早鬼的灵形在旁坐下，听你讲清步速，再约好下一回怎样试路。"
+      },
+      {
+        "key": "two_marker_walk",
+        "text": "你们摆好弯口路标，早鬼的灵形试过回程，回来请你猜走法。你讲完，她收稳黑翼伸出手，你握上，领着慢走这一小段。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "检查落脚面，她的灵形试轻重，你记小坑。看完按舒服的步速走，轮流讲今日见闻。"
+      },
+      {
+        "key": "wing_shadow_sketch",
+        "text": "早鬼的灵形收好黑翼，邀你画一条神气的线。你落笔，她换到台侧看，沿纸指着翼影，两人比较哪处弯得最像。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们在纸上描疾行后的翼影，早鬼的灵形停稳让你看清，你说哪里最难画；补完各自的一笔，再坐下歇一会。"
+      }
+    ],
+    "farewell": "疾行场的弯口等过此生许多次回程，那一枚画好的路标，收着你们说出喜欢时愿意靠近的目光。",
+    "interrupted": "早鬼与你约好朋友的疾行场来往，各自挑合适的路段，到终点聊步速，再看哪一处回程弯口需要作记号。"
+  },
+  {
+    "id": "yuma",
+    "title": "旧池岸台留下的一小口",
+    "source": "https://thbwiki.cc/饕餮尤魔",
+    "start": "copper_residue",
+    "nodes": {
+      "copper_residue": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "sort_residue",
+            "when": {
+              "min": {
+                "insight": 9
+              }
+            },
+            "text": "你将旧铜壶里的沉积分开给尤魔看，她逐份闻过再选；看见你认真等她讲味道，她笑着把空盘移近你。",
+            "effects": {},
+            "label": "分开旧铜壶的沉积",
+            "trust": 1,
+            "set": [
+              "residue_sorted"
+            ],
+            "next": "taste_note_invite"
+          },
+          {
+            "key": "ask_her_taste",
+            "when": {},
+            "text": "你请尤魔先说自己想尝哪一口，她托着铜壶挑气味；你听得入神，她盯着你笑了一会才吃选好的那份。",
+            "effects": {},
+            "label": "听她挑想尝的气味",
+            "trust": 1,
+            "next": "taste_note_invite"
+          }
+        ]
+      },
+      "taste_note_invite": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "record_mood_change",
+            "when": {
+              "min": {
+                "insight": 8
+              }
+            },
+            "text": "尤魔主动邀你记吞下后的味道和心情，你分开写她自己的描述；她看过两栏记录，笑着约你再来比较一次。",
+            "effects": {},
+            "label": "记味道与心情两栏",
+            "trust": 1,
+            "set": [
+              "taste_record"
+            ],
+            "next": "clear_plates"
+          },
+          {
+            "key": "pick_small_portion",
+            "when": {},
+            "text": "她递来几个小盘邀你挑试味次序，你先选她最想吃的一份；尤魔尝好便请你坐下，讲这一口带来的心情。",
+            "effects": {},
+            "label": "应邀挑试味小盘",
+            "trust": 1,
+            "next": "clear_plates"
+          }
+        ]
+      },
+      "clear_plates": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "keep_residue_apart",
+            "when": {
+              "relationFlags": [
+                "residue_sorted"
+              ]
+            },
+            "text": "你照分过的沉积摆好小盘，尤魔亲自挑开气味杂乱的那份；你扶稳岸台，她吃完后先问你做记录累不累。",
+            "effects": {},
+            "label": "按沉积把小盘分清",
+            "trust": 1,
+            "next": "saved_morsel"
+          },
+          {
+            "key": "ask_before_next_bite",
+            "when": {},
+            "text": "你们每换一盘便听她说现在的味道，尤魔自己决定下一口；你将盘底擦净，她把容易够到的坐处留给你。",
+            "effects": {},
+            "label": "一盘盘听她说味道",
+            "trust": 1,
+            "next": "saved_morsel"
+          }
+        ]
+      },
+      "saved_morsel": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "choose_noted_flavor",
+            "when": {
+              "relationFlags": [
+                "taste_record"
+              ]
+            },
+            "text": "尤魔照你记过的两栏挑一份心情平稳的小味，拿到岸台边等你；她说这一口先留着，很想与你坐近聊完再尝。",
+            "effects": {},
+            "label": "选记录中的小味",
+            "trust": 1,
+            "next": "poolbank_answer"
+          },
+          {
+            "key": "set_two_plates",
+            "when": {},
+            "text": "她将两只小盘并摆，问你今天愿意在岸台多坐多久；听完你的回答，尤魔说自己开始很盼这段相见。",
+            "effects": {},
+            "label": "在双盘旁谈心意",
+            "trust": 1,
+            "next": "poolbank_answer"
+          }
+        ]
+      },
+      "poolbank_answer": {
+        "delay": 1,
+        "branches": [
+          {
+            "key": "speak_before_tasting",
+            "when": {
+              "freePartner": true,
+              "minAge": 20,
+              "minVisits": 4,
+              "minYears": 6,
+              "minTrust": 4,
+              "relationFlags": [
+                "taste_record"
+              ]
+            },
+            "text": "尤魔放下小盘，问你为何总愿听她讲味道。你说喜欢她，伸手问愿不愿相恋，她开心握住答应，再邀你为今日的心情写个名字。",
+            "effects": {},
+            "label": "放下小盘相恋",
+            "trust": 0,
+            "status": "lover",
+            "next": "small_dish_evening"
+          },
+          {
+            "key": "keep_taste_friend",
+            "when": {},
+            "text": "你们把来往留作朋友试味，尤魔请你给新小盘写一份记录；她挑想吃的次序，你听清味道再记入两栏。",
+            "effects": {},
+            "label": "继续做试味朋友",
+            "trust": 0,
+            "status": "friend",
+            "next": null
+          }
+        ]
+      },
+      "small_dish_evening": {
+        "delay": 2,
+        "branches": [
+          {
+            "key": "hear_the_day",
+            "when": {},
+            "text": "相恋后尤魔将这次想尝的小盘摆好，先与你坐在岸台聊一天的事；你写生活小记，她留到谈完才慢慢吃。",
+            "effects": {},
+            "label": "双盘旁听完一天",
+            "trust": 0,
+            "next": null
+          }
+        ]
+      }
+    },
+    "echoes": [
+      {
+        "key": "poolbank_cheek",
+        "text": "尤魔挑好试味，放稳小盘张臂邀你。你靠近拥住她，她低头吻来，你笑着回应；两人挨着坐稳，才给池岸颜色想新的怪名字。",
+        "effects": {},
+        "interval": 4,
+        "states": [
+          "lover"
+        ],
+        "settledText": "岸台上比盘边花纹，她说顺眼的，你画另一角。纸页放妥，尤魔坐到身旁，把今日试味的感受讲清，也问你心情如何。"
+      },
+      {
+        "key": "taste_note_pair",
+        "text": "你给池岸新色写题目，尤魔添味道栏，让你猜她怎么说。听过答案，她笑着讲自己的感受，提笔给那栏补上遗漏的一句。",
+        "effects": {},
+        "interval": 3,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们分味道与情绪两栏，她逐条说，你记录。收好小盘，在岸台慢慢比哪句最贴切。"
+      },
+      {
+        "key": "shared_copper_dish",
+        "text": "尤魔挑特别气味的小盘，请你画边纹。你擦亮铜角，她邀你换到侧光处细看，慢慢转盘，让你把喜欢的那道线描完整。",
+        "effects": {},
+        "interval": 5,
+        "states": [
+          "lover"
+        ],
+        "settledText": "你们按大小排好几只空盘，尤魔说明哪种便于自己拿取，你写下顺序；摆妥以后一起坐着，聊今天各自遇见的新事情。"
+      }
+    ],
+    "farewell": "旧池岸台收好此生的试味与闲谈，写过的两栏记录，留着两个恋人相赠的喜欢。",
+    "interrupted": "尤魔与你约好朋友的试味来往，她分清想吃的次序，你听完她的味道描述，慢慢记好心情变化。"
+  }
+]

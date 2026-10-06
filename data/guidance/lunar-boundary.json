@@ -1,0 +1,1124 @@
+[
+  {
+    "id": "reimu",
+    "title": "结界里的喘息空当",
+    "source": "https://thbwiki.cc/The_Grimoire_of_Marisa/博丽灵梦",
+    "canon": "原作魔法书记录灵梦的二重结界及封魔符札：她能张开结界、用符札限制对手行动。",
+    "fiction": "灵梦用自己的结界暂隔外来干扰，给体力危急的玩家争取求援与休息。联络、托护和一次体魄保全是本作推演，不将封魔解释为治疗，不改变寿命或撤销既成死亡。",
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "reimu_clear_margin",
+        "delay": 2,
+        "text": "灵梦在神社廊前放下御币，让你先找出撤到阴处的路。你总想再把手里的事做完，她把茶杯移开，叫你试一次先放下东西、再坐稳的顺序。",
+        "when": {
+          "min": {
+            "health": 5
+          },
+          "trust": 3
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "reimu_boundary_signal",
+        "delay": 3,
+        "text": "你备好一枚求助小铃，与灵梦隔着她张开的结界试响。她听清后收窄符札的位置，留出进出的口子；你走过一遍，把铃绳系到伸手便能摸到的地方。",
+        "when": {
+          "min": {
+            "insight": 7,
+            "fortune": 4
+          },
+          "xp": 6,
+          "trust": 4
+        },
+        "effects": {
+          "fortune": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "reimu_sheltered_interval",
+        "delay": 2,
+        "text": "灵梦听你报完吃力时的征兆，与你再核小铃的位置。她答应接讯后先张结界隔开干扰，扶你歇稳再接上照料；说完便握住你的手，让你把这句话记牢。",
+        "when": {
+          "min": {
+            "insight": 8,
+            "bond": 7
+          },
+          "xp": 8,
+          "trust": 4
+        },
+        "effects": {
+          "bond": 1
+        },
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "health",
+      "health": 7,
+      "selfMade": false,
+      "text": "你即将耗尽体力，灵梦循约定赶来，张开结界隔住周围的干扰，再扶你靠稳歇息。安静的空当里，她守着你的回应，及时接上照料，让你撑过这一阵。"
+    },
+    "followup": {
+      "key": "reimu_bell_in_reach",
+      "delay": 7,
+      "text": "廊前的小铃已有些旧，灵梦陪你换好绳结，再试坐下时能否摸到。你说起如今知道何时该歇，她把茶放到顺手处，听你讲完这些年改掉的逞强习惯。"
+    }
+  },
+  {
+    "id": "sakuya",
+    "title": "停时之后接住你",
+    "source": "https://thbwiki.cc/东方求闻史纪/十六夜咲夜",
+    "canon": "咲夜能停止、减缓或加速时间，并将能力用于馆内事务；原设明确她无法消除已经发生的事。",
+    "fiction": "她在危机尚可救助时停时准备承托和联络，恢复时间后及时扶助、求援。只提供一次体魄耗尽保护，停止时间本身不治疗身体，不倒转死亡，不传授她的时间能力。",
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "sakuya_three_needed_things",
+        "delay": 3,
+        "text": "咲夜在会客廊把垫布、靠椅和联络纸排好，请你逐件试用。你说靠背太直，她立刻换了角度；忙完才坐到旁边，记下你吃力时最先需要哪一样。",
+        "when": {
+          "min": {
+            "insight": 6,
+            "bond": 7
+          },
+          "trust": 3
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 2
+      },
+      {
+        "key": "sakuya_after_the_pause",
+        "delay": 4,
+        "text": "你与咲夜练过先示意、再卸下负担的顺序。片刻停时后，垫布已在身侧；她恢复时间才扶你靠稳，并核好求援去处，答应危急时替你争到这段空当。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 8
+          },
+          "xp": 9,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "health",
+      "health": 8,
+      "selfMade": false,
+      "text": "体力将尽时，咲夜及时停住时间，备齐承托并清开求援的路。时间恢复，她扶你安稳落座，马上接上后续照料；你得以缓过危险，她仍守在近旁。"
+    },
+    "followup": {
+      "key": "sakuya_cushion_angle",
+      "delay": 9,
+      "text": "咲夜听完你的身体近况，把旧垫布重新折薄一些。你靠着试过，指出如今更舒服的角度，她认真调好，再坐到另一张椅上，与你慢慢喝完午后的茶。"
+    }
+  },
+  {
+    "id": "ran",
+    "title": "把误差算进手艺",
+    "source": "https://thbwiki.cc/东方求闻史纪/八云蓝",
+    "canon": "蓝是紫的式神，也能使役橙；她尤其擅长数学和快速计算，倾向分析求解已有事物。",
+    "fiction": "蓝用计算、估计与复核指导玩家改善当前职业的工作。纸笔支出与新工作均实际计入条件，熟练来自玩家实践，不把玩家变成式神，不复制蓝的运算能力。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "ran_estimate_first",
+        "delay": 2,
+        "text": "巡行结束后，蓝在石台排出几组筹码，要你先估数量再细数。你算出两次不同的答案，她把漏掉的一枚推回来，问你开始时究竟把哪处当成了一样。",
+        "when": {
+          "min": {
+            "insight": 8
+          },
+          "trust": 3
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "ran_paper_for_errors",
+        "delay": 2,
+        "text": "你买来薄纸，将工作里的估算和实数并列写好。蓝看出一行单位混了，陪你换算到同一尺度；这回你留着原来的错数，旁边添上改正的理由。",
+        "when": {
+          "min": {
+            "insight": 9,
+            "fortune": 4
+          },
+          "xp": 7,
+          "trust": 4,
+          "work": 1
+        },
+        "effects": {
+          "fortune": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "ran_allowance_in_use",
+        "delay": 3,
+        "text": "新工作的记录多了几页，你向蓝说明哪处要留余量。她随手抽掉一个条件，你重算后停在缺数的地方；她点头，将那页留给你回去补上实际的观察。",
+        "when": {
+          "min": {
+            "insight": 11
+          },
+          "xp": 10,
+          "trust": 4,
+          "work": 3
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "ran_check_without_answer",
+        "delay": 3,
+        "text": "蓝收起筹码，让你自己讲完后来几次工作的估计、复核与修正。她始终没有先报答案；等你把误差的来处逐一说明，才笑着指出你已经算得更稳。",
+        "when": {
+          "min": {
+            "insight": 12
+          },
+          "xp": 14,
+          "trust": 4,
+          "work": 5
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 2,
+      "xp": 6,
+      "practice": 3
+    },
+    "followup": {
+      "key": "ran_old_error_new_measure",
+      "delay": 8,
+      "text": "石台上翻到当年混过单位的一页，你与蓝各用新办法算了一遍。你已经能说明何时该重测，她听得尾尖轻晃，最后把筹码放开，请你先讲今天的近况。"
+    }
+  },
+  {
+    "id": "yuyuko",
+    "title": "幽灵让开的归路",
+    "source": "https://thbwiki.cc/东方求闻史纪/西行寺幽幽子",
+    "canon": "幽幽子是白玉楼的亡灵主人，能够操纵死亡及死后的幽灵，并受阎魔之命管理幽灵。",
+    "fiction": "她管理幽灵的能力用于疏开干扰，按既有许可通路亲自护送体力危急的玩家。只保全一次尚可救助的耗尽危机，不把操纵死亡解释为拒死、延寿或复活。",
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "yuyuko_living_visitor_seat",
+        "delay": 3,
+        "text": "白玉楼的廊下，幽幽子见你走过庭道就急着说话，先请你坐稳。她让游近的幽灵散到花影后，留出清静的一段路，问你回程在哪处容易疲倦。",
+        "when": {
+          "min": {
+            "health": 5,
+            "bond": 6
+          },
+          "trust": 3
+        },
+        "effects": {
+          "bond": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "yuyuko_short_message",
+        "delay": 2,
+        "text": "你将求助的话缩成一张短笺，幽幽子逐句确认要先接你还是先找照料。试送时幽灵挤在拐角，她招手让开，陪你慢走一次，把停步的位置写清。",
+        "when": {
+          "min": {
+            "insight": 7
+          },
+          "xp": 6,
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 2
+      },
+      {
+        "key": "yuyuko_passage_kept_open",
+        "delay": 3,
+        "text": "幽幽子与你核过获准相见的通路，把求助短笺收进随身盒中。她答应危急时先疏开幽灵、及时护送你歇稳；你听她说完，也认真应下及早报信的约定。",
+        "when": {
+          "min": {
+            "insight": 8,
+            "bond": 8
+          },
+          "xp": 9,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "health",
+      "health": 6,
+      "selfMade": false,
+      "text": "你将要耗尽力气，幽幽子依联络与许可及时赶到，令围近的幽灵散开。她沿留好的归路护送你到安稳歇处，接上照料；你恢复了回应，她才放缓脚步。"
+    },
+    "followup": {
+      "key": "yuyuko_return_time_note",
+      "delay": 8,
+      "text": "幽幽子在廊下展开旧短笺，与你按如今的脚程改好停步处。花影后的幽灵安静游过，你慢慢讲完身体的近况，她将点心分小些，陪你多坐一阵。"
+    }
+  },
+  {
+    "id": "kaguya",
+    "title": "难题拆成做得到的几步",
+    "source": "https://thbwiki.cc/东方求闻史纪/蓬莱山辉夜",
+    "canon": "辉夜是永远亭主人，操纵永远与须臾；她收集并在月都万象展公开月之都的物品及资料。",
+    "fiction": "辉夜将自己出难题的兴致用于分段任务与查验成果，玩家把方法迁移到当前职业。各段在实际时间中实践并付出体力，不停住成长时间，不提供蓬莱药或她的永远之力。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "kaguya_choose_a_small_problem",
+        "delay": 3,
+        "text": "辉夜在会客处听你抱怨一件迟迟做不完的工作，笑着要你只讲最难的一步。你说清以后，她把纸折成几格，与你挑出今天就能试的那一格。",
+        "when": {
+          "min": {
+            "insight": 7,
+            "bond": 6
+          },
+          "trust": 3
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "kaguya_try_one_section",
+        "delay": 2,
+        "text": "你带回第一回实际尝试的记录，辉夜发现你又把几步挤在一起。两人拆开次序，你反复练到手腕发酸才停；她留住那张未完成的纸，等下一回看变化。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 8
+          },
+          "xp": 6,
+          "trust": 4,
+          "work": 1
+        },
+        "effects": {
+          "health": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "kaguya_revise_the_question",
+        "delay": 2,
+        "text": "几次新工作后，你发现原先的难处已换了位置。辉夜听完，干脆将旧题翻过去，请你重写下一小段；这回你连何时停下来检查也写进了空格。",
+        "when": {
+          "min": {
+            "insight": 9
+          },
+          "xp": 9,
+          "trust": 4,
+          "work": 2
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "kaguya_show_the_finished_steps",
+        "delay": 4,
+        "text": "你把后来几次实作依次讲给辉夜听，每段都有完成的凭据。她逐格追问，直到你能解释整件事怎样连起，才把纸合上，笑着认下你解出的这道难题。",
+        "when": {
+          "min": {
+            "insight": 10
+          },
+          "xp": 12,
+          "trust": 4,
+          "work": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 1,
+      "xp": 7,
+      "practice": 3
+    },
+    "followup": {
+      "key": "kaguya_another_small_square",
+      "delay": 9,
+      "text": "辉夜拿出当年折过的格纸，你在旁补上一件如今能独立完成的事。她看完便想再出难题，你笑着先选最小的一格；两人留好空白，慢慢谈今天的尝试。"
+    }
+  },
+  {
+    "id": "mokou",
+    "title": "竹林里及时停下的信号",
+    "source": "https://thbwiki.cc/东方求闻史纪/藤原妹红",
+    "canon": "妹红有不老不灭的身体，隐居迷途竹林；原作记有她救助迷路者、护卫急病者前往永远亭。",
+    "fiction": "妹红以竹林熟路和护卫经验准备求援与护送，在体力危急时及时接走玩家。一次体魄保全来自实际救助，不以她的不死身体、复原或蓬莱药推导玩家不死。",
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "mokou_recognize_the_stop",
+        "delay": 2,
+        "text": "妹红领你沿竹林熟路走到背风处，让你记两根交叉竹的形状。你刚说还走得动，她已经接过沉包，指给你看，再往前便不容易听清呼喊。",
+        "when": {
+          "min": {
+            "health": 5
+          },
+          "trust": 3
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "mokou_short_call_in_bamboo",
+        "delay": 2,
+        "text": "你与妹红练过短促的求助呼声，走到约好位置便停。竹叶把长话揉散，她却很快认出短句；一趟来回让你累了些，也终于明白该在何处等她。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 6
+          },
+          "xp": 5,
+          "trust": 4
+        },
+        "effects": {
+          "health": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "mokou_rescue_on_known_path",
+        "delay": 3,
+        "text": "妹红与你核清去永远亭求援的熟路，试过怎样扶住你的肩。她收好备用绳，说危急时会来接你；你将停步和呼声再示范一遍，她这才坐下陪你歇脚。",
+        "when": {
+          "min": {
+            "insight": 7,
+            "bond": 7
+          },
+          "xp": 8,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "health",
+      "health": 8,
+      "selfMade": false,
+      "text": "你的力气将尽，妹红听见约好的短声，沿熟路及时赶到。她接过负担，护送你离开竹林险处，接上永远亭的照料；你缓过这阵，手仍牢牢搭在她肩上。"
+    },
+    "followup": {
+      "key": "mokou_bamboo_marker_changed",
+      "delay": 6,
+      "text": "旧竹倒了一根，妹红陪你在熟路另选容易认出的记号。你把身体近况告诉她，她按如今的脚程留好歇处，最后坐在背风石旁，听你讲回家的小事。"
+    }
+  },
+  {
+    "id": "eiki",
+    "title": "把该担的事做完",
+    "source": "https://thbwiki.cc/附带文档:东方花映塚/角色设定#四季映姬·夜摩仙那度",
+    "canon": "映姬是裁判死者的阎魔，明鉴黑白；原设说明她衡量善恶时考虑事情成因与相关者的经历。",
+    "fiction": "职事外，她帮助玩家追清自己在工作中的责任、补正遗漏并说明证据。教学迁移到已有职业，不让玩家参与判决，不以她的职位赦免死亡或地狱规则。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "eiki_own_part_of_the_work",
+        "delay": 3,
+        "text": "映姬忙完职事，在访客庭听你说起一次工作疏漏。她请你把自己做过的动作按次序讲清；你承认有一步想让别人补，她便问，那一步如今是谁在承担。",
+        "when": {
+          "min": {
+            "insight": 7,
+            "bond": 7
+          },
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "eiki_make_the_correction",
+        "delay": 3,
+        "text": "你拿出后来工作的记录，说明怎样补正同类遗漏。为了重做那一步，你花掉原本留给自己的材料；映姬听完才请你把证据留好，问下一回怎样及早发现。",
+        "when": {
+          "min": {
+            "insight": 9,
+            "fortune": 4
+          },
+          "xp": 8,
+          "trust": 4,
+          "work": 1
+        },
+        "effects": {
+          "fortune": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "eiki_explain_and_finish",
+        "delay": 4,
+        "text": "几次实作之后，你在访客庭讲清该做的部分、已补正的动作与尚需交接的事。映姬逐项听完，肯定你肯承担也肯核实，再把茶推近，让你安心谈自己的生活。",
+        "when": {
+          "min": {
+            "insight": 10,
+            "bond": 8
+          },
+          "xp": 11,
+          "trust": 4,
+          "work": 3
+        },
+        "effects": {
+          "bond": 1
+        },
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 2,
+      "xp": 4,
+      "practice": 2
+    },
+    "followup": {
+      "key": "eiki_completed_handover",
+      "delay": 8,
+      "text": "职事后的访客庭里，你提起如今会主动核清工作交接。映姬记得那次重做的材料，问你后来怎样安排；你说完，她放妥记录，与你一起看看庭树的新枝。"
+    }
+  },
+  {
+    "id": "komachi",
+    "title": "求援少走一段路",
+    "source": "https://thbwiki.cc/东方求闻史纪/小野塚小町",
+    "canon": "小町是三途河船夫，拥有操纵距离的能力；原作记述三途河宽度可随渡河者而改变。",
+    "fiction": "停船空当，小町与玩家约定岸上求援的两端，危急时用距离能力缩短赶来和护送的路。岸上救助是本作推演，限一次体魄保全，不载活人渡三途河，不抵消已发生的死亡。",
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "komachi_two_points_on_land",
+        "delay": 3,
+        "text": "小町停船后在岸边听你说起最近走路吃力，拿小石标出歇处和求援处。你问哪条较近，她笑着挪近两石，又认真确认你自己能走到哪一端。",
+        "when": {
+          "min": {
+            "insight": 6,
+            "bond": 7
+          },
+          "trust": 3
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 2
+      },
+      {
+        "key": "komachi_short_way_agreed",
+        "delay": 4,
+        "text": "你在岸上试过求助信号，小町从约定一端很快赶到，扶你走完缩短的一段。她将两处标记留好，答应体力危急时及时来接；你把歇处又指给她看。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 8
+          },
+          "xp": 8,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "health",
+      "health": 7,
+      "selfMade": false,
+      "text": "你将要撑不住，小町依约缩短岸上求援的路，及时来到身旁。她扶你越过那段省下脚力的距离，交接到安稳照料处；你重新有力气回应，她才松开扶着的手。"
+    },
+    "followup": {
+      "key": "komachi_landmarks_after_years",
+      "delay": 7,
+      "text": "小町停船后与你回看那两处岸上标记，一块石头已被草遮住。你们按如今走得动的路重新摆好，她听你说近况，最后把桨收稳，陪你坐着听一会儿水声。"
+    }
+  },
+  {
+    "id": "toyohime",
+    "title": "梦中辨路，醒后留据",
+    "source": "https://thbwiki.cc/绵月丰姬#东方求闻口授（访谈）",
+    "canon": "ZUN在求闻口授访谈中说明丰姬能够连接山与海，其中山指幻想乡、海指月上，因此能往来月地。",
+    "fiction": "延续月海梦访，丰姬示范比较两处参照、辨清路线。玩家醒后自备纸笔并用于当前职业的核查；训练由真实工作验证，不获得山海连接能力，不新增现实月都往来或本人救护。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "toyohime_dream_two_landmarks",
+        "delay": 2,
+        "text": "月海梦里，丰姬将桃阴和山影放到相接的两侧，请你先认各自不动的参照。你只凭浪纹选路，她让波浪变一回，笑着等你重新找出能信得过的位置。",
+        "when": {
+          "min": {
+            "insight": 6
+          },
+          "trust": 3
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "toyohime_waking_notes",
+        "delay": 3,
+        "text": "再入梦时，你告诉丰姬，醒后已花钱备好纸笔，把一次工作要核的来处与去处分栏写明。她在梦中桃径陪你回看，问那处参照在变化后是否仍成立。",
+        "when": {
+          "min": {
+            "insight": 8,
+            "fortune": 6
+          },
+          "xp": 6,
+          "trust": 4,
+          "work": 1
+        },
+        "effects": {
+          "fortune": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "toyohime_report_real_checks",
+        "delay": 4,
+        "text": "你在月海梦中报告醒后几次工作的核查，说明怎样用两处参照发现遗漏。丰姬听完便将浪影散开，让你独自说清每步依据；你记住方法，准备继续用在手艺里。",
+        "when": {
+          "min": {
+            "insight": 9,
+            "fortune": 6
+          },
+          "xp": 9,
+          "trust": 4,
+          "work": 2
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 1,
+      "xp": 5,
+      "practice": 2
+    },
+    "followup": {
+      "key": "toyohime_dream_reference_again",
+      "delay": 8,
+      "text": "梦里的桃影移了位置，你先选山脚的轮廓再谈水面。丰姬听你说醒后已把参照核查用熟，笑着陪你坐下；这次你们把新见闻留给缓缓说话的空当。"
+    }
+  },
+  {
+    "id": "yorihime",
+    "title": "收势以后留下的专注",
+    "source": "https://thbwiki.cc/绵月依姬#东方幻存神签",
+    "canon": "幻存神签说明依姬能召唤神灵、借用诸神之力，也明确不同神明的力量并非都能同时借用。",
+    "fiction": "梦中依姬教授专注一事、留意身体和及时收势，玩家醒后用自身练习与职业工作验证。各段实际耗力，不借神、不授神力，不把梦中步法当作现实月人身体或即时救护。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "yorihime_dream_one_action",
+        "delay": 2,
+        "text": "梦中练场，依姬把木杖放回架上，请你只做一遍起手。你急着接后面的步子，她示意停住，先与你辨清重心，等这一个动作做稳才开始下一回。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 7
+          },
+          "trust": 3
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "yorihime_waking_short_practice",
+        "delay": 2,
+        "text": "你入梦告诉依姬，醒后已在空地练过短步，腿酸时照约定停了下来。她听你报清哪里先累，与你缩短练习一段；梦里重试后，你记好现实该歇的时机。",
+        "when": {
+          "min": {
+            "health": 7,
+            "insight": 8
+          },
+          "xp": 7,
+          "trust": 4,
+          "work": 1
+        },
+        "effects": {
+          "health": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "yorihime_work_one_at_a_time",
+        "delay": 3,
+        "text": "梦中收杖后，你向依姬讲醒后的新工作，怎样先做稳一件再接下一件。她问最容易分神的地方，你说出那次停手的经过，两人把重新开始的顺序理清。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 9
+          },
+          "xp": 10,
+          "trust": 4,
+          "work": 3
+        },
+        "effects": {},
+        "xp": 2
+      },
+      {
+        "key": "yorihime_finished_waking_sequence",
+        "delay": 3,
+        "text": "你在梦中独自走完短步，向依姬说明醒后几次工作怎样守住同样的专注。她等你主动收势，才笑着肯定练习已有成果，邀你放好木杖，到外缘慢慢歇息。",
+        "when": {
+          "min": {
+            "health": 7,
+            "insight": 10
+          },
+          "xp": 13,
+          "trust": 4,
+          "work": 5
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 1,
+      "xp": 6,
+      "practice": 3
+    },
+    "followup": {
+      "key": "yorihime_dream_rest_after_form",
+      "delay": 7,
+      "text": "练场的梦里，你做过短步便主动把木杖放稳。依姬问起醒后的工作，你说如今能察觉分神、停下再来；她陪你坐到外缘，先听完今天自己的疲倦。"
+    }
+  },
+  {
+    "id": "sagume",
+    "title": "开口之前核清依据",
+    "source": "https://thbwiki.cc/附带文档:东方绀珠传/Omake#稀神探女",
+    "canon": "探女说出相关事象会使其进展逆转，因此寡言；原设强调逆转并不保证对她有利。",
+    "fiction": "延续桥廊梦中的手势与纸笔交流，探女教玩家将观察、猜测和答话依据写清。醒后用到既有职业，实际付出抄录材料与工作；玩家不获得逆转之力，不用她的话保证结果。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "sagume_written_before_reply",
+        "delay": 3,
+        "text": "桥廊梦中，探女把一页未写完的说明推来，先用手势请你等待。你将所见与猜测分两行补上，她圈出证据不足的那句，点头让你把已经核实的留下。",
+        "when": {
+          "min": {
+            "insight": 8,
+            "bond": 7
+          },
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "sagume_waking_copy_cost",
+        "delay": 3,
+        "text": "再入梦时，你写给探女看，醒后花掉一叠新纸重抄工作说明，删去尚未核实的保证。她读过实际使用的记录，在旁画出一处追问，等你将遗漏补清。",
+        "when": {
+          "min": {
+            "insight": 10,
+            "fortune": 5
+          },
+          "xp": 9,
+          "trust": 4,
+          "work": 2
+        },
+        "effects": {
+          "fortune": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "sagume_confirmed_before_commitment",
+        "delay": 4,
+        "text": "桥廊梦里，你把醒后几次工作记录给探女看，讲清如何查过依据才答复，也标出曾改正的一句。她逐页读完，点头认可，又翻到空页，想听听你的近况。",
+        "when": {
+          "min": {
+            "insight": 11,
+            "bond": 8
+          },
+          "xp": 13,
+          "trust": 4,
+          "work": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 2,
+      "xp": 5,
+      "practice": 2
+    },
+    "followup": {
+      "key": "sagume_dream_page_for_today",
+      "delay": 9,
+      "text": "梦中两支笔仍并排放着，你写下如今答话前会先查哪一项。探女看过醒后工作的新例子，轻轻点头，又把空白移到你面前，想听今天那些已经发生的小事。"
+    }
+  },
+  {
+    "id": "junko",
+    "title": "一次只查一个缘由",
+    "source": "https://thbwiki.cc/附带文档:东方绀珠传/Omake#纯狐",
+    "canon": "纯狐是具有纯化能力的神灵，原设记有她纯化妖精的生命力；她自身也已成为被怨恨纯化的灵。",
+    "fiction": "静海梦中，她以剔除杂项的思路引导单因比较。玩家醒后自设小规模对照，用真实职业工作检验，额外材料与练习消耗实际计入；不纯化肉身或生命，不移除生死，不宣称旧恨消失。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "junko_dream_one_difference",
+        "delay": 3,
+        "text": "静海梦里，纯狐将两片花影并排，只留下一处深浅不同。你指出差别，她请你先别添别的解释；两人看着那一处，慢慢讲清究竟已经观察到了什么。",
+        "when": {
+          "min": {
+            "insight": 9
+          },
+          "xp": 7,
+          "trust": 4
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "junko_waking_small_comparison",
+        "delay": 3,
+        "text": "你入梦告诉纯狐，醒后已多备一份材料，在工作中只改一个条件作比较。两回结果仍有偏差，她听你逐项列出相同处，让你找出那项其实没有保持一致的事。",
+        "when": {
+          "min": {
+            "insight": 10,
+            "fortune": 5
+          },
+          "xp": 10,
+          "trust": 4,
+          "work": 2
+        },
+        "effects": {
+          "fortune": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "junko_repeat_with_one_change",
+        "delay": 4,
+        "text": "几次实作后，你在静海梦中报告醒后重做的对照，反复检查耗去一些体力，也终于留稳其余条件。纯狐听完请你只说这一处所得，将未验证的推想暂且放下。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 12
+          },
+          "xp": 13,
+          "trust": 4,
+          "work": 4
+        },
+        "effects": {
+          "health": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "junko_account_for_the_cause",
+        "delay": 4,
+        "text": "梦里的花影再次移近，你向纯狐说明醒后几次工作怎样逐一查清缘由。她问那条结论凭什么成立，你用实际对照回答；听完，她叫你的名字，认可这份练习。",
+        "when": {
+          "min": {
+            "insight": 13
+          },
+          "xp": 16,
+          "trust": 4,
+          "work": 6
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 2,
+      "xp": 7,
+      "practice": 2
+    },
+    "followup": {
+      "key": "junko_dream_new_cause_note",
+      "delay": 10,
+      "text": "静海梦里，你带着醒后记住的一项新疑问来找纯狐，先说已核实的条件。她没有替你收起所有困惑，而是陪你选一处可查的差别，随后安静听完你的近况。"
+    }
+  },
+  {
+    "id": "hecatia",
+    "title": "地上身体的及时应援",
+    "source": "https://thbwiki.cc/附带文档:东方绀珠传/Omake#赫卡提亚·拉碧斯拉祖利",
+    "canon": "赫卡提亚在月球、地球、异界同时拥有三个身体，能在这些世界来去；梦境归于异界。",
+    "fiction": "沿现有交界台会面通路，她以地上身体准备并执行一次及时扶助，玩家不用进入梦境求救。三身体事实只支持她自己行动，不授替身、不替换玩家肉身，不凭神格保证不死。",
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "hecatia_earth_body_contact",
+        "delay": 3,
+        "text": "交界台边，赫卡提亚用地上身体与你试一段短促联络，问你最容易失去力气的时刻。你讲清后，她把歇处的位置逐个走过，这回停在你身旁认真记住。",
+        "when": {
+          "min": {
+            "insight": 7,
+            "bond": 7
+          },
+          "trust": 4
+        },
+        "effects": {
+          "bond": 1
+        },
+        "xp": 2
+      },
+      {
+        "key": "hecatia_support_in_this_world",
+        "delay": 4,
+        "text": "你与赫卡提亚核清地上的求援去处，再试她扶你坐稳的姿势。她调整手臂，让你能舒服地卸下负担；两人约好危急时由这个身体赶来，先接住你再找照料。",
+        "when": {
+          "min": {
+            "health": 6,
+            "insight": 9
+          },
+          "xp": 10,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "health",
+      "health": 8,
+      "selfMade": false,
+      "text": "你的体力即将耗尽，赫卡提亚的地上身体循联络及时来到。她替你卸下负担，扶到准备好的歇处，接上当地照料；你缓过力气，看见陪在身旁的是她熟悉的笑。"
+    },
+    "followup": {
+      "key": "hecatia_earth_rest_place",
+      "delay": 8,
+      "text": "赫卡提亚以地上身体陪你整理交界台旁的歇处，你按如今舒服的姿势挪好垫布。她听完这几年的身体近况，留在近旁坐下，把今天想讲的事慢慢说给你听。"
+    }
+  },
+  {
+    "id": "reisen",
+    "title": "药签核对用在手艺里",
+    "source": "https://thbwiki.cc/东方求闻史纪/铃仙·优昙华院·因幡",
+    "canon": "铃仙居永远亭，原作记有她在人类村庄售药；操纵疯狂的能力涉及事物的波。",
+    "fiction": "她把售药时查签、确认对象与交接的做法用于桌面练习，玩家迁移到当前职业并完成真实工作。不改成药师，不代开处方，不借波动治病或直接赠予永琳的制药知识。",
+    "resultKind": "training",
+    "stages": [
+      {
+        "key": "reisen_check_the_empty_box",
+        "delay": 2,
+        "text": "铃仙售药回来，在阴棚摆了几只空盒和抄好的药签，请你先核名字再看摆放。你发现两张外形相似，她把盒子拉开，与你找出能清楚区别的那一笔。",
+        "when": {
+          "min": {
+            "insight": 6,
+            "bond": 6
+          },
+          "trust": 3
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "reisen_handover_in_own_work",
+        "delay": 2,
+        "text": "你拿当前工作的物件仿照核签次序练交接，铃仙故意将一张说明放到旁边。你先停手问清对象；几轮来回忙得手臂发酸，她记下你仍容易漏掉的那一步。",
+        "when": {
+          "min": {
+            "health": 5,
+            "insight": 7
+          },
+          "xp": 5,
+          "trust": 4,
+          "work": 1
+        },
+        "effects": {
+          "health": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "reisen_confirmed_delivery_record",
+        "delay": 3,
+        "text": "几次新工作之后，你将查物、核对对象和确认交接的记录讲给铃仙听。她逐项追问，你已经能拿实际经过回答；收好空盒时，她笑着说这份仔细属于你的手艺。",
+        "when": {
+          "min": {
+            "insight": 9,
+            "bond": 7
+          },
+          "xp": 10,
+          "trust": 4,
+          "work": 3
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "training",
+      "insight": 1,
+      "xp": 4,
+      "practice": 3
+    },
+    "followup": {
+      "key": "reisen_familiar_checks_today",
+      "delay": 6,
+      "text": "铃仙在阴棚抄新药签，你坐在旁边讲如今怎样核清工作交接。她听见当年那一步已经用熟，笑着给空盒换个位置；忙完后，两人把今日的小事慢慢说完。"
+    }
+  },
+  {
+    "id": "tewi",
+    "title": "把好运留到需要的时候",
+    "source": "https://thbwiki.cc/附带文档:东方永夜抄/角色设定#因幡天为",
+    "canon": "帝拥有使人类变得幸运的能力；永夜抄原设记有迷路者因见到她而得以走出竹林的说法。",
+    "fiction": "帝与人类玩家准备呼救和安全去处，危急时将她的好运用于让求援及时接上。具体的一次体魄保全是同人推演，明确限制human，不将好运视为治病、永久免厄或寿命保证。",
+    "species": [
+      "human"
+    ],
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "tewi_no_wager_for_help",
+        "delay": 2,
+        "text": "帝在许可兔路先收起猜篮的把戏，问你累到走不稳时会怎样求助。你挑出能叫人的短句，她陪你找好干地；说到好运，她这回认真答应留给真正需要的一刻。",
+        "when": {
+          "min": {
+            "health": 5,
+            "bond": 6
+          },
+          "trust": 3
+        },
+        "effects": {
+          "bond": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "tewi_luck_and_preparation",
+        "delay": 3,
+        "text": "你照帝指的干路试过呼救与停步，她将前面的浅坑填平，再听你讲求援去处。两人把准备做齐，她握住你的小指，答应危急时给你的好运让这条路接得上。",
+        "when": {
+          "min": {
+            "insight": 7,
+            "fortune": 5
+          },
+          "xp": 7,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 2
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "health",
+      "health": 6,
+      "selfMade": false,
+      "text": "你将要失去力气，帝及时赶来，把给予人类的好运用在这次求援上。原先容易错过的照料恰好接上，她领你到干地歇稳；你撑过危险，再次听清她的问话。"
+    },
+    "followup": {
+      "key": "tewi_keep_the_dry_route",
+      "delay": 7,
+      "text": "帝陪你沿许可兔路看看干地，把新落的枝叶拨到一旁。你讲如今更早察觉疲倦，她听完便问今日想歇在哪块石边；饼篮放稳后，两人认真说起近况。"
+    }
+  },
+  {
+    "id": "hina",
+    "title": "厄流去的另一岸",
+    "source": "https://thbwiki.cc/附带文档:东方风神录/角色设定#键山雏",
+    "canon": "雏收集并储存消灾所除的厄，防止其回到人类；靠近她的人类或妖怪会遭遇不幸，她自己不受这些厄影响。",
+    "fiction": "雏沿既有隔岸相见方式指导流雏与撤离，危急时隔水收走聚近的厄，给玩家一次及时休息和求援的空当。收厄不等于治疗，不授永久免厄或她的神体，双方保持距离。",
+    "resultKind": "protection",
+    "stages": [
+      {
+        "key": "hina_far_bank_signal",
+        "delay": 2,
+        "text": "雏隔岸指给你看一处流雏打转的水口，让你站在干石上报方向。你听清才移步，她收好人偶后，又问起你最容易吃力的路段，陪你选一个歇脚位置。",
+        "when": {
+          "min": {
+            "insight": 6
+          },
+          "trust": 3
+        },
+        "effects": {
+          "insight": 1
+        },
+        "xp": 1
+      },
+      {
+        "key": "hina_paper_doll_sent_downstream",
+        "delay": 3,
+        "text": "你买纸折好一只流雏，从自己的岸边送入水流。雏隔水接走聚来的厄，示意你留在石檐下；你试过呼救方向，将能引来照料的路画到随身小纸上。",
+        "when": {
+          "min": {
+            "insight": 7,
+            "fortune": 4
+          },
+          "xp": 6,
+          "trust": 4
+        },
+        "effects": {
+          "fortune": -1
+        },
+        "xp": 2
+      },
+      {
+        "key": "hina_leave_while_curse_is_held",
+        "delay": 3,
+        "text": "雏在对岸守住流雏，你照练过的次序走到石檐歇处，再指清求援的路。她答应危急时隔水收拢近身的厄，给你离开与受照料的空当，等你说记牢才放心。",
+        "when": {
+          "min": {
+            "health": 5,
+            "insight": 8
+          },
+          "xp": 9,
+          "trust": 4
+        },
+        "effects": {},
+        "xp": 1
+      }
+    ],
+    "grant": {
+      "kind": "protection",
+      "cause": "health",
+      "health": 6,
+      "selfMade": false,
+      "text": "体力将尽时，雏依约在对岸收拢聚近的厄，给你的退路留出空当。你按练过的方向及时抵达石檐，接上求援与休息；她隔水守住厄，让你安稳撑过这一阵。"
+    },
+    "followup": {
+      "key": "hina_stone_eave_on_this_bank",
+      "delay": 8,
+      "text": "你站在自己的岸边，把石檐旁新落的枝叶位置报给雏。她隔水听完你的身体近况，提醒哪里该留通路；两人看着一只流雏远去，慢慢说起这一季的水色。"
+    }
+  }
+]
