@@ -1,0 +1,978 @@
+{
+  "version": "20.0.0",
+  "target": "Chrome / Android WebView 49",
+  "syntax": "ES5 classic scripts",
+  "tools": {
+    "@babel/core": "7.29.7",
+    "@babel/preset-env": "7.29.7",
+    "acorn": "8.18.0",
+    "core-js": "3.50.0",
+    "esbuild": "0.25.12"
+  },
+  "sourceDirectory": "dist",
+  "outputDirectory": "site",
+  "excluded": [
+    "dev.js"
+  ],
+  "scripts": [
+    "compat.js",
+    "talents.js",
+    "config.js",
+    "content-data.js",
+    "relationship-data.js",
+    "events.js",
+    "health.js",
+    "opportunities.js",
+    "encounters.js",
+    "spiritual.js",
+    "afterlife.js",
+    "careers.js",
+    "contacts.js",
+    "memoir.js",
+    "relationships.js",
+    "talent-stories.js",
+    "partner-learning.js",
+    "companionship.js",
+    "guidance.js",
+    "akyuu.js",
+    "engine.js",
+    "companion-summary.js",
+    "memoir-image.js",
+    "app.js",
+    "music.js"
+  ],
+  "source": {
+    "afterlife.js": {
+      "sha256": "af69adcdb29dd2c198bcd20fdc82f89b9597b94a64168b393e1cd966736637ae",
+      "syntax": {
+        "optionalChaining": 4
+      },
+      "methods": [
+        "add",
+        "delete",
+        "entries",
+        "every",
+        "filter",
+        "findIndex",
+        "floor",
+        "has",
+        "inProgress",
+        "includes",
+        "max",
+        "min",
+        "push",
+        "round",
+        "slice",
+        "transform"
+      ],
+      "published": true
+    },
+    "akyuu.js": {
+      "sha256": "b34d82e61a06b575ead1071851a85a51f0604445d367245367b902b7f1355bef",
+      "syntax": {
+        "optionalChaining": 10
+      },
+      "methods": [
+        "delete",
+        "floor",
+        "has",
+        "includes",
+        "meet",
+        "min",
+        "push",
+        "some"
+      ],
+      "published": true
+    },
+    "app.js": {
+      "sha256": "025808cf9a683967a3991f93f166eefd87d978c408de06372b9c9748d854ed93",
+      "syntax": {
+        "nullishCoalescing": 1,
+        "optionalChaining": 4,
+        "logicalAssignment": 1,
+        "await": 1
+      },
+      "methods": [
+        "abort",
+        "add",
+        "addEventListener",
+        "append",
+        "appendText",
+        "catch",
+        "compose",
+        "conflict",
+        "create",
+        "createElement",
+        "createLife",
+        "createNames",
+        "createObjectURL",
+        "createTextNode",
+        "describe",
+        "describeLife",
+        "draw",
+        "entries",
+        "error",
+        "filter",
+        "find",
+        "floor",
+        "focus",
+        "forEach",
+        "fromEntries",
+        "futureLabel",
+        "get",
+        "getBoundingClientRect",
+        "getElementById",
+        "getRandomValues",
+        "goalStatus",
+        "includes",
+        "join",
+        "map",
+        "max",
+        "min",
+        "partner",
+        "push",
+        "random",
+        "reduce",
+        "registerTool",
+        "replace",
+        "replaceChildren",
+        "resolve",
+        "revokeObjectURL",
+        "scrollIntoView",
+        "setAttribute",
+        "slice",
+        "step",
+        "stringify",
+        "test",
+        "toFixed",
+        "toLowerCase",
+        "toString",
+        "trim",
+        "validate",
+        "validateAllocation",
+        "validateWeights"
+      ],
+      "published": true
+    },
+    "careers.js": {
+      "sha256": "940f505ab9eacb3fa9cdb21ba19b0a4f0c9f213b3bc96af6307fdd030868539e",
+      "syntax": {
+        "optionalChaining": 2
+      },
+      "methods": [
+        "add",
+        "at",
+        "has",
+        "inProgress",
+        "includes",
+        "max",
+        "min",
+        "needsWork",
+        "push",
+        "reduce",
+        "slice",
+        "some",
+        "split",
+        "startsWith"
+      ],
+      "published": true
+    },
+    "companion-summary.js": {
+      "sha256": "94557fd1ba31a624f8bf3802e6c10e162bae597b534255e86042ce0f84359bb0",
+      "syntax": {
+        "optionalChaining": 6,
+        "nullishCoalescing": 1
+      },
+      "methods": [
+        "add",
+        "at",
+        "filter",
+        "find",
+        "has",
+        "includes",
+        "isFinite",
+        "map",
+        "max",
+        "push",
+        "reduce",
+        "reverse",
+        "some",
+        "sort",
+        "startsWith",
+        "test",
+        "toFixed"
+      ],
+      "published": true
+    },
+    "companionship.js": {
+      "sha256": "50b1716e7080fbc59a8b5c843bc1e86e414b2d33f0affc3d8bc0d4fa9003e7a9",
+      "syntax": {
+        "optionalChaining": 2
+      },
+      "methods": [
+        "activeCount",
+        "age",
+        "at",
+        "begin",
+        "canMeet",
+        "filter",
+        "find",
+        "introductionDueAt",
+        "matches",
+        "mode",
+        "pending",
+        "push",
+        "slice",
+        "some",
+        "startsWith"
+      ],
+      "published": true
+    },
+    "compat.js": {
+      "sha256": "cca986a93d105c5362ed8c4e6a2f9fbb854ff20e9b17494f5c7877b57020f0de",
+      "syntax": {},
+      "methods": [
+        "appendChild",
+        "call",
+        "createDocumentFragment",
+        "createElement",
+        "createTextNode",
+        "defineProperty",
+        "insertBefore",
+        "push",
+        "removeChild",
+        "replaceChild",
+        "scrollTo"
+      ],
+      "published": true
+    },
+    "config.js": {
+      "sha256": "c374163d0113870a47f47753e6f23e5c2fe6eafaf7eb2b3e54778d30a1bbb993",
+      "syntax": {},
+      "methods": [
+        "freeze"
+      ],
+      "published": true
+    },
+    "contacts.js": {
+      "sha256": "05835f72a9b77fd63f884cf27258bb43108003e9dda64007170cc608f31c1df9",
+      "syntax": {
+        "optionalChaining": 22
+      },
+      "methods": [
+        "activeCount",
+        "add",
+        "entries",
+        "every",
+        "filter",
+        "find",
+        "flatMap",
+        "floor",
+        "freePartner",
+        "has",
+        "includes",
+        "indexOf",
+        "introduction",
+        "introductionDueAt",
+        "map",
+        "matches",
+        "max",
+        "min",
+        "oldFriend",
+        "push",
+        "random",
+        "reduce",
+        "romanceView",
+        "romanticTiming",
+        "slice",
+        "some",
+        "sort"
+      ],
+      "published": true
+    },
+    "content-data.js": {
+      "sha256": "76856316c021f79354269ea5bb5cebf0f37706e90549f21b9a4a8add083f11e7",
+      "syntax": {},
+      "methods": [],
+      "published": true
+    },
+    "dev.js": {
+      "sha256": "3f8545d995b2ea86fc7eed349312b9e7df7d51c7a12ecd74466fac014a1b2672",
+      "syntax": {
+        "optionalChaining": 19
+      },
+      "methods": [
+        "abs",
+        "activeCount",
+        "add",
+        "age",
+        "branchEvent",
+        "canLove",
+        "canMeet",
+        "canStartRomance",
+        "dailyDueAt",
+        "echoDelay",
+        "echoDueAt",
+        "echoEvent",
+        "eligible",
+        "endsWith",
+        "entries",
+        "entryReady",
+        "eventFor",
+        "filter",
+        "find",
+        "freePartner",
+        "fresh",
+        "fromEntries",
+        "gateAvailable",
+        "gateEvent",
+        "gateReady",
+        "get",
+        "has",
+        "includes",
+        "introduction",
+        "introductionDueAt",
+        "join",
+        "map",
+        "marriageDailyEvent",
+        "marriageDueAt",
+        "marriageEvent",
+        "marriageStage",
+        "matches",
+        "max",
+        "pace",
+        "pending",
+        "push",
+        "record",
+        "replace",
+        "select",
+        "slice",
+        "some",
+        "sort",
+        "startsWith",
+        "stringify",
+        "text",
+        "time",
+        "toFixed",
+        "values"
+      ],
+      "published": false
+    },
+    "encounters.js": {
+      "sha256": "5a4064fe15225cb14b291e1330353422374b5105a634ee484ae7c5987cd2b3f7",
+      "syntax": {},
+      "methods": [
+        "includes",
+        "push",
+        "some"
+      ],
+      "published": true
+    },
+    "engine.js": {
+      "sha256": "4b59a6254e5c50fa7049b649ea4e7fa97f6ced497063c1ef1e3e2f0b7f3dfc62",
+      "syntax": {
+        "optionalChaining": 44,
+        "nullishCoalescing": 3,
+        "exponentiation": 1
+      },
+      "methods": [
+        "abs",
+        "add",
+        "agingMagic",
+        "annual",
+        "apply",
+        "beforeDeath",
+        "canTransform",
+        "check",
+        "childhood",
+        "compose",
+        "consume",
+        "courtship",
+        "delete",
+        "departure",
+        "describe",
+        "description",
+        "discoveryChance",
+        "ending",
+        "entries",
+        "event",
+        "fail",
+        "farewellText",
+        "filter",
+        "find",
+        "findIndex",
+        "finish",
+        "floor",
+        "forEach",
+        "fromEntries",
+        "get",
+        "has",
+        "imul",
+        "includes",
+        "indexOf",
+        "init",
+        "initPerson",
+        "isFinite",
+        "isInteger",
+        "join",
+        "keys",
+        "localMarriage",
+        "localRomance",
+        "map",
+        "max",
+        "min",
+        "needsWork",
+        "now",
+        "onDeath",
+        "onTransform",
+        "partner",
+        "partnerChange",
+        "pending",
+        "personProfile",
+        "prospect",
+        "protect",
+        "push",
+        "reduce",
+        "resolve",
+        "romanceClosure",
+        "round",
+        "select",
+        "slice",
+        "some",
+        "sort",
+        "spent",
+        "startsWith",
+        "strain",
+        "text",
+        "toFixed",
+        "upkeep",
+        "validate",
+        "values",
+        "when",
+        "year"
+      ],
+      "published": true
+    },
+    "events.js": {
+      "sha256": "78069fd77da61d793369883fa906ec875203ed63f141927ca335e1da7e824788",
+      "syntax": {
+        "optionalChaining": 8
+      },
+      "methods": [
+        "bindPartner",
+        "eligible",
+        "find",
+        "freePartner",
+        "has",
+        "includes",
+        "init",
+        "isAnimal",
+        "map",
+        "meet",
+        "push",
+        "slice",
+        "some",
+        "values"
+      ],
+      "published": true
+    },
+    "guidance.js": {
+      "sha256": "8da73dae185e1c0feac35d00033d03a85204a13e0d31110dd454b046afc81cd1",
+      "syntax": {
+        "optionalChaining": 6,
+        "logicalAssignment": 1
+      },
+      "methods": [
+        "add",
+        "agingMagic",
+        "assign",
+        "at",
+        "entries",
+        "filter",
+        "find",
+        "includes",
+        "init",
+        "max",
+        "min",
+        "push",
+        "some",
+        "startsWith",
+        "strain",
+        "test",
+        "transform"
+      ],
+      "published": true
+    },
+    "health.js": {
+      "sha256": "272f64e33d9d25bd963324bbb46c0fd6b14097efa8211b6c07b1429ba331d43e",
+      "syntax": {
+        "optionalChaining": 4,
+        "exponentiation": 2
+      },
+      "methods": [
+        "agingMagic",
+        "floor",
+        "includes",
+        "max",
+        "min",
+        "push",
+        "toFixed"
+      ],
+      "published": true
+    },
+    "memoir-image.js": {
+      "sha256": "2fc45856623282ef854b21e74eba89b5a7564a0c8f62a0035a9d191a68b8826b",
+      "syntax": {
+        "nullishCoalescing": 1,
+        "optionalChaining": 2,
+        "await": 2
+      },
+      "methods": [
+        "append",
+        "beginPath",
+        "ceil",
+        "charCodeAt",
+        "createElement",
+        "createTextNode",
+        "fillRect",
+        "fillText",
+        "filter",
+        "find",
+        "flatMap",
+        "from",
+        "fromEntries",
+        "get",
+        "getContext",
+        "has",
+        "indexOf",
+        "join",
+        "lineTo",
+        "map",
+        "max",
+        "measureText",
+        "min",
+        "moveTo",
+        "pop",
+        "push",
+        "reduce",
+        "set",
+        "slice",
+        "sort",
+        "split",
+        "startsWith",
+        "stroke",
+        "strokeRect",
+        "test",
+        "toBlob",
+        "toDataURL",
+        "unshift"
+      ],
+      "published": true
+    },
+    "memoir.js": {
+      "sha256": "fe2fbffd48d99423d2469daf757d0ca27b479122cbdb15d85d4101c746ca166e",
+      "syntax": {
+        "optionalChaining": 5
+      },
+      "methods": [
+        "at",
+        "endsWith",
+        "filter",
+        "find",
+        "futureLabel",
+        "has",
+        "includes",
+        "join",
+        "map",
+        "push",
+        "slice",
+        "some",
+        "sort",
+        "startsWith",
+        "test",
+        "time",
+        "toFixed",
+        "unshift",
+        "values"
+      ],
+      "published": true
+    },
+    "music.js": {
+      "sha256": "5a577d4307b9b14898e9d72515b3d2c084a1289e870a5cc8a371d5310cd7c0b5",
+      "syntax": {
+        "await": 1
+      },
+      "methods": [
+        "addEventListener",
+        "createObjectURL",
+        "focus",
+        "getAttribute",
+        "getElementById",
+        "load",
+        "pause",
+        "play",
+        "querySelector",
+        "removeAttribute",
+        "revokeObjectURL",
+        "setAttribute",
+        "toggle"
+      ],
+      "published": true
+    },
+    "opportunities.js": {
+      "sha256": "1cd0c194d9c0b04c77e3b099ff2aa5e3e1c0e3acbc81405e495cb59215ebc5f8",
+      "syntax": {
+        "nullishCoalescing": 1,
+        "optionalChaining": 1
+      },
+      "methods": [
+        "add",
+        "delete",
+        "entries",
+        "every",
+        "filter",
+        "flatMap",
+        "has",
+        "inProgress",
+        "includes",
+        "init",
+        "min",
+        "push",
+        "some",
+        "transform",
+        "when"
+      ],
+      "published": true
+    },
+    "partner-learning.js": {
+      "sha256": "a6f70ab324ec441f58095cfa3ce2d498cd6132a623532d02b0003e9b0a38d6c6",
+      "syntax": {
+        "optionalChaining": 24,
+        "nullishCoalescing": 2,
+        "logicalAssignment": 3
+      },
+      "methods": [
+        "add",
+        "assign",
+        "at",
+        "entries",
+        "filter",
+        "find",
+        "includes",
+        "init",
+        "isFinite",
+        "map",
+        "push",
+        "scene",
+        "some",
+        "sort",
+        "strain",
+        "transform",
+        "values"
+      ],
+      "published": true
+    },
+    "relationship-data.js": {
+      "sha256": "0ca70796e2f8d96abb89ed8c2f95e6932c7dc5cbc1c2a135ffc1bef0c700bd70",
+      "syntax": {},
+      "methods": [],
+      "published": true
+    },
+    "relationships.js": {
+      "sha256": "6b25629d9f15edb4762f4b8c0b4b1acbda0bd621931fdd4674ae36cc0899658e",
+      "syntax": {
+        "optionalChaining": 33,
+        "nullishCoalescing": 2
+      },
+      "methods": [
+        "age",
+        "at",
+        "canMeet",
+        "candidate",
+        "entries",
+        "entryReady",
+        "filter",
+        "find",
+        "floor",
+        "fresh",
+        "gateAvailable",
+        "gateEvent",
+        "gateReady",
+        "get",
+        "has",
+        "includes",
+        "keys",
+        "leadWeight",
+        "map",
+        "max",
+        "min",
+        "mode",
+        "practiceEvent",
+        "push",
+        "reduce",
+        "relatedWeight",
+        "reunion",
+        "scene",
+        "some",
+        "sort",
+        "startsWith",
+        "text",
+        "values",
+        "waitingPractice"
+      ],
+      "published": true
+    },
+    "spiritual.js": {
+      "sha256": "0d3e12ebbc66374f1a631869fb6dfd6da0ea0235dcf4e0fdcbb87d3870d33fbf",
+      "syntax": {
+        "optionalChaining": 4
+      },
+      "methods": [
+        "at",
+        "floor",
+        "has",
+        "includes",
+        "max",
+        "min",
+        "push",
+        "random",
+        "reduce",
+        "some",
+        "values"
+      ],
+      "published": true
+    },
+    "talent-stories.js": {
+      "sha256": "6c120f71dbf2c731e73ead27f33981e5e5a085f2c80f83f6ac2a5358d6239f66",
+      "syntax": {
+        "optionalChaining": 11
+      },
+      "methods": [
+        "add",
+        "at",
+        "eligible",
+        "entries",
+        "every",
+        "filter",
+        "find",
+        "has",
+        "includes",
+        "max",
+        "push",
+        "reduce",
+        "some",
+        "startsWith",
+        "weight"
+      ],
+      "published": true
+    },
+    "talents.js": {
+      "sha256": "dd09632f5d75208d680f2b750efb12448c21881aa8aaad13e393c58b0dc0c798",
+      "syntax": {
+        "optionalChaining": 2
+      },
+      "methods": [
+        "filter",
+        "find",
+        "floor",
+        "includes",
+        "map",
+        "push",
+        "reduce",
+        "some"
+      ],
+      "published": true
+    }
+  },
+  "files": {
+    "afterlife.js": {
+      "sha256": "9e8d8c69d5bfa257f220742dcb00b5df04f4dceb269493421893092852beff80",
+      "bytes": 27713
+    },
+    "akyuu.js": {
+      "sha256": "f1d53e4c059289a3a97b867114d277e0ee8eb05f7dc777309c752a2fb86648b3",
+      "bytes": 11977
+    },
+    "app.js": {
+      "sha256": "ffa1d3459ebdc864b28fea8970dd03f43d27e70f7233dc02a88a079ca4ef93ba",
+      "bytes": 43939
+    },
+    "careers.js": {
+      "sha256": "130125b3cbed49be960cb73f19bae82461143771f8d43b35a6fe7886c43cdf91",
+      "bytes": 20683
+    },
+    "chronicles.html": {
+      "sha256": "6d162323884eef6d69700bfc0741296099d2bef01255f5a073a05fb9bd92e68d",
+      "bytes": 1564081
+    },
+    "companion-summary.js": {
+      "sha256": "563402320967e351f9e9cffdd8b2db27579dc6ff01bc3e41d5ae26d9e8ff633f",
+      "bytes": 12106
+    },
+    "companionship.js": {
+      "sha256": "6eaef9402e7c3b35c0dd721831efcd3b091532bc3e977431b9618f68ad080216",
+      "bytes": 13929
+    },
+    "compat.css": {
+      "sha256": "82e5c81a7a2da62537e21bbe510e04d6275dee39f50172ab3d67618caa9c8eba",
+      "bytes": 1423
+    },
+    "compat.js": {
+      "sha256": "60ad26e5b1926434b5afa8b687e0e6f1996b5c0d400de18a5a72260a9c483bd8",
+      "bytes": 118990
+    },
+    "config.js": {
+      "sha256": "76da6bce82f07bbdeb72f831cd72d89440e92a859617ff66ebd110cbc6633ef5",
+      "bytes": 1804
+    },
+    "contacts.js": {
+      "sha256": "d1a0729b78dc9029e9794d037d6f105fffced3c3b4647a6788486e16c605f26f",
+      "bytes": 36350
+    },
+    "content-data.js": {
+      "sha256": "86f600dd8e01fc0532371d9b0f0c2d42e70808bbe2400fdcdb061aad9a771a8f",
+      "bytes": 2882935
+    },
+    "encounters.js": {
+      "sha256": "0efa74458534de268a44f1688b423d5dfd15a0620ed7395284206cd06f48d057",
+      "bytes": 14550
+    },
+    "engine.js": {
+      "sha256": "0c40d9827795ecf7dd87b281a726442a3b392ca536ade21b3d26ea99d496cd89",
+      "bytes": 59510
+    },
+    "events.js": {
+      "sha256": "0f726be2c001f847ea2c3128530c65fbf0948315a2e85783e19a5ffe13e52509",
+      "bytes": 47231
+    },
+    "guidance.js": {
+      "sha256": "3db7adfd2fbd22134fc458a97aaa2c82230887663303e9c702092ca2ce99ab14",
+      "bytes": 11449
+    },
+    "health.js": {
+      "sha256": "2222a9b78cce7442f9e977cb2fdb3ae9a00f63c6cdec9909dcbd5e680abbc3b8",
+      "bytes": 5162
+    },
+    "icon.svg": {
+      "sha256": "cac5c6deb094d91c6b4ae591e9bb0f19670b927f85ccc24d0ad02904ad2bf845",
+      "bytes": 189
+    },
+    "index.html": {
+      "sha256": "aac002806c850304e220f455b0d2e22bdc630d24da7332a3c298b3cbe389a53f",
+      "bytes": 11017
+    },
+    "memoir-image.js": {
+      "sha256": "75f92f2ca46f93f6169b47ed29016160c4b0ed6bb99e9018ca51db27570d45f0",
+      "bytes": 27954
+    },
+    "memoir.js": {
+      "sha256": "b4a75b89a901a83afd228930e298ccccccdd45c5dfab362476b1bf0c706c94bf",
+      "bytes": 14998
+    },
+    "music.js": {
+      "sha256": "ee3b0926321ad8783e3fe2626bec8b7443e4107109fb717649710fd82eb0751d",
+      "bytes": 11009
+    },
+    "opportunities.js": {
+      "sha256": "cc774afe17f97d7a31bff435319aa7a0b2fd986d8468db488d12bc407541a8e8",
+      "bytes": 19277
+    },
+    "partner-learning.js": {
+      "sha256": "c4585f1a4ae22f1c8d6e187b5772aa40bb47196fbbbf9071b94511104e55ddeb",
+      "bytes": 39351
+    },
+    "relationship-data.js": {
+      "sha256": "320699b77e935f48c7fa7126d110f5f538ed0c5aa57ac6cfce3a59e5fbafbf47",
+      "bytes": 3060962
+    },
+    "relationships.js": {
+      "sha256": "54629e36709d7d7bb7cd61df98f7c8878d0e6d25d1115a13eab9cbb4244fcf0a",
+      "bytes": 48257
+    },
+    "sources.html": {
+      "sha256": "27a9e2692170882f97eff575a56439bca87cf2d07061992a413b00b7224d2200",
+      "bytes": 156918
+    },
+    "spiritual.js": {
+      "sha256": "39437deb57c8285a50c47a976affc08990c2b833e8dbc03f51265dea2c13904c",
+      "bytes": 12098
+    },
+    "style.css": {
+      "sha256": "db3137b240f0e2032dc460c60f9a087da42a822d39f870c0131b3635d5bbb41f",
+      "bytes": 18302
+    },
+    "talent-stories.js": {
+      "sha256": "8245c8f5e7be4714dc512682c257dda22df32915b6e2e183e7d234422efc2fcd",
+      "bytes": 42454
+    },
+    "talents.js": {
+      "sha256": "6f8c6cf32d664481519647d4a54a2328d0da6d35e233e81f4d0914d0865abad0",
+      "bytes": 14735
+    },
+    "THIRD_PARTY_LICENSES.txt": {
+      "sha256": "8f25da6e5c3ae66f3300937fc06357fc6de92e90ce8bd8fde20c5c0dc8f7d9c7",
+      "bytes": 2262
+    }
+  },
+  "checks": {
+    "allPublishedJavaScriptParsedAsES5": true,
+    "noRuntimeModulesOrCDN": true,
+    "runtime": {
+      "method": "Missing-API VM smoke checks and six controlled exact source/build life replays; no QQ device claim.",
+      "polyfills": {
+        "globalThis": true,
+        "at": true,
+        "flat": true,
+        "flatMap": true,
+        "includes": true,
+        "fromEntries": true,
+        "entries": true,
+        "values": true,
+        "replaceAll": true,
+        "urlSearchParams": true,
+        "url": true,
+        "promise": true,
+        "map": true,
+        "set": true
+      },
+      "replays": [
+        {
+          "seed": 1,
+          "character": null,
+          "sha256": "95a79e76550a7ae397a9f5f7465e033f96831206d254b4827cb71b6717dfcc1e",
+          "events": 145
+        },
+        {
+          "seed": 41,
+          "character": null,
+          "sha256": "2b17f7e1f3aa8541c5618bc03a9f69ab99a74a687b653ee47d54cd64c76b4d95",
+          "events": 107
+        },
+        {
+          "seed": 1049,
+          "character": null,
+          "sha256": "94c6bd7fd03a98b6bb4794c78af629d79647ca01c8f528dea29407fb89814be3",
+          "events": 136
+        },
+        {
+          "seed": 23,
+          "character": "reimu",
+          "sha256": "c6a19278780c4063b54f3b3493457f7514143b85fcf02db6c2c180906da44137",
+          "events": 68
+        },
+        {
+          "seed": 41,
+          "character": "patchouli",
+          "sha256": "6c4c16d0a973e41d5abb9a99bbe9f6578362f19ac5aa9fa177c459632b7e2374",
+          "events": 36
+        },
+        {
+          "seed": 57,
+          "character": "suwako",
+          "sha256": "914db0e413a0dfe9df39de84ffc1a88a4c8f025d3ba8672ab440a55bc7b8a6d3",
+          "events": 37
+        }
+      ]
+    }
+  }
+}

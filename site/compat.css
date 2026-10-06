@@ -1,0 +1,26 @@
+/* Generated browser compatibility layout. Modern style.css remains the source. */
+@supports not (display:grid){
+ .setup-grid{display:block}.intent{border-left:0;border-top:1px solid var(--line);padding:20px 0 0}
+ .talent-list{display:block}.talent{width:100%;margin-bottom:10px}
+ .live-stats{display:flex}.live-stat{width:25%}
+ #relationship-list{display:block}.relationship-item{margin-bottom:8px}
+ #timeline li{display:block;position:relative;padding-left:82px}
+ #timeline .when{position:absolute;left:0;top:17px;width:68px}
+ .roster-row{display:flex;justify-content:space-between}.roster-row small{max-width:58%}
+ @media(max-width:650px){#timeline li{padding-left:64px}#timeline .when{top:15px;width:52px}}
+}
+@supports not (gap:1px){
+ .masthead>.seal{margin-right:17px}.allocation-input>*+*{margin-left:13px}
+ .talent-actions>*+*,.music-actions>*+*{margin-left:8px}
+ .controls>*+*{margin-left:9px}.controls label,.controls #restart{margin-left:auto}
+ .relationship-line>*+*,.life-condition>*+*{margin-left:9px}
+ .live-stat dd small{margin-left:8px}
+ @media(max-width:650px){.masthead>.seal{margin-right:12px}.controls>*+*{margin-left:6px}.controls #restart{margin-left:6px}}
+}
+@supports not (height:1svh){
+ .life-hud{max-height:50vh;padding-top:8px}#timeline{max-height:52vh}
+ #live-talent-descriptions{max-height:30vh}
+}
+@supports not (width:min(300px,100vw)){
+ .music-menu{width:300px;max-width:calc(100vw - 40px)}
+}
