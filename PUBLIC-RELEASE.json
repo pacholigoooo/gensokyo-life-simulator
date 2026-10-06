@@ -1,0 +1,839 @@
+{
+  "format_version": 1,
+  "title": "幻想乡 · 一生纪",
+  "version": "20.0.0",
+  "source_commit": "0d48bad820f3de4a9dd2c199d74d76b27587604a",
+  "source_file_count": 136,
+  "description": "V20 完整可公开源码与静态部署文件；亲密文稿修订版。",
+  "start_command": "python3 -m http.server 8080 --directory site",
+  "build_commands": [
+    "npm ci",
+    "npm run build"
+  ],
+  "test_command": "npm test",
+  "deployment_directory": "site",
+  "prior_validation": {
+    "build": "passed",
+    "tests": "passed",
+    "production_files_equal_to_v20": 64,
+    "privacy_scan": "no findings"
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 153,
+      "sha256": "85c34076ccf4317500bdf1c516407de0b7b32374f85047c8a6b75fd9a23c3926",
+      "git_mode": "100644"
+    },
+    {
+      "path": "NOTICE.md",
+      "size_bytes": 1016,
+      "sha256": "80b34051dc4313fb5a18494b9f641ee8b2cd5a327307ab0c217d3f0a13b62339",
+      "git_mode": "100644"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 2657,
+      "sha256": "bffa7d0c29ec904ce5a5ba40ad506d9287372e9d51848d490b277723a09f5210",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/canon-events.json",
+      "size_bytes": 9190,
+      "sha256": "23fa6639700c5e0c13fc11b24ec54be4da15797d1ea19891e2b5f0fb910608db",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/characters/early.json",
+      "size_bytes": 421758,
+      "sha256": "71b262186375bc9b9ce7dd74402aaf70290fb3cbab43e33d632e748c885803ed",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/characters/late.json",
+      "size_bytes": 382893,
+      "sha256": "00abbf7ad33cec9dd28db181ed6655485f16b8511df9f715ab06bd18891f152c",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/characters/middle.json",
+      "size_bytes": 434182,
+      "sha256": "c6fd3bcc1de4ce4703fbde9935791c92e1294bd928cf48ee40f432bf440b821f",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/characters/pc98-hifuu.json",
+      "size_bytes": 377036,
+      "sha256": "b72b649837a9be0460973c6551e108df7eab39311760aba7dc46a10b3c858a3b",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/characters/recent-print.json",
+      "size_bytes": 332263,
+      "sha256": "eb36e03b59cc74ece05f0fb275aa56df6dbf54308fc9909ffcd22f58a951d362",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/characters/support.json",
+      "size_bytes": 212624,
+      "sha256": "cfe52d855f4bc6f2de5d93f4ef8c3ee24634db497bd39981645a3760c8a2984b",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/chronicles/early.json",
+      "size_bytes": 512681,
+      "sha256": "5fad68cfeca42cfe08fcc6f15d8fc4c690104631112f12b15798120b4b75b86d",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/chronicles/late.json",
+      "size_bytes": 389587,
+      "sha256": "1d8a642fb717be51f913fe6e179cfac7f7735393f607ed778939df8cb2a396da",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/chronicles/middle.json",
+      "size_bytes": 675185,
+      "sha256": "5ada9cead96cd35355aa093aa542a48d016e61a68ca61191adb27987e78675a8",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/chronicles/pc98-hifuu.json",
+      "size_bytes": 271835,
+      "sha256": "9c59d13c5d038604be395d9de5b55fcde6ce7c06b44a098f29b36f9314b70147",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/chronicles/recent-print.json",
+      "size_bytes": 237687,
+      "sha256": "239fd08999a33a6d051da4d376d64a604e8c8712f63096bc753983cbed7e6ca9",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/chronicles/support.json",
+      "size_bytes": 148331,
+      "sha256": "acafe511cde0eeb8bdc8046644a7ac10780cfb1a6cf991a440f046aba038d01a",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/circles/early.json",
+      "size_bytes": 51628,
+      "sha256": "8ad40b695eef2c7f1a7a3c968f1f66e93f9d410c773fdc2641ad97cfeaf94748",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/circles/late.json",
+      "size_bytes": 44575,
+      "sha256": "348d6f469edc8741be4ab978f9c106faae2e6882c9830f011456cdd3b48f2e30",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/circles/middle.json",
+      "size_bytes": 47363,
+      "sha256": "2c926b9f9410c492cd6f05e6a8e91e44de859a021dbeae68449feb8145e10b62",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/circles/pc98.json",
+      "size_bytes": 32903,
+      "sha256": "0952e92df261e74e3bf325e6b59e451b0e7268b6ac3d81570b6e96b858a7cef1",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/circles/recent-print.json",
+      "size_bytes": 40997,
+      "sha256": "958265746361c72ab3cecfc6acbc6af8d159ad9093522a588d757fda1d447646",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/circles/support.json",
+      "size_bytes": 5817,
+      "sha256": "c79d2998436651a2b21d4b14295647ebaaac1beb1c02c97f0515def7e1138377",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/guidance/gods-power.json",
+      "size_bytes": 39983,
+      "sha256": "78b790d0bea30e9767047bc1e7dbd056389a826d981ff80fe3a1e579aeee17c4",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/guidance/lunar-boundary.json",
+      "size_bytes": 41761,
+      "sha256": "4c0a1a991d36375fff321c65d1cdc69a61e9b6ee2b795e7f771243be446e2849",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/guidance/old-dreams.json",
+      "size_bytes": 26176,
+      "sha256": "188c970710d287cda6305331a6dd2f6a962005264d5ae2bb460c02dee927c7ab",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/marriages/early.json",
+      "size_bytes": 150815,
+      "sha256": "cca706f82b6bab707163ae371422ad1f6fd6ceb3f7293f5a6c9aca63b72beb1f",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/marriages/late.json",
+      "size_bytes": 135941,
+      "sha256": "a32d1378bc781a79666ca41a432e63199442bd94a4e8b5aa2cd8bd020f950e15",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/marriages/middle.json",
+      "size_bytes": 156509,
+      "sha256": "fca185378f8a2c98221047928204bb55f931a865ee148374a9a08d6fcb4f400b",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/marriages/pc98.json",
+      "size_bytes": 110701,
+      "sha256": "f370d29713afc339f5130156ae8cc6fe6378d953b99be867bd9d81860c9e8c70",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/marriages/recent-print.json",
+      "size_bytes": 124338,
+      "sha256": "348b5abc58470642a100d8d5402155838b8da54448923ee47920f00ecb8e33eb",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/marriages/support.json",
+      "size_bytes": 15969,
+      "sha256": "9a48e84c9157d0e60b6a967a05ab81f0a90e36f354893dde3e862c92adbeacff",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/meeting-practice.json",
+      "size_bytes": 14870,
+      "sha256": "26ff1cdbc8a447b8363edee7c986b21de50f687148a6a57a7e219fc97b6a15ee",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/relationships/early-v6.json",
+      "size_bytes": 300082,
+      "sha256": "209083f7bcd76a215589eff3ee0003d4efb0c92c5c5136c515d2a582d50bfede",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/relationships/late-v6.json",
+      "size_bytes": 395908,
+      "sha256": "86ea3428162c445e5cdae2780b7f40f217acf84b89c2b8d117c5d94318a2c2f5",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/relationships/middle-v6.json",
+      "size_bytes": 364902,
+      "sha256": "820b0c55c4c5bb9b217b2853c35c87c05550e9d1445fe0593cef180287c0ba73",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/relationships/mountain-flowers.json",
+      "size_bytes": 76642,
+      "sha256": "5fa87c0326b3755e59a0b89d8fc6732b9f7182fc43ac5fa3f83bc724df57caf7",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/relationships/pc98-hifuu-v6.json",
+      "size_bytes": 422541,
+      "sha256": "03836b10b1e84a547532e0c78b4c492df50bb91563be66b73876c30416d1ab5b",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/relationships/recent-print-v6.json",
+      "size_bytes": 294158,
+      "sha256": "9fe314998609440fdc94684379c36d131da1f0719bf45abc288eb89d187d0b9d",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/relationships/support-v6.json",
+      "size_bytes": 195646,
+      "sha256": "7a09a4b01dd07381e409b3a3fee2aeaac0802dcfbd56ed750b6611eff10424a0",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/relationships/village-forest.json",
+      "size_bytes": 56753,
+      "sha256": "08bac94669348691c1c6025d131dd94e41a2d91a76e46bc79ab1b7d3c92870e6",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/romance-gates.json",
+      "size_bytes": 47573,
+      "sha256": "a0cfc911799ed1f480d0894f273be56a33ac52162874faeca5020d74466e0dcc",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/romances/early.json",
+      "size_bytes": 264021,
+      "sha256": "830ee922a6c1780da8f98ca633da914f9f937a9dae1c696faaace961560c2aa9",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/romances/late.json",
+      "size_bytes": 245587,
+      "sha256": "8e82008e6a9aaee91f5acaa5d512b9a366408bd06051d4a3dc6cffd78250669e",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/romances/middle.json",
+      "size_bytes": 264687,
+      "sha256": "5182b8087c90fc52f4cbfd3d37eaba10d3a802cfe0668b8d440a72abe096c350",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/romances/pc98.json",
+      "size_bytes": 195479,
+      "sha256": "51b7d519f8467b21b588db4e559471df3d6d18a7caade9b909b4b3b00bd5fee7",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/romances/recent-print.json",
+      "size_bytes": 207622,
+      "sha256": "0bd7e7130a8c06e7246a88990d8741cc5ff0b24ecf4f90de1cb4aa56056a61ae",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/romances/support.json",
+      "size_bytes": 26845,
+      "sha256": "c83e49ad423d4d5bb20ed535d5967c986c5ade20b4cdc0adeaba8f85e490e413",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/young-named-proposal-v19.json",
+      "size_bytes": 39619,
+      "sha256": "805dc4ec3d1f0057ed55c5387bfe921c2514807c7deadee3d9230c6fcabd715a",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/young-relationship-proposal-v18.json",
+      "size_bytes": 17998,
+      "sha256": "efd978241d5b5a420bfe6aeb7657e49c4ce2ebf6cad718af857797f841852914",
+      "git_mode": "100644"
+    },
+    {
+      "path": "data/young-romances.json",
+      "size_bytes": 14425,
+      "sha256": "ddf775c73cb18530aa5ce29ba6486ec666307f7fa68ee96615450c0c419255db",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/afterlife.js",
+      "size_bytes": 18445,
+      "sha256": "af69adcdb29dd2c198bcd20fdc82f89b9597b94a64168b393e1cd966736637ae",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/akyuu.js",
+      "size_bytes": 7289,
+      "sha256": "b34d82e61a06b575ead1071851a85a51f0604445d367245367b902b7f1355bef",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/app.js",
+      "size_bytes": 24606,
+      "sha256": "025808cf9a683967a3991f93f166eefd87d978c408de06372b9c9748d854ed93",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/careers.js",
+      "size_bytes": 14331,
+      "sha256": "940f505ab9eacb3fa9cdb21ba19b0a4f0c9f213b3bc96af6307fdd030868539e",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/chronicles.html",
+      "size_bytes": 1564039,
+      "sha256": "ad6936635827f1d8e27a815926a08f3adebe8be69ecd13c5fb5c90f8b5f337f5",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/companion-summary.js",
+      "size_bytes": 5211,
+      "sha256": "94557fd1ba31a624f8bf3802e6c10e162bae597b534255e86042ce0f84359bb0",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/companionship.js",
+      "size_bytes": 9235,
+      "sha256": "50b1716e7080fbc59a8b5c843bc1e86e414b2d33f0affc3d8bc0d4fa9003e7a9",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/compat.js",
+      "size_bytes": 3184,
+      "sha256": "cca986a93d105c5362ed8c4e6a2f9fbb854ff20e9b17494f5c7877b57020f0de",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/config.js",
+      "size_bytes": 1695,
+      "sha256": "c374163d0113870a47f47753e6f23e5c2fe6eafaf7eb2b3e54778d30a1bbb993",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/contacts.js",
+      "size_bytes": 24739,
+      "sha256": "05835f72a9b77fd63f884cf27258bb43108003e9dda64007170cc608f31c1df9",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/content-data.js",
+      "size_bytes": 2882940,
+      "sha256": "76856316c021f79354269ea5bb5cebf0f37706e90549f21b9a4a8add083f11e7",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/dev.js",
+      "size_bytes": 23996,
+      "sha256": "3f8545d995b2ea86fc7eed349312b9e7df7d51c7a12ecd74466fac014a1b2672",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/encounters.js",
+      "size_bytes": 9884,
+      "sha256": "5a4064fe15225cb14b291e1330353422374b5105a634ee484ae7c5987cd2b3f7",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/engine.js",
+      "size_bytes": 36255,
+      "sha256": "4b59a6254e5c50fa7049b649ea4e7fa97f6ced497063c1ef1e3e2f0b7f3dfc62",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/events.js",
+      "size_bytes": 30721,
+      "sha256": "78069fd77da61d793369883fa906ec875203ed63f141927ca335e1da7e824788",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/guidance.js",
+      "size_bytes": 5567,
+      "sha256": "8da73dae185e1c0feac35d00033d03a85204a13e0d31110dd454b046afc81cd1",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/health.js",
+      "size_bytes": 4473,
+      "sha256": "272f64e33d9d25bd963324bbb46c0fd6b14097efa8211b6c07b1429ba331d43e",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/icon.svg",
+      "size_bytes": 189,
+      "sha256": "cac5c6deb094d91c6b4ae591e9bb0f19670b927f85ccc24d0ad02904ad2bf845",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/index.html",
+      "size_bytes": 10935,
+      "sha256": "64678c8f0121e4201cd6f8a3de9467f4178aef2ad986691161205022350f5b9f",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/memoir-image.js",
+      "size_bytes": 12571,
+      "sha256": "2fc45856623282ef854b21e74eba89b5a7564a0c8f62a0035a9d191a68b8826b",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/memoir.js",
+      "size_bytes": 8005,
+      "sha256": "fe2fbffd48d99423d2469daf757d0ca27b479122cbdb15d85d4101c746ca166e",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/music.js",
+      "size_bytes": 5035,
+      "sha256": "5a577d4307b9b14898e9d72515b3d2c084a1289e870a5cc8a371d5310cd7c0b5",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/opportunities.js",
+      "size_bytes": 11498,
+      "sha256": "1cd0c194d9c0b04c77e3b099ff2aa5e3e1c0e3acbc81405e495cb59215ebc5f8",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/partner-learning.js",
+      "size_bytes": 28016,
+      "sha256": "a6f70ab324ec441f58095cfa3ce2d498cd6132a623532d02b0003e9b0a38d6c6",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/relationship-data.js",
+      "size_bytes": 3060964,
+      "sha256": "0ca70796e2f8d96abb89ed8c2f95e6932c7dc5cbc1c2a135ffc1bef0c700bd70",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/relationships.js",
+      "size_bytes": 28902,
+      "sha256": "6b25629d9f15edb4762f4b8c0b4b1acbda0bd621931fdd4674ae36cc0899658e",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/sources.html",
+      "size_bytes": 156876,
+      "sha256": "574be3ec2f78713b41e3d82dea2b053e4d8a770f882a1f838de89a526d9f1385",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/spiritual.js",
+      "size_bytes": 7786,
+      "sha256": "0d3e12ebbc66374f1a631869fb6dfd6da0ea0235dcf4e0fdcbb87d3870d33fbf",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/style.css",
+      "size_bytes": 18302,
+      "sha256": "db3137b240f0e2032dc460c60f9a087da42a822d39f870c0131b3635d5bbb41f",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/talent-stories.js",
+      "size_bytes": 28511,
+      "sha256": "6c120f71dbf2c731e73ead27f33981e5e5a085f2c80f83f6ac2a5358d6239f66",
+      "git_mode": "100644"
+    },
+    {
+      "path": "dist/talents.js",
+      "size_bytes": 8939,
+      "sha256": "dd09632f5d75208d680f2b750efb12448c21881aa8aaad13e393c58b0dc0c798",
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/romance-scope-v8.json",
+      "size_bytes": 258553,
+      "sha256": "fda5fba1a7667f0162b5c38c5980ec10c1f19084a7727d3882ab374096edd962",
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/roster-research.md",
+      "size_bytes": 14489,
+      "sha256": "94fa8b10802241cef693db8d2bff89eb89b06958166b5bd5f66a55777ab4930d",
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/roster.json",
+      "size_bytes": 154106,
+      "sha256": "7f344c14dd45fade83aad4dee12b7a7ed17d2cf18bc6242fb7ff56ea8774c920",
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/route-coverage.csv",
+      "size_bytes": 8303,
+      "sha256": "f97d5bcf6b54b4f1c5359753da45fa76f47e385ce120d2a938cb95538782499d",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package-lock.json",
+      "size_bytes": 96890,
+      "sha256": "66597d633d48f8a2d13b35c8c02839ccf4b9193b48c2505f4f741affd46bf4e1",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package.json",
+      "size_bytes": 479,
+      "sha256": "7355cac64afa097ced31d6587df60cd49606c20b6719fbd0212bc8cb9e07abe9",
+      "git_mode": "100644"
+    },
+    {
+      "path": "reports/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_mode": "100644"
+    },
+    {
+      "path": "scripts/build-chronicles.mjs",
+      "size_bytes": 9046,
+      "sha256": "96e8e508f1b93d442da1694952e2cc23a32f63fa6361155431982c8b6b2da480",
+      "git_mode": "100644"
+    },
+    {
+      "path": "scripts/build-circles.mjs",
+      "size_bytes": 1866,
+      "sha256": "9175db17a2373eebc06de477b870318d70153ff6ec6e4315981d08d1ad5ff980",
+      "git_mode": "100644"
+    },
+    {
+      "path": "scripts/build-compatible.mjs",
+      "size_bytes": 13594,
+      "sha256": "e07d495adcffc5626f8fbec46dee0eff5cc4836ce6f81807eb4f8b3ee018eb02",
+      "git_mode": "100644"
+    },
+    {
+      "path": "scripts/build-guidance.mjs",
+      "size_bytes": 4222,
+      "sha256": "83e24faf3fc9d63cf34734d4c9c4b69c45372755c47e462ec0c1f9dd22195661",
+      "git_mode": "100644"
+    },
+    {
+      "path": "scripts/build-marriages.mjs",
+      "size_bytes": 1827,
+      "sha256": "593a1aa835b385f18296ee58d29b938327c5e71b2f4364908f222a0f3e82949b",
+      "git_mode": "100644"
+    },
+    {
+      "path": "scripts/build-relationships.mjs",
+      "size_bytes": 12958,
+      "sha256": "1bfc3dbf2571914bfbae3a34d053eaf3d1190f97279f1c6ccd713898c5779367",
+      "git_mode": "100644"
+    },
+    {
+      "path": "scripts/build-romances.mjs",
+      "size_bytes": 3360,
+      "sha256": "7276ff619386cf4c18ee3e212a515ff24e1eccd47790bc05098e6ef7b307ab69",
+      "git_mode": "100644"
+    },
+    {
+      "path": "scripts/build.mjs",
+      "size_bytes": 18662,
+      "sha256": "5571028f25c1ca49fe940d3ab282ce67b0a3262e4294a5f0a21d642768ded8ba",
+      "git_mode": "100644"
+    },
+    {
+      "path": "scripts/legacy-entry.js",
+      "size_bytes": 1091,
+      "sha256": "0cf8463b0f0a2785e0c8b7f98d4d37be96c1f0c95a114800c4770acd4315cb9a",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/THIRD_PARTY_LICENSES.txt",
+      "size_bytes": 2262,
+      "sha256": "8f25da6e5c3ae66f3300937fc06357fc6de92e90ce8bd8fde20c5c0dc8f7d9c7",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/afterlife.js",
+      "size_bytes": 27713,
+      "sha256": "9e8d8c69d5bfa257f220742dcb00b5df04f4dceb269493421893092852beff80",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/akyuu.js",
+      "size_bytes": 11977,
+      "sha256": "f1d53e4c059289a3a97b867114d277e0ee8eb05f7dc777309c752a2fb86648b3",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/app.js",
+      "size_bytes": 43939,
+      "sha256": "ffa1d3459ebdc864b28fea8970dd03f43d27e70f7233dc02a88a079ca4ef93ba",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/careers.js",
+      "size_bytes": 20683,
+      "sha256": "130125b3cbed49be960cb73f19bae82461143771f8d43b35a6fe7886c43cdf91",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/chronicles.html",
+      "size_bytes": 1564081,
+      "sha256": "6d162323884eef6d69700bfc0741296099d2bef01255f5a073a05fb9bd92e68d",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/companion-summary.js",
+      "size_bytes": 12106,
+      "sha256": "563402320967e351f9e9cffdd8b2db27579dc6ff01bc3e41d5ae26d9e8ff633f",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/companionship.js",
+      "size_bytes": 13929,
+      "sha256": "6eaef9402e7c3b35c0dd721831efcd3b091532bc3e977431b9618f68ad080216",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/compat.css",
+      "size_bytes": 1423,
+      "sha256": "82e5c81a7a2da62537e21bbe510e04d6275dee39f50172ab3d67618caa9c8eba",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/compat.js",
+      "size_bytes": 118990,
+      "sha256": "60ad26e5b1926434b5afa8b687e0e6f1996b5c0d400de18a5a72260a9c483bd8",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/compatibility-build.json",
+      "size_bytes": 22408,
+      "sha256": "87c9f2a08959874dbeb070a3f95c371d18a30c921ab18bc2be57a0f45484e107",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/config.js",
+      "size_bytes": 1804,
+      "sha256": "76da6bce82f07bbdeb72f831cd72d89440e92a859617ff66ebd110cbc6633ef5",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/contacts.js",
+      "size_bytes": 36350,
+      "sha256": "d1a0729b78dc9029e9794d037d6f105fffced3c3b4647a6788486e16c605f26f",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/content-data.js",
+      "size_bytes": 2882935,
+      "sha256": "86f600dd8e01fc0532371d9b0f0c2d42e70808bbe2400fdcdb061aad9a771a8f",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/encounters.js",
+      "size_bytes": 14550,
+      "sha256": "0efa74458534de268a44f1688b423d5dfd15a0620ed7395284206cd06f48d057",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/engine.js",
+      "size_bytes": 59510,
+      "sha256": "0c40d9827795ecf7dd87b281a726442a3b392ca536ade21b3d26ea99d496cd89",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/events.js",
+      "size_bytes": 47231,
+      "sha256": "0f726be2c001f847ea2c3128530c65fbf0948315a2e85783e19a5ffe13e52509",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/guidance.js",
+      "size_bytes": 11449,
+      "sha256": "3db7adfd2fbd22134fc458a97aaa2c82230887663303e9c702092ca2ce99ab14",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/health.js",
+      "size_bytes": 5162,
+      "sha256": "2222a9b78cce7442f9e977cb2fdb3ae9a00f63c6cdec9909dcbd5e680abbc3b8",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/icon.svg",
+      "size_bytes": 189,
+      "sha256": "cac5c6deb094d91c6b4ae591e9bb0f19670b927f85ccc24d0ad02904ad2bf845",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/index.html",
+      "size_bytes": 11017,
+      "sha256": "aac002806c850304e220f455b0d2e22bdc630d24da7332a3c298b3cbe389a53f",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/memoir-image.js",
+      "size_bytes": 27954,
+      "sha256": "75f92f2ca46f93f6169b47ed29016160c4b0ed6bb99e9018ca51db27570d45f0",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/memoir.js",
+      "size_bytes": 14998,
+      "sha256": "b4a75b89a901a83afd228930e298ccccccdd45c5dfab362476b1bf0c706c94bf",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/music.js",
+      "size_bytes": 11009,
+      "sha256": "ee3b0926321ad8783e3fe2626bec8b7443e4107109fb717649710fd82eb0751d",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/opportunities.js",
+      "size_bytes": 19277,
+      "sha256": "cc774afe17f97d7a31bff435319aa7a0b2fd986d8468db488d12bc407541a8e8",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/partner-learning.js",
+      "size_bytes": 39351,
+      "sha256": "c4585f1a4ae22f1c8d6e187b5772aa40bb47196fbbbf9071b94511104e55ddeb",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/relationship-data.js",
+      "size_bytes": 3060962,
+      "sha256": "320699b77e935f48c7fa7126d110f5f538ed0c5aa57ac6cfce3a59e5fbafbf47",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/relationships.js",
+      "size_bytes": 48257,
+      "sha256": "54629e36709d7d7bb7cd61df98f7c8878d0e6d25d1115a13eab9cbb4244fcf0a",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/sources.html",
+      "size_bytes": 156918,
+      "sha256": "27a9e2692170882f97eff575a56439bca87cf2d07061992a413b00b7224d2200",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/spiritual.js",
+      "size_bytes": 12098,
+      "sha256": "39437deb57c8285a50c47a976affc08990c2b833e8dbc03f51265dea2c13904c",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/style.css",
+      "size_bytes": 18302,
+      "sha256": "db3137b240f0e2032dc460c60f9a087da42a822d39f870c0131b3635d5bbb41f",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/talent-stories.js",
+      "size_bytes": 42454,
+      "sha256": "8245c8f5e7be4714dc512682c257dda22df32915b6e2e183e7d234422efc2fcd",
+      "git_mode": "100644"
+    },
+    {
+      "path": "site/talents.js",
+      "size_bytes": 14735,
+      "sha256": "6f8c6cf32d664481519647d4a54a2328d0da6d35e233e81f4d0914d0865abad0",
+      "git_mode": "100644"
+    },
+    {
+      "path": "tests/companion-summary.test.mjs",
+      "size_bytes": 8076,
+      "sha256": "d39c520550b0943f1b1ef0bee0c9b2938e550188fcece886c138623377bc66a9",
+      "git_mode": "100644"
+    },
+    {
+      "path": "tests/fixtures/companion-ui-v20.json",
+      "size_bytes": 76758,
+      "sha256": "c5ff37713a266e64f5c6b2fb61404e5c9d0d400ab1e13c3d8951756f33a1edae",
+      "git_mode": "100644"
+    },
+    {
+      "path": "tests/helpers/report-output.mjs",
+      "size_bytes": 502,
+      "sha256": "154ad1fe462f1c9c325b381028c7930d7d1dd8001003ec325ea458f283afcb60",
+      "git_mode": "100644"
+    },
+    {
+      "path": "tests/romance-all.test.mjs",
+      "size_bytes": 31047,
+      "sha256": "9075e0d16c4224e9a50770b29d4aecf3a285b96d2e1f739ce0f5a6fd2e5e8eff",
+      "git_mode": "100644"
+    },
+    {
+      "path": "tests/unwed-v19.test.mjs",
+      "size_bytes": 10881,
+      "sha256": "10420aa201256253bc6f0cec841db8a0f3314249abb93a5a18d08f7d5c48c891",
+      "git_mode": "100644"
+    },
+    {
+      "path": "tests/young-named-v19.test.mjs",
+      "size_bytes": 15253,
+      "sha256": "5edff7e0453de5606d4e184213d8e925e232782c02264f5f02763d8de83e6fd0",
+      "git_mode": "100644"
+    }
+  ]
+}

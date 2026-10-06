@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.openai/
+.sites-runtime/
+.site-compatible-tmp-*/
+__pycache__/
+*.pyc
+*.zip
+*.tar.gz
+/reports/*
+!/reports/.gitkeep
